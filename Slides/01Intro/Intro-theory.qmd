@@ -1,0 +1,22 @@
+---
+name: theory
+---
+
+## Theory in a data-driven world? ^[adapted from Glen Waddell's microeconometrics class]
+  > "The theory of economics does not furnish a body of settled conclusions
+immediately applicable to policy. It is a method rather than a doctrine, an
+apparatus of the mind, a technique of thinking which helps its possessor to draw
+correct conclusions." — Keynes
+
+## Why is theory useful?
+::: {.incremental}
+[helps us simplify and understand complex systems]{.hi}
+  - Social systems are really hard, game theory helps us focus on small parts at a time
+
+[lets us generate *falsifiable* & *testable* hypotheses]{.hi}
+  - Good econometrics is informed by good theory
+
+[gives us common ground to analyze important questions]{.hi}
+  - I often see debates devolve into people arguing on differences of definitions. 
+    How can we focus on the details that really matter?
+:::

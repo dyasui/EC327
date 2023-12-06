@@ -1,0 +1,197 @@
+---
+title: "Introduction to Game Theory"
+subtitle: "Syllabus Day"
+author: "Dante Yasui"
+date: last-modified
+date-format: "YYYY"
+format: 
+    revealjs: 
+        theme: [default, styles.scss]
+        slide-number: true
+        footer: "EC327 | Lecture 0| Syllabus"
+        preview-links: auto
+        code-fold: true
+        logo: UOSignature-356.png
+title-slide-attributes: 
+  data-background-position: left
+---
+
+::: {.vertical-center}
+[Outline]{.hi .big}
+
+- Introductions
+- Schedule
+- Expectations
+- Policies
+:::
+
+# Introduction
+
+## Welcome to the Class!
+
+### About Me:
+ - [Preferred Name]{.hi}: Dante
+ - [Preferred Pronouns]{.hi}: he, him
+ - I'm a 3rd year Econ Phd student
+ - I grew up in Davis, CA, and went to school in Portland, OR
+---
+
+## Introduce Yourselves
+ - Your preferred name
+ - Year & major
+ - Why did you choose this class?
+ - Song recommendation for [class playlist](https://open.spotify.com/playlist/41tv5OletQWcxkbh9FHKZ9?si=3c042741a06b4e28)
+
+# Course Outline
+
+## *Tentative* Schedule
+Subject to change. The topics before the midterm are more certain, but depending on time and interest there are a few possibilities of what we will cover in the second half of the class.
+
+## Topics
+ 1. Intro, Rationality & Preferences
+ 2. Sequential Move Games
+ 3. Simultaneous Move Games
+ 4. Mixed Strategies
+ 
+ [Midterm?]{.hi}
+ 
+ 5. Signaling Games/Imperfect Information$^*$
+ 6. Repeated Games
+ 7. Evolutionary Game Theory
+
+# Class Expectations
+
+## Prerequisites
+ * **Courses:** EC201 *or* EC202
+ 
+ * **Knowledge:** This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.
+   - There are great free resources out there like [Khan Academy](https://www.khanacademy.org/math/algebra), but always feel free to reach out for help or other suggestions.
+---
+
+## Student Expectations
+::: {.incremental}
+  * [Come to class]{.hii} 
+    - Pay attention to lectures, take notes, review topics at home
+    - Participate in group work & activities
+    - [Ask questions!]{.hi}
+  * [Communicate respectfully]{.hii}
+    - With your group members
+    - With me & grader
+  * [Have academic integrity]{.hii} ^[see UO's [Student Conduct Code](https://teaching.uoregon.edu/resources/academic-integrity-uo)]
+    - Verify that all submitted work is your own
+    - Provide sources for *all* information that you found outside this class
+:::
+
+## Instructor Expectations
+  * [Provide course material]{.h}
+    - [Lectures]{.hi}
+    - [In-class activities]{.hi}
+  * [Communicate administration details via Canvas]{.h}
+    - [Deadlines]{.hi}
+    - [Exam dates]{.hi}
+
+# Admin Stuff
+
+## Problem Sets
+You will practice what we learn in class on independently by solving 
+a few problems that are similar to what you saw in lectures.
+
+::: {.incremental}
+  * Learning something new takes practice, so these are designed to help you
+  keep up with the concepts
+  
+  * You will be graded not only on whether you got a certain answer,
+  but also more importantly on *how you communicate your understanding*
+:::
+
+## Class Activities
+You will break into groups to work collaboratively on different activities
+
+::: {.incremental}
+  * Sometimes I will ask you to play the types of games we discuss in lectures
+    - Record the strategies you chose and the outcomes
+    - Reflect on how you played the game
+    - Relate it to lecture concepts
+      + Solve for the equilibrium
+      + Why or why not did you arrive at the theoretical equilibrium
+      + What assumptions did the theory make that might not reflect how you played?
+:::
+
+## Exams
+You will demonstrate how well you understand concepts individually on a [midterm]{.hi}
+and a [final]{.hi} exam
+
+:::{.incremental}
+  * [Midterm]{.hi}
+    + sometime around week 5
+    + Covers elements of a game, pure and mixed Nash Equilibria
+    
+  * [Final]{.hi}
+    + finals week (check duckweb for specific date)
+    + Covers everything we learned in the quarter
+:::
+
+## Grading
+
+:::: {.columns}
+
+::: {.column width="40%"}
+[Problem Sets (~4)]{.hi}
+
+[Group Activities (~8)]{.hi}
+
+[Participation]{.hi}
+
+[Midterm]{.hi}
+
+[Final]{.hi}
+:::
+
+::: {.column width="40%"}
+20%
+
+20%
+
+10%
+
+25%
+
+25%
+:::
+
+::::
+
+## Policies
+
+:::{.incremental}
+  * [No make-up exams!]{.h}
+    - if you absolutely cannot attend midterm, you can add its weight to final exam
+  * Problem set keys posted automatically after deadline
+    - -> no late submissions accepted
+  * Class activities peer grading
+    - your participation includes grading of other groups' work
+  * You will rate (and be rated by) your group members on:
+    - attendance, preparation, and general experience working together
+:::
+
+# University Policies 
+
+## Campus Resources
+
+  * [Accessible Education Center]{.hii}
+    - [aec.uoregon.edu](https://aec.uoregon.edu/)
+  
+  * [Support for vicitms of assault, harassment, stalking]
+    - [safe.uoregon.edu](https://safe.uoregon.edu/)
+    - 24/7 hotline: (+1) 541-346-SAFE (7244)
+  
+  * [Health and Wellbeing]{.hii}
+    - [University Counseling Services](https://counseling.uoregon.edu)
+    - [Basic Needs Program](https://basicneeds.uoregon.edu/)
+  
+  * [Religious Observance Accomadations]{.hii}
+    - [Provost website](https://provost.uoregon.edu/religious-observance-accommodations-policy)
+    
+::: aside
+These resources and other are also included in the course syllabus
+:::
