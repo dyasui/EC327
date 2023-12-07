@@ -4,15 +4,15 @@ subtitle: "Syllabus Day"
 author: "Dante Yasui"
 date: last-modified
 date-format: "YYYY"
-format: 
-    revealjs: 
+format:
+    revealjs:
         theme: [default, styles.scss]
         slide-number: true
         footer: "EC327 | Lecture 0| Syllabus"
         preview-links: auto
         code-fold: true
         logo: UOSignature-356.png
-title-slide-attributes: 
+title-slide-attributes:
   data-background-position: left
 ---
 
@@ -45,32 +45,38 @@ title-slide-attributes:
 # Course Outline
 
 ## *Tentative* Schedule
-Subject to change. The topics before the midterm are more certain, but depending on time and interest there are a few possibilities of what we will cover in the second half of the class.
+Subject to change.
+
+The topics before the midterm are more certain, but depending on time and interest there are a few possibilities of what we will cover in the second half of the class.
 
 ## Topics
- 1. Intro, Rationality & Preferences
- 2. Sequential Move Games
- 3. Simultaneous Move Games
- 4. Mixed Strategies
- 
- [Midterm?]{.hi}
- 
- 5. Signaling Games/Imperfect Information$^*$
- 6. Repeated Games
- 7. Evolutionary Game Theory
+ 1. [Introduction]{.hi} to [Theoretical]{.hii} and [Strategic]{.hii} thinking
+ 2. [Nash Equilibrium]{.hii}
+ 3. [Mixed Strategies]{.hii}
+ 4. [N-player games]{.hii}$^*$
+
+ [Midterm]{.h}
+
+ 5. [Sequential Games]{.hii}
+ 6. [Imperfect Information]{.hii}$^*$
+ 7. [Infitely Repeated Games]{.hii}$^*$
+
+::: aside
+$^*$ subject to change
+:::
 
 # Class Expectations
 
 ## Prerequisites
  * **Courses:** EC201 *or* EC202
- 
+
  * **Knowledge:** This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.
    - There are great free resources out there like [Khan Academy](https://www.khanacademy.org/math/algebra), but always feel free to reach out for help or other suggestions.
 ---
 
 ## Student Expectations
 ::: {.incremental}
-  * [Come to class]{.hii} 
+  * [Come to class]{.hii}
     - Pay attention to lectures, take notes, review topics at home
     - Participate in group work & activities
     - [Ask questions!]{.hi}
@@ -89,19 +95,23 @@ Subject to change. The topics before the midterm are more certain, but depending
   * [Communicate administration details via Canvas]{.h}
     - [Deadlines]{.hi}
     - [Exam dates]{.hi}
+      + See UO online schedule for Final Exam day
 
 # Admin Stuff
 
 ## Problem Sets
-You will practice what we learn in class on independently by solving 
-a few problems that are similar to what you saw in lectures.
+You will practice what we learn in class on independently.
+
+Each homework assignement will be a few problems that are similar to what you saw in lectures.
 
 ::: {.incremental}
   * Learning something new takes practice, so these are designed to help you
   keep up with the concepts
-  
+
   * You will be graded not only on whether you got a certain answer,
   but also more importantly on *how you communicate your understanding*
+
+    - See Canvas rubric for more info
 :::
 
 ## Class Activities
@@ -125,10 +135,10 @@ and a [final]{.hi} exam
   * [Midterm]{.hi}
     + sometime around week 5
     + Covers elements of a game, pure and mixed Nash Equilibria
-    
+
   * [Final]{.hi}
     + finals week (check duckweb for specific date)
-    + Covers everything we learned in the quarter
+    + Covers everything we learned in the quarter, with more focus on concepts from the 2nd half
 :::
 
 ## Grading
@@ -136,9 +146,9 @@ and a [final]{.hi} exam
 :::: {.columns}
 
 ::: {.column width="40%"}
-[Problem Sets (~4)]{.hi}
+[Problem Sets (3-4)]{.hi}
 
-[Group Activities (~8)]{.hi}
+[Group Activities (4-8)]{.hi}
 
 [Participation]{.hi}
 
@@ -174,24 +184,24 @@ and a [final]{.hi} exam
     - attendance, preparation, and general experience working together
 :::
 
-# University Policies 
+# University Policies
 
 ## Campus Resources
 
-  * [Accessible Education Center]{.hii}
+  * [Accessible Education Center]{.hi}
     - [aec.uoregon.edu](https://aec.uoregon.edu/)
-  
-  * [Support for vicitms of assault, harassment, stalking]
+
+  * [Support for vicitms of assault, harassment, stalking]{.hi}
     - [safe.uoregon.edu](https://safe.uoregon.edu/)
     - 24/7 hotline: (+1) 541-346-SAFE (7244)
-  
-  * [Health and Wellbeing]{.hii}
+
+  * [Health and Wellbeing]{.hi}
     - [University Counseling Services](https://counseling.uoregon.edu)
     - [Basic Needs Program](https://basicneeds.uoregon.edu/)
-  
-  * [Religious Observance Accomadations]{.hii}
+
+  * [Religious Observance Accomadations]{.hi}
     - [Provost website](https://provost.uoregon.edu/religious-observance-accommodations-policy)
-    
+
 ::: aside
-These resources and other are also included in the course syllabus
+These resources and others are also included in the course syllabus
 :::

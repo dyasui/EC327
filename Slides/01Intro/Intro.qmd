@@ -4,16 +4,19 @@ subtitle: "Elements of a Game"
 author: "Dante Yasui"
 date: last-modified
 date-format: "YYYY"
-format: 
-    revealjs: 
+format:
+    revealjs:
         theme: [default, styles.scss]
         slide-number: true
         footer: "EC327 | Lecture 1 | Elements of a Game"
         preview-links: auto
         code-fold: true
         logo: UOSignature-356.png
-title-slide-attributes: 
+title-slide-attributes:
   data-background-position: left
+---
+
+{{< include Intro-theory.qmd >}}
 ---
 
 ::: {.vertical-center}
@@ -39,14 +42,12 @@ title-slide-attributes:
 ::: {.incremental}
   * They all involve people making choices which depend on the choices of others
   * In other words, they are questions of [strategy]{.hi}:
-  
+
     > **Strategic interdependence** is present in a social situation when what is best for someone *depends* on what someone else does. ^[*Harrington*, pg. 2]
-    
+
   * In the rest of this lecture, we will build up this definition formally
     - but why is that necessary?
 :::
-
-{{< include GameElements-theory.qmd >}} 
 
 # A definition of a game ^[adapted from [Leigh Tesfatsion](https://www2.econ.iastate.edu/tesfatsi/)'s slides]
 
@@ -85,7 +86,7 @@ Its assumptions are that:
   * People have [complete preferences]{.h}
     - for *every* pair of options, you can either tell me which you prefer or that you are *indifferent*
     - for any pair of deserts, $\{ \ 🍨 \ , \ 🍩 \ \}$, either $(🍨 \succ 🍩 \ )$, or $(🍩 \ \succ 🍨 \ )$, or $(🍨 \sim 🍩 \ )$
-    
+
   * Preferences are [transitive]{.h}
     - if $(☕ \succ 🍵 \ )$ and $(🍵 \succ 🍶 \ )$, then $(☕ \succ 🍶)$  ( for any $\{☕ \ , 🍵 \ , 🍶 \ \} \in 🫖 \ $)
 :::
@@ -99,9 +100,9 @@ A [utility function]{.h} maps a choice to a single number.
 For example, let $u(.)$ be the utility function from emoji to utils
 
   * I can have $u(🍺) =5$, $u(🌯)=10$, $u(🤸)=25$
-  
+
   * I can also have $u(🍺 \ , 🌯) = 20$, $u(🍺 \ , 🌯 \ , 🤸) = 15$
-  
+
 ## State-dependent utility table
 Sometimes my enjoyment of a thing depends on the *state* of the world
 
@@ -120,16 +121,16 @@ Sometimes my enjoyment of a thing depends on the *state* of the world
 
 * I will almost always give you specific values of utility which we will call [payoffs]{.hi}.
 
-* The table on the previous page is a good example. 
+* The table on the previous page is a good example.
 :::
 
 ## Information and Beliefs
-This is where it starts to get tricky. For most situations, as game theorists we have to take a stand on what people ***know*** and what they ***believe***. 
+This is where it starts to get tricky. For most situations, as game theorists we have to take a stand on what people ***know*** and what they ***believe***.
 
 ::: {.incremental}
   * Many games contain *perfectly informed* players who know not only their own preferences, but also the preferences of other players. In sequential move games, they can also perfectly observe the moves that players before them made.
     - this is a very strong assumption
-    
+
   * We can relax that last part in games of *asymmetric information* in which some players' strategies (or types) cannot be observed by all players.
 :::
 
