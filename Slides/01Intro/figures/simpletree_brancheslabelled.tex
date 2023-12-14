@@ -1,0 +1,32 @@
+\begin{tikzpicture}[scale=1.5,font=\footnotesize, edge from parent/.style={draw, very thick, color=ducksgreen}]
+    \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
+    \tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
+    \tikzstyle{level 1}=[level distance=15mm,sibling distance=2.5cm]
+    \tikzstyle{level 2}=[level distance=15mm,sibling distance=1.5cm]
+    \tikzstyle{level 3}=[level distance=15mm,sibling distance=1cm]
+    
+    \node(0)[hollow node,label=above:{$N_1$}]{}
+        child{node(1)[solid node,label=above left:{$N_2$}]{}
+            child{node[label=below:{$T_1$}]{} edge from parent node(branch11)[left]{\color{ducksgreen}$i$}}
+            child{node[label=below:{$T_2$}]{} edge from parent node(branch12)[right]{\color{ducksgreen}$j$}}
+            edge from parent node(branch1)[left,xshift=-5]{\color{ducksgreen}$A$}
+        }
+        child{node(2)[solid node,label=above right:{$N_3$}]{}
+            child{node[label=below:{$T_3$}]{} edge from parent node(branch21)[left]{\color{ducksgreen}$k$}}
+            child{node[label=below:{$T_4$}]{} edge from parent node(branch22)[right]{\color{ducksgreen}$l$}}
+            edge from parent node(branch2)[right,xshift=5]{\color{ducksgreen}$B$}
+        };
+
+    % \draw[<-,>=latex, color=blue](0)--(8:8mm)node[inner sep=0,right]{Initial Node};
+    % \draw[<-, >=latex, color=blue](1)--(-20:20mm)node[inner sep=0, right]{Decision Nodes};
+    % \draw[<-,>=latex, color=blue](2)--(-20:20mm){};
+    % \draw[<-,>=latex, color=blue](0)--(-20:20mm){};
+
+    %\node(branchlabel)at($.5(0-1)+.5(0-2)$){Branches};
+    \draw[->,>=latex, color=ducksgreen, right](0:-20mm)node[inner sep=0,left]{Branches}--(branch1);
+    \draw[<-,>=latex, color=ducksgreen, right](branch2)--(0:-20mm){};
+    \draw[<-,>=latex, color=ducksgreen, right](branch11)--(0:-20mm){};
+    \draw[<-,>=latex, color=ducksgreen, right](branch12)--(0:-20mm){};
+    \draw[<-,>=latex, color=ducksgreen, right](branch21)--(0:-20mm){};
+    \draw[<-,>=latex, color=ducksgreen, right](branch22)--(0:-20mm){};
+\end{tikzpicture}

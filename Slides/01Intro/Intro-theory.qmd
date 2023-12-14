@@ -44,4 +44,3 @@ I want this class to include activities that are more interactive, but math will
 
   *
 :::
----

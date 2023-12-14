@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>intro-theory</title>
+<title>intro-extensiveform</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,17 +23,19 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="Intro-theory_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Intro-theory_files/libs/quarto-html/quarto.js"></script>
-<script src="Intro-theory_files/libs/quarto-html/popper.min.js"></script>
-<script src="Intro-theory_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="Intro-theory_files/libs/quarto-html/anchor.min.js"></script>
-<link href="Intro-theory_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Intro-theory_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="Intro-theory_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="Intro-theory_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Intro-theory_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="Intro-extensiveform_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Intro-extensiveform_files/libs/quarto-html/quarto.js"></script>
+<script src="Intro-extensiveform_files/libs/quarto-html/popper.min.js"></script>
+<script src="Intro-extensiveform_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Intro-extensiveform_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Intro-extensiveform_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Intro-extensiveform_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Intro-extensiveform_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Intro-extensiveform_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Intro-extensiveform_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -45,48 +47,179 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="theory-in-a-data-driven-world" class="level2">
-<h2 class="anchored" data-anchor-id="theory-in-a-data-driven-world">Theory in a data-driven world? <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
-<blockquote class="blockquote">
-<p>“The theory of economics does not furnish a body of settled conclusions immediately applicable to policy. It is a method rather than a doctrine, an apparatus of the mind, a technique of thinking which helps its possessor to draw correct conclusions.” — Keynes</p>
-</blockquote>
-</section>
-<section id="why-is-theory-useful" class="level2">
-<h2 class="anchored" data-anchor-id="why-is-theory-useful">Why is theory useful?</h2>
-<div class="incremental">
-<p><span class="hi">helps us simplify and understand complex systems</span></p>
-<ul class="incremental">
-<li>Social systems are really hard, game theory helps us focus on small parts at a time</li>
-</ul>
-<p><span class="hi">lets us generate <em>falsifiable</em> &amp; <em>testable</em> hypotheses</span></p>
-<ul class="incremental">
-<li>Good econometrics is informed by good theory</li>
-</ul>
-<p><span class="hi">gives us common ground to analyze important questions</span></p>
-<ul class="incremental">
-<li>I often see debates devolve into people arguing on differences of definitions.</li>
-<li>How can we focus on the details that really matter?</li>
-</ul>
-</div>
-<hr>
-<section id="why-all-the-math" class="level3">
-<h3 class="anchored" data-anchor-id="why-all-the-math">Why all the math?</h3>
-<div class="incremental">
-<p>I’ve heard this frustration before from students in econ elective classes (especially 327).</p>
-<p>I want this class to include activities that are more interactive, but math will still be present.</p>
-</div>
-<hr>
-</section>
-<section id="my-own-experience-with-learning-to-love-math" class="level3">
-<h3 class="anchored" data-anchor-id="my-own-experience-with-learning-to-love-math">My own experience with learning to love math</h3>
-<div class="notes">
+<section id="representing-games-with-the-extensive-form" class="level1">
+<h1>Representing Games with the Extensive Form</h1>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
 <ul>
-<li><p>Throughout grade school, I hated taking classes that just required me to memorize definitions and do tedious problems that weren’t related to anything I was interested in.</p></li>
-<li><p>I liked reading and writing, but taking journalism classes and going a liberal arts college made me realise that just because your arguments sound nice doesn’t always make them thoughtful or useful.</p></li>
-<li><p>It wasn’t until I took a college game theory class taught by an econ professor that I started to apprecieate what economics has to offer.</p></li>
-<li></li>
+<li><p>So far, we defined a game with a bunch of definitions. But it probably all seems pretty abstract.</p></li>
+<li><p>I’ll try to make it more concrete by going through some examples.</p></li>
+</ul>
+<hr>
+</section>
+<section id="a-decision-tree" class="level2">
+<h2 class="anchored" data-anchor-id="a-decision-tree">A Decision Tree</h2>
+<p><img src="figures/decisiontree.png" class="img-fluid" style="width:80.0%"></p>
+</section>
+<section id="anatomy-of-a-tree" class="level2">
+<h2 class="anchored" data-anchor-id="anatomy-of-a-tree">Anatomy of a tree</h2>
+<p><img src="figures/tree-nodes.png" class="img-fluid" style="width:80.0%"></p>
+<hr>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<p><img src="figures/tree-branches.png" class="img-fluid" style="width:80.0%"></p>
+<hr>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
+<p><img src="figures/tree-terminalnodes.png" class="img-fluid" style="width:80.0%"></p>
+<hr>
+</section>
+<section id="kidnapping-game" class="level2">
+<h2 class="anchored" data-anchor-id="kidnapping-game">Kidnapping Game <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<p>A kidnapper named <span class="hi">Guy</span> has contacted the victim’s wife, named <span class="hi">Vivica</span>, to demand a ransom. To predict what will happen to the victim, <span class="hi">Orlando</span>, we need to create a game theoretic model of the situation. Let’s use the language of the tree graph to visualize this game.</p>
+<hr>
+</section>
+<section id="kidnapping-game-extensive-form" class="level2">
+<h2 class="anchored" data-anchor-id="kidnapping-game-extensive-form">Kidnapping Game: Extensive Form</h2>
+<p><img src="figures/kidnapgame_blank.png" class="img-fluid" style="width:66.0%"></p>
+<hr>
+</section>
+<section id="applying-the-extensive-form" class="level2">
+<h2 class="anchored" data-anchor-id="applying-the-extensive-form">Applying the Extensive Form</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Who are the players?</li>
+<li>Where are the decision nodes?</li>
+<li>What are the branches? What do they represent?</li>
+<li>What do the terminal nodes represent?</li>
 </ul>
 </div>
+<hr>
+</section>
+<section id="kidnapping-game-payoffs" class="level2">
+<h2 class="anchored" data-anchor-id="kidnapping-game-payoffs">Kidnapping Game payoffs</h2>
+<table class="table">
+<colgroup>
+<col style="width: 54%">
+<col style="width: 20%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Outcome</strong></th>
+<th><span class="red"><strong>Guy</strong></span></th>
+<th><span class="blue"><strong>Vivica</strong></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No kidnapping</td>
+<td><span class="red">3</span></td>
+<td><span class="blue">5</span></td>
+</tr>
+<tr class="even">
+<td>Kidnapping, ransom paid, Orlando killed</td>
+<td><span class="red">4</span></td>
+<td><span class="blue">1</span></td>
+</tr>
+<tr class="odd">
+<td>Kidnapping, ransom paid, Orlando released</td>
+<td><span class="red">5</span></td>
+<td><span class="blue">3</span></td>
+</tr>
+<tr class="even">
+<td>Kidnapping, no ransom paid, Orlando killed</td>
+<td><span class="red">2</span></td>
+<td><span class="blue">2</span></td>
+</tr>
+<tr class="odd">
+<td>Kidnapping, no ransom paid, Orlando released</td>
+<td><span class="red">1</span></td>
+<td><span class="blue">4</span></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="kidnapping-game-tree-with-payoffs" class="level2">
+<h2 class="anchored" data-anchor-id="kidnapping-game-tree-with-payoffs">Kidnapping game tree with payoffs</h2>
+<p><img src="figures/kidnapgame.png" class="img-fluid" style="width:80.0%"></p>
+</section>
+<section id="predictions" class="level2">
+<h2 class="anchored" data-anchor-id="predictions">Predictions?</h2>
+<p>Based on the extensive form game tree with payoffs, do you have any predictions for what strategies each player will choose?</p>
+<ul>
+<li>What details should a predictive model of this situation take into account or leave out?</li>
+</ul>
+</section>
+<section id="definition-of-an-extensive-form-game" class="level2">
+<h2 class="anchored" data-anchor-id="definition-of-an-extensive-form-game">Definition of an Extensive Form Game:</h2>
+<ul>
+<li>A collection of decision-makers, called <span class="hi">players</span> or <em>agents</em></li>
+<li>A set of <span class="hi">decision nodes</span>, each of which represents the information available to the players in that node</li>
+<li><span class="hi">Branches</span> from each node which represent the possible strategies available to the players</li>
+<li>The entire game tree serves as the <span class="h">mapping</span> from intersections of players’ strategy profiles to the outcomes at each <span class="hi">terminal nodes</span></li>
+<li><span class="h">Preferences</span> of each player over all <span class="hi">terminal nodes</span></li>
+</ul>
+</section>
+</section>
+<section id="examples-1" class="level1">
+<h1>Examples</h1>
+<section id="baseball-i" class="level2">
+<h2 class="anchored" data-anchor-id="baseball-i">Baseball, I <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
+<blockquote class="blockquote">
+<p>Good pitching will always stop good hitting and vice-versa. -Casey Stengel</p>
+</blockquote>
+<table class="table">
+<thead>
+<tr class="header">
+<th><strong>Batter</strong></th>
+<th><strong>Pitcher</strong></th>
+<th><strong>Batting Average</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(Right\)</span></td>
+<td><span class="math inline">\(Left\)</span></td>
+<td>.255</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Right\)</span></td>
+<td><span class="math inline">\(Left\)</span></td>
+<td>.274</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(Left\)</span></td>
+<td><span class="math inline">\(Right\)</span></td>
+<td>.291</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Left\)</span></td>
+<td><span class="math inline">\(Left\)</span></td>
+<td>.266</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Rank each player’s preferences over strategy profile intersections</li>
+</ul>
+<hr>
+</section>
+<section id="baseball-i-1" class="level2">
+<h2 class="anchored" data-anchor-id="baseball-i-1">Baseball, I <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></h2>
+<blockquote class="blockquote">
+<p>It is the bottom of the ninth inning, and the game is tied between the Orioles and the Yankees. The pitcher on the mound for the Yankees is Masahiro Tanaka, who is a right-hander, and the batter due up for the Orioles is Adam Jones, who is also a right-hander. The Orioles’ manager is thinking about whether to substitute Chris Davis, who is a left-handed batter, for Jones. He would prefer to have Davis face Tanaka in order to have a lefty–righty matchup and thus a better chance of getting a hit. However, the Yankees’ manager could respond to Davis’ pinch-hitting by substituting the left-handed pitcher Cesar Cabral for Tanaka. The Orioles’ manager would rather have Jones face Tanaka than have Davis face Cabral. Of course, the Yankees’ manager has the exact opposite preferences.</p>
+</blockquote>
+<hr>
+</section>
+<section id="baseball-i-2" class="level2">
+<h2 class="anchored" data-anchor-id="baseball-i-2">Baseball, I</h2>
+<ul>
+<li>Draw the extensive form of this situation:</li>
+</ul>
 <hr>
 </section>
 </section>
@@ -95,7 +228,9 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>adapted from Glen Waddell’s microeconometrics class<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Harrington, pg 18<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Harrington, pg 21<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Harrington, pg 21<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main>
 <!-- /main column -->

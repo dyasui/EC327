@@ -1,0 +1,33 @@
+---
+name:examples
+---
+
+
+# Examples
+
+## Baseball, I ^[Harrington, pg 21]
+  > Good pitching will always stop good hitting and vice-versa. -Casey Stengel
+
+| **Batter** | **Pitcher** | **Batting Average** |
+|------------+-------------+---------------------|
+| $Right$    | $Left$      | .255                |
+| $Right$    | $Left$      | .274                |
+| $Left$     | $Right$     | .291                |
+| $Left$     | $Left$      | .266                |
+
+  * Rank each player's preferences over strategy profile intersections
+---
+
+## Baseball, I ^[Harrington, pg 21]
+  > It is the bottom of the ninth inning, and the game is tied between the Orioles and the Yankees. The pitcher on the mound for the Yankees is Masahiro Tanaka, who is a right-hander, and the batter due up for the Orioles is Adam Jones, who is also a right-hander. The Orioles’ manager is thinking about whether to substitute Chris Davis, who is a left-handed batter, for Jones. He would prefer to have Davis face Tanaka in order to have a lefty–righty matchup and thus a better chance of getting a hit. However, the Yankees’ manager could respond to Davis’ pinch-hitting by substituting the left-handed pitcher Cesar Cabral for Tanaka. The Orioles’ manager would rather have Jones face Tanaka than have Davis face Cabral. Of course, the Yankees’ manager has the exact opposite preferences.
+  
+
+---
+
+## Baseball, I
+
+  * Draw the extensive form of this situation:
+
+---
+
+
