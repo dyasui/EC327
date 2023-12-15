@@ -14,6 +14,9 @@ format:
         logo: UOSignature-356.png
 title-slide-attributes:
   data-background-position: left
+output:
+  beamer_presentation:
+    keep_tex: yes
 ---
 
 
