@@ -1,0 +1,38 @@
+---
+title: "Introduction to Game Theory"
+subtitle: "Strategies, Best Responses, and Nash Equilibrium"
+author: "Dante Yasui"
+date: last-modified
+date-format: "YYYY"
+format:
+    revealjs:
+        theme: [default, styles.scss]
+        slide-number: true
+        footer: "EC327 | Lecture 2 | Nash Equilibrium"
+        preview-links: auto
+        code-fold: true
+        logo: UOSignature-356.png
+title-slide-attributes:
+  data-background-position: left
+output:
+  beamer_presentation:
+    keep_tex: yes
+---
+
+
+::: {.vertical-center}
+[Outline]{.hi .big}
+
+- What is a Game? (Strategic Form)
+- Dominant and dominated strategies
+- Best Responses
+- Nash Equilibrium
+:::
+
+{{< include stratform.qmd >}}
+
+#{{< include dominance.qmd >}}
+
+#{{< include bestresponse.qmd >}}
+
+#{{< include nasheqm.qmd >}}

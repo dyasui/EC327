@@ -1,0 +1,76 @@
+---
+name: stratform
+---
+
+# Extensive Form Review
+---
+
+### Information Sets
+**Recall** 
+from our definition of an [extensive form game]{.hi} 
+that each *node* represented the *information* available to the player
+
+In general;
+
+::: {.incremental}
+ * [Information set]{.hi}: contains *all* decision nodes that a player can tell apart,
+ * can contain multiple nodes,
+ * but each decision node can only belong to *one* info set at a time
+:::
+
+---
+
+### Kidnap Game Revisited
+Suppose that instead of seeing whether the ransom has been paid or not, Guy has to act blindly:
+
+![](figures/kidnaptree_infoset1.png){width=60%}
+---
+
+### Kidnap Game Revisited
+
+::: {.incremental}
+
+   * Nodes $N_3$ and $N_4$ are now part of the same [information set]{.hi}
+   
+:::
+---
+
+### 
+::: {.callout-tip}
+## Question
+What is Vivica's Info Set?
+:::
+---
+
+### Alternative way to draw the same game:
+![](figures/kidnaptree_infoset2.png){width=60%}
+---
+
+### Adding Imperfect Information
+::: {.callout-note}
+It doesn't matter whether the decisions to kill and pay ransom are happening at the same time or not, 
+Only that neither player knows what the other's move is
+:::
+
+### Definitions
+::: {.callout-tip}
+## **Perfect Information** extensive form game
+Where all *information sets* are *singletons*;
+each player knows which decision node they are at
+:::
+
+::: {.callout-tip}
+## **Imperfect Information** extensive form game
+One or more *info sets* are made up of multiple *decision nodes*
+:::
+---
+
+### 
+
+# Strategies and Strategic Form Games
+---
+
+## What is a Strategy?
+
+
+

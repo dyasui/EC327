@@ -60,19 +60,46 @@ Let's use the language of the tree graph to visualize this game.
 ## Kidnapping game tree with payoffs
 
 ![](figures/kidnapgame.png){width=80%}
+---
 
 ## Predictions?
+Based on the extensive form game tree with payoffs, 
+do you have any predictions for what strategies each player will choose?
 
-Based on the extensive form game tree with payoffs, do you have any predictions for what strategies each player will choose?
+::: {.incremental}
 
-  * What details should a predictive model of this situation take into account or leave out?
+ * What could be some useful assumptions about how players think?
+ 
+ * Hold those thoughts as we move onto our first solution method
+ 
+:::
+---
 
-## Definition of an Extensive Form Game:
+
+## a Definition of an Extensive Form Game: ^[for finite, perfect information games]
 
   * A collection of decision-makers, called [players]{.hi} or *agents* 
-  * A set of [decision nodes]{.hi}, each of which represents the information available to the players in that node
-  * [Branches]{.hi} from each node which represent the possible strategies available to the players
+  * A set of [decision nodes]{.hi}, each of which represents the information available to the player of that node
+  * [Branches]{.hi} from each node which represent the possible actions available to the players
   * The entire game tree serves as the [mapping]{.h} from intersections of players' strategy profiles to the outcomes at each [terminal nodes]{.hi}
-  * [Preferences]{.h} of each player over all [terminal nodes]{.hi}
 ---
+
+## Strategies in extensive form
+::: {.callout-tip}
+## Definition ^[Bonanno, pg 83]
+A [strategy]{.hi} for a player in a perfect-information game is a list of choices,
+one for each decision node of that player.
+:::
+---
+
+## Apply this definition to the kidnapping game:
+How many choices does Guy make? Vivica?
+
+Write out a strategy list for each player:
+---
+
+## Strategies
+_Guy_:
+| Node 1 | Node 3 | Node 4|
+|2
 
