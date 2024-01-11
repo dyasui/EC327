@@ -2,6 +2,8 @@
 name: theory
 ---
 
+# What is Theory?
+
 ## Theory in a data-driven world? ^[adapted from Glen Waddell's microeconometrics class]
   > "The theory of economics does not furnish a body of settled conclusions
 immediately applicable to policy. It is a method rather than a doctrine, an
@@ -9,7 +11,9 @@ apparatus of the mind, a technique of thinking which helps its possessor to draw
 correct conclusions." — Keynes
 
 ## Why is theory useful?
+
 ::: {.incremental}
+
 [helps us simplify and understand complex systems]{.hi}
 
   - Social systems are really hard, game theory helps us focus on small parts at a time
@@ -20,27 +24,33 @@ correct conclusions." — Keynes
 
 [gives us common ground to analyze important questions]{.hi}
 
-  - I often see debates devolve into people arguing on differences of definitions.
   - How can we focus on the details that really matter?
+  
 :::
+
+::: notes
+
+  * Use map example:
+  
+  * World Atlas or UOCampus Map?
+  
+  * Which is better depends on which is more useful
+  
+:::
+
 ---
 
-### Why all the math?
+## What are the limits to theory?
+
 ::: {.incremental}
-I've heard this frustration before from students in econ elective classes (especially 327).
 
-I want this class to include activities that are more interactive, but math will still be present.
+  * Our models will never be perfect representations of reality
+  
+  * But we should know how well they *approximate* the parts of the world we want to understand
+  
+  * Theory is very useful for generating *falsifiable hypotheses*, which we can then use to guide experimental or statistical tests
+  
+  * As we play games in class, we will observe the data and compare to our theoretical predictions
+  
 :::
----
 
-### My own experience with learning to love math
-
-::: {.notes}
-  * Throughout grade school, I hated taking classes that just required me to memorize definitions and do tedious problems that weren't related to anything I was interested in.
-
-  * I liked reading and writing, but taking journalism classes and going a liberal arts college made me realise that just because your arguments sound nice doesn't always make them thoughtful or useful.
-
-  * It wasn't until I took a college game theory class taught by an econ professor that I started to apprecieate what economics has to offer.
-
-  *
-:::

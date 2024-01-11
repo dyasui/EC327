@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Game Theory"
-subtitle: "General Principles"
+subtitle: "Sequential Games"
 author: "Dante Yasui"
 date: last-modified
 date-format: "YYYY"
@@ -8,7 +8,7 @@ format:
     revealjs:
         theme: [default, styles.scss]
         slide-number: true
-        footer: "EC327 | Lecture 1 | General Principles"
+        footer: "EC327 | Lecture 2 | Sequential Games"
         preview-links: auto
         code-fold: true
         logo: UOSignature-356.png
@@ -24,20 +24,27 @@ output:
 
 [Outline]{.hi .big}
 
-  * What is theory?
-  
-  * What is a Game?
-  
-  * Who are the Players?
-  
-  * What are the different types of games?
-  
+  * Activity 2: *Survivor*
+
+  * Game trees
+
+  * Solving games sequentially
+
+  * Adding Players
+
+  * Order Matters
+
+  * Adding Moves
+
+  * Evidence
+
+  * Examples
+
 :::
 
-{{< include GuessTwoThirds.qmd >}}
+{{< include GameTrees.qmd >}}
 
-{{< include Intro-theory.qmd >}}
+{{< include BackwardsInduction.qmd >}}
 
-{{< include Intro-definitions.qmd >}}
+{{< include Examples.qmd >}}
 
-{{< include Intro-examples.qmd >}}

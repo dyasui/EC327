@@ -1,9 +1,14 @@
 ---
-name:examples
+name: examples
 ---
 
 
 # Examples
+
+## The Battle of Wits (*The Princess Bride* - 1987)
+  - The "Man in Black" and Vizzini agree to a battle of wits to break the impasse.
+  - Vizzini claims that his own brain puts Plato, Aristotle, and Socrates to shame and demonstrates his recursive strategic reasoning. 
+{{< video https://youtu.be/rMz7JBRbmNo width="1000" height="400" >}}
 
 ## Baseball, I ^[Harrington, pg 21]
   > Good pitching will always stop good hitting and vice-versa. -Casey Stengel

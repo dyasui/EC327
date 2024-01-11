@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Dante Yasui">
-  <meta name="dcterms.date" content="2023-01-01">
+  <meta name="dcterms.date" content="2024-01-01">
   <title>Introduction to Game Theory</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -327,7 +327,7 @@
 
 <section id="title-slide" data-background-position="left" class="quarto-title-block center">
   <h1 class="title">Introduction to Game Theory</h1>
-  <p class="subtitle">Introducing Game Theory</p>
+  <p class="subtitle">General Principles</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -337,18 +337,65 @@ Dante Yasui
 </div>
 </div>
 
-  <p class="date">2023</p>
+  <p class="date">2024</p>
 </section>
 <section class="slide level2">
 
 <div class="vertical-center">
 <p><span class="hi big">Outline</span></p>
 <ul>
-<li>What is a Game?</li>
-<li>Who are the Players?</li>
-<li>What are the different types of games?</li>
+<li><p>What is theory?</p></li>
+<li><p>What is a Game?</p></li>
+<li><p>Who are the Players?</p></li>
+<li><p>What are the different types of games?</p></li>
 </ul>
 </div>
+</section>
+<section id="activity-1-guess-23rds-of-the-average" class="slide level2">
+<h2>Activity 1: Guess 2/3rds of the average</h2>
+<div>
+<ul>
+<li class="fragment">You will each choose an integer between 0 and 100.</li>
+<li class="fragment">The winner is the person who’s guess is closest to the <span class="hii">average of all guesses <em>times</em> 2/3</span></li>
+<li class="fragment">Submit your guess on <a href="https://canvas.uoregon.edu/courses/233504/quizzes/329305">Canvas</a></li>
+<li class="fragment">Backup <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJoCIYnrQSzEQA1m0BDLFB5_l0PBloLL558ZWc1PfhHvxs2Q/viewform?usp=sf_link">Google forms version</a></li>
+</ul>
+</div>
+</section>
+<section id="activity-1" class="slide level2">
+<h2>Activity 1</h2>
+<div>
+<ul>
+<li class="fragment">This is a simple example, but illustrates how complicated strategic reasoning can be.</li>
+<li class="fragment">The theoretical solution to this game says that anyone who is <em>rational</em> and knows that <em>everyone else is rational</em> (Common Knowledge of Rationality) should only choose 0 or 1.</li>
+<li class="fragment">However, <a href="https://www.jstor.org/stable/2950991">Nagel, R. (1995), “<em>Unravelling in guessing games : An experimental study</em>”</a> showed that over 12,000 answers, the average is 35.24.</li>
+<li class="fragment">Is Common Knowledge of Rationality a ‘bad’ assumption? How can we connect our theories with experimental evidence?</li>
+</ul>
+</div>
+<aside class="notes">
+<ul>
+<li>discuss different types of approaches people took</li>
+<li>how would they revise guess 2nd time?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+</section>
+<section>
+<section id="what-is-theory" class="title-slide slide level1 center">
+<h1>What is Theory?</h1>
+
 </section>
 <section id="theory-in-a-data-driven-world" class="slide level2">
 <h2>Theory in a data-driven world? <sup>1</sup></h2>
@@ -369,28 +416,14 @@ Dante Yasui
 </ul>
 <p><span class="hi">gives us common ground to analyze important questions</span></p>
 <ul>
-<li class="fragment">I often see debates devolve into people arguing on differences of definitions.</li>
 <li class="fragment">How can we focus on the details that really matter?</li>
 </ul>
 </div>
-</section>
-<section class="slide level2">
-
-<h3 id="why-all-the-math">Why all the math?</h3>
-<div>
-<p>I’ve heard this frustration before from students in econ elective classes (especially 327).</p>
-<p>I want this class to include activities that are more interactive, but math will still be present.</p>
-</div>
-</section>
-<section class="slide level2">
-
-<h3 id="my-own-experience-with-learning-to-love-math">My own experience with learning to love math</h3>
 <aside class="notes">
 <ul>
-<li><p>Throughout grade school, I hated taking classes that just required me to memorize definitions and do tedious problems that weren’t related to anything I was interested in.</p></li>
-<li><p>I liked reading and writing, but taking journalism classes and going a liberal arts college made me realise that just because your arguments sound nice doesn’t always make them thoughtful or useful.</p></li>
-<li><p>It wasn’t until I took a college game theory class taught by an econ professor that I started to apprecieate what economics has to offer.</p></li>
-<li></li>
+<li><p>Use map example:</p></li>
+<li><p>World Atlas or UOCampus Map?</p></li>
+<li><p>Which is better depends on which is more useful</p></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -404,6 +437,17 @@ Dante Yasui
           display:block!important;
       }</style></aside>
 </section>
+<section id="what-are-the-limits-to-theory" class="slide level2">
+<h2>What are the limits to theory?</h2>
+<div>
+<ul>
+<li class="fragment"><p>Our models will never be perfect representations of reality</p></li>
+<li class="fragment"><p>But we should know how well they <em>approximate</em> the parts of the world we want to understand</p></li>
+<li class="fragment"><p>Theory is very useful for generating <em>falsifiable hypotheses</em>, which we can then use to guide experimental or statistical tests</p></li>
+<li class="fragment"><p>As we play games in class, we will observe the data and compare to our theoretical predictions</p></li>
+</ul>
+</div>
+</section></section>
 <section>
 <section id="what-is-a-game-definitions" class="title-slide slide level1 center">
 <h1>What is a Game? Definitions</h1>
@@ -413,8 +457,8 @@ Dante Yasui
 <h2>Examples of some questions:</h2>
 <div>
 <ul>
-<li class="fragment">Why does Best-buy offer price match guarantee?</li>
-<li class="fragment">Why are there 4 different <a href="https://support.apple.com/en-us/HT201296">iPhone 15</a>’s?!</li>
+<li class="fragment">When should the Ducks play a running play or passing play?</li>
+<li class="fragment">Why is a pdf textbook so expensive?!</li>
 <li class="fragment">Does adding more highway lanes really result in shorter commute times?</li>
 <li class="fragment">Why did the US and USSR adopt Mutually Assured Destruction?</li>
 <li class="fragment">Why do people give engagement rings?</li>
@@ -430,10 +474,6 @@ Dante Yasui
 <blockquote>
 <p><strong>Strategic interdependence</strong> is present in a social situation when what is best for someone <em>depends</em> on what someone else does. <sup>1</sup></p>
 </blockquote></li>
-<li class="fragment"><p>In the rest of this lecture, we will build up this definition formally</p>
-<ul>
-<li class="fragment">but why is that necessary?</li>
-</ul></li>
 </ul>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn2"><p><em>Harrington</em>, pg. 2</p></li></ol></aside></section>
@@ -505,9 +545,50 @@ Dante Yasui
 <li><p>I can also have <span class="math inline">\(u(🍺 \ , 🌯) = 20\)</span>, <span class="math inline">\(u(🍺 \ , 🌯 \ , 🤸) = 15\)</span></p></li>
 </ul>
 </section>
+<section id="ordinal-vs.-cardinal-numbers" class="slide level2">
+<h2>Ordinal vs.&nbsp;Cardinal numbers</h2>
+<div>
+<ul>
+<li class="fragment"><p><span class="h">Cardinal:</span> amounts which can be measured in meaningful units are <em>cardinal numbers</em></p>
+<ul>
+<li class="fragment">examples: $9.99, 80 students, 50:50 odds</li>
+</ul></li>
+<li class="fragment"><p><span class="h">Ordinal:</span> all that matters is the <em>relative ranking</em></p>
+<ul>
+<li class="fragment">examples: utility; what does 100 utility mean? (it’s less than 200)</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="dont-worry" class="slide level2">
+<h2>Don’t worry!</h2>
+<div>
+<ul>
+<li class="fragment"><p>For this class, you won’t need to worry about utility functions (if you want to, take EC311).</p></li>
+<li class="fragment"><p>I will almost always give you specific values of utility which we will call <span class="hi">payoffs</span>.</p></li>
+<li class="fragment"><p>The table on the previous page is a good example.</p></li>
+</ul>
+</div>
+</section>
+<section id="strategic-choice-vs.-other-types-of-choices" class="slide level2">
+<h2><em>Strategic</em> Choice vs.&nbsp;other types of choices</h2>
+<div>
+<ul>
+<li class="fragment"><p>Economics is the study of <span class="hi">constrained choice</span>; in EC311, we introduce the <em>utility maximization problem</em> as the workhorse model</p>
+<ul>
+<li class="fragment">These types of problems usually only involve one agent; the consumer, who is only constrained by their budget</li>
+</ul></li>
+<li class="fragment"><p>We use the term <span class="hi"><em>strategic games</em></span> to distinguish from these single-agent optimization problems</p></li>
+<li class="fragment"><p>A <span class="hi"><em>game</em></span> is a type of problem featuring multiple agents, called <span class="hi">players</span>, in which their optimal choice <span class="hii">depends on the optimal choices of other players</span>.</p></li>
+</ul>
+</div>
+</section>
 <section id="state-dependent-utility-table" class="slide level2">
 <h2>State-dependent utility table</h2>
-<p>Sometimes my enjoyment of a thing depends on the <em>state</em> of the world</p>
+<div>
+<ul>
+<li class="fragment">Sometimes my enjoyment of a thing depends on the <em>state</em> of the world</li>
+</ul>
 <table class="table-striped table-hover">
 <caption>socially-dependent preferences</caption>
 <thead>
@@ -540,185 +621,94 @@ Dante Yasui
 </tr>
 </tbody>
 </table>
-</section>
-<section id="dont-worry" class="slide level2">
-<h2>Don’t worry!</h2>
-<div>
 <ul>
-<li class="fragment"><p>For this class, you won’t need to worry about utility functions (if you want to, take EC311).</p></li>
-<li class="fragment"><p>I will almost always give you specific values of utility which we will call <span class="hi">payoffs</span>.</p></li>
-<li class="fragment"><p>The table on the previous page is a good example.</p></li>
-</ul>
-</div>
-</section>
-<section id="what-you-need-to-know-about-utility" class="slide level2">
-<h2>What you need to know about Utility:</h2>
-<ul>
-<li>As long as people are <em>rational</em>; i.e., they can consistently rank all alternatives, then we can represent their preferences with real numbers</li>
-</ul>
-</section>
-<section id="information-and-beliefs" class="slide level2">
-<h2>Information and Beliefs</h2>
-<p>This is where it starts to get tricky. For most situations, as game theorists we have to take a stand on what people <strong><em>know</em></strong> and what they <strong><em>believe</em></strong>.</p>
-<div>
-<ul>
-<li class="fragment">Many games contain <em>perfectly informed</em> players who know not only their own preferences, but also the preferences of other players. In sequential move games, they can also perfectly observe the moves that players before them made.
-<ul>
-<li class="fragment">this is a very strong assumption</li>
-</ul></li>
-<li class="fragment">We can relax that last part in games of <em>asymmetric information</em> in which some players’ strategies (or types) cannot be observed by all players.</li>
+<li class="fragment">Is this an example of a <span class="hi">strategic</span> or <span class="hi">non-strategic</span> choice?</li>
 </ul>
 </div>
 </section></section>
 <section>
-<section id="representing-games-with-the-extensive-form" class="title-slide slide level1 center">
-<h1>Representing Games with the Extensive Form</h1>
+<section id="taxonomy-of-games" class="title-slide slide level1 center">
+<h1>Taxonomy of Games</h1>
 
 </section>
-<section id="examples" class="slide level2">
-<h2>Examples</h2>
+<section id="general-categories" class="slide level2">
+<h2>General Categories</h2>
 <ul>
-<li><p>So far, we defined a game with a bunch of definitions. But it probably all seems pretty abstract.</p></li>
-<li><p>I’ll try to make it more concrete by going through some examples.</p></li>
+<li><p><span class="h">Sequential</span> or <span class="h">Simultaneous</span>?</p></li>
+<li><p><span class="h">Zero-sum</span> or not</p></li>
+<li><p><span class="h">Perfect</span> or <span class="h">Imperfect</span> information?</p>
+<ul>
+<li>is info <span class="hi">symmetric</span> or <span class="hi">asymmetric</span>?</li>
+</ul></li>
+<li><p><span class="h">One-shot</span> or <span class="h">Repeated</span>?</p></li>
+<li><p>‘<span class="h">Noncooperative</span>’ or ‘<span class="h">Cooperative</span>’?</p></li>
 </ul>
-</section>
-<section id="a-decision-tree" class="slide level2">
-<h2>A Decision Tree</h2>
-
-<img data-src="figures/decisiontree.png" style="width:80.0%" class="r-stretch"></section>
-<section id="anatomy-of-a-tree" class="slide level2">
-<h2>Anatomy of a tree</h2>
 </section>
 <section id="section" class="slide level2">
-<h2><img data-src="figures/tree-nodes.png" style="width:80.0%"></h2>
-</section>
-<section id="section-1" class="slide level2">
 <h2></h2>
-
-<img data-src="figures/tree-branches.png" style="width:80.0%" class="r-stretch"></section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><span class="h">Sequential</span> Games</p>
+<ul>
+<li><p>players make their moves one after the other</p></li>
+<li><p><span class="hi">Chapter</span> 3</p></li>
+<li><p><span class="hi">Visual tool</span>: <em>game trees</em></p></li>
+<li><p><span class="hi">Solution Method</span>: <em>backwards induction</em></p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><span class="h">Simultaneous</span> Games</p>
+<ul>
+<li><p>players make their moves at the same time</p></li>
+<li><p><span class="hi">Chapter</span> 4 &amp; 5</p></li>
+<li><p><span class="hi">Visual tool</span>: <em>payoff tables</em></p></li>
+<li><p><span class="hi">Solution Method</span>: <em>best responses</em>, deletion of <em>dominated strats</em></p></li>
+</ul>
+</div>
+</div>
 </section>
-<section id="section-3" class="slide level2">
-<h2><img data-src="figures/tree-terminalnodes.png" style="width:80.0%"></h2>
+<section id="zero-sum-games" class="slide level2">
+<h2>Zero-sum games</h2>
+<div>
+<p>When the <em>total payoffs of all players sum to 0</em></p>
+<ul>
+<li class="fragment"><p>i.e, one player’s gain is another player’s loss</p></li>
+<li class="fragment"><p>Examples: NCAA Football Championship, Scramble for Africa (technically <em>constant</em>-sum)</p></li>
+</ul>
+<p>Not all games are fixed or zero sum;</p>
+<ul>
+<li class="fragment">Examples: Hiring a tutor (mutual gains), Wargames (1983) “the only winning move is not to play”</li>
+</ul>
+</div>
 </section>
-<section id="kidnapping-game" class="slide level2">
-<h2>Kidnapping Game <sup>1</sup></h2>
-<p>A kidnapper named <span class="hi">Guy</span> has contacted the victim’s wife, named <span class="hi">Vivica</span>, to demand a ransom. To predict what will happen to the victim, <span class="hi">Orlando</span>, we need to create a game theoretic model of the situation. Let’s use the language of the tree graph to visualize this game.</p>
-<aside><ol class="aside-footnotes"><li id="fn4"><p>Harrington, pg 18</p></li></ol></aside></section>
-<section id="kidnapping-game-extensive-form" class="slide level2">
-<h2>Kidnapping Game: Extensive Form</h2>
-</section>
-<section id="section-4" class="slide level2">
-<h2><img data-src="figures/kidnapgame_blank.png" style="width:66.0%"></h2>
-</section>
-<section id="applying-the-extensive-form" class="slide level2">
-<h2>Applying the Extensive Form</h2>
+<section id="full-or-equal-information" class="slide level2">
+<h2>Full or Equal Information</h2>
+<p>How much does each player know when they decide?</p>
 <div>
 <ul>
-<li class="fragment">Who are the players?</li>
-<li class="fragment">Where are the decision nodes?</li>
-<li class="fragment">What are the branches? What do they represent?</li>
-<li class="fragment">What do the terminal nodes represent?</li>
-</ul>
-</div>
-</section>
-<section id="kidnapping-game-payoffs" class="slide level2">
-<h2>Kidnapping Game payoffs</h2>
-<table>
-<colgroup>
-<col style="width: 54%">
-<col style="width: 20%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Outcome</strong></th>
-<th><span class="red"><strong>Guy</strong></span></th>
-<th><span class="blue"><strong>Vivica</strong></span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>No kidnapping</td>
-<td><span class="red">3</span></td>
-<td><span class="blue">5</span></td>
-</tr>
-<tr class="even">
-<td>Kidnapping, ransom paid, Orlando killed</td>
-<td><span class="red">4</span></td>
-<td><span class="blue">1</span></td>
-</tr>
-<tr class="odd">
-<td>Kidnapping, ransom paid, Orlando released</td>
-<td><span class="red">5</span></td>
-<td><span class="blue">3</span></td>
-</tr>
-<tr class="even">
-<td>Kidnapping, no ransom paid, Orlando killed</td>
-<td><span class="red">2</span></td>
-<td><span class="blue">2</span></td>
-</tr>
-<tr class="odd">
-<td>Kidnapping, no ransom paid, Orlando released</td>
-<td><span class="red">1</span></td>
-<td><span class="blue">4</span></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="kidnapping-game-tree-with-payoffs" class="slide level2">
-<h2>Kidnapping game tree with payoffs</h2>
-
-<img data-src="figures/kidnapgame.png" style="width:80.0%" class="r-stretch"></section>
-<section id="predictions" class="slide level2">
-<h2>Predictions?</h2>
-<p>Based on the extensive form game tree with payoffs, do you have any predictions for what strategies each player will choose? ::: {.incremental} * What could be some useful assumptions about how players think? * Hold those thoughts as we move onto our first solution method ::: —</p>
-</section>
-<section id="a-definition-of-an-extensive-form-game" class="slide level2">
-<h2>a Definition of an Extensive Form Game: <sup>1</sup></h2>
+<li class="fragment"><p><span class="h">Perfect Information</span>: when players know all previous moves and external circumstances</p>
 <ul>
-<li>A collection of decision-makers, called <span class="hi">players</span> or <em>agents</em></li>
-<li>A set of <span class="hi">decision nodes</span>, each of which represents the information available to the players in that node</li>
-<li><span class="hi">Branches</span> from each node which represent the possible strategies available to the players</li>
-<li>The entire game tree serves as the <span class="h">mapping</span> from intersections of players’ strategy profiles to the outcomes at each <span class="hi">terminal nodes</span></li>
+<li class="fragment">players may have <span class="hi"><em>imperfect info</em></span>; uncertainty about the state of the world, previous’ moves, or other player’s ‘type’</li>
+</ul></li>
+<li class="fragment"><p><span class="h">Asymmetric Info</span>: when one player has access to information that other players do not</p>
+<ul>
+<li class="fragment"><p>Examples: hand in poker, used car salesmen</p></li>
+<li class="fragment"><p>Topics: Signaling, Screening</p></li>
+</ul></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn5"><p>for finite, perfect information games</p></li></ol></aside></section>
-<section id="strategies-in-extensive-form" class="slide level2">
-<h2>Strategies in extensive form</h2>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
 </div>
-<p><strong>Definition <sup>1</sup></strong></p>
-</div>
-<div class="callout-content">
-<p>A <span class="hi">strategy</span> for a player in a perfect-information game is a list of choices, one for each decision node of that player.</p>
-</div>
-</div>
-</div>
-<aside><ol class="aside-footnotes"><li id="fn6"><p>Bonanno, pg 83</p></li></ol></aside></section>
-<section id="apply-this-definition-to-the-kidnapping-game" class="slide level2">
-<h2>Apply this definition to the kidnapping game:</h2>
-<p>How many choices does Guy make? Vivica?</p>
-<p>Write out a strategy list for each player:</p>
-</section>
-<section class="slide level2">
-
-</section>
-<section class="slide level2">
-
-<p>name:examples</p>
-</section>
-<section class="slide level2">
-
 </section></section>
 <section>
-<section id="examples-1" class="title-slide slide level1 center">
+<section id="examples" class="title-slide slide level1 center">
 <h1>Examples</h1>
 
+</section>
+<section id="the-battle-of-wits-the-princess-bride---1987" class="slide level2">
+<h2>The Battle of Wits (<em>The Princess Bride</em> - 1987)</h2>
+<ul>
+<li>The “Man in Black” and Vizzini agree to a battle of wits to break the impasse.</li>
+<li>Vizzini claims that his own brain puts Plato, Aristotle, and Socrates to shame and demonstrates his recursive strategic reasoning.</li>
+</ul>
+<iframe data-external="1" src="https://www.youtube.com/embed/rMz7JBRbmNo" width="1000" height="400" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </section>
 <section id="baseball-i" class="slide level2">
 <h2>Baseball, I <sup>1</sup></h2>
@@ -757,15 +747,15 @@ Dante Yasui
 </tbody>
 </table>
 <ul>
-<li><h2 id="rank-each-players-preferences-over-strategy-profile-intersections">Rank each player’s preferences over strategy profile intersections</h2></li>
+<li>Rank each player’s preferences over strategy profile intersections</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn7"><p>Harrington, pg 21</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>Harrington, pg 21</p></li></ol></aside></section>
 <section id="baseball-i-1" class="slide level2">
 <h2>Baseball, I <sup>1</sup></h2>
 <blockquote>
 <p>It is the bottom of the ninth inning, and the game is tied between the Orioles and the Yankees. The pitcher on the mound for the Yankees is Masahiro Tanaka, who is a right-hander, and the batter due up for the Orioles is Adam Jones, who is also a right-hander. The Orioles’ manager is thinking about whether to substitute Chris Davis, who is a left-handed batter, for Jones. He would prefer to have Davis face Tanaka in order to have a lefty–righty matchup and thus a better chance of getting a hit. However, the Yankees’ manager could respond to Davis’ pinch-hitting by substituting the left-handed pitcher Cesar Cabral for Tanaka. The Orioles’ manager would rather have Jones face Tanaka than have Davis face Cabral. Of course, the Yankees’ manager has the exact opposite preferences.</p>
 </blockquote>
-<aside><ol class="aside-footnotes"><li id="fn8"><p>Harrington, pg 21</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn5"><p>Harrington, pg 21</p></li></ol></aside></section>
 <section id="baseball-i-2" class="slide level2">
 <h2>Baseball, I</h2>
 <ul>
@@ -776,7 +766,7 @@ Dante Yasui
 
 
 <img src="UOSignature-356.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p>EC327 | Lecture 1 | Elements of a Game</p>
+<p>EC327 | Lecture 1 | General Principles</p>
 </div>
 </section></section>
 

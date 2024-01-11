@@ -1,0 +1,27 @@
+---
+name: GuessTwoThirds
+---
+
+## Activity 1: Guess 2/3rds of the average
+::: {.incremental}
+  - You will each choose an integer between 0 and 100. 
+  - The winner is the person who's guess is closest to the [average of all guesses *times* 2/3]{.hii}
+  - Submit your guess on [Canvas](https://canvas.uoregon.edu/courses/233504/quizzes/329305)
+  - Backup [Google forms version](https://docs.google.com/forms/d/e/1FAIpQLSdJoCIYnrQSzEQA1m0BDLFB5_l0PBloLL558ZWc1PfhHvxs2Q/viewform?usp=sf_link)
+:::
+---
+
+## Activity 1
+
+::: {.incremental}
+  - This is a simple example, but illustrates how complicated strategic reasoning can be.
+  - The theoretical solution to this game says that anyone who is *rational* and knows that *everyone else is rational* (Common Knowledge of Rationality) should only choose 0 or 1. 
+  - However, [Nagel, R. (1995), "*Unravelling in guessing games : An experimental study*"](https://www.jstor.org/stable/2950991) showed that over 12,000 answers, the average is 35.24.
+  - Is Common Knowledge of Rationality a 'bad' assumption? How can we connect our theories with experimental evidence?
+:::
+
+::: notes
+  * discuss different types of approaches people took
+  * how would they revise guess 2nd time?
+:::
+---

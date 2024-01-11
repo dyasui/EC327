@@ -6,9 +6,8 @@ name: definitions
 
 ## Examples of some questions:
 :::{.incremental}
-  * Why does Best-buy offer price match guarantee?
-  * Why are there 4 different [iPhone 15](https://support.apple.com/en-us/HT201296)'s?!
-  * Does adding more highway lanes really result in shorter commute times?
+  * When should the Ducks play a running play or passing play?
+  * Why is a pdf textbook so expensive?!
   * Why did the US and USSR adopt Mutually Assured Destruction?
   * Why do people give engagement rings?
 :::
@@ -19,9 +18,6 @@ name: definitions
   * In other words, they are questions of [strategy]{.hi}:
 
     > **Strategic interdependence** is present in a social situation when what is best for someone *depends* on what someone else does. ^[*Harrington*, pg. 2]
-
-  * In the rest of this lecture, we will build up this definition formally
-    - but why is that necessary?
 :::
 
 ## A definition of a game ^[adapted from [Leigh Tesfatsion](https://www2.econ.iastate.edu/tesfatsi/)'s slides]
@@ -93,9 +89,58 @@ For example, let $u(.)$ be the utility function from emoji to utils
   * I can have $u(🍺) =5$, $u(🌯)=10$, $u(🤸)=25$
 
   * I can also have $u(🍺 \ , 🌯) = 20$, $u(🍺 \ , 🌯 \ , 🤸) = 15$
+  
+---
+  
+## Ordinal vs. Cardinal numbers
+
+::: {.incremental}
+
+  * [Cardinal:]{.h} amounts which can be measured in meaningful units are *cardinal numbers* 
+    
+    + examples: $9.99, 80 students, 50:50 odds
+
+  * [Ordinal:]{.h} all that matters is the *relative ranking*
+  
+    + examples: utility; what does 100 utility mean? (it's less than 200)
+  
+:::
+
+---
+
+## Don't worry!
+
+::: {.incremental}
+
+  * For this class, you won't need to worry about utility functions (if you want to, take EC311).
+  
+  * I will almost always give you specific values of utility which we will call [payoffs]{.hi}.
+  
+  * The table on the previous page is a good example.
+  
+:::
+
+---
+
+## *Strategic* Choice vs. other types of choices
+
+::: {.incremental}
+
+  * Economics is the study of [constrained choice]{.hi}; in EC311, we introduce the *utility maximization problem* as the workhorse model
+  
+    - These types of problems usually only involve one agent; the consumer, who is only constrained by their budget
+    
+  * We use the term [*strategic games*]{.hi} to distinguish from these single-agent optimization problems 
+  
+  * A [*game*]{.hi} is a type of problem featuring multiple agents, called [players]{.hi}, in which their optimal choice [depends on the optimal choices of  other players]{.hii}.
+  
+:::
+
+---
 
 ## State-dependent utility table
-Sometimes my enjoyment of a thing depends on the *state* of the world
+::: {.incremental}
+  * Sometimes my enjoyment of a thing depends on the *state* of the world
 
 | My choice   | My friends' choice | My utility |
 |-------------|:------------------:|:----------:|
@@ -106,33 +151,95 @@ Sometimes my enjoyment of a thing depends on the *state* of the world
 
 : socially-dependent preferences {.striped .hover}
 
-## Don't worry!
-::: {.incremental}
-* For this class, you won't need to worry about utility functions (if you want to, take EC311).
-
-* I will almost always give you specific values of utility which we will call [payoffs]{.hi}.
-
-* The table on the previous page is a good example.
+  * Is this an example of a [strategic]{.hi} or [non-strategic]{.hi} choice?
 :::
 
-## What you need to know about Utility:
-* As long as people are *rational*;
-  i.e., they can consistently rank all alternatives,
-  then we can represent their preferences with real numbers
+# Taxonomy of Games
 
-## Information and Beliefs
-This is where it starts to get tricky.
-For most situations, 
-as game theorists we have to take a stand on what people ***know***
-and what they ***believe***.
+## General Categories
+
+  * [Sequential]{.h} or [Simultaneous]{.h}?
+  
+  * [Zero-sum]{.h} or not
+  
+  * [Perfect]{.h} or [Imperfect]{.h} information?
+  
+    + is info [symmetric]{.hi} or [asymmetric]{.hi}?
+  
+  * [One-shot]{.h} or [Repeated]{.h}?
+  
+  * '[Noncooperative]{.h}' or '[Cooperative]{.h}'?
+  
+---
+
+##
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+[Sequential]{.h} Games
+
+  * players make their moves one after the other
+  
+  * [Chapter]{.hi} 3
+  
+  * [Visual tool]{.hi}: *game trees*
+  
+  * [Solution Method]{.hi}: *backwards induction*
+
+:::
+
+::: {.column width="50%"}
+
+[Simultaneous]{.h} Games
+
+  * players make their moves at the same time
+  
+  * [Chapter]{.hi} 4 & 5
+  
+  * [Visual tool]{.hi}: *payoff tables*
+  
+  * [Solution Method]{.hi}: *best responses*, deletion of *dominated strats*
+
+:::
+
+::::
+
+---
+
+## Zero-sum games
+
+:::{.incremental}
+
+When the *total payoffs of all players sum to 0*
+
+  * i.e, one player's gain is another player's loss
+  
+  * Examples: NCAA Football Championship, Scramble for Africa (technically *constant*-sum)
+  
+Not all games are fixed or zero sum; 
+
+  * Examples: Hiring a tutor (mutual gains), Wargames (1983) "the only winning move is not to play"
+  
+:::
+
+---
+
+## Full or Equal Information
+
+How much does each player know when they decide?
 
 ::: {.incremental}
-  * Many games contain *perfectly informed* players
-    who know not only their own preferences,
-    but also the preferences of other players. 
-    In sequential move games, 
-    they can also perfectly observe the moves that players before them made.
-    - this is a very strong assumption
 
-  * We can relax that last part in games of *asymmetric information* in which some players' strategies (or types) cannot be observed by all players.
+  * [Perfect Information]{.h}: when players know all previous moves and external circumstances
+  
+    + players may have [*imperfect info*]{.hi}; uncertainty about the state of the world, previous' moves, or other player's 'type'
+  
+  * [Asymmetric Info]{.h}: when one player has access to information that other players do not
+  
+    + Examples: hand in poker, used car salesmen
+    
+    + Topics: Signaling, Screening
+  
 :::
