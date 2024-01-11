@@ -42,9 +42,15 @@ output:
 
 :::
 
+# Extensive Form
+
+## Game Trees/Extensive Form as a tool
+
+  * Before we learn how to solve a game, it will helpful to be able to visualize them
+
+  * Because of the ordered nature of sequential games, a [tree diagram]{.hi} makes sense
+
+---
+
 {{< include GameTrees.qmd >}}
-
-{{< include BackwardsInduction.qmd >}}
-
-{{< include Examples.qmd >}}
 

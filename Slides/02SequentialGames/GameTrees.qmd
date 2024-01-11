@@ -2,11 +2,29 @@
 name: GameTrees
 ---
 
-# Representing Sequential Games with the Extensive Form
-
-## A Decision Tree
+## A *Decision* Tree
 
 ![](figures/decisiontree.png){width=80%}
+
+  * Is this a *strategic* decision?
+
+---
+
+## Extensive Form Definition
+
+:::{.incremental}
+
+A [Game Tree]{.h} consists of:
+
+  * One or more [decision nodes]{.hi} for each player
+
+    + starting with one [initial node]{.hii}
+
+  * [Branches]{.hi} coming from each decision node which represent available *actions*
+
+  * The game ends in any of the multiple [terminal nodes]{.hi}
+
+:::
 
 ---
 
