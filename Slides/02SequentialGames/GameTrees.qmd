@@ -2,9 +2,19 @@
 name: GameTrees
 ---
 
+# Extensive Form
+
+## Game Trees/Extensive Form as a tool
+
+  * Before we learn how to solve a game, it will helpful to be able to visualize them
+
+  * Because of the ordered nature of sequential games, a [tree diagram]{.hi} makes sense
+
+---
+
 ## A *Decision* Tree
 
-![](figures/decisiontree.png){width=80%}
+![](figures/decisiontree.png){width=80% fig-align="center"}
 
   * Is this a *strategic* decision?
 
@@ -14,15 +24,17 @@ name: GameTrees
 
 :::{.incremental}
 
-A [Game Tree]{.h} consists of:
+A [Tree Graph]{.h} consists of:
 
-  * One or more [decision nodes]{.hi} for each player
+  * Multiple [nodes]{.hi} with an ordered hierarchy starting from one [initial node]{.hii}
 
-    + starting with one [initial node]{.hii}
+  * [Branches]{.hi} coming from each node which connect it to later nodes
 
-  * [Branches]{.hi} coming from each decision node which represent available *actions*
-
-  * The game ends in any of the multiple [terminal nodes]{.hi}
+  * The tree ends in any of the multiple [terminal nodes]{.hi}
+  
+::: {.callout-warning}
+Each (non-initial) terminal node may have multiple branches leading from it; but must only have *one* branch that *leads to it*.
+:::
 
 :::
 
@@ -30,39 +42,54 @@ A [Game Tree]{.h} consists of:
 
 ## Anatomy of a tree
 
-![](figures/tree-nodes.png){width=80%}
+![](figures/tree-nodes.png){width=80% fig-align="center"}
 
 ---
 
 ##
 
-![](figures/tree-branches.png){width=80%}
+![](figures/tree-branches.png){width=80% fig-align="center"}
 
 ---
 
 ##
 
-![](figures/tree-terminalnodes.png){width=80%}
+![](figures/tree-terminalnodes.png){width=80% fig-align="center"}
 
 ---
 
 ## Kidnapping Game ^[Harrington, pg 18]
+
 A kidnapper named [Guy]{.hi} has contacted the victim's wife, named [Vivica]{.hi}, to demand a ransom.
+
 To predict what will happen to the victim, [Orlando]{.hi}, we need to create a game theoretic model of the situation.
+
 Let's use the language of the tree graph to visualize this game.
+
 ---
 
-## Kidnapping Game: Extensive Form
-![](figures/kidnapgame_blank.png){width=66%}
+## 
+
+![](figures/kidnapgame_blank.png){fig-align="center"}
+
 ---
 
 ## Applying the Extensive Form
+
 ::: {.incremental}
-* Who are the players?
-* Where are the decision nodes?
-* What are the branches? What do they represent?
-* What do the terminal nodes represent?
+
+  * Who are the players?
+  
+  * Where are the decisions?
+  
+  * What are the branches? What do they represent?
+  
+  * What do the terminal nodes represent?
+  
+  * Is this a *complete* representation of a game? What's missing?
+
 :::
+
 ---
 
 ## Kidnapping Game payoffs
@@ -78,47 +105,99 @@ Let's use the language of the tree graph to visualize this game.
 
 ## Kidnapping game tree with payoffs
 
-![](figures/kidnapgame.png){width=80%}
+![](figures/kidnapgame.png){fig-align="center"}
+
 ---
 
 ## Predictions?
+
 Based on the extensive form game tree with payoffs,
 do you have any predictions for what strategies each player will choose?
 
-::: {.incremental}
-
- * What could be some useful assumptions about how players think?
-
- * Hold those thoughts as we move onto our first solution method
-
-:::
 ---
 
 
 ## a Definition of an Extensive Form Game: ^[for finite, perfect information games]
 
   * A collection of decision-makers, called [players]{.hi} or *agents*
+  
   * A set of [decision nodes]{.hi}, each of which represents the information available to the player of that node
+  
   * [Branches]{.hi} from each node which represent the possible actions available to the players
+  
   * The entire game tree serves as the [mapping]{.h} from intersections of players' strategy profiles to the outcomes at each [terminal nodes]{.hi}
+  
 ---
 
-## Strategies in extensive form
+## Strategies in Extensive Form Games
+
+::: {.incremental}
+
 ::: {.callout-tip}
 ## Definition ^[Bonanno, pg 83]
-A [strategy]{.hi} for a player in a perfect-information game is a list of choices,
-one for each decision node of that player.
+A [strategy]{.hi} for a player in a perfect-information game is a *list of choices*,
+one for *each decision node* of that player.
 :::
+
+::: {.callout-warning}
+Be careful to distinguish between a [*strategy*]{.hi} and a single *action/choice*
+:::
+
+What's the difference?
+
+:::
+
 ---
 
 ## Apply this definition to the kidnapping game:
-How many choices does Guy make? Vivica?
 
-Write out a strategy list for each player:
+  * How many choices does Guy make? 
+  
+::: {.fragment .fade-in}
+3
+:::
+  
+  * Vivica?
+  
+::: {.fragment .fade-in}
+1
+:::
+  
+  * Write out a strategy list for each player:
+  
 ---
 
-## Strategies
-_Guy_:
-| Node 1 | Node 3 | Node 4|
-|2
+## Write out a strategy for each player
+
+::: {.incremental}
+_[Guy]{.h}_: 
+
+  * ***\{***[*Kidnap*]{.hii}***,*** [*Kill*]{.hii} if ransom paid***,*** [*Don't Kill*]{.hii} if no ransom paid***\}*** is *one* strategy
+  
+    + Guy has $8$ total strategies:
+    
+    + **\{**[*Kidnap*]{.hii}, [*Kill*]{.hii}, [*Kill*]{.hii}**\}**, 
+    **\{**[*Kidnap*]{.hii}, [*Kill*]{.hii}, [*Don't*]{.hii}**\}**,
+    **\{**[*Kidnap*]{.hii}, [*Don't*]{.hii}, [*Kill*]{.hii}**\}**,
+    **\{**[*Kidnap*]{.hii}, [*Don't*]{.hii}, [*Don't*]{.hii}\}, 
+    **\{**[*No Kidnap*]{.hii}, [*Kill*]{.hii}, [*Kill*]{.hii}**\}**,
+    **\{**[*No Kidnap*]{.hii}, [*Kill*]{.hii}, [*Don't*]{.hii}**\}**,
+    **\{**[*No Kidnap*]{.hii}, [*Kill*]{.hii}, [*Kill*]{.hii}**\}**,
+    **\{**[*Kidnap*]{.hii}, [*Don't*]{.hii}, [*Kill*]{.hii}**\}**
+  
+_[Vivica]{.h}_:
+
+  * Only two strategies: ***\{***[*Pay*]{.hii} the ransom***\}***, or
+  ***\{***[*Don't*]{.hii} pay***\}***
+  
+:::
+
+---
+
+## Letting Nature take the wheel
+
+One way to represent risk or uncertainty is to represent **Nature** as a 'player'.
+
+![figures/doubleornothing.png](figures/doubleornothing.png)
+
 

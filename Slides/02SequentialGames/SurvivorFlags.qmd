@@ -1,0 +1,110 @@
+---
+name: SurvivorFlags
+---
+
+# Activity 2: Survivor Challenge
+
+## Watch the clip
+
+{{< video https://youtu.be/aonCsvi0LKc width="800" height="450" fig-align="center" >}}
+
+https://youtu.be/aonCsvi0LKc
+
+---
+
+## Split Into Groups
+
+```{r}
+#| warning: false
+library(readr)
+library(tidyverse)
+# SurvivorGroup <- read_csv("Survivors.csv") %>%
+#   select(name, group_name) %>%
+#   mutate(group_name = str_remove_all(group_name, "Activity2 ")) %>%
+#   mutate(name = sub("(^.*),\\s(.*$)","\\2 \\1", SurvivorGroup$name)) %>%
+#   write_csv("SurvivorGroup.csv")
+
+SurvivorGroup <- read_csv("SurvivorGroup.csv") %>% 
+  group_by(group_name) %>% 
+  mutate(Group = row_number()) %>% 
+  pivot_wider(names_from = group_name, values_from = name) %>% 
+  arrange(Group)
+
+knitr::kable(SurvivorGroup)
+```
+
+---
+
+
+## Set Up
+
+::: {.incremental}
+  
+  * Find an opposing group
+  
+  * Pick someone to record flags for each round
+  
+  * Draw 21 flags on whiteboard
+  
+  * Discuss strategy w/ your group for 1 minute
+  
+  * Play the game!
+  
+    + Don't forget to record how many flags each round!!!
+  
+:::
+  
+---
+
+## Modified Rules: choose number of flags to start
+
+Find a new team to play against (losers move)
+
+::: {.incremental}
+
+  * This time, one team will choose the number of starting flags: between 15-25
+  
+  * The other team will choose whether to allow max. of 2-5 flags per round
+  
+  * Play and record! 
+  
+:::
+
+---
+
+## Discuss 
+
+In your teams briefly discuss the following:
+  
+  * Is there a correct way to play the game?
+  
+  * How did you find out the best way to play the game?
+  
+  * Is the game solved meaning that the winner can be correctly predicted from any point in the game? 
+  
+    + If so, should the first or second team always win?
+  
+  * Were there more errors in the first games played than the last games played?
+  
+    + Why?
+  
+  * How was this game different from the guessing 2/3rds game?
+  
+---
+
+## 
+
+{{< video https://youtu.be/K_MckZc8VvQ width="1000" height="600" >}}
+
+https://youtu.be/K_MckZc8VvQ
+
+---
+
+## Recap
+
+  * There *is* a correct way to play: we will later call the *Nash equilibrium*
+  
+  * You likely used some form of *backwards induction* or *rollback* reasoning
+  
+  * This game was *sequential* unlike the *simultaneous* 2/3rds game
+

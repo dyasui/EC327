@@ -339,6 +339,11 @@ Dante Yasui
 
   <p class="date">2024</p>
 </section>
+<section id="apologies-to" class="slide level2">
+<h2>Apologies to: 😓</h2>
+<p>Drew Rampelberg and Sean Loder</p>
+
+<img data-src="figures/histogram.png" class="r-stretch quarto-figure-center"><p class="caption">histogram</p></section>
 <section class="slide level2">
 
 <div class="vertical-center">
@@ -346,15 +351,229 @@ Dante Yasui
 <ul>
 <li><p>Activity 2: <em>Survivor</em></p></li>
 <li><p>Game trees</p></li>
-<li><p>Solving games sequentially</p></li>
-<li><p>Adding Players</p></li>
-<li><p>Order Matters</p></li>
-<li><p>Adding Moves</p></li>
+<li><p>Backwards Induction</p></li>
 <li><p>Evidence</p></li>
 <li><p>Examples</p></li>
 </ul>
 </div>
 </section>
+<section>
+<section id="activity-2-survivor-challenge" class="title-slide slide level1 center">
+<h1>Activity 2: Survivor Challenge</h1>
+
+</section>
+<section id="watch-the-clip" class="slide level2">
+<h2>Watch the clip</h2>
+<iframe data-external="1" src="https://www.youtube.com/embed/aonCsvi0LKc" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p>https://youtu.be/aonCsvi0LKc</p>
+</section>
+<section id="split-into-groups" class="slide level2">
+<h2>Split Into Groups</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table style="width:100%;">
+<colgroup>
+<col style="width: 1%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 5%">
+<col style="width: 3%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 5%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Group</th>
+<th style="text-align: left;">Survivor 15</th>
+<th style="text-align: left;">Survivor 16</th>
+<th style="text-align: left;">Survivor 3</th>
+<th style="text-align: left;">Survivor 10</th>
+<th style="text-align: left;">Survivor 9</th>
+<th style="text-align: left;">Survivor 2</th>
+<th style="text-align: left;">Survivor 6</th>
+<th style="text-align: left;">Survivor 7</th>
+<th style="text-align: left;">Survivor 5</th>
+<th style="text-align: left;">Survivor 8</th>
+<th style="text-align: left;">Survivor 14</th>
+<th style="text-align: left;">Survivor 1</th>
+<th style="text-align: left;">Survivor 12</th>
+<th style="text-align: left;">Survivor 13</th>
+<th style="text-align: left;">Survivor 11</th>
+<th style="text-align: left;">Survivor 19</th>
+<th style="text-align: left;">Survivor 17</th>
+<th style="text-align: left;">Survivor 20</th>
+<th style="text-align: left;">Survivor 4</th>
+<th style="text-align: left;">Survivor 18</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Zaki Al-Hardan</td>
+<td style="text-align: left;">Geedi Ali</td>
+<td style="text-align: left;">Charlie Anderson</td>
+<td style="text-align: left;">Job Aquino-Rangel</td>
+<td style="text-align: left;">Gabriel Arciga</td>
+<td style="text-align: left;">Jennifer Barnett</td>
+<td style="text-align: left;">Chris Booras</td>
+<td style="text-align: left;">Gabe Bowers</td>
+<td style="text-align: left;">Campbell Brandt</td>
+<td style="text-align: left;">Owen Brown</td>
+<td style="text-align: left;">Max Cronk</td>
+<td style="text-align: left;">Sophie Cross</td>
+<td style="text-align: left;">Emily Dixon</td>
+<td style="text-align: left;">Joseph Doolan</td>
+<td style="text-align: left;">Jack Grage</td>
+<td style="text-align: left;">Sam Gribb</td>
+<td style="text-align: left;">Christopher Grimsley</td>
+<td style="text-align: left;">Delilah Kohn</td>
+<td style="text-align: left;">Sean Loder</td>
+<td style="text-align: left;">Miles Padilla Grafilo</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Chay Bick</td>
+<td style="text-align: left;">Cody Chase</td>
+<td style="text-align: left;">Arthur Fargher</td>
+<td style="text-align: left;">Mizuki Nakano</td>
+<td style="text-align: left;">Eli Brenn</td>
+<td style="text-align: left;">Isaac Ko</td>
+<td style="text-align: left;">William Doerr</td>
+<td style="text-align: left;">Ryan Hirth</td>
+<td style="text-align: left;">Nick Musgrove</td>
+<td style="text-align: left;">Xavy Clawson</td>
+<td style="text-align: left;">Braden Magdelain</td>
+<td style="text-align: left;">Tate Drebes</td>
+<td style="text-align: left;">Jeremy Goldenstein</td>
+<td style="text-align: left;">Max Farquhar</td>
+<td style="text-align: left;">Charlie Pickard</td>
+<td style="text-align: left;">Jonathan Herr</td>
+<td style="text-align: left;">Kaitlyn Klotz</td>
+<td style="text-align: left;">Parker Morgan</td>
+<td style="text-align: left;">Ava Podboy</td>
+<td style="text-align: left;">Walker Stone</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Tobias Miller</td>
+<td style="text-align: left;">Josh Gassner</td>
+<td style="text-align: left;">Alden McVay</td>
+<td style="text-align: left;">Oscar Oeding</td>
+<td style="text-align: left;">Scott O’Meara</td>
+<td style="text-align: left;">Matthew Mabadi</td>
+<td style="text-align: left;">Harrison Kremer</td>
+<td style="text-align: left;">Ashley Jones</td>
+<td style="text-align: left;">Jack Peeples</td>
+<td style="text-align: left;">Daniel Howton</td>
+<td style="text-align: left;">John Medlin</td>
+<td style="text-align: left;">Noah Soto</td>
+<td style="text-align: left;">Adelle Iseri</td>
+<td style="text-align: left;">Dillon Horner</td>
+<td style="text-align: left;">Aidan Robinson</td>
+<td style="text-align: left;">Andrew Keepes</td>
+<td style="text-align: left;">Aidan Kye</td>
+<td style="text-align: left;">Parker Ross</td>
+<td style="text-align: left;">Griffin Rea</td>
+<td style="text-align: left;">Jack Thayer</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">Carson Powell</td>
+<td style="text-align: left;">Deegan Smith</td>
+<td style="text-align: left;">Justin White</td>
+<td style="text-align: left;">Drew Rampelberg</td>
+<td style="text-align: left;">Cara Reinke</td>
+<td style="text-align: left;">Drew Morales</td>
+<td style="text-align: left;">Andy Yarrington</td>
+<td style="text-align: left;">Leonardo Sajasi</td>
+<td style="text-align: left;">Albert Savage</td>
+<td style="text-align: left;">Logan Sanford</td>
+<td style="text-align: left;">Elliott Nichols</td>
+<td style="text-align: left;">Owen Switzer</td>
+<td style="text-align: left;">Ryan Kato</td>
+<td style="text-align: left;">Sebbe Lind</td>
+<td style="text-align: left;">Miguel Torres Escobedo</td>
+<td style="text-align: left;">Eric Li</td>
+<td style="text-align: left;">Olivia Maslowski</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">Michael Sobnosky</td>
+<td style="text-align: left;">Floor Van Hameren</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="set-up" class="slide level2">
+<h2>Set Up</h2>
+<div>
+<ul>
+<li class="fragment"><p>Find an opposing group</p></li>
+<li class="fragment"><p>Pick someone to record flags for each round</p></li>
+<li class="fragment"><p>Draw 21 flags on whiteboard</p></li>
+<li class="fragment"><p>Discuss strategy w/ your group for 1 minute</p></li>
+<li class="fragment"><p>Play the game!</p>
+<ul>
+<li class="fragment">Don’t forget to record how many flags each round!!!</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="modified-rules-choose-number-of-flags-to-start" class="slide level2">
+<h2>Modified Rules: choose number of flags to start</h2>
+<p>Find a new team to play against (losers move)</p>
+<div>
+<ul>
+<li class="fragment"><p>This time, one team will choose the number of starting flags: between 15-25</p></li>
+<li class="fragment"><p>The other team will choose whether to allow max. of 2-5 flags per round</p></li>
+<li class="fragment"><p>Play and record!</p></li>
+</ul>
+</div>
+</section>
+<section id="discuss" class="slide level2">
+<h2>Discuss</h2>
+<p>In your teams briefly discuss the following:</p>
+<ul>
+<li><p>Is there a correct way to play the game?</p></li>
+<li><p>How did you find out the best way to play the game?</p></li>
+<li><p>Is the game solved meaning that the winner can be correctly predicted from any point in the game?</p>
+<ul>
+<li>If so, should the first or second team always win?</li>
+</ul></li>
+<li><p>Were there more errors in the first games played than the last games played?</p>
+<ul>
+<li>Why?</li>
+</ul></li>
+<li><p>How was this game different from the guessing 2/3rds game?</p></li>
+</ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<iframe data-external="1" src="https://www.youtube.com/embed/K_MckZc8VvQ" width="1000" height="600" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p>https://youtu.be/K_MckZc8VvQ</p>
+</section>
+<section id="recap" class="slide level2">
+<h2>Recap</h2>
+<ul>
+<li><p>There <em>is</em> a correct way to play: we will later call the <em>Nash equilibrium</em></p></li>
+<li><p>You likely used some form of <em>backwards induction</em> or <em>rollback</em> reasoning</p></li>
+<li><p>This game was <em>sequential</em> unlike the <em>simultaneous</em> 2/3rds game</p></li>
+</ul>
+</section></section>
 <section>
 <section id="extensive-form" class="title-slide slide level1 center">
 <h1>Extensive Form</h1>
@@ -370,51 +589,65 @@ Dante Yasui
 <section id="a-decision-tree" class="slide level2">
 <h2>A <em>Decision</em> Tree</h2>
 
-<img data-src="figures/decisiontree.png" style="width:80.0%" class="r-stretch"><ul>
+<img data-src="figures/decisiontree.png" style="width:80.0%" class="r-stretch quarto-figure-center"><ul>
 <li>Is this a <em>strategic</em> decision?</li>
 </ul>
 </section>
 <section id="extensive-form-definition" class="slide level2">
 <h2>Extensive Form Definition</h2>
-<p>A <span class="h">Game Tree</span> consists of:</p>
+<div>
+<p>A <span class="h">Tree Graph</span> consists of:</p>
 <ul>
-<li><p>One or more <span class="hi">decision nodes</span> for each player</p>
-<ul>
-<li>starting with one <span class="hii">initial ndoe</span></li>
-</ul></li>
-<li><p><span class="hi">Branches</span> coming from each decision node which represent available <em>actions</em></p></li>
+<li class="fragment"><p>Multiple <span class="hi">nodes</span> with an ordered hierarchy starting from one <span class="hii">initial node</span></p></li>
+<li class="fragment"><p><span class="hi">Branches</span> coming from each node which connect it to later nodes</p></li>
+<li class="fragment"><p>The tree ends in any of the multiple <span class="hi">terminal nodes</span></p></li>
 </ul>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>Each (non-initial) terminal node may have multiple branches leading from it; but must only have <em>one</em> branch that <em>leads to it</em>.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="anatomy-of-a-tree" class="slide level2">
 <h2>Anatomy of a tree</h2>
 
-<img data-src="figures/tree-nodes.png" style="width:80.0%" class="r-stretch"></section>
-<section id="section" class="slide level2">
-<h2></h2>
-
-<img data-src="figures/tree-branches.png" style="width:80.0%" class="r-stretch"></section>
+<img data-src="figures/tree-nodes.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
 <section id="section-1" class="slide level2">
 <h2></h2>
 
-<img data-src="figures/tree-terminalnodes.png" style="width:80.0%" class="r-stretch"></section>
+<img data-src="figures/tree-branches.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+
+<img data-src="figures/tree-terminalnodes.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
 <section id="kidnapping-game" class="slide level2">
 <h2>Kidnapping Game <sup>1</sup></h2>
-<p>A kidnapper named <span class="hi">Guy</span> has contacted the victim’s wife, named <span class="hi">Vivica</span>, to demand a ransom. To predict what will happen to the victim, <span class="hi">Orlando</span>, we need to create a game theoretic model of the situation. Let’s use the language of the tree graph to visualize this game.</p>
+<p>A kidnapper named <span class="hi">Guy</span> has contacted the victim’s wife, named <span class="hi">Vivica</span>, to demand a ransom.</p>
+<p>To predict what will happen to the victim, <span class="hi">Orlando</span>, we need to create a game theoretic model of the situation.</p>
+<p>Let’s use the language of the tree graph to visualize this game.</p>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Harrington, pg 18</p></li></ol></aside></section>
-<section id="kidnapping-game-extensive-form" class="slide level2">
-<h2>Kidnapping Game: Extensive Form</h2>
-</section>
-<section id="section-2" class="slide level2">
-<h2><img data-src="figures/kidnapgame_blank.png" style="width:66.0%"></h2>
-</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+
+<img data-src="figures/kidnapgame_blank.png" class="r-stretch quarto-figure-center"></section>
 <section id="applying-the-extensive-form" class="slide level2">
 <h2>Applying the Extensive Form</h2>
 <div>
 <ul>
-<li class="fragment">Who are the players?</li>
-<li class="fragment">Where are the decision nodes?</li>
-<li class="fragment">What are the branches? What do they represent?</li>
-<li class="fragment">What do the terminal nodes represent?</li>
+<li class="fragment"><p>Who are the players?</p></li>
+<li class="fragment"><p>Where are the decisions?</p></li>
+<li class="fragment"><p>What are the branches? What do they represent?</p></li>
+<li class="fragment"><p>What do the terminal nodes represent?</p></li>
+<li class="fragment"><p>Is this a <em>complete</em> representation of a game? What’s missing?</p></li>
 </ul>
 </div>
 </section>
@@ -465,28 +698,23 @@ Dante Yasui
 <section id="kidnapping-game-tree-with-payoffs" class="slide level2">
 <h2>Kidnapping game tree with payoffs</h2>
 
-<img data-src="figures/kidnapgame.png" style="width:80.0%" class="r-stretch"></section>
+<img data-src="figures/kidnapgame.png" class="r-stretch quarto-figure-center"></section>
 <section id="predictions" class="slide level2">
 <h2>Predictions?</h2>
 <p>Based on the extensive form game tree with payoffs, do you have any predictions for what strategies each player will choose?</p>
-<div>
-<ul>
-<li class="fragment"><p>What could be some useful assumptions about how players think?</p></li>
-<li class="fragment"><p>Hold those thoughts as we move onto our first solution method</p></li>
-</ul>
-</div>
 </section>
 <section id="a-definition-of-an-extensive-form-game" class="slide level2">
 <h2>a Definition of an Extensive Form Game: <sup>1</sup></h2>
 <ul>
-<li>A collection of decision-makers, called <span class="hi">players</span> or <em>agents</em></li>
-<li>A set of <span class="hi">decision nodes</span>, each of which represents the information available to the player of that node</li>
-<li><span class="hi">Branches</span> from each node which represent the possible actions available to the players</li>
-<li>The entire game tree serves as the <span class="h">mapping</span> from intersections of players’ strategy profiles to the outcomes at each <span class="hi">terminal nodes</span></li>
+<li><p>A collection of decision-makers, called <span class="hi">players</span> or <em>agents</em></p></li>
+<li><p>A set of <span class="hi">decision nodes</span>, each of which represents the information available to the player of that node</p></li>
+<li><p><span class="hi">Branches</span> from each node which represent the possible actions available to the players</p></li>
+<li><p>The entire game tree serves as the <span class="h">mapping</span> from intersections of players’ strategy profiles to the outcomes at each <span class="hi">terminal nodes</span></p></li>
 </ul>
 <aside><ol class="aside-footnotes"><li id="fn2"><p>for finite, perfect information games</p></li></ol></aside></section>
-<section id="strategies-in-extensive-form" class="slide level2">
-<h2>Strategies in extensive form</h2>
+<section id="strategies-in-extensive-form-games" class="slide level2">
+<h2>Strategies in Extensive Form Games</h2>
+<div>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -496,19 +724,270 @@ Dante Yasui
 <p><strong>Definition <sup>1</sup></strong></p>
 </div>
 <div class="callout-content">
-<p>A <span class="hi">strategy</span> for a player in a perfect-information game is a list of choices, one for each decision node of that player.</p>
+<p>A <span class="hi">strategy</span> for a player in a perfect-information game is a <em>list of choices</em>, one for <em>each decision node</em> of that player.</p>
 </div>
 </div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>Be careful to distinguish between a <span class="hi"><em>strategy</em></span> and a single <em>action/choice</em></p>
+</div>
+</div>
+</div>
+<p>What’s the difference?</p>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn3"><p>Bonanno, pg 83</p></li></ol></aside></section>
 <section id="apply-this-definition-to-the-kidnapping-game" class="slide level2">
 <h2>Apply this definition to the kidnapping game:</h2>
-<p>How many choices does Guy make? Vivica?</p>
-<p>Write out a strategy list for each player:</p>
+<ul>
+<li>How many choices does Guy make?</li>
+</ul>
+<div class="fragment fade-in">
+<p>3</p>
+</div>
+<ul>
+<li>Vivica?</li>
+</ul>
+<div class="fragment fade-in">
+<p>1</p>
+</div>
+<ul>
+<li>Write out a strategy list for each player:</li>
+</ul>
 </section>
-<section id="strategies" class="slide level2">
-<h2>Strategies</h2>
-<p><em>Guy</em>: | Node 1 | Node 3 | Node 4| |2</p>
+<section id="write-out-a-strategy-for-each-player" class="slide level2">
+<h2>Write out a strategy for each player</h2>
+<div>
+<p><em><span class="h">Guy</span></em>:</p>
+<ul>
+<li class="fragment"><p><strong><em>{</em></strong><span class="hii"><em>Kidnap</em></span><strong><em>,</em></strong> <span class="hii"><em>Kill</em></span> if ransom paid<strong><em>,</em></strong> <span class="hii"><em>Don’t Kill</em></span> if no ransom paid<strong><em>}</em></strong> is <em>one</em> strategy</p>
+<ul>
+<li class="fragment"><p>Guy has <span class="math inline">\(8\)</span> total strategies:</p></li>
+<li class="fragment"><p><strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Don’t</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Don’t</em></span>}, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Don’t</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong></p></li>
+</ul></li>
+</ul>
+<p><em><span class="h">Vivica</span></em>:</p>
+<ul>
+<li class="fragment">Only two strategies: <strong><em>{</em></strong><span class="hii"><em>Pay</em></span> the ransom<strong><em>}</em></strong>, or <strong><em>{</em></strong><span class="hii"><em>Don’t</em></span> pay<strong><em>}</em></strong></li>
+</ul>
+</div>
+</section>
+<section id="letting-nature-take-the-wheel" class="slide level2">
+<h2>Letting Nature take the wheel</h2>
+<p>One way to represent risk or uncertainty is to represent <strong>Nature</strong> as a ‘player’.</p>
+
+<img data-src="figures/doubleornothing.png" class="r-stretch quarto-figure-center"><p class="caption">figures/doubleornothing.png</p></section></section>
+<section>
+<section id="backwards-induction" class="title-slide slide level1 center">
+<h1>Backwards Induction</h1>
+
+</section>
+<section id="the-smoking-decision" class="slide level2">
+<h2>The smoking decision</h2>
+
+<img data-src="figures/fig3.2.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.2.png</p></section>
+<section id="the-smoking-game" class="slide level2">
+<h2>The smoking <em>game</em></h2>
+
+<img data-src="figures/fig3.3.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.3.png</p></section>
+<section id="pruning-branches" class="slide level2">
+<h2>‘Pruning’ branches</h2>
+
+<img data-src="figures/fig3.4.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.4.png</p></section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+
+<img data-src="figures/fig3.5.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.5.png</p></section>
+<section id="backwards-induction-defined" class="slide level2">
+<h2>Backwards Induction defined</h2>
+<p>The method of looking at decisions in the future to decide what to do now is called <span class="h">Backwards Induction</span> or <span class="h">Rollback</span></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition <sup>1</sup></strong></p>
+</div>
+<div class="callout-content">
+<p>When all players do <em>rollback analysis</em> to choose their optimal strategies, we call this set of strategies the <span class="h"><em>rollback equilibrium</em></span><sup>2</sup> of the game; the outcome that arises from playing these strategies is the <span class="hi"><em>rollback equilibrium outcome</em></span></p>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>Dixit et al, pg 56</p></li><li id="fn5"><p>aka subgame perfect equilibrium</p></li></ol></aside></section>
+<section id="group-exercise" class="slide level2">
+<h2>Group Exercise:</h2>
+<p>Consider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.</p>
+<ol type="1">
+<li><p><em>Draw the extensive form game tree complete with all payoff for both teams.</em></p></li>
+<li><p><em>How many total strategies are there for team 1?</em></p></li>
+<li><p><em>Use pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?</em></p></li>
+</ol>
+</section>
+<section id="adding-more-players" class="slide level2">
+<h2>Adding more players</h2>
+<p>We can start to add more complexity with more than two players</p>
+</section>
+<section id="player-planting-game" class="slide level2">
+<h2>3-player planting game</h2>
+<div>
+<ul>
+<li class="fragment"><p><span class="hi">Emily</span>, <span class="hi">Nina</span>, and <span class="hi">Talia</span> are roommates who want to get a start on their communal garden.</p></li>
+<li class="fragment"><p>They like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.</p></li>
+<li class="fragment"><p><strong>2 or 3 people</strong> working is enough to keep the garden healthy, but if <strong>1 or 0</strong> work, then the garden will die.</p></li>
+</ul>
+</div>
+</section>
+<section id="planting-game-payoffs" class="slide level2">
+<h2>Planting Game payoffs</h2>
+<table>
+<thead>
+<tr class="header">
+<th>outcome:</th>
+<th>utlity:</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>I don’t contribute, but garden lives</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>I contribute, and get garden.</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>I don’t contribute, and garden dies</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>I contribute, but garden dies</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="planding-game-tree" class="slide level2">
+<h2>Planding Game Tree</h2>
+
+<img data-src="figures/fig3.6.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.6.png</p></section>
+<section id="equilibrium-path-of-play" class="slide level2">
+<h2>Equilibrium Path of Play</h2>
+<div>
+<p>Note that there is one continuous path we traced from the initial node to a final equilibrium outcome.</p>
+<p>However, we couldn’t have gotten their without the other arrows paths <strong>even though they are never reached</strong> in equilibrium.</p>
+<p>Recall that a <span class="hi">strategy</span> is a collection of choices at <strong>every</strong> decision node.</p>
+</div>
+</section>
+<section id="equilibrium-strategies" class="slide level2">
+<h2>Equilibrium Strategies</h2>
+<p>Even though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:</p>
+<blockquote>
+<p>“Nina’s <strong>strategy</strong> in the rollback equilibrium is { <span class="hii"><em>Don’t Contribute</em></span> at <span class="hi">b</span>, <span class="hii"><em>Contribute</em></span> at <span class="hi">c</span> }”.</p>
+</blockquote>
+<ul>
+<li>To make it even shorter, let’s call this strategy <span class="hii">DC</span>.</li>
+</ul>
+</section>
+<section id="how-many-strategies-does-talia-have" class="slide level2">
+<h2>How many strategies does Talia have?</h2>
+<div>
+<ul>
+<li class="fragment"><p>CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD</p></li>
+<li class="fragment"><p>16 total strategies</p></li>
+</ul>
+</div>
+</section>
+<section id="rollback-equilibrium-strategies" class="slide level2">
+<h2>Rollback Equilibrium Strategies</h2>
+<p>The equilibrium is:</p>
+<ul>
+<li>{ <span class="hi">D</span><sup>1</sup>, <span class="hi">DC</span><sup>2</sup>, <span class="hi">DCCD</span><sup>3</sup> }</li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn6"><p>Emily</p></li><li id="fn7"><p>Nina</p></li><li id="fn8"><p>Talia</p></li></ol></aside></section>
+<section id="adding-more-moves" class="slide level2">
+<h2>Adding More Moves</h2>
+<p><span class="hi align-center">Even a simple game get complicated fast</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/fig3.7.png" width="600" height="500"></p>
+</figure>
+</div>
+</section>
+<section id="tic-tac-toe" class="slide level2">
+<h2>Tic-Tac-Toe</h2>
+<ul>
+<li><p>Even though it looks complicated, the main branches are really just copies of each other</p></li>
+<li><p>Most people probably figure out the rollback equilibrium after playing it enough</p></li>
+<li><p>Insert relevant xkcd here: <a href="https://xkcd.com/832/">https://xkcd.com/832/</a></p></li>
+</ul>
+</section>
+<section id="chess" class="slide level2">
+<h2>Chess</h2>
+<ul>
+<li><p>What about more complicated games like chess?</p>
+<ul>
+<li>technically rollback solvable, but with <span class="math inline">\(10^{120}\)</span> possible moves, it hasn’t been solved by either human or machine</li>
+</ul></li>
+<li><p>Players of complicated sequential games often implement some <span class="hi">intermediate valuation function</span> to assign payoffs to non-terminal nodes.</p></li>
+</ul>
+</section>
+<section id="welfare-and-efficiency" class="slide level2">
+<h2>Welfare and Efficiency</h2>
+<div>
+<p>What are the <strong>good</strong> outcomes in the planting game?</p>
+<p>Can we rank outcomes by collective welfare?</p>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="figures/fig3.6.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.6.png</p></section>
+<section id="pareto-dominance" class="slide level2">
+<h2>Pareto Dominance</h2>
+<p>Pareto optimality (or efficiency) is econonomists’ best shot at coming up with a ranking of which outcomes are objectively ‘better’</p>
+<ul>
+<li><p>For any two outcomes (🎉, 🎊), 🎉 is <span class="hi">Pareto dominated</span> by 🎊 if both:</p>
+<ol type="1">
+<li><p>No one strictly prefers 🎉 to 🎊 - U<sub>👤</sub>(🎊) <span class="math inline">\(\geq\)</span> U<sub>👤</sub>(🎉) <span class="math inline">\(\forall 👤 \in \{ 🙍, 🧑, 💆, 🧖, 🧑, 😺, ...\}\)</span></p></li>
+<li><p>At least one person strictly<sub>🎉</sub> prefers 🎉 to 🎊 - <span class="math inline">\(\exists 👤\)</span> such that U<sub>👤</sub>(🎊) <span class="math inline">\(&gt;\)</span> U<sub>👤</sub>(🎉)</p></li>
+</ol></li>
+</ul>
+</section>
+<section id="pareto-improvement" class="slide level2">
+<h2>Pareto Improvement</h2>
+<p>The move from a policy y to an alternative policy x is a <span class="hi">Pareto improvement</span> if x Pareto dominates y.</p>
+<ul>
+<li><p>Such a policy change should reasonably be seen as unambiguously good</p></li>
+<li><p>Another perspective is that <em>no-one would veto</em> a pareto improvement</p></li>
+</ul>
+</section>
+<section id="pareto-efficiency" class="slide level2">
+<h2>Pareto Efficiency</h2>
+<p>An outcome is <span class="h">Pareto Efficient</span> (Optimal) if no other outcome Pareto dominates it.</p>
+<p>An outcome is <span class="hi">Pareto Infficient</span> if at least one other outcome Pareto dominates it.</p>
+</section>
+<section id="ranking-the-planting-payoffs" class="slide level2">
+<h2>Ranking the Planting Payoffs</h2>
+<p>Compare (4,3,3) to (1,2,2)</p>
+<ul>
+<li>Which one is Pareto dominating?</li>
+</ul>
+</section>
+<section id="ranking-the-planting-payoffs-1" class="slide level2">
+<h2>Ranking the Planting Payoffs</h2>
+<p>Now compare (4,3,3) to (3,4,3) or (3,3,4)</p>
+<ul>
+<li>Which one is Pareto dominating?</li>
+</ul>
+<p>Is the rollback equilibrium outcome a <em>Pareto efficient</em> one?</p>
 
 <img src="UOSignature-356.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>EC327 | Lecture 2 | Sequential Games</p>
@@ -726,6 +1205,44 @@ Dante Yasui
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

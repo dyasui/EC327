@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>gametrees</title>
+<title>guesstwothirds</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,19 +20,53 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="GameTrees_files/libs/clipboard/clipboard.min.js"></script>
-<script src="GameTrees_files/libs/quarto-html/quarto.js"></script>
-<script src="GameTrees_files/libs/quarto-html/popper.min.js"></script>
-<script src="GameTrees_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="GameTrees_files/libs/quarto-html/anchor.min.js"></script>
-<link href="GameTrees_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="GameTrees_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="GameTrees_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="GameTrees_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="GameTrees_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="GuessTwoThirds_files/libs/clipboard/clipboard.min.js"></script>
+<script src="GuessTwoThirds_files/libs/quarto-html/quarto.js"></script>
+<script src="GuessTwoThirds_files/libs/quarto-html/popper.min.js"></script>
+<script src="GuessTwoThirds_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="GuessTwoThirds_files/libs/quarto-html/anchor.min.js"></script>
+<link href="GuessTwoThirds_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="GuessTwoThirds_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="GuessTwoThirds_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="GuessTwoThirds_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="GuessTwoThirds_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -45,159 +79,90 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="representing-sequential-games-with-the-extensive-form" class="level1">
-<h1>Representing Sequential Games with the Extensive Form</h1>
-<section id="a-decision-tree" class="level2">
-<h2 class="anchored" data-anchor-id="a-decision-tree">A Decision Tree</h2>
-<p><img src="figures/decisiontree.png" class="img-fluid" style="width:80.0%"></p>
-<hr>
-</section>
-<section id="anatomy-of-a-tree" class="level2">
-<h2 class="anchored" data-anchor-id="anatomy-of-a-tree">Anatomy of a tree</h2>
-<p><img src="figures/tree-nodes.png" class="img-fluid" style="width:80.0%"></p>
-<hr>
-</section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
-<p><img src="figures/tree-branches.png" class="img-fluid" style="width:80.0%"></p>
-<hr>
-</section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1"></h2>
-<p><img src="figures/tree-terminalnodes.png" class="img-fluid" style="width:80.0%"></p>
-<hr>
-</section>
-<section id="kidnapping-game" class="level2">
-<h2 class="anchored" data-anchor-id="kidnapping-game">Kidnapping Game <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
-<p>A kidnapper named <span class="hi">Guy</span> has contacted the victim’s wife, named <span class="hi">Vivica</span>, to demand a ransom. To predict what will happen to the victim, <span class="hi">Orlando</span>, we need to create a game theoretic model of the situation. Let’s use the language of the tree graph to visualize this game.</p>
-<hr>
-</section>
-<section id="kidnapping-game-extensive-form" class="level2">
-<h2 class="anchored" data-anchor-id="kidnapping-game-extensive-form">Kidnapping Game: Extensive Form</h2>
-<p><img src="figures/kidnapgame_blank.png" class="img-fluid" style="width:66.0%"></p>
-<hr>
-</section>
-<section id="applying-the-extensive-form" class="level2">
-<h2 class="anchored" data-anchor-id="applying-the-extensive-form">Applying the Extensive Form</h2>
+<section id="activity-1-guess-23rds-of-the-average" class="level2">
+<h2 class="anchored" data-anchor-id="activity-1-guess-23rds-of-the-average">Activity 1: Guess 2/3rds of the average</h2>
 <div class="incremental">
 <ul class="incremental">
-<li>Who are the players?</li>
-<li>Where are the decision nodes?</li>
-<li>What are the branches? What do they represent?</li>
-<li>What do the terminal nodes represent?</li>
+<li>You will each choose an integer between 0 and 100.</li>
+<li>The winner is the person who’s guess is closest to the <span class="hii">average of all guesses <em>times</em> 2/3</span></li>
+<li>Submit your guess on <a href="https://canvas.uoregon.edu/courses/233504/quizzes/329305">Canvas</a></li>
+<li>Backup <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJoCIYnrQSzEQA1m0BDLFB5_l0PBloLL558ZWc1PfhHvxs2Q/viewform?usp=sf_link">Google forms version</a></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="kidnapping-game-payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="kidnapping-game-payoffs">Kidnapping Game payoffs</h2>
-<table class="table">
-<colgroup>
-<col style="width: 54%">
-<col style="width: 20%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Outcome</strong></th>
-<th><span class="red"><strong>Guy</strong></span></th>
-<th><span class="blue"><strong>Vivica</strong></span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>No kidnapping</td>
-<td><span class="red">3</span></td>
-<td><span class="blue">5</span></td>
-</tr>
-<tr class="even">
-<td>Kidnapping, ransom paid, Orlando killed</td>
-<td><span class="red">4</span></td>
-<td><span class="blue">1</span></td>
-</tr>
-<tr class="odd">
-<td>Kidnapping, ransom paid, Orlando released</td>
-<td><span class="red">5</span></td>
-<td><span class="blue">3</span></td>
-</tr>
-<tr class="even">
-<td>Kidnapping, no ransom paid, Orlando killed</td>
-<td><span class="red">2</span></td>
-<td><span class="blue">2</span></td>
-</tr>
-<tr class="odd">
-<td>Kidnapping, no ransom paid, Orlando released</td>
-<td><span class="red">1</span></td>
-<td><span class="blue">4</span></td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="kidnapping-game-tree-with-payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="kidnapping-game-tree-with-payoffs">Kidnapping game tree with payoffs</h2>
-<p><img src="figures/kidnapgame.png" class="img-fluid" style="width:80.0%"></p>
-<hr>
-</section>
-<section id="predictions" class="level2">
-<h2 class="anchored" data-anchor-id="predictions">Predictions?</h2>
-<p>Based on the extensive form game tree with payoffs, do you have any predictions for what strategies each player will choose?</p>
+<section id="activity-1" class="level2">
+<h2 class="anchored" data-anchor-id="activity-1">Activity 1</h2>
 <div class="incremental">
 <ul class="incremental">
-<li><p>What could be some useful assumptions about how players think?</p></li>
-<li><p>Hold those thoughts as we move onto our first solution method</p></li>
+<li>This is a simple example, but illustrates how complicated strategic reasoning can be.</li>
+<li>The theoretical solution to this game says that anyone who is <em>rational</em> and knows that <em>everyone else is rational</em> (Common Knowledge of Rationality) should only choose 0 or 1.</li>
+<li>However, <a href="https://www.jstor.org/stable/2950991">Nagel, R. (1995), “<em>Unravelling in guessing games : An experimental study</em>”</a> showed that over 12,000 answers, the average is 35.24.</li>
+<li>Is Common Knowledge of Rationality a ‘bad’ assumption? How can we connect our theories with experimental evidence?</li>
 </ul>
 </div>
-<hr>
-</section>
-<section id="a-definition-of-an-extensive-form-game" class="level2">
-<h2 class="anchored" data-anchor-id="a-definition-of-an-extensive-form-game">a Definition of an Extensive Form Game: <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
+<div class="notes">
 <ul>
-<li>A collection of decision-makers, called <span class="hi">players</span> or <em>agents</em></li>
-<li>A set of <span class="hi">decision nodes</span>, each of which represents the information available to the player of that node</li>
-<li><span class="hi">Branches</span> from each node which represent the possible actions available to the players</li>
-<li>The entire game tree serves as the <span class="h">mapping</span> from intersections of players’ strategy profiles to the outcomes at each <span class="hi">terminal nodes</span></li>
+<li>discuss different types of approaches people took</li>
+<li>how would they revise guess 2nd time?</li>
 </ul>
-<hr>
-</section>
-<section id="strategies-in-extensive-form" class="level2">
-<h2 class="anchored" data-anchor-id="strategies-in-extensive-form">Strategies in extensive form</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Definition <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A <span class="hi">strategy</span> for a player in a perfect-information game is a list of choices, one for each decision node of that player.</p>
-</div>
 </div>
 <hr>
 </section>
-<section id="apply-this-definition-to-the-kidnapping-game" class="level2">
-<h2 class="anchored" data-anchor-id="apply-this-definition-to-the-kidnapping-game">Apply this definition to the kidnapping game:</h2>
-<p>How many choices does Guy make? Vivica?</p>
-<p>Write out a strategy list for each player:</p>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Get results from Canvas csv export</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>ClassData_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"results.csv"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># rename(guess = "3950918: What is your guess?") %&gt;% </span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, guess)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate average guess</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>average_guess <span class="ot">&lt;-</span> ClassData_df <span class="sc">%&gt;%</span> </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">mean</span>(guess)) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unlist</span>() <span class="sc">%&gt;%</span> <span class="fu">unname</span>()</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot distribution of guesses</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ClassData_df <span class="sc">%&gt;%</span> </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>guess)) <span class="sc">+</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">2</span>, <span class="at">fill=</span><span class="st">"#69b3a2"</span>, <span class="at">color=</span><span class="st">"#e9ecef"</span>, <span class="at">alpha=</span><span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> average_guess) <span class="sc">+</span> </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>           <span class="at">x=</span>average_guess<span class="fl">-1.6</span>, <span class="at">y=</span><span class="fl">2.7</span>, </span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>           <span class="at">label=</span><span class="fu">paste0</span>(<span class="st">"average = "</span>, average_guess), </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>           <span class="at">angle=</span><span class="dv">90</span>) <span class="sc">+</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Distribution of Guessing 2/3rd's Game guesses"</span>) <span class="sc">+</span> </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_stata</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="GuessTwoThirds_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 <hr>
 </section>
-<section id="strategies" class="level2">
-<h2 class="anchored" data-anchor-id="strategies">Strategies</h2>
-<p><em>Guy</em>: | Node 1 | Node 3 | Node 4| |2</p>
+<section id="the-winners-are" class="level2">
+<h2 class="anchored" data-anchor-id="the-winners-are">The winners are:</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Find closest match to average_guess</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>winners <span class="ot">&lt;-</span> ClassData_df <span class="sc">%&gt;%</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">abs</span>(guess <span class="sc">-</span> average_guess) <span class="sc">==</span> <span class="fu">min</span>(<span class="fu">abs</span>(guess <span class="sc">-</span> average_guess)))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>winners</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  name            guess
+  &lt;chr&gt;           &lt;dbl&gt;
+1 Drew Rampelberg    35
+2 Sean Loder         35</code></pre>
+</div>
+</div>
 </section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Harrington, pg 18<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>for finite, perfect information games<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Bonanno, pg 83<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main>
+</main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
