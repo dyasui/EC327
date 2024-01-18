@@ -1,0 +1,583 @@
+
+\begin{frame}
+\frametitle{iClicker Poll}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cc|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Luca}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Testify$}  & \multicolumn{1}{c}{$Keep~Quiet$} \\\cline{3-4}
+		\multirow{Guido}  & $Testify$ & $-10,-10$ & $0,-20$ \\\cline{3-4}
+		& $Keep~Quiet$ & $-20,0$ & $-1,-1$ \\\cline{3-4}
+	\end{tabular}
+\end{table}
+\begin{itemize}
+	\item Suppose that you are Guido in the Prisoner's Dilemma, above. Which strategy would you pick?
+	\begin{enumerate}
+		\item Testify
+		\item Keep Quiet
+	\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{iClicker Poll}
+\begin{table}[h]
+\centering
+\begin{tabular}{cc|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Luca}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Testify$}  & \multicolumn{1}{c}{$Keep~Quiet$} \\\cline{3-4}
+	\multirow{Guido}  & $Testify$ & $-10,-10$ & $0,-20$ \\\cline{3-4}
+	& $Keep~Quiet$ & $-20,0$ & $-1,-1$ \\\cline{3-4}
+	& $False~Confession$ & $-20, 0$ & $-20, -1$ \\\cline{3-4}
+\end{tabular}
+\end{table}
+\begin{itemize}
+\item What if we change the Prisoner's Dilemma like this? What would you pick if you were Guido?
+\begin{enumerate}
+	\item Testify
+	\item Keep Quiet
+	\item False Confession
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{iClicker Poll}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cc|c|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{3}{c}{Luca}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Testify$}  & \multicolumn{1}{c}{$Keep~Quiet$} & \multicolumn{1}{c}{$False~Confession$} \\\cline{3-5}
+		\multirow{Guido}  & $Testify$ & $-10,-10$ & $0,-20$ & $0, -20$\\\cline{3-5}
+		& $Keep~Quiet$ & $-20,0$ & $-1,-1$ & $-1, -20$ \\\cline{3-5}
+		& $False~Confession$ & $-20, 0$ & $-20, -1$ & $-10, -10$ \\\cline{3-5}
+	\end{tabular}
+\end{table}
+\begin{itemize}
+\item What about this third variation? What would you pick if you were Guido?
+\begin{enumerate}
+	\item Testify
+	\item Keep Quiet
+	\item False Confession
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{iClicker Poll}
+\begin{itemize}
+	\item One last question, and this one isn't based on a Prisoner's Dilemma...
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{iClicker Poll}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cc|c|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{3}{c}{Bart}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$R$}  & \multicolumn{1}{c}{$P$} & \multicolumn{1}{c}{$S$} \\\cline{3-5}
+		\multirow{3}*{Lisa}  & $R$ & 0, 0 & -1, 1 & 1, -1 \\\cline{3-5}
+		& $P$ & 1, -1 & 0, 0 & -1, 1 \\\cline{3-5}
+		& $S$ & -1, 1 & 1, -1 & 0, 0 \\\cline{3-5}
+	\end{tabular}
+\end{table}
+\begin{itemize}
+	\item This game models a game of Rock-Paper-Scissors. If you are Lisa, which strategy will you choose?
+	\begin{enumerate}
+		\item R(ock)
+		\item P(aper)
+		\item S(cissors)
+	\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Obviously-Wrong Strategies}
+\begin{itemize}
+	\item The first three of those games contained strategies that were \textbf{obviously bad choices}.
+	\item Rock-Paper-Scissors did not.
+	\item One of the simplest things you can do with a strategic-form game is to start by finding and eliminating (ruling out) the strategies which are obviously bad.
+	\item In some games, this can even be enough to identify the Nash Equilibrium!
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Problem of Finding Nash Equilibria}
+\begin{itemize}
+	\item When we first discussed Nash Equilibria (which I'm going to start abbreviating as NEs), we found them by checking all of the strategy profiles in the game to see which of them were stable.
+	\item This is not a problem in a 2x2 game like we've been working with---but it gets much more time-consuming in games with more players and more strategies per player, not to mention the more complicated games we'll look at later in the term.
+	\item We can make it easier to find NEs with a few useful shortcuts---such as eliminating entire strategies (not just strategy profiles) that can't possibly be part of a NE.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Strict Dominance}
+\begin{itemize}
+	\item A strategy is said to be strictly dominated if there is some other strategy, in the same player's strategy set, which provides that player a higher payoff, no matter what strategies the other players pick.
+	\begin{itemize}
+		\item Another way to phrase it is that a strategy is strictly dominated if some other strategy is a better alternative for the player, no matter what other players do.
+	\end{itemize}
+	\item Recall that, in the Prisoner's Dilemma, both Guido and Luca prefer to Testify, no matter whether the other player Testified or kept Quiet: this means that Quiet is strictly dominated, \textbf{by Testify}, for both players.
+	\item It is not rational to play a strictly dominated strategy---meaning that in the Prisoner's Dilemma, we can immediately deduce that neither player would play Quiet, and the only remaining strategy profile is (Testify, Testify).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Finding NEs by Elimination}
+\begin{itemize}
+	\item If all but one of each player's strategies can be eliminated like this (leaving only a single strategy profile), then the remaining strategy profile is a NE.
+	\begin{itemize}
+		\item A strictly dominated strategy can never be part of a NE.
+	\end{itemize}
+	\item However, it's rare that a player has one strategy which strictly dominates all of their others from the very start, as in the Prisoner's Dilemma. (This is called a \myul{strictly dominant} strategy.) 
+	\item Even if a player doesn't have a strictly dominant strategy, we can still sometimes use elimination to find a NE, by using a process called \myul{Iterated Elimination of Strictly Dominated Strategies (IESDS)}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Commonly Known Rationality}
+\begin{itemize}
+	\item Let's assume that, not only is every player rational, they all know that the other players are rational too.
+	\item This means that players can deduce which strategies the \textbf{other} players would never play.
+	\item And if a player can eliminate another player's strategy, it may reveal additional strictly dominated strategies that can be eliminated.
+	\item Let's see an \href{https://www.youtube.com/watch?v=EZSx3zNZOaU}{example}...
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example: IESDS}
+\begin{table}[h]
+	\centering
+	\setlength{\extrarowheight}{2pt}
+	\begin{tabular}{cc|c|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{3}{c}{P$_2$}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} \\\cline{3-5}
+		\multirow{3}*{P$_1$}  & $A$ & 1, 1 & 2, 2 & 3, 3 \\\cline{3-5}
+		& $B$ & 2, 0 & 3, 1 & 4, 2 \\\cline{3-5}
+		& $C$ & 3, 1 & 2, 2 & 1, 1  \\\cline{3-5}
+	\end{tabular}
+\end{table}
+\begin{itemize}
+	\item In the game table above, there are no strictly domin\textbf{ant} strategies.
+	\begin{itemize}
+		\item For Player 1, A is strictly dominated by B, but C is neither dominant nor dominated.
+		\item And for Player 2, a is strictly dominated by b, but c is also neither dominant nor dominated.
+	\end{itemize}
+	\item So, we could eliminate A and a, but we'd still have a 2x2 game left over.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example: IESDS}
+\begin{table}[h]
+\centering
+\setlength{\extrarowheight}{2pt}
+\begin{tabular}{cc|c|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{3}{c}{P$_2$}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} \\\cline{3-5}
+	\multirow{3}*{P$_1$}  & $A$ & 1, 1 & 2, 2 & 3, 3 \\\cline{3-5}
+	& $B$ & 2, 0 & 3, 1 & 4, 2 \\\cline{3-5}
+	& $C$ & 3, 1 & 2, 2 & 1, 1  \\\cline{3-5}
+\end{tabular}
+\end{table}
+\begin{itemize}
+	\item However, the assumption of Commonly Known Rationality allows Player 1 to \textbf{deduce} that Player 2 would never play a.
+	\item Player 1 can eliminate a, just like we did---and once they do, C is strictly dominated by B.
+	\item Player 2 can deduce all of this---and once they eliminate A, a, and C, b is strictly dominated by c.
+	\item This leaves us one strategy per player, and so the NE here is (B, c).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Flaws of IESDS: the Deer Hunt}
+\begin{table}[h]
+\centering
+\setlength{\extrarowheight}{2pt}
+\begin{tabular}{cc|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Ogg}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Deer$}  & \multicolumn{1}{c}{$Rabbit$} \\\cline{3-4}
+	\multirow{2}*{Igg}  & $Deer$ & $2,2$ & $0,1$ \\\cline{3-4}
+	& $Rabbit$ & $1,0$ & $1,1$ \\\cline{3-4}
+\end{tabular}
+\end{table}
+\begin{itemize}
+	\item IESDS doesn't always reveal a NE. The strategies involved in a NE don't have to be strictly dominant---they just can't be strictly dominat\textbf{ed}.
+	\item As an example, the Deer Hunt game (above) contains no strictly dominated strategies.
+	\item Even if IESDS doesn't reveal a NE, it can still be useful for simplifying a game before applying other methods.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Order Doesn't Matter}
+\begin{itemize}
+	\item \textbf{In IESDS,} the order in which you eliminate strategies doesn't matter. You'll get the same result no matter how you do it---as long as you keep going to the end.
+	\item Consider this even larger game, and suppose we start by looking for Player 1's strictly dominated strategies:
+\end{itemize}
+\begin{table}[h]
+	\centering
+	\setlength{\extrarowheight}{2pt}
+	\begin{tabular}{cc|c|c|c|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{5}{c}{P$_2$}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} & \multicolumn{1}{c}{$d$} & \multicolumn{1}{c}{$e$} \\\cline{3-7}
+		\multirow{5}*{P$_1$}  & $A$ & 1, 1 & 2, 2 & 2, 2 & 2, 1 & 4, 1 \\\cline{3-7}
+		& $B$ & 1, 3 & 1, 3 & 2, 2 & 2, 3 & 3, 2 \\\cline{3-7}
+		& $C$ & 1, 2 & 2, 4 & 1, 3 & 2, 3 & 1, 3 \\\cline{3-7}
+		& $D$ & 3, 2 & 2, 3 & 1, 4 & 2, 2 & 1, 2 \\\cline{3-7}
+		& $E$ & 2, 1 & 3, 2 & 3, 2 & 3, 3 & 4, 1 \\\cline{3-7}
+	\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Order Doesn't Matter}
+\begin{itemize}
+\item And now suppose we start by looking for Player 2's strictly dominated strategies:
+\end{itemize}
+\begin{table}[h]
+\centering
+\setlength{\extrarowheight}{2pt}
+\begin{tabular}{cc|c|c|c|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{5}{c}{P$_2$}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} & \multicolumn{1}{c}{$d$} & \multicolumn{1}{c}{$e$} \\\cline{3-7}
+	\multirow{5}*{P$_1$}  & $A$ & 1, 1 & 2, 2 & 2, 2 & 2, 1 & 4, 1 \\\cline{3-7}
+	& $B$ & 1, 3 & 1, 3 & 2, 2 & 2, 3 & 3, 2 \\\cline{3-7}
+	& $C$ & 1, 2 & 2, 4 & 1, 3 & 2, 3 & 1, 3 \\\cline{3-7}
+	& $D$ & 3, 2 & 2, 3 & 1, 4 & 2, 2 & 1, 2 \\\cline{3-7}
+	& $E$ & 2, 1 & 3, 2 & 3, 2 & 3, 3 & 4, 1 \\\cline{3-7}
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{IESDS in a Nutshell}
+\begin{itemize}
+	\item The process of IESDS can be summed up in three steps:
+	\begin{itemize}
+		\item[1.] Search for a strictly dominated strategy belonging to any player. If none exists, stop here: IESDS is completed.
+		\item[2.] Eliminate (cross out) that strategy. Optionally, re-draw the game table without the eliminated strategy.
+		\item[3.] Return to step 1.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{iClicker Q1}
+\begin{table}[h]
+	\centering
+	\setlength{\extrarowheight}{2pt}
+	\begin{tabular}{cc|c|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{3}{c}{P$_2$}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{$z$} \\\cline{3-5}
+		\multirow{3}*{P$_1$}  & $X$ & $1,3$ & $2,2$ & $3,2$ \\\cline{3-5}
+		& $Y$ & $2,2$ & $2,2$ & $4,3$\\\cline{3-5}
+		& $Z$ & $1,1$ & $0,2$ & $1,1$\\\cline{3-5}
+	\end{tabular}
+\end{table}
+\begin{itemize}
+	\item In the game above, which strategy is strictly dominated?
+	\begin{enumerate}[label=\Alph*)]
+		\item X
+		\item Y
+		\item Z
+		\item x
+		\item y
+	\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{iClicker Q2}
+\begin{table}[h]
+\centering
+\setlength{\extrarowheight}{2pt}
+\begin{tabular}{cc|c|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{3}{c}{P$_2$}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{$z$} \\\cline{3-5}
+	\multirow{3}*{P$_1$}  & $X$ & $1,3$ & $2,2$ & $3,2$ \\\cline{3-5}
+	& $Y$ & $2,2$ & $2,2$ & $4,3$\\\cline{3-5}
+	& $Z$ & $1,1$ & $0,2$ & $1,1$\\\cline{3-5}
+\end{tabular}
+\end{table}
+\begin{itemize}
+\item Strategy Z is strictly dominated. Which strategy strictly dominates it?
+\begin{enumerate}[label=\Alph*)]
+	\item X
+	\item Y
+	\item Both X and Y
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{iClicker Q3}
+\begin{table}[h]
+\centering
+\setlength{\extrarowheight}{2pt}
+\begin{tabular}{cc|c|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{3}{c}{P$_2$}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{$z$} \\\cline{3-5}
+	\multirow{3}*{P$_1$}  & $X$ & $1,3$ & $2,2$ & $3,2$ \\\cline{3-5}
+	& $Y$ & $2,2$ & $2,2$ & $4,3$\\\cline{3-5}
+	& $Z$ & $1,1$ & $0,2$ & $1,1$\\\cline{3-5}
+\end{tabular}
+\end{table}
+\begin{itemize}
+\item Perform IESDS all the way to completion. What does IESDS tell you about the NE of this game?
+\begin{enumerate}[label=\Alph*)]
+	\item The NE is (X, x).
+	\item The NE is (X, y).
+	\item The NE is (Y, y).
+	\item The NE is (Y, z).
+	\item IESDS by itself does not reveal the NE of this game.
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Other Elimination Methods: Weakly Dominated Strategies}
+\begin{itemize}
+	\item It is also possible to find Nash Equilibria by eliminating \myul{weakly dominated} strategies (strategies for which there is an alternative that is never worse, and sometimes better).
+	\item We will not spend a lot of time on this method, because it has two serious flaws:
+	\begin{itemize}
+		\item[1.] It is possible for a Nash Equilibrium to involve playing a weakly dominated strategy. IEWDS may therefore eliminate actual Nash Equilibria.
+		\item[2.] Unlike IESDS, the order in which you eliminate weakly dominated strategies matters: you may get different results from different orders of elimination.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example: Why Weak Dominance is Not Useful}
+\begin{itemize}
+\item In the game below, B is weakly dominated for both players.
+\end{itemize}
+\begin{table}[h]
+\centering
+\setlength{\extrarowheight}{2pt}
+\begin{tabular}{cc|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Player 2}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$A$}  & \multicolumn{1}{c}{$B$} \\\cline{3-4}
+	\multirow{2}*{Player 1}  & $A$ & $2,2$ & $1,1$ \\\cline{3-4}
+	& $B$ & $1,1$ & $1,1$ \\\cline{3-4}
+\end{tabular}
+\end{table}
+\begin{itemize}
+\item If we eliminate the weakly dominated strategy for both players, then the only remaining strategy profile is (A, A)---and this is a Nash equilibrium.
+\item However, (B, B) is also a Nash equilibrium: both players get payoff 1, and neither can improve that payoff by changing their own strategy. We failed to find this equilibrium by eliminating weakly dominated strategies.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Another Example: Why Weak Dominance is Not Useful}
+\begin{itemize}
+\item In the game below, M and R are weakly dominated.
+\end{itemize}
+\begin{table}[h]
+\centering
+\setlength{\extrarowheight}{2pt}
+\begin{tabular}{cc|c|c|c|}
+& \multicolumn{1}{c}{} & \multicolumn{3}{c}{Player 2}\\
+& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$L$}  & \multicolumn{1}{c}{$M$} & \multicolumn{1}{c}{$R$} \\\cline{3-5}
+\multirow{2}*{Player 1}  & $T$ & 0, 1 & 1, 0 & 0, 0  \\\cline{3-5}
+& $B$ & 0, 0 & 0, 0 & 1, 0 \\\cline{3-5}
+\end{tabular}
+\end{table}
+\begin{itemize}
+\item If we begin by eliminating R, then afterwards, M and B are both weakly dominated, and we would eliminate them, leaving only (T, L).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Another Example: Why Weak Dominance is Not Useful}
+\begin{table}[h]
+\centering
+\setlength{\extrarowheight}{2pt}
+\begin{tabular}{cc|c|c|c|}
+& \multicolumn{1}{c}{} & \multicolumn{3}{c}{Player 2}\\
+& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$L$}  & \multicolumn{1}{c}{$M$} & \multicolumn{1}{c}{$R$} \\\cline{3-5}
+\multirow{2}*{Player 1}  & $T$ & 0, 1 & 1, 0 & 0, 0  \\\cline{3-5}
+& $B$ & 0, 0 & 0, 0 & 1, 0 \\\cline{3-5}
+\end{tabular}
+\end{table}
+\begin{itemize}
+\item However, if we begin by eliminating M, then T and R are both weakly dominated, and if we eliminate them, we are left with only (B, L).
+\item Not only does the outcome of IEWDS depend on what we eliminate first, it still fails to find a \textbf{third} Nash equilibrium, which is (B, R).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Other Elimination Methods: Non-Best-Responses}
+\begin{itemize}
+	\item Generally speaking, we can eliminate any strategy which is not rational to play in a NE.
+	\item It's never rational to play strictly dominated strategies, but it's sometimes rational to play weakly dominated strategies.
+	\item There are other categories of non-rational strategies:
+	\item A strategy is a \myul{non-best-response} or \myul{non-rationalizable strategy} if and only if, regardless of what the other players choose, it never provides the best possible payoff.
+	\item I like to describe non-rationalizable strategies as strategies that you'd have to be crazy to think were a good idea, i.e. you can't rationalize playing them.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Strictly Dominated vs. Non-Best-Response}
+\begin{itemize}
+	\item Non-rationalizability is very similar to strict dominance, but here's the difference:
+	\item Strict dominance is pairwise: a strategy $s$ dominates another, $s'$, if $s$ specifically always gives a better payoff than $s'$.
+	\item Non-rationalizability is a property of a single strategy: for a strategy to be non-rationalizable, it means that there is always \textbf{some} option that gives a better payoff---but the better option doesn't always have to be the same strategy.
+	\item To put it another way: strategy $s$ is not a best response if there is always \textbf{some strategy} which is better. To be strictly dominated, there must be \textbf{one particular strategy} which is always better.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example: Non-Best-Responses}
+\begin{itemize}
+\item In 	the game below, there are no strictly dominated strategies, meaning that IESDS will not do anything to simplify it.
+\end{itemize}
+\begin{table}[h]
+	\centering
+	\setlength{\extrarowheight}{2pt}
+	\begin{tabular}{cc|c|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{3}{c}{P$_2$}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} \\\cline{3-5}
+		\multirow{3}*{P$_1$}  & $A$ & 0, 4 & 1, 2 & 3, 3 \\\cline{3-5}
+		& $B$ & 1, 2 & 0, 3 & 1, 4 \\\cline{3-5}
+		& $C$ & 3, 3 & 1, 2 & 0, 1 \\\cline{3-5}
+	\end{tabular}
+\end{table}
+\begin{itemize}
+	\item However, we can see that B is non-rationalizable for Player 1: regardless of whether Player 2 chooses a, b, or c, Player 1 is better off playing either A or C.
+	\item Also, b is non-rationalizable for Player 2.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Another Example: Non-Best-Responses}
+\begin{table}[h]
+	\centering
+	\setlength{\extrarowheight}{2pt}
+	\begin{tabular}{cc|c|c|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{4}{c}{P$_2$}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} & \multicolumn{1}{c}{$d$} \\\cline{3-6}
+		\multirow{4}*{P$_1$}  & $A$ & 1, 0 & 2, 1 & 3, 1 & 4, 2 \\\cline{3-6}
+		& $B$ & 3, 1 & 2, 2 & 2, 0 & 3, 0 \\\cline{3-6}
+		& $C$ & 3, 1 & 4, 0 & 1, 0 & 2, 0 \\\cline{3-6}
+		& $D$ & 4, 2 & 3, 0 & 2, 1 & 1, 1 \\\cline{3-6}
+	\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Iterated Elimination of Non-Best-Responses}
+\begin{itemize}
+	\item It is not rational to play a non-best-response strategy in a pure-strategy context. (As we'll see much later, it's more complicated in a mixed-strategy context).
+	\item Any strictly dominated strategy is also not a best response, but not all NBR strategies are strictly dominated.
+	\item Because of this, if we eliminate non-best-responses, using the same steps as IESDS, this process will always eliminate the same strategies, and it may eliminate even more!
+	\item This process is, naturally, called Iterative Elimination of Non-Best-Responses (IENBR).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example: IENBR}
+\begin{itemize}
+	\item Returning to this same example, we can start by eliminating B.
+\end{itemize}
+\begin{table}[h]
+	\centering
+	\setlength{\extrarowheight}{2pt}
+	\begin{tabular}{cc|c|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{3}{c}{P$_2$}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} \\\cline{3-5}
+	\multirow{3}*{P$_1$}  & $A$ & 0, 4 & 1, 2 & 3, 3 \\\cline{3-5}
+	& $B$ & 1, 2 & 0, 3 & 1, 4 \\\cline{3-5}
+	& $C$ & 3, 3 & 1, 2 & 0, 1 \\\cline{3-5}
+	\end{tabular}
+\end{table}
+\begin{itemize}
+	\item Once we do this, we can now see that b and c are non-rationalizable, and eliminate them.
+	\item Finally, we can see that B is non-rationalizable and eliminate it, leaving only the strategy profile (C, a), which is the Nash equilibrium of this game.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Another Example: IENBR}
+\begin{table}[h]
+\centering
+\setlength{\extrarowheight}{2pt}
+\begin{tabular}{cc|c|c|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{4}{c}{P$_2$}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} & \multicolumn{1}{c}{$d$} \\\cline{3-6}
+	\multirow{4}*{P$_1$}  & $A$ & 1, 0 & 2, 1 & 3, 1 & 4, 2 \\\cline{3-6}
+	& $B$ & 3, 1 & 2, 2 & 2, 0 & 3, 0 \\\cline{3-6}
+	& $C$ & 3, 1 & 4, 0 & 1, 0 & 2, 0 \\\cline{3-6}
+	& $D$ & 4, 2 & 3, 0 & 2, 1 & 1, 1 \\\cline{3-6}
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{iClicker Q4}
+\begin{table}[h]
+	\centering
+	\setlength{\extrarowheight}{2pt}
+	\begin{tabular}{cc|c|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{3}{c}{P$_2$}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{$z$} \\\cline{3-5}
+	\multirow{3}*{P$_1$}  & $X$ & $1,3$ & $2,2$ & $3,2$ \\\cline{3-5}
+	& $Y$ & $2,2$ & $2,2$ & $4,3$\\\cline{3-5}
+	& $Z$ & $1,1$ & $0,2$ & $1,1$\\\cline{3-5}
+	\end{tabular}
+\end{table}
+\begin{itemize}
+	\item After eliminating Z, which is strictly dominated, what strategy is a non-best-response?
+	\begin{enumerate}[label=\Alph*)]
+		\item X
+		\item Y
+		\item Z
+		\item y
+		\item z
+	\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{iClicker Q5}
+\begin{table}[h]
+	\centering
+	\setlength{\extrarowheight}{2pt}
+	\begin{tabular}{cc|c|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{3}{c}{P$_2$}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{$z$} \\\cline{3-5}
+	\multirow{3}*{P$_1$}  & $X$ & $1,3$ & $2,2$ & $3,2$ \\\cline{3-5}
+	& $Y$ & $2,2$ & $2,2$ & $4,3$\\\cline{3-5}
+	& $Z$ & $1,1$ & $0,2$ & $1,1$\\\cline{3-5}
+	\end{tabular}
+\end{table}
+\begin{itemize}
+	\item If we complete IENBR on this game table, what strategy profile is left at the end?
+	\begin{enumerate}[label=\Alph*)]
+		\item (X, x)
+		\item (X, z)
+		\item (Y, x)
+		\item (Y, z)
+		\item There is more than one strategy profile left.
+	\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Failures of Elimination Methods}
+\begin{itemize}
+	\item There's no guarantee that any particular game will contain strategies that are either strictly dominated or non-rationalizable.
+	\item Even when there are strategies we can eliminate, there may not be enough of them to find a NE just by elimination.
+	\item So why bother with this?
+	\item Even if elimination doesn't immediately identify a NE, it can still be helpful to simplify the game before trying other methods.
+	\item Simplifying by elimination is \textbf{especially} useful when dealing with mixed strategies---which we'll get to after the midterm.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Best-Responses}
+\begin{itemize}
+	\item In this discussion of non-best-response strategies, we've sort of skipped over one thing: if a strategy is NOT a non-best-response, then logically, it must sometimes be a best response.
+	\item This is arguably an even more important concept---and one that we'll get to tomorrow.
+\end{itemize}
+\end{frame}
+

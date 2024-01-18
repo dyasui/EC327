@@ -1,0 +1,16 @@
+---
+name: Dominance
+---
+
+# Dominant Strategies
+
+## 
+
+---
+
+## Strategic Form: Kidnapping Game
+
+![](figures/fig3.1.png)
+
+---
+

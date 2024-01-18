@@ -1,0 +1,86 @@
+---
+name: StrategicForm
+---
+
+# Strategic Form
+
+## Split or Steal
+
+{{< video https://youtu.be/S0qjK3TWZE8 width="800" height="450" fig-align="center" >}}
+
+https://youtu.be/S0qjK3TWZE8
+
+Pause at 2:20. We'll come back to Nick and Ibrahim!
+
+---
+
+## How to represent simultaneous games?
+
+From the perspective of Nick, his payoffs depend on what Ibrahim has chosen:
+
+|                         | if Ibrahim Splits | if Ibrahim Steals |
+|-------------------------|-------------------|-------------------|
+| if Nick Splits he wins: | $\$6,800$         | $\$ 0$            |
+| if Nick Steals he wins: | $\$13,600$        | $\$ 0$            |
+
+---
+  
+## 
+
+From the perspective of *Ibrahim*, his payoffs depend on what *Nick* has chosen:
+
+|                            | if Nick Splits    | if Nick Steals    |
+|----------------------------|-------------------|-------------------|
+| if Ibrahim Splits he wins: | $\$6,800$         | $\$ 0$            |
+| if Ibrahim Steals he wins: | $\$13,600$        | $\$ 0$            |
+
+---
+
+## Intersection of payoff tables
+
+In a *game*, the best choices are interdependent:
+
+| (Nick: $\$x$, Ibrahim: $\$y$) | Ibrahim Splits       | Ibrahim Steals    |
+|-------------------------------|----------------------|-------------------|
+| Nick Splits                   | $(\$6,800, \$6,800)$ | $(\$0, 13,600)$   |
+| Nick Steals                   | $(\$13,600, \$0)$    | $(\$0, \$0)$      |
+
+
+## The Strategic Form
+
+
+A [Strategic Form]{.h} game is defined by:
+
+  * A [set of players]{.hi} who have decisions
+  
+  * A [strategy set]{.hi} for each player which is the collection of strategies they choose from
+  
+  * A [payoff function]{.hi} which tells us how the player evaluates a *strategy profile*. 
+
+::: {.callout-tip}
+
+A [strategy profile]{.hi} is a combination of strategies made by all players.
+
+:::
+
+---
+
+## Strategy profiles in Split or Steal
+
+  * Each player's strategy *set* has two strategies, each of one choice: Split $Sp$ or Steal $St$.
+
+  * There are four different *strategy profiles* possible in this game: 
+  
+  $\{Sp, Sp\}$, $\{Sp, St\}$, $\{St, Sp\}$, and $\{St, St\}$
+  
+  each of which was represented by a cell in our game table.
+  
+---
+
+
+
+
+
+
+  
+  

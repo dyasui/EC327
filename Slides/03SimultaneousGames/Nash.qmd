@@ -1,0 +1,88 @@
+---
+name: Nash
+---
+
+# Nash Equilibrium
+
+## Solving Simultaneous Games
+
+  * Before we cover how to solve a game, we first need to discuss what a solution to a game even is.
+  
+  * As with many types of problem in economics, we’re interested in finding an *equilibrium*:
+  
+    + equilibrium a situation which is “stable,” in that there is no incentive to change.
+    
+---
+    
+## Nash Equilibrium
+
+The most basic form of equilibrium in game theory is the [Nash Equilibrium (NE)]{.h}, which can be described as:
+
+  * A strategy profile such that no player can obtain a larger payoff by *unilaterally deviating* 
+  
+  * A strategy profile such that no single player can make themselves better off by changing only their own strategy.
+  
+  * A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision
+  
+---
+
+## The Prisoner's Dilemma
+
+Two criminal conspirators have been arrested and brought to interrogation. The police put them in separate cells and offer each prisoner a choice.
+
+If both cooperate with the investigation, they will get a lighter sentence of 10 years.
+
+If either one agrees to testify but not the other, the one who cooperated will go free and the one who didn't gets a full 20 years.
+
+If neither cooperates, the prosecutor won't have enough of a case and the criminals will only serve 1 year each for misdemeanors.
+
+---
+
+## What would you choose?
+
+  * Remember that you cannot communicate with your fellow prisoner
+  
+  * How would you have to be that they won't sell you out for you to choose to keep quiet?
+  
+---
+
+## Nash Equilibrium in the Prisoners' Dilemma
+
+Although the outcome where both criminals keep quiet *Pareto dominates* the outcome where they both testify and serve 10 years, would it be stable?
+
+  * In the {Quiet, Quiet} strategy profile, either player could deviate to Testify and shorten their prison time. 
+  
+  * {Testify, Testify} is the only *stable* strategy profile, where no one could unilaterally deviate to decrease their sentence.
+  
+---
+
+## Draw Prisoners' Dilemma in Strategic Form:
+
+---
+
+## Does this look familiar?
+
+|        | Split                | Steal             |
+|--------|----------------------|-------------------|
+| Split  | $(\$6,800, \$6,800)$ | $(\$0, 13,600)$   |
+| Steal  | $(\$13,600, \$0)$    | $(\$0, \$0)$      |
+
+Although the numbers are different, the structure is the same.
+
+*Split or Steal* is a *Prisoners' Dilemma*
+
+---
+
+## Watch what happens
+
+{{< video https://youtu.be/S0qjK3TWZE8?t=141 width="800" height="450" fig-align="center" >}}
+
+start from 2:20
+
+---
+
+## Discuss
+
+  * Did Nick change the structure of the game?
+  
+

@@ -3,11 +3,17 @@
 ################################################################################
 #
 # load packages
-library(tidyverse)
+library(dplyr)
+library(readr)
+library(tidyr)
+library(tibble)
 library(ggplot2)
 library(viridis)
 library(ggthemes)
 library(paletteer)
+
+# set working directory:
+setwd("activities/02SurvivorFlags")
 
 # get results from csv
 results_df <- read_csv("activities/02SurvivorFlags/Results.csv")
@@ -91,6 +97,18 @@ results_df %>%
   group_by(game) %>% 
   filter(flagsleft == 0) %>% # select winning rounds
   summarise(mean(movedfirst))
+
+# Save winning teams
+SurvivorGroup <- read_csv("SurvivorGroup.csv") %>% 
+  mutate(team = parse_number(group_name))
+
+winners <- results_df %>% 
+  filter(flagsleft == 0) %>% 
+  summarise(winning_teams = team) %>% 
+  left_join(SurvivorGroup) %>% 
+  select(3:6) %>% 
+  summarise_all(winners = list(1,2,3,4))
+
 
 # Simulate what the data would look like with randomly chosen flags
 # 

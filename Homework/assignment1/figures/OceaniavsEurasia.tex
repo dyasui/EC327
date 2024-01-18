@@ -1,0 +1,124 @@
+\begin{tikzpicture}[font=\footnotesize]
+    \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
+    \tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
+    \tikzstyle{level 1}=[level distance=15mm,sibling distance=2cm]
+    \tikzstyle{level 2}=[level distance=15mm,sibling distance=.5cm]
+    \tikzstyle{level 3}=[level distance=15mm,sibling distance=.5cm]
+    
+    \node(0)[solid node,label=right:{\color{ducksgreen} Eurasia}]{}
+        child{node(1)[solid node,label=above left:{ }]{}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 0}  \\
+                     {\color{darkblue} 2} 
+                \end{tabular}
+            }]{} edge from parent node[left]{$A$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 1}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[left]{$B$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 1}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[right]{$C$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 1}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[right]{$D$}}
+            edge from parent node[left,xshift=-5]{Argula}
+        }
+        child{node(2)[solid node,label=above right:{ }]{}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 1}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[left]{$A$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 0}  \\
+                     {\color{darkblue} 2} 
+                \end{tabular}
+            }]{} edge from parent node[left]{$B$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 1}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[right]{$C$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 1}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[right]{$D$}}
+            edge from parent node[left,xshift=5]{Betra}
+        }
+        child{node(3)[solid node,label=above right:{ }]{}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 1}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[left]{$A$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 1}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[left]{$B$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 0}  \\
+                     {\color{darkblue} 2} 
+                \end{tabular}
+            }]{} edge from parent node[right]{$C$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 1}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[right]{$D$}}
+            edge from parent node[right,xshift=5]{Carnat}
+        }
+        child{node(4)[solid node,label=above right:{ }]{}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 1}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[left]{$A$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 1}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[left]{$B$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 1}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[right]{$C$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{ducksgreen} 0}  \\
+                     {\color{darkblue} 2} 
+                \end{tabular}
+            }]{} edge from parent node[right]{$D$}}
+            edge from parent node[right,xshift=5]{Dussel}
+        };
+
+    % information set
+    \draw[dashed,rounded corners=7]($(1)+(-.2,.25)$)rectangle($(2)+(.2,-.25)$);
+    \draw[dashed,rounded corners=7]($(3)+(-.2,.25)$)rectangle($(4)+(.2,-.25)$);
+    % specify movers
+    \node at ($.5*(1)+.5*(2)$) {\color{darkblue} Oceania};
+    \node at ($.5*(3)+.5*(4)$) {\color{darkblue} Oceania};
+\end{tikzpicture}

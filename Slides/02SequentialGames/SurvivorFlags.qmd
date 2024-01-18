@@ -17,7 +17,8 @@ https://youtu.be/aonCsvi0LKc
 ```{r}
 #| warning: false
 library(readr)
-library(tidyverse)
+library(dplyr)
+library(tidyr)
 # SurvivorGroup <- read_csv("Survivors.csv") %>%
 #   select(name, group_name) %>%
 #   mutate(group_name = str_remove_all(group_name, "Activity2 ")) %>%
