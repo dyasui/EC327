@@ -1,0 +1,388 @@
+
+\begin{frame}
+\frametitle{Internal Uncertainty}
+\begin{itemize}
+	\item Now that we have a good grasp of external uncertainty, in the form of states of nature, let's talk about \alert{internal uncertainty}.
+	\item Internal uncertainty occurs when the players themselves do something which creates uncertainty or randomness: this basically means that the players pick their strategies randomly.
+	\item Picking a strategy at random is really just a different kind of strategy, called a \alert{mixed strategy}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mixed Strategies}
+\begin{itemize}
+	\item The kind of strategy we've been working with up until now, in which the player always does the same thing, is called a \alert{pure strategy}.
+	\item A mixed strategy assigns a probability to each of a player's pure strategies. Much like a lottery, the probabilities in a mixed strategy must all be between 0 and 1, and must sum to exactly 1.
+	\begin{itemize}
+		\item A mixed strategy can assign 0 probability to a pure strategy. It can even assign probability 1 to a single pure strategy, and probability 0 to all others; this is still, technically, a mixed strategy, but it is a trivial one.
+	\end{itemize}
+	\item When a player uses a mixed strategy, it turns the \textbf{other} player's payoffs into lotteries.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mixed Strategies in the Deer Hunt}
+\begin{itemize}
+	\item Consider the Deer Hunt:
+\end{itemize}
+\begin{table}[h]
+\centering
+\begin{tabular}{cc|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Ogg}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Deer$}  & \multicolumn{1}{c}{$Rabbit$} \\\cline{3-4}
+	\multirow{2}*{Igg}  & $Deer$ & $2, 2$ & $0, 1$ \\\cline{3-4}
+	& $Rabbit$ & $1, 0$ & $1, 1$ \\\cline{3-4}
+\end{tabular}
+\end{table}
+\begin{itemize}
+	\item Suppose that Igg hunts Deer 3/4 of the time, and Rabbit 1/4 of the time. (A mixed strategy assigning equal probability to both pure strategies.)
+	\item If Ogg hunts Deer, then 3/4 of the time, the strategy profile that actually occurs will be (Deer, Deer), and the other 1/4 it will be (Rabbit, Deer).
+	\item Ogg's expected payoff from playing Deer will be $0.75(2) + 0.25(0) = 1.5$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mixed Strategies in the Deer Hunt: Generalizing}
+\begin{itemize}
+	\item We can generalize this approach to calculate Ogg's expected payoffs from any strategy that Igg chooses to play:
+	\item Suppose that Igg plays Deer with probability p, and Rabbit with probability 1 - p.
+	\item Then Ogg's expected payoff from Deer is $2(p) + 0(1 - p) = 2p$, and from Rabbit, it is $1(p) + 1(1 - p) = 1$.
+	\item Note that Ogg's expected payoff from Deer gets larger with p: the more likely Igg is to hunt Deer, the more attractive an option it becomes for Ogg.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{When to Play a Mixed Strategy?}
+\begin{itemize}
+	\item It's possible for a mixed strategy to be a best response to the other player's strategy: this is the case if and only if all of the mixed strategy's \alert{components} (pure strategies that are assigned positive probability) are best responses too.
+	\item Some intuition: If a strategy is not a best response, you should not play it---even as part of a mixed strategy.
+	\item If a player only has two pure strategies, it becomes simple to tell when a mixed strategy is a best response: the mixed strategy must be a mixture of those two pure strategies, and the only way that both of them are best responses is if they have equal expected payoffs.
+	\item Taking the Deer Hunt as an example, the only way that it can be a best response for Ogg to play a mixed strategy is if Deer and Rabbit provide Ogg with equal expected payoffs: we must have $2p = 1$, or $p = \frac{1}{2}$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{What Mixed Strategy to Play}
+\begin{itemize}
+	\item However, if any mixed strategy is a best response, then \textbf{all} mixed strategies (with the same components) are also best responses.
+	\item Intuitively, if the pure strategies going into a mixed strategy are just as good as each other, then it doesn't matter what proportions you mix them in.
+	\item This means that, while it's easy to solve for \textbf{when} it's rational for a player to use a mixed strategy, there's no way to solve for a particular mixed strategy that the player \textbf{should} play.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mixed-Strategy Nash Equilibrium}
+\begin{itemize}
+	\item We still have a way to solve for the Nash equilibria when the players are allowed to use mixed strategies: we will solve for the conditions under which a player would be willing to use a mixed strategy.
+	\item This means that we're going to use one player's expected payoffs to solve for the \textbf{other} player's mixed strategy: it's a little bit different from what we've done before.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{MSNE in the Deer Hunt}
+\begin{itemize}
+	\item Returning to the Deer Hunt, let's say that Igg plays Deer with probability $p$ and Rabbit with probability $1 - p$...
+	\item While Ogg plays Deer with probability $q$ and Rabbit with probability $1 - q$.
+	\begin{itemize}
+		\item This is simply a framework for describing each player's mixed strategies: we're saying that Igg and Ogg each play Deer some of the time (p or q) and Rabbit the rest of the time (1 - p or 1 - q).
+	\end{itemize}
+	\item We already saw that Ogg's expected payoffs from Deer and Rabbit are $2p$ and $1$, respectively, and that Ogg would only play a mixed strategy if $p = \frac{1}{2}$.
+	\item Likewise, Igg's expected payoffs are $2q$ and $1$, and Igg will play a mixed strategy if $q = \frac{1}{2}$.
+	\item The MSNE in this game can be written as \{(p, 1 - p), (q, 1 - q)\} = \{(1/2, 1/2), (1/2, 1/2)\}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Error-Checking}
+\begin{itemize}
+	\item As mentioned, this way of solving for MSNEs is unlike what we've done before---and it can be counterintuitive at first.
+	\item It's important to make sure that you're setting up the equations used to solve for a player's strategy correctly:
+	\begin{itemize}
+		\item Remember that you are creating an equation to describe when a player is indifferent between their pure strategies: if you're trying to figure out when \textbf{Player 1} is indifferent, you need to use \textbf{Player 1's} payoffs.
+		\item However, when calculating expected payoffs, the probabilities will be based on the \textbf{other} player's mixed strategy: in a game with mixed strategies, the randomness a player deals with is created by the \textbf{other} player---not themselves.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Another Example: Bach or Stravinsky}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cc|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Stravinsky Fan}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{Bach (q)}  & \multicolumn{1}{c}{Strav. (1 - q)} \\\cline{3-4}
+		\multirow{2}*{Bach Fan}  & Bach (p) & 3, 2 & 0,0 \\\cline{3-4}
+		& Strav. (1 - p) & 0,0 & 2, 3 \\\cline{3-4}
+	\end{tabular}
+\end{table}
+\begin{itemize}
+	\item To begin with, we're going to set up the players' mixed strategies the same way as in the Deer Hunt (as shown in the table).
+	\item The Bach Fan's expected payoffs will be $U_B(Bach) = 3q + 0(1 - q) = 3q$ and $U_B(Strav.) = 0q + 2(1 - q) = 2 - 2q$.
+	\item Likewise, the Stravinsky Fan will have payoffs $U_S(Bach) = 2p$ and $U_S(Strav.) = 3 - 3p$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{MSNE in Bach or Stravinsky}
+\begin{itemize}
+\item The Bach Fan will be indifferent between Bach and Stravinsky (and thus willing to play a mixed strategy) when $3q = 2 - 2q$, or when $q = \frac{2}{5}$.
+\item The Stravinsky Fan will be indifferent when $2p = 3 - 3p$, or when $p = \frac{3}{5}$.
+\item Thus, the MSNE in this game will be \{(0.6, 0.4), (0.4, 0.6)\}.
+\item Note that the players' asymmetric preferences result in each of them buying a ticket for their more preferred concert most of the time in this MSNE.
+\item If we gave them stronger preferences (i.e. increased the amount by which they prefer their favorite composer), it would amplify this effect in the MSNE.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{iClicker Q1}
+\begin{itemize}
+\item Consider the following game table. What are Player 1's expected payoffs, given Player 2's mixed strategy?
+\end{itemize}
+\begin{table}[h]
+\centering
+\begin{tabular}{cc|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Player 2}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Up (q)$}  & \multicolumn{1}{c}{$Down (1 - q)$} \\\cline{3-4}
+	\multirow{2}*{Player 1}  & $Up (p)$ & 2, -2 & -3, 3 \\\cline{3-4}
+	& $Down (1 - p)$ & -5, 5 & 1, -1 \\\cline{3-4}
+\end{tabular}
+\end{table}
+\begin{enumerate}
+\item $U_1(Up) = 5q - 3, U_1(Down) = 1 - 6q$
+\item $U_1(Up) = 3 - 5q, U_1(Down) = 6q - 1$
+\item $U_1(Up) = 5 - 7q, U_1(Down) = 1 - 6p$
+\item $U_1(Up) = 7p - 5, U_1(Down) = 1 - 4p$
+\item $U_1(Up) = 5 - 7p, U_1(Down) = 4p - 1$
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{iClicker Q2}
+\begin{itemize}
+\item Consider the following game table. What are \textbf{Player 2's} expected payoffs, given Player 1's mixed strategy?
+\end{itemize}
+\begin{table}[h]
+\centering
+\begin{tabular}{cc|c|c|}
+& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Player 2}\\
+& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Up (q)$}  & \multicolumn{1}{c}{$Down (1 - q)$} \\\cline{3-4}
+\multirow{2}*{Player 1}  & $Up (p)$ & 2, -2 & -3, 3 \\\cline{3-4}
+& $Down (1 - p)$ & -5, 5 & 1, -1 \\\cline{3-4}
+\end{tabular}
+\end{table}
+\begin{enumerate}
+\item $U_2(Up) = 5q - 3, U_2(Down) = 1 - 6q$
+\item $U_2(Up) = 3 - 5q, U_2(Down) = 6q - 1$
+\item $U_2(Up) = 5 - 7q, U_2(Down) = 1 - 6p$
+\item $U_2(Up) = 7p - 5, U_2(Down) = 1 - 4p$
+\item $U_2(Up) = 5 - 7p, U_2(Down) = 4p - 1$
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{iClicker Q3}
+\begin{itemize}
+\item The correct answers to the previous two questions were:
+\begin{itemize}
+\item $U_1(Up) = 5q - 3, U_1(Down) = 1 - 6q$.
+\item $U_2(Up) = 5 - 7p, U_2(Down) = 4p - 1$.
+\end{itemize}
+\item Based on this, what are $p$ and $q$ in the MSNE of this game?
+\begin{enumerate}
+\item $p = 4/11, q = 5/11$
+\item $p = 4/11, q = 6/11$
+\item $p = 6/11, q = 4/11$
+\item $p = 7/11, q = 5/11$
+\item $p = 7/11, q = 6/11$
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{An MSNE With Only One Mixed Strategy}
+\begin{itemize}
+	\item Consider the following game table:
+\end{itemize}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cc|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Player 2}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$X~(q)$}  & \multicolumn{1}{c}{$Y~(1 - q)$} \\\cline{3-4}
+		\multirow{2}*{Player 1}  & $A~(p)$ & 2, 2 & 3, 2 \\\cline{3-4}
+		& $B~(1 - p)$ & 4, 3 & 0, 0 \\\cline{3-4}
+	\end{tabular}
+\end{table}
+\begin{itemize}
+	\item The players' expected payoffs are:
+	\begin{itemize}
+		\item $U_1(A) = 2q + 3(1 - q) = 2q + 3 - 3q = 3 - q$.
+		\item $U_1(B) = 4q + 0(1 - q) = 4q$.
+		\item $U_2(X) = 2p + 3(1 - p) = 2p + 3 - 3p = 3 - p$.
+		\item $U_2(Y) = 2p + 0(1 - p) = 2p$.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{An MSNE With Only One Mixed Strategy}
+\begin{itemize}
+\item Based on this, the conditions under which each player will use a mixed strategy are:
+\end{itemize}
+\begin{align*}
+Player~1: && Player~2:&\\
+3 - q &= 4q & 3 - p &= 2p\\
+3 &= 5q & 3 &= 3p\\
+q &= 3/5 & p &= 1
+\end{align*}
+\begin{itemize}
+\item We've never seen anything like $p = 1$ in this context before...
+\item $p = 1$ tells us that Player 2 will only play a mixed strategy if Player 1 plays the mixed strategy where p = 1...in other words, if they only play A, which isn't really a mixed strategy at all.
+\item This usually occurs when one strategy \textbf{weakly} dominates another.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{An MSNE With Only One Mixed Strategy}
+\begin{itemize}
+	\item We can still approach this the same way that we have in the past:
+	\item Suppose that in the MSNE, Player 1 plays a (non-trivial) mixed strategy. Then Player 2 must also play a mixed strategy, in which q = 3/5.
+	\begin{itemize}
+		\item But Player 2 will only play a mixed strategy if Player 1 plays the mixed strategy where p = 1...which is a trivial mixed strategy. This is a contradiction, and it means that there is no MSNE where Player 1 plays a non-trivial mixed strategy.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{An MSNE With Only One Mixed Strategy}
+\begin{itemize}
+\item Approach it the other way next: Suppose Player 2 plays a non-trivial mixed strategy. Then Player 1 must play A as a pure strategy.
+\begin{itemize}
+	\item Player 2 will play A if $3 - q \geq 4q$, i.e. if $3/5 \geq q$.
+\end{itemize}
+\item This lets Player 2 play a non-trivial mixed strategy! There is no contradiction here.
+\item There are a range of MSNEs here: all strategy profiles of the form \{(1, 0), (q, 1 - q)\}, in which $q \in (0, 3/5]$, are MSNEs.
+\item There are also two trivial MSNEs, \{(1, 0), (0, 1)\} and \{(0, 1), (1, 0)\}, which are really just the pure-strategy Nash equilibria (A, Y) and (B, X) expressed in the form of an MSNE.
+\item We will cover a more methodical way to find MSNEs like this later.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Absence of MSNEs}
+\begin{itemize}
+	\item Let us return to the Prisoner's Dilemma and check for MSNEs:
+\end{itemize}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cc|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Luca}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Testify~(q)$}  & \multicolumn{1}{c}{$Keep~Quiet~(1-q)$} \\\cline{3-4}
+		\multirow{2}*{Guido}  & $Testify~(p)$ & $-10,-10$ & $0,-20$ \\\cline{3-4}
+		& $Keep~Quiet~(1-p)$ & $-20,0$ & $-1,-1$ \\\cline{3-4}
+	\end{tabular}
+\end{table}
+\begin{itemize}
+	\item Guido and Luca's expected payoffs are:
+	\begin{itemize}
+		\item $U_G(Testify) = -10q + 0(1 - q) = -10q$.
+		\item $U_G(Keep Quiet) = -20q + (-1)(1 - q) = -1 - 19q$.
+		\item $U_L(Testify) = -10p + 0(1 - p) = -10p$.
+		\item $U_L(Keep Quiet) = -20p + (-1)(1 - p) = -1 - 19p$.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Absence of MSNEs}
+\begin{itemize}
+\item Guido will play a mixed strategy if:
+\end{itemize}
+\begin{align*}
+-10q &= -1 - 19q\\
+9q &= -1\\
+q &= -1/9
+\end{align*}
+\begin{itemize}
+\item But -1/9 is not a valid probability...
+\item We could also note that if $q\in [0, 1]$, which is the range for valid probabilities, $-10q$ is always greater than $-1 - 19q$. In other words, as we saw weeks ago, $Testify$ strictly dominates $Keep~Quiet$...so why would Guido mix between the two of them?
+\item The same logic applies to Luca as well: neither Guido or Luca would ever wish to play a mixed strategy.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Getting Bad Probabilities}
+\begin{itemize}
+	\item If you've set up the expected-payoff equation, and solved for a player's mixed strategy, and you find that the probability is less than 0, or more than 1...
+	\item \textbf{It means something is wrong.} Probability can only be between 0 and 1 (inclusive).
+	\item First of all, double-check your math---it could be an algebra error.
+	\item But if you're confident in your math, this means that there is \textbf{no way that the player would ever play a mixed strategy}: in fact, they have a strictly dominated strategy.
+	\item There will be no MSNE where this player uses a mixed strategy---but there might be MSNEs where the other player does, so you should still check that.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{MSNE in a Larger Game}
+\begin{itemize}
+	\item Suppose that we have this 3$\times$2 game:
+\end{itemize}
+\begin{table}[h]
+\centering
+\begin{tabular}{cr|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Player 2}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{X (r)}  & \multicolumn{1}{c}{Y (1 - r)} \\\cline{3-4}
+	\multirow{3}*{Player 1}  & A (p) & 2, 1 & 0, 1 \\\cline{3-4}
+	& B (q) & 1, 2 & 2, 0 \\\cline{3-4}
+	& C (1 - p - q) & 0, 0 & 3, 2 \\\cline{3-4}
+\end{tabular}
+\end{table}
+\begin{itemize}
+	\item First, note that in this game, Player 1's mixed strategy uses probabilities p, q, and 1 - p - q, since they have three pure strategies.
+	\item As a rule of thumb, a player's mixed strategy will need one variable less than their number of strategies.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{MSNE in a Larger Game}
+\begin{itemize}
+	\item To begin with, let's put together Player 1's expected payoffs, of which there will be three:
+	\begin{itemize}
+		\item $U_1(A) = 2r + 0 = 2r$.
+		\item $U_1(B) = 1r + 2(1 - r) = 2 - r$.
+		\item $U_1(C) = 0 + 3(1 - r) = 3 - 3r$.
+	\end{itemize}
+	\item Next, let's see what it would take to get Player 1 to mix different pairs of strategies:
+	\begin{itemize}
+		\item A and B: $2r = 2 - r \implies r = \frac{2}{3}$.
+		\item A and C: $2r = 3 - 3r \implies r = \frac{3}{5}$.
+		\item B and C: $2 - r = 3 - 3r \implies r = \frac{1}{2}$.
+	\end{itemize}
+	\item Note that each pair of strategies requires a different value of $r$: there is no mixed strategy for Player 2 that would make Player 1 willing to mix all three of their pure strategies.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{MSNE in a Larger Game}
+\begin{itemize}
+	\item Let's check Player 2's expected payoffs next:
+	\begin{itemize}
+		\item $U_2(X) = 1p + 2q + 0$.
+		\item $U_2(Y) = 1p + 0 + 2(1 - p - q)$.
+	\end{itemize}
+	\item So Player 2 will play a mixed strategy if $p + 2q = p + 2(1 - p - q) \implies q = 1 - p - q$.
+	\item There are two ways that this can be true: Either Player 1 plays B and C with equal probability (and we know from earlier that they would \textbf{only} be playing these two, not A), or Player 1 plays A only, and B and C not at all. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{MSNE in a Larger Game}
+\begin{itemize}
+	\item So, one type of MSNE is where Player 1 only plays A: this requires $2r \geq 2 - r$ and $2r \geq 3 - 3r$, which imply that $r \geq \frac{2}{3}$ and $r \geq \frac{3}{5}$.
+	\begin{itemize}
+		\item MSNE: \{(1, 0, 0), (r, 1 - r)\}, where $r \geq \frac{2}{3}$.
+	\end{itemize}
+	\item And the other type of MSNE is where Player 1 plays B and C with equal (1/2) probability, and Player 2 plays X and Y with equal (1/2) probability.
+	\begin{itemize}
+		\item MSNE: \{(0, 1/2, 1/2), (1/2, 1/2)\}
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
