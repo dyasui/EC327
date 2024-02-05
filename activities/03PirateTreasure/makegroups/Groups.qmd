@@ -1,0 +1,46 @@
+---
+title: "EC327 - Game Theory"
+subtitle: "Pirate Treasure Game"
+author: "Dante Yasui"
+date: last-modified
+format:
+    revealjs:
+        theme: [default, styles.scss]
+        slide-number: false
+        preview-links: auto
+        code-fold: true
+title-slide-attributes:
+  data-background-position: left
+output:
+  beamer_presentation:
+    keep_tex: yes
+---
+
+## {.smaller}
+
+```{r}
+# load packages
+library(dplyr)
+library(readr)
+library(tidyr)
+library(tibble)
+library(ggplot2)
+library(viridis)
+library(ggthemes)
+library(paletteer)
+library(xtable)
+
+PirateGroups <- read_csv("PirateGroups.csv") # %>% 
+  # mutate(team = parse_number(group_name)) %>% 
+  # switch order of names from (last, first) -> (first last)
+  # mutate(name = sub("(\\w+),\\s(\\w+)","\\2 \\1", PirateGroups$name)) %>% 
+  # select(name, team) %>% 
+  # write_csv("PirateGroups.csv")
+
+PirateGroups %>% 
+  group_by(team) %>% 
+  mutate(Group = row_number()) %>% 
+  pivot_wider(names_from = team, values_from = name) %>% 
+  arrange(Group) %>% 
+  knitr::kable()
+```

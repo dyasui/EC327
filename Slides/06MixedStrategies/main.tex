@@ -1,0 +1,106 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+\documentclass{beamer}
+% Load a bunch of useful packages:
+\usepackage{amssymb,amsmath,amsfonts,mathtools} % useful math fonts and symbols
+\usepackage{geometry} % allows changing margins and sizes of stuff
+\usepackage{hyperref} % allows referencing of lines of text, urls, figures etc
+\usepackage{natbib} % allows citation referencing from a .bib file
+\bibliographystyle{apalike} % American Psychological Association style guide
+\usepackage{graphicx} % to include graphics from the figures folder with helpful formating options
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+%---------------------------------------------%
+\usepackage{color} % custom color definitions:%
+    %UOregon colors:                          %
+    \definecolor{UOGreen}{RGB}{18, 71, 52}    %
+    \definecolor{UOYellow}{RGB}{254, 225, 35} %
+    %Secondary official colors:               %
+    \definecolor{LegacyGreen}{HTML}{104735}   %
+    \definecolor{GrassGreen}{HTML}{489D46}    %
+    \definecolor{LimeGreen}{HTML}{8ABB40}     %
+    \definecolor{Chartreuse}{HTML}{E2E11B}    %
+    \definecolor{Berry}{HTML}{8D1D58}         %
+    \definecolor{DarkBlue}{HTML}{004F6E}      %
+    \definecolor{LightBlue}{HTML}{00A5B5}     %
+    \definecolor{crimson}{RGB}{ 170, 4, 36 }
+    \definecolor{darkblue}{RGB}{ 4, 47, 170 }
+    \definecolor{brown}{RGB}{ 111, 71, 2 }
+    \definecolor{periwinkle}{RGB}{ 90, 177, 204 }
+    \definecolor{ducksgreen}{HTML}{007030}
+%----------------------------------------------
+
+\usepackage{setspace} % to specify single, double or one-half spacing of text
+\usepackage{indentfirst} % indent first line of a text paragraph
+\usepackage{multicol} %multipage ability
+\usepackage{multirow}
+\usepackage{ulem} % \ul (underline) command which will break over line ends
+\usepackage{amsthm} % allows standarized theorem commands
+\setbeamertemplate{theorems}[numbered]
+\theoremstyle{plain}
+\newtheorem{assume}{Assumption}
+\newtheorem{define}{Definition}
+\usepackage{breqn} %automatic line breaking
+\normalem
+
+% Theming and Appearance Setup:
+\usetheme{metropolis}
+\metroset{block=fill}
+%\usetheme{default}
+\usefonttheme{professionalfonts}
+\fontfamily{ppl}\selectfont
+\usecolortheme[named=UOGreen]{structure}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{headline}{} %Removes Section Index on top of slide
+\beamertemplatenavigationsymbolsempty
+\hypersetup{
+    colorlinks=true,
+    linkcolor=DarkBlue,
+    filecolor=Berry,
+    citecolor=GrassGreen,
+    urlcolor={LightBlue},
+    pdftitle={Trade and Labor Market Dynamics},
+    pdfpagemode=FullScreen
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+% The title
+\title{Mixed Strategies}
+\author{Dante Yasui 
+\\ adapted from material by Zachary Kiefer}
+\institute{EC327 Game Theory}
+\date{Winter 2024}
+\titlegraphic{\includegraphics[scale=.4]{UOSignature-356.png}}
+
+
+%-----------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%-----------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{frame}[plain]
+    % Print the title page as the first slide
+    \titlepage
+\end{frame}
+\addtocounter{framenumber}{-1}
+
+% \begin{frame}{Outline}
+%   \tableofcontents
+% \end{frame}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% \section{Uncertainty}
+
+% \include{09Uncertainty}
+
+\section{Mixed Strategies}
+
+\include{10MixedStrategies}
+
+\end{document}

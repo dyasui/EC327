@@ -12,9 +12,6 @@ library(viridis)
 library(ggthemes)
 library(paletteer)
 
-# set working directory:
-setwd("activities/02SurvivorFlags")
-
 # get results from csv
 results_df <- read_csv("activities/02SurvivorFlags/Results.csv")
 
@@ -112,26 +109,19 @@ winners <- results_df %>%
 
 # Simulate what the data would look like with randomly chosen flags
 # 
-sim_randflags <- function(start_rule = 21, takerule = 3) {
-  max_rounds = start_rule
-  flags_left = start_rule
-  round = 1:max_rounds
-  team = 
-  for (round in max_rounds) {
-    if (flags_left <= takerule) {
-      taken = flags_left
-    } else {
-      
-    }
-  }
+sim_randflags <- function() {
+  loser <- tibble(
+    team = rep_len(rep(1:2, each = 1), length.out = 21),
+    round = rep_len(1:21, length.out = 21),
+    taken = rep_len(sample(c(1,2,3), size = 11, replace = TRUE), length.out = 21),
+    flagsleft = rep(21 - cumsum(taken))
+  ) %>% 
+    filter(flagsleft %in% c(0,1,2)) %>% 
+    slice_head(n=1) %>% 
+    select(team)
 }
 
-simresults_df <- tibble(
-  team = rep_len(rep(1:2, each = 1), length.out = 21*18),
-  round = rep_len(1:21, length.out = 21*18),
-  taken = rep_len(sample(c(1,2,3), size = 11, replace = TRUE), length.out = 21*18),
-  # flagsleft = rep.int(rep(21 - cumsum(taken)), times = 18)
-)
+
 
 # Plot actual results against simulated results
 results_df %>% filter(game==1) %>%

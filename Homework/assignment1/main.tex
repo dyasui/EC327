@@ -1,4 +1,4 @@
-\documentclass[addpoints ]{exam}
+\documentclass[addpoints, answers]{exam}
 
 \usepackage{amssymb, amsmath, amsfonts}
 \usepackage{geometry}
@@ -100,9 +100,12 @@
   \part Consider the game tree below
   \begin{figure}[!h]
     \centering
-    \include{gametree1}
+    \include{figures/gametree1}
   \end{figure}
-  How many strategies does each player have?
+
+  How many \textit{strategies} does each player have?
+  (recall that a strategy is a complete plan of action
+  for \textit{every} eventuality)
   \begin{choices}
     \choice Player 1: 9 strategies, Player 2: 4 strategies
     \CorrectChoice Player 1: 12 strategies, Player 2: 4 strategies
@@ -111,14 +114,13 @@
   \end{choices}
 
   \part Consider the game tree from the previous question.
-  Which of the following is a complete strategy profile
-  for Player 1?
+  Which of the following is a complete strategy for Player 1?
   \begin{choices}
     \choice $\{ L \}$
     \choice $\{ x \ \text{if} \ \ell \}$
     \CorrectChoice 
       $ \{ L, x \ \text{if} \ \ell,\ y \ \text{if} \ r \} $
-    \choice $\{ L, \ x, \ y \}$ 
+    \choice $\{ L, \ x  \}$ 
   \end{choices}
 
   \part Consider the strategic form game below:
@@ -222,10 +224,29 @@ win $\succ$ tie $\succ$ loss.
 
   \part[6] Prune the tree as much as possible. How many branches were you able to eliminate?
     (A complete answer should include your drawing(s) of the game tree)
+
+  \part[8]
+  Use the same setup, but now imagine player 1's preferences change
+  because they want to be seen as a "tough guy".
+  Given that what they want to play remains the same,
+  they still have the following preferences over the result of the game:
+  win $\succ$ tie $\succ$ loss.
+  However, they now would prefer to lose playing rock
+  than win playing paper or scissors. 
+  Please create a new game tree so the payoffs reflect these new preferences.
+
+  Prune the tree as much as possible. 
+
+  How many branches were you able to eliminate?
+    (Include your drawing(s))
+
 \end{parts}
 
 \begin{solution}
-  \begin{center}
+\begin{parts}
+
+  \part
+  \begin{center}[!h]
     \include{figures/rockpaperscissors}
   \end{center}
   
@@ -233,32 +254,15 @@ win $\succ$ tie $\succ$ loss.
 
   The tree has 4 nodes, 12 branches, and 9 terminal nodes.
 
+  \part
   In each of Player 2's subgames,
-  we can prune the two branches where they would lose or times
+  we can prune the two branches where they would lose or tie
   based on what Player 1 chose.
   We can't prune any more branches
   because Player 1 is indifferent between all outcomes where they lose.
-\end{solution}
 
-\newpage
-
-Use the same setup, but now imagine player 1's preferences change
-because they want to be seen as a "tough guy".
-Given that what they want to play remains the same,
-they still have the following preferences over the result of the game:
-win $\succ$ tie $\succ$ loss.
-However, they now would prefer to lose playing rock
-than win playing paper or scissors. 
-Please create a new game tree so the payoffs reflect these new preferences.
-
-\begin{parts}
-  \part[8] Prune the tree as much as possible. 
-  How many branches were you able to eliminate?
-    (Include your drawing(s))
-\end{parts}
-
-\begin{solution}
-  \begin{center}
+  \part
+  \begin{center}[!h]
     \include{figures/rockpaperscissors2}
   \end{center}
 
@@ -283,7 +287,32 @@ Please create a new game tree so the payoffs reflect these new preferences.
   (Player 2 chooses paper if rock,
   scissors if paper,
   and rock if scissors) \}.
+
+  \noindent\rule[0.5ex]{\linewidth}{1pt}
    
+  \textbf{Grading:}
+
+  This question is worth 20 points total, 
+  with 10 for correctness, 5 for format, and 5 for explanation.
+
+  \begin{itemize}
+  \item 
+  For part a, each correct number is worth 1 point.
+
+  \item
+  For part b, give 1 point if the overall structure is there,
+  1 point if the payoffs go to the right node, 
+  and 1 point if the correct 6 branches are pruned and no others.
+  
+  \item
+  For part a on the second page (sorry), 
+  give 1 correctness point for every correctly pruned branch,
+  with -1 point for pruning other branches.
+  \end{itemize}
+
+  Scores for formatting and explanation are left up to the grader's interpretation of the rubric.
+
+\end{parts}
 \end{solution}
 
 \newpage
@@ -319,6 +348,105 @@ The game is below.
     and how they map onto your Nash outcomes.
 \end{parts}
 
+\begin{solution}
+  \begin{parts} 
+    \part Players: $\{ \text{Jack, Diane} \}$
+
+    Strategy sets: $S_{\text{Jack}} = \{ a, b, c \}$
+    $S_{\text{Diane}} = \{ x, y, c \}$
+
+    For Jack, $b$ and $c$ are best responses to $x$,
+    $a$ is BR to $y$,  
+    and $c$ is BR to $z$.
+
+    For Diane, $x$ and $y$ are BR to $a$,
+    $x$ is BR to $b$,
+    and $z$ is BR to $c$.
+
+    There are two strategy profiles where each player's best responses intersect:
+
+    \begin{itemize}
+      \item $N_1 = \{ b, x \}$ 
+
+      Jack's strategy is to choose $b$, 
+      Diane's strategy is to choose $x$.
+      Neither have regrets about their strategy choice;
+      given that Jack is choosing $b$, Diane can't get a higher payoff by deviating.
+      Given that Diane is playing $x$, Jack is indifferent between playing $b$ and $c$ but he can't get a strictly higher payoff by deviating. 
+      The resulting outcome is that Jack gets $2$, 
+      Diane gets $3$.
+      
+      \item $N_2 = \{ a, y \}$
+
+      Jack's strategy is $a$, Diane's is $y$. 
+      When Jack plays $a$, Dianne is indifferent between $x$ and $y$, but
+      still cannot deviate to a strictly higher payoff.
+      When Diane plays $y$, Jack's best response is $a$ because $2>\{0,1\}$. 
+      The outcome is that Jack gets $2$ and Diane gets $1$.
+
+    \end{itemize}
+
+    These are the only two \textit{pure strategy} Nash equilibria
+    because there are no other intersections of pure strategy best responses.
+    Note that even though $N_1$ Pareto dominates $N_2$ 
+    (Jack is indifferent; $2=2$, and Diane is better off; $3>1$),
+    there is no \textit{unilateral} deviation that would reach $N_1$
+    from $N_2$.
+
+
+    \part
+    See the extensive form game tree below.
+
+    Now the strategy sets are: 
+
+    $S_{\text{Jack}} = \{ a, b, c \}$
+    because Jack still has only one decision node.
+
+    $S_{\text{Diane}} = \{$ any combination $ c_1 c_2 c_3$ where $c$ can be either $x$, $y$, or $z \}$
+    because Diane now has 3 elements in her information set.
+    She knows whether Jack has chosen $a$, $b$, or $c$ before she makes her own choice. 
+
+    I represented each of Diane's strategies as a triple where the first letter represents her choice at node 1, second letter at node 2, and third letter at node 3.
+    So for example, $xyz$ would be the strategy where she chooses $x$ in node $1$, $y$ in node $2$, and $z$ in node $3$. 
+
+    \begin{itemize}
+      
+      \item 
+      $\mathbf{N_1} = \{ a, \ yc_2c_3 | 
+      \text{where $c_2$ is $x$, $y$, or $z$;
+      $c_3$ is $x$ or $y$ } \}$
+
+      Any set of strategies in which Jack chooses $a$
+      and Diane chooses $y$ in node $1$ 
+      but doesn't choose $z$ at node $3$
+      would result in an equilibrium outcome of 
+      $({\color{red} 2},{\color{blue} 1})$
+      where Jack cannot deviate to a higher payoff than $2$,
+      and Diane also has no regrets with choosing $y$.
+
+      \item 
+      $\mathbf{N_2} = \{ b, \ xc_2c_3 |
+      \text{where $c_2$ could be $x$, $y$, or $z$;
+      $c_3$ could be either $x$ or $y$ }\}$
+
+      Any set of strategies in which Jack chooses $b$ 
+      and Diane doesn't choose $z$ at node $3$ 
+      would result in Jack choosing $b$ 
+      and Diane choosing $x$ given that jack chooses $b$. 
+
+      The equilibrium outcome of any of these Nash strategy profiles
+      would be $({\color{red} 2}, {\color{blue} 3})$
+
+    \end{itemize}
+
+  \end{parts}
+
+\begin{center}
+  \include{figures/JackthenDiane}
+\end{center}
+
+\end{solution}
+
 \newpage
 
 
@@ -348,6 +476,33 @@ and in Game 2, 3 of 9 matches were won by the starting team.
   and what alternative hypotheses could you test?
 
 \end{parts}
+
+\begin{solution}
+  \begin{parts}
+    
+    \part 
+    The first team can win 100\% of the time by always leaving a multiple of 
+    the maximum flags which can be taken plus one. 
+    So if all teams know the rules of the game then we would predict that
+    100\% of matches will be won by the starting team.
+
+    However, in class only 9 out of 18 matches were won by the starting team. 
+    We can pretty easily reject the 100\% win hypothesis.
+
+    \part 
+    This one is open to interpretation.
+    It might be that not everyone was fully paying attention when the rules were explained and so perfect information doesn't hold.
+
+    One simple hypothesis to test could be that
+    teams were choosing flags to take randomly
+    instead of thinking through all of the backwards induction logic.
+    This would give us a prediction of the first team winning 1/2 of the time,
+    which is what we saw in class.
+    However, you might want to replicate this experiment more than 18 times to be more sure that there acutally is no tendency for the starting team to win.
+
+  \end{parts}
+
+  \end{solution}
 
 \newpage 
 
