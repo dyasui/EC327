@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1706855345 "main.tex" "main.pdf" "main" 1706855356 0
+["pdflatex"] 1707861311 "main.tex" "main.pdf" "main" 1707861324 0
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm" 1136768653 1804 7b5f73028f6509167f47ace9d69509ed ""
@@ -296,12 +296,12 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1678822462 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1678822539 7883456 dd1f5ec05af12ea255ea0401f68590c2 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "10MixedStrategies.aux" 1706855356 5203 a523c3810dc60e6446bd04fbdd47ac97 "pdflatex"
-  "10MixedStrategies.tex" 1706855343 21695 e5616e8e16080a6892db94a2c9171c3f ""
+  "10MixedStrategies.aux" 1707861323 6493 1a8dfcb07b09ad4492ffb02c2687fbb0 "pdflatex"
+  "10MixedStrategies.tex" 1707861310 24968 48a7dc6d9a1c3fe9c82be49eb116a37b ""
   "UOSignature-356.png" 1706547990 14526 01ea468cd6eeb32691451ac00820ee97 ""
-  "main.aux" 1706855356 1455 7fb30dafb896099bc660f7b606941650 "pdflatex"
-  "main.nav" 1706855356 3783 6230f596207eb184e2bee3ff2f2c1335 "pdflatex"
-  "main.out" 1706855356 126 885b1b72b85f5df0fcc3f5bef172c831 "pdflatex"
+  "main.aux" 1707861323 1455 5f51ffda87332bde7d462165ec0d841e "pdflatex"
+  "main.nav" 1707861323 4713 b3cdc46d64f07703ae484aa27110a31b "pdflatex"
+  "main.out" 1707861323 126 885b1b72b85f5df0fcc3f5bef172c831 "pdflatex"
   "main.tex" 1706853522 3766 ee7a57721ecdcb1a3d59a3543473ff90 ""
   (generated)
   "10MixedStrategies.aux"
