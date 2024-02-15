@@ -21,7 +21,7 @@ function exp_util()
         [0.0, -0.2, -0.4, -0.6, -0.8, -1.0],
     ]
     trace1 = surface(z=eu_x, colorscale="Viridis")
-    trace2 = surface(z=eu_y, showscale=false, opacity=0.8, colorscale="Viridis")
+    trace2 = surface(z=eu_y, showscale=false, opacity=0.8, color="blue")
     layout = Layout(title="Expected Utility of Player 2's pure strategies",
     )
     plot([trace1, trace2],layout)
