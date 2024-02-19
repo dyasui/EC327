@@ -23,27 +23,27 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 ## Lectures
 ---
 
-[01 - Intro to Theory and Strategic thinking](https://raw.githack.com/dyasui/ec327gametheory/Slides/01Intro/main.pdf)
+[01 - Intro to Theory and Strategic thinking](https://github.com/dyasui/ec327gametheory/blob/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/Slides/01Intro/Intro.pdf)
 
-[02 - Sequential Games](https://raw.githack.com/dyasui/ec327gametheory/Slides/02SequentialGames/main.pdf)
+[02 - Sequential Games](https://github.com/dyasui/ec327gametheory/blob/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/Slides/02SequentialGames/02SequentialGames.pdf)
 
-[03 - Simultaneous Games](https://raw.githack.com/dyasui/ec327gametheory/Slides/03SimultaneousGames/main.pdf)
+[03 - Simultaneous Games](https://github.com/dyasui/ec327gametheory/blob/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/Slides/03SimultaneousGames/beamer/main.pdf)
 
-[04 - Information Sets](https://raw.githack.com/dyasui/ec327gametheory/Slides/04InfoSets/main.pdf)
+[04 - Information Sets](https://github.com/dyasui/ec327gametheory/blob/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/Slides/04InfoSets/main.pdf)
 
-[05 - Uncertainty](https://raw.githack.com/dyasui/ec327gametheory/Slides/05Uncertainty/main.pdf)
+[05 - Uncertainty](https://github.com/dyasui/ec327gametheory/blob/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/Slides/05Uncertainty/main.pdf)
 
-[06 - Mixed Strategies](https://raw.githack.com/dyasui/ec327gametheory/Slides/06MixedStrategies/main.pdf)
+[06 - Mixed Strategies](https://github.com/dyasui/ec327gametheory/blob/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/Slides/06MixedStrategies/main.pdf)
 
-[07 - Asymmetric Information](https://raw.githack.com/dyasui/ec327gametheory/Slides/07AsymmetricInto/main.pdf)
+[07 - Asymmetric Information](https://github.com/dyasui/ec327gametheory/blob/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/Slides/07AsymmetricInfo/main.pdf)
 
 ## Activities
 
-[01 - Guessing Two Thirds](https://raw.githack.com/dyasui/ec327gametheory/activities/01GuessTwoThirds)
+[01 - Guessing Two Thirds](https://github.com/dyasui/ec327gametheory/tree/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/activities/01GuessTwoThirds)
 
-[02 - Survivor Flags](https://raw.githack.com/dyasui/ec327gametheory/activities/02SurvivorFlags)
+[02 - Survivor Flags](https://github.com/dyasui/ec327gametheory/tree/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/activities/02SurvivorFlags)
 
-[03 - Pirate Treasure](https://raw.githack.com/dyasui/ec327gametheory/activities/03PirateTreasure)
+[03 - Pirate Treasure](https://github.com/dyasui/ec327gametheory/tree/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/activities/03PirateTreasure)
 
-[04 - Penalty Kick Shootout](https://raw.githack.com/dyasui/ec327gametheory/activities/04PenaltyKicks)
+[04 - Penalty Kick Shootout](https://github.com/dyasui/ec327gametheory/tree/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/activities/04PenaltyKicks)
 ---
