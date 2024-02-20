@@ -13,7 +13,7 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 ## Syllabus
 ---
 
-[**Syllabus**](https://raw.githack.com/dyasui/ec327gametheory/Syllabus/main.pdf)
+[**Syllabus**](https://github.com/dyasui/ec327gametheory/blob/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/Syllabus/main.pdf)
 
 ## Recommended Books/Readings
 ---

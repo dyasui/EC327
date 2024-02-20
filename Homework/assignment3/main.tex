@@ -1,0 +1,269 @@
+\documentclass[addpoints ]{exam}
+
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{multirow,array} % for payoff matrix formatting
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = gray,
+  urlcolor   = blue
+}
+
+\definecolor{crimson}{RGB}{ 170, 4, 36 }
+\definecolor{darkblue}{RGB}{ 4, 47, 170 }
+\definecolor{brown}{RGB}{ 111, 71, 2 }
+\definecolor{periwinkle}{RGB}{ 90, 177, 204 }
+\definecolor{ducksgreen}{HTML}{007030}
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+\pagestyle{headandfoot}
+\lhead{EC327 Game Theory}
+\chead{Homework 3}
+\rhead{Winter 2024}
+\runningheadrule
+
+\title{
+    \textbf{Econ 327: Game Theory} \\ 
+    Homework $\#3$
+    }
+\author{University of Oregon}
+\date{Due: Mar. 1$^{st}$}
+
+% exam-type question formatting
+\renewcommand{\thequestion}{\textbf{Question \arabic{question}}}
+\bracketedpoints
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+  \gradetable[h][questions]
+\end{center}
+
+\vspace{0.5in}
+
+\begin{center}
+  \textbf{For homework assignments:}
+\end{center}
+
+\begin{itemize}
+
+%  \item DO NOT write your name:
+%  this assignment will be graded anonymously. 
+%  If you want to, you can include your student ID instead.
+
+  \item Complete \textit{all} questions and parts.
+  I will select one question at random to be graded
+  according to the rubric on Canvas.
+
+  \item You may choose to work with others,
+  but everyone must submit to Canvas individually.
+  Please include the names of everyone who you worked with 
+  below your own name.
+ 
+\end{itemize}
+
+\vspace{1.0in}
+
+\makebox[.6\textwidth]{Name\enspace\hrulefill}
+
+\vspace{0.5in}
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+  \textbf{Note:}
+  All parts of Questions 1 and 2 are either directly from 
+  or adapted from problems in  
+  Dixit, Skeath and Reiley, \textit{Games of Strategy}, Fourth Edition. 
+  }}}
+\end{center}
+
+\newpage
+
+\begin{questions}
+
+%------------------------------------------------------------------%
+
+\question[10]
+\textbf{Multiple Choice}
+
+\begin{parts}
+
+  \part Consider the game of Rock, Paper, Scissors:
+  \begin{table}[h!]
+    \begin{center}
+    \begin{tabular}{*{5}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{3}{c}{Lisa} \\\cline{3-5}
+      \multicolumn{1}{c}{} &          & Rock    & Scissors & Paper   \\\cline{2-5}
+      \multirow{3}*{Bart}  & Rock     &   0,  0 &  10, -10 & -10, 10 \\\cline{2-5}
+                           & Scissors & -10, 10 &   0,   0 &  10,-10 \\\cline{2-5}
+                           & Paper    &  10,-10 & -10,  10 &   0   0 \\\cline{2-5} 
+    \end{tabular}
+    \end{center}
+  \end{table}
+
+  Suppose that Lisa announced she would use a mixture in which 
+  she chooses Rock with 40\% probability, Scissors with 30\% probability,
+  and Paper with 30\% probability.
+  What is Bart's best response to this strategy choice?
+  \begin{choices}
+    \choice Rock
+    \CorrectChoice Paper
+    \choice Scissors
+    \choice Mixed strategy of Rock with 1/3, Scissors with 1/3,
+    and Paper with 1/3.
+  \end{choices}
+
+  \part Consider the following game:
+  \begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{*{4}{c|}}
+      \multicolumn{2}{c}{} &
+      \multicolumn{2}{c}{Colin} \\ \cline{3-4}
+      \multicolumn{1}{c}{} &       & $DL$   & $CC$   \\ \cline{2-4}
+      \multirow{2}*{Rowena} & $DL$ & 4, 4 & 4, 1 \\ \cline{2-4}
+                            & $CC$ & 1, 1 & 6, 6 \\ \cline{2-4} 
+    \end{tabular}
+  \end{center}
+  \end{table}
+
+  How many Nash Equilibria exist in the simultaneous game?
+  \begin{choices}
+    \CorrectChoice one equilibrium
+    \choice two equilbria
+    \choice three equilibria
+    \choice an infinite number of equilibria
+  \end{choices}
+
+  \part 
+  Jack is a talented investor, 
+  but his earnings vary considerably from year to year.
+  In the coming year he expects to earn either $\$ 250,000$ with good luck
+  or $ \$ 90,000 $ with bad luck.
+  Somewhat oddly, given his chosen profession, Jack is risk averse, 
+  so that his utility is equal to the square toot of his income.
+  The probability of Jack's having good luck is 0.5.
+
+  What is Jack's expected utility for the coming year?
+  \begin{choices}
+    \choice 170
+    \CorrectChoice 400
+    \choice 412 
+    \choice 583
+  \end{choices}
+
+
+  \part 
+  What amount of certain income would yield the same level of utility 
+  for Jack as the expected utility in part (c)?
+
+  \begin{choices}
+    \choice \$28,900 
+    \CorrectChoice \$160,000
+    \choice \$169,744 
+    \choice \$339,889
+  \end{choices}
+
+  \newpage
+  \part 
+  You are the Dean of the Faculty at St. Anford University. You hire Assistant Professors for a probationary period of 7 years, after which they come up for tenure and are either promoted and gain a job for life or turned down, in which case they must find another job elsewhere.
+Your Assistant Professors come in two types, Good and Brilliant. Any types worse than Good have already been weeded out in the hiring process, but you cannot directly distinguish between Good and Brilliant types. Each individual Assistant Professor knows whether he or she is Brilliant or merely Good. You would like to tenure only the Brilliant types.
+The payoff from a tenured career at St. Anford is \$2 million; think of this as the expected discounted present value of salaries, consulting fees, and book royalties, plus the monetary equivalent of the pride and joy that the faculty member and his or her family would get from being tenured at St. Anford. Anyone denied tenure at St. Anford will get a fac- ulty position at Boondocks College, and the present value of that career is \$0.5 million.
+Your faculty can do research and publish the findings. But each publication requires effort and time and causes strain on the family; all these are costly to the faculty member. The monetary equivalent of this cost is \$30,000 per publication for a Brilliant Assistant Professor and \$60,000 per publication for a Good one. You can set a minimum number, $N$, of publications that an Assistant Professor must produce in order to achieve tenure.
+  
+  What will happen in a \textit{separating equilibrium}?
+  \begin{choices}
+    \choice St. Anford requires $N=0$ publications, \\
+    both Good and Brilliant professors are tenured.
+    \CorrectChoice St. Anford requires $25 < N \leq 50$ publications, \\
+    Brilliant professors are tenured, Good ones are not.
+    \choice St. Anford requires $25 < N \leq 50$ publications, \\
+    Good professors are tenured, Brilliant ones are not.
+    \choice St. Anford requires $N>50$ publications, \\
+    neither Good nor Brilliant professors are tenured.
+  \end{choices}
+\end{parts}
+  
+\newpage
+
+%------------------------------------------------------------------%
+
+\question
+A local charity has been given a grant to serve free meals to the homeless in its community, but it is worried that its program might be exploited by nearby college students, who are always on the lookout for a free meal.
+Both a homeless person and a college student receive a payoff of 10 for a free meal.
+The cost of standing in line for the meal is 
+$t^2 / 320$ for a homeless person and 
+$t^2 / 160$ for a college student,
+where t is the amount of time in line measured in minutes.
+Assume that the staff of the charity cannot observe the true type of those coming for free meals.
+
+\begin{parts}
+  \part[5] What is the minimum wait time that will achieve separation of types?
+
+  \part[5] 
+  After a while, the charity finds that it can successfully identify 
+  and turn away college students half of the time.
+  College students who are turned away receive no free meal and,
+  further, incur a cost of 5 for their time and embarrassment.
+  Will the partial identification of college students 
+  reduce or increase the answer in part (a)? 
+  Explain.
+
+\end{parts}
+
+\newpage
+
+\question 
+
+The table below contains the counts and frequencies of each combination of
+kicker and goalie strategies across 410 match-ups (so 820 plays) 
+from Activity 4 - Penalty Shootout Tournament.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Kick & Intercept & count & proportion\\
+\hline
+L & L & 37 & 0.095\\
+\hline
+L & M & 51 & 0.131\\
+\hline
+L & R & 37 & 0.095\\
+\hline
+M & L & 44 & 0.113\\
+\hline
+M & M & 53 & 0.136\\
+\hline
+M & R & 51 & 0.131\\
+\hline
+R & L & 39 & 0.100\\
+\hline
+R & M & 33 & 0.085\\
+\hline
+R & R & 45 & 0.115\\
+\hline
+\end{tabular}
+\end{table}
+
+Recall that the payout matrix for this rule set was different 
+than the payout matrix from the worksheet 
+(the probability of scoring when the kicker chose a different side than the goalie was 1 in our class activity).
+ 
+\begin{parts}
+  \part[5]
+  Calculate the \textbf{Mixed Strategy Nash Equilibrium} of this version of the game 
+  \part[5]
+  Use a \href{https://en.wikipedia.org/wiki/Chi-squared_test}{Chi-squared test}
+  to test the null hypothesis that our class data 
+  are the same as the theoretical equilibrium.
+\end{parts}
+\end{questions}
+
+\end{document}
