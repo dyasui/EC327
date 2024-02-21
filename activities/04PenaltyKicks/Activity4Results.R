@@ -1,5 +1,7 @@
 library(dplyr)
 library(readr)
+library(knitr)
+library(kableExtra)
 # Get results from Canvas csv export
 results_df <- read_csv("activities/04PenaltyKicks/Activity4Results.csv") 
 
@@ -36,7 +38,8 @@ results_df %>%
     count = n()
   ) %>% 
   mutate(
-    freq = count / sum(count)
+    freq = count / sum(count),
+    total = sum(count)
   )
 
 # count how many time each outcome appears
@@ -46,7 +49,9 @@ results_df %>%
   summarise(
     count = n()
   ) %>% 
+  ungroup() %>% 
   mutate(
     freq = count / sum(count)
-  )
+  ) %>% 
+  kable(format = "latex", digits = 3)
 
