@@ -1,0 +1,88 @@
+\documentclass[12pt]{exam}
+\usepackage{amssymb,amsmath,amsfonts,mathtools} % useful math fonts and symbols
+\usepackage{hyperref}
+\usepackage{multicol, multirow}
+\usepackage[inner=1.0in, outer=1.0in, top=1.0in, bottom=1.0in]{geometry}
+
+\pagestyle{headandfoot}
+\lhead{EC327}
+\chead{Activity 7 - Cuban Missile Crisis}
+\rhead{\today}
+\runningheadrule 
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\title{Activity 7 - Cuban Missile Crisis}
+\date{\today}
+
+\begin{document}
+
+\section*{Rules of the Game}
+
+For this activity, you will be grouped into either a team representing the \textbf{Soviet Union} or \textbf{United States} leadership.
+Among both the USSR and US, you will be randomly assigned to take on the role of either a \textbf{hawk} or \textbf{dove}.
+
+The game has several stages. 
+The US team will first discuss and vote on whether to threaten the USSR with a blockade of Cuba.
+If they decide on a blockade, the USSR can respond by withdrawing their missiles, or defying the blockade.
+If the USSR has defied a US blockade, use a \href{https://pickerwheel.com/tools/random-number-generator/}{random number generator} and see if the confrontation escalates to nuclear war with 60\% likelihood.
+If this doesn't lead to nuclear war, the US can choose to make a new threat that nuclear war will occur with 100\% likelihood if the USSR doesn't withdraw their missiles.
+
+The game has five outcomes: 
+\begin{itemize}
+  \item If the US does not decide to blockade Cuba, 
+  \begin{itemize}
+    \item US dove players will get -2 for avoiding nuclear war for now, but allowing the USSR to assert their power
+    \item US hawk players will get -8 because they are more worried about Soviet military dominance
+    \item All USSR players will get a payoff of 2 for asserting their dominance
+  \end{itemize}
+  \item If the US establishes the blockade and the USSR decide to withdraw,
+  \begin{itemize}
+    \item US doves will get 1
+    \item US hawks will get 2
+    \item USSR hawks will get -8 for losing face to the US
+    \item USSR doves will get -4 because the withdrawal is less embarrassing to them 
+  \end{itemize}
+  \item If the US blockades and the USSR decide to defy the US blockade, 
+  there is a chance that the confrontation will lead to nuclear war.
+  In the case of nuclear war:
+  \begin{itemize}
+    \item All doves will get -8
+    \item All hawks will get -4
+  \end{itemize}
+  \item If the US blockades, the USSR defies the blockade but it didn't escalate to nuclear war,
+  the US threatened again and the USSR finally withdrew their missiles,
+  \begin{itemize}
+    \item US doves will get 0
+    \item US hawks will get 1
+    \item USSR doves will get -6
+    \item USSR hawks will get -10
+  \end{itemize}
+  \item If the US blockades, the USSR defies the blockade but it didn't escalate to nuclear war,
+  the US threatened again and the USSR defied the second threat, there is 100\% chance of nuclear war.
+\end{itemize}
+
+\section*{Playing the Game}
+
+Before each decision, you will discuss amongst your team what you think your strategy should be
+(but try not to let the other team hear).
+Pick one person to be the president/premier who will moderate the discussion, 
+one person to be the diplomat who will communicate your teams actions to the other team,
+and one person to be the journalist who will take notes of your discussion and thought processes.
+
+\section*{Discussion}
+
+\begin{enumerate}
+  \item How would you model this game in extensive form? 
+  \item What theoretical tools from the class are relevant here? How did they affect your behavior?
+  \item How realistic do you think the payoff values that I assigned to each outcome are? How would the results of the game change with different combinations of payoffs?
+  \item What other settings can you think of which involve brinksmanship? 
+\end{enumerate}
+
+\end{document}
+
