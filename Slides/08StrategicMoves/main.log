@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.14)  5 MAR 2024 15:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.14)  5 MAR 2024 15:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1251,28 +1251,42 @@ Package pdftex.def Info: figures/fig929.png  used on input line 170.
 
  <./figures/fig929.png (PNG copy)>]
 
+./03Threats.tex:183: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.183 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 180.
+(Font)              using `OT1/cmss/bx/n' instead on input line 183.
 
 [43
 
-]) [44
+] [44
+
+]) [45
 
 
 
 ]
 \openout2 = `04Brinksmanship.aux'.
 
- (./04Brinksmanship.tex [45
+ (./04Brinksmanship.tex [46
 
-
-] [46
 
 ] [47
 
 ] [48
 
 ] [49
+
+] [50
 
 ])
 \tf@nav=\write6
@@ -1292,18 +1306,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 13DE619A0AEC941CD57F7BA6AAAFFF27;572.
  ) 
 Here is how much of TeX's memory you used:
- 38583 strings out of 476025
- 920142 string characters out of 5790017
+ 38585 strings out of 476025
+ 920161 string characters out of 5790017
  1866388 words of memory out of 5000000
  58163 multiletter control sequences out of 15000+600000
  525369 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,1871b,1313s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb>
-Output written on main.pdf (49 pages, 679892 bytes).
+Output written on main.pdf (50 pages, 680936 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 310 compressed objects within 4 object streams
- 103 named destinations out of 1000 (max. 500000)
+ 423 PDF objects out of 1000 (max. 8388607)
+ 316 compressed objects within 4 object streams
+ 105 named destinations out of 1000 (max. 500000)
  140 words of extra memory for PDF output out of 10000 (max. 10000000)
 

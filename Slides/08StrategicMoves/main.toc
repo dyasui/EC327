@@ -1,4 +1,4 @@
 \beamer@sectionintoc {1}{Classification of Strategic Moves}{10}{0}{1}
 \beamer@sectionintoc {2}{Commitments}{20}{0}{2}
 \beamer@sectionintoc {3}{Threats and Promises}{26}{0}{3}
-\beamer@sectionintoc {4}{Brinksmanship}{44}{0}{4}
+\beamer@sectionintoc {4}{Brinksmanship}{45}{0}{4}
