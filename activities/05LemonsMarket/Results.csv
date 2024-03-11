@@ -1,0 +1,178 @@
+"","group","round","model","buyer","price","cartype","resale_price","dealer","daler_profit"
+"1",1,1,"Fiesta","Jack","620","good",780,"Zaki",350
+"2",1,1,"Golf","Gabriel","200","lemon",200,"Zaki",350
+"3",1,1,"Nova","Mizuki","550","lemon",200,"Zaki",350
+"4",1,1,"Nova","Elliott","690","good",710,"Zaki",350
+"5",1,2,"Golf","Gabriel","510","lemon",200,"Zaki",310
+"6",1,3,"Fiesta","Mizuki","750","good",500,"Zaki",NA
+"7",1,3,"Golf","Gabriel","510","lemon",200,"Zaki",NA
+"8",1,3,"Nova","Elliott","540","lemon",360,"Zaki",NA
+"9",1,3,"Fiesta","Job","510","lemon",490,"Zaki",NA
+"10",1,4,"Fiesta","Jack","500","good",500,"Zaki",NA
+"11",2,1,"Fiesta","Jack","425","good",975,"Xavy",575
+"12",2,1,"Golf","Cara","475","lemon",575,"Xavy",575
+"13",2,1,"Nova","Arthur","800","good",600,"Xavy",575
+"14",2,1,"Golf","Owen","475","lemon",525,"Xavy",575
+"15",2,1,"Fiesta","Daniel","600","good",800,"Xavy",575
+"16",2,2,"Fiesta","Owen","599","good",801,"Xavy",649
+"17",2,2,"Golf","Arthur","400","lemon",600,"Xavy",649
+"18",2,2,"Nova","Jack","400","lemon",600,"Xavy",649
+"19",2,2,"Nova","Cara","400","lemon",600,"Xavy",649
+"20",2,2,"Golf","Daniel","250","lemon",750,"Xavy",649
+"21",2,3,"Fiesta","Jack","500","good",900,"Xavy",525
+"22",2,3,"Fiesta","Cara","475","good",925,"Xavy",525
+"23",2,3,"Fiesta","Owen","400","lemon",600,"Xavy",525
+"24",2,3,"Nova","Arthur","500","lemon",600,"Xavy",525
+"25",2,3,"Nova","Daniel","500","lemon",500,"Xavy",525
+"26",2,4,"Fiesta","Cara","550","good",850,"Xavy",400
+"27",2,4,"Golf","Daniel","300","lemon",700,"Xavy",400
+"28",2,4,"Nova","Arthur","500","good",800,"Xavy",400
+"29",2,4,"Fiesta","Owen","550","good",850,"Xavy",400
+"30",2,4,"Nova","Jack","500","lemon",500,"Xavy",400
+"31",3,1,"Fiesta","Ashley","800","good",600,"Aidan",700
+"32",3,1,"Golf","Harrison","400","lemon",600,"Aidan",700
+"33",3,1,"Golf","Griffin","500","lemon",500,"Aidan",700
+"34",3,1,"Nova","Olivia","600","good",800,"Aidan",700
+"35",3,2,"Fiesta","Olivia","710","good",690,"Aidan",239
+"36",3,2,"Golf","Harrison","210","lemon",790,"Aidan",239
+"37",3,2,"Fiesta","Griffin","620","good",780,"Aidan",239
+"38",3,2,"Fiesta","Ashley","699","good",701,"Aidan",239
+"39",3,3,"Fiesta","Olivia","750","good",650,"Aidan",250
+"40",3,3,"Fiesta","Harrison","600","good",800,"Aidan",250
+"41",3,3,"Fiesta","Ashley","700","good",700,"Aidan",250
+"42",3,3,"Nova","Griffin","600","good",800,"Aidan",250
+"43",3,4,"Fiesta","Harrison","610","good",790,"Aidan",10
+"44",3,4,"Nova","Ashley","600","good",800,"Aidan",10
+"45",3,4,"Golf","Griffin","200","lemon",800,"Aidan",10
+"46",3,4,"Nova","Olivia","600","good",800,"Aidan",10
+"47",4,1,"Fiesta","Geedi","275","good",1125,"Johnny",0
+"48",4,1,"Golf","Carson","300","lemon",700,"Johnny",0
+"49",4,1,"Nova","Nick","800","good",600,"Johnny",0
+"50",4,1,"Golf","Jennifer","300","lemon",700,"Johnny",0
+"51",4,2,"Golf","Carson","315","lemon",685,"Johnny",515
+"52",4,2,"Golf","Nick","800","lemon",200,"Johnny",515
+"53",4,2,"Nova","Geedi","400","good",1000,"Johnny",515
+"54",4,2,"Fiesta","Jennifer","275","good",1125,"Johnny",515
+"55",4,3,"Fiesta","Geedi","599","lemon",401,"Johnny",675
+"56",4,3,"Golf","Carson","75","lemon",925,"Johnny",675
+"57",4,3,"Nova","Nick","601","lemon",400,"Johnny",675
+"58",4,3,"Nova","Jennifer","601","lemon",400,"Johnny",675
+"59",4,4,"Fiesta","Nick","201","good",1199,"Johnny",-99
+"60",4,4,"Golf","Carson","150","lemon",850,"Johnny",-99
+"61",4,4,"Nova","Geedi","550","lemon",450,"Johnny",-99
+"62",4,4,"Golf","Jennifer","175","lemon",790,"Johnny",-99
+"63",4,5,"Fiesta","Geedi","450","good",950,"Johnny",-400
+"64",4,5,"Fiesta","Nick","500","good",800,"Johnny",-400
+"65",4,5,"Nova","Carson","450","good",950,"Johnny",-400
+"66",4,6,"Fiesta","Nick","500","lemon",500,"Johnny",850
+"67",4,6,"Nova","Geedi","550","lemon",450,"Johnny",850
+"68",4,6,"Nova","Carson","400","lemon",600,"Johnny",850
+"69",6,1,"Fiesta","Parker","400","good",600,"Noah",0
+"70",6,1,"Golf","Eric","400","lemon",200,"Noah",0
+"71",6,1,"Nova","Ryan","400","lemon",200,"Noah",0
+"72",6,1,"Nova","Max","400","lemon",200,"Noah",0
+"73",6,2,"Fiesta","Max","350","lemon",200,"Noah",-100
+"74",6,2,"Golf","Eric","350","lemon",200,"Noah",-100
+"75",6,2,"Fiesta","Ryan","400","good",600,"Noah",-100
+"76",6,2,"Nova","N/A",NA,"good",600,"Noah",-100
+"77",6,3,"Fiesta","Parker","500","good",600,"Noah",800
+"78",6,3,"Golf","Ryan","500","good",600,"Noah",800
+"79",6,3,"Fiesta","Max","500","lemon",200,"Noah",800
+"80",6,3,"Nova","Eric","500","good",600,"Noah",800
+"81",6,4,"Fiesta","Eric","400","good",600,"Noah",-550
+"82",6,4,"Golf","Max","350","lemon",200,"Noah",-550
+"83",6,4,"Golf","N/A",NA,"lemon",200,"Noah",-550
+"84",6,4,"Nova","N/A",NA,"lemon",200,"Noah",-550
+"85",6,5,"Fiesta","Max","500","good",600,"Noah",300
+"86",6,5,"Golf","N/A",NA,"lemon",200,"Noah",300
+"87",6,5,"Fiesta","Eric","500","good",600,"Noah",300
+"88",6,5,"Nova","Parker","500","lemon",200,"Noah",300
+"89",7,1,"Fiesta","sebbe","700","good",700,"Charlie P",820
+"90",7,1,"Golf","Sean","800","lemon",200,"Charlie P",820
+"91",7,1,"Nova","Charlie A","720","good",680,"Charlie P",820
+"92",7,2,"Fiesta","Ryan","410","good",990,"Charlie P",760
+"93",7,2,"Golf","Sean","500","lemon",500,"Charlie P",760
+"94",7,2,"Nova","sebbe","400","lemon",600,"Charlie P",760
+"95",7,2,"Golf","Charlie","650","lemon",350,"Charlie P",760
+"96",7,3,"Fiesta","sebbe","800","good",600,"Charlie P",80
+"97",7,3,"Fiesta","Charlie","480","good",920,"Charlie P",80
+"98",7,3,"Fiesta","Sean","420","good",980,"Charlie P",80
+"99",7,3,"Fiesta","Ryan","380","lemon",620,"Charlie P",80
+"100",7,4,"Golf","sebbe","610","lemon",390,"Charlie P",-50
+"101",7,4,"Nova","Sean","540","good",860,"Charlie P",-50
+"102",7,4,"Fiesta","Ryan","400","good",1000,"Charlie P",-50
+"103",7,4,"Fiesta","Charlie","400","good",1000,"Charlie P",-50
+"104",7,5,"Nova","Sean","410","good",980,"Charlie P",461
+"105",7,5,"Nova","sebbe","450","lemon",550,"Charlie P",461
+"106",7,5,"Nova","Charlie","400","lemon",600,"Charlie P",461
+"107",7,5,"Nova","Ryan","401","lemon",599,"Charlie P",461
+"108",7,6,"Fiesta","Charlie","450","good",950,"Charlie P",170
+"109",7,6,"Golf","Sean","300","lemon",700,"Charlie P",170
+"110",7,6,"Nova","sebbe","510","good",890,"Charlie P",170
+"111",7,6,"Fiesta 2","Ryan","510","lemon",490,"Charlie P",170
+"112",8,1,"Fiesta","Chris","500","good",600,"Braden",50
+"113",8,1,"Golf","Jack Grage","500","lemon",200,"Braden",50
+"114",8,1,"Nova","Owen Brown","450","good",600,"Braden",50
+"115",8,2,"Fiesta","Chris Grimsley","425","good",600,"Braden",-675
+"116",8,2,"Golf","Braden","300","lemon",200,"Braden",-675
+"117",8,2,"Nova","Jack","200","good",600,"Braden",-675
+"118",8,3,"Nova","Braden","410","lemon",200,"Braden",225
+"119",8,3,"Golf","Owen","215","lemon",200,"Braden",225
+"120",8,3,"Golf","Jack","200","lemon",200,"Braden",225
+"121",8,4,"Fiesta","Braden","450","good",600,"Braden",-355
+"122",8,4,"Nova","Owen","300","lemon",200,"Braden",-355
+"123",8,4,"Nova","Chris","395","good",600,"Braden",-355
+"124",8,5,"Fiesta","Jack","400","good",600,"Braden",-150
+"125",8,5,"Golf","Owen","250","lemon",200,"Braden",-150
+"126",8,5,"Nova","Chris","600","good",600,"Braden",-150
+"127",8,6,"Fiesta","Braden","600","good",600,"Braden",150
+"128",8,6,"Golf","Chris","150","lemon",200,"Braden",150
+"129",8,6,"Nova","Jack","400","lemon",200,"Braden",150
+"130",9,1,"Fiesta","William Doerr","600","good",800,"Justin",200
+"131",9,1,"Golf","Cody Chase","400","lemon",600,"Justin",200
+"132",9,1,"Nova","Oscar Oeding","600","good",800,"Justin",200
+"133",9,2,"Fiesta","Oscar","550","good",850,"Justin",130
+"134",9,2,"Golf","Cody","450","lemon",550,"Justin",130
+"135",9,2,"Nova","william","530","good",870,"Justin",130
+"136",9,3,"Fiesta","Oscar","620","good",780,"Justin",430
+"137",9,3,"Golf","William","600","lemon",400,"Justin",430
+"138",9,3,"Nova","Cody","610","good",790,"Justin",430
+"139",9,4,"Fiesta","Oscar","610","lemon",490,"Justin",835
+"140",9,4,"Fiesta","Cody","610","lemon",490,"Justin",835
+"141",9,4,"Nova","William","615","good",785,"Justin",835
+"142",9,5,"Fiesta","Oscar","620","good",780,"Justin",50
+"143",9,5,"Golf","Cody","210","lemon",790,"Justin",50
+"144",9,5,"Nova","William","620","lemon",380,"Justin",50
+"145",9,6,"Fiesta","Oscar","420","good",980,"Justin",660
+"146",9,6,"Nova","Cody","610","lemon",490,"Justin",660
+"147",9,6,"Nova","william","610","lemon",390,"Justin",660
+"148",10,1,"Fiesta","Floor","400","good",600,"Floor",NA
+"149",10,1,"Golf","Campbell","600","lemon",450,"Floor",NA
+"150",10,1,"Nova","Drew Morales","300","good",500,"Floor",NA
+"151",10,2,"Fiesta","Floor","350","good",500,"Floor",NA
+"152",10,2,"Golf","Campbell","550","lemon",600,"Floor",NA
+"153",10,2,"Nova","Drew","250","good",300,"Floor",NA
+"154",10,3,"Fiesta","Floor","No","good",400,"Floor",NA
+"155",10,3,"Golf","Campbell","Yes","lemon",440,"Floor",NA
+"156",10,3,"Nova","Drew","No","good",290,"Floor",NA
+"157",10,4,"Fiesta","Floor","No","good",350,"Floor",NA
+"158",10,4,"Golf","Campbell","Yes","lemon",400,"Floor",NA
+"159",10,4,"Nova","Drew","no","good",280,"Floor",NA
+"160",10,5,"Fiesta","Floor","No","good",600,"Floor",NA
+"161",10,5,"Golf","Campbell","Yes","lemon",200,"Floor",NA
+"162",10,5,"Nova","Drew","No","good",600,"Floor",NA
+"163",16,1,"Fiesta","Drew","600","good",800,"Miguel",475
+"164",16,1,"Golf","Andrew","400","lemon",600,"Miguel",475
+"165",16,1,"Golf","Logan","425","lemon",575,"Miguel",475
+"166",16,1,"Nova","Andy","250","lemon",750,"Miguel",475
+"167",16,1,"Nova","Josh","200","lemon",800,"Miguel",475
+"168",16,2,"Fiesta","Drew","500","good",850,"Miguel",-675
+"169",16,2,"Golf","Andy","250","lemon",750,"Miguel",-675
+"170",16,2,"Golf","Logan","200","lemon",800,"Miguel",-675
+"171",16,2,"Nova","Andrew","375","good",1025,"Miguel",-675
+"172",16,2,"Fiesta","Josh","100","good",1300,"Miguel",-675
+"173",16,3,"Fiesta","andy","400","good",1000,"Miguel",-425
+"174",16,3,"Golf","Drew","175","lemon",825,"Miguel",-425
+"175",16,3,"Golf","josh",NA,NA,800,"Miguel",-425
+"176",16,3,"Fiesta","Logan","550","good",850,"Miguel",-425
+"177",16,3,"Nova","Andrew","250","lemon",500,"Miguel",-425
