@@ -1,0 +1,261 @@
+\documentclass[addpoints ]{exam}
+
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{multirow,array} % for payoff matrix formatting
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = gray,
+  urlcolor   = blue
+}
+
+\definecolor{crimson}{RGB}{ 170, 4, 36 }
+\definecolor{darkblue}{RGB}{ 4, 47, 170 }
+\definecolor{brown}{RGB}{ 111, 71, 2 }
+\definecolor{periwinkle}{RGB}{ 90, 177, 204 }
+\definecolor{ducksgreen}{HTML}{007030}
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+\pagestyle{headandfoot}
+\lhead{EC327 Game Theory}
+\chead{Homework 4}
+\rhead{Winter 2024}
+\runningheadrule
+
+\title{
+    \textbf{Econ 327: Game Theory} \\ 
+    Homework $\#3$
+    }
+\author{University of Oregon}
+\date{Due: Mar. 15$^{th}$}
+
+% exam-type question formatting
+\renewcommand{\thequestion}{\textbf{Question \arabic{question}}}
+\bracketedpoints
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+  \gradetable[h][questions]
+\end{center}
+
+\vspace{0.5in}
+
+\begin{center}
+  \textbf{For homework assignments:}
+\end{center}
+
+\begin{itemize}
+
+%  \item DO NOT write your name:
+%  this assignment will be graded anonymously. 
+%  If you want to, you can include your student ID instead.
+
+  \item Complete \textit{all} questions and parts.
+  I will select one question at random to be graded
+  according to the rubric on Canvas.
+
+  \item You may choose to work with others,
+  but everyone must submit to Canvas individually.
+  Please include the names of everyone who you worked with 
+  below your own name.
+ 
+\end{itemize}
+
+\vspace{1.0in}
+
+\makebox[.6\textwidth]{Name\enspace\hrulefill}
+
+\vspace{0.5in}
+
+\newpage
+
+\begin{questions}
+
+%------------------------------------------------------------------%
+
+\question[10]
+\textbf{Multiple Choice}
+
+\begin{parts}
+
+  \part 
+  Consider the strategic form game below:
+
+  \begin{table}[h!]
+    \begin{center}
+      \begin{tabular}{*{4}{c|}}
+        \multicolumn{2}{c}{} & \multicolumn{2}{c}{Column} \\ \cline{3-4}
+        \multicolumn{1}{c}{} &    & Left & Right \\ \cline{2-4}
+        \multirow{2}*{Row} & Up   & 0,1 & 2,2 \\ \cline{2-4}
+                           & Down & 1,1 & 1,0 \\ \cline{2-4}
+      \end{tabular}
+    \end{center}
+  \end{table}
+
+  How many Nash Equilibria are there \textit{including mixed strategies}?
+
+  \begin{choices}
+    \choice one equilibrium
+    \CorrectChoice two equilbria
+    \choice three equilibria
+    \choice an infinite number of equilibria
+  \end{choices}
+
+  \part 
+  Suppose that there are three types of potential gamblers: 
+  \textit{risk averse} types with utility function $u(x) = \sqrt{x}$,
+  \textit{risk neutral} types with utility function $u(x) = x$,
+  and \textit{risk seeking} types with utility function $u(x) = x^2$.
+
+  Suppose that you own a casino offering a gamble which provides a payout of 
+  \$64 with a probability of $p=1/2$, and \$0 with probability $1-p$.
+  You can also offer a voucher which has a certain value of $\$v$.
+
+  How much should you make the voucher worth so that 
+  \textit{risk averse} people always take the voucher,
+  \textit{risk neutral} people sometimes take the voucher and sometimes take the gamble,
+  and \textit{risk seeking} people always take the gamble.
+
+  \begin{choices}
+    \choice $v = 16$
+    \choice $v = 24$
+    \CorrectChoice $v = 32$
+    \choice $v = 64$
+  \end{choices}
+
+  \part 
+  For this simplified version of the Cold War:
+
+  \begin{table}[h!]
+    \begin{center}
+      \begin{tabular}{*{4}{c|}}
+        \multicolumn{2}{c}{} & \multicolumn{2}{c}{Soviet Union} \\ \cline{3-4}
+        \multicolumn{1}{c}{} &                   & Restrained & Aggressive \\ \cline{2-4}
+        \multirow{2}*{United States} & Restrained & 4,3        & 1,4        \\ \cline{2-4}
+                                    & Aggressive & 3,1        & 2,2        \\ \cline{2-4}
+      \end{tabular}
+    \end{center}
+  \end{table}
+
+  If one player could make a \textit{strategic move} in a first stage of this game,
+  what would be an example which they could \textit{credibly commit} to 
+  and which would improve their equilibrium payoff?
+
+  \begin{choices}
+    \choice The Soviet Union commits to only playing Aggressive
+    \choice The Soviet Union promises to play Restrained if the US does too
+    \choice The United States develops a reputation of always playing restrained 
+    \CorrectChoice The United States threatens to play Aggressive unless the Soviet Union plays Restrained
+  \end{choices}
+  
+  \newpage
+
+  \part 
+  If the prisoners' dilemma is repeated 100 times between the same two players 
+  and both players know how many times the game will be played, 
+  when will they achieve their cooperative outcome?
+
+  \begin{choices}
+    \choice Only if both players are sufficiently patient
+    \choice When both players are playing Tit-for-Tat 
+    \choice When both players are playing Grim Trigger
+    \CorrectChoice Never because backwards induction tells us that they should cheat in every period
+  \end{choices}
+
+  \part 
+  Suppose that Player 1's expected utility from playing \textit{always cooperate}
+  is $u=0$ for all periods $t = 1, ..., \infty$ 
+  and their expected utility of playing \textit{cheat once} is $u=10$ for period $t=1$,
+  and $u=-5$ for all periods $t = 2, ..., \infty$.
+
+  When will Player 1 choose to \textit{cheat once}?
+
+  \begin{choices}
+    \choice When $\delta \leq 1/2$
+    \choice When $\delta \geq 1/2$
+    \CorrectChoice When $\delta \leq 2/3$
+    \choice When $\delta \geq 2/3$
+  \end{choices}
+
+\end{parts}
+  
+\newpage
+
+%------------------------------------------------------------------%
+
+\question
+Consider a game between a union and the company that employs the union membership. The union can threaten to strike (or not) to get the company to meet its wage and benefits demands. When faced with a threatened strike, the company can choose to concede to the demands of the union or to defy its threat of a strike. The union, however, does not know the company’s profit position when it decides whether to make its threat; it does not know whether the company is sufficiently profitable to meet its demands—and the company’s assertions in this matter cannot be believed. Nature determines whether the company is profitable; the probability that the firm is unprofitable is $p$.
+
+The payoff structure is as follows: (i) When the union makes no threat, the union gets a payoff of 0 (regardless of the profitability of the company). The company gets a payoff of 100 if it is profitable but a payoff of 10 if it is unprofitable. A passive union leaves more profit for the company if there is any profit to be made. (ii) When the union threatens to strike and the company concedes, the union gets 50 (regardless of the profitability of the company) and the company gets 50 if it is profitable but -40 if it is not. (iii) When the union threatens to strike and the company defies the union’s threat, the union must strike and gets -100 (regardless of the profitability of the company). The company gets -100 if it is profitable and -10 if it is not. Defiance is very costly for a profitable company but not so costly for an unprofitable one.
+\footnote{Dixit, Skeath, and Riley, pg 584}
+
+\begin{parts}
+  \part[2] What happens when the union uses the pure threat to strike unless the company concedes to the union’s demands?
+
+  \part[4] Suppose that the union sets up a situation in which there is some risk, with probability $q < 1$, that it will strike after the company defies its threat.
+  This risk may arise from the union leadership’s imperfect ability to keep the membership in line.
+  Draw an extensive form game tree.
+
+  \part[4] What happens when the union uses brinkmanship, threatening to strike with some probability $q$ unless the company accedes to its demands?
+
+\end{parts}
+
+\newpage
+
+\question 
+Choose one of the following in-class activities to discuss for this question:
+\begin{itemize}
+  \item Activity 3: Pirate Treasure
+  \item Activity 5: Market for Lemons 
+  \item Activity 7: Brinksmanship
+\end{itemize}
+ 
+\begin{parts}
+  \part[4] 
+  Model a single part of this game as a one-shot simultaneous game. 
+  Your answer should include a \textbf{strategic form payoff table}
+  as well as some explanation of what part of the activity this corresponds to.
+
+  Find at least one \textbf{Nash Equilibrium} of this one-shot game 
+  that you think is relevant to the lesson of this activity.
+
+  \vspace{60mm}
+
+  \part[3] 
+  Now consider the entire extensive form game. 
+
+  Without formally solving for the equilibrium (this will be too complicated),
+  I want you to use the intuition you have learned in this class for solving games 
+  to \textbf{discuss the relevant factors, tools, and ideas} to this specific game.
+
+  \vspace{30mm}
+
+  \part[3]
+  Look at the data collected in the corresponding Results.csv folder of the 
+  \texttt{Activities} files folder on Canvas
+  (We didn't collect data for Activity 7, but you can use your own observations to discuss).
+
+  Does your intuition for what the theoretical equilibrium would be match what actually happened? 
+  
+  \vspace{30mm}
+
+  \part
+  \textbf{Optional:}
+  Out of all the activities we played in class, which were some of your 
+  favorites and least-favorites?
+  What would you recommend to make this aspect of the class better 
+  in future iterations?
+
+\end{parts}
+
+\end{questions}
+
+\end{document}
