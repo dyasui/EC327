@@ -45,6 +45,9 @@
 \newtheorem{define}{Definition}
 \usepackage{breqn} %automatic line breaking
 \usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+  \usebeamercolor[fg]{itemize item}
+  \usebeamertemplate{itemize item}}
 \normalem
 \usepackage{array}
 
@@ -90,10 +93,10 @@
 \end{frame}
 \addtocounter{framenumber}{-1}
 
-\begin{frame}[plain]{Outline}
-  \tableofcontents
-\end{frame}
-\addtocounter{framenumber}{-1}
+% \begin{frame}[plain]{Outline}
+%   \tableofcontents
+% \end{frame}
+% \addtocounter{framenumber}{-1}
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -127,5 +130,8 @@
 
 \section*{General Repeated Prisoners' Dilemma}
 \include{02Generalized}
+
+\section*{Other Repeated Games}
+\include{03OtherGames}
 
 \end{document}

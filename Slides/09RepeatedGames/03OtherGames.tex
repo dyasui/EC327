@@ -1,0 +1,158 @@
+% Section 3: Other Repeated Games
+%-------------------------------------------------------------------------------
+
+\begin{frame}{A More Complicated Game}
+  \begin{center}
+  \begin{tabular}{cr|c|c|c|}
+  	& \multicolumn{1}{c}{} & \multicolumn{3}{c}{Player 2}\\ \cline{3-5}
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & x & y & z \\\cline{2-5}
+    \multirow{3}*{Player 1}  & x & 5, 5 & 2, 7 & 1, 3 \\\cline{2-5}
+                             & y & 7, 2 & 3, 3 & 0, 1 \\\cline{2-5}
+                             & z & 3, 1 & 1, 0 & 2, 2 \\\cline{2-5}
+  \end{tabular}
+  \end{center}
+
+  What are the \textbf{pure strategy Nash equilibria} of the \texit{one-shot} game?
+\end{frame}
+
+\begin{frame}{Repeated Game with 3 strategies per period}
+  Now suppose that this game is played repeatedly an infinite number of times.  
+  \begin{itemize}
+    \item Can we do better than the single period equilibrium? 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Grim Trigger}
+  \underline{Player 1} 
+  \begin{align*}
+    \begin{cases}
+      t = 0 & \text{Play } x  \\ 
+      t > 0 & 
+      \begin{cases}
+        \text{Play } x \text{ if only } x \text{ has been played } \\
+        \text{Play } y \text{ if anything other than } x \text{has been played} \\
+      \end{cases}
+    \end{cases} 
+  \end{align*}
+
+  \underline{Player 2}
+  \begin{itemize}
+    \item $EV_{Coop} = \frac{5}{1-\delta}$ 
+    \item $EV_{Cheat} = 7 + \frac{3\delta}{1-\delta}$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Grim Trigger}
+  Solve for the value of $\delta$ for which this is a \textbf{SPNE}
+  \vspace{50mm}
+\end{frame}
+
+\begin{frame}{Tit-for-Tat with extra forgiveness}
+  \underline{Player 1} 
+  \begin{align*}
+    \begin{cases}
+      t = 0 & \text{Play } x  \\ 
+      t > 0 & \text{Play Player 2's strategy from } t-1 \\
+       & 
+      \begin{cases}
+        \text{If P2 didn't play } x \text{ in } t-2 \text{ and P2 did play } x \text{ in } t-1, \\ 
+        \text{ play P2's strategy from } t-1 \\ 
+        \text{Else play } y \text{ forever} \\
+      \end{cases}
+    \end{cases} 
+  \end{align*}
+
+  \underline{Player 2}
+  \begin{itemize}
+    \item $EV_{Coop} = \frac{5}{1-\delta}$ 
+    \item $EV_{Cheat} = 7 + 2\delta + \frac{5\delta^2}{1-\delta}$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tit-for-Tat with extra forgiveness}
+  Solve for the value of $\delta$ for which this is a \textbf{SPNE}
+  \vspace{50mm}
+\end{frame}
+
+\begin{frame}{Tit-for-Tat vs Grim Trigger}
+  Tit-for-Tat is more forgiving
+  \begin{itemize}
+    \item If $\delta \geq 1/2$, equilibrium is supported by Grim Trigger 
+    \item If $\delta \geq 2/3$, equilibrium is supported by Tit-for-Tat
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{A reciprocating cooperation strategy}
+    \underline{Player 1}
+      \begin{cases}
+        t=0 & \text{Play } y \\ 
+        t>0 & 
+        \begin{cases}
+          \text{Play } y \text{ if } t \text { is even } \\ 
+          \text{Play } x \text{ if } t \text { is odd } \\ 
+          \text{Play } z \text{ forever } \\
+          \text{ if P2 played } y \\ 
+          \text{ when $t$ is even} \\ 
+        \end{cases}
+      \end{cases} 
+
+    \underline{Player 2}
+      \begin{cases}
+        t=0 & \text{Play } x \\ 
+        t>0 & 
+        \begin{cases}
+          \text{Play } y \text{ if } t \text { is odd } \\ 
+          \text{Play } x \text{ if } t \text { is even } \\ 
+          \text{Play } z \text{ forever } \\
+          \text{ if P2 played } y \\ 
+          \text{ when $t$ is odd} \\ 
+        \end{cases}
+      \end{cases} 
+\end{frame}
+
+\begin{frame}{A reciprocating cooperation strategy}
+  Solve for the value of $\delta$ for which this is a \textbf{SPNE}
+  \vspace{50mm}
+\end{frame}
+
+\begin{frame}{When can cooperation be achieved?}
+  With all of these different ways of achieving repeated cooperation, 
+  you might be wondering if there is a way to tell what strategies can actually work
+\end{frame}
+
+\begin{frame}{Folk Theorem}
+  Any strategy is a potential SPNE for a \textbf{repeated} stage game if: 
+  \begin{itemize}
+    \item Both agents are sufficiently patient and far-sighted (high enough $\delta$)
+    \item The payoffs from the cooperative strategy profile satisfy the two properties: 
+    \begin{itemize}
+      \item \textbf{Individually Rational:} the payoffs to each agent exceed their minimax payoffs in the stage game 
+      \item \textbf{Feasibility:} the payoffs are weighted averages of the payoffs found in the stage game
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Folk Theorem with 3x3 Repeated Game Example payoffs}
+   
+  \begin{tikzpicture}
+   \begin{axis}[
+     width=0.8\textwidth,
+     grid,
+     xlabel={Player 1's Payoffs},
+     ylabel={Player 2's Payoffs},
+     xmin=0, xmax=8,
+     ymin=0, ymax=8,
+     xtick={0,1,...,7},
+     ytick={0,1,...,7},
+     grid style=dashed,
+     ]
+ 
+     \addplot[only marks]
+     coordinates {
+     (5,5) (2,7) (1,3) 
+     (7,2) (3,3) (0,1)
+     (3,1) (1,0) (2,2)
+     };
+   \end{axis}
+ \end{tikzpicture}
+\end{frame}
