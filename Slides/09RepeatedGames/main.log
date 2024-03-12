@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.14)  7 MAR 2024 15:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.14)  11 MAR 2024 22:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -878,25 +878,42 @@ LaTeX Info: Redefining \genfrac on input line 149.
 \cur@row=\count383
 \cur@col=\count384
 \conditionsep=\skip83
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip84
+\enit@outerparindent=\dimen369
+\enit@toks=\toks58
+\enit@inbox=\box138
+\enit@count@id=\count385
+\enitdp@description=\count386
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen370
+\ar@mcellbox=\box139
+\extrarowheight=\dimen371
+\NC@list=\toks59
+\extratabsurround=\skip85
+\backup@length=\skip86
+\ar@cellbox=\box140
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamertheme-metropolis/beamerthememetropolis.sty
 Package: beamerthememetropolis 2017/01/23 v1.2 Metropolis Beamer theme
  (/usr/local/texlive/2023/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks58
-\pgfopts@list@add@b@toks=\toks59
+\pgfopts@list@add@a@toks=\toks60
+\pgfopts@list@add@b@toks=\toks61
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamertheme-metropolis/beamerinnerthememetropolis.sty
 Package: beamerinnerthememetropolis 2017/01/23 Metropolis inner theme
-\metropolis@titleseparator@linewidth=\skip84
-\metropolis@progressonsectionpage=\skip85
-\metropolis@progressonsectionpage@linewidth=\skip86
-\metropolis@blocksep=\skip87
-\metropolis@blockadjust=\skip88
-\metropolis@parskip=\skip89
+\metropolis@titleseparator@linewidth=\skip87
+\metropolis@progressonsectionpage=\skip88
+\metropolis@progressonsectionpage@linewidth=\skip89
+\metropolis@blocksep=\skip90
+\metropolis@blockadjust=\skip91
+\metropolis@parskip=\skip92
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamertheme-metropolis/beamerouterthememetropolis.sty
 Package: beamerouterthememetropolis 2017/01/23 Metropolis outer theme
-\metropolis@frametitle@padding=\skip90
-\metropolis@progressinheadfoot=\skip91
-\metropolis@progressinheadfoot@linewidth=\skip92
+\metropolis@frametitle@padding=\skip93
+\metropolis@progressinheadfoot=\skip94
+\metropolis@progressinheadfoot@linewidth=\skip95
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamertheme-metropolis/beamercolorthememetropolis.sty
 Package: beamercolorthememetropolis 2017/01/23 Metropolis color theme
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamertheme-metropolis/beamerfontthememetropolis.sty
@@ -910,34 +927,34 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 Package beamerthememetropolis Warning: You need to compile with XeLaTeX or LuaLaTeX to use the Fira fonts on input line 95.
 
 )) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty)
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 54.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 56.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamercolorthemestructure.sty)
-Package hyperref Info: Option `colorlinks' set `true' on input line 67.
+Package hyperref Info: Option `colorlinks' set `true' on input line 69.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/beamertheme-metropolis/pgfplotsthemetol.sty
 Package: pgfplotsthemetol 2017/01/23 PGFplots colors based on Paul Tol's SRON technical note
-) (./main.aux (./01Trenches.aux))
+) (./main.aux (./02Generalized.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -975,24 +992,24 @@ LaTeX Font Info:    ... okay on input line 83.
 
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count385
-\scratchdimen=\dimen369
-\scratchbox=\box138
-\nofMPsegments=\count386
-\nofMParguments=\count387
-\everyMPshowfont=\toks60
-\MPscratchCnt=\count388
-\MPscratchDim=\dimen370
-\MPnumerator=\count389
-\makeMPintoPDFobject=\count390
-\everyMPtoPDFconversion=\toks61
+\scratchcounter=\count387
+\scratchdimen=\dimen372
+\scratchbox=\box141
+\nofMPsegments=\count388
+\nofMParguments=\count389
+\everyMPshowfont=\toks62
+\MPscratchCnt=\count390
+\MPscratchDim=\dimen373
+\MPnumerator=\count391
+\makeMPintoPDFobject=\count392
+\everyMPtoPDFconversion=\toks63
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 83.
+Package hyperref Info: Link coloring ON on input line 85.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1016,147 +1033,59 @@ Package pgfplots notification 'compat/show suggested version=true': you might be
 <UOSignature-356.png, id=17, 213.9192pt x 45.2892pt>
 File: UOSignature-356.png Graphic file (type png)
 <use UOSignature-356.png>
-Package pdftex.def Info: UOSignature-356.png  used on input line 88.
+Package pdftex.def Info: UOSignature-356.png  used on input line 90.
 (pdftex.def)             Requested size: 85.56616pt x 18.11534pt.
 
-Overfull \vbox (40.0154pt too high) detected at line 88
+Overfull \vbox (40.0154pt too high) detected at line 90
  []
 
 
-Overfull \vbox (15.63992pt too high) detected at line 88
+Overfull \vbox (15.63992pt too high) detected at line 90
  []
 
 [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./UOSignature-356.png>] (./main.toc) [2
 
-]
-LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 105.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmss.fd
-File: ts1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-) [3
+] [3
 
-{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4
+] [4
 
 ] [5
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 123.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 128.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 123.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 128.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [6
 
 ]
-\openout2 = `01Trenches.aux'.
+\openout2 = `02Generalized.aux'.
 
- (./01Trenches.tex [7
+ (./02Generalized.tex [7
 
+
+] [8
 
 ]
-<figures/fig131.png, id=64, 620.3175pt x 319.1925pt>
-File: figures/fig131.png Graphic file (type png)
-<use figures/fig131.png>
-Package pdftex.def Info: figures/fig131.png  used on input line 17.
-(pdftex.def)             Requested size: 307.28987pt x 158.12009pt.
- [8
-
- <./figures/fig131.png>]
-<figures/hughes24-superJumbo.png, id=71, 2055.68pt x 1562.83875pt>
-File: figures/hughes24-superJumbo.png Graphic file (type png)
-<use figures/hughes24-superJumbo.png>
-Package pdftex.def Info: figures/hughes24-superJumbo.png  used on input line 25.
-(pdftex.def)             Requested size: 230.46739pt x 175.20367pt.
-
-Overfull \vbox (4.15015pt too high) detected at line 25
+Overfull \hbox (36.8234pt too wide) in paragraph at lines 135--135
+ [] 
  []
 
 [9
 
- <./figures/hughes24-superJumbo.png>] [10
-
-] [11
+] [10
 
 ]
-File: figures/fig131.png Graphic file (type png)
-<use figures/fig131.png>
-Package pdftex.def Info: figures/fig131.png  used on input line 56.
-(pdftex.def)             Requested size: 153.64493pt x 79.0576pt.
- [12
-
-] [13
-
-]
-<figures/fig132.png, id=104, 848.16875pt x 616.3025pt>
-File: figures/fig132.png Graphic file (type png)
-<use figures/fig132.png>
-Package pdftex.def Info: figures/fig132.png  used on input line 77.
-(pdftex.def)             Requested size: 307.28987pt x 223.27933pt.
-
-Overfull \vbox (5.61678pt too high) detected at line 77
+Overfull \hbox (16.22945pt too wide) in paragraph at lines 160--160
+ [] 
  []
 
-[14
-
- <./figures/fig132.png>] [15
-
-]
-<figures/fig133.png, id=116, 847.165pt x 524.96124pt>
-File: figures/fig133.png Graphic file (type png)
-<use figures/fig133.png>
-Package pdftex.def Info: figures/fig133.png  used on input line 91.
-(pdftex.def)             Requested size: 307.28987pt x 190.41173pt.
- [16
-
- <./figures/fig133.png>] [17
-
-] [18
-
-] [19
-
-] [20
-
-] [21
-
-]
-File: figures/fig133.png Graphic file (type png)
-<use figures/fig133.png>
-Package pdftex.def Info: figures/fig133.png  used on input line 154.
-(pdftex.def)             Requested size: 245.83282pt x 152.33098pt.
- [22
-
-] [23
-
-]
-<figures/tab137.png, id=162, 419.5675pt x 165.61874pt>
-File: figures/tab137.png Graphic file (type png)
-<use figures/tab137.png>
-Package pdftex.def Info: figures/tab137.png  used on input line 171.
-(pdftex.def)             Requested size: 215.10196pt x 84.90921pt.
- [24
-
- <./figures/tab137.png>]
-<figures/fig138.png, id=170, 361.35pt x 144.54pt>
-File: figures/fig138.png Graphic file (type png)
-<use figures/fig138.png>
-Package pdftex.def Info: figures/fig138.png  used on input line 179.
-(pdftex.def)             Requested size: 215.10196pt x 86.04094pt.
- [25
-
- <./figures/fig138.png>] [26
-
-] [27
-
-] [28
-
-] [29
-
-] [30
-
-] [31
+[11
 
 ])
 \tf@nav=\write6
@@ -1168,23 +1097,23 @@ Package pdftex.def Info: figures/fig138.png  used on input line 179.
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
- (./main.aux (./01Trenches.aux))
+ (./main.aux (./02Generalized.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BF80BFF3E0690E26757C66504B9DC152;288.
+(rerunfilecheck)             Checksum: F7BDC42EDC89D0161299ADFB6723A82C;227.
  ) 
 Here is how much of TeX's memory you used:
- 38242 strings out of 476025
- 913067 string characters out of 5790017
- 1859388 words of memory out of 5000000
- 57892 multiletter control sequences out of 15000+600000
- 524234 words of font info for 76 fonts, out of 8000000 for 9000
+ 38541 strings out of 476025
+ 917476 string characters out of 5790017
+ 1883388 words of memory out of 5000000
+ 58237 multiletter control sequences out of 15000+600000
+ 523620 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,11n,122p,1871b,773s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb>
-Output written on main.pdf (31 pages, 6917323 bytes).
+ 128i,14n,122p,1871b,1181s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (11 pages, 136109 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 150 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
