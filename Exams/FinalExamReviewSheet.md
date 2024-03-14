@@ -55,18 +55,39 @@ Other Related Concepts:
     - Revealed Preference 
     - Hypothesis Testing (Chi-sq)
 
+--- 
+
 ## Section 1: Multiple Choice
+
+10 questions
 
  * Match example to topic
  * Identify correct definition
+ * Choose solution from specific example we saw in class
 
 ## Section 2: Short Answer
 
-1. Mixed Strategy in 2x2 game
+1. Screening problem 
+    * solve for incentive compatible condition 
+    * solve for individually rational condition
 
-Give them a mixed strategy for one player 
-and have them solve for when the other player would play mixed strat
+## Section 2: Long Answer
 
----
+1. Mixed Strategy in 3x3 game
+    a) Identify any PSNE  
+    b) Check whether a mixed strategy profile is MSNE 
+    c) Check a different mixed strategy profile
 
-2.
+2. Strategic move extensive form
+    a) Find SPNE for some extensive form construction 
+    b) Find SPNE for another extensive form 
+    c) Identify credible threat/promise 
+    d) Identify credible commitment
+
+3. Repeated prisoners' dilemma
+    a) Identify one-stage NE
+    b) Discuss ways to achieve cooperation 
+    c) Check whether grim trigger works for some $\delta$
+
+
+
