@@ -5,3 +5,16 @@
 Exams/Midterm/
 Exams/Final/
 Exams/Final/main.tex
+
+# LaTeX temporary files
+*.aux
+*.log
+*.toc
+*.fls
+*.fdb_latexmk 
+*.synctex.gz
+## Beamer specifics
+*.snm
+*.vrb
+*.nav
+*.out
