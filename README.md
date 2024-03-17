@@ -60,3 +60,16 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 [06 - Market Entry Worksheet](https://github.com/dyasui/ec327gametheory/tree/2fa2eb04117eb4b0f9fc38a114a7f4c4a2452679/activities/06MarketEntryWorksheet)
 
 [07 - Brinksmanship](https://github.com/dyasui/ec327gametheory/blob/2fa2eb04117eb4b0f9fc38a114a7f4c4a2452679/activities/07Brinksmanship/main.pdf)
+
+## Assignments 
+
+[Homework 1](https://github.com/dyasui/ec327gametheory/blob/168acad36dcc0b94fed3a02e1e68445a3285d5d5/Homework/assignment1/main.pdf)
+
+[Homework 2](https://github.com/dyasui/ec327gametheory/blob/168acad36dcc0b94fed3a02e1e68445a3285d5d5/Homework/assignment2/main.pdf)
+
+[Homework 3](https://github.com/dyasui/ec327gametheory/blob/168acad36dcc0b94fed3a02e1e68445a3285d5d5/Homework/assignment3/main.pdf)
+
+[Homework 4](https://github.com/dyasui/ec327gametheory/blob/168acad36dcc0b94fed3a02e1e68445a3285d5d5/Homework/assignment4/main.pdf)
+
+---
+
