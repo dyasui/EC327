@@ -1,8 +1,7 @@
-# Outline
-
-_Topics_:
+# Topics:
 
 Basic Toolkit: 
+
     - Simultaneous Games 
         - Strategic Form Tables
         - Pure Strategies
@@ -23,6 +22,7 @@ Basic Toolkit:
     - Present Value
 
 Applications and Topics:
+
     - Uncertainty
         - Asymmetric Info
             - Pooling vs Separating eq
@@ -51,11 +51,14 @@ Applications and Topics:
         - Solving for discount factors which support cooperation
 
 Other Related Concepts:
+
     - Pareto Efficiency/Optimality, Pareto Dominance
     - Revealed Preference 
     - Hypothesis Testing (Chi-sq)
 
 --- 
+
+# Exam Outline
 
 ## Section 1: Multiple Choice
 
