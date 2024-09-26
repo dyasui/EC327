@@ -1,19 +1,10 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-Exams/Midterm/
-Exams/Final/
+**.DS_Store
 
-# LaTeX temporary files
-*.aux
-*.log
-*.toc
-*.fls
-*.fdb_latexmk 
-*.synctex.gz
-## Beamer specifics
-*.snm
-*.vrb
-*.nav
-*.out
+# latex processing files
+**.aux
+**.fdb_latxmk
+**.fls
+**.log
+**.syntex.gz
+**.out
+
