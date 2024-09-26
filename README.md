@@ -20,6 +20,22 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 ## Textbook
  - Dixit, Skeath, and McAdams. Games of Strategy, 5th edition, or 4th edition by Dixit, Skeath, and Reiley.
 
+## Tentative Schedule
+
+| **Week** | **Chapter(s)** | **Topic**                                                           |
+|----------|----------------|---------------------------------------------------------------------|
+| 1        | 1, 2           | Intro & General Principles                                          |
+| 2        | 3              | Sequential Move Games                                               |
+| 3        | 4              | Simultaneous Move Games                                             |
+| 4        | 5              | Simultaneous Games: Continuous Strategies, Discussion, and Evidence |
+| 5        | 6              | Combining Sequential and Simultaneous Moves                         |
+| 6        | 6              | Review & **Midterm**                                                |
+| 7        | 7              | Mixed Strategies                                                    |
+| 8        | 8              | Strategic Moves                                                     |
+| 9        | 9              | Uncertainty and Information                                         |
+| 10       | 10             | Repeated Games                                                      |
+| *Finals* | *TBA*          | *Exam*                                                              |
+
 ---
 
 ## Lectures
