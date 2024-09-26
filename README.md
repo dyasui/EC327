@@ -4,10 +4,10 @@ This elective game theory class EC327 is taught by [Dante Yasui](https://cas.uor
 at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 ## Schedule
-**Class Time** Tuesday and Thursday 4:00-5:20pm
-**Classroom** [McKenzie 240C](https://map.uoregon.edu/7e11b9d41)
+**Class Time** Monday and Wednesday 8:30-9:50 am
+**Classroom** Gerlinger 302
 
-**Office Hours** Tuesdays 2-3pm & Fridays 1:30-2:30pm
+**Office Hours** Monday 10-11 am \& Wednesday 1-2 pm
 
 ---
 
@@ -17,8 +17,7 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 ---
 
-## Recommended Books/Readings
- - Joseph E. Harrington, Games Strategies and Decision Making, Worth Publishers, 2008.
+## Textbook
  - Dixit, Skeath, and McAdams. Games of Strategy, 5th edition, or 4th edition by Dixit, Skeath, and Reiley.
 
 ---
