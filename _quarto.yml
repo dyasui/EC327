@@ -1,0 +1,13 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "*.md"
+
+website: 
+  page-navigation: true
+  title: "EC327 Game Theory"
+  
+page-footer:
+  right: "This page is built with [Quarto](https://quarto.org/)."
+  
