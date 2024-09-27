@@ -3,7 +3,7 @@
 This elective game theory class EC327 is taught by [Dante Yasui](https://cas.uoregon.edu/directory/economics/all/dyasui)
 at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
-## Schedule
+## **Fall 2024** Schedule
 **Class Time** Monday and Wednesday 8:30-9:50 am
 **Classroom** Gerlinger 302
 
