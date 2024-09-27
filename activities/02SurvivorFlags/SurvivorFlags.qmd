@@ -14,21 +14,20 @@ https://youtu.be/aonCsvi0LKc
 
 ```{r}
 #| warning: false
-library(readr)
 library(tidyverse)
-# SurvivorGroup <- read_csv("Survivors.csv") %>%
-#   select(name, group_name) %>%
-#   mutate(group_name = str_remove_all(group_name, "Activity2 ")) %>%
-#   mutate(name = sub("(^.*),\\s(.*$)","\\2 \\1", SurvivorGroup$name)) %>%
-#   write_csv("SurvivorGroup.csv")
 
-SurvivorGroup <- read_csv("SurvivorGroup.csv") %>% 
-  group_by(group_name) %>% 
-  mutate(Group = row_number()) %>% 
-  pivot_wider(names_from = group_name, values_from = name) %>% 
-  arrange(Group)
+names <- read_csv("EC327names.csv") %>% select(First, Last)
+n = nrow(names)
+group_size = 4
+num_groups = round(n/4)
 
-knitr::kable(SurvivorGroup)
+names %>%
+  mutate(Group = sample(1:num_groups, n, replace = TRUE)) %>%
+  group_by(Group) %>%
+  summarise(names = list((First))) %>%
+  pivot_wider(names_from = Group, values_from = names) %>%
+  knitr::kable()
+
 ```
 
 ---
