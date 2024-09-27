@@ -21,6 +21,9 @@ n = nrow(names)
 group_size = 4
 num_groups = round(n/4)
 
+# set seed to make group selection consistent across sessions
+set.seed(2024)
+# assign groups and make a table
 names %>%
   mutate(Group = sample(1:num_groups, n, replace = TRUE)) %>%
   group_by(Group) %>%

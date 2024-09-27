@@ -7,7 +7,6 @@ library(tibble)
 library(ggplot2)
 library(viridis)
 library(ggthemes)
-library(paletteer)
 
 PirateGroups <- read_csv("PirateGroups.csv") # %>% 
   # mutate(team = parse_number(group_name)) %>% 

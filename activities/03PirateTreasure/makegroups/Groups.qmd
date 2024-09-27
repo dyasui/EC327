@@ -27,7 +27,6 @@ library(tibble)
 library(ggplot2)
 library(viridis)
 library(ggthemes)
-library(paletteer)
 library(xtable)
 
 PirateGroups <- read_csv("PirateGroups.csv") # %>% 

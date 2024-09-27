@@ -31,8 +31,5 @@ output:
 
 :::
 
-{{< include StrategicForm.qmd >}}
-
-{{< include Nash.qmd >}}
 
 

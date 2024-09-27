@@ -8,3 +8,9 @@
 **.syntex.gz
 **.out
 
+# don't check rendered site into git
+/.quarto/
+/_site/
+
+# name list
+EC327names.csv

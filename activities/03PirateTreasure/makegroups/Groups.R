@@ -6,7 +6,6 @@ library(tibble)
 library(ggplot2)
 library(viridis)
 library(ggthemes)
-library(paletteer)
 
 setwd("activities/03PirateTreasure")
 
