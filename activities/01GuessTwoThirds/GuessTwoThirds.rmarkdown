@@ -1,0 +1,80 @@
+---
+name: GuessTwoThirds
+---
+
+
+
+## Activity 1: Guess 2/3rds of the average
+::: {.incremental}
+  - You will each choose an integer between 0 and 100. 
+  - The winner is the person who's guess is closest to the [average of all guesses *times* 2/3]{.hii}
+  - Submit your guess on [Canvas](https://canvas.uoregon.edu/courses/233504/quizzes/329305)
+  - Backup [Google forms version](https://docs.google.com/forms/d/e/1FAIpQLSdJoCIYnrQSzEQA1m0BDLFB5_l0PBloLL558ZWc1PfhHvxs2Q/viewform?usp=sf_link)
+:::
+
+---
+
+## Activity 1
+
+::: {.incremental}
+  - This is a simple example, but illustrates how complicated strategic reasoning can be.
+  - The theoretical solution to this game says that anyone who is *rational* and knows that *everyone else is rational* (Common Knowledge of Rationality) should only choose 0 or 1. 
+  - However, [Nagel, R. (1995), "*Unravelling in guessing games : An experimental study*"](https://www.jstor.org/stable/2950991) showed that over 12,000 answers, the average is 35.24.
+  - Is Common Knowledge of Rationality a 'bad' assumption? How can we connect our theories with experimental evidence?
+:::
+
+::: notes
+  * discuss different types of approaches people took
+  * how would they revise guess 2nd time?
+:::
+
+---
+
+
+## Results
+
+
+```{r}
+#| warning: false
+library(readr)
+library(tidyverse)
+
+# Get results from Canvas csv export
+ClassData_df <- read_csv("results.csv") %>% 
+  # rename(guess = "3950918: What is your guess?") %>% 
+  select(name, guess)
+
+# Calculate average guess
+average_guess <- ClassData_df %>% 
+  summarise(mean(guess)) %>% 
+  unlist() %>% unname()
+
+# Plot distribution of guesses
+library(ggplot2)
+library(ggthemes)
+ClassData_df %>% 
+  ggplot(aes(x=guess)) +
+  geom_histogram(binwidth = 2, fill="#69b3a2", color="#e9ecef", alpha=0.9) +
+  geom_vline(xintercept = average_guess) + 
+  annotate("text", 
+           x=average_guess-1.6, y=2.7, 
+           label=paste0("average = ", average_guess), 
+           angle=90) +
+  ggtitle("Distribution of Guessing 2/3rd's Game guesses") + 
+  theme_stata()
+```
+
+---
+
+
+## The winners are:
+
+
+```{r}
+# Find closest match to average_guess
+winners <- ClassData_df %>% 
+  filter(abs(guess - average_guess) == min(abs(guess - average_guess)))
+
+winners
+```
+
