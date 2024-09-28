@@ -13,7 +13,7 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 ## Syllabus
 
-[**Syllabus**](https://dyasui.github.io/dyasui/EC327/Syllabus/main.pdf)
+![](https://dyasui.github.io/dyasui/EC327/Syllabus/main.pdf)
 
 ---
 
@@ -50,33 +50,21 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 [04 - Information Sets](https://dyasui.github.io/dyasui/EC327/Slides/04InfoSets/main.html)
 
-[05 - Uncertainty](https://dyasui.github.io/dyasui/EC327/Slides/05Uncertainty/main.pdf)
+[05 - Uncertainty]()
 
-[06 - Mixed Strategies](https://dyasui.github.io/dyasui/EC327/Slides/06MixedStrategies/main.pdf)
+[06 - Mixed Strategies]()
 
-[07 - Asymmetric Information](https://dyasui.github.io/dyasui/EC327/Slides/07AsymmetricInfo/main.pdf)
+[07 - Asymmetric Information]()
 
-[08 - Strategic Moves](https://dyasui.github.io/dyasui/EC327/Slides/08StrategicMoves/main.pdf)
+[08 - Strategic Moves]()
 
-[09 - Repeated Games](https://dyasui.github.io/dyasui/EC327/Slides/09RepeatedGames/main.pdf)
+[09 - Repeated Games]()
 
 ---
 
 ## Activities
 
-[01 - Guessing Two Thirds](https://dyasui.github.io/dyasui/EC327/tree/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/activities/01GuessTwoThirds)
-
-[02 - Survivor Flags](https://dyasui.github.io/dyasui/EC327/tree/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/activities/02SurvivorFlags)
-
-[03 - Pirate Treasure](https://dyasui.github.io/dyasui/EC327/tree/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/activities/03PirateTreasure)
-
-[04 - Penalty Kick Shootout](https://dyasui.github.io/dyasui/EC327/tree/d6db6c1051a3b21a4054dcadb3bbb58f5b6e8a83/activities/04PenaltyKicks)
-
-[05 - Market for Lemons](https://dyasui.github.io/dyasui/EC327/activities/05LemonsMarket/README.md)
-
-[06 - Market Entry Worksheet](https://dyasui.github.io/dyasui/EC327/tree/2fa2eb04117eb4b0f9fc38a114a7f4c4a2452679/activities/06MarketEntryWorksheet)
-
-[07 - Brinksmanship](https://dyasui.github.io/dyasui/EC327/activities/07Brinksmanship/main.pdf)
+*TBA*
 
 ## Assignments 
 
@@ -89,4 +77,16 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 [Homework 4](https://dyasui.github.io/dyasui/EC327/Homework/assignment4/main.pdf)
 
 ---
+
+# Acknowledgements
+
+I have used materials passed on to me from previous graduate student instructors at the University of Oregon
+such as slides, activities, and homework questions to create this class.
+Thank you to Evan Hart,
+[Ethan Holdahl](https://ethanholdahl.com/),
+[Hanyuan Huang](https://sites.google.com/view/hanyuanhuang/),
+[Connor Wiegand](https://ctwie.me/),
+and [Zachary Kiefer](https://zkiefer10.github.io/)
+for creating some of the materials in this class, 
+for and for advice on teaching Game Theory.
 
