@@ -1,9 +1,13 @@
-library(readr)
-library(dplyr)
-setwd("activities/01GuessTwoThirds")
+library(tidyverse)
+
+# Detect csv file with default Canvas export name
+# in current working directory
+export <- list.files(pattern = "*Student Analysis Report.csv") %>%
+  sort(decreasing = TRUE) %>% head(1) # select most recent if multiple
+
 # Get results from Canvas csv export
-ClassData_df <- read_csv("results.csv") %>% 
-  # rename(guess = "3950918: What is your guess?") %>% 
+ClassData_df <- read_csv(export) %>% 
+  rename(guess = "3950918: What is your guess?") %>% 
   select(name, guess)
 
 # Calculate average guess
@@ -11,15 +15,12 @@ average_guess <- ClassData_df %>%
   summarise(mean(guess)) %>% 
   unlist() %>% unname()
 
-average_guess
 winning_guess = average_guess*(2/3)
 
 # Find closest match to average_guess * 2/3
 winners <- ClassData_df %>% 
   filter(abs(guess - winning_guess) == min(abs(guess - winning_guess))) %>% 
   select(name)
-
-winners
 
 # Plot distribution of guesses
 library(ggplot2)

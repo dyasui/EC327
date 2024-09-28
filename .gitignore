@@ -1,5 +1,9 @@
 **.DS_Store
 
+# R history and session files
+**.RData
+**.Rout
+
 # latex processing files
 **.aux
 **.fdb_latxmk
@@ -12,5 +16,8 @@
 /.quarto/
 /_site/
 
-# name list
+# Student Info from Canvas
 EC327names.csv
+**\ Student\ Analysis\ Report.csv
+**_Grades-*.csv
+
