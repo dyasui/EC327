@@ -14,6 +14,8 @@ format:
         logo: UOSignature-356.png
 title-slide-attributes:
   data-background-position: left
+resources:
+  - Syllabus/main.pdf
 ---
 
 ::: {.vertical-center}
@@ -32,7 +34,7 @@ title-slide-attributes:
 ### About Me:
  - [Preferred Name]{.hi}: Dante
  - [Preferred Pronouns]{.hi}: he, him
- - 3rd year Econ Phd student
+ - 4th year Econ Phd student
  - Davis, CA -> Portland, OR -> Eugene, OR
 ---
 
@@ -44,11 +46,21 @@ title-slide-attributes:
  
  - Why did you choose this class?
  
- - Song recommendation for [class playlist](https://open.spotify.com/playlist/41tv5OletQWcxkbh9FHKZ9?si=3c042741a06b4e28)
- 
- - Office hours preferences (will be 2 hrs per week)
+ - Song recommendation for [class playlist](https://open.spotify.com/playlist/5aFLYWuGq28OeWroNElDba?si=364ce7efa2584842)
  
 ---
+
+# Syllabus Document
+
+## Syllabus
+
+![](Syllabus/main.pdf)
+
+:::{incremental}
+  - Most up to date version on github
+  - I will also upload to Canvas
+  - print, sign, and upload as your first assignment
+:::
 
 # Class Expectations
 
@@ -84,22 +96,6 @@ title-slide-attributes:
 
 # Admin Stuff
 
-## Office Hours
-
-```{=html}
-<iframe width="1200" height="500" src="https://www.when2meet.com/?22894284-XLwIV" title="When2meet Office Hours"></iframe>
-```
-
-::: notes
-
-* Helps me get an idea of popular times
-* Final decision is still up to me
-* 3pm before class preferred
-
-:::
-
----
-
 ## Problem Sets
 You will practice what we learn in class on independently.
 
@@ -128,6 +124,7 @@ You will break into groups to work collaboratively on different activities
 ::: notes
   * I'm still working out how best to implement
   * this is how you participate, records attendance on activity days
+  * hopefully lets you experience first-had the things we learn
 :::
 ---
 
@@ -138,16 +135,16 @@ and a [final]{.hi} exam
 
 :::{.incremental}
   * [Midterm]{.hi}
-    + sometime around week 5
+    + sometime around week 5 (Oct. 28th or 30th)
     + Will test you on definitions, solution concepts, and apply them to critical thinking problems
 
   * [Final]{.hi}
-    + finals week (check duckweb for specific date)
+    + finals week of December 9 (check duckweb for specific date)
     + Covers everything we learned in the quarter, with more focus on concepts from the 2nd half
 :::
 
 ::: notes
-  * Dept policy is 50% As & Bs
+  * Dept policy is 65% As & Bs
   * expect exams to be difficult
   * Best way to prepare is lots of practice
 :::
@@ -159,7 +156,7 @@ and a [final]{.hi} exam
 :::: {.columns}
 
 ::: {.column width="40%"}
-[Problem Sets (~4)]{.hi}
+[Problem Sets]{.hi}
 
 [In-class Activities]{.hi}
 
@@ -169,13 +166,13 @@ and a [final]{.hi} exam
 :::
 
 ::: {.column width="40%"}
-20%
+30%
 
 10%
 
 30%
 
-40%
+30%
 :::
 
 ::::

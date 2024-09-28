@@ -19,10 +19,6 @@ output:
     keep_tex: yes
 ---
 
-## Apologies to: 😓
-
-Drew Rampelberg	and Sean Loder
-
 ![histogram](figures/histogram.png)
 
 ---
@@ -30,8 +26,6 @@ Drew Rampelberg	and Sean Loder
 ::: {.vertical-center}
 
 [Outline]{.hi .big}
-
-  * Activity 2: *Survivor*
 
   * Game trees
 
@@ -42,8 +36,6 @@ Drew Rampelberg	and Sean Loder
   * Examples
 
 :::
-
-{{< include SurvivorFlags.qmd >}}
 
 {{< include GameTrees.qmd >}}
 

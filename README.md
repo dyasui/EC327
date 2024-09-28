@@ -13,12 +13,11 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 ## Syllabus
 
-[**Syllabus**](https://dyasui.github.io/dyasui/EC327/Syllabus/main.pdf)
 <a href="Syllabus/main.pdf" target="_blank">PDF.</a>
 ---
 
 ## Textbook
- - Dixit, Skeath, and McAdams. Games of Strategy, 5th edition, or 4th edition by Dixit, Skeath, and Reiley.
+ - Dixit, Skeath, and McAdams. Games of Strategy, 5th edition, by Dixit, Skeath, and Reiley.
 
 ## Tentative Schedule
 
@@ -87,6 +86,6 @@ Thank you to Evan Hart,
 [Hanyuan Huang](https://sites.google.com/view/hanyuanhuang/),
 [Connor Wiegand](https://ctwie.me/),
 and [Zachary Kiefer](https://zkiefer10.github.io/)
-for creating some of the materials in this class, 
-for and for advice on teaching Game Theory.
+for creating some of the materials in this class,
+and for advice on teaching Game Theory.
 
