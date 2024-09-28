@@ -13,7 +13,7 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 ## Syllabus
 
-![](Syllabus/main.pdf)
+[**Syllabus**](https://dyasui.github.io/dyasui/EC327/Syllabus/main.pdf)
 
 ---
 
