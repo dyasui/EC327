@@ -328,7 +328,7 @@
 
 <section id="title-slide" data-background-position="left" class="quarto-title-block center">
   <h1 class="title">Introduction to Game Theory</h1>
-  <p class="subtitle">Sequential Games</p>
+  <p class="subtitle">Syllabus Day</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -342,453 +342,286 @@ Dante Yasui
 </section>
 <section class="slide level2">
 
-
-<img data-src="figures/histogram.png" class="r-stretch quarto-figure-center"><p class="caption">histogram</p></section>
-<section class="slide level2">
-
 <div class="vertical-center">
 <p><span class="hi big">Outline</span></p>
 <ul>
-<li><p>Game trees</p></li>
-<li><p>Backwards Induction</p></li>
-<li><p>Evidence</p></li>
-<li><p>Examples</p></li>
+<li>Introductions</li>
+<li>Expectations</li>
+<li>Admin Stuff</li>
+<li>Canvas Page &amp; Schedule</li>
 </ul>
 </div>
 </section>
 <section>
-<section id="extensive-form" class="title-slide slide level1 center">
-<h1>Extensive Form</h1>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>Introduction</h1>
 
 </section>
-<section id="game-treesextensive-form-as-a-tool" class="slide level2">
-<h2>Game Trees/Extensive Form as a tool</h2>
+<section id="welcome-to-the-class" class="slide level2">
+<h2>Welcome to the Class!</h2>
+<h3 id="about-me">About Me:</h3>
 <ul>
-<li><p>Before we learn how to solve a game, it will helpful to be able to visualize them</p></li>
-<li><p>Because of the ordered nature of sequential games, a <span class="hi">tree diagram</span> makes sense</p></li>
+<li><span class="hi">Preferred Name</span>: Dante</li>
+<li><span class="hi">Preferred Pronouns</span>: he, him</li>
+<li>4th year Econ Phd student</li>
+<li>Davis, CA -&gt; Portland, OR -&gt; Eugene, OR</li>
 </ul>
 </section>
-<section id="a-decision-tree" class="slide level2">
-<h2>A <em>Decision</em> Tree</h2>
+<section id="introduce-yourselves" class="slide level2">
+<h2>Introduce Yourselves</h2>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZertk6mirIaE1zmtclhUO8TuxpgyTvsXL06xHmHFPcDllTw/viewform?usp=sf_link">IntroQuiz</a></p>
+<ul>
+<li><p>Your preferred name, pronouns</p></li>
+<li><p>Why did you choose this class?</p></li>
+<li><p>Song recommendation for <a href="https://open.spotify.com/playlist/5aFLYWuGq28OeWroNElDba?si=364ce7efa2584842">class playlist</a></p></li>
+</ul>
+</section>
+<section class="slide level2">
 
-<img data-src="figures/decisiontree.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><ul>
-<li>Is this a <em>strategic</em> decision?</li>
-</ul>
-</section>
-<section id="extensive-form-definition" class="slide level2">
-<h2>Extensive Form Definition</h2>
-<div>
-<p>A <span class="h">Tree Graph</span> consists of:</p>
-<ul>
-<li class="fragment"><p>Multiple <span class="hi">nodes</span> with an ordered hierarchy starting from one <span class="hii">initial node</span></p></li>
-<li class="fragment"><p><span class="hi">Branches</span> coming from each node which connect it to later nodes</p></li>
-<li class="fragment"><p>The tree ends in any of the multiple <span class="hi">terminal nodes</span></p></li>
-</ul>
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Warning</strong></p>
-</div>
-<div class="callout-content">
-<p>Each (non-initial) terminal node may have multiple branches leading from it; but must only have <em>one</em> branch that <em>leads to it</em>.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="anatomy-of-a-tree" class="slide level2">
-<h2>Anatomy of a tree</h2>
-
-<img data-src="figures/tree-nodes.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
-<section id="section" class="slide level2">
-<h2></h2>
-
-<img data-src="figures/tree-branches.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-
-<img data-src="figures/tree-terminalnodes.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
-<section id="kidnapping-game" class="slide level2">
-<h2>Kidnapping Game <sup>1</sup></h2>
-<p>A kidnapper named <span class="hi">Guy</span> has contacted the victim’s wife, named <span class="hi">Vivica</span>, to demand a ransom.</p>
-<p>To predict what will happen to the victim, <span class="hi">Orlando</span>, we need to create a game theoretic model of the situation.</p>
-<p>Let’s use the language of the tree graph to visualize this game.</p>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Harrington, pg 18</p></li></ol></aside></section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-
-<img data-src="figures/kidnapgame_blank.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="applying-the-extensive-form" class="slide level2">
-<h2>Applying the Extensive Form</h2>
-<div>
-<ul>
-<li class="fragment"><p>Who are the players?</p></li>
-<li class="fragment"><p>Where are the decisions?</p></li>
-<li class="fragment"><p>What are the branches? What do they represent?</p></li>
-<li class="fragment"><p>What do the terminal nodes represent?</p></li>
-<li class="fragment"><p>Is this a <em>complete</em> representation of a game? What’s missing?</p></li>
-</ul>
-</div>
-</section>
-<section id="kidnapping-game-payoffs" class="slide level2">
-<h2>Kidnapping Game payoffs</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 54%">
-<col style="width: 20%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Outcome</strong></th>
-<th><span class="red"><strong>Guy</strong></span></th>
-<th><span class="blue"><strong>Vivica</strong></span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>No kidnapping</td>
-<td><span class="red">3</span></td>
-<td><span class="blue">5</span></td>
-</tr>
-<tr class="even">
-<td>Kidnapping, ransom paid, Orlando killed</td>
-<td><span class="red">4</span></td>
-<td><span class="blue">1</span></td>
-</tr>
-<tr class="odd">
-<td>Kidnapping, ransom paid, Orlando released</td>
-<td><span class="red">5</span></td>
-<td><span class="blue">3</span></td>
-</tr>
-<tr class="even">
-<td>Kidnapping, no ransom paid, Orlando killed</td>
-<td><span class="red">2</span></td>
-<td><span class="blue">2</span></td>
-</tr>
-<tr class="odd">
-<td>Kidnapping, no ransom paid, Orlando released</td>
-<td><span class="red">1</span></td>
-<td><span class="blue">4</span></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="kidnapping-game-tree-with-payoffs" class="slide level2">
-<h2>Kidnapping game tree with payoffs</h2>
-
-<img data-src="figures/kidnapgame.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="predictions" class="slide level2">
-<h2>Predictions?</h2>
-<p>Based on the extensive form game tree with payoffs, do you have any predictions for what strategies each player will choose?</p>
-</section>
-<section id="a-definition-of-an-extensive-form-game" class="slide level2">
-<h2>a Definition of an Extensive Form Game: <sup>1</sup></h2>
-<ul>
-<li><p>A collection of decision-makers, called <span class="hi">players</span> or <em>agents</em></p></li>
-<li><p>A set of <span class="hi">decision nodes</span>, each of which represents the information available to the player of that node</p></li>
-<li><p><span class="hi">Branches</span> from each node which represent the possible actions available to the players</p></li>
-<li><p>The entire game tree serves as the <span class="h">mapping</span> from intersections of players’ strategy profiles to the outcomes at each <span class="hi">terminal nodes</span></p></li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>for finite, perfect information games</p></li></ol></aside></section>
-<section id="strategies-in-extensive-form-games" class="slide level2">
-<h2>Strategies in Extensive Form Games</h2>
-<div>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Definition <sup>1</sup></strong></p>
-</div>
-<div class="callout-content">
-<p>A <span class="hi">strategy</span> for a player in a perfect-information game is a <em>list of choices</em>, one for <em>each decision node</em> of that player.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Warning</strong></p>
-</div>
-<div class="callout-content">
-<p>Be careful to distinguish between a <span class="hi"><em>strategy</em></span> and a single <em>action/choice</em></p>
-</div>
-</div>
-</div>
-<p>What’s the difference?</p>
-</div>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>Bonanno, pg 83</p></li></ol></aside></section>
-<section id="apply-this-definition-to-the-kidnapping-game" class="slide level2">
-<h2>Apply this definition to the kidnapping game:</h2>
-<ul>
-<li>How many choices does Guy make?</li>
-</ul>
-<div class="fragment fade-in">
-<p>3</p>
-</div>
-<ul>
-<li>Vivica?</li>
-</ul>
-<div class="fragment fade-in">
-<p>1</p>
-</div>
-<ul>
-<li>Write out a strategy list for each player:</li>
-</ul>
-</section>
-<section id="write-out-a-strategy-for-each-player" class="slide level2">
-<h2>Write out a strategy for each player</h2>
-<div>
-<p><em><span class="h">Guy</span></em>:</p>
-<ul>
-<li class="fragment"><p><strong><em>{</em></strong><span class="hii"><em>Kidnap</em></span><strong><em>,</em></strong> <span class="hii"><em>Kill</em></span> if ransom paid<strong><em>,</em></strong> <span class="hii"><em>Don’t Kill</em></span> if no ransom paid<strong><em>}</em></strong> is <em>one</em> strategy</p>
-<ul>
-<li class="fragment"><p>Guy has <span class="math inline">\(8\)</span> total strategies:</p></li>
-<li class="fragment"><p><strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Don’t</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Don’t</em></span>}, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Don’t</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong></p></li>
-</ul></li>
-</ul>
-<p><em><span class="h">Vivica</span></em>:</p>
-<ul>
-<li class="fragment">Only two strategies: <strong><em>{</em></strong><span class="hii"><em>Pay</em></span> the ransom<strong><em>}</em></strong>, or <strong><em>{</em></strong><span class="hii"><em>Don’t</em></span> pay<strong><em>}</em></strong></li>
-</ul>
-</div>
-</section>
-<section id="letting-nature-take-the-wheel" class="slide level2">
-<h2>Letting Nature take the wheel</h2>
-<p>One way to represent risk or uncertainty is to represent <strong>Nature</strong> as a ‘player’.</p>
-
-<img data-src="figures/doubleornothing.png" class="r-stretch quarto-figure-center"><p class="caption">figures/doubleornothing.png</p></section></section>
+</section></section>
 <section>
-<section id="backwards-induction" class="title-slide slide level1 center">
-<h1>Backwards Induction</h1>
+<section id="syllabus-document" class="title-slide slide level1 center">
+<h1>Syllabus Document</h1>
 
 </section>
-<section id="the-smoking-decision" class="slide level2">
-<h2>The smoking decision</h2>
-
-<img data-src="figures/fig3.2.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.2.png</p></section>
-<section id="the-smoking-game" class="slide level2">
-<h2>The smoking <em>game</em></h2>
-
-<img data-src="figures/fig3.3.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.3.png</p></section>
-<section id="pruning-branches" class="slide level2">
-<h2>‘Pruning’ branches</h2>
-
-<img data-src="figures/fig3.4.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.4.png</p></section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-
-<img data-src="figures/fig3.5.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.5.png</p></section>
-<section id="backwards-induction-defined" class="slide level2">
-<h2>Backwards Induction defined</h2>
-<p>The method of looking at decisions in the future to decide what to do now is called <span class="h">Backwards Induction</span> or <span class="h">Rollback</span></p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Definition <sup>1</sup></strong></p>
-</div>
-<div class="callout-content">
-<p>When all players do <em>rollback analysis</em> to choose their optimal strategies, we call this set of strategies the <span class="h"><em>rollback equilibrium</em></span><sup>2</sup> of the game; the outcome that arises from playing these strategies is the <span class="hi"><em>rollback equilibrium outcome</em></span></p>
-</div>
-</div>
-</div>
-<aside><ol class="aside-footnotes"><li id="fn4"><p>Dixit et al, pg 56</p></li><li id="fn5"><p>aka subgame perfect equilibrium</p></li></ol></aside></section>
-<section id="group-exercise" class="slide level2">
-<h2>Group Exercise:</h2>
-<p>Consider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.</p>
-<ol type="1">
-<li><p><em>Draw the extensive form game tree complete with all payoff for both teams.</em></p></li>
-<li><p><em>How many total strategies are there for team 1?</em></p></li>
-<li><p><em>Use pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?</em></p></li>
-</ol>
-</section>
-<section id="adding-more-players" class="slide level2">
-<h2>Adding more players</h2>
-<p>We can start to add more complexity with more than two players</p>
-</section>
-<section id="player-planting-game" class="slide level2">
-<h2>3-player planting game</h2>
-<div>
+<section id="syllabus" class="slide level2">
+<h2>Syllabus</h2>
+<p><embed data-src="Syllabus/main.pdf"></p>
+<div class="{incremental}">
 <ul>
-<li class="fragment"><p><span class="hi">Emily</span>, <span class="hi">Nina</span>, and <span class="hi">Talia</span> are roommates who want to get a start on their communal garden.</p></li>
-<li class="fragment"><p>They like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.</p></li>
-<li class="fragment"><p><strong>2 or 3 people</strong> working is enough to keep the garden healthy, but if <strong>1 or 0</strong> work, then the garden will die.</p></li>
+<li>Most up to date version on github</li>
+<li>I will also upload to Canvas</li>
+<li>print, sign, and upload as your first assignment</li>
 </ul>
 </div>
-</section>
-<section id="planting-game-payoffs" class="slide level2">
-<h2>Planting Game payoffs</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>outcome:</th>
-<th>utlity:</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>I don’t contribute, but garden lives</td>
-<td>4</td>
-</tr>
-<tr class="even">
-<td>I contribute, and get garden.</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>I don’t contribute, and garden dies</td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>I contribute, but garden dies</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="planding-game-tree" class="slide level2">
-<h2>Planding Game Tree</h2>
+</section></section>
+<section>
+<section id="class-expectations" class="title-slide slide level1 center">
+<h1>Class Expectations</h1>
 
-<img data-src="figures/fig3.6.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.6.png</p></section>
-<section id="equilibrium-path-of-play" class="slide level2">
-<h2>Equilibrium Path of Play</h2>
-<div>
-<p>Note that there is one continuous path we traced from the initial node to a final equilibrium outcome.</p>
-<p>However, we couldn’t have gotten their without the other arrows paths <strong>even though they are never reached</strong> in equilibrium.</p>
-<p>Recall that a <span class="hi">strategy</span> is a collection of choices at <strong>every</strong> decision node.</p>
-</div>
 </section>
-<section id="equilibrium-strategies" class="slide level2">
-<h2>Equilibrium Strategies</h2>
-<p>Even though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:</p>
-<blockquote>
-<p>“Nina’s <strong>strategy</strong> in the rollback equilibrium is { <span class="hii"><em>Don’t Contribute</em></span> at <span class="hi">b</span>, <span class="hii"><em>Contribute</em></span> at <span class="hi">c</span> }”.</p>
-</blockquote>
+<section id="prerequisites" class="slide level2">
+<h2>Prerequisites</h2>
 <ul>
-<li>To make it even shorter, let’s call this strategy <span class="hii">DC</span>.</li>
-</ul>
-</section>
-<section id="how-many-strategies-does-talia-have" class="slide level2">
-<h2>How many strategies does Talia have?</h2>
-<div>
+<li><p><strong>Courses:</strong> EC201 <em>or</em> EC202</p></li>
+<li><p><strong>Knowledge:</strong> This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.</p>
 <ul>
-<li class="fragment"><p>CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD</p></li>
-<li class="fragment"><p>16 total strategies</p></li>
-</ul>
-</div>
-</section>
-<section id="rollback-equilibrium-strategies" class="slide level2">
-<h2>Rollback Equilibrium Strategies</h2>
-<p>The equilibrium is:</p>
-<ul>
-<li>{ <span class="hi">D</span><sup>1</sup>, <span class="hi">DC</span><sup>2</sup>, <span class="hi">DCCD</span><sup>3</sup> }</li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn6"><p>Emily</p></li><li id="fn7"><p>Nina</p></li><li id="fn8"><p>Talia</p></li></ol></aside></section>
-<section id="adding-more-moves" class="slide level2">
-<h2>Adding More Moves</h2>
-<p><span class="hi align-center">Even a simple game get complicated fast</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="figures/fig3.7.png" class="quarto-figure quarto-figure-center" width="600" height="500"></p>
-</figure>
-</div>
-</section>
-<section id="tic-tac-toe" class="slide level2">
-<h2>Tic-Tac-Toe</h2>
-<ul>
-<li><p>Even though it looks complicated, the main branches are really just copies of each other</p></li>
-<li><p>Most people probably figure out the rollback equilibrium after playing it enough</p></li>
-<li><p>Insert relevant xkcd here: <a href="https://xkcd.com/832/">https://xkcd.com/832/</a></p></li>
-</ul>
-</section>
-<section id="chess" class="slide level2">
-<h2>Chess</h2>
-<ul>
-<li><p>What about more complicated games like chess?</p>
-<ul>
-<li>technically rollback solvable, but with <span class="math inline">\(10^{120}\)</span> possible moves, it hasn’t been solved by either human or machine</li>
+<li>There are great free resources out there like <a href="https://www.khanacademy.org/math/algebra">Khan Academy</a>, but always feel free to reach out for help or other suggestions.</li>
 </ul></li>
-<li><p>Players of complicated sequential games often implement some <span class="hi">intermediate valuation function</span> to assign payoffs to non-terminal nodes.</p></li>
+</ul>
+</section>
+<section id="student-expectations" class="slide level2">
+<h2>Student Expectations</h2>
+<div>
+<ul>
+<li class="fragment"><span class="hii">Come to class</span>
+<ul>
+<li class="fragment">Pay attention to lectures, take notes, review topics at home</li>
+<li class="fragment">Participate in group work &amp; activities</li>
+<li class="fragment"><span class="hi">Ask questions!</span></li>
+</ul></li>
+<li class="fragment"><span class="hii">Communicate respectfully</span>
+<ul>
+<li class="fragment">With your classmates</li>
+<li class="fragment">With me &amp; grader</li>
+</ul></li>
+<li class="fragment"><span class="hii">Have academic integrity</span> <sup>1</sup>
+<ul>
+<li class="fragment">Verify that all submitted work is your own</li>
+<li class="fragment">Provide sources for <em>all</em> information that you found outside this class</li>
+</ul></li>
+</ul>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>see UO’s <a href="https://teaching.uoregon.edu/resources/academic-integrity-uo">Student Conduct Code</a></p></li></ol></aside></section>
+<section id="instructor-expectations" class="slide level2">
+<h2>Instructor Expectations</h2>
+<ul>
+<li><span class="h">Provide course material</span>
+<ul>
+<li><span class="hi">Lectures</span></li>
+<li><span class="hi">In-class activities</span></li>
+</ul></li>
+<li><span class="h">Communicate administration details via Canvas</span>
+<ul>
+<li><span class="hi">Deadlines</span></li>
+<li><span class="hi">Exam dates</span>
+<ul>
+<li>See UO online schedule for Final Exam day</li>
+</ul></li>
+</ul></li>
 </ul>
 </section></section>
 <section>
-<section id="welfare-and-efficiency" class="title-slide slide level1 center">
-<h1>Welfare and Efficiency</h1>
-<div>
-<p>What are the <strong>good</strong> outcomes in the planting game?</p>
-<p>Can we rank outcomes by collective welfare?</p>
-</div>
-</section>
-<section class="slide level2">
+<section id="admin-stuff" class="title-slide slide level1 center">
+<h1>Admin Stuff</h1>
 
-
-<img data-src="figures/fig3.6.png" class="r-stretch"></section>
-<section id="pareto-dominance" class="slide level2">
-<h2>Pareto Dominance</h2>
-<p>Pareto optimality (or efficiency) is econonomists’ best shot at coming up with a ranking of which outcomes are objectively ‘better’</p>
-<ul>
-<li><p>For any two outcomes (🎉, 🎊), 🎉 is <span class="hi">Pareto dominated</span> by 🎊 if both:</p>
-<ol type="1">
-<li><p>No one strictly prefers 🎉 to 🎊 - U<sub>👤</sub>(🎊) <span class="math inline">\(\geq\)</span> U<sub>👤</sub>(🎉) <span class="math inline">\(\forall 👤 \in \{ 🙍, 🧑, 💆, 🧖, 🧑, 😺, ...\}\)</span></p></li>
-<li><p>At least one person strictly<sub>🎉</sub> prefers 🎉 to 🎊 - <span class="math inline">\(\exists 👤\)</span> such that U<sub>👤</sub>(🎊) <span class="math inline">\(&gt;\)</span> U<sub>👤</sub>(🎉)</p></li>
-</ol></li>
-</ul>
 </section>
-<section id="pareto-improvement" class="slide level2">
-<h2>Pareto Improvement</h2>
-<p>The move from a policy y to an alternative policy x is a <span class="hi">Pareto improvement</span> if x Pareto dominates y.</p>
-<ul>
-<li><p>Such a policy change should reasonably be seen as unambiguously good</p></li>
-<li><p>Another perspective is that <em>no-one would veto</em> a pareto improvement</p></li>
-</ul>
-</section>
-<section id="pareto-efficiency" class="slide level2">
-<h2>Pareto Efficiency</h2>
-<p>An outcome is <span class="h">Pareto Efficient</span> (Optimal) if no other outcome Pareto dominates it.</p>
-<p>An outcome is <span class="hi">Pareto Infficient</span> if at least one other outcome Pareto dominates it.</p>
-</section>
-<section id="ranking-the-planting-payoffs" class="slide level2">
-<h2>Ranking the Planting Payoffs</h2>
-<p>Compare (4,3,3) to (1,2,2)</p>
-<ul>
-<li>Which one is Pareto dominating?</li>
-</ul>
-</section>
-<section id="ranking-the-planting-payoffs-1" class="slide level2">
-<h2>Ranking the Planting Payoffs</h2>
-<p>Now compare (4,3,3) to (3,4,3) or (3,3,4)</p>
-<ul>
-<li>Which one is Pareto dominating?</li>
-</ul>
-<p>Is the rollback equilibrium outcome a <em>Pareto efficient</em> one?</p>
-</section>
-<section id="discussion-efficiency-vs-other-social-comparisons" class="slide level2">
-<h2>Discussion: Efficiency vs other social comparisons</h2>
+<section id="problem-sets" class="slide level2">
+<h2>Problem Sets</h2>
+<p>You will practice what we learn in class on independently.</p>
+<p>Each homework assignment will be a few problems that will be similar to what you will see on exams.</p>
 <div>
 <ul>
-<li class="fragment"><p>How useful is Pareto Efficiency in the real world?</p></li>
-<li class="fragment"><p>How else could we group outcomes?</p></li>
-<li class="fragment"><p>We might address this later in the class with what is known as <em>Cooperative Game Theory</em></p></li>
+<li class="fragment"><p>Learning something new takes practice, so these are designed to help you keep up with the concepts</p></li>
+<li class="fragment"><p>You will be graded not only on whether you got a certain answer, but also more importantly on <em>how you communicate your understanding</em></p>
+<ul>
+<li class="fragment">See Canvas rubric for more info</li>
+</ul></li>
 </ul>
 </div>
 </section>
-<section class="slide level2">
+<section id="class-activities" class="slide level2">
+<h2>Class Activities</h2>
+<p>You will break into groups to work collaboratively on different activities</p>
+<div>
+<ul>
+<li class="fragment">Sometimes I will ask you to play the types of games we discuss in lectures
+<ul>
+<li class="fragment">Record the strategies you chose and the outcomes</li>
+<li class="fragment">Reflect on how you played the game</li>
+<li class="fragment">Relate it to lecture concepts</li>
+</ul></li>
+</ul>
+</div>
+<aside class="notes">
+<ul>
+<li>I’m still working out how best to implement</li>
+<li>this is how you participate, records attendance on activity days</li>
+<li>hopefully lets you experience first-had the things we learn</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exams" class="slide level2">
+<h2>Exams</h2>
+<p>You will demonstrate how well you understand concepts individually on a <span class="hi">midterm</span> and a <span class="hi">final</span> exam</p>
+<div>
+<ul>
+<li class="fragment"><span class="hi">Midterm</span>
+<ul>
+<li class="fragment">sometime around week 5 (Oct.&nbsp;28th or 30th)</li>
+<li class="fragment">Will test you on definitions, solution concepts, and apply them to critical thinking problems</li>
+</ul></li>
+<li class="fragment"><span class="hi">Final</span>
+<ul>
+<li class="fragment">finals week of December 9 (check duckweb for specific date)</li>
+<li class="fragment">Covers everything we learned in the quarter, with more focus on concepts from the 2nd half</li>
+</ul></li>
+</ul>
+</div>
+<aside class="notes">
+<ul>
+<li>Dept policy is 65% As &amp; Bs</li>
+<li>expect exams to be difficult</li>
+<li>Best way to prepare is lots of practice</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="grading" class="slide level2">
+<h2>Grading</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><span class="hi">Problem Sets</span></p>
+<p><span class="hi">In-class Activities</span></p>
+<p><span class="hi">Midterm</span></p>
+<p><span class="hi">Final</span></p>
+</div><div class="column" style="width:40%;">
+<p>30%</p>
+<p>10%</p>
+<p>30%</p>
+<p>30%</p>
+</div></div>
+</section>
+<section id="policies" class="slide level2">
+<h2>Policies</h2>
+<div>
+<ul>
+<li class="fragment"><span class="h">No make-up exams!</span>
+<ul>
+<li class="fragment">if you absolutely cannot attend midterm, you can add its weight to final exam</li>
+</ul></li>
+<li class="fragment">Problem set keys posted automatically after deadline
+<ul>
+<li class="fragment">-&gt; no late submissions accepted</li>
+</ul></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="university-policies" class="title-slide slide level1 center">
+<h1>University Policies</h1>
 
+</section>
+<section id="campus-resources" class="slide level2">
+<h2>Campus Resources</h2>
+<ul>
+<li><span class="hi">Accessible Education Center</span>
+<ul>
+<li><a href="https://aec.uoregon.edu/">aec.uoregon.edu</a></li>
+</ul></li>
+<li><span class="hi">Support for vicitms of assault, harassment, stalking</span>
+<ul>
+<li><a href="https://safe.uoregon.edu/">safe.uoregon.edu</a></li>
+<li>24/7 hotline: (+1) 541-346-SAFE (7244)</li>
+</ul></li>
+<li><span class="hi">Health and Wellbeing</span>
+<ul>
+<li><a href="https://counseling.uoregon.edu">University Counseling Services</a></li>
+<li><a href="https://basicneeds.uoregon.edu/">Basic Needs Program</a></li>
+</ul></li>
+<li><span class="hi">Religious Observance Accomadations</span>
+<ul>
+<li><a href="https://provost.uoregon.edu/religious-observance-accommodations-policy">Provost website</a></li>
+</ul></li>
+</ul>
+
+<aside class="notes">
+<ul>
+<li>I am here to support you, but not trained or equipped for emergencies</li>
+<li>I will not ask for reasons you cannot attend class or exams</li>
+<li>I am not a mandated reporter: will only pass on info if you request</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p>These resources and others are also included in the course syllabus</p>
+</div></aside></section>
+<section id="canvas-and-schedule" class="slide level2">
+<h2>Canvas and Schedule</h2>
+<p><a href="https://canvas.uoregon.edu/courses/233504">https://canvas.uoregon.edu/courses/233504</a></p>
 
 <div class="quarto-auto-generated-content">
 <p><img src="UOSignature-356.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>EC327 | Lecture 2 | Sequential Games</p>
+<p>EC327 | Lecture 0| Syllabus</p>
 </div>
 </div>
 </section></section>
