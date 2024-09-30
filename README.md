@@ -39,13 +39,13 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 ## Lectures
 
-[01 - Introduction](https://dyasui.github.io/dyasui/EC327/Slides/01Intro/01-main.html)
+[01 - Introduction](https://dyasui.github.io/EC327/Slides/01Intro/01-main.html)
 
-[02 - Sequential Games](https://dyasui.github.io/dyasui/EC327/Slides/02SequentialGames/02-main.html)
+[02 - Sequential Games](https://dyasui.github.io/EC327/Slides/02SequentialGames/02-main.html)
 
-[03 - Simultaneous Games](https://dyasui.github.io/dyasui/EC327/Slides/03SimultaneousGames/beamer/main.html)
+[03 - Simultaneous Games](https://dyasui.github.io/EC327/Slides/03SimultaneousGames/beamer/main.html)
 
-[04 - Information Sets](https://dyasui.github.io/dyasui/EC327/Slides/04InfoSets/main.html)
+[04 - Information Sets](https://dyasui.github.io/EC327/Slides/04InfoSets/main.html)
 
 [05 - Uncertainty]()
 
@@ -65,13 +65,13 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 ## Assignments 
 
-[Homework 1](https://dyasui.github.io/dyasui/EC327/Homework/assignment1/main.pdf)
+[Homework 1](https://dyasui.github.io/EC327/Homework/assignment1/main.pdf)
 
-[Homework 2](https://dyasui.github.io/dyasui/EC327/Homework/assignment2/main.pdf)
+[Homework 2](https://dyasui.github.io/EC327/Homework/assignment2/main.pdf)
 
-[Homework 3](https://dyasui.github.io/dyasui/EC327/Homework/assignment3/main.pdf)
+[Homework 3](https://dyasui.github.io/EC327/Homework/assignment3/main.pdf)
 
-[Homework 4](https://dyasui.github.io/dyasui/EC327/Homework/assignment4/main.pdf)
+[Homework 4](https://dyasui.github.io/EC327/Homework/assignment4/main.pdf)
 
 ---
 
