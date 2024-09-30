@@ -83,118 +83,167 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="what-is-a-game-of-strategy" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-a-game-of-strategy">What is a <em>game</em> of strategy?</h2>
+<section id="taxonomy-of-games" class="level1">
+<h1>Taxonomy of Games</h1>
+<section id="general-categorical-terms" class="level2">
+<h2 class="anchored" data-anchor-id="general-categorical-terms">General Categorical Terms</h2>
+<ul>
+<li><p><span class="h">Sequential</span> or <span class="h">Simultaneous</span>?</p></li>
+<li><p><span class="h">Zero-sum</span> or not</p></li>
+<li><p><span class="h">Perfect</span> or <span class="h">Imperfect</span> information?</p>
+<ul>
+<li>is info <span class="hi">symmetric</span> or <span class="hi">asymmetric</span>?</li>
+</ul></li>
+<li><p><span class="h">One-shot</span> or <span class="h">Repeated</span>?</p></li>
+<li><p>‘<span class="h">Noncooperative</span>’ or ‘<span class="h">Cooperative</span>’?</p></li>
+</ul>
+<hr>
+</section>
+<section id="sequential-vs.-simultaneous" class="level2">
+<h2 class="anchored" data-anchor-id="sequential-vs.-simultaneous">Sequential vs.&nbsp;Simultaneous</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><span class="h">Sequential</span> Games</p>
+<ul>
+<li><p>players make their moves one after the other</p></li>
+<li><p><span class="hi">Chapter</span> 3</p></li>
+<li><p><span class="hi">Visual tool</span>: <em>game trees</em></p></li>
+<li><p><span class="hi">Solution Method</span>: <em>backwards induction</em></p></li>
+</ul>
+</div><p>. . .</p><div class="column" style="width:50%;">
+<p><span class="h">Simultaneous</span> Games</p>
+<ul>
+<li><p>players make their moves at the same time</p></li>
+<li><p><span class="hi">Chapter</span> 4 &amp; 5</p></li>
+<li><p><span class="hi">Visual tool</span>: <em>payoff tables</em></p></li>
+<li><p><span class="hi">Solution Method</span>: <em>best responses</em>, deletion of <em>dominated strats</em></p></li>
+</ul>
+</div>
+</div>
+<hr>
+<section id="sequential-games" class="level3">
+<h3 class="anchored" data-anchor-id="sequential-games">Sequential Games</h3>
+<p>In <span class="hii">sequential</span> games, you have to think about how what you do <span class="hi"><em>now</em></span> will affect what your opponent will do in the <span class="hi"><em>future</em></span>.</p>
+<p>. . .</p>
 <blockquote class="blockquote">
-<p>Game theory: It’s not all fun and games!</p>
+<p>This hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.</p>
+</blockquote>
+<p>. . .</p>
+<ul>
+<li>We’ll see that sometimes <span class="hii">moving first</span> can be adventageous</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>While other times it’s best to <span class="hii">wait and see</span> what someone else does</li>
+</ul>
+<hr>
+</section>
+<section id="simultaneous-games" class="level3">
+<h3 class="anchored" data-anchor-id="simultaneous-games">Simultaneous Games</h3>
+<p>In <span class="hii">simultaneous</span> games, you have to figure out what to do <span class="hi"><em>now</em></span> while also thinking about what your opponent is thinking you will will do <span class="hi"><em>now</em></span>.</p>
+<p>. . .</p>
+<blockquote class="blockquote">
+<p>This circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4.</p>
 </blockquote>
 <hr>
 </section>
-<section id="examples-of-strategic-games" class="level2">
-<h2 class="anchored" data-anchor-id="examples-of-strategic-games">Examples of <em>strategic games</em>:</h2>
-<p>Where in the goal should you kick a penaly shot?</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="figures/PenaltyKick.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
-</figure>
+</section>
+<section id="conflicting-vs.-common-interests" class="level2">
+<h2 class="anchored" data-anchor-id="conflicting-vs.-common-interests">Conflicting vs.&nbsp;Common Interests?</h2>
+<p>Many games you are familiar with have distince <em>winners</em> and <em>losers</em>.</p>
+<p>. . .</p>
+<p>But in other types of games, it’s possible for everyone to come out ahead.</p>
+<hr>
+<section id="zero-sum-or-constant-sum-games" class="level3">
+<h3 class="anchored" data-anchor-id="zero-sum-or-constant-sum-games">Zero-sum (or constant-sum) Games</h3>
+<div class="incremental">
+<p>When the <em>total payoffs of all players sum to 0</em> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<ul class="incremental">
+<li><p>i.e, one player’s gain is another player’s loss</p></li>
+<li><p>Examples: NCAA Football Championship, Scramble for Africa (technically <em>constant</em>-sum)</p></li>
+</ul>
+<p>Not all games are fixed or zero sum;</p>
+<ul class="incremental">
+<li>Examples: Hiring a tutor (mutual gains), International Trade, etc.</li>
+</ul>
 </div>
 <hr>
 </section>
-<section id="examples-of-strategic-games-1" class="level2">
-<h2 class="anchored" data-anchor-id="examples-of-strategic-games-1">Examples of <em>strategic games</em>:</h2>
-<p>Where in the goal should you kick a penaly shot?</p>
+</section>
+<section id="are-strategic-interactions-repeated" class="level2">
+<h2 class="anchored" data-anchor-id="are-strategic-interactions-repeated">Are strategic interactions Repeated?</h2>
+<p>A <span class="hi">one-shot</span> game is played only once by the same set of players.</p>
 <div class="incremental">
 <ul class="incremental">
-<li>Left, Right, Center? Up or Down?</li>
-<li>Is there one best place to kick?</li>
-<li>What if you always choose top right corner?</li>
-<li>Besides soccer;
+<li><p>If you’ve never played against someone before, you can’t form any <span class="hii">beliefs</span> about them</p></li>
+<li><p>Secrecy or surprise are potentially good strategies in these games</p></li>
+</ul>
+</div>
+<p>A game is called <span class="hi">repeated</span> if the same players play it with each other many times.</p>
+<div class="incremental">
 <ul class="incremental">
-<li>Which offensive play in football?</li>
-<li>Where to serve in a tennis court?</li>
+<li>If you know your opponent, then your <span class="hii">reputation</span> becomes valuable if you want to cooperate</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="full-or-equal-information" class="level2">
+<h2 class="anchored" data-anchor-id="full-or-equal-information">Full or Equal Information</h2>
+<p>How much does each player know when they decide?</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p><span class="h">Perfect Information</span>: when players know all previous moves and external circumstances</p>
+<ul class="incremental">
+<li>players may have <span class="hi"><em>imperfect info</em></span>; uncertainty about the state of the world, previous’ moves, or other player’s ‘type’</li>
+</ul></li>
+<li><p><span class="h">Asymmetric Info</span>: when one player has access to information that other players do not</p>
+<ul class="incremental">
+<li><p>Examples: hand in poker, used car salesmen</p></li>
+<li><p>Topics: Signaling, Screening</p></li>
 </ul></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="examples-of-strategic-games-2" class="level2">
-<h2 class="anchored" data-anchor-id="examples-of-strategic-games-2">Examples of <em>strategic games</em>:</h2>
-<p>If 100% of your grade in this class is decided by a <em>curve</em>, how much should you study?</p>
-<div class="incremental">
-<ul class="incremental">
-<li>If you can all agree to take a chill quarter and not study, you could all get A’s</li>
-<li>But what if there’s at least one try-hard?</li>
-<li>Now how much should you study, even if you already promised you wouldn’t?</li>
-<li>Do you think everyone else will keep their promise?</li>
+<section id="can-agreements-be-enforced" class="level2">
+<h2 class="anchored" data-anchor-id="can-agreements-be-enforced">Can agreements be Enforced?</h2>
+<ul>
+<li><p>Self-interest and common good can often conflict.</p></li>
+<li><p>In these situations, players need to form agreements in order to achieve cooperative outcomes.</p></li>
 </ul>
-</div>
-<hr>
-</section>
-<section id="examples-of-strategic-games-3" class="level2">
-<h2 class="anchored" data-anchor-id="examples-of-strategic-games-3">Examples of <em>strategic games</em>:</h2>
-<p>Should you give an engagement ring to the person you want to marry?</p>
-<div class="incremental">
-<ul class="incremental">
-<li>Why buy an expensive trinket when you could save the money for a house, etc?</li>
-<li>Does it matter if your recently engaged friends gave (or received) engagement rings?</li>
-<li>Does your paycheck vs.&nbsp;how much your fiancee makes matter?</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="examples-of-strategic-games-4" class="level2">
-<h2 class="anchored" data-anchor-id="examples-of-strategic-games-4">Examples of <em>strategic games</em>:</h2>
-<p>In economics, why do we say there is a <strong><em>law of one price</em></strong>?</p>
-<div class="incremental">
+<p>. . .</p>
 <blockquote class="blockquote">
-<p>Imagine I set up a competing Starbucks franchise in the EMU</p>
+<p>But can people actually be held to those agreements?</p>
+</blockquote>
+<p>For example:</p>
+<ul>
+<li><p>Paris Climate accords; who polices nation-state’s carbon reductions?</p></li>
+<li><p>Public goods; why do we need the Internal Revenue Service?</p></li>
+</ul>
+<hr>
+</section>
+<section id="can-agreements-be-enforced-1" class="level2">
+<h2 class="anchored" data-anchor-id="can-agreements-be-enforced-1">Can agreements be Enforced?</h2>
+<p>Two broad categories of the field are <span class="h">cooperative</span> game theory and <span class="h">noncooperative</span> game theory <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<blockquote class="blockquote">
+<p><span class="h">Cooperative</span> games are those in which agreements are enforceable</p>
 </blockquote>
 <blockquote class="blockquote">
-<ul class="incremental">
-<li>If they sell PSL for $6.50, what happens if I sell them for $6.49?</li>
-<li>What if I sell for $6.51?</li>
-</ul>
+<p>In <span class="h">Noncooperative</span> games, no-one can be forced not to act in their own self-interest</p>
 </blockquote>
-<p>This has been your EC201 review!</p>
-</div>
-<hr>
-</section>
-<section id="examples-of-strategic-games-5" class="level2">
-<h2 class="anchored" data-anchor-id="examples-of-strategic-games-5">Examples of <em>strategic games</em>:</h2>
-<p>Should the US try to defeat its rivals through <code>global thermonuclear war</code>?</p>
-<div class="incremental">
-<ul class="incremental">
-<li>Why did the US and USSR amass massive nuclear stockpiles?</li>
-<li>Why has a nuclear weapon never been used in anger since Nagasaki?</li>
-<li>Are anti-ballistic missiles destabilizing to international relations?</li>
-</ul>
-</div>
-<hr>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/WargamesList.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<hr>
-</section>
-<section id="examples-of-strategic-games-6" class="level2">
-<h2 class="anchored" data-anchor-id="examples-of-strategic-games-6">Examples of <em>strategic games</em>:</h2>
-<p>What do these examples have in common?</p>
-<div class="notes">
-<ul>
-<li>ask class for ideas</li>
-<li>point out the methods of thinking through these questions</li>
-<li>all can be answered with ‘it depends’
-<ul>
-<li>specifically it depends on the actions (and thoughts) of others</li>
-</ul></li>
-</ul>
-</div>
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>or sum to some constant<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>but if you ask real game theorists, they will probably tell you these names are misleading<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

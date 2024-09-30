@@ -114,17 +114,6 @@ window.Quarto = {
 
 <section id="what-is-a-game-definitions" class="level1">
 <h1>What is a Game? Definitions</h1>
-<section id="examples-of-some-questions" class="level2">
-<h2 class="anchored" data-anchor-id="examples-of-some-questions">Examples of some questions:</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>When should the Ducks play a running play or passing play?</li>
-<li>Why is a pdf textbook so expensive?!</li>
-<li>Why did the US and USSR adopt Mutually Assured Destruction?</li>
-<li>Why do people give engagement rings?</li>
-</ul>
-</div>
-</section>
 <section id="what-do-all-these-questions-have-in-common" class="level2">
 <h2 class="anchored" data-anchor-id="what-do-all-these-questions-have-in-common">What do all these questions have in common?</h2>
 <div class="incremental">
@@ -231,6 +220,33 @@ window.Quarto = {
 </div>
 <hr>
 </section>
+<section id="payoffs" class="level2">
+<h2 class="anchored" data-anchor-id="payoffs">Payoffs</h2>
+<p>What is a player’s goal in a game?</p>
+<blockquote class="blockquote">
+<p>To maximize their expected <span class="h">payoff</span></p>
+</blockquote>
+<p>. . .</p>
+<ul>
+<li><p>A payoff can represent many things.</p></li>
+<li><p>But for simplicity we will abstract them down to a single numerical value.</p></li>
+<li><p>A payoff doesn’t need to be abstract; it could be dollars</p></li>
+</ul>
+<hr>
+</section>
+<section id="payoffs-1" class="level2">
+<h2 class="anchored" data-anchor-id="payoffs-1">Payoffs</h2>
+<p>What is true of payoffs?</p>
+<blockquote class="blockquote">
+<p>Higher numbers are more preferred</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>They are <span class="hi">Ordinal</span>; i.e., the relative units don’t matter <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>They capture <em>everything</em> in a game that a player cares about</p>
+</blockquote>
+</section>
 <section id="strategic-choice-vs.-other-types-of-choices" class="level2">
 <h2 class="anchored" data-anchor-id="strategic-choice-vs.-other-types-of-choices"><em>Strategic</em> Choice vs.&nbsp;other types of choices</h2>
 <div class="incremental">
@@ -256,30 +272,30 @@ window.Quarto = {
 <thead>
 <tr class="header">
 <th>My choice</th>
-<th style="text-align: center;">My friends’ choice</th>
-<th style="text-align: center;">My utility</th>
+<th>My friends’ choice</th>
+<th>My payoff</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Duck’s game</td>
-<td style="text-align: center;">Duck’s game</td>
-<td style="text-align: center;">3</td>
+<td>Duck’s game</td>
+<td>3</td>
 </tr>
 <tr class="even">
 <td>Duck’s game</td>
-<td style="text-align: center;">Stay home</td>
-<td style="text-align: center;">2</td>
+<td>Stay home</td>
+<td>2</td>
 </tr>
 <tr class="odd">
 <td>Stay home</td>
-<td style="text-align: center;">Duck’s game</td>
-<td style="text-align: center;">1</td>
+<td>Duck’s game</td>
+<td>1</td>
 </tr>
 <tr class="even">
 <td>Stay home</td>
-<td style="text-align: center;">Stay home</td>
-<td style="text-align: center;">2</td>
+<td>Stay home</td>
+<td>2</td>
 </tr>
 </tbody>
 </table>
@@ -288,77 +304,20 @@ window.Quarto = {
 </ul>
 </div>
 </section>
+<section id="common-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="common-knowledge">Common Knowledge</h2>
+<p>Our theories will have to make assumptions about what players <strong>know</strong>.</p>
+<p>All of our games will at least assume that <span class="h">all players know all of the rules</span>.</p>
 </section>
-<section id="taxonomy-of-games" class="level1">
-<h1>Taxonomy of Games</h1>
-<section id="general-categories" class="level2">
-<h2 class="anchored" data-anchor-id="general-categories">General Categories</h2>
+<section id="rules-of-the-game" class="level2">
+<h2 class="anchored" data-anchor-id="rules-of-the-game">Rules of the Game</h2>
+<p>We will assume that all players know:</p>
 <ul>
-<li><p><span class="h">Sequential</span> or <span class="h">Simultaneous</span>?</p></li>
-<li><p><span class="h">Zero-sum</span> or not</p></li>
-<li><p><span class="h">Perfect</span> or <span class="h">Imperfect</span> information?</p>
-<ul>
-<li>is info <span class="hi">symmetric</span> or <span class="hi">asymmetric</span>?</li>
-</ul></li>
-<li><p><span class="h">One-shot</span> or <span class="h">Repeated</span>?</p></li>
-<li><p>‘<span class="h">Noncooperative</span>’ or ‘<span class="h">Cooperative</span>’?</p></li>
+<li><p>Who else is playing,</p></li>
+<li><p>all of the strategies each player could <em>potentially</em> choose,</p></li>
+<li><p>everyone’s payoffs for all possible combinations of strategies by all players,</p></li>
+<li><p>and that everyone else is maximizing their payoffs</p></li>
 </ul>
-<hr>
-</section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><span class="h">Sequential</span> Games</p>
-<ul>
-<li><p>players make their moves one after the other</p></li>
-<li><p><span class="hi">Chapter</span> 3</p></li>
-<li><p><span class="hi">Visual tool</span>: <em>game trees</em></p></li>
-<li><p><span class="hi">Solution Method</span>: <em>backwards induction</em></p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><span class="h">Simultaneous</span> Games</p>
-<ul>
-<li><p>players make their moves at the same time</p></li>
-<li><p><span class="hi">Chapter</span> 4 &amp; 5</p></li>
-<li><p><span class="hi">Visual tool</span>: <em>payoff tables</em></p></li>
-<li><p><span class="hi">Solution Method</span>: <em>best responses</em>, deletion of <em>dominated strats</em></p></li>
-</ul>
-</div>
-</div>
-<hr>
-</section>
-<section id="zero-sum-games" class="level2">
-<h2 class="anchored" data-anchor-id="zero-sum-games">Zero-sum games</h2>
-<div class="incremental">
-<p>When the <em>total payoffs of all players sum to 0</em></p>
-<ul class="incremental">
-<li><p>i.e, one player’s gain is another player’s loss</p></li>
-<li><p>Examples: NCAA Football Championship, Scramble for Africa (technically <em>constant</em>-sum)</p></li>
-</ul>
-<p>Not all games are fixed or zero sum;</p>
-<ul class="incremental">
-<li>Examples: Hiring a tutor (mutual gains), Wargames (1983) “the only winning move is not to play”</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="full-or-equal-information" class="level2">
-<h2 class="anchored" data-anchor-id="full-or-equal-information">Full or Equal Information</h2>
-<p>How much does each player know when they decide?</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p><span class="h">Perfect Information</span>: when players know all previous moves and external circumstances</p>
-<ul class="incremental">
-<li>players may have <span class="hi"><em>imperfect info</em></span>; uncertainty about the state of the world, previous’ moves, or other player’s ‘type’</li>
-</ul></li>
-<li><p><span class="h">Asymmetric Info</span>: when one player has access to information that other players do not</p>
-<ul class="incremental">
-<li><p>Examples: hand in poker, used car salesmen</p></li>
-<li><p>Topics: Signaling, Screening</p></li>
-</ul></li>
-</ul>
-</div>
 
 
 </section>
@@ -370,6 +329,7 @@ window.Quarto = {
 <ol>
 <li id="fn1"><p><em>Harrington</em>, pg. 2<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>adapted from <a href="https://www2.econ.iastate.edu/tesfatsi/">Leigh Tesfatsion</a>’s slides<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>except when we talk about <em>expected</em> payoffs later<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
