@@ -41,7 +41,7 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 [01 - Introduction](https://dyasui.github.io/dyasui/EC327/Slides/01Intro/01-main.html)
 
-[02 - Sequential Games](https://dyasui.github.io/dyasui/EC327/Slides/02SequentialGames/02SequentialGames.html)
+[02 - Sequential Games](https://dyasui.github.io/dyasui/EC327/Slides/02SequentialGames/02-main.html)
 
 [03 - Simultaneous Games](https://dyasui.github.io/dyasui/EC327/Slides/03SimultaneousGames/beamer/main.html)
 

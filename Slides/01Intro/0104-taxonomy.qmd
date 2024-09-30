@@ -1,0 +1,186 @@
+
+# Taxonomy of Games
+
+## General Categorical Terms
+
+  * [Sequential]{.h} or [Simultaneous]{.h}?
+  
+  * [Zero-sum]{.h} or not
+  
+  * [Perfect]{.h} or [Imperfect]{.h} information?
+  
+    + is info [symmetric]{.hi} or [asymmetric]{.hi}?
+  
+  * [One-shot]{.h} or [Repeated]{.h}?
+  
+  * '[Noncooperative]{.h}' or '[Cooperative]{.h}'?
+  
+---
+
+## Sequential vs. Simultaneous
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+[Sequential]{.h} Games
+
+  * players make their moves one after the other
+  
+  * [Chapter]{.hi} 3
+  
+  * [Visual tool]{.hi}: *game trees*
+  
+  * [Solution Method]{.hi}: *backwards induction*
+
+:::
+
+. . .
+
+::: {.column width="50%"}
+
+[Simultaneous]{.h} Games
+
+  * players make their moves at the same time
+  
+  * [Chapter]{.hi} 4 & 5
+  
+  * [Visual tool]{.hi}: *payoff tables*
+  
+  * [Solution Method]{.hi}: *best responses*, deletion of *dominated strats*
+
+:::
+
+::::
+
+---
+
+### Sequential Games
+
+In [sequential]{.hii} games, you have to think about how what you do [*now*]{.hi} 
+will affect what your opponent will do in the [*future*]{.hi}.
+
+. . .
+
+> This hierarchy of thinking will make these types of games a little easier for us to think through, 
+so they will be our first category of games.
+
+. . . 
+
+- We'll see that sometimes [moving first]{.hii} can be adventageous
+
+. . . 
+
+- While other times it's best to [wait and see]{.hii} what someone else does
+
+---
+
+### Simultaneous Games
+
+In [simultaneous]{.hii} games, you have to figure out what to do [*now*]{.hi} 
+while also thinking about what your opponent is thinking you will will do [*now*]{.hi}.
+
+. . .
+
+> This circular thinking can get confusing, so we'll try to develop some new methods
+for organizing these games in chapter 4.
+
+---
+
+## Conflicting vs. Common Interests?
+
+Many games you are familiar with have distince *winners* and *losers*.
+
+. . . 
+
+But in other types of games, it's possible for everyone to come out ahead.
+
+---
+
+### Zero-sum (or constant-sum) Games
+:::{.incremental}
+
+When the *total payoffs of all players sum to 0* ^[or sum to some constant]
+
+  * i.e, one player's gain is another player's loss
+  
+  * Examples: NCAA Football Championship, Scramble for Africa (technically *constant*-sum)
+  
+Not all games are fixed or zero sum; 
+
+  * Examples: Hiring a tutor (mutual gains), International Trade, etc.
+  
+:::
+
+---
+
+## Are strategic interactions Repeated?
+
+A [one-shot]{.hi} game is played only once by the same set of players.
+
+::: {.incremental}
+
+  - If you've never played against someone before, you can't form any [beliefs]{.hii} about them
+
+  - Secrecy or surprise are potentially good strategies in these games
+
+:::
+
+A game is called [repeated]{.hi} if the same players play it with each other many times.
+
+::: {.incremental}
+
+  - If you know your opponent, then your [reputation]{.hii} becomes valuable if you want to cooperate
+
+:::
+
+---
+
+## Full or Equal Information
+
+How much does each player know when they decide?
+
+::: {.incremental}
+
+  * [Perfect Information]{.h}: when players know all previous moves and external circumstances
+  
+    + players may have [*imperfect info*]{.hi}; uncertainty about the state of the world, previous' moves, or other player's 'type'
+  
+  * [Asymmetric Info]{.h}: when one player has access to information that other players do not
+  
+    + Examples: hand in poker, used car salesmen
+    
+    + Topics: Signaling, Screening
+  
+:::
+
+---
+
+## Can agreements be Enforced?
+
+  - Self-interest and common good can often conflict.
+
+  - In these situations, players need to form agreements in order to achieve cooperative outcomes.
+
+. . .
+
+> But can people actually be held to those agreements?
+
+For example:
+
+  - Paris Climate accords; who polices nation-state's carbon reductions?
+
+  - Public goods; why do we need the Internal Revenue Service?
+
+---
+
+## Can agreements be Enforced?
+
+Two broad categories of the field are [cooperative]{.h} game theory and [noncooperative]{.h} game theory
+^[but if you ask real game theorists, they will probably tell you these names are misleading]
+
+> [Cooperative]{.h} games are those in which agreements are enforceable
+
+> In [Noncooperative]{.h} games, no-one can be forced not to act in their own self-interest
+
+

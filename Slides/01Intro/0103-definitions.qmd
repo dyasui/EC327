@@ -1,16 +1,5 @@
----
-name: definitions
----
 
 # What is a Game? Definitions
-
-## Examples of some questions:
-:::{.incremental}
-  * When should the Ducks play a running play or passing play?
-  * Why is a pdf textbook so expensive?!
-  * Why did the US and USSR adopt Mutually Assured Destruction?
-  * Why do people give engagement rings?
-:::
 
 ## What do all these questions have in common?
 ::: {.incremental}
@@ -122,6 +111,33 @@ For example, let $u(.)$ be the utility function from emoji to utils
 
 ---
 
+## Payoffs
+
+What is a player's goal in a game?
+
+> To maximize their expected [payoff]{.h}
+
+. . . 
+
+  - A payoff can represent many things.
+
+  - But for simplicity we will abstract them down to a single numerical value.
+
+  - A payoff doesn't need to be abstract; it could be dollars
+
+---
+
+## Payoffs
+
+What is true of payoffs?
+
+> Higher numbers are more preferred
+
+> They are [Ordinal]{.hi}; i.e., the relative units don't matter
+^[except when we talk about *expected* payoffs later]
+
+> They capture *everything* in a game that a player cares about
+
 ## *Strategic* Choice vs. other types of choices
 
 ::: {.incremental}
@@ -142,8 +158,8 @@ For example, let $u(.)$ be the utility function from emoji to utils
 ::: {.incremental}
   * Sometimes my enjoyment of a thing depends on the *state* of the world
 
-| My choice   | My friends' choice | My utility |
-|-------------|:------------------:|:----------:|
+| My choice   | My friends' choice | My payoff  |
+|-------------|--------------------|------------|
 | Duck's game |     Duck's game    |     3      |
 | Duck's game |      Stay home     |     2      |
 |  Stay home  |     Duck's game    |     1      |
@@ -154,92 +170,20 @@ For example, let $u(.)$ be the utility function from emoji to utils
   * Is this an example of a [strategic]{.hi} or [non-strategic]{.hi} choice?
 :::
 
-# Taxonomy of Games
+## Common Knowledge 
 
-## General Categories
+Our theories will have to make assumptions about what players **know**.
 
-  * [Sequential]{.h} or [Simultaneous]{.h}?
-  
-  * [Zero-sum]{.h} or not
-  
-  * [Perfect]{.h} or [Imperfect]{.h} information?
-  
-    + is info [symmetric]{.hi} or [asymmetric]{.hi}?
-  
-  * [One-shot]{.h} or [Repeated]{.h}?
-  
-  * '[Noncooperative]{.h}' or '[Cooperative]{.h}'?
-  
----
+All of our games will at least assume that [all players know all of the rules]{.h}.
 
-##
+## Rules of the Game
 
-:::: {.columns}
+We will assume that all players know:
 
-::: {.column width="50%"}
+  - Who else is playing,
 
-[Sequential]{.h} Games
+  - all of the strategies each player could *potentially* choose,
 
-  * players make their moves one after the other
-  
-  * [Chapter]{.hi} 3
-  
-  * [Visual tool]{.hi}: *game trees*
-  
-  * [Solution Method]{.hi}: *backwards induction*
+  - everyone's payoffs for all possible combinations of strategies by all players,
 
-:::
-
-::: {.column width="50%"}
-
-[Simultaneous]{.h} Games
-
-  * players make their moves at the same time
-  
-  * [Chapter]{.hi} 4 & 5
-  
-  * [Visual tool]{.hi}: *payoff tables*
-  
-  * [Solution Method]{.hi}: *best responses*, deletion of *dominated strats*
-
-:::
-
-::::
-
----
-
-## Zero-sum games
-
-:::{.incremental}
-
-When the *total payoffs of all players sum to 0*
-
-  * i.e, one player's gain is another player's loss
-  
-  * Examples: NCAA Football Championship, Scramble for Africa (technically *constant*-sum)
-  
-Not all games are fixed or zero sum; 
-
-  * Examples: Hiring a tutor (mutual gains), Wargames (1983) "the only winning move is not to play"
-  
-:::
-
----
-
-## Full or Equal Information
-
-How much does each player know when they decide?
-
-::: {.incremental}
-
-  * [Perfect Information]{.h}: when players know all previous moves and external circumstances
-  
-    + players may have [*imperfect info*]{.hi}; uncertainty about the state of the world, previous' moves, or other player's 'type'
-  
-  * [Asymmetric Info]{.h}: when one player has access to information that other players do not
-  
-    + Examples: hand in poker, used car salesmen
-    
-    + Topics: Signaling, Screening
-  
-:::
+  - and that everyone else is maximizing their payoffs

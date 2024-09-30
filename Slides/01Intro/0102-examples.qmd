@@ -9,9 +9,7 @@
 
 Where in the goal should you kick a penaly shot?
 
-```{=html}
-<iframe width="780" height="500" src="https://www.coolmathgames.com/0-penalty-kick-online" title="penalty-kick-online"></iframe>
-```
+![](figures/PenaltyKick.jpg){fig-align="left"}
 
 ---
 
@@ -60,9 +58,10 @@ Should you give an engagement ring to the person you want to marry?
 In economics, why do we say there is a ***law of one price***?
 
 ::: {.incremental}
-Imagine I set up a competing Starbucks franchise in the EMU
-  - If they sell PSL for \$6.50, what happens if I sell them for \$6.49?
-  - What if I sell for \$6.51?
+> Imagine I set up a competing Starbucks franchise in the EMU
+
+>  - If they sell PSL for \$6.50, what happens if I sell them for \$6.49?
+>  - What if I sell for \$6.51?
 
 This has been your EC201 review!
 :::
@@ -81,7 +80,7 @@ Should the US try to defeat its rivals through `global thermonuclear war`?
 
 ---
 
-![](figures/WargamesList.png)
+![](figures/WargamesList.png){fig-align="center"}
 
 ---
 
@@ -89,7 +88,7 @@ Should the US try to defeat its rivals through `global thermonuclear war`?
 
 What do these examples have in common?
 
-::: {notes}
+::: notes
   - ask class for ideas
   - point out the methods of thinking through these questions
   - all can be answered with 'it depends'

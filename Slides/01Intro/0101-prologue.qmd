@@ -22,9 +22,9 @@ Why should [you]{.hi} study game theory?
 . . .
 
 > Practice your strategic decision-making in a safe environment
->
+
 > Develop your intuition for social interactions in a systematic way
-> 
+
 > Feed your curiosity for economics, social science, or philosophical questions!
 
 . . .
@@ -34,10 +34,11 @@ Why should [you]{.hi} study game theory?
 What is the point of *theory*?
 
 ::: {.incremental}
-[Simplify complex systems]{.hi}
-  - understanding one part at a time is easier than trying to 
-[Generate *falsifiable* hypotheses]{.hi}
-  - good econometrics is informed by good theory
+> [Simplify complex systems]{.hi}
+>  - understanding one part at a time is easier than trying to 
+
+>[Generate *falsifiable* hypotheses]{.hi}
+>  - good econometrics is informed by good theory
 :::
 
 ::: notes
@@ -54,6 +55,8 @@ What is the point of *theory*?
 immediately applicable to policy. It is a method rather than a doctrine, an
 apparatus of the mind, a technique of thinking which helps its possessor to draw
 correct conclusions." — Keynes
+
+---
 
 ### What are the limits to theory?
 

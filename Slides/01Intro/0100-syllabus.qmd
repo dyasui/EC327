@@ -32,6 +32,8 @@
     - Provide sources for *all* information that you found outside this class
 :::
 
+---
+
 ### Instructor Expectations
   * [Provide course material]{.h}
     - Slides will be updated on github
@@ -60,6 +62,8 @@ Each homework assignment will include a few problems that will be similar to wha
 
     - See Canvas rubric for more info
 :::
+
+---
 
 ### Class Activities
 
@@ -126,6 +130,8 @@ and a [final]{.hi} exam
 
 ::::
 
+---
+
 ### Policies
 
 :::{.incremental}
@@ -135,7 +141,9 @@ and a [final]{.hi} exam
     - -> no late submissions accepted
 :::
 
-## University Policies
+---
+
+# University Policies
 
 ### Campus Resources
 
@@ -174,20 +182,4 @@ These resources and others are also included in the course syllabus
 [github.com/dyasui/EC327](https://github.com/dyasui/EC327)
   - Find up-to-date versions of slides/assignments
   - *let me know if links are broken*
-
-## Tentative Schedule
-
-| **Week** | **Chapter(s)** | **Topic**                                                           |
-|----------|----------------|---------------------------------------------------------------------|
-| 1        | 1, 2           | Intro & General Principles                                          |
-| 2        | 3              | Sequential Move Games                                               |
-| 3        | 4              | Simultaneous Move Games                                             |
-| 4        | 6              | Combining Sequential and Simultaneous Moves                         |
-| 5        | 6              | Review & **Midterm**                                                |
-| 6        | 5              | Simultaneous Games: Continuous Strategies, Discussion, and Evidence |
-| 7        | 7              | Mixed Strategies                                                    |
-| 8        | 8              | Strategic Moves                                                     |
-| 9        | 9              | Uncertainty and Information                                         |
-| 10       | 10             | Repeated Games                                                      |
-| *Finals* | *TBA*          | *Exam*                                                              |
 
