@@ -66,35 +66,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -112,96 +83,64 @@ window.Quarto = {
 
 
 
-<section id="nash-equilibrium" class="level1">
-<h1>Nash Equilibrium</h1>
-<section id="solving-simultaneous-games" class="level2">
-<h2 class="anchored" data-anchor-id="solving-simultaneous-games">Solving Simultaneous Games</h2>
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
+<p>What is the goal of <span class="hi">Game Theory</span>?</p>
+<blockquote class="blockquote">
+<p>To understand social behavior</p>
+</blockquote>
+<p>. . .</p>
+<p>Why do economists study Game Theory?</p>
+<blockquote class="blockquote">
+<p>We are <em>social</em> scientists</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>To make models, predictions, hypotheses, etc. on which to base our research</p>
+</blockquote>
+<hr>
+</section>
+<section id="motivation-1" class="level2">
+<h2 class="anchored" data-anchor-id="motivation-1">Motivation</h2>
+<p>Why should <span class="hi">you</span> study game theory?</p>
+<p>. . .</p>
+<blockquote class="blockquote">
+<p>Practice your strategic decision-making in a safe environment</p>
+<p>Develop your intuition for social interactions in a systematic way</p>
+<p>Feed your curiosity for economics, social science, or philosophical questions!</p>
+</blockquote>
+<p>. . .</p>
+</section>
+<section id="what-is-theory" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-theory">What is theory?</h2>
+<p>What is the point of <em>theory</em>?</p>
+<div class="incremental">
+<p><span class="hi">Simplify complex systems</span> - understanding one part at a time is easier than trying to <span class="hi">Generate <em>falsifiable</em> hypotheses</span> - good econometrics is informed by good theory</p>
+</div>
+<div class="notes">
 <ul>
-<li><p>Before we cover how to solve a game, we first need to discuss what a solution to a game even is.</p></li>
-<li><p>As with many types of problem in economics, we’re interested in finding an <em>equilibrium</em>:</p>
-<ul>
-<li>equilibrium a situation which is “stable,” in that there is no incentive to change.</li>
-</ul></li>
+<li>Use map example:</li>
+<li>World Atlas or UOCampus Map?</li>
+<li>Which is better depends on which is more useful</li>
 </ul>
+</div>
 <hr>
+<section id="theory-in-a-data-driven-world" class="level3">
+<h3 class="anchored" data-anchor-id="theory-in-a-data-driven-world">Theory in a data-driven world?</h3>
+<blockquote class="blockquote">
+<p>“The theory of economics does not furnish a body of settled conclusions immediately applicable to policy. It is a method rather than a doctrine, an apparatus of the mind, a technique of thinking which helps its possessor to draw correct conclusions.” — Keynes</p>
+</blockquote>
 </section>
-<section id="nash-equilibrium-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-1">Nash Equilibrium</h2>
-<p>The most basic form of equilibrium in game theory is the <span class="h">Nash Equilibrium (NE)</span>, which can be described as:</p>
-<ul>
-<li><p>A strategy profile such that no player can obtain a larger payoff by <em>unilaterally deviating</em></p></li>
-<li><p>A strategy profile such that no single player can make themselves better off by changing only their own strategy.</p></li>
-<li><p>A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision</p></li>
+<section id="what-are-the-limits-to-theory" class="level3">
+<h3 class="anchored" data-anchor-id="what-are-the-limits-to-theory">What are the limits to theory?</h3>
+<div class="incremental">
+<ul class="incremental">
+<li>Our models will never be perfect representations of reality</li>
+<li>But we should know how well they <em>approximate</em> the parts of the world we want to understand</li>
+<li>Theory is very useful for generating <em>falsifiable hypotheses</em>, which we can then use to guide experimental or statistical tests</li>
+<li>As we play games in class, we will observe the data and compare to our theoretical predictions</li>
 </ul>
+</div>
 <hr>
-</section>
-<section id="the-prisoners-dilemma" class="level2">
-<h2 class="anchored" data-anchor-id="the-prisoners-dilemma">The Prisoner’s Dilemma</h2>
-<p>Two criminal conspirators have been arrested and brought to interrogation. The police put them in separate cells and offer each prisoner a choice.</p>
-<p>If both cooperate with the investigation, they will get a lighter sentence of 10 years.</p>
-<p>If either one agrees to testify but not the other, the one who cooperated will go free and the one who didn’t gets a full 20 years.</p>
-<p>If neither cooperates, the prosecutor won’t have enough of a case and the criminals will only serve 1 year each for misdemeanors.</p>
-<hr>
-</section>
-<section id="what-would-you-choose" class="level2">
-<h2 class="anchored" data-anchor-id="what-would-you-choose">What would you choose?</h2>
-<ul>
-<li><p>Remember that you cannot communicate with your fellow prisoner</p></li>
-<li><p>How would you have to be that they won’t sell you out for you to choose to keep quiet?</p></li>
-</ul>
-<hr>
-</section>
-<section id="nash-equilibrium-in-the-prisoners-dilemma" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-the-prisoners-dilemma">Nash Equilibrium in the Prisoners’ Dilemma</h2>
-<p>Although the outcome where both criminals keep quiet <em>Pareto dominates</em> the outcome where they both testify and serve 10 years, would it be stable?</p>
-<ul>
-<li><p>In the {Quiet, Quiet} strategy profile, either player could deviate to Testify and shorten their prison time.</p></li>
-<li><p>{Testify, Testify} is the only <em>stable</em> strategy profile, where no one could unilaterally deviate to decrease their sentence.</p></li>
-</ul>
-<hr>
-</section>
-<section id="draw-prisoners-dilemma-in-strategic-form" class="level2">
-<h2 class="anchored" data-anchor-id="draw-prisoners-dilemma-in-strategic-form">Draw Prisoners’ Dilemma in Strategic Form:</h2>
-<hr>
-</section>
-<section id="does-this-look-familiar" class="level2">
-<h2 class="anchored" data-anchor-id="does-this-look-familiar">Does this look familiar?</h2>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Split</th>
-<th>Steal</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Split</td>
-<td><span class="math inline">\((\$6,800, \$6,800)\)</span></td>
-<td><span class="math inline">\((\$0, 13,600)\)</span></td>
-</tr>
-<tr class="even">
-<td>Steal</td>
-<td><span class="math inline">\((\$13,600, \$0)\)</span></td>
-<td><span class="math inline">\((\$0, \$0)\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Although the numbers are different, the structure is the same.</p>
-<p><em>Split or Steal</em> is a <em>Prisoners’ Dilemma</em></p>
-<hr>
-</section>
-<section id="watch-what-happens" class="level2">
-<h2 class="anchored" data-anchor-id="watch-what-happens">Watch what happens</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/S0qjK3TWZE8?t=141" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>start from 2:20</p>
-<hr>
-</section>
-<section id="discuss" class="level2">
-<h2 class="anchored" data-anchor-id="discuss">Discuss</h2>
-<ul>
-<li>Did Nick change the structure of the game?</li>
-</ul>
 
 
 </section>

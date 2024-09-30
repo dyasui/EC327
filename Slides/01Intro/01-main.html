@@ -328,7 +328,7 @@
 
 <section id="title-slide" data-background-position="left" class="quarto-title-block center">
   <h1 class="title">Introduction to Game Theory</h1>
-  <p class="subtitle">Information Sets &amp; Combining Sequential and Simultaneous Games</p>
+  <p class="subtitle">General Principles</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -343,21 +343,757 @@ Dante Yasui
 <section class="slide level2">
 
 <div class="vertical-center">
-<p><span class="hi big">Outline</span></p>
+<p><span class="hi big">Outline</span> * Introductions * What is EC327? - Syllabus - Schedule &amp; Assignments - Office Hours * What is Game Theory? - What are strategic games? - How can we classify games?</p>
+</div>
+</section>
+<section>
+<section id="introductions" class="title-slide slide level1 center">
+<h1>Introductions</h1>
+
+</section>
+<section id="welcome-to-the-class" class="slide level2">
+<h2>Welcome to the Class!</h2>
+<h3 id="about-me">About Me:</h3>
 <ul>
-<li><p>Game Tables/Strategic Form</p></li>
-<li><p>Dominant Strategies</p></li>
-<li><p>Nash Equilibrium</p></li>
+<li><span class="hi">Preferred Name</span>: Dante</li>
+<li><span class="hi">Preferred Pronouns</span>: he, him</li>
+<li>4th year Econ Phd student</li>
+<li>Davis, CA -&gt; Portland, OR -&gt; Eugene, OR</li>
+</ul>
+</section>
+<section id="introduce-yourselves" class="slide level2">
+<h2>Introduce Yourselves</h2>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZertk6mirIaE1zmtclhUO8TuxpgyTvsXL06xHmHFPcDllTw/viewform?usp=sf_link">IntroQuiz</a></p>
+<ul>
+<li><p>Your preferred name, pronouns; to help me get to know you</p></li>
+<li><p>Why did you choose this class?</p></li>
+<li><p>Song recommendation for <a href="https://open.spotify.com/playlist/5aFLYWuGq28OeWroNElDba?si=364ce7efa2584842">class playlist</a></p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="what-is-ec327" class="title-slide slide level1 center">
+<h1>What is EC327?</h1>
+
+</section>
+<section id="syllabus-document" class="slide level2">
+<h2>Syllabus Document</h2>
+<p><embed data-src="Syllabus/main.pdf"></p>
+<div class="{incremental}">
+<ul>
+<li>Most up to date version on github</li>
+<li>I will also upload to Canvas</li>
+<li>print, sign, and upload as your first assignment</li>
+</ul>
+</div>
+</section>
+<section id="class-expectations" class="slide level2">
+<h2>Class Expectations</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li><p><strong>Courses:</strong> EC201 <em>or</em> EC202</p></li>
+<li><p><strong>Knowledge:</strong> This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.</p>
+<ul>
+<li>There are great free resources out there like <a href="https://www.khanacademy.org/math/algebra">Khan Academy</a>, but always feel free to reach out for help or other suggestions.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="student-expectations">Student Expectations</h3>
+<div>
+<ul>
+<li class="fragment"><span class="hii">Come to class</span>
+<ul>
+<li class="fragment">Pay attention to lectures, take notes, review topics at home</li>
+<li class="fragment">Participate in group work &amp; activities</li>
+<li class="fragment"><span class="hi">Ask questions!</span></li>
+</ul></li>
+<li class="fragment"><span class="hii">Read the textbook</span></li>
+<li class="fragment"><span class="hii">Communicate respectfully</span>
+<ul>
+<li class="fragment">With your classmates</li>
+<li class="fragment">With me &amp; grader</li>
+</ul></li>
+<li class="fragment"><span class="hii">Have academic integrity</span> <sup>1</sup>
+<ul>
+<li class="fragment">Verify that all submitted work is your own</li>
+<li class="fragment">Provide sources for <em>all</em> information that you found outside this class</li>
+</ul></li>
+</ul>
+</div>
+<h3 id="instructor-expectations">Instructor Expectations</h3>
+<ul>
+<li><span class="h">Provide course material</span>
+<ul>
+<li>Slides will be updated on github</li>
+<li>I will also try to post them on Canvas, but not as regularly</li>
+<li>Assignments posted on Canvas w/ due dates, submission entry</li>
+</ul></li>
+<li><span class="h">Face-to-face Interaction</span>
+<ul>
+<li><span class="hi">Classes</span>
+<ul>
+<li>Ask me to clarify if something doesn’t make sense</li>
+<li>Ask me to slow down if I’m going too fast</li>
+</ul></li>
+<li><span class="hi">Office Hours</span>
+<ul>
+<li>Use them!!</li>
+</ul></li>
+</ul></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>see UO’s <a href="https://teaching.uoregon.edu/resources/academic-integrity-uo">Student Conduct Code</a></p></li></ol></aside></section>
+<section id="admin-stuff" class="slide level2">
+<h2>Admin Stuff</h2>
+<h3 id="problem-sets">Problem Sets</h3>
+<p>You will practice what we learn in class on independently.</p>
+<p>Each homework assignment will include a few problems that will be similar to what you will see on exams.</p>
+<div>
+<ul>
+<li class="fragment"><p>Learning something new takes practice, so these are designed to help you keep up with the concepts</p></li>
+<li class="fragment"><p>You will be graded not only on whether you got a certain answer, but also more importantly on <em>how you communicate your understanding</em></p>
+<ul>
+<li class="fragment">See Canvas rubric for more info</li>
+</ul></li>
+</ul>
+</div>
+<h3 id="class-activities">Class Activities</h3>
+<div>
+<ul>
+<li class="fragment">Sometimes I will ask you to play the types of games we discuss in lectures
+<ul>
+<li class="fragment">Record the strategies you chose and the outcomes</li>
+<li class="fragment">Reflect on how you played the game</li>
+<li class="fragment">Relate it to lecture concepts</li>
+</ul></li>
+</ul>
+</div>
+<aside class="notes">
+<ul>
+<li>I’m still working out how best to implement</li>
+<li>this is how you participate, records attendance on activity days</li>
+<li>hopefully lets you experience first-hand the things we learn</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<h3 id="exams">Exams</h3>
+<p>You will demonstrate how well you understand concepts individually on a <span class="hi">midterm</span> and a <span class="hi">final</span> exam</p>
+<div>
+<ul>
+<li class="fragment"><span class="hi">Midterm</span>
+<ul>
+<li class="fragment">sometime around week 5 (Oct.&nbsp;28th or 30th)</li>
+<li class="fragment">Will test you on definitions, solution concepts, and apply them to critical thinking problems</li>
+</ul></li>
+<li class="fragment"><span class="hi">Final</span>
+<ul>
+<li class="fragment">finals week of December 9 (check duckweb for specific date)</li>
+<li class="fragment">Covers everything we learned in the quarter, with more focus on concepts from the 2nd half</li>
+</ul></li>
+</ul>
+</div>
+<aside class="notes">
+<ul>
+<li>Dept policy is 65% As &amp; Bs</li>
+<li>expect exams to be difficult</li>
+<li>Best way to prepare is lots of practice</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<h3 id="grading">Grading</h3>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><span class="hi">Problem Sets</span></p>
+<p><span class="hi">In-class Activities</span></p>
+<p><span class="hi">Midterm</span></p>
+<p><span class="hi">Final</span></p>
+</div><div class="column" style="width:40%;">
+<p>30%</p>
+<p>10%</p>
+<p>30%</p>
+<p>30%</p>
+</div>
+</div>
+<h3 id="policies">Policies</h3>
+<div>
+<ul>
+<li class="fragment"><span class="h">No make-up exams!</span>
+<ul>
+<li class="fragment">if you absolutely cannot attend midterm, you can add its weight to final exam</li>
+</ul></li>
+<li class="fragment">Problem set keys posted automatically after deadline
+<ul>
+<li class="fragment">-&gt; no late submissions accepted</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="university-policies" class="slide level2">
+<h2>University Policies</h2>
+<h3 id="campus-resources">Campus Resources</h3>
+<ul>
+<li><span class="hi">Accessible Education Center</span>
+<ul>
+<li><a href="https://aec.uoregon.edu/">aec.uoregon.edu</a></li>
+</ul></li>
+<li><span class="hi">Support for vicitms of assault, harassment, stalking</span>
+<ul>
+<li><a href="https://safe.uoregon.edu/">safe.uoregon.edu</a></li>
+<li>24/7 hotline: (+1) 541-346-SAFE (7244)</li>
+</ul></li>
+<li><span class="hi">Health and Wellbeing</span>
+<ul>
+<li><a href="https://counseling.uoregon.edu">University Counseling Services</a></li>
+<li><a href="https://basicneeds.uoregon.edu/">Basic Needs Program</a></li>
+</ul></li>
+<li><span class="hi">Religious Observance Accomadations</span>
+<ul>
+<li><a href="https://provost.uoregon.edu/religious-observance-accommodations-policy">Provost website</a></li>
+</ul></li>
+</ul>
+
+<aside class="notes">
+<ul>
+<li>I am here to support you, but not trained or equipped for emergencies</li>
+<li>I will not ask for reasons you cannot attend class or exams</li>
+<li>I am not a mandated reporter: will only pass on info if you request</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p>These resources and others are also included in the course syllabus</p>
+</div></aside></section>
+<section class="slide level2">
+
+<h3 id="course-pages">Course Pages</h3>
+<p><a href="https://canvas.uoregon.edu/courses/233504">https://canvas.uoregon.edu/courses/251353</a> - submit your assignments - check deadlines</p>
+<p><a href="https://github.com/dyasui/EC327">github.com/dyasui/EC327</a> - Find up-to-date versions of slides/assignments - <em>let me know if links are broken</em></p>
+</section>
+<section id="tentative-schedule" class="slide level2">
+<h2>Tentative Schedule</h2>
+<table>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 16%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Week</strong></th>
+<th><strong>Chapter(s)</strong></th>
+<th><strong>Topic</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1, 2</td>
+<td>Intro &amp; General Principles</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>3</td>
+<td>Sequential Move Games</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>4</td>
+<td>Simultaneous Move Games</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>6</td>
+<td>Combining Sequential and Simultaneous Moves</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>6</td>
+<td>Review &amp; <strong>Midterm</strong></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>5</td>
+<td>Simultaneous Games: Continuous Strategies, Discussion, and Evidence</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>7</td>
+<td>Mixed Strategies</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>8</td>
+<td>Strategic Moves</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>9</td>
+<td>Uncertainty and Information</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>10</td>
+<td>Repeated Games</td>
+</tr>
+<tr class="odd">
+<td><em>Finals</em></td>
+<td><em>TBA</em></td>
+<td><em>Exam</em></td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="what-is-game-theory" class="title-slide slide level1 center">
+<h1>What is Game Theory?</h1>
+
+</section>
+<section id="motivation" class="slide level2">
+<h2>Motivation</h2>
+<p>What is the goal of <span class="hi">Game Theory</span>?</p>
+<blockquote>
+<p>To understand social behavior</p>
+</blockquote>
+<div class="fragment">
+<p>Why do economists study Game Theory?</p>
+<blockquote>
+<p>We are <em>social</em> scientists</p>
+</blockquote>
+<blockquote>
+<p>To make models, predictions, hypotheses, etc. on which to base our research</p>
+</blockquote>
+</div>
+</section>
+<section id="motivation-1" class="slide level2">
+<h2>Motivation</h2>
+<p>Why should <span class="hi">you</span> study game theory?</p>
+<div class="fragment">
+<blockquote>
+<p>Practice your strategic decision-making in a safe environment</p>
+<p>Develop your intuition for social interactions in a systematic way</p>
+<p>Feed your curiosity for economics, social science, or philosophical questions!</p>
+</blockquote>
+</div>
+</section>
+<section id="what-is-theory" class="slide level2">
+<h2>What is theory?</h2>
+<p>What is the point of <em>theory</em>?</p>
+<div>
+<p><span class="hi">Simplify complex systems</span> - understanding one part at a time is easier than trying to <span class="hi">Generate <em>falsifiable</em> hypotheses</span> - good econometrics is informed by good theory</p>
+</div>
+<aside class="notes">
+<ul>
+<li>Use map example:</li>
+<li>World Atlas or UOCampus Map?</li>
+<li>Which is better depends on which is more useful</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<h3 id="theory-in-a-data-driven-world">Theory in a data-driven world?</h3>
+<blockquote>
+<p>“The theory of economics does not furnish a body of settled conclusions immediately applicable to policy. It is a method rather than a doctrine, an apparatus of the mind, a technique of thinking which helps its possessor to draw correct conclusions.” — Keynes</p>
+</blockquote>
+<h3 id="what-are-the-limits-to-theory">What are the limits to theory?</h3>
+<div>
+<ul>
+<li class="fragment">Our models will never be perfect representations of reality</li>
+<li class="fragment">But we should know how well they <em>approximate</em> the parts of the world we want to understand</li>
+<li class="fragment">Theory is very useful for generating <em>falsifiable hypotheses</em>, which we can then use to guide experimental or statistical tests</li>
+<li class="fragment">As we play games in class, we will observe the data and compare to our theoretical predictions</li>
+</ul>
+</div>
+</section>
+<section id="what-is-a-game-of-strategy" class="slide level2">
+<h2>What is a <em>game</em> of strategy?</h2>
+<blockquote>
+<p>Game theory: It’s not all fun and games!</p>
+</blockquote>
+</section>
+<section id="examples-of-strategic-games" class="slide level2">
+<h2>Examples of <em>strategic games</em>:</h2>
+<p>Where in the goal should you kick a penaly shot?</p>
+<iframe width="780" height="500" src="https://www.coolmathgames.com/0-penalty-kick-online" title="penalty-kick-online"></iframe>
+</section>
+<section id="examples-of-strategic-games-1" class="slide level2">
+<h2>Examples of <em>strategic games</em>:</h2>
+<p>Where in the goal should you kick a penaly shot?</p>
+<div>
+<ul>
+<li class="fragment">Left, Right, Center? Up or Down?</li>
+<li class="fragment">Is there one best place to kick?</li>
+<li class="fragment">What if you always choose top right corner?</li>
+<li class="fragment">Besides soccer;
+<ul>
+<li class="fragment">Which offensive play in football?</li>
+<li class="fragment">Where to serve in a tennis court?</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="examples-of-strategic-games-2" class="slide level2">
+<h2>Examples of <em>strategic games</em>:</h2>
+<p>If 100% of your grade in this class is decided by a <em>curve</em>, how much should you study?</p>
+<div>
+<ul>
+<li class="fragment">If you can all agree to take a chill quarter and not study, you could all get A’s</li>
+<li class="fragment">But what if there’s at least one try-hard?</li>
+<li class="fragment">Now how much should you study, even if you already promised you wouldn’t?</li>
+<li class="fragment">Do you think everyone else will keep their promise?</li>
+</ul>
+</div>
+</section>
+<section id="examples-of-strategic-games-3" class="slide level2">
+<h2>Examples of <em>strategic games</em>:</h2>
+<p>Should you give an engagement ring to the person you want to marry?</p>
+<div>
+<ul>
+<li class="fragment">Why buy an expensive trinket when you could save the money for a house, etc?</li>
+<li class="fragment">Does it matter if your recently engaged friends gave (or received) engagement rings?</li>
+<li class="fragment">Does your paycheck vs.&nbsp;how much your fiancee makes matter?</li>
+</ul>
+</div>
+</section>
+<section id="examples-of-strategic-games-4" class="slide level2">
+<h2>Examples of <em>strategic games</em>:</h2>
+<p>In economics, why do we say there is a <strong><em>law of one price</em></strong>?</p>
+<div>
+<p>Imagine I set up a competing Starbucks franchise in the EMU - If they sell PSL for $6.50, what happens if I sell them for $6.49? - What if I sell for $6.51?</p>
+<p>This has been your EC201 review!</p>
+</div>
+</section>
+<section id="examples-of-strategic-games-5" class="slide level2">
+<h2>Examples of <em>strategic games</em>:</h2>
+<p>Should the US try to defeat its rivals through <code>global thermonuclear war</code>?</p>
+<div>
+<ul>
+<li class="fragment">Why did the US and USSR amass massive nuclear stockpiles?</li>
+<li class="fragment">Why has a nuclear weapon never been used in anger since Nagasaki?</li>
+<li class="fragment">Are anti-ballistic missiles destabilizing to international relations?</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="figures/WargamesList.png" class="r-stretch"></section>
+<section id="examples-of-strategic-games-6" class="slide level2">
+<h2>Examples of <em>strategic games</em>:</h2>
+<p>What do these examples have in common?</p>
+<div class="{notes}">
+<ul>
+<li>ask class for ideas</li>
+<li>point out the methods of thinking through these questions</li>
+<li>all can be answered with ‘it depends’
+<ul>
+<li>specifically it depends on the actions (and thoughts) of others</li>
+</ul></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="what-is-a-game-definitions" class="title-slide slide level1 center">
+<h1>What is a Game? Definitions</h1>
+
+</section>
+<section id="examples-of-some-questions" class="slide level2">
+<h2>Examples of some questions:</h2>
+<div>
+<ul>
+<li class="fragment">When should the Ducks play a running play or passing play?</li>
+<li class="fragment">Why is a pdf textbook so expensive?!</li>
+<li class="fragment">Why did the US and USSR adopt Mutually Assured Destruction?</li>
+<li class="fragment">Why do people give engagement rings?</li>
+</ul>
+</div>
+</section>
+<section id="what-do-all-these-questions-have-in-common" class="slide level2">
+<h2>What do all these questions have in common?</h2>
+<div>
+<ul>
+<li class="fragment"><p>They all involve people making choices which depend on the choices of others</p></li>
+<li class="fragment"><p>In other words, they are questions of <span class="hi">strategy</span>:</p>
+<blockquote>
+<p><strong>Strategic interdependence</strong> is present in a social situation when what is best for someone <em>depends</em> on what someone else does. <sup>1</sup></p>
+</blockquote></li>
+</ul>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p><em>Harrington</em>, pg. 2</p></li></ol></aside></section>
+<section id="a-definition-of-a-game" class="slide level2">
+<h2>A definition of a game <sup>1</sup></h2>
+<p>A <strong>Game</strong> consists of:</p>
+<ul>
+<li>a collection of decision-makers, called <span class="hi">players</span>;</li>
+<li>the set of <span class="hi">information</span> available to each player;</li>
+<li>the <span class="hi">strategies</span> available to each player in each information state;</li>
+<li>a mapping from the intersection strategies of all players to outcomes;</li>
+<li><span class="hi">preferences</span> of the individual players over all possible outcomes</li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>adapted from <a href="https://www2.econ.iastate.edu/tesfatsi/">Leigh Tesfatsion</a>’s slides</p></li></ol></aside></section></section>
+<section>
+<section id="who-are-the-players" class="title-slide slide level1 center">
+<h1>Who are the players?</h1>
+
+</section>
+<section id="what-defines-a-player" class="slide level2">
+<h2>What defines a player?</h2>
+<ul>
+<li><p><span class="h">Preferences</span>: Everyone has certain things they <em>want</em>.</p>
+<p>But you usually can’t get everything you want; economics is all about <em>constrained choices</em>.</p>
+<p>So its important to have priorities and to understand which things people prefer to others.</p></li>
+<li><p><span class="h">Information</span>: Some people might be better informed than others.</p></li>
+<li><p><span class="h">Beliefs</span>: What do I think about when I have to make a strategic choice?</p></li>
+</ul>
+</section>
+<section id="preferences" class="slide level2">
+<h2>Preferences</h2>
+<p><span class="h">Preferences</span> describe the subjective ranking that we put on different alternatives.</p>
+<p>For example, on the set of Eugene boba stores, my preference ranking goes like this;</p>
+<div>
+<ol type="1">
+<li class="fragment"><a href="https://www.daynightboba.com/">Day &amp; Night</a> - they have mango sago, cute location</li>
+<li class="fragment"><a href="https://maps.app.goo.gl/zCVTUnaaYLD1Rwaw6">Tea 4</a> - major chain, good quality and selection</li>
+<li class="fragment"><a href="">Bobahead</a> - no more campus location 😔</li>
+<li class="fragment">No boba</li>
+<li class="fragment"><a href="http://therabbitholeteabar.com/">Rabbit Hole</a> - no hate, just not for me</li>
+</ol>
+</div>
+</section>
+<section id="rational-preferences" class="slide level2">
+<h2>Rational Preferences</h2>
+<p>The <span class="h">rational model</span> of choice is the foundation of all economics.</p>
+<p>Its assumptions are that:</p>
+<div>
+<ul>
+<li class="fragment">People have <span class="h">complete preferences</span>
+<ul>
+<li class="fragment">for <em>every</em> pair of options, you can either tell me which you prefer or that you are <em>indifferent</em></li>
+<li class="fragment">for any pair of deserts, <span class="math inline">\(\{ \ 🍨 \ , \ 🍩 \ \}\)</span>, either <span class="math inline">\((🍨 \succ 🍩 \ )\)</span>, or <span class="math inline">\((🍩 \ \succ 🍨 \ )\)</span>, or <span class="math inline">\((🍨 \sim 🍩 \ )\)</span></li>
+</ul></li>
+<li class="fragment">Preferences are <span class="h">transitive</span>
+<ul>
+<li class="fragment">if <span class="math inline">\((☕ \succ 🍵 \ )\)</span> and <span class="math inline">\((🍵 \succ 🍶 \ )\)</span>, then <span class="math inline">\((☕ \succ 🍶)\)</span> ( for any <span class="math inline">\(\{☕ \ , 🍵 \ , 🍶 \ \} \in 🫖 \ \)</span>)</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="rational-preferences-cont." class="slide level2">
+<h2>Rational Preferences (cont.)</h2>
+<p>Another key assumption of rationality is that we can represent preferences by real numbers.</p>
+<p>A <span class="h">utility function</span> maps a choice to a single number.</p>
+<p>For example, let <span class="math inline">\(u(.)\)</span> be the utility function from emoji to utils</p>
+<ul>
+<li><p>I can have <span class="math inline">\(u(🍺) =5\)</span>, <span class="math inline">\(u(🌯)=10\)</span>, <span class="math inline">\(u(🤸)=25\)</span></p></li>
+<li><p>I can also have <span class="math inline">\(u(🍺 \ , 🌯) = 20\)</span>, <span class="math inline">\(u(🍺 \ , 🌯 \ , 🤸) = 15\)</span></p></li>
+</ul>
+</section>
+<section id="ordinal-vs.-cardinal-numbers" class="slide level2">
+<h2>Ordinal vs.&nbsp;Cardinal numbers</h2>
+<div>
+<ul>
+<li class="fragment"><p><span class="h">Cardinal:</span> amounts which can be measured in meaningful units are <em>cardinal numbers</em></p>
+<ul>
+<li class="fragment">examples: $9.99, 80 students, 50:50 odds</li>
+</ul></li>
+<li class="fragment"><p><span class="h">Ordinal:</span> all that matters is the <em>relative ranking</em></p>
+<ul>
+<li class="fragment">examples: utility; what does 100 utility mean? (it’s less than 200)</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="dont-worry" class="slide level2">
+<h2>Don’t worry!</h2>
+<div>
+<ul>
+<li class="fragment"><p>For this class, you won’t need to worry about utility functions (if you want to, take EC311).</p></li>
+<li class="fragment"><p>I will almost always give you specific values of utility which we will call <span class="hi">payoffs</span>.</p></li>
+<li class="fragment"><p>The table on the previous page is a good example.</p></li>
+</ul>
+</div>
+</section>
+<section id="strategic-choice-vs.-other-types-of-choices" class="slide level2">
+<h2><em>Strategic</em> Choice vs.&nbsp;other types of choices</h2>
+<div>
+<ul>
+<li class="fragment"><p>Economics is the study of <span class="hi">constrained choice</span>; in EC311, we introduce the <em>utility maximization problem</em> as the workhorse model</p>
+<ul>
+<li class="fragment">These types of problems usually only involve one agent; the consumer, who is only constrained by their budget</li>
+</ul></li>
+<li class="fragment"><p>We use the term <span class="hi"><em>strategic games</em></span> to distinguish from these single-agent optimization problems</p></li>
+<li class="fragment"><p>A <span class="hi"><em>game</em></span> is a type of problem featuring multiple agents, called <span class="hi">players</span>, in which their optimal choice <span class="hii">depends on the optimal choices of other players</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="state-dependent-utility-table" class="slide level2">
+<h2>State-dependent utility table</h2>
+<div>
+<ul>
+<li class="fragment">Sometimes my enjoyment of a thing depends on the <em>state</em> of the world</li>
+</ul>
+<table class="table-striped table-hover">
+<caption>socially-dependent preferences</caption>
+<thead>
+<tr class="header">
+<th>My choice</th>
+<th style="text-align: center;">My friends’ choice</th>
+<th style="text-align: center;">My utility</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Duck’s game</td>
+<td style="text-align: center;">Duck’s game</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td>Duck’s game</td>
+<td style="text-align: center;">Stay home</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td>Stay home</td>
+<td style="text-align: center;">Duck’s game</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td>Stay home</td>
+<td style="text-align: center;">Stay home</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment">Is this an example of a <span class="hi">strategic</span> or <span class="hi">non-strategic</span> choice?</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="taxonomy-of-games" class="title-slide slide level1 center">
+<h1>Taxonomy of Games</h1>
+
+</section>
+<section id="general-categories" class="slide level2">
+<h2>General Categories</h2>
+<ul>
+<li><p><span class="h">Sequential</span> or <span class="h">Simultaneous</span>?</p></li>
+<li><p><span class="h">Zero-sum</span> or not</p></li>
+<li><p><span class="h">Perfect</span> or <span class="h">Imperfect</span> information?</p>
+<ul>
+<li>is info <span class="hi">symmetric</span> or <span class="hi">asymmetric</span>?</li>
+</ul></li>
+<li><p><span class="h">One-shot</span> or <span class="h">Repeated</span>?</p></li>
+<li><p>‘<span class="h">Noncooperative</span>’ or ‘<span class="h">Cooperative</span>’?</p></li>
+</ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><span class="h">Sequential</span> Games</p>
+<ul>
+<li><p>players make their moves one after the other</p></li>
+<li><p><span class="hi">Chapter</span> 3</p></li>
+<li><p><span class="hi">Visual tool</span>: <em>game trees</em></p></li>
+<li><p><span class="hi">Solution Method</span>: <em>backwards induction</em></p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><span class="h">Simultaneous</span> Games</p>
+<ul>
+<li><p>players make their moves at the same time</p></li>
+<li><p><span class="hi">Chapter</span> 4 &amp; 5</p></li>
+<li><p><span class="hi">Visual tool</span>: <em>payoff tables</em></p></li>
+<li><p><span class="hi">Solution Method</span>: <em>best responses</em>, deletion of <em>dominated strats</em></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="zero-sum-games" class="slide level2">
+<h2>Zero-sum games</h2>
+<div>
+<p>When the <em>total payoffs of all players sum to 0</em></p>
+<ul>
+<li class="fragment"><p>i.e, one player’s gain is another player’s loss</p></li>
+<li class="fragment"><p>Examples: NCAA Football Championship, Scramble for Africa (technically <em>constant</em>-sum)</p></li>
+</ul>
+<p>Not all games are fixed or zero sum;</p>
+<ul>
+<li class="fragment">Examples: Hiring a tutor (mutual gains), Wargames (1983) “the only winning move is not to play”</li>
+</ul>
+</div>
+</section>
+<section id="full-or-equal-information" class="slide level2">
+<h2>Full or Equal Information</h2>
+<p>How much does each player know when they decide?</p>
+<div>
+<ul>
+<li class="fragment"><p><span class="h">Perfect Information</span>: when players know all previous moves and external circumstances</p>
+<ul>
+<li class="fragment">players may have <span class="hi"><em>imperfect info</em></span>; uncertainty about the state of the world, previous’ moves, or other player’s ‘type’</li>
+</ul></li>
+<li class="fragment"><p><span class="h">Asymmetric Info</span>: when one player has access to information that other players do not</p>
+<ul>
+<li class="fragment"><p>Examples: hand in poker, used car salesmen</p></li>
+<li class="fragment"><p>Topics: Signaling, Screening</p></li>
+</ul></li>
 </ul>
 </div>
 
 <div class="quarto-auto-generated-content">
-<p><img src="UOSignature-356.png" class="slide-logo"></p>
+<p><img src="figures/UOSignature-356.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>EC327 | Lecture 4 | Information Sets</p>
+<p>EC327 | Lecture 1 | Introduction</p>
 </div>
 </div>
-</section>
+</section></section>
+
     </div>
   </div>
 

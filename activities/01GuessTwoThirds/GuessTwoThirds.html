@@ -66,35 +66,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -112,99 +83,37 @@ window.Quarto = {
 
 
 
-<section id="nash-equilibrium" class="level1">
-<h1>Nash Equilibrium</h1>
-<section id="solving-simultaneous-games" class="level2">
-<h2 class="anchored" data-anchor-id="solving-simultaneous-games">Solving Simultaneous Games</h2>
-<ul>
-<li><p>Before we cover how to solve a game, we first need to discuss what a solution to a game even is.</p></li>
-<li><p>As with many types of problem in economics, we’re interested in finding an <em>equilibrium</em>:</p>
-<ul>
-<li>equilibrium a situation which is “stable,” in that there is no incentive to change.</li>
-</ul></li>
+<section id="activity-1-guess-23rds-of-the-average" class="level2">
+<h2 class="anchored" data-anchor-id="activity-1-guess-23rds-of-the-average">Activity 1: Guess 2/3rds of the average</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>You will each choose an integer between 0 and 100.</li>
+<li>The winner is the person who’s guess is closest to the <span class="hii">average of all guesses <em>times</em> 2/3</span></li>
+<li>Submit your guess on <a href="https://canvas.uoregon.edu/courses/233504/quizzes/329305">Canvas</a></li>
+<li>Backup <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJoCIYnrQSzEQA1m0BDLFB5_l0PBloLL558ZWc1PfhHvxs2Q/viewform?usp=sf_link">Google forms version</a></li>
 </ul>
+</div>
 <hr>
 </section>
-<section id="nash-equilibrium-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-1">Nash Equilibrium</h2>
-<p>The most basic form of equilibrium in game theory is the <span class="h">Nash Equilibrium (NE)</span>, which can be described as:</p>
-<ul>
-<li><p>A strategy profile such that no player can obtain a larger payoff by <em>unilaterally deviating</em></p></li>
-<li><p>A strategy profile such that no single player can make themselves better off by changing only their own strategy.</p></li>
-<li><p>A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision</p></li>
+<section id="activity-1" class="level2">
+<h2 class="anchored" data-anchor-id="activity-1">Activity 1</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>This is a simple example, but illustrates how complicated strategic reasoning can be.</li>
+<li>The theoretical solution to this game says that anyone who is <em>rational</em> and knows that <em>everyone else is rational</em> (Common Knowledge of Rationality) should only choose 0 or 1.</li>
+<li>However, <a href="https://www.jstor.org/stable/2950991">Nagel, R. (1995), “<em>Unravelling in guessing games : An experimental study</em>”</a> showed that over 12,000 answers, the average is 35.24.</li>
+<li>Is Common Knowledge of Rationality a ‘bad’ assumption? How can we connect our theories with experimental evidence?</li>
 </ul>
-<hr>
-</section>
-<section id="the-prisoners-dilemma" class="level2">
-<h2 class="anchored" data-anchor-id="the-prisoners-dilemma">The Prisoner’s Dilemma</h2>
-<p>Two criminal conspirators have been arrested and brought to interrogation. The police put them in separate cells and offer each prisoner a choice.</p>
-<p>If both cooperate with the investigation, they will get a lighter sentence of 10 years.</p>
-<p>If either one agrees to testify but not the other, the one who cooperated will go free and the one who didn’t gets a full 20 years.</p>
-<p>If neither cooperates, the prosecutor won’t have enough of a case and the criminals will only serve 1 year each for misdemeanors.</p>
-<hr>
-</section>
-<section id="what-would-you-choose" class="level2">
-<h2 class="anchored" data-anchor-id="what-would-you-choose">What would you choose?</h2>
+</div>
+<div class="notes">
 <ul>
-<li><p>Remember that you cannot communicate with your fellow prisoner</p></li>
-<li><p>How would you have to be that they won’t sell you out for you to choose to keep quiet?</p></li>
+<li>discuss different types of approaches people took</li>
+<li>how would they revise guess 2nd time?</li>
 </ul>
+</div>
 <hr>
-</section>
-<section id="nash-equilibrium-in-the-prisoners-dilemma" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-the-prisoners-dilemma">Nash Equilibrium in the Prisoners’ Dilemma</h2>
-<p>Although the outcome where both criminals keep quiet <em>Pareto dominates</em> the outcome where they both testify and serve 10 years, would it be stable?</p>
-<ul>
-<li><p>In the {Quiet, Quiet} strategy profile, either player could deviate to Testify and shorten their prison time.</p></li>
-<li><p>{Testify, Testify} is the only <em>stable</em> strategy profile, where no one could unilaterally deviate to decrease their sentence.</p></li>
-</ul>
-<hr>
-</section>
-<section id="draw-prisoners-dilemma-in-strategic-form" class="level2">
-<h2 class="anchored" data-anchor-id="draw-prisoners-dilemma-in-strategic-form">Draw Prisoners’ Dilemma in Strategic Form:</h2>
-<hr>
-</section>
-<section id="does-this-look-familiar" class="level2">
-<h2 class="anchored" data-anchor-id="does-this-look-familiar">Does this look familiar?</h2>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Split</th>
-<th>Steal</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Split</td>
-<td><span class="math inline">\((\$6,800, \$6,800)\)</span></td>
-<td><span class="math inline">\((\$0, 13,600)\)</span></td>
-</tr>
-<tr class="even">
-<td>Steal</td>
-<td><span class="math inline">\((\$13,600, \$0)\)</span></td>
-<td><span class="math inline">\((\$0, \$0)\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Although the numbers are different, the structure is the same.</p>
-<p><em>Split or Steal</em> is a <em>Prisoners’ Dilemma</em></p>
-<hr>
-</section>
-<section id="watch-what-happens" class="level2">
-<h2 class="anchored" data-anchor-id="watch-what-happens">Watch what happens</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/S0qjK3TWZE8?t=141" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>start from 2:20</p>
-<hr>
-</section>
-<section id="discuss" class="level2">
-<h2 class="anchored" data-anchor-id="discuss">Discuss</h2>
-<ul>
-<li>Did Nick change the structure of the game?</li>
-</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

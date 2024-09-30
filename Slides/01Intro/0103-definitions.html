@@ -112,102 +112,266 @@ window.Quarto = {
 
 
 
-<section id="nash-equilibrium" class="level1">
-<h1>Nash Equilibrium</h1>
-<section id="solving-simultaneous-games" class="level2">
-<h2 class="anchored" data-anchor-id="solving-simultaneous-games">Solving Simultaneous Games</h2>
+<section id="what-is-a-game-definitions" class="level1">
+<h1>What is a Game? Definitions</h1>
+<section id="examples-of-some-questions" class="level2">
+<h2 class="anchored" data-anchor-id="examples-of-some-questions">Examples of some questions:</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>When should the Ducks play a running play or passing play?</li>
+<li>Why is a pdf textbook so expensive?!</li>
+<li>Why did the US and USSR adopt Mutually Assured Destruction?</li>
+<li>Why do people give engagement rings?</li>
+</ul>
+</div>
+</section>
+<section id="what-do-all-these-questions-have-in-common" class="level2">
+<h2 class="anchored" data-anchor-id="what-do-all-these-questions-have-in-common">What do all these questions have in common?</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>They all involve people making choices which depend on the choices of others</p></li>
+<li><p>In other words, they are questions of <span class="hi">strategy</span>:</p>
+<blockquote class="blockquote">
+<p><strong>Strategic interdependence</strong> is present in a social situation when what is best for someone <em>depends</em> on what someone else does. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</blockquote></li>
+</ul>
+</div>
+</section>
+<section id="a-definition-of-a-game" class="level2">
+<h2 class="anchored" data-anchor-id="a-definition-of-a-game">A definition of a game <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
+<p>A <strong>Game</strong> consists of:</p>
 <ul>
-<li><p>Before we cover how to solve a game, we first need to discuss what a solution to a game even is.</p></li>
-<li><p>As with many types of problem in economics, we’re interested in finding an <em>equilibrium</em>:</p>
+<li>a collection of decision-makers, called <span class="hi">players</span>;</li>
+<li>the set of <span class="hi">information</span> available to each player;</li>
+<li>the <span class="hi">strategies</span> available to each player in each information state;</li>
+<li>a mapping from the intersection strategies of all players to outcomes;</li>
+<li><span class="hi">preferences</span> of the individual players over all possible outcomes</li>
+</ul>
+</section>
+</section>
+<section id="who-are-the-players" class="level1">
+<h1>Who are the players?</h1>
+<section id="what-defines-a-player" class="level2">
+<h2 class="anchored" data-anchor-id="what-defines-a-player">What defines a player?</h2>
 <ul>
-<li>equilibrium a situation which is “stable,” in that there is no incentive to change.</li>
+<li><p><span class="h">Preferences</span>: Everyone has certain things they <em>want</em>.</p>
+<p>But you usually can’t get everything you want; economics is all about <em>constrained choices</em>.</p>
+<p>So its important to have priorities and to understand which things people prefer to others.</p></li>
+<li><p><span class="h">Information</span>: Some people might be better informed than others.</p></li>
+<li><p><span class="h">Beliefs</span>: What do I think about when I have to make a strategic choice?</p></li>
+</ul>
+</section>
+<section id="preferences" class="level2">
+<h2 class="anchored" data-anchor-id="preferences">Preferences</h2>
+<p><span class="h">Preferences</span> describe the subjective ranking that we put on different alternatives.</p>
+<p>For example, on the set of Eugene boba stores, my preference ranking goes like this;</p>
+<div class="incremental">
+<ol class="incremental" type="1">
+<li><a href="https://www.daynightboba.com/">Day &amp; Night</a> - they have mango sago, cute location</li>
+<li><a href="https://maps.app.goo.gl/zCVTUnaaYLD1Rwaw6">Tea 4</a> - major chain, good quality and selection</li>
+<li><a href="">Bobahead</a> - no more campus location 😔</li>
+<li>No boba</li>
+<li><a href="http://therabbitholeteabar.com/">Rabbit Hole</a> - no hate, just not for me</li>
+</ol>
+</div>
+</section>
+<section id="rational-preferences" class="level2">
+<h2 class="anchored" data-anchor-id="rational-preferences">Rational Preferences</h2>
+<p>The <span class="h">rational model</span> of choice is the foundation of all economics.</p>
+<p>Its assumptions are that:</p>
+<div class="incremental">
+<ul class="incremental">
+<li>People have <span class="h">complete preferences</span>
+<ul class="incremental">
+<li>for <em>every</em> pair of options, you can either tell me which you prefer or that you are <em>indifferent</em></li>
+<li>for any pair of deserts, <span class="math inline">\(\{ \ 🍨 \ , \ 🍩 \ \}\)</span>, either <span class="math inline">\((🍨 \succ 🍩 \ )\)</span>, or <span class="math inline">\((🍩 \ \succ 🍨 \ )\)</span>, or <span class="math inline">\((🍨 \sim 🍩 \ )\)</span></li>
+</ul></li>
+<li>Preferences are <span class="h">transitive</span>
+<ul class="incremental">
+<li>if <span class="math inline">\((☕ \succ 🍵 \ )\)</span> and <span class="math inline">\((🍵 \succ 🍶 \ )\)</span>, then <span class="math inline">\((☕ \succ 🍶)\)</span> ( for any <span class="math inline">\(\{☕ \ , 🍵 \ , 🍶 \ \} \in 🫖 \ \)</span>)</li>
 </ul></li>
 </ul>
-<hr>
+</div>
 </section>
-<section id="nash-equilibrium-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-1">Nash Equilibrium</h2>
-<p>The most basic form of equilibrium in game theory is the <span class="h">Nash Equilibrium (NE)</span>, which can be described as:</p>
+<section id="rational-preferences-cont." class="level2">
+<h2 class="anchored" data-anchor-id="rational-preferences-cont.">Rational Preferences (cont.)</h2>
+<p>Another key assumption of rationality is that we can represent preferences by real numbers.</p>
+<p>A <span class="h">utility function</span> maps a choice to a single number.</p>
+<p>For example, let <span class="math inline">\(u(.)\)</span> be the utility function from emoji to utils</p>
 <ul>
-<li><p>A strategy profile such that no player can obtain a larger payoff by <em>unilaterally deviating</em></p></li>
-<li><p>A strategy profile such that no single player can make themselves better off by changing only their own strategy.</p></li>
-<li><p>A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision</p></li>
+<li><p>I can have <span class="math inline">\(u(🍺) =5\)</span>, <span class="math inline">\(u(🌯)=10\)</span>, <span class="math inline">\(u(🤸)=25\)</span></p></li>
+<li><p>I can also have <span class="math inline">\(u(🍺 \ , 🌯) = 20\)</span>, <span class="math inline">\(u(🍺 \ , 🌯 \ , 🤸) = 15\)</span></p></li>
 </ul>
 <hr>
 </section>
-<section id="the-prisoners-dilemma" class="level2">
-<h2 class="anchored" data-anchor-id="the-prisoners-dilemma">The Prisoner’s Dilemma</h2>
-<p>Two criminal conspirators have been arrested and brought to interrogation. The police put them in separate cells and offer each prisoner a choice.</p>
-<p>If both cooperate with the investigation, they will get a lighter sentence of 10 years.</p>
-<p>If either one agrees to testify but not the other, the one who cooperated will go free and the one who didn’t gets a full 20 years.</p>
-<p>If neither cooperates, the prosecutor won’t have enough of a case and the criminals will only serve 1 year each for misdemeanors.</p>
-<hr>
-</section>
-<section id="what-would-you-choose" class="level2">
-<h2 class="anchored" data-anchor-id="what-would-you-choose">What would you choose?</h2>
-<ul>
-<li><p>Remember that you cannot communicate with your fellow prisoner</p></li>
-<li><p>How would you have to be that they won’t sell you out for you to choose to keep quiet?</p></li>
+<section id="ordinal-vs.-cardinal-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="ordinal-vs.-cardinal-numbers">Ordinal vs.&nbsp;Cardinal numbers</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p><span class="h">Cardinal:</span> amounts which can be measured in meaningful units are <em>cardinal numbers</em></p>
+<ul class="incremental">
+<li>examples: $9.99, 80 students, 50:50 odds</li>
+</ul></li>
+<li><p><span class="h">Ordinal:</span> all that matters is the <em>relative ranking</em></p>
+<ul class="incremental">
+<li>examples: utility; what does 100 utility mean? (it’s less than 200)</li>
+</ul></li>
 </ul>
+</div>
 <hr>
 </section>
-<section id="nash-equilibrium-in-the-prisoners-dilemma" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-the-prisoners-dilemma">Nash Equilibrium in the Prisoners’ Dilemma</h2>
-<p>Although the outcome where both criminals keep quiet <em>Pareto dominates</em> the outcome where they both testify and serve 10 years, would it be stable?</p>
-<ul>
-<li><p>In the {Quiet, Quiet} strategy profile, either player could deviate to Testify and shorten their prison time.</p></li>
-<li><p>{Testify, Testify} is the only <em>stable</em> strategy profile, where no one could unilaterally deviate to decrease their sentence.</p></li>
+<section id="dont-worry" class="level2">
+<h2 class="anchored" data-anchor-id="dont-worry">Don’t worry!</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>For this class, you won’t need to worry about utility functions (if you want to, take EC311).</p></li>
+<li><p>I will almost always give you specific values of utility which we will call <span class="hi">payoffs</span>.</p></li>
+<li><p>The table on the previous page is a good example.</p></li>
 </ul>
+</div>
 <hr>
 </section>
-<section id="draw-prisoners-dilemma-in-strategic-form" class="level2">
-<h2 class="anchored" data-anchor-id="draw-prisoners-dilemma-in-strategic-form">Draw Prisoners’ Dilemma in Strategic Form:</h2>
+<section id="strategic-choice-vs.-other-types-of-choices" class="level2">
+<h2 class="anchored" data-anchor-id="strategic-choice-vs.-other-types-of-choices"><em>Strategic</em> Choice vs.&nbsp;other types of choices</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Economics is the study of <span class="hi">constrained choice</span>; in EC311, we introduce the <em>utility maximization problem</em> as the workhorse model</p>
+<ul class="incremental">
+<li>These types of problems usually only involve one agent; the consumer, who is only constrained by their budget</li>
+</ul></li>
+<li><p>We use the term <span class="hi"><em>strategic games</em></span> to distinguish from these single-agent optimization problems</p></li>
+<li><p>A <span class="hi"><em>game</em></span> is a type of problem featuring multiple agents, called <span class="hi">players</span>, in which their optimal choice <span class="hii">depends on the optimal choices of other players</span>.</p></li>
+</ul>
+</div>
 <hr>
 </section>
-<section id="does-this-look-familiar" class="level2">
-<h2 class="anchored" data-anchor-id="does-this-look-familiar">Does this look familiar?</h2>
-<table class="table">
+<section id="state-dependent-utility-table" class="level2">
+<h2 class="anchored" data-anchor-id="state-dependent-utility-table">State-dependent utility table</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Sometimes my enjoyment of a thing depends on the <em>state</em> of the world</li>
+</ul>
+<table class="table-striped table-hover table">
+<caption>socially-dependent preferences</caption>
 <thead>
 <tr class="header">
-<th></th>
-<th>Split</th>
-<th>Steal</th>
+<th>My choice</th>
+<th style="text-align: center;">My friends’ choice</th>
+<th style="text-align: center;">My utility</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Split</td>
-<td><span class="math inline">\((\$6,800, \$6,800)\)</span></td>
-<td><span class="math inline">\((\$0, 13,600)\)</span></td>
+<td>Duck’s game</td>
+<td style="text-align: center;">Duck’s game</td>
+<td style="text-align: center;">3</td>
 </tr>
 <tr class="even">
-<td>Steal</td>
-<td><span class="math inline">\((\$13,600, \$0)\)</span></td>
-<td><span class="math inline">\((\$0, \$0)\)</span></td>
+<td>Duck’s game</td>
+<td style="text-align: center;">Stay home</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="odd">
+<td>Stay home</td>
+<td style="text-align: center;">Duck’s game</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td>Stay home</td>
+<td style="text-align: center;">Stay home</td>
+<td style="text-align: center;">2</td>
 </tr>
 </tbody>
 </table>
-<p>Although the numbers are different, the structure is the same.</p>
-<p><em>Split or Steal</em> is a <em>Prisoners’ Dilemma</em></p>
-<hr>
-</section>
-<section id="watch-what-happens" class="level2">
-<h2 class="anchored" data-anchor-id="watch-what-happens">Watch what happens</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/S0qjK3TWZE8?t=141" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>start from 2:20</p>
-<hr>
-</section>
-<section id="discuss" class="level2">
-<h2 class="anchored" data-anchor-id="discuss">Discuss</h2>
-<ul>
-<li>Did Nick change the structure of the game?</li>
+<ul class="incremental">
+<li>Is this an example of a <span class="hi">strategic</span> or <span class="hi">non-strategic</span> choice?</li>
 </ul>
+</div>
+</section>
+</section>
+<section id="taxonomy-of-games" class="level1">
+<h1>Taxonomy of Games</h1>
+<section id="general-categories" class="level2">
+<h2 class="anchored" data-anchor-id="general-categories">General Categories</h2>
+<ul>
+<li><p><span class="h">Sequential</span> or <span class="h">Simultaneous</span>?</p></li>
+<li><p><span class="h">Zero-sum</span> or not</p></li>
+<li><p><span class="h">Perfect</span> or <span class="h">Imperfect</span> information?</p>
+<ul>
+<li>is info <span class="hi">symmetric</span> or <span class="hi">asymmetric</span>?</li>
+</ul></li>
+<li><p><span class="h">One-shot</span> or <span class="h">Repeated</span>?</p></li>
+<li><p>‘<span class="h">Noncooperative</span>’ or ‘<span class="h">Cooperative</span>’?</p></li>
+</ul>
+<hr>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><span class="h">Sequential</span> Games</p>
+<ul>
+<li><p>players make their moves one after the other</p></li>
+<li><p><span class="hi">Chapter</span> 3</p></li>
+<li><p><span class="hi">Visual tool</span>: <em>game trees</em></p></li>
+<li><p><span class="hi">Solution Method</span>: <em>backwards induction</em></p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><span class="h">Simultaneous</span> Games</p>
+<ul>
+<li><p>players make their moves at the same time</p></li>
+<li><p><span class="hi">Chapter</span> 4 &amp; 5</p></li>
+<li><p><span class="hi">Visual tool</span>: <em>payoff tables</em></p></li>
+<li><p><span class="hi">Solution Method</span>: <em>best responses</em>, deletion of <em>dominated strats</em></p></li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="zero-sum-games" class="level2">
+<h2 class="anchored" data-anchor-id="zero-sum-games">Zero-sum games</h2>
+<div class="incremental">
+<p>When the <em>total payoffs of all players sum to 0</em></p>
+<ul class="incremental">
+<li><p>i.e, one player’s gain is another player’s loss</p></li>
+<li><p>Examples: NCAA Football Championship, Scramble for Africa (technically <em>constant</em>-sum)</p></li>
+</ul>
+<p>Not all games are fixed or zero sum;</p>
+<ul class="incremental">
+<li>Examples: Hiring a tutor (mutual gains), Wargames (1983) “the only winning move is not to play”</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="full-or-equal-information" class="level2">
+<h2 class="anchored" data-anchor-id="full-or-equal-information">Full or Equal Information</h2>
+<p>How much does each player know when they decide?</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p><span class="h">Perfect Information</span>: when players know all previous moves and external circumstances</p>
+<ul class="incremental">
+<li>players may have <span class="hi"><em>imperfect info</em></span>; uncertainty about the state of the world, previous’ moves, or other player’s ‘type’</li>
+</ul></li>
+<li><p><span class="h">Asymmetric Info</span>: when one player has access to information that other players do not</p>
+<ul class="incremental">
+<li><p>Examples: hand in poker, used car salesmen</p></li>
+<li><p>Topics: Signaling, Screening</p></li>
+</ul></li>
+</ul>
+</div>
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><em>Harrington</em>, pg. 2<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>adapted from <a href="https://www2.econ.iastate.edu/tesfatsi/">Leigh Tesfatsion</a>’s slides<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
