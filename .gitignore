@@ -9,8 +9,9 @@
 **.fdb_latxmk
 **.fls
 **.log
-**.syntex.gz
+**.synctex.gz
 **.out
+**.fdb_latexmk
 
 # don't check rendered site into git
 /.quarto/

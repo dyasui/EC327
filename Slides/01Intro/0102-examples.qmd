@@ -1,0 +1,97 @@
+
+## What is a *game* of strategy?
+
+> Game theory: It's not all fun and games!
+
+---
+
+## Examples of *strategic games*:
+
+Where in the goal should you kick a penaly shot?
+
+```{=html}
+<iframe width="780" height="500" src="https://www.coolmathgames.com/0-penalty-kick-online" title="penalty-kick-online"></iframe>
+```
+
+---
+
+## Examples of *strategic games*:
+
+Where in the goal should you kick a penaly shot?
+
+::: {.incremental}
+  - Left, Right, Center? Up or Down?
+  - Is there one best place to kick?
+  - What if you always choose top right corner?
+  - Besides soccer;
+    - Which offensive play in football?
+    - Where to serve in a tennis court?
+:::
+
+---
+
+## Examples of *strategic games*:
+
+If 100% of your grade in this class is decided by a *curve*, how much should you study?
+
+::: {.incremental}
+  - If you can all agree to take a chill quarter and not study, you could all get A's
+  - But what if there's at least one try-hard?
+  - Now how much should you study, even if you already promised you wouldn't?
+  - Do you think everyone else will keep their promise?
+:::
+
+---
+
+## Examples of *strategic games*:
+
+Should you give an engagement ring to the person you want to marry?
+
+:::{.incremental}
+  - Why buy an expensive trinket when you could save the money for a house, etc?
+  - Does it matter if your recently engaged friends gave (or received) engagement rings?
+  - Does your paycheck vs. how much your fiancee makes matter?
+:::
+
+---
+
+## Examples of *strategic games*:
+
+In economics, why do we say there is a ***law of one price***?
+
+::: {.incremental}
+Imagine I set up a competing Starbucks franchise in the EMU
+  - If they sell PSL for \$6.50, what happens if I sell them for \$6.49?
+  - What if I sell for \$6.51?
+
+This has been your EC201 review!
+:::
+
+---
+
+## Examples of *strategic games*:
+
+Should the US try to defeat its rivals through `global thermonuclear war`?
+
+::: {.incremental}
+  - Why did the US and USSR amass massive nuclear stockpiles?
+  - Why has a nuclear weapon never been used in anger since Nagasaki?
+  - Are anti-ballistic missiles destabilizing to international relations?
+:::
+
+---
+
+![](figures/WargamesList.png)
+
+---
+
+## Examples of *strategic games*:
+
+What do these examples have in common?
+
+::: {notes}
+  - ask class for ideas
+  - point out the methods of thinking through these questions
+  - all can be answered with 'it depends'
+    - specifically it depends on the actions (and thoughts) of others
+:::

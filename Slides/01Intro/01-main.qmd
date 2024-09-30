@@ -1,0 +1,71 @@
+---
+title: "Introduction to Game Theory"
+subtitle: "General Principles"
+author: "Dante Yasui"
+date: last-modified
+date-format: "YYYY"
+format:
+    revealjs:
+        theme: [default, styles.scss]
+        slide-number: true
+        footer: "EC327 | Lecture 1 | Introduction"
+        preview-links: auto
+        code-fold: true
+        logo: figures/UOSignature-356.png
+title-slide-attributes:
+  data-background-position: left
+output:
+  beamer_presentation:
+    keep_tex: yes
+resources:
+  - Syllabus/main.pdf
+---
+
+::: {.vertical-center}
+
+[Outline]{.hi .big}
+  * Introductions
+  * What is EC327?
+    - Syllabus
+    - Schedule & Assignments 
+    - Office Hours
+  * What is Game Theory?
+    - What are strategic games?
+    - How can we classify games?
+:::
+
+# Introductions
+
+## Welcome to the Class!
+
+### About Me:
+ - [Preferred Name]{.hi}: Dante
+ - [Preferred Pronouns]{.hi}: he, him
+ - 4th year Econ Phd student
+ - Davis, CA -> Portland, OR -> Eugene, OR
+---
+
+## Introduce Yourselves 
+
+[IntroQuiz](https://docs.google.com/forms/d/e/1FAIpQLSdZertk6mirIaE1zmtclhUO8TuxpgyTvsXL06xHmHFPcDllTw/viewform?usp=sf_link)
+
+ - Your preferred name, pronouns; to help me get to know you
+ 
+ - Why did you choose this class?
+ 
+ - Song recommendation for [class playlist](https://open.spotify.com/playlist/5aFLYWuGq28OeWroNElDba?si=364ce7efa2584842)
+ 
+---
+
+# What is EC327?
+
+{{< include 0100-syllabus.qmd >}}
+
+# What is Game Theory?
+
+{{< include 0101-prologue.qmd >}}
+
+{{< include 0102-examples.qmd >}}
+
+{{< include 0103-definitions.qmd >}}
+

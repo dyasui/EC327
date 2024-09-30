@@ -1,0 +1,68 @@
+
+## Motivation
+
+What is the goal of [Game Theory]{.hi}?
+
+> To understand social behavior
+
+. . .
+
+Why do economists study Game Theory?
+
+> We are *social* scientists
+
+> To make models, predictions, hypotheses, etc. on which to base our research
+
+---
+
+## Motivation
+
+Why should [you]{.hi} study game theory?
+
+. . .
+
+> Practice your strategic decision-making in a safe environment
+>
+> Develop your intuition for social interactions in a systematic way
+> 
+> Feed your curiosity for economics, social science, or philosophical questions!
+
+. . .
+
+## What is theory?
+
+What is the point of *theory*?
+
+::: {.incremental}
+[Simplify complex systems]{.hi}
+  - understanding one part at a time is easier than trying to 
+[Generate *falsifiable* hypotheses]{.hi}
+  - good econometrics is informed by good theory
+:::
+
+::: notes
+  * Use map example:
+  * World Atlas or UOCampus Map?
+  * Which is better depends on which is more useful
+:::
+
+---
+
+### Theory in a data-driven world?
+
+  > "The theory of economics does not furnish a body of settled conclusions
+immediately applicable to policy. It is a method rather than a doctrine, an
+apparatus of the mind, a technique of thinking which helps its possessor to draw
+correct conclusions." — Keynes
+
+### What are the limits to theory?
+
+::: {.incremental}
+  * Our models will never be perfect representations of reality
+  * But we should know how well they *approximate* the parts of the world we want to understand
+  * Theory is very useful for generating *falsifiable hypotheses*, which we can then use to guide experimental or statistical tests
+  * As we play games in class, we will observe the data and compare to our theoretical predictions
+:::
+
+---
+

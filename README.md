@@ -26,9 +26,9 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 | 1        | 1, 2           | Intro & General Principles                                          |
 | 2        | 3              | Sequential Move Games                                               |
 | 3        | 4              | Simultaneous Move Games                                             |
-| 4        | 5              | Simultaneous Games: Continuous Strategies, Discussion, and Evidence |
-| 5        | 6              | Combining Sequential and Simultaneous Moves                         |
-| 6        | 6              | Review & **Midterm**                                                |
+| 4        | 6              | Combining Sequential and Simultaneous Moves                         |
+| 5        | 6              | Review & **Midterm**                                                |
+| 6        | 5              | Simultaneous Games: Continuous Strategies, Discussion, and Evidence |
 | 7        | 7              | Mixed Strategies                                                    |
 | 8        | 8              | Strategic Moves                                                     |
 | 9        | 9              | Uncertainty and Information                                         |
@@ -39,9 +39,7 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 ## Lectures
 
-[00 - Syllabus](https://dyasui.github.io/EC327/Slides/00SyllabusDay/SyllabusDay.html)
-
-[01 - Intro to Theory and Strategic thinking](https://dyasui.github.io/dyasui/EC327/Slides/01Intro/Intro.html)
+[01 - Introduction](https://dyasui.github.io/dyasui/EC327/Slides/01Intro/01-main.html)
 
 [02 - Sequential Games](https://dyasui.github.io/dyasui/EC327/Slides/02SequentialGames/02SequentialGames.html)
 
