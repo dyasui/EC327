@@ -12,6 +12,7 @@
 **.synctex.gz
 **.out
 **.fdb_latexmk
+**.dvi
 
 # don't check rendered site into git
 /.quarto/
