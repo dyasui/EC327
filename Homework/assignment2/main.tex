@@ -89,11 +89,41 @@
   \part Consider the strategic form game below:
   \begin{table}[h!]
     \begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabular}{*{5}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{3}{c}{$P_2$} \\\cline{3-5}
+      \multicolumn{1}{c}{} &     & $x$ & $y$ & $z$ \\\cline{2-5}
+      \multirow{3}*{$P_1$}  & $a$ & 1,3 & 2,2 & 3,2 \\\cline{2-5}
+                           & $b$ & 2,2 & 2,2 & 4,3 \\\cline{2-5}
+                           & $c$ & 1,1 & 0,2 & 1,1 \\\cline{2-5}
+    \end{tabular}
+    \end{center}
+  \end{table}
+  In the game above, which strategy is strictly dominated?
+  \begin{choices}
+    \choice $a$
+    \choice $b$ 
+    \CorrectChoice $c$
+    \choice $x$
+  \end{choices}
+
+  \part Perform Iterative Deletion of Strictly Dominated Strategies for the same game as above all the way to completion.
+  What does IDSDS tell you about the Nash equilibrium of this game?
+  \begin{choices}
+    \choice The NE is (a, x)
+    \choice The NE is (a, y)
+    \choice The NE is (Y, z)
+    \CorrectChoice IESDS by itself does not reveal the NE of this game.
+  \end{choices}
+
+  \part Consider the strategic form game below:
+  \begin{table}[h!]
+    \begin{center}
     \begin{tabular}{*{4}{c|}}
-      \multicolumn{2}{c}{} & \multicolumn{1}{c}{$Oregon~Driver$} \\\cline{3-4}
-      \multicolumn{1}{c}{} & & $Swerve$ & $Straight$ \\\cline{2-4}
-      \multirow{2}*{$California~Driver$}  & $Swerve$ & -1,-1 & 1,1 \\\cline{2-4}
-                           & $Straight$ & 1,1 & -1,-1 \\\cline{2-4}
+      \multicolumn{2}{c}{} & \multicolumn{1}{c}{$OD$} \\ \cline{3-4}
+      \multicolumn{1}{c}{} &                           & $Swerve$ & $Straight$ \\ \cline{2-4}
+      \multirow{2}*{$CD$}  & $Swerve$                  & -1,-1    & 1,1        \\ \cline{2-4}
+                           & $Straight$                & 1,1      & -1,-1      \\ \cline{2-4}
     \end{tabular}
     \end{center}
   \end{table}

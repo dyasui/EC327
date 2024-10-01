@@ -1,4 +1,4 @@
-\documentclass[addpoints, answers]{exam}
+\documentclass[addpoints]{exam}
 
 \usepackage{amssymb, amsmath, amsfonts}
 \usepackage{geometry}
@@ -25,7 +25,7 @@
     Homework $\#1$
     }
 \author{University of Oregon}
-\date{Due: Jan. 26$^{th}$}
+\date{Due: Oct. 11$^{th}$}
 
 % exam-type question formatting
 \renewcommand{\thequestion}{\textbf{Question \arabic{question}}}
@@ -52,8 +52,8 @@
 %  If you want to, you can include your student ID instead.
 
   \item Complete \textit{all} questions and parts.
-  I will select one question at random to be graded
-  according to the rubric on Canvas.
+  % I will select one question at random to be graded
+  % according to the rubric on Canvas.
 
   \item You may choose to work with others,
   but everyone must submit to Canvas individually.
@@ -85,6 +85,22 @@
 \textbf{Multiple Choice}
 
 \begin{parts}
+
+  \part 
+  \textbf{A}lice, \textbf{B}ob, and \textbf{C}onfucious 
+  each put one dollar in a pot and each toss a fair coin.
+  \textbf{A}lice wins if the coins are \textit{all heads} \textbf{or} \textit{all tails},
+  \textbf{B}ob wins if there are \textit{2 heads} and \textit{1 tail},
+  and \textbf{C}onfucious wins if there are \textit{1 head} and \textit{2 tails}.
+
+  What are the \textit{expected payoffs} for each player? 
+  \footnote{Adapted from Dixit, Skeath, \& McAdams (2021)}
+  \begin{choices}
+    \choice $EU_A = \$0$,  $EU_B = \$0$,  $EU_C = \$0$ 
+    \CorrectChoice $EU_A = -\$0.25$,  $EU_B = \$0.125$,  $EU_C = \$0.125$ 
+    \choice $EU_A = -\$0.50$,  $EU_B = \$0.25$,  $EU_C = \$0.25$ 
+    \choice $EU_A = \$0.50$,  $EU_B = -\$0.25$,  $EU_C = -\$0.25$
+  \end{choices}
 
   \part Consider three different outcomes, $A$, $B$, and $C$.
   Outcome $A$ is Pareto efficient,
@@ -123,84 +139,21 @@
     \choice $\{ L, \ x  \}$ 
   \end{choices}
 
-  \part Consider the strategic form game below:
-  \begin{table}[h!]
-    \begin{center}
-    \setlength{\extrarowheight}{2pt}
-    \begin{tabular}{*{5}{c|}}
-      \multicolumn{2}{c}{} & \multicolumn{3}{c}{$P_2$} \\\cline{3-5}
-      \multicolumn{1}{c}{} &     & $x$ & $y$ & $z$ \\\cline{2-5}
-      \multirow{3}*{$P_1$}  & $a$ & 1,3 & 2,2 & 3,2 \\\cline{2-5}
-                           & $b$ & 2,2 & 2,2 & 4,3 \\\cline{2-5}
-                           & $c$ & 1,1 & 0,2 & 1,1 \\\cline{2-5}
-    \end{tabular}
-    \end{center}
-  \end{table}
-  In the game above, which strategy is strictly dominated?
-  \begin{choices}
-    \choice $a$
-    \choice $b$ 
-    \CorrectChoice $c$
-    \choice $x$
-  \end{choices}
+  \part Consider the variation of the Survivor Flags game with 100 flags
+  where each team taking any number of flags between 1 and 10 
+  and the team to take the last flag wins.
 
-  \part Perform Iterative Deletion of Strictly Dominated Strategies for the same game as above all the way to completion.
-  What does IDSDS tell you about the Nash equilibrium of this game?
+  How many flags should the first team take?
   \begin{choices}
-    \choice The NE is (a, x)
-    \choice The NE is (a, y)
-    \choice The NE is (Y, z)
-    \CorrectChoice IESDS by itself does not reveal the NE of this game.
+    \CorrectChoice 1
+    \choice 2
+    \choice 5
+    \choice 10
   \end{choices}
 
 \end{parts}
 
 \newpage
-
-%------------------------------------------------------------------%
-
-\question[20] 
-The countries of Oceania and Eurasia are at war.
-As depicted in the figure, Oceania has four cities —
-Argula, Betra, Carnat, and Dussel — 
-and it is concerned that one of them is to be bombed by Eurasia.
-The bombers could come from either base Alpha,
-which can reach the cities of Argula and Betra;
-or from base Beta, which can reach either Carnat or Dussel.
-Eurasia decides which one of these four cities to attack.
-Oceania doesn’t know which one has been selected,
-but does observe the base from which the bombers are flying.
-After making that observation, Oceania decides which one 
-(and only one) of its four cities to evacuate.
-
-Assign a payoff of 2 to Oceania
-if it succeeds in evacuating the city that is to be bombed
-and a payoff of 1 otherwise.
-Assign Eurasia a payoff of 1 if the city it bombs was not evacuated
-and a zero payoff otherwise.
-Write down the extensive form game.
-\footnote{Harrington \textit{Games, Strategies, and Decision Making}}
-
-%\vspace{-5cm}
-\begin{figure}[!h]
-  \centering
-  \includegraphics[width=.3\linewidth]{figures/figPR2.1.png} 
-\end{figure}
-
-\begin{solution}
-  \begin{center}
-    \include{figures/OceaniavsEurasia} 
-  \end{center} 
-
-  Note that $A$, $B$, $C$, and $D$ in the last row are short for the city names.
-  Eurasia acts first, so the initial node is labelled accordingly.
-  Oceania has only two info sets which are represented with the dashed ovals.
-  The $(0,2)$ or $(1,0)$ payoff sets correspond to Oceania choosing the same city that is bombed,
-  or choosing a different city respectively.
-\end{solution}
-
-\newpage
-
 
 %------------------------------------------------------------------
 
@@ -319,203 +272,275 @@ win $\succ$ tie $\succ$ loss.
 
 %------------------------------------------------------------------
 
-\question%[20]
-Here's a little ditty, about Jack and Diane,
-two American kids growing up in the heartland.
-The game is below.
-\footnote{Cliff Bekar, Lewis and Clark College}
+\question[20]
+Analyze the extensive form game tree from Fraser, Hipel, and Monte,
+\textit{Approaches to conflict modeling: A study of a possible USA-USSR nuclear confrontation},
+Journal of Policy Modeling,
+1983.
 
-  \begin{table}[h!]
-    \centering
-    \setlength{\extrarowheight}{2pt}
-    \begin{tabular}{*{5}{c|}}
-      \multicolumn{2}{c}{} & \multicolumn{3}{c}{Diane} \\\cline{3-5}
-      \multicolumn{1}{c}{} &     & $x$ & $y$ & $z$ \\\cline{2-5}
-      \multirow{3}*{Jack}  & $a$ & 1,1 & 2,1 & 2,0 \\\cline{2-5}
-                           & $b$ & 2,3 & 0,2 & 2,1 \\\cline{2-5}
-                           & $c$ & 2,1 & 1,2 & 3,0 \\\cline{2-5}
-    \end{tabular}
-  \end{table}
+\textbf{Abstract}: 
+\begin{quote}
+  A possible nuclear confrontation between the USA and USSR is analyzed using
+  five different models from game theory in order to compare the various
+  approaches that can be taken in the analysis of conflicts. Of particular
+  importance is an improved metagame analysis model that provides a
+  comprehensive procedure for analyzing not only the nuclear conflict but also
+  any other type of real world conflict that can arise in practice. When the
+  improved metagame analysis model is linked with a new state transition model,
+  the dynamics of the game can be thoroughly studied.
+\end{quote}
 
-\begin{parts}
-  \part[8] Find all pure Nash strategy profiles and outcomes 
-    if Jack and Diane move simultaneously.
-    Carefully detail and explain your strategy profiles 
-    and how they map onto your Nash outcomes. 
-    \part[12] Find all pure Nash strategy profiles and outcomes
-    if Jack moves first.
-    Carefully detail and explain your strategy profiles 
-    and how they map onto your Nash outcomes.
-\end{parts}
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=.8\linewidth]{figures/FraserHipelMonte-fig2.png} 
+\end{figure}
 
-\begin{solution}
-  \begin{parts} 
-    \part Players: $\{ \text{Jack, Diane} \}$
+\hrule
 
-    Strategy sets: $S_{\text{Jack}} = \{ a, b, c \}$
-    $S_{\text{Diane}} = \{ x, y, c \}$
-
-    For Jack, $b$ and $c$ are best responses to $x$,
-    $a$ is BR to $y$,  
-    and $c$ is BR to $z$.
-
-    For Diane, $x$ and $y$ are BR to $a$,
-    $x$ is BR to $b$,
-    and $z$ is BR to $c$.
-
-    There are two strategy profiles where each player's best responses intersect:
-
-    \begin{itemize}
-      \item $N_1 = \{ b, x \}$ 
-
-      Jack's strategy is to choose $b$, 
-      Diane's strategy is to choose $x$.
-      Neither have regrets about their strategy choice;
-      given that Jack is choosing $b$, Diane can't get a higher payoff by deviating.
-      Given that Diane is playing $x$, Jack is indifferent between playing $b$ and $c$ but he can't get a strictly higher payoff by deviating. 
-      The resulting outcome is that Jack gets $2$, 
-      Diane gets $3$.
-      
-      \item $N_2 = \{ a, y \}$
-
-      Jack's strategy is $a$, Diane's is $y$. 
-      When Jack plays $a$, Dianne is indifferent between $x$ and $y$, but
-      still cannot deviate to a strictly higher payoff.
-      When Diane plays $y$, Jack's best response is $a$ because $2>\{0,1\}$. 
-      The outcome is that Jack gets $2$ and Diane gets $1$.
-
-    \end{itemize}
-
-    These are the only two \textit{pure strategy} Nash equilibria
-    because there are no other intersections of pure strategy best responses.
-    Note that even though $N_1$ Pareto dominates $N_2$ 
-    (Jack is indifferent; $2=2$, and Diane is better off; $3>1$),
-    there is no \textit{unilateral} deviation that would reach $N_1$
-    from $N_2$.
-
-
-    \part
-    See the extensive form game tree below.
-
-    Now the strategy sets are: 
-
-    $S_{\text{Jack}} = \{ a, b, c \}$
-    because Jack still has only one decision node.
-
-    $S_{\text{Diane}} = \{$ any combination $ c_1 c_2 c_3$ where $c$ can be either $x$, $y$, or $z \}$
-    because Diane now has 3 elements in her information set.
-    She knows whether Jack has chosen $a$, $b$, or $c$ before she makes her own choice. 
-
-    I represented each of Diane's strategies as a triple where the first letter represents her choice at node 1, second letter at node 2, and third letter at node 3.
-    So for example, $xyz$ would be the strategy where she chooses $x$ in node $1$, $y$ in node $2$, and $z$ in node $3$. 
-
-    \begin{itemize}
-      
-      \item 
-      $\mathbf{N_1} = \{ a, \ yc_2c_3 | 
-      \text{where $c_2$ is $x$, $y$, or $z$;
-      $c_3$ is $x$ or $y$ } \}$
-
-      Any set of strategies in which Jack chooses $a$
-      and Diane chooses $y$ in node $1$ 
-      but doesn't choose $z$ at node $3$
-      would result in an equilibrium outcome of 
-      $({\color{red} 2},{\color{blue} 1})$
-      where Jack cannot deviate to a higher payoff than $2$,
-      and Diane also has no regrets with choosing $y$.
-
-      \item 
-      $\mathbf{N_2} = \{ b, \ xc_2c_3 |
-      \text{where $c_2$ could be $x$, $y$, or $z$;
-      $c_3$ could be either $x$ or $y$ }\}$
-
-      Any set of strategies in which Jack chooses $b$ 
-      and Diane doesn't choose $z$ at node $3$ 
-      would result in Jack choosing $b$ 
-      and Diane choosing $x$ given that jack chooses $b$. 
-
-      The equilibrium outcome of any of these Nash strategy profiles
-      would be $({\color{red} 2}, {\color{blue} 3})$
-
-    \end{itemize}
-
-  \end{parts}
-
-\begin{center}
-  \include{figures/JackthenDiane}
-\end{center}
-
-\end{solution}
-
-\newpage
-
+What is the \textit{rollback equilibrium} outcome?
 
 %------------------------------------------------------------------
 
-\question%[20]
-See the figures below for the data from our in-class activity 2 
-\footnote{You can also find the data on Canvas in the \textit{Activities} folder of the \textit{files} tab}.
-where teams took turns taking flags from a starting pool. 
-Note that in Game 1,
-6 out of 9 matches were won by the first team to take flags 
-and in Game 2, 3 of 9 matches were won by the starting team.
+% \question%[20]
+% Here's a little ditty, about Jack and Diane,
+% two American kids growing up in the heartland.
+% The game is below.
+% \footnote{Cliff Bekar, Lewis and Clark College}
+%
+%   \begin{table}[h!]
+%     \centering
+%     \setlength{\extrarowheight}{2pt}
+%     \begin{tabular}{*{5}{c|}}
+%       \multicolumn{2}{c}{} & \multicolumn{3}{c}{Diane} \\\cline{3-5}
+%       \multicolumn{1}{c}{} &     & $x$ & $y$ & $z$ \\\cline{2-5}
+%       \multirow{3}*{Jack}  & $a$ & 1,1 & 2,1 & 2,0 \\\cline{2-5}
+%                            & $b$ & 2,3 & 0,2 & 2,1 \\\cline{2-5}
+%                            & $c$ & 2,1 & 1,2 & 3,0 \\\cline{2-5}
+%     \end{tabular}
+%   \end{table}
+%
+% \begin{parts}
+%   \part[8] Find all pure Nash strategy profiles and outcomes 
+%     if Jack and Diane move simultaneously.
+%     Carefully detail and explain your strategy profiles 
+%     and how they map onto your Nash outcomes. 
+%     \part[12] Find all pure Nash strategy profiles and outcomes
+%     if Jack moves first.
+%     Carefully detail and explain your strategy profiles 
+%     and how they map onto your Nash outcomes.
+% \end{parts}
+%
+% \begin{solution}
+%   \begin{parts} 
+%     \part Players: $\{ \text{Jack, Diane} \}$
+%
+%     Strategy sets: $S_{\text{Jack}} = \{ a, b, c \}$
+%     $S_{\text{Diane}} = \{ x, y, c \}$
+%
+%     For Jack, $b$ and $c$ are best responses to $x$,
+%     $a$ is BR to $y$,  
+%     and $c$ is BR to $z$.
+%
+%     For Diane, $x$ and $y$ are BR to $a$,
+%     $x$ is BR to $b$,
+%     and $z$ is BR to $c$.
+%
+%     There are two strategy profiles where each player's best responses intersect:
+%
+%     \begin{itemize}
+%       \item $N_1 = \{ b, x \}$ 
+%
+%       Jack's strategy is to choose $b$, 
+%       Diane's strategy is to choose $x$.
+%       Neither have regrets about their strategy choice;
+%       given that Jack is choosing $b$, Diane can't get a higher payoff by deviating.
+%       Given that Diane is playing $x$, Jack is indifferent between playing $b$ and $c$ but he can't get a strictly higher payoff by deviating. 
+%       The resulting outcome is that Jack gets $2$, 
+%       Diane gets $3$.
+%
+%       \item $N_2 = \{ a, y \}$
+%
+%       Jack's strategy is $a$, Diane's is $y$. 
+%       When Jack plays $a$, Dianne is indifferent between $x$ and $y$, but
+%       still cannot deviate to a strictly higher payoff.
+%       When Diane plays $y$, Jack's best response is $a$ because $2>\{0,1\}$. 
+%       The outcome is that Jack gets $2$ and Diane gets $1$.
+%
+%     \end{itemize}
+%
+%     These are the only two \textit{pure strategy} Nash equilibria
+%     because there are no other intersections of pure strategy best responses.
+%     Note that even though $N_1$ Pareto dominates $N_2$ 
+%     (Jack is indifferent; $2=2$, and Diane is better off; $3>1$),
+%     there is no \textit{unilateral} deviation that would reach $N_1$
+%     from $N_2$.
+%
+%
+%     \part
+%     See the extensive form game tree below.
+%
+%     Now the strategy sets are: 
+%
+%     $S_{\text{Jack}} = \{ a, b, c \}$
+%     because Jack still has only one decision node.
+%
+%     $S_{\text{Diane}} = \{$ any combination $ c_1 c_2 c_3$ where $c$ can be either $x$, $y$, or $z \}$
+%     because Diane now has 3 elements in her information set.
+%     She knows whether Jack has chosen $a$, $b$, or $c$ before she makes her own choice. 
+%
+%     I represented each of Diane's strategies as a triple where the first letter represents her choice at node 1, second letter at node 2, and third letter at node 3.
+%     So for example, $xyz$ would be the strategy where she chooses $x$ in node $1$, $y$ in node $2$, and $z$ in node $3$. 
+%
+%     \begin{itemize}
+%
+%       \item 
+%       $\mathbf{N_1} = \{ a, \ yc_2c_3 | 
+%       \text{where $c_2$ is $x$, $y$, or $z$;
+%       $c_3$ is $x$ or $y$ } \}$
+%
+%       Any set of strategies in which Jack chooses $a$
+%       and Diane chooses $y$ in node $1$ 
+%       but doesn't choose $z$ at node $3$
+%       would result in an equilibrium outcome of 
+%       $({\color{red} 2},{\color{blue} 1})$
+%       where Jack cannot deviate to a higher payoff than $2$,
+%       and Diane also has no regrets with choosing $y$.
+%
+%       \item 
+%       $\mathbf{N_2} = \{ b, \ xc_2c_3 |
+%       \text{where $c_2$ could be $x$, $y$, or $z$;
+%       $c_3$ could be either $x$ or $y$ }\}$
+%
+%       Any set of strategies in which Jack chooses $b$ 
+%       and Diane doesn't choose $z$ at node $3$ 
+%       would result in Jack choosing $b$ 
+%       and Diane choosing $x$ given that jack chooses $b$. 
+%
+%       The equilibrium outcome of any of these Nash strategy profiles
+%       would be $({\color{red} 2}, {\color{blue} 3})$
+%
+%     \end{itemize}
+%
+%   \end{parts}
+%
+% \begin{center}
+%   \include{figures/JackthenDiane}
+% \end{center}
+%
+% \end{solution}
+%
+% \newpage
+%
+%
+%------------------------------------------------------------------
 
-\begin{parts}
-  \part[10] Using the rollback equilibrium as a predictive model,
-  how many times would you expect the starting team to win 
-  when all agents are \textit{perfectly informed}, \textit{rational},
-  and have \textit{common knowledge of rationality}?
-  Based on the class data, should we \textit{accept} or \textit{reject}
-  this hypothesis?
+% \question%[20]
+% See the figures below for the data from our in-class activity 2 
+% \footnote{You can also find the data on Canvas in the \textit{Activities} folder of the \textit{files} tab}.
+% where teams took turns taking flags from a starting pool. 
+% Note that in Game 1,
+% 6 out of 9 matches were won by the first team to take flags 
+% and in Game 2, 3 of 9 matches were won by the starting team.
+%
+% \begin{parts}
+%   \part[10] Using the rollback equilibrium as a predictive model,
+%   how many times would you expect the starting team to win 
+%   when all agents are \textit{perfectly informed}, \textit{rational},
+%   and have \textit{common knowledge of rationality}?
+%   Based on the class data, should we \textit{accept} or \textit{reject}
+%   this hypothesis?
+%
+%   \part[10] Based on your observations in class 
+%   and the results from other groups, 
+%   which of the assumptions above do you think could be modified
+%   to create a more accurate model of this game?
+%   What modifications would you make,
+%   and what alternative hypotheses could you test?
+%
+% \end{parts}
+%
+% \begin{solution}
+%   \begin{parts}
+%
+%     \part 
+%     The first team can win 100\% of the time by always leaving a multiple of 
+%     the maximum flags which can be taken plus one. 
+%     So if all teams know the rules of the game then we would predict that
+%     100\% of matches will be won by the starting team.
+%
+%     However, in class only 9 out of 18 matches were won by the starting team. 
+%     We can pretty easily reject the 100\% win hypothesis.
+%
+%     \part 
+%     This one is open to interpretation.
+%     It might be that not everyone was fully paying attention when the rules were explained and so perfect information doesn't hold.
+%
+%     One simple hypothesis to test could be that
+%     teams were choosing flags to take randomly
+%     instead of thinking through all of the backwards induction logic.
+%     This would give us a prediction of the first team winning 1/2 of the time,
+%     which is what we saw in class.
+%     However, you might want to replicate this experiment more than 18 times to be more sure that there acutally is no tendency for the starting team to win.
+%
+%   \end{parts}
+%
+%   \end{solution}
+%
+% \newpage 
+%
+% \begin{figure}[!h]
+%   \centering
+%   \includegraphics[width=.6\linewidth]{figures/Game1.png} 
+% \end{figure}
+%
+% \begin{figure}[!h]
+%   \centering
+%   \includegraphics[width=.6\linewidth]{figures/Game2.png} 
+% \end{figure}
 
-  \part[10] Based on your observations in class 
-  and the results from other groups, 
-  which of the assumptions above do you think could be modified
-  to create a more accurate model of this game?
-  What modifications would you make,
-  and what alternative hypotheses could you test?
+%------------------------------------------------------------------%
 
-\end{parts}
-
-\begin{solution}
-  \begin{parts}
-    
-    \part 
-    The first team can win 100\% of the time by always leaving a multiple of 
-    the maximum flags which can be taken plus one. 
-    So if all teams know the rules of the game then we would predict that
-    100\% of matches will be won by the starting team.
-
-    However, in class only 9 out of 18 matches were won by the starting team. 
-    We can pretty easily reject the 100\% win hypothesis.
-
-    \part 
-    This one is open to interpretation.
-    It might be that not everyone was fully paying attention when the rules were explained and so perfect information doesn't hold.
-
-    One simple hypothesis to test could be that
-    teams were choosing flags to take randomly
-    instead of thinking through all of the backwards induction logic.
-    This would give us a prediction of the first team winning 1/2 of the time,
-    which is what we saw in class.
-    However, you might want to replicate this experiment more than 18 times to be more sure that there acutally is no tendency for the starting team to win.
-
-  \end{parts}
-
-  \end{solution}
-
-\newpage 
-
-\begin{figure}[!h]
-  \centering
-  \includegraphics[width=.6\linewidth]{figures/Game1.png} 
-\end{figure}
-
-\begin{figure}[!h]
-  \centering
-  \includegraphics[width=.6\linewidth]{figures/Game2.png} 
-\end{figure}
-
+% \question[20] 
+% The countries of Oceania and Eurasia are at war.
+% As depicted in the figure, Oceania has four cities —
+% Argula, Betra, Carnat, and Dussel — 
+% and it is concerned that one of them is to be bombed by Eurasia.
+% The bombers could come from either base Alpha,
+% which can reach the cities of Argula and Betra;
+% or from base Beta, which can reach either Carnat or Dussel.
+% Eurasia decides which one of these four cities to attack.
+% Oceania doesn’t know which one has been selected,
+% but does observe the base from which the bombers are flying.
+% After making that observation, Oceania decides which one 
+% (and only one) of its four cities to evacuate.
+%
+% Assign a payoff of 2 to Oceania
+% if it succeeds in evacuating the city that is to be bombed
+% and a payoff of 1 otherwise.
+% Assign Eurasia a payoff of 1 if the city it bombs was not evacuated
+% and a zero payoff otherwise.
+% Write down the extensive form game.
+% \footnote{Harrington \textit{Games, Strategies, and Decision Making}}
+%
+% %\vspace{-5cm}
+% \begin{figure}[!h]
+%   \centering
+%   \includegraphics[width=.3\linewidth]{figures/figPR2.1.png} 
+% \end{figure}
+%
+% \begin{solution}
+%   \begin{center}
+%     \include{figures/OceaniavsEurasia} 
+%   \end{center} 
+%
+%   Note that $A$, $B$, $C$, and $D$ in the last row are short for the city names.
+%   Eurasia acts first, so the initial node is labelled accordingly.
+%   Oceania has only two info sets which are represented with the dashed ovals.
+%   The $(0,2)$ or $(1,0)$ payoff sets correspond to Oceania choosing the same city that is bombed,
+%   or choosing a different city respectively.
+% \end{solution}
+%
+% \newpage
 
 %------------------------------------------------------------------
 
