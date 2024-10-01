@@ -65,8 +65,6 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 ## Assignments 
 
-[Homework 1](https://dyasui.github.io/EC327/Homework/assignment1/main.pdf)
-
 <a href="Homework/assignment1/main.pdf" target="_blank">Homework 1</a>
 
 [Homework 2](https://dyasui.github.io/EC327/Homework/assignment2/main.pdf)
