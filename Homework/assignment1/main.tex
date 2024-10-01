@@ -6,6 +6,7 @@
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usepackage{multirow,array} % for payoff matrix formatting
+\usepackage[colorlinks,pdfusetitle,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
 
 \definecolor{crimson}{RGB}{ 170, 4, 36 }
 \definecolor{darkblue}{RGB}{ 4, 47, 170 }
@@ -81,19 +82,29 @@
 
 %------------------------------------------------------------------%
 
-\question[20]
+\question%[20]
 \textbf{Multiple Choice}
 
 \begin{parts}
 
-  \part 
+  \part[4] 
+  Which of the following is \textbf{not} an example of \textbf{strategic behavior}?
+  \begin{choices}
+    \CorrectChoice I always choose Chocolate over Vanilla ice cream because I like it better
+    \choice More people bike on days with too much traffic
+    \choice Apple markets \textit{Pro} versions of their products to people with money
+    and non-Pro versions to broke students
+    \choice Best Buy offer to match any competitors price offer for their customers
+  \end{choices}
+
+  \part[4] 
   \textbf{A}lice, \textbf{B}ob, and \textbf{C}onfucious 
   each put one dollar in a pot and each toss a fair coin.
   \textbf{A}lice wins if the coins are \textit{all heads} \textbf{or} \textit{all tails},
   \textbf{B}ob wins if there are \textit{2 heads} and \textit{1 tail},
   and \textbf{C}onfucious wins if there are \textit{1 head} and \textit{2 tails}.
 
-  What are the \textit{expected payoffs} for each player? 
+  What are the \textbf{expected payoffs} for each player? 
   \footnote{Adapted from Dixit, Skeath, \& McAdams (2021)}
   \begin{choices}
     \choice $EU_A = \$0$,  $EU_B = \$0$,  $EU_C = \$0$ 
@@ -102,45 +113,52 @@
     \choice $EU_A = \$0.50$,  $EU_B = -\$0.25$,  $EU_C = -\$0.25$
   \end{choices}
 
-  \part Consider three different outcomes, $A$, $B$, and $C$.
-  Outcome $A$ is Pareto efficient,
-  and outcome $B$ is not Pareto efficient.
-  Choose one of the following:
-  \begin{choices}
-    \choice $C$ cannot be Pareto efficient. 
-    \CorrectChoice $A$ can not be Pareto dominated by $C$. 
-    \choice $C$ is Pareto dominated by $A$ 
-    \choice $C$ is Pareto dominated by $B$ 
-  \end{choices}
-
-  \part Consider the game tree below
+  \part[4] Consider the game tree below
   \begin{figure}[!h]
     \centering
     \include{figures/gametree1}
   \end{figure}
 
-  How many \textit{strategies} does each player have?
   (recall that a strategy is a complete plan of action
   for \textit{every} eventuality)
+
+  Which of the following is a \textbf{complete strategy for Player 1}?
   \begin{choices}
-    \choice Player 1: 9 strategies, Player 2: 4 strategies
-    \CorrectChoice Player 1: 12 strategies, Player 2: 4 strategies
-    \choice Player 1: 7 strategies, Player 2: 2 strategies
-    \choice Player 1: 7 strategies, Player 2: 4 strategies
+    \choice ($L$)
+    \choice ($x$ if $\ell$)
+    \CorrectChoice ($L$, $x$ if $\ell$, $y$ if $r$)
+    \choice ($R$) 
   \end{choices}
 
-  \part Consider the game tree from the previous question.
-  Which of the following is a complete strategy for Player 1?
+  \part[4] Consider the game tree from the previous question.
+
+  Which of the following is a \textbf{complete strategy for Player 2}?
   \begin{choices}
-    \choice $\{ L \}$
-    \choice $\{ x \ \text{if} \ \ell \}$
-    \CorrectChoice 
-      $ \{ L, x \ \text{if} \ \ell,\ y \ \text{if} \ r \} $
-    \choice $\{ L, \ x  \}$ 
+    \choice ($\ell$ if $M$)
+    \choice ($r$ if $M$, $\ell$ if $R$)
+    \choice ($\ell$)
+    \choice ($\ell$ if \L, $r$ if $M$, $r$ if $R$)
   \end{choices}
 
-  \part Consider the variation of the Survivor Flags game with 100 flags
-  where each team taking any number of flags between 1 and 10 
+  \newpage
+
+  \part[4] Consider the game tree below
+  \begin{figure}[!h]
+    \centering
+    \include{figures/haiyunchenexample}
+  \end{figure}
+  Find the \textbf{rollback equilibrium}.
+  \begin{choices}
+    \choice \textbf{P1:} ($A$), \textbf{P2:} ($C$ if $A$, $F$ if $B$)
+    \CorrectChoice \textbf{P1:} ($A$), \textbf{P2:} ($C$ if $A$, $G$ if $B$)
+    \choice \textbf{P1:} ($B$), \textbf{P2:} ($C$ if $A$, $F$ if $B$)
+    \choice \textbf{P1:} ($B$), \textbf{P2:} ($D$ if $A$, $G$ if $B$)
+  \end{choices}
+
+  \part[4] Consider the following variation to the Survivor Flags game: 
+
+  There are 100 flags to start with, two teams who take turns taking flags,
+  each team can take any number of flags between 1 and 10 on their turn,
   and the team to take the last flag wins.
 
   How many flags should the first team take?
@@ -149,6 +167,14 @@
     \choice 2
     \choice 5
     \choice 10
+  \end{choices}
+
+  \part[4] \textbf{Rationality} means that:
+  \begin{choices}
+    \choice Players have perfect information
+    \choice Players never make mistakes
+    \choice Players have perfect recall
+    \CorrectChoice Preferences are complete and transitive
   \end{choices}
 
 \end{parts}
@@ -170,15 +196,15 @@ win $\succ$ tie $\succ$ loss.
  
   \part Answer the following questions:
   \begin{subparts}
-    \subpart[2] How many nodes are there?
-    \subpart[2] How many branches are there?
-    \subpart[2] How many terminal nodes are there?
+    \subpart[4] How many nodes are there?
+    \subpart[4] How many branches are there?
+    \subpart[4] How many terminal nodes are there?
   \end{subparts}
 
-  \part[6] Prune the tree as much as possible. How many branches were you able to eliminate?
+  \part[10] Prune the tree as much as possible. How many branches were you able to eliminate?
     (A complete answer should include your drawing(s) of the game tree)
 
-  \part[8]
+  \part[10]
   Use the same setup, but now imagine player 1's preferences change
   because they want to be seen as a "tough guy".
   Given that what they want to play remains the same,
@@ -272,32 +298,28 @@ win $\succ$ tie $\succ$ loss.
 
 %------------------------------------------------------------------
 
-\question[20]
-Analyze the extensive form game tree from Fraser, Hipel, and Monte,
-\textit{Approaches to conflict modeling: A study of a possible USA-USSR nuclear confrontation},
-Journal of Policy Modeling,
-1983.
+\question%[20]
 
-\textbf{Abstract}: 
-\begin{quote}
-  A possible nuclear confrontation between the USA and USSR is analyzed using
-  five different models from game theory in order to compare the various
-  approaches that can be taken in the analysis of conflicts. Of particular
-  importance is an improved metagame analysis model that provides a
-  comprehensive procedure for analyzing not only the nuclear conflict but also
-  any other type of real world conflict that can arise in practice. When the
-  improved metagame analysis model is linked with a new state transition model,
-  the dynamics of the game can be thoroughly studied.
-\end{quote}
+Read the 2022 Policito Opinion article, 
+\textit{How Game Theory Explains Why We Have to Sanction Putin : Even If It’s Costly}.
 
-\begin{figure}[!h]
-  \centering
-  \includegraphics[width=.8\linewidth]{figures/FraserHipelMonte-fig2.png} 
-\end{figure}
+\url{https://www.politico.com/news/magazine/2022/04/21/russia-sanctions-game-theory-00026566}
 
-\hrule
+\begin{parts}
 
-What is the \textit{rollback equilibrium} outcome?
+  \part[8]
+  List the tools from game theory that we've learned about in class
+  which the authors use to argue their point.
+
+  \part[10] 
+  What assumptions do they make in their simplified model 
+  of international sanctions?
+
+  \part[10]
+  Choose one assumption of the author's model to change 
+  and explain how it changes what the model predicts.
+
+\end{parts}
 
 %------------------------------------------------------------------
 
