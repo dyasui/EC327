@@ -8,11 +8,11 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.553">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Dante Yasui">
   <meta name="dcterms.date" content="2024-01-01">
-  <title>EC327 Game Theory - Introduction to Game Theory</title>
+  <title>EC327 Game Theory – Introduction to Game Theory</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -556,8 +556,7 @@ Dante Yasui
 <p>10%</p>
 <p>30%</p>
 <p>30%</p>
-</div>
-</div>
+</div></div>
 </section>
 <section class="slide level2">
 
@@ -583,8 +582,6 @@ Dante Yasui
 <h1>University Policies</h1>
 
 </section>
-<section class="slide level2">
-
 <h3 id="campus-resources">Campus Resources</h3>
 <ul>
 <li><span class="hi">Accessible Education Center</span>
@@ -606,7 +603,9 @@ Dante Yasui
 <li><a href="https://provost.uoregon.edu/religious-observance-accommodations-policy">Provost website</a></li>
 </ul></li>
 </ul>
-
+<div class="aside">
+<p>These resources and others are also included in the course syllabus</p>
+</div>
 <aside class="notes">
 <ul>
 <li>I am here to support you, but not trained or equipped for emergencies</li>
@@ -624,9 +623,6 @@ Dante Yasui
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<aside><div>
-<p>These resources and others are also included in the course syllabus</p>
-</div></aside></section>
 <section class="slide level2">
 
 <h3 id="course-pages">Course Pages</h3>
@@ -837,17 +833,38 @@ Dante Yasui
 </ul>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn2"><p><em>Harrington</em>, pg. 2</p></li></ol></aside></section>
+<section id="strategic-choice-vs.-other-types-of-choices" class="slide level2">
+<h2><em>Strategic</em> Choice vs.&nbsp;other types of choices</h2>
+<div>
+<ul>
+<li class="fragment"><p>Economics is the study of <span class="hi">constrained choice</span>; in EC311, we introduce the <em>utility maximization problem</em> as the workhorse model</p>
+<ul>
+<li class="fragment">These types of problems usually only involve one agent; the consumer, who is only constrained by their budget</li>
+</ul></li>
+<li class="fragment"><p>We use the term <span class="hi"><em>strategic games</em></span> to distinguish from these single-agent optimization problems</p></li>
+</ul>
+<p>A <span class="hi"><em>game</em></span> is a type of problem featuring multiple agents, called <span class="hi">players</span>,</p>
+<ul>
+<li class="fragment">in which their optimal choice <span class="hii">depends on the optimal choices of other players</span>.</li>
+</ul>
+</div>
+</section>
 <section id="a-definition-of-a-game" class="slide level2">
 <h2>A definition of a game <sup>1</sup></h2>
 <p>A <strong>Game</strong> consists of:</p>
+<div>
 <ul>
-<li>a collection of decision-makers, called <span class="hi">players</span>;</li>
-<li>the set of <span class="hi">information</span> available to each player;</li>
-<li>the <span class="hi">strategies</span> available to each player in each information state;</li>
-<li>a mapping from the intersection strategies of all players to outcomes;</li>
-<li><span class="hi">preferences</span> of the individual players over all possible outcomes</li>
+<li class="fragment"><p>a collection of decision-makers, called <span class="hi">players</span>;</p></li>
+<li class="fragment"><p>the set of <span class="hi">information</span> available to each player;</p></li>
+<li class="fragment"><p>the <span class="hi">strategies</span> available to each player in each information state;</p></li>
+<li class="fragment"><p>a mapping from the intersection strategies of all players to outcomes;</p></li>
+<li class="fragment"><p><span class="hi">preferences</span> of the individual players over all possible outcomes</p></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>adapted from <a href="https://www2.econ.iastate.edu/tesfatsi/">Leigh Tesfatsion</a>’s slides</p></li></ol></aside></section></section>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>adapted from <a href="https://www2.econ.iastate.edu/tesfatsi/">Leigh Tesfatsion</a>’s slides</p></li></ol></aside></section>
+<section class="slide level2">
+
+</section></section>
 <section>
 <section id="who-are-the-players" class="title-slide slide level1 center">
 <h1>Who are the players?</h1>
@@ -856,12 +873,28 @@ Dante Yasui
 <section id="what-defines-a-player" class="slide level2">
 <h2>What defines a player?</h2>
 <ul>
-<li><p><span class="h">Preferences</span>: Everyone has certain things they <em>want</em>.</p>
-<p>But you usually can’t get everything you want; economics is all about <em>constrained choices</em>.</p>
-<p>So its important to have priorities and to understand which things people prefer to others.</p></li>
-<li><p><span class="h">Information</span>: Some people might be better informed than others.</p></li>
-<li><p><span class="h">Beliefs</span>: What do I think about when I have to make a strategic choice?</p></li>
+<li><p><span class="h">Preferences</span>: ::: {.incremental}</p></li>
+<li><p>In economics, we say people have <em>unlimited</em> wants and <em>limited</em> needs</p></li>
+<li><p>Therefore, we have to think about how people <em>prioritize</em> what they want more</p></li>
 </ul>
+<p>:::</p>
+<ul>
+<li><span class="h">Beliefs</span>:</li>
+</ul>
+</section>
+<section id="what-defines-a-player-1" class="slide level2">
+<h2>What defines a player?</h2>
+<ul>
+<li><p><span class="h">Preferences</span>:</p></li>
+<li><p><span class="h">Beliefs</span>:</p></li>
+</ul>
+<p>::: {.incremental}</p>
+<ul>
+<li><p>My beliefs about the world define how I act</p></li>
+<li><p>If I am exposed to new <em>information</em> it can potentially change my beliefs, and therefore change my actions</p></li>
+<li><p>Information and beliefs of players will define later game theory topics</p></li>
+</ul>
+<p>:::</p>
 </section>
 <section id="preferences" class="slide level2">
 <h2>Preferences</h2>
@@ -869,8 +902,8 @@ Dante Yasui
 <p>For example, on the set of Eugene boba stores, my preference ranking goes like this;</p>
 <div>
 <ol type="1">
-<li class="fragment"><a href="https://www.daynightboba.com/">Day &amp; Night</a> - they have mango sago, cute location</li>
 <li class="fragment"><a href="https://maps.app.goo.gl/zCVTUnaaYLD1Rwaw6">Tea 4</a> - major chain, good quality and selection</li>
+<li class="fragment"><a href="https://www.daynightboba.com/">Day &amp; Night</a> - they have mango sago, cute location</li>
 <li class="fragment"><a href="">Bobahead</a> - no more campus location 😔</li>
 <li class="fragment">No boba</li>
 <li class="fragment"><a href="http://therabbitholeteabar.com/">Rabbit Hole</a> - no hate, just not for me</li>
@@ -895,15 +928,17 @@ Dante Yasui
 </ul>
 </div>
 </section>
-<section id="rational-preferences-cont." class="slide level2">
-<h2>Rational Preferences (cont.)</h2>
-<p>Another key assumption of rationality is that we can represent preferences by real numbers.</p>
+<section id="rationality" class="slide level2">
+<h2>Rationality</h2>
+<p>One key proposition of rationality is that we can represent preferences by real numbers.</p>
+<div>
 <p>A <span class="h">utility function</span> maps a choice to a single number.</p>
 <p>For example, let <span class="math inline">\(u(.)\)</span> be the utility function from emoji to utils</p>
 <ul>
-<li><p>I can have <span class="math inline">\(u(🍺) =5\)</span>, <span class="math inline">\(u(🌯)=10\)</span>, <span class="math inline">\(u(🤸)=25\)</span></p></li>
-<li><p>I can also have <span class="math inline">\(u(🍺 \ , 🌯) = 20\)</span>, <span class="math inline">\(u(🍺 \ , 🌯 \ , 🤸) = 15\)</span></p></li>
+<li class="fragment"><p>I can have <span class="math inline">\(u(🍺) =5\)</span>, <span class="math inline">\(u(🌯)=10\)</span>, <span class="math inline">\(u(🤸)=25\)</span></p></li>
+<li class="fragment"><p>I can also have <span class="math inline">\(u(🍺 \ , 🌯) = 20\)</span>, <span class="math inline">\(u(🍺 \ , 🌯 \ , 🤸) = 15\)</span></p></li>
 </ul>
+</div>
 </section>
 <section id="ordinal-vs.-cardinal-numbers" class="slide level2">
 <h2>Ordinal vs.&nbsp;Cardinal numbers</h2>
@@ -926,7 +961,6 @@ Dante Yasui
 <ul>
 <li class="fragment"><p>For this class, you won’t need to worry about utility functions (if you want to, take EC311).</p></li>
 <li class="fragment"><p>I will almost always give you specific values of utility which we will call <span class="hi">payoffs</span>.</p></li>
-<li class="fragment"><p>The table on the previous page is a good example.</p></li>
 </ul>
 </div>
 </section>
@@ -936,11 +970,11 @@ Dante Yasui
 <blockquote>
 <p>To maximize their expected <span class="h">payoff</span></p>
 </blockquote>
-<div class="fragment">
+<div>
 <ul>
-<li><p>A payoff can represent many things.</p></li>
-<li><p>But for simplicity we will abstract them down to a single numerical value.</p></li>
-<li><p>A payoff doesn’t need to be abstract; it could be dollars</p></li>
+<li class="fragment"><p>A payoff can represent many things which come with a specific outcome</p></li>
+<li class="fragment"><p>Whenever you see a payoff, assume that it represents everything about that outcome which an agent cares about</p></li>
+<li class="fragment"><p>For example, your payoff to giving to charity would include the emotional benefit you feel towards giving to others</p></li>
 </ul>
 </div>
 </section>
@@ -957,26 +991,13 @@ Dante Yasui
 <p>They capture <em>everything</em> in a game that a player cares about</p>
 </blockquote>
 <aside><ol class="aside-footnotes"><li id="fn4"><p>except when we talk about <em>expected</em> payoffs later</p></li></ol></aside></section>
-<section id="strategic-choice-vs.-other-types-of-choices" class="slide level2">
-<h2><em>Strategic</em> Choice vs.&nbsp;other types of choices</h2>
-<div>
-<ul>
-<li class="fragment"><p>Economics is the study of <span class="hi">constrained choice</span>; in EC311, we introduce the <em>utility maximization problem</em> as the workhorse model</p>
-<ul>
-<li class="fragment">These types of problems usually only involve one agent; the consumer, who is only constrained by their budget</li>
-</ul></li>
-<li class="fragment"><p>We use the term <span class="hi"><em>strategic games</em></span> to distinguish from these single-agent optimization problems</p></li>
-<li class="fragment"><p>A <span class="hi"><em>game</em></span> is a type of problem featuring multiple agents, called <span class="hi">players</span>, in which their optimal choice <span class="hii">depends on the optimal choices of other players</span>.</p></li>
-</ul>
-</div>
-</section>
-<section id="state-dependent-utility-table" class="slide level2">
-<h2>State-dependent utility table</h2>
+<section id="payoffs-2" class="slide level2">
+<h2>Payoffs</h2>
 <div>
 <ul>
 <li class="fragment">Sometimes my enjoyment of a thing depends on the <em>state</em> of the world</li>
 </ul>
-<table class="table-striped table-hover">
+<table class="table-striped table-hover caption-top">
 <caption>socially-dependent preferences</caption>
 <thead>
 <tr class="header">
@@ -1012,22 +1033,99 @@ Dante Yasui
 <li class="fragment">Is this an example of a <span class="hi">strategic</span> or <span class="hi">non-strategic</span> choice?</li>
 </ul>
 </div>
+<h3 id="expected-payoffs"><em>Expected</em> Payoffs</h3>
+<p>Often games involve some amount of <em>chance</em>; with random probabilities of each outcome happening</p>
+<ul>
+<li>We need tools for thinking about how people think about <span class="hi">risk</span></li>
+</ul>
 </section>
-<section id="common-knowledge" class="slide level2">
-<h2>Common Knowledge</h2>
+<section class="slide level2">
+
+<h3 id="expected-payoffs-1"><em>Expected</em> Payoffs</h3>
+<blockquote>
+<p>In math, an <span class="hii">expected value</span> is the average value of a <em>random variable</em>, weighted by the probability of each value occuring</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<h3 id="expected-payoffs-2"><em>Expected</em> Payoffs</h3>
+<p>For example, suppose <span class="math inline">\(X\)</span> is a random variable which is equal to:</p>
+<div>
+<ul>
+<li class="fragment"><span class="hii">1</span> with <span class="hi">50%</span> probability,</li>
+<li class="fragment"><span class="hii">2</span> with <span class="hi">25%</span> probability,</li>
+<li class="fragment"><span class="hii">3</span> with <span class="hi">25%</span> probability</li>
+</ul>
+<p>What is the <em>expected value</em> of <span class="math inline">\(X\)</span>? (<span class="math inline">\(E(X)\)</span>)</p>
+<p><span class="math display">\[
+\begin{align}
+E(X) &amp; = .5 (1) + .25 (2) + .25 (3) \\
+&amp; = .5 + .5 + .75 = 2.75
+\end{align}
+\]</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="expected-payoffs-3"><em>Expected</em> Payoffs</h3>
+<p>An <span class="hi">Expected Payoff</span> is just the <em>expected value</em> of possible payoffs</p>
+<blockquote>
+<p>An average of the payoffs associated with every possible outcome, weighted by the corresponding probability of each outcome happening</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<h3 id="expected-payoffs-4"><em>Expected</em> Payoffs</h3>
+<p>Consider the following choice:</p>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Option A:</strong></p>
+</div>
+<div class="callout-content">
+<p>I flip two coins; - if both land <strong>heads</strong>, you win $100 - otherwise you get $0</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Option B:</strong></p>
+</div>
+<div class="callout-content">
+<p>You just get $25 for sure</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="expected-payoffs-5"><em>Expected Payoffs</em></h3>
+<ul>
+<li><p>If you choose <span class="h">Option A</span>, we call you <span class="hii">risk averse</span></p></li>
+<li><p>If you choose <span class="h">Option B</span>, you are <span class="hii">risk loving</span></p></li>
+<li><p>If you are <em>indifferent</em> between the two options, you would be <span class="hii">risk neutral</span></p></li>
+</ul>
+<p>. . .</p>
+<p>All of these difference preferences can be incorporated in the <em>rational</em> model with the right <em>utility function</em></p>
+</section>
+<section id="beliefs" class="slide level2">
+<h2>Beliefs</h2>
 <p>Our theories will have to make assumptions about what players <strong>know</strong>.</p>
 <p>All of our games will at least assume that <span class="h">all players know all of the rules</span>.</p>
 </section>
-<section id="rules-of-the-game" class="slide level2">
-<h2>Rules of the Game</h2>
-<p>We will assume that all players know:</p>
+<section id="beliefs-1" class="slide level2">
+<h2>Beliefs</h2>
+<p>We will assume that all players know<sup>1</sup>:</p>
+<div>
 <ul>
-<li><p>Who else is playing,</p></li>
-<li><p>all of the strategies each player could <em>potentially</em> choose,</p></li>
-<li><p>everyone’s payoffs for all possible combinations of strategies by all players,</p></li>
-<li><p>and that everyone else is maximizing their payoffs</p></li>
+<li class="fragment"><p>Who else is playing,</p></li>
+<li class="fragment"><p>all of the strategies each player could <em>potentially</em> choose,</p></li>
+<li class="fragment"><p>everyone’s payoffs for all possible combinations of strategies by all players,</p></li>
+<li class="fragment"><p>and that everyone else is maximizing their payoffs</p></li>
 </ul>
-</section></section>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn5"><p>and believe</p></li></ol></aside></section></section>
 <section>
 <section id="taxonomy-of-games" class="title-slide slide level1 center">
 <h1>Taxonomy of Games</h1>
@@ -1065,8 +1163,7 @@ Dante Yasui
 <li><p><span class="hi">Visual tool</span>: <em>payoff tables</em></p></li>
 <li><p><span class="hi">Solution Method</span>: <em>best responses</em>, deletion of <em>dominated strats</em></p></li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section class="slide level2">
 
@@ -1115,7 +1212,7 @@ Dante Yasui
 <li class="fragment">Examples: Hiring a tutor (mutual gains), International Trade, etc.</li>
 </ul>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn5"><p>or sum to some constant</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn6"><p>or sum to some constant</p></li></ol></aside></section>
 <section id="are-strategic-interactions-repeated" class="slide level2">
 <h2>Are strategic interactions Repeated?</h2>
 <p>A <span class="hi">one-shot</span> game is played only once by the same set of players.</p>
@@ -1175,10 +1272,60 @@ Dante Yasui
 <blockquote>
 <p>In <span class="h">Noncooperative</span> games, no-one can be forced not to act in their own self-interest</p>
 </blockquote>
-<aside><ol class="aside-footnotes"><li id="fn6"><p>but if you ask real game theorists, they will probably tell you these names are misleading</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn7"><p>but if you ask real game theorists, they will probably tell you these names are misleading</p></li></ol></aside></section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="equilibrium" class="title-slide slide level1 center">
+<h1>Equilibrium</h1>
+<p>In each of these different categories of games, we will want to make predictions as to how rational agents will behave</p>
+<ul>
+<li>Our methods of <em>solving</em> each type of game will be to look for different types of <span class="hi">equilibria</span></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Equilibrium</strong></p>
+</div>
+<div class="callout-content">
+<p>Where every player’s strategy is a <span class="hi">best-response</span> to the other player(s)</p>
+</div>
+</div>
+</div>
+</section>
+<section id="equilibrium-2" class="slide level2">
+<h2>Equilibrium</h2>
+<p>Why study equilibria?</p>
+<div>
+<ul>
+<li class="fragment"><p>They are <strong>stable</strong>: if nobody has anything better to do than what they’re doing now then why change?</p></li>
+<li class="fragment"><p>We can adapt our models to all types of equilibria</p>
+<ul>
+<li class="fragment"><p>Market or non-market</p></li>
+<li class="fragment"><p>Dynamic or static</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="equilibrium-3" class="slide level2">
+<h2>Equilibrium</h2>
+<p>A few different types of equilibria in this class:</p>
+<ul>
+<li><p><span class="hi">Nash equilibrium</span></p>
+<ul>
+<li><p><span class="hii">Subgame perfect</span> NE</p></li>
+<li><p><span class="hii">Mixed strategy</span> NE</p></li>
+<li><p><span class="hii">Bayes-Nash</span> equilibrium</p></li>
+</ul></li>
+</ul>
+</section>
 <section id="tentative-schedule" class="slide level2">
 <h2>Tentative Schedule</h2>
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 10%">
 <col style="width: 16%">
@@ -1500,18 +1647,7 @@ Dante Yasui
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1543,7 +1679,29 @@ Dante Yasui
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/dyasui\.github\.io\/EC327\/");
@@ -1551,7 +1709,7 @@ Dante Yasui
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
