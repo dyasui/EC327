@@ -14,9 +14,32 @@ name: GameTrees
 
 ## A *Decision* Tree
 
-![](figures/decisiontree.png){width=80% fig-align="center"}
+::: {#fig-decisiontree .test-class}
+```{.tikz embed_mode="link" scale=3 format="svg"}
+\tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
+\tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
+\tikzstyle{level 1}=[level distance=15mm,sibling distance=3.5cm]
+\tikzstyle{level 2}=[level distance=15mm,sibling distance=1.5cm]
+\tikzstyle{level 3}=[level distance=15mm,sibling distance=1cm]
 
-  * Is this a *strategic* decision?
+\node(0)[solid node,label=above:{$P1$}]{}
+    child{node[solid node,label=above left:{$P2$}]{}
+        child{node[hollow node,label=below:{$(1,2)$}]{} edge from parent node[left]{$C$}}
+        child{node[hollow node,label=below:{$(1,-1)$}]{} edge from parent node[left]{$D$}}
+        child{node[hollow node,label=below:{$(0,2)$}]{} edge from parent node[right]{$E$}}
+        edge from parent node[left,xshift=-5]{$A$}
+    }
+    child{node[solid node,label=above right:{$P2$}]{}
+        child{node[hollow node,label=below:{$(2,2)$}]{} edge from parent node[left]{$F$}}
+        child{node[hollow node,label=below:{$(1,3)$}]{} edge from parent node[right]{$G$}}
+        edge from parent node[right,xshift=5]{$B$}
+    };
+```
+:::
+
+::: {notes}
+  - 
+:::
 
 ---
 
@@ -33,7 +56,8 @@ A [Tree Graph]{.h} consists of:
   * The tree ends in any of the multiple [terminal nodes]{.hi}
   
 ::: {.callout-warning}
-Each (non-initial) terminal node may have multiple branches leading from it; but must only have *one* branch that *leads to it*.
+Each (non-initial) terminal node may have multiple branches leading from it; 
+but must only have *one* branch that *leads to it*.
 :::
 
 :::
@@ -46,13 +70,13 @@ Each (non-initial) terminal node may have multiple branches leading from it; but
 
 ---
 
-##
+## Anatomy of a tree
 
 ![](figures/tree-branches.png){width=80% fig-align="center"}
 
 ---
 
-##
+## Anatomy of a tree
 
 ![](figures/tree-terminalnodes.png){width=80% fig-align="center"}
 
@@ -66,9 +90,15 @@ To predict what will happen to the victim, [Orlando]{.hi}, we need to create a g
 
 Let's use the language of the tree graph to visualize this game.
 
+::: {notes}
+  - Draw game on chalkboard step-by-step so students see how it's constructed
+  - Explain order of each action for each node,
+  starting w/ inital choice to kidnap or not
+:::
+
 ---
 
-## 
+### Kidnapping Game
 
 ![](figures/kidnapgame_blank.png){fig-align="center"}
 
@@ -134,9 +164,9 @@ do you have any predictions for what strategies each player will choose?
 ::: {.incremental}
 
 ::: {.callout-tip}
-## Definition ^[Bonanno, pg 83]
-A [strategy]{.hi} for a player in a perfect-information game is a *list of choices*,
-one for *each decision node* of that player.
+## Definition
+A [strategy]{.hi} is a **complete plan of action** 
+for every eventuality
 :::
 
 ::: {.callout-warning}

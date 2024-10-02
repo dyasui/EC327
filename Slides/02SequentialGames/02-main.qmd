@@ -17,10 +17,10 @@ title-slide-attributes:
 output:
   beamer_presentation:
     keep_tex: yes
----
-
-![histogram](figures/histogram.png)
-
+filters:
+  - tikz
+tikz:
+  cache:true
 ---
 
 ::: {.vertical-center}
@@ -37,11 +37,11 @@ output:
 
 :::
 
-{{< include GameTrees.qmd >}}
+{{< include 0201-trees.qmd >}}
 
-{{< include BackwardsInduction.qmd >}}
+{{< include 0202-bwdinduct.qmd >}}
 
-{{< include Pareto.qmd >}}
+{{< include 0203-pareto.qmd >}}
 
 ---
 
