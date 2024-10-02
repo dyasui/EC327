@@ -7,7 +7,7 @@ export <- list.files(pattern = "*Student Analysis Report.csv") %>%
 
 # Get results from Canvas csv export
 ClassData_df <- read_csv(export) %>% 
-  rename(guess = "3950918: What is your guess?") %>% 
+  rename(guess = "4401461: Choose your integer between 0 and 100") %>% 
   select(name, guess)
 
 # Calculate average guess

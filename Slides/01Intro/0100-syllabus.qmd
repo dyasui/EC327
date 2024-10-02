@@ -8,16 +8,16 @@
   - print, sign, and upload as your first assignment
 :::
 
-## Class Expectations
+# Class Expectations
 
-### Prerequisites
+## Prerequisites
  * **Courses:** EC201 *or* EC202
 
  * **Knowledge:** This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.
    - There are great free resources out there like [Khan Academy](https://www.khanacademy.org/math/algebra), but always feel free to reach out for help or other suggestions.
 ---
 
-### Student Expectations
+## Student Expectations
 ::: {.incremental}
   * [Come to class]{.hii}
     - Pay attention to lectures, take notes, review topics at home
@@ -34,7 +34,7 @@
 
 ---
 
-### Instructor Expectations
+## Instructor Expectations
   * [Provide course material]{.h}
     - Slides will be updated on github
     - I will also try to post them on Canvas, but not as regularly
@@ -46,9 +46,9 @@
     - [Office Hours]{.hi}
       + Use them!!
 
-## Admin Stuff
+# Admin Stuff
 
-### Problem Sets
+## Problem Sets
 You will practice what we learn in class on independently.
 
 Each homework assignment will include a few problems that will be similar to what you will see on exams.
@@ -65,7 +65,7 @@ Each homework assignment will include a few problems that will be similar to wha
 
 ---
 
-### Class Activities
+## Class Activities
 
 ::: {.incremental}
   * Sometimes I will ask you to play the types of games we discuss in lectures
@@ -81,7 +81,7 @@ Each homework assignment will include a few problems that will be similar to wha
 :::
 ---
 
-### Exams
+## Exams
 
 You will demonstrate how well you understand concepts individually on a [midterm]{.hi}
 and a [final]{.hi} exam
@@ -104,7 +104,7 @@ and a [final]{.hi} exam
 
 ---
 
-### Grading
+## Grading
 
 :::: {.columns}
 
@@ -143,9 +143,7 @@ and a [final]{.hi} exam
 
 ---
 
-# University Policies
-
-### Campus Resources
+## Campus Resources
 
   * [Accessible Education Center]{.hi}
     - [aec.uoregon.edu](https://aec.uoregon.edu/)
@@ -173,7 +171,7 @@ These resources and others are also included in the course syllabus
 
 ---
 
-### Course Pages
+## Course Pages
 
 [https://canvas.uoregon.edu/courses/251353](https://canvas.uoregon.edu/courses/233504)
   - submit your assignments
