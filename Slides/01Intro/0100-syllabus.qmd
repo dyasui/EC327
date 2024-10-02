@@ -1,6 +1,5 @@
 ## Syllabus Document
 
-![](Syllabus/main.pdf)
 
 :::{incremental}
   - Most up to date version on github
