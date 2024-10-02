@@ -200,7 +200,14 @@
     "href": "Slides/01Intro/01-main.html#payoffs-2",
     "title": "Introduction to Game Theory",
     "section": "Payoffs",
-    "text": "Payoffs\n\n\nSometimes my enjoyment of a thing depends on the state of the world\n\n\nsocially-dependent preferences\n\n\nMy choice\nMy friends’ choice\nMy payoff\n\n\n\n\nDuck’s game\nDuck’s game\n3\n\n\nDuck’s game\nStay home\n2\n\n\nStay home\nDuck’s game\n1\n\n\nStay home\nStay home\n2\n\n\n\n\nIs this an example of a strategic or non-strategic choice?\n\n\nExpected Payoffs\nOften games involve some amount of chance; with random probabilities of each outcome happening\n\nWe need tools for thinking about how people think about risk"
+    "text": "Payoffs\n\n\nSometimes my enjoyment of a thing depends on the state of the world\n\n\nsocially-dependent preferences\n\n\nMy choice\nMy friends’ choice\nMy payoff\n\n\n\n\nDuck’s game\nDuck’s game\n3\n\n\nDuck’s game\nStay home\n2\n\n\nStay home\nDuck’s game\n1\n\n\nStay home\nStay home\n2\n\n\n\n\nIs this an example of a strategic or non-strategic choice?"
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#expected-payoffs-2",
+    "href": "Slides/01Intro/01-main.html#expected-payoffs-2",
+    "title": "Introduction to Game Theory",
+    "section": "Expected Payoffs",
+    "text": "Expected Payoffs\nFor example, suppose \\(X\\) is a random variable which is equal to:\n\n1 with 50% probability,\n2 with 25% probability,\n3 with 25% probability\n\nWhat is the expected value of \\(X\\)? (\\(E(X)\\))\n\n\\[\n\\begin{align}\nE(X) & = .5 (1) + .25 (2) + .25 (3) \\\\\n& = .5 + .5 + .75 = 2.75\n\\end{align}\n\\]"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#beliefs",
@@ -228,7 +235,21 @@
     "href": "Slides/01Intro/01-main.html#sequential-vs.-simultaneous",
     "title": "Introduction to Game Theory",
     "section": "Sequential vs. Simultaneous",
-    "text": "Sequential vs. Simultaneous\n\n\nSequential Games\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n. . .\nSimultaneous Games\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats"
+    "text": "Sequential vs. Simultaneous\n\n\nSequential Games\n\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n\n\nSimultaneous Games\n\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats"
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#sequential-games",
+    "href": "Slides/01Intro/01-main.html#sequential-games",
+    "title": "Introduction to Game Theory",
+    "section": "Sequential Games",
+    "text": "Sequential Games\nIn sequential games, you have to think about how what you do now will affect what your opponent will do in the future.\n\n\nThis hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.\n\n\n\n\nWe’ll see that sometimes moving first can be adventageous\n\n\n\n\nWhile other times it’s best to wait and see what someone else does"
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#simultaneous-games",
+    "href": "Slides/01Intro/01-main.html#simultaneous-games",
+    "title": "Introduction to Game Theory",
+    "section": "Simultaneous Games",
+    "text": "Simultaneous Games\nIn simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will will do now.\n\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4."
   },
   {
     "objectID": "Slides/01Intro/01-main.html#conflicting-vs.-common-interests",
@@ -236,6 +257,13 @@
     "title": "Introduction to Game Theory",
     "section": "Conflicting vs. Common Interests?",
     "text": "Conflicting vs. Common Interests?\nMany games you are familiar with have distince winners and losers.\n\nBut in other types of games, it’s possible for everyone to come out ahead."
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#zero-sum-or-constant-sum-games",
+    "href": "Slides/01Intro/01-main.html#zero-sum-or-constant-sum-games",
+    "title": "Introduction to Game Theory",
+    "section": "Zero-sum (or constant-sum) Games",
+    "text": "Zero-sum (or constant-sum) Games\n\nWhen the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExamples: NCAA Football Championship, Scramble for Africa (technically constant-sum)\n\n. . .\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc.\n\n\nor sum to some constant"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#are-strategic-interactions-repeated",
@@ -264,6 +292,13 @@
     "title": "Introduction to Game Theory",
     "section": "Can agreements be Enforced?",
     "text": "Can agreements be Enforced?\nTwo broad categories of the field are cooperative game theory and noncooperative game theory 1\n\nCooperative games are those in which agreements are enforceable\n\n\nIn Noncooperative games, no-one can be forced not to act in their own self-interest\n\nbut if you ask real game theorists, they will probably tell you these names are misleading"
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#equilibrium",
+    "href": "Slides/01Intro/01-main.html#equilibrium",
+    "title": "Introduction to Game Theory",
+    "section": "Equilibrium",
+    "text": "Equilibrium\nIn each of these different categories of games, we will want to make predictions as to how rational agents will behave\n\nOur methods of solving each type of game will be to look for different types of equilibria\n\n\n\n\n\n\n\nEquilibrium\n\n\nWhere every player’s strategy is a best-response to the other player(s)"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#equilibrium-2",
@@ -578,7 +613,7 @@
     "href": "Slides/01Intro/0104-taxonomy.html",
     "title": "Taxonomy of Games",
     "section": "",
-    "text": "Sequential or Simultaneous?\nZero-sum or not\nPerfect or Imperfect information?\n\nis info symmetric or asymmetric?\n\nOne-shot or Repeated?\n‘Noncooperative’ or ‘Cooperative’?\n\n\n\n\n\n\n\nSequential Games\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n. . .\nSimultaneous Games\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats\n\n\n\n\n\n\nIn sequential games, you have to think about how what you do now will affect what your opponent will do in the future.\n. . .\n\nThis hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.\n\n. . .\n\nWe’ll see that sometimes moving first can be adventageous\n\n. . .\n\nWhile other times it’s best to wait and see what someone else does\n\n\n\n\n\nIn simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will will do now.\n. . .\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4.\n\n\n\n\n\n\nMany games you are familiar with have distince winners and losers.\n. . .\nBut in other types of games, it’s possible for everyone to come out ahead.\n\n\n\n\nWhen the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExamples: NCAA Football Championship, Scramble for Africa (technically constant-sum)\n\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc.\n\n\n\n\n\n\n\nA one-shot game is played only once by the same set of players.\n\n\nIf you’ve never played against someone before, you can’t form any beliefs about them\nSecrecy or surprise are potentially good strategies in these games\n\n\nA game is called repeated if the same players play it with each other many times.\n\n\nIf you know your opponent, then your reputation becomes valuable if you want to cooperate\n\n\n\n\n\n\nHow much does each player know when they decide?\n\n\nPerfect Information: when players know all previous moves and external circumstances\n\nplayers may have imperfect info; uncertainty about the state of the world, previous’ moves, or other player’s ‘type’\n\nAsymmetric Info: when one player has access to information that other players do not\n\nExamples: hand in poker, used car salesmen\nTopics: Signaling, Screening\n\n\n\n\n\n\n\n\nSelf-interest and common good can often conflict.\nIn these situations, players need to form agreements in order to achieve cooperative outcomes.\n\n. . .\n\nBut can people actually be held to those agreements?\n\nFor example:\n\nParis Climate accords; who polices nation-state’s carbon reductions?\nPublic goods; why do we need the Internal Revenue Service?\n\n\n\n\n\nTwo broad categories of the field are cooperative game theory and noncooperative game theory 2\n\nCooperative games are those in which agreements are enforceable\n\n\nIn Noncooperative games, no-one can be forced not to act in their own self-interest"
+    "text": "Sequential or Simultaneous?\nZero-sum or not\nPerfect or Imperfect information?\n\nis info symmetric or asymmetric?\n\nOne-shot or Repeated?\n‘Noncooperative’ or ‘Cooperative’?\n\n\n\n\n\n\n\nSequential Games\n\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n\n\nSimultaneous Games\n\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats\n\n\n\n\n\n\n\n\nIn sequential games, you have to think about how what you do now will affect what your opponent will do in the future.\n. . .\n\nThis hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.\n\n. . .\n\nWe’ll see that sometimes moving first can be adventageous\n\n. . .\n\nWhile other times it’s best to wait and see what someone else does\n\n\n\n\n\nIn simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will will do now.\n. . .\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4.\n\n\n\n\n\nMany games you are familiar with have distince winners and losers.\n. . .\nBut in other types of games, it’s possible for everyone to come out ahead.\n\n\n\n\n\nWhen the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExamples: NCAA Football Championship, Scramble for Africa (technically constant-sum)\n\n. . .\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc.\n\n\n\n\n\n\nA one-shot game is played only once by the same set of players.\n\n\nIf you’ve never played against someone before, you can’t form any beliefs about them\nSecrecy or surprise are potentially good strategies in these games\n\n\nA game is called repeated if the same players play it with each other many times.\n\n\nIf you know your opponent, then your reputation becomes valuable if you want to cooperate\n\n\n\n\n\n\nHow much does each player know when they decide?\n\n\nPerfect Information: when players know all previous moves and external circumstances\n\nplayers may have imperfect info; uncertainty about the state of the world, previous’ moves, or other player’s ‘type’\n\nAsymmetric Info: when one player has access to information that other players do not\n\nExamples: hand in poker, used car salesmen\nTopics: Signaling, Screening\n\n\n\n\n\n\n\n\nSelf-interest and common good can often conflict.\nIn these situations, players need to form agreements in order to achieve cooperative outcomes.\n\n. . .\n\nBut can people actually be held to those agreements?\n\nFor example:\n\nParis Climate accords; who polices nation-state’s carbon reductions?\nPublic goods; why do we need the Internal Revenue Service?\n\n\n\n\n\nTwo broad categories of the field are cooperative game theory and noncooperative game theory 2\n\nCooperative games are those in which agreements are enforceable\n\n\nIn Noncooperative games, no-one can be forced not to act in their own self-interest\n\n\n\n\n\nIn each of these different categories of games, we will want to make predictions as to how rational agents will behave\n\nOur methods of solving each type of game will be to look for different types of equilibria\n\n\n\n\n\n\n\nEquilibrium\n\n\n\nWhere every player’s strategy is a best-response to the other player(s)\n\n\n\n\n\n\nWhy study equilibria?\n\n\nThey are stable: if nobody has anything better to do than what they’re doing now then why change?\nWe can adapt our models to all types of equilibria\n\nMarket or non-market\nDynamic or static\n\n\n\n\n\n\n\nA few different types of equilibria in this class:\n\nNash equilibrium\n\nSubgame perfect NE\nMixed strategy NE\nBayes-Nash equilibrium"
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html#general-categorical-terms",
@@ -592,14 +627,35 @@
     "href": "Slides/01Intro/0104-taxonomy.html#sequential-vs.-simultaneous",
     "title": "Taxonomy of Games",
     "section": "",
-    "text": "Sequential Games\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n. . .\nSimultaneous Games\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats\n\n\n\n\n\n\nIn sequential games, you have to think about how what you do now will affect what your opponent will do in the future.\n. . .\n\nThis hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.\n\n. . .\n\nWe’ll see that sometimes moving first can be adventageous\n\n. . .\n\nWhile other times it’s best to wait and see what someone else does\n\n\n\n\n\nIn simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will will do now.\n. . .\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4."
+    "text": "Sequential Games\n\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n\n\nSimultaneous Games\n\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats"
+  },
+  {
+    "objectID": "Slides/01Intro/0104-taxonomy.html#sequential-games",
+    "href": "Slides/01Intro/0104-taxonomy.html#sequential-games",
+    "title": "Taxonomy of Games",
+    "section": "",
+    "text": "In sequential games, you have to think about how what you do now will affect what your opponent will do in the future.\n. . .\n\nThis hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.\n\n. . .\n\nWe’ll see that sometimes moving first can be adventageous\n\n. . .\n\nWhile other times it’s best to wait and see what someone else does"
+  },
+  {
+    "objectID": "Slides/01Intro/0104-taxonomy.html#simultaneous-games",
+    "href": "Slides/01Intro/0104-taxonomy.html#simultaneous-games",
+    "title": "Taxonomy of Games",
+    "section": "",
+    "text": "In simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will will do now.\n. . .\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4."
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html#conflicting-vs.-common-interests",
     "href": "Slides/01Intro/0104-taxonomy.html#conflicting-vs.-common-interests",
     "title": "Taxonomy of Games",
     "section": "",
-    "text": "Many games you are familiar with have distince winners and losers.\n. . .\nBut in other types of games, it’s possible for everyone to come out ahead.\n\n\n\n\nWhen the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExamples: NCAA Football Championship, Scramble for Africa (technically constant-sum)\n\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc."
+    "text": "Many games you are familiar with have distince winners and losers.\n. . .\nBut in other types of games, it’s possible for everyone to come out ahead."
+  },
+  {
+    "objectID": "Slides/01Intro/0104-taxonomy.html#zero-sum-or-constant-sum-games",
+    "href": "Slides/01Intro/0104-taxonomy.html#zero-sum-or-constant-sum-games",
+    "title": "Taxonomy of Games",
+    "section": "",
+    "text": "When the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExamples: NCAA Football Championship, Scramble for Africa (technically constant-sum)\n\n. . .\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc."
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html#are-strategic-interactions-repeated",
@@ -630,18 +686,25 @@
     "text": "Two broad categories of the field are cooperative game theory and noncooperative game theory 2\n\nCooperative games are those in which agreements are enforceable\n\n\nIn Noncooperative games, no-one can be forced not to act in their own self-interest"
   },
   {
+    "objectID": "Slides/01Intro/0104-taxonomy.html#equilibrium",
+    "href": "Slides/01Intro/0104-taxonomy.html#equilibrium",
+    "title": "Taxonomy of Games",
+    "section": "",
+    "text": "In each of these different categories of games, we will want to make predictions as to how rational agents will behave\n\nOur methods of solving each type of game will be to look for different types of equilibria\n\n\n\n\n\n\n\nEquilibrium\n\n\n\nWhere every player’s strategy is a best-response to the other player(s)"
+  },
+  {
     "objectID": "Slides/01Intro/0104-taxonomy.html#equilibrium-2",
     "href": "Slides/01Intro/0104-taxonomy.html#equilibrium-2",
     "title": "Taxonomy of Games",
-    "section": "Equilibrium",
-    "text": "Equilibrium\nWhy study equilibria?\n\n\nThey are stable: if nobody has anything better to do than what they’re doing now then why change?\nWe can adapt our models to all types of equilibria\n\nMarket or non-market\nDynamic or static"
+    "section": "",
+    "text": "Why study equilibria?\n\n\nThey are stable: if nobody has anything better to do than what they’re doing now then why change?\nWe can adapt our models to all types of equilibria\n\nMarket or non-market\nDynamic or static"
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html#equilibrium-3",
     "href": "Slides/01Intro/0104-taxonomy.html#equilibrium-3",
     "title": "Taxonomy of Games",
-    "section": "Equilibrium",
-    "text": "Equilibrium\nA few different types of equilibria in this class:\n\nNash equilibrium\n\nSubgame perfect NE\nMixed strategy NE\nBayes-Nash equilibrium"
+    "section": "",
+    "text": "A few different types of equilibria in this class:\n\nNash equilibrium\n\nSubgame perfect NE\nMixed strategy NE\nBayes-Nash equilibrium"
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html#footnotes",
@@ -865,7 +928,14 @@
     "href": "Slides/01Intro/0103-definitions.html#payoffs-2",
     "title": "What is a Game? Definitions",
     "section": "Payoffs",
-    "text": "Payoffs\n\n\nSometimes my enjoyment of a thing depends on the state of the world\n\n\nsocially-dependent preferences\n\n\nMy choice\nMy friends’ choice\nMy payoff\n\n\n\n\nDuck’s game\nDuck’s game\n3\n\n\nDuck’s game\nStay home\n2\n\n\nStay home\nDuck’s game\n1\n\n\nStay home\nStay home\n2\n\n\n\n\nIs this an example of a strategic or non-strategic choice?\n\n\n\nExpected Payoffs\nOften games involve some amount of chance; with random probabilities of each outcome happening\n\nWe need tools for thinking about how people think about risk\n\n\n\n\nExpected Payoffs\n\nIn math, an expected value is the average value of a random variable, weighted by the probability of each value occuring\n\n\n\n\nExpected Payoffs\nFor example, suppose \\(X\\) is a random variable which is equal to:\n\n\n1 with 50% probability,\n2 with 25% probability,\n3 with 25% probability\n\nWhat is the expected value of \\(X\\)? (\\(E(X)\\))\n\\[\n\\begin{align}\nE(X) & = .5 (1) + .25 (2) + .25 (3) \\\\\n& = .5 + .5 + .75 = 2.75\n\\end{align}\n\\]\n\n\n\n\nExpected Payoffs\nAn Expected Payoff is just the expected value of possible payoffs\n\nAn average of the payoffs associated with every possible outcome, weighted by the corresponding probability of each outcome happening\n\n\n\n\nExpected Payoffs\nConsider the following choice:\n\n\n\n\n\n\nOption A:\n\n\n\nI flip two coins; - if both land heads, you win $100 - otherwise you get $0\n\n\n\n\n\n\n\n\nOption B:\n\n\n\nYou just get $25 for sure\n\n\n\n\n\nExpected Payoffs\n\nIf you choose Option A, we call you risk averse\nIf you choose Option B, you are risk loving\nIf you are indifferent between the two options, you would be risk neutral\n\n. . .\nAll of these difference preferences can be incorporated in the rational model with the right utility function"
+    "text": "Payoffs\n\n\nSometimes my enjoyment of a thing depends on the state of the world\n\n\nsocially-dependent preferences\n\n\nMy choice\nMy friends’ choice\nMy payoff\n\n\n\n\nDuck’s game\nDuck’s game\n3\n\n\nDuck’s game\nStay home\n2\n\n\nStay home\nDuck’s game\n1\n\n\nStay home\nStay home\n2\n\n\n\n\nIs this an example of a strategic or non-strategic choice?\n\n\n\n\nExpected Payoffs\nOften games involve some amount of chance; with random probabilities of each outcome happening\n\nWe need tools for thinking about how people think about risk\n\n\n\n\nExpected Payoffs\n\nIn math, an expected value is the average value of a random variable, weighted by the probability of each value occuring"
+  },
+  {
+    "objectID": "Slides/01Intro/0103-definitions.html#expected-payoffs-2",
+    "href": "Slides/01Intro/0103-definitions.html#expected-payoffs-2",
+    "title": "What is a Game? Definitions",
+    "section": "Expected Payoffs",
+    "text": "Expected Payoffs\nFor example, suppose \\(X\\) is a random variable which is equal to:\n\n1 with 50% probability,\n2 with 25% probability,\n3 with 25% probability\n\nWhat is the expected value of \\(X\\)? (\\(E(X)\\))\n. . .\n\\[\n\\begin{align}\nE(X) & = .5 (1) + .25 (2) + .25 (3) \\\\\n& = .5 + .5 + .75 = 2.75\n\\end{align}\n\\]\n\n\nExpected Payoffs\nAn Expected Payoff is just the expected value of possible payoffs\n\nAn average of the payoffs associated with every possible outcome, weighted by the corresponding probability of each outcome happening\n\n\n\n\nExpected Payoffs\nConsider the following choice:\n\n\n\n\n\n\nOption A:\n\n\n\nI flip two coins; - if both land heads, you win $100 - otherwise you get $0\n\n\n\n\n\n\n\n\nOption B:\n\n\n\nYou just get $25 for sure\n\n\n\n\n\nExpected Payoffs\n\nIf you choose Option A, we call you risk averse\nIf you choose Option B, you are risk loving\nIf you are indifferent between the two options, you would be risk neutral\n\nAll of these difference preferences can be incorporated in the rational model with the right utility function"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#beliefs",
