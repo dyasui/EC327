@@ -183,4 +183,49 @@ Two broad categories of the field are [cooperative]{.h} game theory and [noncoop
 
 > In [Noncooperative]{.h} games, no-one can be forced not to act in their own self-interest
 
+---
 
+# Equilibrium
+
+In each of these different categories of games,
+we will want to make predictions as to how rational agents will behave
+
+  * Our methods of *solving* each type of game will be to look for different types of [equilibria]{.hi}
+
+::: {.callout-note}
+## Equilibrium
+Where every player's strategy is a [best-response]{.hi} to the other player(s)
+:::
+
+---
+
+## Equilibrium
+
+Why study equilibria?
+
+::: {.incremental}
+  * They are **stable**:
+  if nobody has anything better to do than what they're doing now then why change?
+
+  * We can adapt our models to all types of equilibria
+    
+    - Market or non-market
+
+    - Dynamic or static 
+:::
+
+---
+
+## Equilibrium
+
+A few different types of equilibria in this class:
+
+  * [Nash equilibrium]{.hi}
+
+    - [Subgame perfect]{.hii} NE
+
+    - [Mixed strategy]{.hii} NE
+
+    - [Bayes-Nash]{.hii} equilibrium
+
+---
