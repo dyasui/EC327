@@ -49,20 +49,21 @@ A **Game** consists of:
 
 :::
 
----
-
 # Who are the players?
 
 ## What defines a player?
 
  * [Preferences]{.h}: 
- ::: {.incremental}
 
-  - In economics, we say people have *unlimited* wants and *limited* needs
+::: {.incremental}
 
-  - Therefore, we have to think about how people *prioritize* what they want more
+  - In economics, we say people have *unlimited* wants and *limited*
+  needs
 
- :::
+  - Therefore, we have to think about how people *prioritize* what
+  they want more
+
+:::
 
  * [Beliefs]{.h}:
 
@@ -74,16 +75,17 @@ A **Game** consists of:
 
   * [Beliefs]{.h}:
 
-  ::: {.incremental}
+::: {.incremental}
 
   - My beliefs about the world define how I act
 
-  - If I am exposed to new *information* it can potentially change my beliefs,
-  and therefore change my actions 
+  - If I am exposed to new *information* it can potentially change my
+  beliefs, and therefore change my actions 
 
-  - Information and beliefs of players will define later game theory topics
+  - Information and beliefs of players will define later game theory
+  topics
 
-  :::
+:::
 
 ---
 
@@ -219,6 +221,8 @@ What is true of payoffs?
   * Is this an example of a [strategic]{.hi} or [non-strategic]{.hi} choice?
 :::
 
+---
+
 ### *Expected* Payoffs
 
 Often games involve some amount of *chance*;
@@ -236,16 +240,17 @@ with random probabilities of each outcome happening
 
 ---
 
-### *Expected* Payoffs
+## *Expected* Payoffs
 
 For example, suppose $X$ is a random variable which is equal to: 
 
-::: {.incremental}
   * [1]{.hii} with [50%]{.hi} probability,
   * [2]{.hii} with [25%]{.hi} probability,
   * [3]{.hii} with [25%]{.hi} probability
 
 What is the *expected value* of $X$? ($E(X)$)
+
+. . .
 
 $$
 \begin{align}
@@ -253,7 +258,6 @@ E(X) & = .5 (1) + .25 (2) + .25 (3) \\
  & = .5 + .5 + .75 = 2.75
 \end{align}
 $$
-:::
 
 ---
 
@@ -293,7 +297,6 @@ You just get $25 for sure
   * If you are *indifferent* between the two options, 
   you would be [risk neutral]{.hii}
 
-. . .
 
 All of these difference preferences can be incorporated in the *rational* 
 model with the right *utility function*

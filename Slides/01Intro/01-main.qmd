@@ -87,5 +87,4 @@ resources:
 | 8        | 8              | Strategic Moves                                                     |
 | 9        | 9              | Uncertainty and Information                                         |
 | 10       | 10             | Repeated Games                                                      |
-| *Finals* | *TBA*          | *Exam*                                                              |
 

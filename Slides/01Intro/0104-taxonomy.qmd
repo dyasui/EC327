@@ -19,12 +19,13 @@
 
 ## Sequential vs. Simultaneous
 
-:::: {.columns}
+::::: {.columns}
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 
 [Sequential]{.h} Games
 
+::: {.incremental}
   * players make their moves one after the other
   
   * [Chapter]{.hi} 3
@@ -32,14 +33,16 @@
   * [Visual tool]{.hi}: *game trees*
   
   * [Solution Method]{.hi}: *backwards induction*
-
 :::
 
-. . .
+::::
 
-::: {.column width="50%"}
+
+:::: {.column width="50%"}
 
 [Simultaneous]{.h} Games
+
+::: {.incremental}
 
   * players make their moves at the same time
   
@@ -48,14 +51,15 @@
   * [Visual tool]{.hi}: *payoff tables*
   
   * [Solution Method]{.hi}: *best responses*, deletion of *dominated strats*
-
 :::
 
 ::::
 
+:::::
+
 ---
 
-### Sequential Games
+## Sequential Games
 
 In [sequential]{.hii} games, you have to think about how what you do [*now*]{.hi} 
 will affect what your opponent will do in the [*future*]{.hi}.
@@ -75,7 +79,7 @@ so they will be our first category of games.
 
 ---
 
-### Simultaneous Games
+## Simultaneous Games
 
 In [simultaneous]{.hii} games, you have to figure out what to do [*now*]{.hi} 
 while also thinking about what your opponent is thinking you will will do [*now*]{.hi}.
@@ -97,7 +101,7 @@ But in other types of games, it's possible for everyone to come out ahead.
 
 ---
 
-### Zero-sum (or constant-sum) Games
+## Zero-sum (or constant-sum) Games
 :::{.incremental}
 
 When the *total payoffs of all players sum to 0* ^[or sum to some constant]
@@ -106,6 +110,8 @@ When the *total payoffs of all players sum to 0* ^[or sum to some constant]
   
   * Examples: NCAA Football Championship, Scramble for Africa (technically *constant*-sum)
   
+. . .
+
 Not all games are fixed or zero sum; 
 
   * Examples: Hiring a tutor (mutual gains), International Trade, etc.
@@ -185,7 +191,7 @@ Two broad categories of the field are [cooperative]{.h} game theory and [noncoop
 
 ---
 
-# Equilibrium
+## Equilibrium
 
 In each of these different categories of games,
 we will want to make predictions as to how rational agents will behave
