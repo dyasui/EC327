@@ -15,13 +15,13 @@ we can start to *solve* them.
 
 ## The smoking decision
 
-![figures/fig3.2.png](figures/fig3.2.png)
+![](figures/fig3.2.png)
 
 ---
 
 ## The smoking *game*
 
-![figures/fig3.3.png](figures/fig3.3.png)
+![](figures/fig3.3.png)
 
 ---
 
