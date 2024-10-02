@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -158,36 +124,18 @@ window.Quarto = {
 </section>
 <section id="a-decision-tree" class="level2">
 <h2 class="anchored" data-anchor-id="a-decision-tree">A <em>Decision</em> Tree</h2>
-<div id="fig-decisiontree" class="test-class quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-decisiontree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode" id="fig-decisiontree" data-embed_mode="link" data-scale="3" data-format="svg"><pre class="sourceCode tikz test-class code-with-copy"><code class="sourceCode latex"><span id="fig-decisiontree-1"><a href="#fig-decisiontree-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\tikzstyle</span>{solid node}=[circle,draw,inner sep=1.5,fill=black]</span>
-<span id="fig-decisiontree-2"><a href="#fig-decisiontree-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\tikzstyle</span>{hollow node}=[circle,draw,inner sep=1.5]</span>
-<span id="fig-decisiontree-3"><a href="#fig-decisiontree-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\tikzstyle</span>{level 1}=[level distance=15mm,sibling distance=3.5cm]</span>
-<span id="fig-decisiontree-4"><a href="#fig-decisiontree-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\tikzstyle</span>{level 2}=[level distance=15mm,sibling distance=1.5cm]</span>
-<span id="fig-decisiontree-5"><a href="#fig-decisiontree-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\tikzstyle</span>{level 3}=[level distance=15mm,sibling distance=1cm]</span>
-<span id="fig-decisiontree-6"><a href="#fig-decisiontree-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="fig-decisiontree-7"><a href="#fig-decisiontree-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\node</span>(0)[solid node,label=above:{<span class="ss">$P1$</span>}]{}</span>
-<span id="fig-decisiontree-8"><a href="#fig-decisiontree-8" aria-hidden="true" tabindex="-1"></a>    child{node[solid node,label=above left:{<span class="ss">$P2$</span>}]{}</span>
-<span id="fig-decisiontree-9"><a href="#fig-decisiontree-9" aria-hidden="true" tabindex="-1"></a>        child{node[hollow node,label=below:{<span class="ss">$(1,2)$</span>}]{} edge from parent node[left]{<span class="ss">$C$</span>}}</span>
-<span id="fig-decisiontree-10"><a href="#fig-decisiontree-10" aria-hidden="true" tabindex="-1"></a>        child{node[hollow node,label=below:{<span class="ss">$(1,-1)$</span>}]{} edge from parent node[left]{<span class="ss">$D$</span>}}</span>
-<span id="fig-decisiontree-11"><a href="#fig-decisiontree-11" aria-hidden="true" tabindex="-1"></a>        child{node[hollow node,label=below:{<span class="ss">$(0,2)$</span>}]{} edge from parent node[right]{<span class="ss">$E$</span>}}</span>
-<span id="fig-decisiontree-12"><a href="#fig-decisiontree-12" aria-hidden="true" tabindex="-1"></a>        edge from parent node[left,xshift=-5]{<span class="ss">$A$</span>}</span>
-<span id="fig-decisiontree-13"><a href="#fig-decisiontree-13" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="fig-decisiontree-14"><a href="#fig-decisiontree-14" aria-hidden="true" tabindex="-1"></a>    child{node[solid node,label=above right:{<span class="ss">$P2$</span>}]{}</span>
-<span id="fig-decisiontree-15"><a href="#fig-decisiontree-15" aria-hidden="true" tabindex="-1"></a>        child{node[hollow node,label=below:{<span class="ss">$(2,2)$</span>}]{} edge from parent node[left]{<span class="ss">$F$</span>}}</span>
-<span id="fig-decisiontree-16"><a href="#fig-decisiontree-16" aria-hidden="true" tabindex="-1"></a>        child{node[hollow node,label=below:{<span class="ss">$(1,3)$</span>}]{} edge from parent node[right]{<span class="ss">$G$</span>}}</span>
-<span id="fig-decisiontree-17"><a href="#fig-decisiontree-17" aria-hidden="true" tabindex="-1"></a>        edge from parent node[right,xshift=5]{<span class="ss">$B$</span>}</span>
-<span id="fig-decisiontree-18"><a href="#fig-decisiontree-18" aria-hidden="true" tabindex="-1"></a>    };</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-decisiontree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/decisiontree.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
-<div class="{notes}">
+<div class="notes">
 <ul>
-<li></li>
+<li>Is this a strategic decision?
+<ul>
+<li>No: if it’s only me</li>
+</ul></li>
+<li>Just because there are no other branches leading to the intiial node doesn’t mean there are no other decisions that lead us here. Just that we are not modeling them for the sake of this decision.</li>
 </ul>
 </div>
 <hr>
@@ -201,6 +149,8 @@ Figure&nbsp;1
 <li><p><span class="hi">Branches</span> coming from each node which connect it to later nodes</p></li>
 <li><p>The tree ends in any of the multiple <span class="hi">terminal nodes</span></p></li>
 </ul>
+</div>
+<p>. . .</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -214,6 +164,13 @@ Warning
 <p>Each (non-initial) terminal node may have multiple branches leading from it; but must only have <em>one</em> branch that <em>leads to it</em>.</p>
 </div>
 </div>
+<div class="notes">
+<ul>
+<li>This is because <em>actions</em> are different from <em>strategies</em>
+<ul>
+<li>even if the actions are practically similar, it matters how we got there</li>
+</ul></li>
+</ul>
 </div>
 <hr>
 </section>
@@ -224,6 +181,15 @@ Warning
 <p><img src="figures/tree-nodes.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
+<div class="notes">
+<ul>
+<li>There are three nodes in this tree,
+<ul>
+<li>one initial node at the top: this is where the game begins</li>
+<li>two other nodes follow after the choice at the initial node is decided</li>
+</ul></li>
+</ul>
+</div>
 <hr>
 </section>
 <section id="anatomy-of-a-tree-1" class="level2">
@@ -232,6 +198,14 @@ Warning
 <figure class="figure">
 <p><img src="figures/tree-branches.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
+</div>
+<div class="notes">
+<ul>
+<li>In this case, each <em>decision node</em> has its own two <em>branches</em>
+<ul>
+<li>It helps to label each branch with the name of the action it represents</li>
+</ul></li>
+</ul>
 </div>
 <hr>
 </section>
@@ -242,6 +216,15 @@ Warning
 <p><img src="figures/tree-terminalnodes.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
 </figure>
 </div>
+<div class="notes">
+<ul>
+<li>The game ends with four <em>terminal nodes</em>
+<ul>
+<li>Unlike the nodes before, there is no decision to be made because the game is over</li>
+<li>By convention, they won’t be drawn as dots to differentiate them</li>
+</ul></li>
+</ul>
+</div>
 <hr>
 </section>
 <section id="kidnapping-game" class="level2">
@@ -249,7 +232,7 @@ Warning
 <p>A kidnapper named <span class="hi">Guy</span> has contacted the victim’s wife, named <span class="hi">Vivica</span>, to demand a ransom.</p>
 <p>To predict what will happen to the victim, <span class="hi">Orlando</span>, we need to create a game theoretic model of the situation.</p>
 <p>Let’s use the language of the tree graph to visualize this game.</p>
-<div class="{notes}">
+<div class="notes">
 <ul>
 <li>Draw game on chalkboard step-by-step so students see how it’s constructed</li>
 <li>Explain order of each action for each node, starting w/ inital choice to kidnap or not</li>
@@ -258,16 +241,14 @@ Warning
 <hr>
 <section id="kidnapping-game-1" class="level3">
 <h3 class="anchored" data-anchor-id="kidnapping-game-1">Kidnapping Game</h3>
+<div class="columns">
+<div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/kidnapgame_blank.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<hr>
-</section>
-</section>
-<section id="applying-the-extensive-form" class="level2">
-<h2 class="anchored" data-anchor-id="applying-the-extensive-form">Applying the Extensive Form</h2>
+</div><div class="column" style="width:40%;">
 <div class="incremental">
 <ul class="incremental">
 <li><p>Who are the players?</p></li>
@@ -277,10 +258,73 @@ Warning
 <li><p>Is this a <em>complete</em> representation of a game? What’s missing?</p></li>
 </ul>
 </div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Guy and Vivica are players because they have decisions which influence the outcome</li>
+<li>Orlando is not a player</li>
+<li>decisions are at each of the 4 nodes</li>
+<li>Each action is a decision</li>
+<li>A complete game needs preferences of the players!</li>
+<li>Note that even though Guy has two branches each for Kill and Release, they show up in different parts of the tree.
+<ul>
+<li>Prior decisions matter!</li>
+</ul></li>
+</ul>
+</div>
 <hr>
+</section>
 </section>
 <section id="kidnapping-game-payoffs" class="level2">
 <h2 class="anchored" data-anchor-id="kidnapping-game-payoffs">Kidnapping Game payoffs</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Outcome</strong></th>
+<th><span class="red"><strong>Guy</strong></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No kidnapping</td>
+<td><span class="red">3</span></td>
+</tr>
+<tr class="even">
+<td>Kidnapping, ransom paid, Orlando killed</td>
+<td><span class="red">4</span></td>
+</tr>
+<tr class="odd">
+<td>Kidnapping, ransom paid, Orlando released</td>
+<td><span class="red">5</span></td>
+</tr>
+<tr class="even">
+<td>Kidnapping, no ransom paid, Orlando killed</td>
+<td><span class="red">2</span></td>
+</tr>
+<tr class="odd">
+<td>Kidnapping, no ransom paid, Orlando released</td>
+<td><span class="red">1</span></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="notes">
+<ul>
+<li>Guy’s preferences:
+<ul>
+<li>Best case: Gets ransom money and he doesn’t have to kill Orlando</li>
+<li>Next best: Gets money but he has to kill Orlando :(</li>
+<li>Middle: No kidnapping, status quo, everyone goes about their lives</li>
+<li>Next worst: Kidnaps Orlando, gets no ransom, but at least gets to play tough for next kidnapping victim</li>
+<li>Worst case: Kidnaps Orlando but gets no ransom, <em>and</em> has to release Orlando</li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="kidnapping-game-payoffs-1" class="level2">
+<h2 class="anchored" data-anchor-id="kidnapping-game-payoffs-1">Kidnapping Game payoffs</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 54%">
@@ -323,6 +367,19 @@ Warning
 </tbody>
 </table>
 <hr>
+<div class="notes">
+<ul>
+<li>Vivica’s preferences
+<ul>
+<li>Best case: She and Orlando get to go about their lives without experiencing kidnapping</li>
+<li>Next best: Orlando is kidnapped, but is released without needing to pay</li>
+<li>Middle: Orlando is kidnapped, but is released after ransom is paid</li>
+<li>Next worst: Orlando is killed, but no ransom paid</li>
+<li>Worst: Orlando is killed and loses money</li>
+</ul></li>
+</ul>
+</div>
+<hr>
 </section>
 <section id="kidnapping-game-tree-with-payoffs" class="level2">
 <h2 class="anchored" data-anchor-id="kidnapping-game-tree-with-payoffs">Kidnapping game tree with payoffs</h2>
@@ -331,27 +388,57 @@ Warning
 <p><img src="figures/kidnapgame.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
+<div class="notes">
+<ul>
+<li><p>We added the correct payoffs to the terminal node corresponding to each outcome from the table</p></li>
+<li><p>Note how the convention is that the first player to move has their payoffs listed first</p></li>
+</ul>
+</div>
 <hr>
 </section>
 <section id="predictions" class="level2">
 <h2 class="anchored" data-anchor-id="predictions">Predictions?</h2>
-<p>Based on the extensive form game tree with payoffs, do you have any predictions for what strategies each player will choose?</p>
+<p>Based on the extensive form game tree with payoffs,</p>
+<ul>
+<li>Do you have any predictions for what strategies each player will choose?</li>
+</ul>
+<div class="notes">
+<ul>
+<li>Ask students what they would do in Guy’s position,</li>
+<li>in Vivica’s?</li>
+<li>Should they think about what the other player is thinking?</li>
+<li>Would they have different preference orederings of the outcomes?</li>
+</ul>
+</div>
 <hr>
 </section>
 <section id="a-definition-of-an-extensive-form-game" class="level2">
 <h2 class="anchored" data-anchor-id="a-definition-of-an-extensive-form-game">a Definition of an Extensive Form Game: <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
-<ul>
+<div class="incremental">
+<ul class="incremental">
 <li><p>A collection of decision-makers, called <span class="hi">players</span> or <em>agents</em></p></li>
-<li><p>A set of <span class="hi">decision nodes</span>, each of which represents the information available to the player of that node</p></li>
-<li><p><span class="hi">Branches</span> from each node which represent the possible actions available to the players</p></li>
-<li><p>The entire game tree serves as the <span class="h">mapping</span> from intersections of players’ strategy profiles to the outcomes at each <span class="hi">terminal nodes</span></p></li>
+<li><p>A set of <span class="hi">decision nodes</span>, each represents the information available to the player of that node</p></li>
+<li><p>Strategies for each player which list the <span class="hi">branches</span> from <em>each</em> node that represetn the actions a player would take if faced with that choice</p></li>
+<li><p>A <span class="h">tree diagram</span> which maps the intersections of players’ strategy profiles to the outcomes represented at each <span class="hi">terminal nodes</span></p></li>
 </ul>
+</div>
+<div class="notes">
+<ul>
+<li>connect this definition to the more general defition of a game from lecture 1
+<ul>
+<li><em>players</em> are a part of every game</li>
+<li><em>decision nodes</em> are a specific representation of <em>information sets</em></li>
+<li><em>strategies</em> will be defined by paths players take along the <em>branches</em></li>
+<li><em>preferences</em> are represented by the payoffs at terminal nodes</li>
+</ul></li>
+</ul>
+</div>
 <hr>
 </section>
 <section id="strategies-in-extensive-form-games" class="level2">
 <h2 class="anchored" data-anchor-id="strategies-in-extensive-form-games">Strategies in Extensive Form Games</h2>
 <div class="incremental">
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -361,7 +448,7 @@ Definition
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A <span class="hi">strategy</span> is a <strong>complete plan of action</strong> for every eventuality</p>
+<p>A <span class="hi">strategy</span> is a <strong>complete plan of action</strong> which assigns an action at <em>every</em> node where a player makes a decision</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -379,56 +466,96 @@ Warning
 </div>
 <p>What’s the difference?</p>
 </div>
+<div class="notes">
+<ul>
+<li>The difference between a complete <em>strategy</em> and a single <em>action</em> is that a strategy contains a list of multiple actions and the conditions for when that action will be taken</li>
+</ul>
 <hr>
-</section>
 <section id="apply-this-definition-to-the-kidnapping-game" class="level2">
 <h2 class="anchored" data-anchor-id="apply-this-definition-to-the-kidnapping-game">Apply this definition to the kidnapping game:</h2>
-<ul>
-<li>How many choices does Guy make?</li>
-</ul>
-<div class="fragment fade-in">
-<p>3</p>
-</div>
-<ul>
-<li>Vivica?</li>
-</ul>
-<div class="fragment fade-in">
-<p>1</p>
-</div>
-<ul>
-<li>Write out a strategy list for each player:</li>
-</ul>
-<hr>
-</section>
-<section id="write-out-a-strategy-for-each-player" class="level2">
-<h2 class="anchored" data-anchor-id="write-out-a-strategy-for-each-player">Write out a strategy for each player</h2>
-<div class="incremental">
-<p><em><span class="h">Guy</span></em>:</p>
-<ul class="incremental">
-<li><p><strong><em>{</em></strong><span class="hii"><em>Kidnap</em></span><strong><em>,</em></strong> <span class="hii"><em>Kill</em></span> if ransom paid<strong><em>,</em></strong> <span class="hii"><em>Don’t Kill</em></span> if no ransom paid<strong><em>}</em></strong> is <em>one</em> strategy</p>
-<ul class="incremental">
-<li><p>Guy has <span class="math inline">\(8\)</span> total strategies:</p></li>
-<li><p><strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Don’t</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Don’t</em></span>}, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Don’t</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong></p></li>
-</ul></li>
-</ul>
-<p><em><span class="h">Vivica</span></em>:</p>
-<ul class="incremental">
-<li>Only two strategies: <strong><em>{</em></strong><span class="hii"><em>Pay</em></span> the ransom<strong><em>}</em></strong>, or <strong><em>{</em></strong><span class="hii"><em>Don’t</em></span> pay<strong><em>}</em></strong></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="letting-nature-take-the-wheel" class="level2">
-<h2 class="anchored" data-anchor-id="letting-nature-take-the-wheel">Letting Nature take the wheel</h2>
-<p>One way to represent risk or uncertainty is to represent <strong>Nature</strong> as a ‘player’.</p>
+<div class="columns">
+<div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/doubleornothing.png" class="img-fluid figure-img"></p>
-<figcaption>figures/doubleornothing.png</figcaption>
+<p><img src="figures/kidnapgame_blank.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
+</div><div class="column" style="width:40%;">
+<div class="incremental">
+<ul class="incremental">
+<li>How many decisions does <span class="red">Guy</span> make?
+<ul class="incremental">
+<li>3</li>
+</ul></li>
+<li>How many decisions does <span class="blue">Vivica</span> make?
+<ul class="incremental">
+<li>1</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>count the nodes labeled with each player’s name</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="apply-this-definition-to-the-kidnapping-game-1" class="level2">
+<h2 class="anchored" data-anchor-id="apply-this-definition-to-the-kidnapping-game-1">Apply this definition to the kidnapping game:</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/kidnapgame_blank.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="incremental">
+<ul class="incremental">
+<li>Write out a complete strategy for <span class="blue">Vivica</span>
+<ul class="incremental">
+<li>Only two strategies:
+<ul class="incremental">
+<li>[<strong><em>{</em></strong> <span class="blue"><em>Pay</em></span> the ransom <strong><em>}</em></strong>,</li>
+<li>or <span class="blue"><strong><em>{</em></strong> [<em>Don’t</em>]</span> pay <strong><em>}</em></strong></li>
+</ul></li>
+</ul></li>
+<li>Write out at complete strategy for <span class="red">Guy</span>
+<ul class="incremental">
+<li>Let’s give some shorter names for Guy’s actions:
+<ul class="incremental">
+<li><span class="red"><span class="math inline">\(A\)</span></span> <span class="math inline">\(\equiv\)</span> Kidnap Orlando (Abduct)</li>
+<li><span class="red"><span class="math inline">\(I\)</span></span> <span class="math inline">\(\equiv\)</span> Don’t kidnap Orlando (Ignore)</li>
+<li><span class="red"><span class="math inline">\(K\)</span></span> <span class="math inline">\(\equiv\)</span> Kill Orlando</li>
+<li><span class="red"><span class="math inline">\(L\)</span></span> <span class="math inline">\(\equiv\)</span> Let Orlando live</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="notes">
+<ul>
+<li>Vivica only has to make a decision in the branch where Orlando is kidnapped</li>
+<li>But Guy’s choices depend on what Vivica chooses, so his strategy is more complicated</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="apply-this-definition-to-the-kidnapping-game-2" class="level2">
+<h2 class="anchored" data-anchor-id="apply-this-definition-to-the-kidnapping-game-2">Apply this definition to the kidnapping game:</h2>
+<p>Guy has <span class="math inline">\(8\)</span> total complete strategies:</p>
+<div class="line-block"><strong>{</strong><span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span><strong>}</strong> | <strong>{</strong><span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span><strong>}</strong> |<br>
+<strong>{</strong><span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span><strong>}</strong> | <strong>{</strong><span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span><strong>}</strong> |<br>
+<strong>{</strong><span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span><strong>}</strong> | <strong>{</strong><span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span><strong>}</strong> |<br>
+<strong>{</strong><span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span><strong>}</strong> | <strong>{</strong><span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span><strong>}</strong> |</div>
+<hr>
 
 
+</section>
+</div>
 </section>
 </section>
 

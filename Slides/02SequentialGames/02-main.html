@@ -367,13 +367,25 @@ Dante Yasui
 <section id="a-decision-tree" class="slide level2">
 <h2>A <em>Decision</em> Tree</h2>
 
-<img data-src="./images/tikz-output-1.svg" class="r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;1
-</p><div class="{notes}">
+<img data-src="figures/decisiontree.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><aside class="notes">
 <ul>
-<li></li>
+<li>Is this a strategic decision?
+<ul>
+<li>No: if it’s only me</li>
+</ul></li>
+<li>Just because there are no other branches leading to the intiial node doesn’t mean there are no other decisions that lead us here. Just that we are not modeling them for the sake of this decision.</li>
 </ul>
-</div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="extensive-form-definition" class="slide level2">
 <h2>Extensive Form Definition</h2>
@@ -384,6 +396,8 @@ Figure&nbsp;1
 <li class="fragment"><p><span class="hi">Branches</span> coming from each node which connect it to later nodes</p></li>
 <li class="fragment"><p>The tree ends in any of the multiple <span class="hi">terminal nodes</span></p></li>
 </ul>
+</div>
+<div class="fragment">
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -397,39 +411,127 @@ Figure&nbsp;1
 </div>
 </div>
 </div>
+<aside class="notes">
+<ul>
+<li>This is because <em>actions</em> are different from <em>strategies</em>
+<ul>
+<li>even if the actions are practically similar, it matters how we got there</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </div>
 </section>
 <section id="anatomy-of-a-tree" class="slide level2">
 <h2>Anatomy of a tree</h2>
 
-<img data-src="figures/tree-nodes.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
+<img data-src="figures/tree-nodes.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><aside class="notes">
+<ul>
+<li>There are three nodes in this tree,
+<ul>
+<li>one initial node at the top: this is where the game begins</li>
+<li>two other nodes follow after the choice at the initial node is decided</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="anatomy-of-a-tree-1" class="slide level2">
 <h2>Anatomy of a tree</h2>
 
-<img data-src="figures/tree-branches.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
+<img data-src="figures/tree-branches.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><aside class="notes">
+<ul>
+<li>In this case, each <em>decision node</em> has its own two <em>branches</em>
+<ul>
+<li>It helps to label each branch with the name of the action it represents</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="anatomy-of-a-tree-2" class="slide level2">
 <h2>Anatomy of a tree</h2>
 
-<img data-src="figures/tree-terminalnodes.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"></section>
+<img data-src="figures/tree-terminalnodes.png" class="quarto-figure quarto-figure-center r-stretch" style="width:80.0%"><aside class="notes">
+<ul>
+<li>The game ends with four <em>terminal nodes</em>
+<ul>
+<li>Unlike the nodes before, there is no decision to be made because the game is over</li>
+<li>By convention, they won’t be drawn as dots to differentiate them</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="kidnapping-game" class="slide level2">
 <h2>Kidnapping Game <sup>1</sup></h2>
 <p>A kidnapper named <span class="hi">Guy</span> has contacted the victim’s wife, named <span class="hi">Vivica</span>, to demand a ransom.</p>
 <p>To predict what will happen to the victim, <span class="hi">Orlando</span>, we need to create a game theoretic model of the situation.</p>
 <p>Let’s use the language of the tree graph to visualize this game.</p>
-<div class="{notes}">
+<aside class="notes">
 <ul>
 <li>Draw game on chalkboard step-by-step so students see how it’s constructed</li>
 <li>Explain order of each action for each node, starting w/ inital choice to kidnap or not</li>
 </ul>
-</div>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Harrington, pg 18</p></li></ol></aside></section>
 <section class="slide level2">
 
 <h3 id="kidnapping-game-1">Kidnapping Game</h3>
-
-<img data-src="figures/kidnapgame_blank.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="applying-the-extensive-form" class="slide level2">
-<h2>Applying the Extensive Form</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/kidnapgame_blank.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
 <div>
 <ul>
 <li class="fragment"><p>Who are the players?</p></li>
@@ -439,8 +541,90 @@ Figure&nbsp;1
 <li class="fragment"><p>Is this a <em>complete</em> representation of a game? What’s missing?</p></li>
 </ul>
 </div>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Guy and Vivica are players because they have decisions which influence the outcome</li>
+<li>Orlando is not a player</li>
+<li>decisions are at each of the 4 nodes</li>
+<li>Each action is a decision</li>
+<li>A complete game needs preferences of the players!</li>
+<li>Note that even though Guy has two branches each for Kill and Release, they show up in different parts of the tree.
+<ul>
+<li>Prior decisions matter!</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="kidnapping-game-payoffs" class="slide level2">
+<h2>Kidnapping Game payoffs</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th><strong>Outcome</strong></th>
+<th><span class="red"><strong>Guy</strong></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>No kidnapping</td>
+<td><span class="red">3</span></td>
+</tr>
+<tr class="even">
+<td>Kidnapping, ransom paid, Orlando killed</td>
+<td><span class="red">4</span></td>
+</tr>
+<tr class="odd">
+<td>Kidnapping, ransom paid, Orlando released</td>
+<td><span class="red">5</span></td>
+</tr>
+<tr class="even">
+<td>Kidnapping, no ransom paid, Orlando killed</td>
+<td><span class="red">2</span></td>
+</tr>
+<tr class="odd">
+<td>Kidnapping, no ransom paid, Orlando released</td>
+<td><span class="red">1</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<aside class="notes">
+<ul>
+<li>Guy’s preferences:
+<ul>
+<li>Best case: Gets ransom money and he doesn’t have to kill Orlando</li>
+<li>Next best: Gets money but he has to kill Orlando :(</li>
+<li>Middle: No kidnapping, status quo, everyone goes about their lives</li>
+<li>Next worst: Kidnaps Orlando, gets no ransom, but at least gets to play tough for next kidnapping victim</li>
+<li>Worst case: Kidnaps Orlando but gets no ransom, <em>and</em> has to release Orlando</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="kidnapping-game-payoffs-1" class="slide level2">
 <h2>Kidnapping Game payoffs</h2>
 <table class="caption-top">
 <colgroup>
@@ -484,27 +668,112 @@ Figure&nbsp;1
 </tbody>
 </table>
 </section>
+<section class="slide level2">
+
+<aside class="notes">
+<ul>
+<li>Vivica’s preferences
+<ul>
+<li>Best case: She and Orlando get to go about their lives without experiencing kidnapping</li>
+<li>Next best: Orlando is kidnapped, but is released without needing to pay</li>
+<li>Middle: Orlando is kidnapped, but is released after ransom is paid</li>
+<li>Next worst: Orlando is killed, but no ransom paid</li>
+<li>Worst: Orlando is killed and loses money</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="kidnapping-game-tree-with-payoffs" class="slide level2">
 <h2>Kidnapping game tree with payoffs</h2>
 
-<img data-src="figures/kidnapgame.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<img data-src="figures/kidnapgame.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<ul>
+<li><p>We added the correct payoffs to the terminal node corresponding to each outcome from the table</p></li>
+<li><p>Note how the convention is that the first player to move has their payoffs listed first</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="predictions" class="slide level2">
 <h2>Predictions?</h2>
-<p>Based on the extensive form game tree with payoffs, do you have any predictions for what strategies each player will choose?</p>
+<p>Based on the extensive form game tree with payoffs,</p>
+<ul>
+<li>Do you have any predictions for what strategies each player will choose?</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>Ask students what they would do in Guy’s position,</li>
+<li>in Vivica’s?</li>
+<li>Should they think about what the other player is thinking?</li>
+<li>Would they have different preference orederings of the outcomes?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="a-definition-of-an-extensive-form-game" class="slide level2">
 <h2>a Definition of an Extensive Form Game: <sup>1</sup></h2>
+<div>
 <ul>
-<li><p>A collection of decision-makers, called <span class="hi">players</span> or <em>agents</em></p></li>
-<li><p>A set of <span class="hi">decision nodes</span>, each of which represents the information available to the player of that node</p></li>
-<li><p><span class="hi">Branches</span> from each node which represent the possible actions available to the players</p></li>
-<li><p>The entire game tree serves as the <span class="h">mapping</span> from intersections of players’ strategy profiles to the outcomes at each <span class="hi">terminal nodes</span></p></li>
+<li class="fragment"><p>A collection of decision-makers, called <span class="hi">players</span> or <em>agents</em></p></li>
+<li class="fragment"><p>A set of <span class="hi">decision nodes</span>, each represents the information available to the player of that node</p></li>
+<li class="fragment"><p>Strategies for each player which list the <span class="hi">branches</span> from <em>each</em> node that represetn the actions a player would take if faced with that choice</p></li>
+<li class="fragment"><p>A <span class="h">tree diagram</span> which maps the intersections of players’ strategy profiles to the outcomes represented at each <span class="hi">terminal nodes</span></p></li>
 </ul>
+</div>
+<aside class="notes">
+<ul>
+<li>connect this definition to the more general defition of a game from lecture 1
+<ul>
+<li><em>players</em> are a part of every game</li>
+<li><em>decision nodes</em> are a specific representation of <em>information sets</em></li>
+<li><em>strategies</em> will be defined by paths players take along the <em>branches</em></li>
+<li><em>preferences</em> are represented by the payoffs at terminal nodes</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <aside><ol class="aside-footnotes"><li id="fn2"><p>for finite, perfect information games</p></li></ol></aside></section>
 <section id="strategies-in-extensive-form-games" class="slide level2">
 <h2>Strategies in Extensive Form Games</h2>
 <div>
-<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -513,7 +782,7 @@ Figure&nbsp;1
 <p><strong>Definition</strong></p>
 </div>
 <div class="callout-content">
-<p>A <span class="hi">strategy</span> is a <strong>complete plan of action</strong> for every eventuality</p>
+<p>A <span class="hi">strategy</span> is a <strong>complete plan of action</strong> which assigns an action at <em>every</em> node where a player makes a decision</p>
 </div>
 </div>
 </div>
@@ -532,48 +801,111 @@ Figure&nbsp;1
 </div>
 <p>What’s the difference?</p>
 </div>
-</section>
+<aside class="notes">
+<ul>
+<li>The difference between a complete <em>strategy</em> and a single <em>action</em> is that a strategy contains a list of multiple actions and the conditions for when that action will be taken</li>
+</ul>
+<hr>
 <section id="apply-this-definition-to-the-kidnapping-game" class="slide level2">
 <h2>Apply this definition to the kidnapping game:</h2>
-<ul>
-<li>How many choices does Guy make?</li>
-</ul>
-<div class="fragment fade-in">
-<p>3</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/kidnapgame_blank.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
 </div>
-<ul>
-<li>Vivica?</li>
-</ul>
-<div class="fragment fade-in">
-<p>1</p>
-</div>
-<ul>
-<li>Write out a strategy list for each player:</li>
-</ul>
-</section>
-<section id="write-out-a-strategy-for-each-player" class="slide level2">
-<h2>Write out a strategy for each player</h2>
+</div><div class="column" style="width:40%;">
 <div>
-<p><em><span class="h">Guy</span></em>:</p>
 <ul>
-<li class="fragment"><p><strong><em>{</em></strong><span class="hii"><em>Kidnap</em></span><strong><em>,</em></strong> <span class="hii"><em>Kill</em></span> if ransom paid<strong><em>,</em></strong> <span class="hii"><em>Don’t Kill</em></span> if no ransom paid<strong><em>}</em></strong> is <em>one</em> strategy</p>
+<li class="fragment">How many decisions does <span class="red">Guy</span> make?
 <ul>
-<li class="fragment"><p>Guy has <span class="math inline">\(8\)</span> total strategies:</p></li>
-<li class="fragment"><p><strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Don’t</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Don’t</em></span>}, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Don’t</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong></p></li>
+<li class="fragment">3</li>
+</ul></li>
+<li class="fragment">How many decisions does <span class="blue">Vivica</span> make?
+<ul>
+<li class="fragment">1</li>
 </ul></li>
 </ul>
-<p><em><span class="h">Vivica</span></em>:</p>
+</div>
+</div></div>
+<aside class="notes">
 <ul>
-<li class="fragment">Only two strategies: <strong><em>{</em></strong><span class="hii"><em>Pay</em></span> the ransom<strong><em>}</em></strong>, or <strong><em>{</em></strong><span class="hii"><em>Don’t</em></span> pay<strong><em>}</em></strong></li>
+<li>count the nodes labeled with each player’s name</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<hr>
+</section>
+<section id="apply-this-definition-to-the-kidnapping-game-1" class="slide level2">
+<h2>Apply this definition to the kidnapping game:</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/kidnapgame_blank.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<div>
+<ul>
+<li class="fragment">Write out a complete strategy for <span class="blue">Vivica</span>
+<ul>
+<li class="fragment">Only two strategies:
+<ul>
+<li class="fragment">[<strong><em>{</em></strong> <span class="blue"><em>Pay</em></span> the ransom <strong><em>}</em></strong>,</li>
+<li class="fragment">or <span class="blue"><strong><em>{</em></strong> [<em>Don’t</em>]</span> pay <strong><em>}</em></strong></li>
+</ul></li>
+</ul></li>
+<li class="fragment">Write out at complete strategy for <span class="red">Guy</span>
+<ul>
+<li class="fragment">Let’s give some shorter names for Guy’s actions:
+<ul>
+<li class="fragment"><span class="red"><span class="math inline">\(A\)</span></span> <span class="math inline">\(\equiv\)</span> Kidnap Orlando (Abduct)</li>
+<li class="fragment"><span class="red"><span class="math inline">\(I\)</span></span> <span class="math inline">\(\equiv\)</span> Don’t kidnap Orlando (Ignore)</li>
+<li class="fragment"><span class="red"><span class="math inline">\(K\)</span></span> <span class="math inline">\(\equiv\)</span> Kill Orlando</li>
+<li class="fragment"><span class="red"><span class="math inline">\(L\)</span></span> <span class="math inline">\(\equiv\)</span> Let Orlando live</li>
+</ul></li>
+</ul></li>
 </ul>
 </div>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Vivica only has to make a decision in the branch where Orlando is kidnapped</li>
+<li>But Guy’s choices depend on what Vivica chooses, so his strategy is more complicated</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<hr>
 </section>
-<section id="letting-nature-take-the-wheel" class="slide level2">
-<h2>Letting Nature take the wheel</h2>
-<p>One way to represent risk or uncertainty is to represent <strong>Nature</strong> as a ‘player’.</p>
-
-<img data-src="figures/doubleornothing.png" class="r-stretch quarto-figure-center"><p class="caption">figures/doubleornothing.png</p></section></section>
-<section>
+<section id="apply-this-definition-to-the-kidnapping-game-2" class="slide level2">
+<h2>Apply this definition to the kidnapping game:</h2>
+<p>Guy has <span class="math inline">\(8\)</span> total complete strategies:</p>
+<div class="line-block"><strong>{</strong><span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span><strong>}</strong> | <strong>{</strong><span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span><strong>}</strong> |<br>
+<strong>{</strong><span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span><strong>}</strong> | <strong>{</strong><span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span><strong>}</strong> |<br>
+<strong>{</strong><span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span><strong>}</strong> | <strong>{</strong><span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span><strong>}</strong> |<br>
+<strong>{</strong><span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span><strong>}</strong> | <strong>{</strong><span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span><strong>}</strong> |</div>
+<hr>
+</section>
 <section id="backwards-induction" class="title-slide slide level1 center">
 <h1>Backwards Induction</h1>
 
@@ -581,19 +913,23 @@ Figure&nbsp;1
 <section id="the-smoking-decision" class="slide level2">
 <h2>The smoking decision</h2>
 
-<img data-src="figures/fig3.2.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.2.png</p></section>
+<img data-src="figures/fig3.2.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.2.png</p><hr>
+</section>
 <section id="the-smoking-game" class="slide level2">
 <h2>The smoking <em>game</em></h2>
 
-<img data-src="figures/fig3.3.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.3.png</p></section>
+<img data-src="figures/fig3.3.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.3.png</p><hr>
+</section>
 <section id="pruning-branches" class="slide level2">
 <h2>‘Pruning’ branches</h2>
 
-<img data-src="figures/fig3.4.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.4.png</p></section>
+<img data-src="figures/fig3.4.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.4.png</p><hr>
+</section>
 <section id="section" class="slide level2">
 <h2></h2>
 
-<img data-src="figures/fig3.5.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.5.png</p></section>
+<img data-src="figures/fig3.5.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.5.png</p><hr>
+</section>
 <section id="backwards-induction-defined" class="slide level2">
 <h2>Backwards Induction defined</h2>
 <p>The method of looking at decisions in the future to decide what to do now is called <span class="h">Backwards Induction</span> or <span class="h">Rollback</span></p>
@@ -610,7 +946,8 @@ Figure&nbsp;1
 </div>
 </div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>Dixit et al, pg 56</p></li><li id="fn4"><p>aka subgame perfect equilibrium</p></li></ol></aside></section>
+<hr>
+</section>
 <section id="group-exercise" class="slide level2">
 <h2>Group Exercise:</h2>
 <p>Consider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.</p>
@@ -619,10 +956,12 @@ Figure&nbsp;1
 <li><p><em>How many total strategies are there for team 1?</em></p></li>
 <li><p><em>Use pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?</em></p></li>
 </ol>
+<hr>
 </section>
 <section id="adding-more-players" class="slide level2">
 <h2>Adding more players</h2>
 <p>We can start to add more complexity with more than two players</p>
+<hr>
 </section>
 <section id="player-planting-game" class="slide level2">
 <h2>3-player planting game</h2>
@@ -633,6 +972,7 @@ Figure&nbsp;1
 <li class="fragment"><p><strong>2 or 3 people</strong> working is enough to keep the garden healthy, but if <strong>1 or 0</strong> work, then the garden will die.</p></li>
 </ul>
 </div>
+<hr>
 </section>
 <section id="planting-game-payoffs" class="slide level2">
 <h2>Planting Game payoffs</h2>
@@ -662,11 +1002,13 @@ Figure&nbsp;1
 </tr>
 </tbody>
 </table>
+<hr>
 </section>
 <section id="planding-game-tree" class="slide level2">
 <h2>Planding Game Tree</h2>
 
-<img data-src="figures/fig3.6.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.6.png</p></section>
+<img data-src="figures/fig3.6.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.6.png</p><hr>
+</section>
 <section id="equilibrium-path-of-play" class="slide level2">
 <h2>Equilibrium Path of Play</h2>
 <div>
@@ -674,6 +1016,7 @@ Figure&nbsp;1
 <p>However, we couldn’t have gotten their without the other arrows paths <strong>even though they are never reached</strong> in equilibrium.</p>
 <p>Recall that a <span class="hi">strategy</span> is a collection of choices at <strong>every</strong> decision node.</p>
 </div>
+<hr>
 </section>
 <section id="equilibrium-strategies" class="slide level2">
 <h2>Equilibrium Strategies</h2>
@@ -684,6 +1027,7 @@ Figure&nbsp;1
 <ul>
 <li>To make it even shorter, let’s call this strategy <span class="hii">DC</span>.</li>
 </ul>
+<hr>
 </section>
 <section id="how-many-strategies-does-talia-have" class="slide level2">
 <h2>How many strategies does Talia have?</h2>
@@ -693,14 +1037,16 @@ Figure&nbsp;1
 <li class="fragment"><p>16 total strategies</p></li>
 </ul>
 </div>
+<hr>
 </section>
 <section id="rollback-equilibrium-strategies" class="slide level2">
 <h2>Rollback Equilibrium Strategies</h2>
 <p>The equilibrium is:</p>
 <ul>
-<li>{ <span class="hi">D</span><sup>1</sup>, <span class="hi">DC</span><sup>2</sup>, <span class="hi">DCCD</span><sup>3</sup> }</li>
+<li>{ <span class="hi">D</span><sup>3</sup>, <span class="hi">DC</span><sup>4</sup>, <span class="hi">DCCD</span><sup>5</sup> }</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn5"><p>Emily</p></li><li id="fn6"><p>Nina</p></li><li id="fn7"><p>Talia</p></li></ol></aside></section>
+<hr>
+</section>
 <section id="adding-more-moves" class="slide level2">
 <h2>Adding More Moves</h2>
 <p><span class="hi align-center">Even a simple game get complicated fast</span></p>
@@ -709,6 +1055,7 @@ Figure&nbsp;1
 <p><img data-src="figures/fig3.7.png" class="quarto-figure quarto-figure-center" width="600" height="500"></p>
 </figure>
 </div>
+<hr>
 </section>
 <section id="tic-tac-toe" class="slide level2">
 <h2>Tic-Tac-Toe</h2>
@@ -717,6 +1064,7 @@ Figure&nbsp;1
 <li><p>Most people probably figure out the rollback equilibrium after playing it enough</p></li>
 <li><p>Insert relevant xkcd here: <a href="https://xkcd.com/832/">https://xkcd.com/832/</a></p></li>
 </ul>
+<hr>
 </section>
 <section id="chess" class="slide level2">
 <h2>Chess</h2>
@@ -727,17 +1075,15 @@ Figure&nbsp;1
 </ul></li>
 <li><p>Players of complicated sequential games often implement some <span class="hi">intermediate valuation function</span> to assign payoffs to non-terminal nodes.</p></li>
 </ul>
-</section></section>
-<section>
+</section>
+
 <section id="welfare-and-efficiency" class="title-slide slide level1 center">
 <h1>Welfare and Efficiency</h1>
 <div>
 <p>What are the <strong>good</strong> outcomes in the planting game?</p>
 <p>Can we rank outcomes by collective welfare?</p>
 </div>
-</section>
-<section class="slide level2">
-
+<hr>
 
 <img data-src="figures/fig3.6.png" class="r-stretch"></section>
 <section id="pareto-dominance" class="slide level2">
@@ -750,6 +1096,7 @@ Figure&nbsp;1
 <li><p>At least one person strictly<sub>🎉</sub> prefers 🎉 to 🎊 - <span class="math inline">\(\exists 👤\)</span> such that U<sub>👤</sub>(🎊) <span class="math inline">\(&gt;\)</span> U<sub>👤</sub>(🎉)</p></li>
 </ol></li>
 </ul>
+<hr>
 </section>
 <section id="pareto-improvement" class="slide level2">
 <h2>Pareto Improvement</h2>
@@ -758,11 +1105,13 @@ Figure&nbsp;1
 <li><p>Such a policy change should reasonably be seen as unambiguously good</p></li>
 <li><p>Another perspective is that <em>no-one would veto</em> a pareto improvement</p></li>
 </ul>
+<hr>
 </section>
 <section id="pareto-efficiency" class="slide level2">
 <h2>Pareto Efficiency</h2>
 <p>An outcome is <span class="h">Pareto Efficient</span> (Optimal) if no other outcome Pareto dominates it.</p>
 <p>An outcome is <span class="hi">Pareto Infficient</span> if at least one other outcome Pareto dominates it.</p>
+<hr>
 </section>
 <section id="ranking-the-planting-payoffs" class="slide level2">
 <h2>Ranking the Planting Payoffs</h2>
@@ -770,6 +1119,7 @@ Figure&nbsp;1
 <ul>
 <li>Which one is Pareto dominating?</li>
 </ul>
+<hr>
 </section>
 <section id="ranking-the-planting-payoffs-1" class="slide level2">
 <h2>Ranking the Planting Payoffs</h2>
@@ -778,6 +1128,7 @@ Figure&nbsp;1
 <li>Which one is Pareto dominating?</li>
 </ul>
 <p>Is the rollback equilibrium outcome a <em>Pareto efficient</em> one?</p>
+<hr>
 </section>
 <section id="discussion-efficiency-vs-other-social-comparisons" class="slide level2">
 <h2>Discussion: Efficiency vs other social comparisons</h2>
@@ -788,9 +1139,7 @@ Figure&nbsp;1
 <li class="fragment"><p>We might address this later in the class with what is known as <em>Cooperative Game Theory</em></p></li>
 </ul>
 </div>
-</section>
-<section class="slide level2">
-
+<hr>
 
 <div class="quarto-auto-generated-content">
 <p><img src="UOSignature-356.png" class="slide-logo"></p>
@@ -798,7 +1147,20 @@ Figure&nbsp;1
 <p>EC327 | Lecture 2 | Sequential Games</p>
 </div>
 </div>
-</section></section>
+</section>
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>Dixit et al, pg 56</p></li><li id="fn4"><p>aka subgame perfect equilibrium</p></li><li id="fn5"><p>Emily</p></li><li id="fn6"><p>Nina</p></li><li id="fn7"><p>Talia</p></li></ol></aside></section></section>
 
     </div>
   </div>
