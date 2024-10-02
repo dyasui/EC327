@@ -144,7 +144,7 @@
     "href": "Slides/01Intro/01-main.html#what-defines-a-player-1",
     "title": "Introduction to Game Theory",
     "section": "What defines a player?",
-    "text": "What defines a player?\n\nPreferences:\nBeliefs:\n\n::: {.incremental}\n\nMy beliefs about the world define how I act\nIf I am exposed to new information it can potentially change my beliefs, and therefore change my actions\nInformation and beliefs of players will define later game theory topics\n\n:::"
+    "text": "What defines a player?\n\nPreferences:\nBeliefs:\n\n\n\nMy beliefs about the world define how I act\nIf I am exposed to new information it can potentially change my beliefs, and therefore change my actions\nInformation and beliefs of players will define later game theory topics"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#preferences",
@@ -284,7 +284,7 @@
     "href": "Slides/01Intro/01-main.html#tentative-schedule",
     "title": "Introduction to Game Theory",
     "section": "Tentative Schedule",
-    "text": "Tentative Schedule\n\n\n\n\n\n\n\n\nWeek\nChapter(s)\nTopic\n\n\n\n\n1\n1, 2\nIntro & General Principles\n\n\n2\n3\nSequential Move Games\n\n\n3\n4\nSimultaneous Move Games\n\n\n4\n6\nCombining Sequential and Simultaneous Moves\n\n\n5\n6\nReview & Midterm\n\n\n6\n5\nSimultaneous Games: Continuous Strategies, Discussion, and Evidence\n\n\n7\n7\nMixed Strategies\n\n\n8\n8\nStrategic Moves\n\n\n9\n9\nUncertainty and Information\n\n\n10\n10\nRepeated Games\n\n\nFinals\nTBA\nExam\n\n\n\n\n\n\n\nEC327 | Lecture 1 | Introduction"
+    "text": "Tentative Schedule\n\n\n\n\n\n\n\n\nWeek\nChapter(s)\nTopic\n\n\n\n\n1\n1, 2\nIntro & General Principles\n\n\n2\n3\nSequential Move Games\n\n\n3\n4\nSimultaneous Move Games\n\n\n4\n6\nCombining Sequential and Simultaneous Moves\n\n\n5\n6\nReview & Midterm\n\n\n6\n5\nSimultaneous Games: Continuous Strategies, Discussion, and Evidence\n\n\n7\n7\nMixed Strategies\n\n\n8\n8\nStrategic Moves\n\n\n9\n9\nUncertainty and Information\n\n\n10\n10\nRepeated Games\n\n\n\n\n\n\n\nEC327 | Lecture 1 | Introduction"
   },
   {
     "objectID": "activities/02SurvivorFlags/SurvivorFlags.html",
@@ -809,7 +809,7 @@
     "href": "Slides/01Intro/0103-definitions.html#what-defines-a-player-1",
     "title": "What is a Game? Definitions",
     "section": "What defines a player?",
-    "text": "What defines a player?\n\nPreferences:\nBeliefs:\n\n::: {.incremental}\n\nMy beliefs about the world define how I act\nIf I am exposed to new information it can potentially change my beliefs, and therefore change my actions\nInformation and beliefs of players will define later game theory topics\n\n:::"
+    "text": "What defines a player?\n\nPreferences:\nBeliefs:\n\n\n\nMy beliefs about the world define how I act\nIf I am exposed to new information it can potentially change my beliefs, and therefore change my actions\nInformation and beliefs of players will define later game theory topics"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#preferences",
