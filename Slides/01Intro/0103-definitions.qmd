@@ -290,9 +290,9 @@ You just get $25 for sure
 
 ### *Expected Payoffs*
 
-  * If you choose [Option A]{.h}, we call you [risk averse]{.hii}
+  * If you choose [Option A]{.h}, we call you [risk loving]{.hii}
 
-  * If you choose [Option B]{.h}, you are [risk loving]{.hii}
+  * If you choose [Option B]{.h}, you are [risk averse]{.hii}
 
   * If you are *indifferent* between the two options, 
   you would be [risk neutral]{.hii}
