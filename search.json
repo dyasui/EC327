@@ -399,11 +399,53 @@
     "text": "Each player’s strategy set has two strategies, each of one choice: Split \\(Sp\\) or Steal \\(St\\).\nThere are four different strategy profiles possible in this game:\n\n\\(\\{Sp, Sp\\}\\), \\(\\{Sp, St\\}\\), \\(\\{St, Sp\\}\\), and \\(\\{St, St\\}\\)\neach of which was represented by a cell in our game table."
   },
   {
+    "objectID": "Slides/01Intro/0100-syllabus.html",
+    "href": "Slides/01Intro/0100-syllabus.html",
+    "title": "University Policies",
+    "section": "",
+    "text": "Most up to date version on github\nI will also upload to Canvas\nprint, sign, and upload as your first assignment"
+  },
+  {
+    "objectID": "Slides/01Intro/0100-syllabus.html#syllabus-document",
+    "href": "Slides/01Intro/0100-syllabus.html#syllabus-document",
+    "title": "University Policies",
+    "section": "",
+    "text": "Most up to date version on github\nI will also upload to Canvas\nprint, sign, and upload as your first assignment"
+  },
+  {
+    "objectID": "Slides/01Intro/0100-syllabus.html#class-expectations",
+    "href": "Slides/01Intro/0100-syllabus.html#class-expectations",
+    "title": "University Policies",
+    "section": "Class Expectations",
+    "text": "Class Expectations\n\nPrerequisites\n\nCourses: EC201 or EC202\nKnowledge: This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.\n\nThere are great free resources out there like Khan Academy, but always feel free to reach out for help or other suggestions.\n\n\n\n\n\nStudent Expectations\n\n\nCome to class\n\nPay attention to lectures, take notes, review topics at home\nParticipate in group work & activities\nAsk questions!\n\nRead the textbook\nCommunicate respectfully\n\nWith your classmates\nWith me & grader\n\nHave academic integrity 1\n\nVerify that all submitted work is your own\nProvide sources for all information that you found outside this class\n\n\n\n\n\n\nInstructor Expectations\n\nProvide course material\n\nSlides will be updated on github\nI will also try to post them on Canvas, but not as regularly\nAssignments posted on Canvas w/ due dates, submission entry\n\nFace-to-face Interaction\n\nClasses\n\nAsk me to clarify if something doesn’t make sense\nAsk me to slow down if I’m going too fast\n\nOffice Hours\n\nUse them!!"
+  },
+  {
+    "objectID": "Slides/01Intro/0100-syllabus.html#admin-stuff",
+    "href": "Slides/01Intro/0100-syllabus.html#admin-stuff",
+    "title": "University Policies",
+    "section": "Admin Stuff",
+    "text": "Admin Stuff\n\nProblem Sets\nYou will practice what we learn in class on independently.\nEach homework assignment will include a few problems that will be similar to what you will see on exams.\n\n\nLearning something new takes practice, so these are designed to help you keep up with the concepts\nYou will be graded not only on whether you got a certain answer, but also more importantly on how you communicate your understanding\n\nSee Canvas rubric for more info\n\n\n\n\n\n\nClass Activities\n\n\nSometimes I will ask you to play the types of games we discuss in lectures\n\nRecord the strategies you chose and the outcomes\nReflect on how you played the game\nRelate it to lecture concepts\n\n\n\n\n\nI’m still working out how best to implement\nthis is how you participate, records attendance on activity days\nhopefully lets you experience first-hand the things we learn\n\n\n\n\n\nExams\nYou will demonstrate how well you understand concepts individually on a midterm and a final exam\n\n\nMidterm\n\nsometime around week 5 (Oct. 28th or 30th)\nWill test you on definitions, solution concepts, and apply them to critical thinking problems\n\nFinal\n\nfinals week of December 9 (check duckweb for specific date)\nCovers everything we learned in the quarter, with more focus on concepts from the 2nd half\n\n\n\n\n\nDept policy is 65% As & Bs\nexpect exams to be difficult\nBest way to prepare is lots of practice\n\n\n\n\n\nGrading\n\n\nProblem Sets\nIn-class Activities\nMidterm\nFinal\n\n30%\n10%\n30%\n30%\n\n\n\n\n\nPolicies\n\n\nNo make-up exams!\n\nif you absolutely cannot attend midterm, you can add its weight to final exam\n\nProblem set keys posted automatically after deadline\n\n-&gt; no late submissions accepted"
+  },
+  {
+    "objectID": "Slides/01Intro/0100-syllabus.html#footnotes",
+    "href": "Slides/01Intro/0100-syllabus.html#footnotes",
+    "title": "University Policies",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nsee UO’s Student Conduct Code↩︎"
+  },
+  {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html",
     "title": "Backwards Induction",
     "section": "",
-    "text": "figures/fig3.2.png\n\n\n\n\n\n\n\n\n\nfigures/fig3.3.png\n\n\n\n\n\n\n\n\n\nfigures/fig3.4.png\n\n\n\n\n\n\n\n\n\nfigures/fig3.5.png\n\n\n\n\n\n\nThe method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\n\nWhen all players do rollback analysis to choose their optimal strategies, we call this set of strategies the rollback equilibrium2 of the game; the outcome that arises from playing these strategies is the rollback equilibrium outcome\n\n\n\n\n\n\nConsider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.\n\nDraw the extensive form game tree complete with all payoff for both teams.\nHow many total strategies are there for team 1?\nUse pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?\n\n\n\n\n\nWe can start to add more complexity with more than two players\n\n\n\n\n\n\nEmily, Nina, and Talia are roommates who want to get a start on their communal garden.\nThey like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.\n2 or 3 people working is enough to keep the garden healthy, but if 1 or 0 work, then the garden will die.\n\n\n\n\n\n\n\n\n\noutcome:\nutlity:\n\n\n\n\nI don’t contribute, but garden lives\n4\n\n\nI contribute, and get garden.\n3\n\n\nI don’t contribute, and garden dies\n2\n\n\nI contribute, but garden dies\n1\n\n\n\n\n\n\n\n\n\n\nfigures/fig3.6.png\n\n\n\n\n\n\n\nNote that there is one continuous path we traced from the initial node to a final equilibrium outcome.\nHowever, we couldn’t have gotten their without the other arrows paths even though they are never reached in equilibrium.\nRecall that a strategy is a collection of choices at every decision node.\n\n\n\n\n\nEven though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:\n\n“Nina’s strategy in the rollback equilibrium is { Don’t Contribute at b, Contribute at c }”.\n\n\nTo make it even shorter, let’s call this strategy DC.\n\n\n\n\n\n\n\nCCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD\n16 total strategies\n\n\n\n\n\n\nThe equilibrium is:\n\n{ D3, DC4, DCCD5 }\n\n\n\n\n\nEven a simple game get complicated fast\n\n\n\n\n\n\n\n\n\n\nEven though it looks complicated, the main branches are really just copies of each other\nMost people probably figure out the rollback equilibrium after playing it enough\nInsert relevant xkcd here: https://xkcd.com/832/\n\n\n\n\n\n\nWhat about more complicated games like chess?\n\ntechnically rollback solvable, but with \\(10^{120}\\) possible moves, it hasn’t been solved by either human or machine\n\nPlayers of complicated sequential games often implement some intermediate valuation function to assign payoffs to non-terminal nodes."
+    "text": "Now that we have defined all the parts of what a sequential game is we can start to solve them.\n. . .\n\nA solution in our case will be a prediction of what rational agents would do in a sequential game\n\n\n\n\n\n\n\n\nfigures/fig3.2.png\n\n\n\n\n\n\n\n\n\nfigures/fig3.3.png\n\n\n\n\n\n\n\n\n\nfigures/fig3.4.png\n\n\n\n\n\n\n\n\n\nfigures/fig3.5.png\n\n\n\n\n\n\nThe method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\n\nWhen all players do rollback analysis to choose their optimal strategies, we call this set of strategies the rollback equilibrium2 of the game; the outcome that arises from playing these strategies is the rollback equilibrium outcome\n\n\n\n\n\n\nConsider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.\n\nDraw the extensive form game tree complete with all payoff for both teams.\nHow many total strategies are there for team 1?\nUse pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?\n\n\n\n\n\nWe can start to add more complexity with more than two players\n\n\n\n\n\n\nEmily, Nina, and Talia are roommates who want to get a start on their communal garden.\nThey like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.\n2 or 3 people working is enough to keep the garden healthy, but if 1 or 0 work, then the garden will die.\n\n\n\n\n\n\n\n\n\noutcome:\nutlity:\n\n\n\n\nI don’t contribute, but garden lives\n4\n\n\nI contribute, and get garden.\n3\n\n\nI don’t contribute, and garden dies\n2\n\n\nI contribute, but garden dies\n1\n\n\n\n\n\n\n\n\n\n\nfigures/fig3.6.png\n\n\n\n\n\n\n\nNote that there is one continuous path we traced from the initial node to a final equilibrium outcome.\nHowever, we couldn’t have gotten their without the other arrows paths even though they are never reached in equilibrium.\nRecall that a strategy is a collection of choices at every decision node.\n\n\n\n\n\nEven though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:\n\n“Nina’s strategy in the rollback equilibrium is { Don’t Contribute at b, Contribute at c }”.\n\n\nTo make it even shorter, let’s call this strategy DC.\n\n\n\n\n\n\n\nCCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD\n16 total strategies\n\n\n\n\n\n\nThe equilibrium is:\n\n{ D3, DC4, DCCD5 }\n\n\n\n\n\nEven a simple game get complicated fast\n\n\n\n\n\n\n\n\n\n\nEven though it looks complicated, the main branches are really just copies of each other\nMost people probably figure out the rollback equilibrium after playing it enough\nInsert relevant xkcd here: https://xkcd.com/832/\n\n\n\n\n\n\nWhat about more complicated games like chess?\n\ntechnically rollback solvable, but with \\(10^{120}\\) possible moves, it hasn’t been solved by either human or machine\n\nPlayers of complicated sequential games often implement some intermediate valuation function to assign payoffs to non-terminal nodes."
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#solving-sequential-games",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#solving-sequential-games",
+    "title": "Backwards Induction",
+    "section": "",
+    "text": "Now that we have defined all the parts of what a sequential game is we can start to solve them.\n. . .\n\nA solution in our case will be a prediction of what rational agents would do in a sequential game"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-decision",
@@ -530,55 +572,6 @@
     "title": "Backwards Induction",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nDixit et al, pg 56↩︎\naka subgame perfect equilibrium↩︎\nEmily↩︎\nNina↩︎\nTalia↩︎"
-  },
-  {
-    "objectID": "Slides/02SequentialGames/0203-pareto.html",
-    "href": "Slides/02SequentialGames/0203-pareto.html",
-    "title": "Welfare and Efficiency",
-    "section": "",
-    "text": "What are the good outcomes in the planting game?\nCan we rank outcomes by collective welfare?\n\n\n\n\n\nPareto optimality (or efficiency) is econonomists’ best shot at coming up with a ranking of which outcomes are objectively ‘better’\n\nFor any two outcomes (🎉, 🎊), 🎉 is Pareto dominated by 🎊 if both:\n\nNo one strictly prefers 🎉 to 🎊 - U👤(🎊) \\(\\geq\\) U👤(🎉) \\(\\forall 👤 \\in \\{ 🙍, 🧑, 💆, 🧖, 🧑, 😺, ...\\}\\)\nAt least one person strictly🎉 prefers 🎉 to 🎊 - \\(\\exists 👤\\) such that U👤(🎊) \\(&gt;\\) U👤(🎉)\n\n\n\n\n\n\nThe move from a policy y to an alternative policy x is a Pareto improvement if x Pareto dominates y.\n\nSuch a policy change should reasonably be seen as unambiguously good\nAnother perspective is that no-one would veto a pareto improvement\n\n\n\n\n\nAn outcome is Pareto Efficient (Optimal) if no other outcome Pareto dominates it.\nAn outcome is Pareto Infficient if at least one other outcome Pareto dominates it.\n\n\n\n\nCompare (4,3,3) to (1,2,2)\n\nWhich one is Pareto dominating?\n\n\n\n\n\nNow compare (4,3,3) to (3,4,3) or (3,3,4)\n\nWhich one is Pareto dominating?\n\nIs the rollback equilibrium outcome a Pareto efficient one?\n\n\n\n\n\n\nHow useful is Pareto Efficiency in the real world?\nHow else could we group outcomes?\nWe might address this later in the class with what is known as Cooperative Game Theory"
-  },
-  {
-    "objectID": "Slides/02SequentialGames/0203-pareto.html#pareto-dominance",
-    "href": "Slides/02SequentialGames/0203-pareto.html#pareto-dominance",
-    "title": "Welfare and Efficiency",
-    "section": "",
-    "text": "Pareto optimality (or efficiency) is econonomists’ best shot at coming up with a ranking of which outcomes are objectively ‘better’\n\nFor any two outcomes (🎉, 🎊), 🎉 is Pareto dominated by 🎊 if both:\n\nNo one strictly prefers 🎉 to 🎊 - U👤(🎊) \\(\\geq\\) U👤(🎉) \\(\\forall 👤 \\in \\{ 🙍, 🧑, 💆, 🧖, 🧑, 😺, ...\\}\\)\nAt least one person strictly🎉 prefers 🎉 to 🎊 - \\(\\exists 👤\\) such that U👤(🎊) \\(&gt;\\) U👤(🎉)"
-  },
-  {
-    "objectID": "Slides/02SequentialGames/0203-pareto.html#pareto-improvement",
-    "href": "Slides/02SequentialGames/0203-pareto.html#pareto-improvement",
-    "title": "Welfare and Efficiency",
-    "section": "",
-    "text": "The move from a policy y to an alternative policy x is a Pareto improvement if x Pareto dominates y.\n\nSuch a policy change should reasonably be seen as unambiguously good\nAnother perspective is that no-one would veto a pareto improvement"
-  },
-  {
-    "objectID": "Slides/02SequentialGames/0203-pareto.html#pareto-efficiency",
-    "href": "Slides/02SequentialGames/0203-pareto.html#pareto-efficiency",
-    "title": "Welfare and Efficiency",
-    "section": "",
-    "text": "An outcome is Pareto Efficient (Optimal) if no other outcome Pareto dominates it.\nAn outcome is Pareto Infficient if at least one other outcome Pareto dominates it."
-  },
-  {
-    "objectID": "Slides/02SequentialGames/0203-pareto.html#ranking-the-planting-payoffs",
-    "href": "Slides/02SequentialGames/0203-pareto.html#ranking-the-planting-payoffs",
-    "title": "Welfare and Efficiency",
-    "section": "",
-    "text": "Compare (4,3,3) to (1,2,2)\n\nWhich one is Pareto dominating?"
-  },
-  {
-    "objectID": "Slides/02SequentialGames/0203-pareto.html#ranking-the-planting-payoffs-1",
-    "href": "Slides/02SequentialGames/0203-pareto.html#ranking-the-planting-payoffs-1",
-    "title": "Welfare and Efficiency",
-    "section": "",
-    "text": "Now compare (4,3,3) to (3,4,3) or (3,3,4)\n\nWhich one is Pareto dominating?\n\nIs the rollback equilibrium outcome a Pareto efficient one?"
-  },
-  {
-    "objectID": "Slides/02SequentialGames/0203-pareto.html#discussion-efficiency-vs-other-social-comparisons",
-    "href": "Slides/02SequentialGames/0203-pareto.html#discussion-efficiency-vs-other-social-comparisons",
-    "title": "Welfare and Efficiency",
-    "section": "",
-    "text": "How useful is Pareto Efficiency in the real world?\nHow else could we group outcomes?\nWe might address this later in the class with what is known as Cooperative Game Theory"
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html",
@@ -900,7 +893,7 @@
     "href": "Slides/02SequentialGames/0201-trees.html",
     "title": "Extensive Form",
     "section": "",
-    "text": "Before we learn how to solve a game, it will helpful to be able to visualize them\nBecause of the ordered nature of sequential games, a tree diagram makes sense\n\n\n\n\n\n\n\n\n\n\n\n\nIs this a strategic decision?\n\nNo: if it’s only me\n\nJust because there are no other branches leading to the intiial node doesn’t mean there are no other decisions that lead us here. Just that we are not modeling them for the sake of this decision.\n\n\n\n\n\n\n\nA Tree Graph consists of:\n\nMultiple nodes with an ordered hierarchy starting from one initial node\nBranches coming from each node which connect it to later nodes\nThe tree ends in any of the multiple terminal nodes\n\n\n. . .\n\n\n\n\n\n\nWarning\n\n\n\nEach (non-initial) terminal node may have multiple branches leading from it; but must only have one branch that leads to it.\n\n\n\n\nThis is because actions are different from strategies\n\neven if the actions are practically similar, it matters how we got there\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThere are three nodes in this tree,\n\none initial node at the top: this is where the game begins\ntwo other nodes follow after the choice at the initial node is decided\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn this case, each decision node has its own two branches\n\nIt helps to label each branch with the name of the action it represents\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe game ends with four terminal nodes\n\nUnlike the nodes before, there is no decision to be made because the game is over\nBy convention, they won’t be drawn as dots to differentiate them\n\n\n\n\n\n\n\nA kidnapper named Guy has contacted the victim’s wife, named Vivica, to demand a ransom.\nTo predict what will happen to the victim, Orlando, we need to create a game theoretic model of the situation.\nLet’s use the language of the tree graph to visualize this game.\n\n\nDraw game on chalkboard step-by-step so students see how it’s constructed\nExplain order of each action for each node, starting w/ inital choice to kidnap or not\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWho are the players?\nWhere are the decisions?\nWhat are the branches? What do they represent?\nWhat do the terminal nodes represent?\nIs this a complete representation of a game? What’s missing?\n\n\n\n\n\n\nGuy and Vivica are players because they have decisions which influence the outcome\nOrlando is not a player\ndecisions are at each of the 4 nodes\nEach action is a decision\nA complete game needs preferences of the players!\nNote that even though Guy has two branches each for Kill and Release, they show up in different parts of the tree.\n\nPrior decisions matter!\n\n\n\n\n\n\n\n\n\n\n\nOutcome\nGuy\n\n\n\n\nNo kidnapping\n3\n\n\nKidnapping, ransom paid, Orlando killed\n4\n\n\nKidnapping, ransom paid, Orlando released\n5\n\n\nKidnapping, no ransom paid, Orlando killed\n2\n\n\nKidnapping, no ransom paid, Orlando released\n1\n\n\n\n\n\nGuy’s preferences:\n\nBest case: Gets ransom money and he doesn’t have to kill Orlando\nNext best: Gets money but he has to kill Orlando :(\nMiddle: No kidnapping, status quo, everyone goes about their lives\nNext worst: Kidnaps Orlando, gets no ransom, but at least gets to play tough for next kidnapping victim\nWorst case: Kidnaps Orlando but gets no ransom, and has to release Orlando\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOutcome\nGuy\nVivica\n\n\n\n\nNo kidnapping\n3\n5\n\n\nKidnapping, ransom paid, Orlando killed\n4\n1\n\n\nKidnapping, ransom paid, Orlando released\n5\n3\n\n\nKidnapping, no ransom paid, Orlando killed\n2\n2\n\n\nKidnapping, no ransom paid, Orlando released\n1\n4\n\n\n\n\n\nVivica’s preferences\n\nBest case: She and Orlando get to go about their lives without experiencing kidnapping\nNext best: Orlando is kidnapped, but is released without needing to pay\nMiddle: Orlando is kidnapped, but is released after ransom is paid\nNext worst: Orlando is killed, but no ransom paid\nWorst: Orlando is killed and loses money\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe added the correct payoffs to the terminal node corresponding to each outcome from the table\nNote how the convention is that the first player to move has their payoffs listed first\n\n\n\n\n\n\nBased on the extensive form game tree with payoffs,\n\nDo you have any predictions for what strategies each player will choose?\n\n\n\nAsk students what they would do in Guy’s position,\nin Vivica’s?\nShould they think about what the other player is thinking?\nWould they have different preference orederings of the outcomes?\n\n\n\n\n\n\n\n\nA collection of decision-makers, called players or agents\nA set of decision nodes, each represents the information available to the player of that node\nStrategies for each player which list the branches from each node that represetn the actions a player would take if faced with that choice\nA tree diagram which maps the intersections of players’ strategy profiles to the outcomes represented at each terminal nodes\n\n\n\n\nconnect this definition to the more general defition of a game from lecture 1\n\nplayers are a part of every game\ndecision nodes are a specific representation of information sets\nstrategies will be defined by paths players take along the branches\npreferences are represented by the payoffs at terminal nodes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefinition\n\n\n\nA strategy is a complete plan of action which assigns an action at every node where a player makes a decision\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBe careful to distinguish between a strategy and a single action/choice\n\n\nWhat’s the difference?\n\n\n\nThe difference between a complete strategy and a single action is that a strategy contains a list of multiple actions and the conditions for when that action will be taken\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow many decisions does Guy make?\n\n3\n\nHow many decisions does Vivica make?\n\n1\n\n\n\n\n\n\n\ncount the nodes labeled with each player’s name\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWrite out a complete strategy for Vivica\n\nOnly two strategies:\n\n{ Pay the ransom },\nor { Don’t pay }\n\n\n\n\n\n\n\n\nVivica only has to make a decision in the branch where Orlando is kidnapped\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWrite out at complete strategy for Guy\n\nLet’s give some shorter names for Guy’s actions:\n\n\\(A\\) \\(\\equiv\\) Kidnap Orlando (Abduct)\n\\(I\\) \\(\\equiv\\) Don’t kidnap Orlando (Ignore)\n\\(K\\) \\(\\equiv\\) Kill Orlando\n\\(L\\) \\(\\equiv\\) Let Orlando live\n\n\n\n\n\n\n\n\nBut Guy’s choices depend on what Vivica chooses, so his strategy is more complicated\n\n\n\n\n\n\nGuy has \\(8\\) total complete strategies:\n|—————————————————+—————————————————| | {\\(A\\), \\(K\\), \\(K\\)} | {\\(I\\), \\(K\\), \\(K\\)} | | {\\(A\\), \\(L\\), \\(K\\)} | {\\(I\\), \\(L\\), \\(L\\)} | | {\\(A\\), \\(K\\), \\(L\\)} | {\\(I\\), \\(K\\), \\(L\\)} | | {\\(A\\), \\(L\\), \\(L\\)} | {\\(I\\), \\(L\\), \\(L\\)} |"
+    "text": "Before we learn how to solve a game, it will helpful to be able to visualize them\nBecause of the ordered nature of sequential games, a tree diagram makes sense\n\n\n\n\n\n\n\n\n\n\n\n\nIs this a strategic decision?\n\nNo: if it’s only me\n\nJust because there are no other branches leading to the intiial node doesn’t mean there are no other decisions that lead us here. Just that we are not modeling them for the sake of this decision.\n\n\n\n\n\n\n\nA Tree Graph consists of:\n\nMultiple nodes with an ordered hierarchy starting from one initial node\nBranches coming from each node which connect it to later nodes\nThe tree ends in any of the multiple terminal nodes\n\n\n. . .\n\n\n\n\n\n\nWarning\n\n\n\nEach (non-initial) terminal node may have multiple branches leading from it; but must only have one branch that leads to it.\n\n\n\n\nThis is because actions are different from strategies\n\neven if the actions are practically similar, it matters how we got there\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThere are three nodes in this tree,\n\none initial node at the top: this is where the game begins\ntwo other nodes follow after the choice at the initial node is decided\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn this case, each decision node has its own two branches\n\nIt helps to label each branch with the name of the action it represents\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe game ends with four terminal nodes\n\nUnlike the nodes before, there is no decision to be made because the game is over\nBy convention, they won’t be drawn as dots to differentiate them\n\n\n\n\n\n\n\nA kidnapper named Guy has contacted the victim’s wife, named Vivica, to demand a ransom.\nTo predict what will happen to the victim, Orlando, we need to create a game theoretic model of the situation.\nLet’s use the language of the tree graph to visualize this game.\n\n\nDraw game on chalkboard step-by-step so students see how it’s constructed\nExplain order of each action for each node, starting w/ inital choice to kidnap or not\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWho are the players?\nWhere are the decisions?\nWhat are the branches? What do they represent?\nWhat do the terminal nodes represent?\nIs this a complete representation of a game? What’s missing?\n\n\n\n\n\n\nGuy and Vivica are players because they have decisions which influence the outcome\nOrlando is not a player\ndecisions are at each of the 4 nodes\nEach action is a decision\nA complete game needs preferences of the players!\nNote that even though Guy has two branches each for Kill and Release, they show up in different parts of the tree.\n\nPrior decisions matter!\n\n\n\n\n\n\n\n\n\n\n\nOutcome\nGuy\n\n\n\n\nNo kidnapping\n3\n\n\nKidnapping, ransom paid, Orlando killed\n4\n\n\nKidnapping, ransom paid, Orlando released\n5\n\n\nKidnapping, no ransom paid, Orlando killed\n2\n\n\nKidnapping, no ransom paid, Orlando released\n1\n\n\n\n\n\nGuy’s preferences:\n\nBest case: Gets ransom money and he doesn’t have to kill Orlando\nNext best: Gets money but he has to kill Orlando :(\nMiddle: No kidnapping, status quo, everyone goes about their lives\nNext worst: Kidnaps Orlando, gets no ransom, but at least gets to play tough for next kidnapping victim\nWorst case: Kidnaps Orlando but gets no ransom, and has to release Orlando\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOutcome\nGuy\nVivica\n\n\n\n\nNo kidnapping\n3\n5\n\n\nKidnapping, ransom paid, Orlando killed\n4\n1\n\n\nKidnapping, ransom paid, Orlando released\n5\n3\n\n\nKidnapping, no ransom paid, Orlando killed\n2\n2\n\n\nKidnapping, no ransom paid, Orlando released\n1\n4\n\n\n\n\n\nVivica’s preferences\n\nBest case: She and Orlando get to go about their lives without experiencing kidnapping\nNext best: Orlando is kidnapped, but is released without needing to pay\nMiddle: Orlando is kidnapped, but is released after ransom is paid\nNext worst: Orlando is killed, but no ransom paid\nWorst: Orlando is killed and loses money\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe added the correct payoffs to the terminal node corresponding to each outcome from the table\nNote how the convention is that the first player to move has their payoffs listed first\n\n\n\n\n\n\nBased on the extensive form game tree with payoffs,\n\nDo you have any predictions for what strategies each player will choose?\n\n\n\nAsk students what they would do in Guy’s position,\nin Vivica’s?\nShould they think about what the other player is thinking?\nWould they have different preference orederings of the outcomes?\n\n\n\n\n\n\n\n\nA collection of decision-makers, called players or agents\nA set of decision nodes, each represents the information available to the player of that node\nStrategies for each player which list the branches from each node that represetn the actions a player would take if faced with that choice\nA tree diagram which maps the intersections of players’ strategy profiles to the outcomes represented at each terminal nodes\n\n\n\n\nconnect this definition to the more general defition of a game from lecture 1\n\nplayers are a part of every game\ndecision nodes are a specific representation of information sets\nstrategies will be defined by paths players take along the branches\npreferences are represented by the payoffs at terminal nodes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefinition\n\n\n\nA strategy is a complete plan of action which assigns an action at every node where a player makes a decision\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBe careful to distinguish between a strategy and a single action/choice\n\n\nWhat’s the difference?\n\n\n\nThe difference between a complete strategy and a single action is that a strategy contains a list of multiple actions and the conditions for when that action will be taken\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow many decisions does Guy make?\n\n3\n\nHow many decisions does Vivica make?\n\n1\n\n\n\n\n\n\n\ncount the nodes labeled with each player’s name\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWrite out a complete strategy for Vivica\n\nOnly two strategies:\n\n{ Pay the ransom },\nor { Don’t pay }\n\n\n\n\n\n\n\n\nVivica only has to make a decision in the branch where Orlando is kidnapped\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWrite out at complete strategy for Guy\n\nLet’s give some shorter names for Guy’s actions:\n\n\\(A\\) \\(\\equiv\\) Kidnap Orlando (Abduct)\n\\(I\\) \\(\\equiv\\) Don’t kidnap Orlando (Ignore)\n\\(K\\) \\(\\equiv\\) Kill Orlando\n\\(L\\) \\(\\equiv\\) Let Orlando live\n\n\n\n\n\n\n\n\nBut Guy’s choices depend on what Vivica chooses, so his strategy is more complicated\n\n\n\n\n\n\nGuy has \\(8\\) total complete strategies:\n\n\n\n\n\n\n\nIf Guy \\(A\\)bducts\nIf Guy \\(I\\)gnores\n\n\n\n\n( \\(A\\), \\(K\\), \\(K\\) )\n( \\(I\\), \\(K\\), \\(K\\) )\n\n\n( \\(A\\), \\(L\\), \\(K\\) )\n( \\(I\\), \\(L\\), \\(L\\) )\n\n\n( \\(A\\), \\(K\\), \\(L\\) )\n( \\(I\\), \\(K\\), \\(L\\) )\n\n\n( \\(A\\), \\(L\\), \\(L\\) )\n( \\(I\\), \\(L\\), \\(L\\) )"
   },
   {
     "objectID": "Slides/02SequentialGames/0201-trees.html#game-treesextensive-form-as-a-tool",
@@ -1019,7 +1012,7 @@
     "href": "Slides/02SequentialGames/0201-trees.html#apply-this-definition-to-the-kidnapping-game-3",
     "title": "Extensive Form",
     "section": "",
-    "text": "Guy has \\(8\\) total complete strategies:\n|—————————————————+—————————————————| | {\\(A\\), \\(K\\), \\(K\\)} | {\\(I\\), \\(K\\), \\(K\\)} | | {\\(A\\), \\(L\\), \\(K\\)} | {\\(I\\), \\(L\\), \\(L\\)} | | {\\(A\\), \\(K\\), \\(L\\)} | {\\(I\\), \\(K\\), \\(L\\)} | | {\\(A\\), \\(L\\), \\(L\\)} | {\\(I\\), \\(L\\), \\(L\\)} |"
+    "text": "Guy has \\(8\\) total complete strategies:\n\n\n\n\n\n\n\nIf Guy \\(A\\)bducts\nIf Guy \\(I\\)gnores\n\n\n\n\n( \\(A\\), \\(K\\), \\(K\\) )\n( \\(I\\), \\(K\\), \\(K\\) )\n\n\n( \\(A\\), \\(L\\), \\(K\\) )\n( \\(I\\), \\(L\\), \\(L\\) )\n\n\n( \\(A\\), \\(K\\), \\(L\\) )\n( \\(I\\), \\(K\\), \\(L\\) )\n\n\n( \\(A\\), \\(L\\), \\(L\\) )\n( \\(I\\), \\(L\\), \\(L\\) )"
   },
   {
     "objectID": "Slides/02SequentialGames/0201-trees.html#footnotes",
@@ -1029,39 +1022,53 @@
     "text": "Footnotes\n\n\nHarrington, pg 18↩︎\nfor finite, perfect information games↩︎"
   },
   {
-    "objectID": "Slides/01Intro/0100-syllabus.html",
-    "href": "Slides/01Intro/0100-syllabus.html",
-    "title": "University Policies",
+    "objectID": "Slides/02SequentialGames/0203-pareto.html",
+    "href": "Slides/02SequentialGames/0203-pareto.html",
+    "title": "Welfare and Efficiency",
     "section": "",
-    "text": "Most up to date version on github\nI will also upload to Canvas\nprint, sign, and upload as your first assignment"
+    "text": "What are the good outcomes in the planting game?\nCan we rank outcomes by collective welfare?\n\n\n\n\n\nPareto optimality (or efficiency) is econonomists’ best shot at coming up with a ranking of which outcomes are objectively ‘better’\n\nFor any two outcomes (🎉, 🎊), 🎉 is Pareto dominated by 🎊 if both:\n\nNo one strictly prefers 🎉 to 🎊 - U👤(🎊) \\(\\geq\\) U👤(🎉) \\(\\forall 👤 \\in \\{ 🙍, 🧑, 💆, 🧖, 🧑, 😺, ...\\}\\)\nAt least one person strictly🎉 prefers 🎉 to 🎊 - \\(\\exists 👤\\) such that U👤(🎊) \\(&gt;\\) U👤(🎉)\n\n\n\n\n\n\nThe move from a policy y to an alternative policy x is a Pareto improvement if x Pareto dominates y.\n\nSuch a policy change should reasonably be seen as unambiguously good\nAnother perspective is that no-one would veto a pareto improvement\n\n\n\n\n\nAn outcome is Pareto Efficient (Optimal) if no other outcome Pareto dominates it.\nAn outcome is Pareto Infficient if at least one other outcome Pareto dominates it.\n\n\n\n\nCompare (4,3,3) to (1,2,2)\n\nWhich one is Pareto dominating?\n\n\n\n\n\nNow compare (4,3,3) to (3,4,3) or (3,3,4)\n\nWhich one is Pareto dominating?\n\nIs the rollback equilibrium outcome a Pareto efficient one?\n\n\n\n\n\n\nHow useful is Pareto Efficiency in the real world?\nHow else could we group outcomes?\nWe might address this later in the class with what is known as Cooperative Game Theory"
   },
   {
-    "objectID": "Slides/01Intro/0100-syllabus.html#syllabus-document",
-    "href": "Slides/01Intro/0100-syllabus.html#syllabus-document",
-    "title": "University Policies",
+    "objectID": "Slides/02SequentialGames/0203-pareto.html#pareto-dominance",
+    "href": "Slides/02SequentialGames/0203-pareto.html#pareto-dominance",
+    "title": "Welfare and Efficiency",
     "section": "",
-    "text": "Most up to date version on github\nI will also upload to Canvas\nprint, sign, and upload as your first assignment"
+    "text": "Pareto optimality (or efficiency) is econonomists’ best shot at coming up with a ranking of which outcomes are objectively ‘better’\n\nFor any two outcomes (🎉, 🎊), 🎉 is Pareto dominated by 🎊 if both:\n\nNo one strictly prefers 🎉 to 🎊 - U👤(🎊) \\(\\geq\\) U👤(🎉) \\(\\forall 👤 \\in \\{ 🙍, 🧑, 💆, 🧖, 🧑, 😺, ...\\}\\)\nAt least one person strictly🎉 prefers 🎉 to 🎊 - \\(\\exists 👤\\) such that U👤(🎊) \\(&gt;\\) U👤(🎉)"
   },
   {
-    "objectID": "Slides/01Intro/0100-syllabus.html#class-expectations",
-    "href": "Slides/01Intro/0100-syllabus.html#class-expectations",
-    "title": "University Policies",
-    "section": "Class Expectations",
-    "text": "Class Expectations\n\nPrerequisites\n\nCourses: EC201 or EC202\nKnowledge: This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.\n\nThere are great free resources out there like Khan Academy, but always feel free to reach out for help or other suggestions.\n\n\n\n\n\nStudent Expectations\n\n\nCome to class\n\nPay attention to lectures, take notes, review topics at home\nParticipate in group work & activities\nAsk questions!\n\nRead the textbook\nCommunicate respectfully\n\nWith your classmates\nWith me & grader\n\nHave academic integrity 1\n\nVerify that all submitted work is your own\nProvide sources for all information that you found outside this class\n\n\n\n\n\n\nInstructor Expectations\n\nProvide course material\n\nSlides will be updated on github\nI will also try to post them on Canvas, but not as regularly\nAssignments posted on Canvas w/ due dates, submission entry\n\nFace-to-face Interaction\n\nClasses\n\nAsk me to clarify if something doesn’t make sense\nAsk me to slow down if I’m going too fast\n\nOffice Hours\n\nUse them!!"
+    "objectID": "Slides/02SequentialGames/0203-pareto.html#pareto-improvement",
+    "href": "Slides/02SequentialGames/0203-pareto.html#pareto-improvement",
+    "title": "Welfare and Efficiency",
+    "section": "",
+    "text": "The move from a policy y to an alternative policy x is a Pareto improvement if x Pareto dominates y.\n\nSuch a policy change should reasonably be seen as unambiguously good\nAnother perspective is that no-one would veto a pareto improvement"
   },
   {
-    "objectID": "Slides/01Intro/0100-syllabus.html#admin-stuff",
-    "href": "Slides/01Intro/0100-syllabus.html#admin-stuff",
-    "title": "University Policies",
-    "section": "Admin Stuff",
-    "text": "Admin Stuff\n\nProblem Sets\nYou will practice what we learn in class on independently.\nEach homework assignment will include a few problems that will be similar to what you will see on exams.\n\n\nLearning something new takes practice, so these are designed to help you keep up with the concepts\nYou will be graded not only on whether you got a certain answer, but also more importantly on how you communicate your understanding\n\nSee Canvas rubric for more info\n\n\n\n\n\n\nClass Activities\n\n\nSometimes I will ask you to play the types of games we discuss in lectures\n\nRecord the strategies you chose and the outcomes\nReflect on how you played the game\nRelate it to lecture concepts\n\n\n\n\n\nI’m still working out how best to implement\nthis is how you participate, records attendance on activity days\nhopefully lets you experience first-hand the things we learn\n\n\n\n\n\nExams\nYou will demonstrate how well you understand concepts individually on a midterm and a final exam\n\n\nMidterm\n\nsometime around week 5 (Oct. 28th or 30th)\nWill test you on definitions, solution concepts, and apply them to critical thinking problems\n\nFinal\n\nfinals week of December 9 (check duckweb for specific date)\nCovers everything we learned in the quarter, with more focus on concepts from the 2nd half\n\n\n\n\n\nDept policy is 65% As & Bs\nexpect exams to be difficult\nBest way to prepare is lots of practice\n\n\n\n\n\nGrading\n\n\nProblem Sets\nIn-class Activities\nMidterm\nFinal\n\n30%\n10%\n30%\n30%\n\n\n\n\n\nPolicies\n\n\nNo make-up exams!\n\nif you absolutely cannot attend midterm, you can add its weight to final exam\n\nProblem set keys posted automatically after deadline\n\n-&gt; no late submissions accepted"
+    "objectID": "Slides/02SequentialGames/0203-pareto.html#pareto-efficiency",
+    "href": "Slides/02SequentialGames/0203-pareto.html#pareto-efficiency",
+    "title": "Welfare and Efficiency",
+    "section": "",
+    "text": "An outcome is Pareto Efficient (Optimal) if no other outcome Pareto dominates it.\nAn outcome is Pareto Infficient if at least one other outcome Pareto dominates it."
   },
   {
-    "objectID": "Slides/01Intro/0100-syllabus.html#footnotes",
-    "href": "Slides/01Intro/0100-syllabus.html#footnotes",
-    "title": "University Policies",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nsee UO’s Student Conduct Code↩︎"
+    "objectID": "Slides/02SequentialGames/0203-pareto.html#ranking-the-planting-payoffs",
+    "href": "Slides/02SequentialGames/0203-pareto.html#ranking-the-planting-payoffs",
+    "title": "Welfare and Efficiency",
+    "section": "",
+    "text": "Compare (4,3,3) to (1,2,2)\n\nWhich one is Pareto dominating?"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0203-pareto.html#ranking-the-planting-payoffs-1",
+    "href": "Slides/02SequentialGames/0203-pareto.html#ranking-the-planting-payoffs-1",
+    "title": "Welfare and Efficiency",
+    "section": "",
+    "text": "Now compare (4,3,3) to (3,4,3) or (3,3,4)\n\nWhich one is Pareto dominating?\n\nIs the rollback equilibrium outcome a Pareto efficient one?"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0203-pareto.html#discussion-efficiency-vs-other-social-comparisons",
+    "href": "Slides/02SequentialGames/0203-pareto.html#discussion-efficiency-vs-other-social-comparisons",
+    "title": "Welfare and Efficiency",
+    "section": "",
+    "text": "How useful is Pareto Efficiency in the real world?\nHow else could we group outcomes?\nWe might address this later in the class with what is known as Cooperative Game Theory"
   },
   {
     "objectID": "Slides/03SimultaneousGames/Nash.html",
@@ -1369,7 +1376,14 @@
     "href": "Slides/02SequentialGames/02-main.html#apply-this-definition-to-the-kidnapping-game-3",
     "title": "Introduction to Game Theory",
     "section": "Apply this definition to the kidnapping game:",
-    "text": "Apply this definition to the kidnapping game:\nGuy has \\(8\\) total complete strategies:\n|—————————————————+—————————————————| | {\\(A\\), \\(K\\), \\(K\\)} | {\\(I\\), \\(K\\), \\(K\\)} | | {\\(A\\), \\(L\\), \\(K\\)} | {\\(I\\), \\(L\\), \\(L\\)} | | {\\(A\\), \\(K\\), \\(L\\)} | {\\(I\\), \\(K\\), \\(L\\)} | | {\\(A\\), \\(L\\), \\(L\\)} | {\\(I\\), \\(L\\), \\(L\\)} |"
+    "text": "Apply this definition to the kidnapping game:\nGuy has \\(8\\) total complete strategies:\n\n\n\n\n\n\n\nIf Guy \\(A\\)bducts\nIf Guy \\(I\\)gnores\n\n\n\n\n( \\(A\\), \\(K\\), \\(K\\) )\n( \\(I\\), \\(K\\), \\(K\\) )\n\n\n( \\(A\\), \\(L\\), \\(K\\) )\n( \\(I\\), \\(L\\), \\(L\\) )\n\n\n( \\(A\\), \\(K\\), \\(L\\) )\n( \\(I\\), \\(K\\), \\(L\\) )\n\n\n( \\(A\\), \\(L\\), \\(L\\) )\n( \\(I\\), \\(L\\), \\(L\\) )"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#solving-sequential-games",
+    "href": "Slides/02SequentialGames/02-main.html#solving-sequential-games",
+    "title": "Introduction to Game Theory",
+    "section": "Solving Sequential Games",
+    "text": "Solving Sequential Games\nNow that we have defined all the parts of what a sequential game is we can start to solve them.\n\n\nA solution in our case will be a prediction of what rational agents would do in a sequential game"
   },
   {
     "objectID": "Slides/02SequentialGames/02-main.html#the-smoking-decision",
