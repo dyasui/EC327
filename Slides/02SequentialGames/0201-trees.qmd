@@ -14,31 +14,14 @@ name: GameTrees
 
 ## A *Decision* Tree
 
-::: {#fig-decisiontree .test-class}
-```{.tikz embed_mode="link" scale=3 format="svg"}
-\tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
-\tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
-\tikzstyle{level 1}=[level distance=15mm,sibling distance=3.5cm]
-\tikzstyle{level 2}=[level distance=15mm,sibling distance=1.5cm]
-\tikzstyle{level 3}=[level distance=15mm,sibling distance=1cm]
+![](figures/decisiontree.png){width=80% fig-align="center"}
 
-\node(0)[solid node,label=above:{$P1$}]{}
-    child{node[solid node,label=above left:{$P2$}]{}
-        child{node[hollow node,label=below:{$(1,2)$}]{} edge from parent node[left]{$C$}}
-        child{node[hollow node,label=below:{$(1,-1)$}]{} edge from parent node[left]{$D$}}
-        child{node[hollow node,label=below:{$(0,2)$}]{} edge from parent node[right]{$E$}}
-        edge from parent node[left,xshift=-5]{$A$}
-    }
-    child{node[solid node,label=above right:{$P2$}]{}
-        child{node[hollow node,label=below:{$(2,2)$}]{} edge from parent node[left]{$F$}}
-        child{node[hollow node,label=below:{$(1,3)$}]{} edge from parent node[right]{$G$}}
-        edge from parent node[right,xshift=5]{$B$}
-    };
-```
-:::
-
-::: {notes}
-  - 
+::: notes
+  - Is this a strategic decision? 
+    - No: if it's only me 
+  - Just because there are no other branches leading to the intiial node
+  doesn't mean there are no other decisions that lead us here.
+  Just that we are not modeling them for the sake of this decision.
 :::
 
 ---
@@ -54,12 +37,18 @@ A [Tree Graph]{.h} consists of:
   * [Branches]{.hi} coming from each node which connect it to later nodes
 
   * The tree ends in any of the multiple [terminal nodes]{.hi}
+:::
+
+. . .
   
 ::: {.callout-warning}
 Each (non-initial) terminal node may have multiple branches leading from it; 
 but must only have *one* branch that *leads to it*.
 :::
 
+::: notes
+  - This is because *actions* are different from *strategies*
+    - even if the actions are practically similar, it matters how we got there
 :::
 
 ---
@@ -68,17 +57,34 @@ but must only have *one* branch that *leads to it*.
 
 ![](figures/tree-nodes.png){width=80% fig-align="center"}
 
+::: notes
+  - There are three nodes in this tree,
+    - one initial node at the top: this is where the game begins
+    - two other nodes follow after the choice at the initial node is decided
+:::
+
 ---
 
 ## Anatomy of a tree
 
 ![](figures/tree-branches.png){width=80% fig-align="center"}
 
+::: notes
+  - In this case, each *decision node* has its own two *branches*
+    - It helps to label each branch with the name of the action it represents
+:::
+
 ---
 
 ## Anatomy of a tree
 
 ![](figures/tree-terminalnodes.png){width=80% fig-align="center"}
+
+::: notes
+  - The game ends with four *terminal nodes* 
+    - Unlike the nodes before, there is no decision to be made because the game is over
+    - By convention, they won't be drawn as dots to differentiate them
+:::
 
 ---
 
@@ -90,7 +96,7 @@ To predict what will happen to the victim, [Orlando]{.hi}, we need to create a g
 
 Let's use the language of the tree graph to visualize this game.
 
-::: {notes}
+::: notes
   - Draw game on chalkboard step-by-step so students see how it's constructed
   - Explain order of each action for each node,
   starting w/ inital choice to kidnap or not
@@ -100,12 +106,14 @@ Let's use the language of the tree graph to visualize this game.
 
 ### Kidnapping Game
 
+::::: {.columns}
+
+:::: {.column width="40%"}
 ![](figures/kidnapgame_blank.png){fig-align="center"}
+::::
 
----
 
-## Applying the Extensive Form
-
+:::: {.column width="40%"}
 ::: {.incremental}
 
   * Who are the players?
@@ -117,7 +125,42 @@ Let's use the language of the tree graph to visualize this game.
   * What do the terminal nodes represent?
   
   * Is this a *complete* representation of a game? What's missing?
+:::
+::::
 
+:::::
+
+::: notes
+  - Guy and Vivica are players because they have decisions which influence the outcome
+  - Orlando is not a player
+  - decisions are at each of the 4 nodes
+  - Each action is a decision
+  - A complete game needs preferences of the players!
+  - Note that even though Guy has two branches each for Kill and Release,
+  they show up in different parts of the tree.
+    - Prior decisions matter!
+:::
+
+---
+
+## Kidnapping Game payoffs
+
+| **Outcome**                                    | [**Guy**]{.red}   |
+| ---------------------------------------------- | ----------------- |
+| No kidnapping                                  | [3]{.red}         |
+| Kidnapping, ransom paid, Orlando killed        | [4]{.red}         |
+| Kidnapping, ransom paid, Orlando released      | [5]{.red}         |
+| Kidnapping, no ransom paid, Orlando killed     | [2]{.red}         |
+| Kidnapping, no ransom paid, Orlando released   | [1]{.red}         |
+---
+
+::: notes
+  - Guy's preferences:
+    - Best case: Gets ransom money and he doesn't have to kill Orlando
+    - Next best: Gets money but he has to kill Orlando :(
+    - Middle: No kidnapping, status quo, everyone goes about their lives
+    - Next worst: Kidnaps Orlando, gets no ransom, but at least gets to play tough for next kidnapping victim
+    - Worst case: Kidnaps Orlando but gets no ransom, *and* has to release Orlando
 :::
 
 ---
@@ -133,40 +176,82 @@ Let's use the language of the tree graph to visualize this game.
 | Kidnapping, no ransom paid, Orlando released   | [1]{.red}         | [4]{.blue}            |
 ---
 
+::: notes 
+  - Vivica's preferences
+    - Best case: She and Orlando get to go about their lives without experiencing kidnapping
+    - Next best: Orlando is kidnapped, but is released without needing to pay
+    - Middle: Orlando is kidnapped, but is released after ransom is paid
+    - Next worst: Orlando is killed, but no ransom paid
+    - Worst: Orlando is killed and loses money
+:::
+
+---
+
 ## Kidnapping game tree with payoffs
 
 ![](figures/kidnapgame.png){fig-align="center"}
+
+::: notes
+  - We added the correct payoffs to the terminal node 
+  corresponding to each outcome from the table
+
+  - Note how the convention is that the first player to move has their 
+  payoffs listed first
+
+:::
 
 ---
 
 ## Predictions?
 
 Based on the extensive form game tree with payoffs,
-do you have any predictions for what strategies each player will choose?
+
+- Do you have any predictions for what strategies each player will choose?
+
+::: notes
+  - Ask students what they would do in Guy's position,
+  - in Vivica's?
+  - Should they think about what the other player is thinking?
+  - Would they have different preference orederings of the outcomes?
+:::
 
 ---
 
 
 ## a Definition of an Extensive Form Game: ^[for finite, perfect information games]
 
+::: {.incremental}
   * A collection of decision-makers, called [players]{.hi} or *agents*
   
-  * A set of [decision nodes]{.hi}, each of which represents the information available to the player of that node
+  * A set of [decision nodes]{.hi}, 
+  each represents the information available to the player of that node
   
-  * [Branches]{.hi} from each node which represent the possible actions available to the players
+  * Strategies for each player which list the [branches]{.hi} 
+  from *each* node that represetn the actions 
+  a player would take if faced with that choice
   
-  * The entire game tree serves as the [mapping]{.h} from intersections of players' strategy profiles to the outcomes at each [terminal nodes]{.hi}
+  * A [tree diagram]{.h} which maps the intersections of players' strategy profiles
+  to the outcomes represented at each [terminal nodes]{.hi}
+:::
+
+::: notes
+  - connect this definition to the more general defition of a game from lecture 1
+    - *players* are a part of every game
+    - *decision nodes* are a specific representation of *information sets*
+    - *strategies* will be defined by paths players take along the *branches*
+    - *preferences* are represented by the payoffs at terminal nodes
+:::
   
 ---
 
 ## Strategies in Extensive Form Games
 
-::: {.incremental}
+:::: {.incremental}
 
-::: {.callout-tip}
+::: {.callout-note}
 ## Definition
 A [strategy]{.hi} is a **complete plan of action** 
-for every eventuality
+which assigns an action at *every* node where a player makes a decision
 :::
 
 ::: {.callout-warning}
@@ -175,59 +260,87 @@ Be careful to distinguish between a [*strategy*]{.hi} and a single *action/choic
 
 What's the difference?
 
-:::
+::::
+
+::: notes
+  - The difference between a complete *strategy* and a single *action*
+  is that a strategy contains a list of multiple actions 
+  and the conditions for when that action will be taken
 
 ---
 
 ## Apply this definition to the kidnapping game:
 
-  * How many choices does Guy make? 
-  
-::: {.fragment .fade-in}
-3
-:::
-  
-  * Vivica?
-  
-::: {.fragment .fade-in}
-1
-:::
-  
-  * Write out a strategy list for each player:
-  
----
+::::: {.columns}
 
-## Write out a strategy for each player
+:::: {.column width="40%"}
+![](figures/kidnapgame_blank.png){fig-align="center"}
+::::
 
+
+:::: {.column width="40%"}
 ::: {.incremental}
-_[Guy]{.h}_: 
 
-  * ***\{***[*Kidnap*]{.hii}***,*** [*Kill*]{.hii} if ransom paid***,*** [*Don't Kill*]{.hii} if no ransom paid***\}*** is *one* strategy
+  * How many decisions does [Guy]{.red} make? 
+    - 3
   
-    + Guy has $8$ total strategies:
-    
-    + **\{**[*Kidnap*]{.hii}, [*Kill*]{.hii}, [*Kill*]{.hii}**\}**, 
-    **\{**[*Kidnap*]{.hii}, [*Kill*]{.hii}, [*Don't*]{.hii}**\}**,
-    **\{**[*Kidnap*]{.hii}, [*Don't*]{.hii}, [*Kill*]{.hii}**\}**,
-    **\{**[*Kidnap*]{.hii}, [*Don't*]{.hii}, [*Don't*]{.hii}\}, 
-    **\{**[*No Kidnap*]{.hii}, [*Kill*]{.hii}, [*Kill*]{.hii}**\}**,
-    **\{**[*No Kidnap*]{.hii}, [*Kill*]{.hii}, [*Don't*]{.hii}**\}**,
-    **\{**[*No Kidnap*]{.hii}, [*Kill*]{.hii}, [*Kill*]{.hii}**\}**,
-    **\{**[*Kidnap*]{.hii}, [*Don't*]{.hii}, [*Kill*]{.hii}**\}**
-  
-_[Vivica]{.h}_:
-
-  * Only two strategies: ***\{***[*Pay*]{.hii} the ransom***\}***, or
-  ***\{***[*Don't*]{.hii} pay***\}***
-  
+  * How many decisions does [Vivica]{.blue} make?
+    - 1
 :::
+::::
 
+:::::
+
+::: notes
+  - count the nodes labeled with each player's name
+:::
+  
 ---
 
-## Letting Nature take the wheel
+## Apply this definition to the kidnapping game:
+::::: {.columns}
 
-One way to represent risk or uncertainty is to represent **Nature** as a 'player'.
+:::: {.column width="40%"}
+![](figures/kidnapgame_blank.png){fig-align="center"}
+::::
 
-![figures/doubleornothing.png](figures/doubleornothing.png)
 
+:::: {.column width="40%"}
+::: {.incremental}
+
+  * Write out a complete strategy for [Vivica]{.blue}
+    - Only two strategies: 
+      + [***\{*** [*Pay*]{.blue} the ransom ***\}***,
+      + or [***\{*** [*Don't*]]{.blue} pay ***\}***
+  
+  * Write out at complete strategy for [Guy]{.red}
+    - Let's give some shorter names for Guy's actions:
+      + [$A$]{.red} $\equiv$ Kidnap Orlando (Abduct)
+      + [$I$]{.red} $\equiv$ Don't kidnap Orlando (Ignore)
+      + [$K$]{.red} $\equiv$ Kill Orlando 
+      + [$L$]{.red} $\equiv$ Let Orlando live
+:::
+::::
+
+:::::
+
+::: notes
+  - Vivica only has to make a decision in the branch where Orlando is kidnapped
+  - But Guy's choices depend on what Vivica chooses, 
+  so his strategy is more complicated
+:::
+  
+---
+
+## Apply this definition to the kidnapping game:
+
+Guy has $8$ total complete strategies:
+
+| **\{**[$A$]{.red}, [$K$]{.red}, [$K$]{.red}**\}** | **\{**[$I$]{.red}, [$K$]{.red}, [$K$]{.red}**\}** |
+| **\{**[$A$]{.red}, [$L$]{.red}, [$K$]{.red}**\}** | **\{**[$I$]{.red}, [$L$]{.red}, [$L$]{.red}**\}** |
+| **\{**[$A$]{.red}, [$K$]{.red}, [$L$]{.red}**\}** | **\{**[$I$]{.red}, [$K$]{.red}, [$L$]{.red}**\}** |
+| **\{**[$A$]{.red}, [$L$]{.red}, [$L$]{.red}**\}** | **\{**[$I$]{.red}, [$L$]{.red}, [$L$]{.red}**\}** |
+
+
+---
 
