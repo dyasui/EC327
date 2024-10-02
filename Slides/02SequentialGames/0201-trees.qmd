@@ -108,12 +108,12 @@ Let's use the language of the tree graph to visualize this game.
 
 ::::: {.columns}
 
-:::: {.column width="40%"}
+:::: {.column width="50%"}
 ![](figures/kidnapgame_blank.png){fig-align="center"}
 ::::
 
 
-:::: {.column width="40%"}
+:::: {.column width="50%"}
 ::: {.incremental}
 
   * Who are the players?
@@ -152,7 +152,6 @@ Let's use the language of the tree graph to visualize this game.
 | Kidnapping, ransom paid, Orlando released      | [5]{.red}         |
 | Kidnapping, no ransom paid, Orlando killed     | [2]{.red}         |
 | Kidnapping, no ransom paid, Orlando released   | [1]{.red}         |
----
 
 ::: notes
   - Guy's preferences:
@@ -174,7 +173,6 @@ Let's use the language of the tree graph to visualize this game.
 | Kidnapping, ransom paid, Orlando released      | [5]{.red}         | [3]{.blue}            |
 | Kidnapping, no ransom paid, Orlando killed     | [2]{.red}         | [2]{.blue}            |
 | Kidnapping, no ransom paid, Orlando released   | [1]{.red}         | [4]{.blue}            |
----
 
 ::: notes 
   - Vivica's preferences
@@ -266,6 +264,7 @@ What's the difference?
   - The difference between a complete *strategy* and a single *action*
   is that a strategy contains a list of multiple actions 
   and the conditions for when that action will be taken
+:::
 
 ---
 
@@ -278,7 +277,7 @@ What's the difference?
 ::::
 
 
-:::: {.column width="40%"}
+:::: {.column width="60%"}
 ::: {.incremental}
 
   * How many decisions does [Guy]{.red} make? 
@@ -305,14 +304,36 @@ What's the difference?
 ::::
 
 
-:::: {.column width="40%"}
+:::: {.column width="60%"}
 ::: {.incremental}
 
   * Write out a complete strategy for [Vivica]{.blue}
     - Only two strategies: 
-      + [***\{*** [*Pay*]{.blue} the ransom ***\}***,
-      + or [***\{*** [*Don't*]]{.blue} pay ***\}***
+      + [*Pay*]{.blue} the ransom,
+      + or [*Don't*]{.blue} pay
+
+:::
+::::
+
+:::::
+
+::: notes
+  - Vivica only has to make a decision in the branch where Orlando is kidnapped
+:::
+
+---
   
+## Apply this definition to the kidnapping game:
+::::: {.columns}
+
+:::: {.column width="40%"}
+![](figures/kidnapgame_blank.png){fig-align="center"}
+::::
+
+
+:::: {.column width="60%"}
+::: {.incremental}
+
   * Write out at complete strategy for [Guy]{.red}
     - Let's give some shorter names for Guy's actions:
       + [$A$]{.red} $\equiv$ Kidnap Orlando (Abduct)
@@ -325,7 +346,6 @@ What's the difference?
 :::::
 
 ::: notes
-  - Vivica only has to make a decision in the branch where Orlando is kidnapped
   - But Guy's choices depend on what Vivica chooses, 
   so his strategy is more complicated
 :::
@@ -336,11 +356,11 @@ What's the difference?
 
 Guy has $8$ total complete strategies:
 
-| **\{**[$A$]{.red}, [$K$]{.red}, [$K$]{.red}**\}** | **\{**[$I$]{.red}, [$K$]{.red}, [$K$]{.red}**\}** |
-| **\{**[$A$]{.red}, [$L$]{.red}, [$K$]{.red}**\}** | **\{**[$I$]{.red}, [$L$]{.red}, [$L$]{.red}**\}** |
-| **\{**[$A$]{.red}, [$K$]{.red}, [$L$]{.red}**\}** | **\{**[$I$]{.red}, [$K$]{.red}, [$L$]{.red}**\}** |
-| **\{**[$A$]{.red}, [$L$]{.red}, [$L$]{.red}**\}** | **\{**[$I$]{.red}, [$L$]{.red}, [$L$]{.red}**\}** |
+| If Guy $A$bducts                          | If Guy $I$gnores                              |
+|-------------------------------------------+-----------------------------------------------|
+| ( [$A$]{.red}, [$K$]{.red}, [$K$]{.red} ) | ( [$I$]{.red}, [$K$]{.red}, [$K$]{.red} ) |
+| ( [$A$]{.red}, [$L$]{.red}, [$K$]{.red} ) | ( [$I$]{.red}, [$L$]{.red}, [$L$]{.red} ) |
+| ( [$A$]{.red}, [$K$]{.red}, [$L$]{.red} ) | ( [$I$]{.red}, [$K$]{.red}, [$L$]{.red} ) |
+| ( [$A$]{.red}, [$L$]{.red}, [$L$]{.red} ) | ( [$I$]{.red}, [$L$]{.red}, [$L$]{.red} ) |
 
-
----
 

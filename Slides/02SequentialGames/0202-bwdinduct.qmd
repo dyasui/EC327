@@ -1,8 +1,17 @@
----
-name: BackwardsInduction
----
 
 # Backwards Induction
+
+## Solving Sequential Games
+
+Now that we have defined all the parts of what a sequential game is 
+we can start to *solve* them.
+
+. . .
+
+  - A solution in our case will be a prediction of what rational agents
+  would do in a sequential game
+
+---
 
 ## The smoking decision
 

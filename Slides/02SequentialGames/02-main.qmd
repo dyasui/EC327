@@ -31,9 +31,7 @@ tikz:
 
   * Backwards Induction
 
-  * Evidence
-
-  * Examples
+  * Efficiency
 
 :::
 
@@ -43,5 +41,4 @@ tikz:
 
 {{< include 0203-pareto.qmd >}}
 
----
 
