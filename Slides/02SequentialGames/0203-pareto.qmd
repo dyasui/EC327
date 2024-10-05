@@ -1,0 +1,74 @@
+---
+name: Pareto
+---
+
+# Welfare and Efficiency
+
+::: incremental
+What are the **good** outcomes in the planting game?
+
+Can we rank outcomes by collective welfare?
+:::
+
+------------------------------------------------------------------------
+
+![](figures/fig3.6.png)
+
+## Pareto Dominance
+
+Pareto optimality (or efficiency) is econonomists' best shot at coming up with a ranking of which outcomes are objectively 'better'
+
+-   For any two outcomes (🎉, 🎊), 🎉 is [Pareto dominated]{.hi} by 🎊 if both:
+
+    1.  No one strictly prefers 🎉 to 🎊 - U~👤~(🎊) $\geq$ U~👤~(🎉) $\forall 👤 \in \{ 🙍, 🧑, 💆, 🧖, 🧑, 😺, ...\}$
+
+    2.  At least one person strictly~🎉~ prefers 🎉 to 🎊 - $\exists 👤$ such that U~👤~(🎊) $>$ U~👤~(🎉)
+
+------------------------------------------------------------------------
+
+## Pareto Improvement
+
+The move from a policy y to an alternative policy x is a [Pareto improvement]{.hi} if x Pareto dominates y.
+
+-   Such a policy change should reasonably be seen as unambiguously good
+
+-   Another perspective is that *no-one would veto* a pareto improvement
+
+------------------------------------------------------------------------
+
+## Pareto Efficiency
+
+An outcome is [Pareto Efficient]{.h} (Optimal) if no other outcome Pareto dominates it.
+
+An outcome is [Pareto Infficient]{.hi} if at least one other outcome Pareto dominates it.
+
+------------------------------------------------------------------------
+
+## Ranking the Planting Payoffs
+
+Compare (4,3,3) to (1,2,2)
+
+-   Which one is Pareto dominating?
+
+------------------------------------------------------------------------
+
+## Ranking the Planting Payoffs
+
+Now compare (4,3,3) to (3,4,3) or (3,3,4)
+
+-   Which one is Pareto dominating?
+
+Is the rollback equilibrium outcome a *Pareto efficient* one?
+
+------------------------------------------------------------------------
+
+## Discussion: Efficiency vs other social comparisons
+
+::: incremental
+-   How useful is Pareto Efficiency in the real world?
+
+  * How else could we group outcomes?
+  
+  * We might address this later in the class with what is known as 
+    *Cooperative Game Theory*
+:::

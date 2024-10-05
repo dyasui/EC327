@@ -9,33 +9,85 @@
     > **Strategic interdependence** is present in a social situation when what is best for someone *depends* on what someone else does. ^[*Harrington*, pg. 2]
 :::
 
+---
+
+## *Strategic* Choice vs. other types of choices
+
+::: {.incremental}
+
+  * Economics is the study of [constrained choice]{.hi};
+  in EC311, we introduce the *utility maximization problem* as the workhorse model
+  
+    - These types of problems usually only involve one agent;
+    the consumer, who is only constrained by their budget
+    
+  * We use the term [*strategic games*]{.hi} to distinguish from these single-agent optimization problems 
+  
+A [*game*]{.hi} is a type of problem featuring multiple agents, called [players]{.hi},
+  
+  * in which their optimal choice [depends on the optimal choices of  other players]{.hii}.
+  
+:::
+
+---
+
 ## A definition of a game ^[adapted from [Leigh Tesfatsion](https://www2.econ.iastate.edu/tesfatsi/)'s slides]
 
 A **Game** consists of:
 
+::: {.incremental}
+
   * a collection of decision-makers, called [players]{.hi};
+
   * the set of [information]{.hi} available to each player;
+
   * the [strategies]{.hi} available to each player in each information state;
+
   * a mapping from the intersection strategies of all players to outcomes;
+
   * [preferences]{.hi} of the individual players over all possible outcomes
+
+:::
 
 # Who are the players?
 
 ## What defines a player?
+
  * [Preferences]{.h}: 
-   Everyone has certain things they *want*.
 
-   But you usually can't get everything you want; 
-   economics is all about *constrained choices*.
+::: {.incremental}
 
-    So its important to have priorities
-    and to understand which things people prefer to others.
+  - In economics, we say people have *unlimited* wants and *limited*
+  needs
 
- * [Information]{.h}:
-   Some people might be better informed than others.
-   
+  - Therefore, we have to think about how people *prioritize* what
+  they want more
+
+:::
+
  * [Beliefs]{.h}:
-   What do I think about when I have to make a strategic choice?
+
+---
+
+## What defines a player?
+
+  * [Preferences]{.h}: 
+
+  * [Beliefs]{.h}:
+
+::: {.incremental}
+
+  - My beliefs about the world define how I act
+
+  - If I am exposed to new *information* it can potentially change my
+  beliefs, and therefore change my actions 
+
+  - Information and beliefs of players will define later game theory
+  topics
+
+:::
+
+---
 
 ## Preferences
 
@@ -44,12 +96,14 @@ A **Game** consists of:
 For example, on the set of Eugene boba stores, my preference ranking goes like this;
 
 ::: {.incremental}
-  1. [Day & Night](https://www.daynightboba.com/) - they have mango sago, cute location
-  2. [Tea 4](https://maps.app.goo.gl/zCVTUnaaYLD1Rwaw6) - major chain, good quality and selection
+  1. [Tea 4](https://maps.app.goo.gl/zCVTUnaaYLD1Rwaw6) - major chain, good quality and selection
+  2. [Day & Night](https://www.daynightboba.com/) - they have mango sago, cute location
   3. [Bobahead]() - no more campus location 😔
   4. No boba
   5. [Rabbit Hole](http://therabbitholeteabar.com/) - no hate, just not for me
 :::
+
+---
 
 ## Rational Preferences
 
@@ -67,17 +121,25 @@ Its assumptions are that:
     - if $(☕ \succ 🍵 \ )$ and $(🍵 \succ 🍶 \ )$, then $(☕ \succ 🍶)$  ( for any $\{☕ \ , 🍵 \ , 🍶 \ \} \in 🫖 \ $)
 :::
 
-## Rational Preferences (cont.)
+---
 
-Another key assumption of rationality is that we can represent preferences by real numbers.
+## Rationality
+
+One key proposition of rationality is that we can represent preferences by real numbers.
+
+::: {.incremental}
 
 A [utility function]{.h} maps a choice to a single number.
 
 For example, let $u(.)$ be the utility function from emoji to utils
 
-  * I can have $u(🍺) =5$, $u(🌯)=10$, $u(🤸)=25$
+  * I can have $u(🍺) =5$,
+  $u(🌯)=10$,
+  $u(🤸)=25$
 
   * I can also have $u(🍺 \ , 🌯) = 20$, $u(🍺 \ , 🌯 \ , 🤸) = 15$
+
+:::
   
 ---
   
@@ -101,11 +163,10 @@ For example, let $u(.)$ be the utility function from emoji to utils
 
 ::: {.incremental}
 
-  * For this class, you won't need to worry about utility functions (if you want to, take EC311).
+  * For this class, you won't need to worry about utility functions 
+  (if you want to, take EC311).
   
   * I will almost always give you specific values of utility which we will call [payoffs]{.hi}.
-  
-  * The table on the previous page is a good example.
   
 :::
 
@@ -117,13 +178,17 @@ What is a player's goal in a game?
 
 > To maximize their expected [payoff]{.h}
 
-. . . 
+::: {.incremental}
 
-  - A payoff can represent many things.
+  - A payoff can represent many things which come with a specific outcome
 
-  - But for simplicity we will abstract them down to a single numerical value.
+  - Whenever you see a payoff, assume that it represents everything about 
+  that outcome which an agent cares about
 
-  - A payoff doesn't need to be abstract; it could be dollars
+  - For example, your payoff to giving to charity would include 
+  the emotional benefit you feel towards giving to others
+
+:::
 
 ---
 
@@ -138,23 +203,9 @@ What is true of payoffs?
 
 > They capture *everything* in a game that a player cares about
 
-## *Strategic* Choice vs. other types of choices
-
-::: {.incremental}
-
-  * Economics is the study of [constrained choice]{.hi}; in EC311, we introduce the *utility maximization problem* as the workhorse model
-  
-    - These types of problems usually only involve one agent; the consumer, who is only constrained by their budget
-    
-  * We use the term [*strategic games*]{.hi} to distinguish from these single-agent optimization problems 
-  
-  * A [*game*]{.hi} is a type of problem featuring multiple agents, called [players]{.hi}, in which their optimal choice [depends on the optimal choices of  other players]{.hii}.
-  
-:::
-
 ---
 
-## State-dependent utility table
+## Payoffs
 ::: {.incremental}
   * Sometimes my enjoyment of a thing depends on the *state* of the world
 
@@ -170,16 +221,101 @@ What is true of payoffs?
   * Is this an example of a [strategic]{.hi} or [non-strategic]{.hi} choice?
 :::
 
-## Common Knowledge 
+---
+
+### *Expected* Payoffs
+
+Often games involve some amount of *chance*;
+with random probabilities of each outcome happening
+
+  * We need tools for thinking about how people think about [risk]{.hi}
+
+---
+
+### *Expected* Payoffs
+
+> In math, an [expected value]{.hii}
+> is the average value of a *random variable*,
+> weighted by the probability of each value occuring
+
+---
+
+## *Expected* Payoffs
+
+For example, suppose $X$ is a random variable which is equal to: 
+
+  * [1]{.hii} with [50%]{.hi} probability,
+  * [2]{.hii} with [25%]{.hi} probability,
+  * [3]{.hii} with [25%]{.hi} probability
+
+What is the *expected value* of $X$? ($E(X)$)
+
+. . .
+
+$$
+\begin{align}
+E(X) & = .5 (1) + .25 (2) + .25 (3) \\
+ & = .5 + .5 + .75 = 2.75
+\end{align}
+$$
+
+---
+
+### *Expected* Payoffs
+
+An [Expected Payoff]{.hi} is just the *expected value* of possible payoffs
+
+> An average of the payoffs associated with every possible outcome,
+> weighted by the corresponding probability of each outcome happening
+
+---
+
+### *Expected* Payoffs
+
+Consider the following choice:
+
+::: {.callout-note icon=false}
+## Option A:
+I flip two coins; 
+  - if both land **heads**, you win $100
+  - otherwise you get $0
+:::
+
+::: {.callout-note icon=false}
+## Option B:
+You just get $25 for sure
+:::
+
+---
+
+### *Expected Payoffs*
+
+  * If you choose [Option A]{.h}, we call you [risk loving]{.hii}
+
+  * If you choose [Option B]{.h}, you are [risk averse]{.hii}
+
+  * If you are *indifferent* between the two options, 
+  you would be [risk neutral]{.hii}
+
+
+All of these difference preferences can be incorporated in the *rational* 
+model with the right *utility function*
+
+---
+
+## Beliefs
 
 Our theories will have to make assumptions about what players **know**.
 
 All of our games will at least assume that [all players know all of the rules]{.h}.
 
-## Rules of the Game
+---
 
-We will assume that all players know:
+## Beliefs
 
+We will assume that all players know^[and believe]:
+
+::: {.incremental}
   - Who else is playing,
 
   - all of the strategies each player could *potentially* choose,
@@ -187,3 +323,5 @@ We will assume that all players know:
   - everyone's payoffs for all possible combinations of strategies by all players,
 
   - and that everyone else is maximizing their payoffs
+:::
+

@@ -1,0 +1,171 @@
+
+# Backwards Induction
+
+## Solving Sequential Games
+
+Now that we have defined all the parts of what a sequential game is 
+we can start to *solve* them.
+
+. . .
+
+  - A solution in our case will be a prediction of what rational agents
+  would do in a sequential game
+
+---
+
+## The smoking decision
+
+![](figures/fig3.2.png)
+
+---
+
+## The smoking *game*
+
+![](figures/fig3.3.png)
+
+---
+
+## 'Pruning' branches
+
+![figures/fig3.4.png](figures/fig3.4.png)
+
+---
+
+## 
+
+![figures/fig3.5.png](figures/fig3.5.png)
+
+---
+
+## Backwards Induction defined
+
+The method of looking at decisions in the future to decide what to do now is called [Backwards Induction]{.h} or [Rollback]{.h}
+
+::: {.callout-tip}
+## Definition ^[Dixit et al, pg 56]
+When all players do *rollback analysis* to choose their optimal strategies, we call this set of strategies the [*rollback equilibrium*]{.h}^[aka subgame perfect equilibrium] of the game; the outcome that arises from playing these strategies is the [*rollback equilibrium outcome*]{.hi}
+:::
+
+---
+
+## Group Exercise:
+
+Consider the Flag game but instead of starting with 21 flags the game starts with 5
+flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2
+flags.
+
+1. _Draw the extensive form game tree complete with all payoff for both teams._
+
+2. _How many total strategies are there for team 1?_
+
+3. _Use pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?_
+
+---
+
+## Adding more players
+
+We can start to add more complexity with more than two players
+
+---
+
+## 3-player planting game
+
+::: {.incremental}
+  * [Emily]{.hi}, [Nina]{.hi}, and [Talia]{.hi} are roommates who want to get a start on their communal garden. 
+  
+  * They like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.
+  
+  * **2 or 3 people** working is enough to keep the garden healthy, but if **1 or 0** work, then the garden will die.
+  
+:::
+  
+---
+
+## Planting Game payoffs
+
+| outcome:                             | utlity: |
+|--------------------------------------|---------|
+| I don't contribute, but garden lives | 4       |
+| I contribute, and get garden.        | 3       |
+| I don't contribute, and garden dies  | 2       |
+| I contribute, but garden dies        | 1       |
+
+---
+
+## Planding Game Tree
+
+![figures/fig3.6.png](figures/fig3.6.png)
+---
+
+## Equilibrium Path of Play
+
+::: {.incremental}
+
+Note that there is one continuous path we traced from the initial node to a final equilibrium outcome.
+
+However, we couldn't have gotten their without the other arrows paths **even though they are never reached** in equilibrium.
+
+Recall that a [strategy]{.hi} is a collection of choices at **every** decision node.
+
+:::
+
+---
+
+## Equilibrium Strategies
+
+Even though the players available actions are all called the same (Contribute or Don't), this tree provides labels of each decision node so we can say something like:
+
+  > "Nina's **strategy** in the rollback equilibrium is \{ [*Don't Contribute*]{.hii} at [b]{.hi}, [*Contribute*]{.hii} at [c]{.hi} \}".
+  
+  * To make it even shorter, let's call this strategy [DC]{.hii}.
+  
+---
+
+
+## How many strategies does Talia have?
+  
+::: {.incremental}
+
+  * CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD
+
+* 16 total strategies
+
+:::
+
+---
+  
+## Rollback Equilibrium Strategies
+
+The equilibrium is:
+
+  * \{ [D]{.hi}^[Emily], [DC]{.hi}^[Nina], [DCCD]{.hi}^[Talia]  \} 
+  
+---
+
+## Adding More Moves
+
+[Even a simple game get complicated fast]{.hi .align-center}
+
+![](figures/fig3.7.png){height="500" width="600" fig-align="center"}
+
+
+---
+
+## Tic-Tac-Toe
+
+  * Even though it looks complicated, the main branches are really just copies of each other
+
+  * Most people probably figure out the rollback equilibrium after playing it enough
+  
+  * Insert relevant xkcd here: [https://xkcd.com/832/](https://xkcd.com/832/)
+  
+---
+
+## Chess
+
+  * What about more complicated games like chess?
+  
+    + technically rollback solvable, but with $10^{120}$ possible moves, it hasn't been solved by either human or machine
+    
+  * Players of complicated sequential games often implement some [intermediate valuation function]{.hi} to assign payoffs to non-terminal nodes.
+  
