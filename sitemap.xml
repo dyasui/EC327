@@ -1,79 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dyasui.github.io/EC327/Slides/01Intro/01-main.html</loc>
-    <lastmod>2024-10-02T13:54:55.677Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/Exams/PracticeExam/Final/FinalExamReviewSheet.html</loc>
+    <lastmod>2024-09-29T19:02:37.724Z</lastmod>
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/activities/02SurvivorFlags/SurvivorFlags.html</loc>
-    <lastmod>2024-09-30T13:51:15.244Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dyasui.github.io/EC327/activities/03PirateTreasure/makegroups/Groups.html</loc>
-    <lastmod>2024-09-27T22:24:52.451Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/StrategicForm.html</loc>
-    <lastmod>2024-09-26T23:29:52.534Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dyasui.github.io/EC327/Slides/01Intro/0100-syllabus.html</loc>
-    <lastmod>2024-10-02T17:31:19.681Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/Dominance.html</loc>
-    <lastmod>2024-09-26T23:29:52.533Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dyasui.github.io/EC327/Slides/02SequentialGames/0202-bwdinduct.html</loc>
-    <lastmod>2024-10-02T02:21:04.927Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dyasui.github.io/EC327/Slides/01Intro/0104-taxonomy.html</loc>
-    <lastmod>2024-10-02T14:07:12.502Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dyasui.github.io/EC327/Slides/01Intro/0102-examples.html</loc>
-    <lastmod>2024-09-30T13:51:15.222Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dyasui.github.io/EC327/Exams/PracticeExam/Final/FinalExamReviewSheet.html</loc>
-    <lastmod>2024-09-26T23:29:52.066Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dyasui.github.io/EC327/Slides/01Intro/0101-prologue.html</loc>
-    <lastmod>2024-09-30T13:51:15.221Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dyasui.github.io/EC327/Slides/01Intro/0103-definitions.html</loc>
-    <lastmod>2024-10-02T14:03:53.739Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dyasui.github.io/EC327/Slides/02SequentialGames/0201-trees.html</loc>
-    <lastmod>2024-10-02T02:26:30.783Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dyasui.github.io/EC327/Slides/02SequentialGames/0203-pareto.html</loc>
-    <lastmod>2024-09-26T23:29:52.383Z</lastmod>
+    <lastmod>2024-09-30T08:13:24.559Z</lastmod>
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/Slides/04InfoSets/main.html</loc>
-    <lastmod>2024-09-27T22:23:36.623Z</lastmod>
+    <lastmod>2024-09-29T19:02:37.772Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/Nash.html</loc>
-    <lastmod>2024-09-26T23:29:52.534Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/StrategicForm.html</loc>
+    <lastmod>2024-09-29T19:02:37.752Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/activities/01GuessTwoThirds/GuessTwoThirds.html</loc>
-    <lastmod>2024-09-28T01:56:17.099Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/Dominance.html</loc>
+    <lastmod>2024-09-29T19:02:37.752Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/main.html</loc>
-    <lastmod>2024-09-26T23:29:52.541Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/Slides/02SequentialGames/GameTrees.html</loc>
+    <lastmod>2024-09-29T19:02:37.744Z</lastmod>
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/Slides/02SequentialGames/02-main.html</loc>
-    <lastmod>2024-10-02T02:27:52.261Z</lastmod>
+    <lastmod>2024-09-29T19:02:37.752Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/Slides/01Intro/Intro-examples.html</loc>
+    <lastmod>2024-09-29T19:02:37.736Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/Slides/01Intro/0103-definitions.html</loc>
+    <lastmod>2024-09-30T09:37:03.119Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/Slides/01Intro/0101-prologue.html</loc>
+    <lastmod>2024-09-30T08:22:28.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/Slides/01Intro/01-main.html</loc>
+    <lastmod>2024-09-30T09:45:28.147Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/Slides/01Intro/0100-syllabus.html</loc>
+    <lastmod>2024-10-01T01:45:23.336Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/Slides/01Intro/0102-examples.html</loc>
+    <lastmod>2024-09-30T08:26:35.635Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/Slides/01Intro/0104-taxonomy.html</loc>
+    <lastmod>2024-09-30T09:18:48.411Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/Slides/01Intro/Pareto.html</loc>
+    <lastmod>2024-09-29T19:02:37.736Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/Slides/02SequentialGames/BackwardsInduction.html</loc>
+    <lastmod>2024-09-29T19:02:37.744Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/Slides/02SequentialGames/Pareto.html</loc>
+    <lastmod>2024-09-29T19:02:37.744Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/Nash.html</loc>
+    <lastmod>2024-09-29T19:02:37.752Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/main.html</loc>
+    <lastmod>2024-09-29T19:02:37.752Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/activities/01GuessTwoThirds/GuessTwoThirds.html</loc>
+    <lastmod>2024-10-02T04:25:17.637Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/activities/03PirateTreasure/makegroups/Groups.html</loc>
+    <lastmod>2024-09-29T19:02:37.800Z</lastmod>
   </url>
 </urlset>
