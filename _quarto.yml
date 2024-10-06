@@ -6,19 +6,22 @@ project:
 
 website: 
   title: "EC327 Game Theory"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - href: Slides/index.qmd
-        text: Slides
   sidebar: 
-    - title: "Slides"
-      style: "docked"
-      contents:
-        - Slides/01Intro/01-main.qmd
-        - Slides/02SequentialGames/02-main.qmd
-  
+    style: "docked"
+    search: true
+    contents: 
+      - section: "Slides"
+        contents:
+          - Slides/01Intro/01-main.qmd
+          - Slides/02SequentialGames/02-main.qmd
+          - Slides/03SimultaneousGames/03-main.qmd
+      - section: "Activities"
+        contents: 
+          - activities/01GuessTwoThirds/GuessTwoThirds.qmd
+      - section: "Homework"
+        contents: 
+          - Homework/assignment1/main.pdf
+
 page-footer:
   right: "This page is built with [Quarto](https://quarto.org/)."
   
