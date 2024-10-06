@@ -133,102 +133,130 @@
     "text": "Each player’s strategy set has two strategies, each of one choice: Split \\(Sp\\) or Steal \\(St\\).\nThere are four different strategy profiles possible in this game:\n\n\\(\\{Sp, Sp\\}\\), \\(\\{Sp, St\\}\\), \\(\\{St, Sp\\}\\), and \\(\\{St, St\\}\\)\neach of which was represented by a cell in our game table."
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html",
-    "href": "Slides/02SequentialGames/GameTrees.html",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html",
+    "title": "Backwards Induction",
     "section": "",
-    "text": "Before we learn how to solve a game, it will helpful to be able to visualize them\nBecause of the ordered nature of sequential games, a tree diagram makes sense\n\n\n\n\n\n\n\n\n\n\n\nIs this a strategic decision?\n\n\n\n\n\n\nA Tree Graph consists of:\n\nMultiple nodes with an ordered hierarchy starting from one initial node\nBranches coming from each node which connect it to later nodes\nThe tree ends in any of the multiple terminal nodes\n\n\n\n\n\n\n\nWarning\n\n\n\nEach (non-initial) terminal node may have multiple branches leading from it; but must only have one branch that leads to it.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA kidnapper named Guy has contacted the victim’s wife, named Vivica, to demand a ransom.\nTo predict what will happen to the victim, Orlando, we need to create a game theoretic model of the situation.\nLet’s use the language of the tree graph to visualize this game.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWho are the players?\nWhere are the decisions?\nWhat are the branches? What do they represent?\nWhat do the terminal nodes represent?\nIs this a complete representation of a game? What’s missing?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOutcome\nGuy\nVivica\n\n\n\n\nNo kidnapping\n3\n5\n\n\nKidnapping, ransom paid, Orlando killed\n4\n1\n\n\nKidnapping, ransom paid, Orlando released\n5\n3\n\n\nKidnapping, no ransom paid, Orlando killed\n2\n2\n\n\nKidnapping, no ransom paid, Orlando released\n1\n4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBased on the extensive form game tree with payoffs, do you have any predictions for what strategies each player will choose?\n\n\n\n\n\nA collection of decision-makers, called players or agents\nA set of decision nodes, each of which represents the information available to the player of that node\nBranches from each node which represent the possible actions available to the players\nThe entire game tree serves as the mapping from intersections of players’ strategy profiles to the outcomes at each terminal nodes\n\n\n\n\n\n\n\n\n\n\n\n\nDefinition 3\n\n\n\nA strategy for a player in a perfect-information game is a list of choices, one for each decision node of that player.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBe careful to distinguish between a strategy and a single action/choice\n\n\nWhat’s the difference?\n\n\n\n\n\n\nHow many choices does Guy make?\n\n\n3\n\n\nVivica?\n\n\n1\n\n\nWrite out a strategy list for each player:\n\n\n\n\n\n\nGuy:\n\n{Kidnap, Kill if ransom paid, Don’t Kill if no ransom paid} is one strategy\n\nGuy has \\(8\\) total strategies:\n{Kidnap, Kill, Kill}, {Kidnap, Kill, Don’t}, {Kidnap, Don’t, Kill}, {Kidnap, Don’t, Don’t}, {No Kidnap, Kill, Kill}, {No Kidnap, Kill, Don’t}, {No Kidnap, Kill, Kill}, {Kidnap, Don’t, Kill}\n\n\nVivica:\n\nOnly two strategies: {Pay the ransom}, or {Don’t pay}\n\n\n\n\n\n\nOne way to represent risk or uncertainty is to represent Nature as a ‘player’.\n\n\n\nfigures/doubleornothing.png"
+    "text": "Now that we have defined all the parts of what a sequential game is we can start to solve them.\n. . .\n\nA solution in our case will be a prediction of what rational agents would do in a sequential game\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfigures/fig3.4.png\n\n\n\n\n\n\n\n\n\nfigures/fig3.5.png\n\n\n\n\n\n\nThe method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\n\nWhen all players do rollback analysis to choose their optimal strategies, we call this set of strategies the rollback equilibrium2 of the game; the outcome that arises from playing these strategies is the rollback equilibrium outcome\n\n\n\n\n\n\nConsider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.\n\nDraw the extensive form game tree complete with all payoff for both teams.\nHow many total strategies are there for team 1?\nUse pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?\n\n\n\n\n\nWe can start to add more complexity with more than two players\n\n\n\n\n\n\nEmily, Nina, and Talia are roommates who want to get a start on their communal garden.\nThey like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.\n2 or 3 people working is enough to keep the garden healthy, but if 1 or 0 work, then the garden will die.\n\n\n\n\n\n\n\n\n\noutcome:\nutlity:\n\n\n\n\nI don’t contribute, but garden lives\n4\n\n\nI contribute, and get garden.\n3\n\n\nI don’t contribute, and garden dies\n2\n\n\nI contribute, but garden dies\n1\n\n\n\n\n\n\n\n\n\n\nfigures/fig3.6.png\n\n\n\n\n\n\n\nNote that there is one continuous path we traced from the initial node to a final equilibrium outcome.\nHowever, we couldn’t have gotten their without the other arrows paths even though they are never reached in equilibrium.\nRecall that a strategy is a collection of choices at every decision node.\n\n\n\n\n\nEven though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:\n\n“Nina’s strategy in the rollback equilibrium is { Don’t Contribute at b, Contribute at c }”.\n\n\nTo make it even shorter, let’s call this strategy DC.\n\n\n\n\n\n\n\nCCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD\n16 total strategies\n\n\n\n\n\n\nThe equilibrium is:\n\n{ D3, DC4, DCCD5 }\n\n\n\n\n\nEven a simple game get complicated fast\n\n\n\n\n\n\n\n\n\n\nEven though it looks complicated, the main branches are really just copies of each other\nMost people probably figure out the rollback equilibrium after playing it enough\nInsert relevant xkcd here: https://xkcd.com/832/\n\n\n\n\n\n\nWhat about more complicated games like chess?\n\ntechnically rollback solvable, but with \\(10^{120}\\) possible moves, it hasn’t been solved by either human or machine\n\nPlayers of complicated sequential games often implement some intermediate valuation function to assign payoffs to non-terminal nodes."
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html#game-treesextensive-form-as-a-tool",
-    "href": "Slides/02SequentialGames/GameTrees.html#game-treesextensive-form-as-a-tool",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#solving-sequential-games",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#solving-sequential-games",
+    "title": "Backwards Induction",
     "section": "",
-    "text": "Before we learn how to solve a game, it will helpful to be able to visualize them\nBecause of the ordered nature of sequential games, a tree diagram makes sense"
+    "text": "Now that we have defined all the parts of what a sequential game is we can start to solve them.\n. . .\n\nA solution in our case will be a prediction of what rational agents would do in a sequential game"
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html#a-decision-tree",
-    "href": "Slides/02SequentialGames/GameTrees.html#a-decision-tree",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#pruning-branches",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#pruning-branches",
+    "title": "Backwards Induction",
     "section": "",
-    "text": "Is this a strategic decision?"
+    "text": "figures/fig3.4.png"
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html#extensive-form-definition",
-    "href": "Slides/02SequentialGames/GameTrees.html#extensive-form-definition",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#section",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#section",
+    "title": "Backwards Induction",
     "section": "",
-    "text": "A Tree Graph consists of:\n\nMultiple nodes with an ordered hierarchy starting from one initial node\nBranches coming from each node which connect it to later nodes\nThe tree ends in any of the multiple terminal nodes\n\n\n\n\n\n\n\nWarning\n\n\n\nEach (non-initial) terminal node may have multiple branches leading from it; but must only have one branch that leads to it."
+    "text": "figures/fig3.5.png"
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html#kidnapping-game",
-    "href": "Slides/02SequentialGames/GameTrees.html#kidnapping-game",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#backwards-induction-defined",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#backwards-induction-defined",
+    "title": "Backwards Induction",
     "section": "",
-    "text": "A kidnapper named Guy has contacted the victim’s wife, named Vivica, to demand a ransom.\nTo predict what will happen to the victim, Orlando, we need to create a game theoretic model of the situation.\nLet’s use the language of the tree graph to visualize this game."
+    "text": "The method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\n\nWhen all players do rollback analysis to choose their optimal strategies, we call this set of strategies the rollback equilibrium2 of the game; the outcome that arises from playing these strategies is the rollback equilibrium outcome"
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html#applying-the-extensive-form",
-    "href": "Slides/02SequentialGames/GameTrees.html#applying-the-extensive-form",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#group-exercise",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#group-exercise",
+    "title": "Backwards Induction",
     "section": "",
-    "text": "Who are the players?\nWhere are the decisions?\nWhat are the branches? What do they represent?\nWhat do the terminal nodes represent?\nIs this a complete representation of a game? What’s missing?"
+    "text": "Consider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.\n\nDraw the extensive form game tree complete with all payoff for both teams.\nHow many total strategies are there for team 1?\nUse pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?"
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html#kidnapping-game-payoffs",
-    "href": "Slides/02SequentialGames/GameTrees.html#kidnapping-game-payoffs",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#adding-more-players",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#adding-more-players",
+    "title": "Backwards Induction",
     "section": "",
-    "text": "Outcome\nGuy\nVivica\n\n\n\n\nNo kidnapping\n3\n5\n\n\nKidnapping, ransom paid, Orlando killed\n4\n1\n\n\nKidnapping, ransom paid, Orlando released\n5\n3\n\n\nKidnapping, no ransom paid, Orlando killed\n2\n2\n\n\nKidnapping, no ransom paid, Orlando released\n1\n4"
+    "text": "We can start to add more complexity with more than two players"
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html#predictions",
-    "href": "Slides/02SequentialGames/GameTrees.html#predictions",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#player-planting-game",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#player-planting-game",
+    "title": "Backwards Induction",
     "section": "",
-    "text": "Based on the extensive form game tree with payoffs, do you have any predictions for what strategies each player will choose?"
+    "text": "Emily, Nina, and Talia are roommates who want to get a start on their communal garden.\nThey like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.\n2 or 3 people working is enough to keep the garden healthy, but if 1 or 0 work, then the garden will die."
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html#a-definition-of-an-extensive-form-game",
-    "href": "Slides/02SequentialGames/GameTrees.html#a-definition-of-an-extensive-form-game",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#planting-game-payoffs",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#planting-game-payoffs",
+    "title": "Backwards Induction",
     "section": "",
-    "text": "A collection of decision-makers, called players or agents\nA set of decision nodes, each of which represents the information available to the player of that node\nBranches from each node which represent the possible actions available to the players\nThe entire game tree serves as the mapping from intersections of players’ strategy profiles to the outcomes at each terminal nodes"
+    "text": "outcome:\nutlity:\n\n\n\n\nI don’t contribute, but garden lives\n4\n\n\nI contribute, and get garden.\n3\n\n\nI don’t contribute, and garden dies\n2\n\n\nI contribute, but garden dies\n1"
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html#strategies-in-extensive-form-games",
-    "href": "Slides/02SequentialGames/GameTrees.html#strategies-in-extensive-form-games",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#planding-game-tree",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#planding-game-tree",
+    "title": "Backwards Induction",
     "section": "",
-    "text": "Definition 3\n\n\n\nA strategy for a player in a perfect-information game is a list of choices, one for each decision node of that player.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBe careful to distinguish between a strategy and a single action/choice\n\n\nWhat’s the difference?"
+    "text": "figures/fig3.6.png"
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html#apply-this-definition-to-the-kidnapping-game",
-    "href": "Slides/02SequentialGames/GameTrees.html#apply-this-definition-to-the-kidnapping-game",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#equilibrium-path-of-play",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#equilibrium-path-of-play",
+    "title": "Backwards Induction",
     "section": "",
-    "text": "How many choices does Guy make?\n\n\n3\n\n\nVivica?\n\n\n1\n\n\nWrite out a strategy list for each player:"
+    "text": "Note that there is one continuous path we traced from the initial node to a final equilibrium outcome.\nHowever, we couldn’t have gotten their without the other arrows paths even though they are never reached in equilibrium.\nRecall that a strategy is a collection of choices at every decision node."
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html#write-out-a-strategy-for-each-player",
-    "href": "Slides/02SequentialGames/GameTrees.html#write-out-a-strategy-for-each-player",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#equilibrium-strategies",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#equilibrium-strategies",
+    "title": "Backwards Induction",
     "section": "",
-    "text": "Guy:\n\n{Kidnap, Kill if ransom paid, Don’t Kill if no ransom paid} is one strategy\n\nGuy has \\(8\\) total strategies:\n{Kidnap, Kill, Kill}, {Kidnap, Kill, Don’t}, {Kidnap, Don’t, Kill}, {Kidnap, Don’t, Don’t}, {No Kidnap, Kill, Kill}, {No Kidnap, Kill, Don’t}, {No Kidnap, Kill, Kill}, {Kidnap, Don’t, Kill}\n\n\nVivica:\n\nOnly two strategies: {Pay the ransom}, or {Don’t pay}"
+    "text": "Even though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:\n\n“Nina’s strategy in the rollback equilibrium is { Don’t Contribute at b, Contribute at c }”.\n\n\nTo make it even shorter, let’s call this strategy DC."
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html#letting-nature-take-the-wheel",
-    "href": "Slides/02SequentialGames/GameTrees.html#letting-nature-take-the-wheel",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#how-many-strategies-does-talia-have",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#how-many-strategies-does-talia-have",
+    "title": "Backwards Induction",
     "section": "",
-    "text": "One way to represent risk or uncertainty is to represent Nature as a ‘player’.\n\n\n\nfigures/doubleornothing.png"
+    "text": "CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD\n16 total strategies"
   },
   {
-    "objectID": "Slides/02SequentialGames/GameTrees.html#footnotes",
-    "href": "Slides/02SequentialGames/GameTrees.html#footnotes",
-    "title": "Extensive Form",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#rollback-equilibrium-strategies",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#rollback-equilibrium-strategies",
+    "title": "Backwards Induction",
+    "section": "",
+    "text": "The equilibrium is:\n\n{ D3, DC4, DCCD5 }"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#adding-more-moves",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#adding-more-moves",
+    "title": "Backwards Induction",
+    "section": "",
+    "text": "Even a simple game get complicated fast"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#tic-tac-toe",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#tic-tac-toe",
+    "title": "Backwards Induction",
+    "section": "",
+    "text": "Even though it looks complicated, the main branches are really just copies of each other\nMost people probably figure out the rollback equilibrium after playing it enough\nInsert relevant xkcd here: https://xkcd.com/832/"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#chess",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#chess",
+    "title": "Backwards Induction",
+    "section": "",
+    "text": "What about more complicated games like chess?\n\ntechnically rollback solvable, but with \\(10^{120}\\) possible moves, it hasn’t been solved by either human or machine\n\nPlayers of complicated sequential games often implement some intermediate valuation function to assign payoffs to non-terminal nodes."
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#footnotes",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#footnotes",
+    "title": "Backwards Induction",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nHarrington, pg 18↩︎\nfor finite, perfect information games↩︎\nBonanno, pg 83↩︎"
+    "text": "Footnotes\n\n\nDixit et al, pg 56↩︎\naka subgame perfect equilibrium↩︎\nEmily↩︎\nNina↩︎\nTalia↩︎"
   },
   {
     "objectID": "Slides/02SequentialGames/02-main.html#game-treesextensive-form-as-a-tool",
@@ -246,7 +274,7 @@
     "href": "Slides/02SequentialGames/02-main.html#a-decision-tree",
     "title": "Introduction to Game Theory",
     "section": "A Decision Tree",
-    "text": "A Decision Tree\n\n\nIs this a strategic decision?",
+    "text": "A Decision Tree\n\n\n\nIs this a strategic decision?\n\nNo: if it’s only me\n\nJust because there are no other branches leading to the intiial node doesn’t mean there are no other decisions that lead us here. Just that we are not modeling them for the sake of this decision.",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -257,7 +285,7 @@
     "href": "Slides/02SequentialGames/02-main.html#extensive-form-definition",
     "title": "Introduction to Game Theory",
     "section": "Extensive Form Definition",
-    "text": "Extensive Form Definition\n\nA Tree Graph consists of:\n\nMultiple nodes with an ordered hierarchy starting from one initial node\nBranches coming from each node which connect it to later nodes\nThe tree ends in any of the multiple terminal nodes\n\n\n\n\n\n\n\nWarning\n\n\nEach (non-initial) terminal node may have multiple branches leading from it; but must only have one branch that leads to it.",
+    "text": "Extensive Form Definition\n\nA Tree Graph consists of:\n\nMultiple nodes with an ordered hierarchy starting from one initial node\nBranches coming from each node which connect it to later nodes\nThe tree ends in any of the multiple terminal nodes\n\n\n\n\n\n\n\n\n\nWarning\n\n\nEach (non-initial) terminal node may have multiple branches leading from it; but must only have one branch that leads to it.\n\n\n\n\n\nThis is because actions are different from strategies\n\neven if the actions are practically similar, it matters how we got there",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -268,7 +296,29 @@
     "href": "Slides/02SequentialGames/02-main.html#anatomy-of-a-tree",
     "title": "Introduction to Game Theory",
     "section": "Anatomy of a tree",
-    "text": "Anatomy of a tree",
+    "text": "Anatomy of a tree\n\n\n\nThere are three nodes in this tree,\n\none initial node at the top: this is where the game begins\ntwo other nodes follow after the choice at the initial node is decided",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#anatomy-of-a-tree-1",
+    "href": "Slides/02SequentialGames/02-main.html#anatomy-of-a-tree-1",
+    "title": "Introduction to Game Theory",
+    "section": "Anatomy of a tree",
+    "text": "Anatomy of a tree\n\n\n\nIn this case, each decision node has its own two branches\n\nIt helps to label each branch with the name of the action it represents",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#anatomy-of-a-tree-2",
+    "href": "Slides/02SequentialGames/02-main.html#anatomy-of-a-tree-2",
+    "title": "Introduction to Game Theory",
+    "section": "Anatomy of a tree",
+    "text": "Anatomy of a tree\n\n\n\nThe game ends with four terminal nodes\n\nUnlike the nodes before, there is no decision to be made because the game is over\nBy convention, they won’t be drawn as dots to differentiate them",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -279,18 +329,7 @@
     "href": "Slides/02SequentialGames/02-main.html#kidnapping-game",
     "title": "Introduction to Game Theory",
     "section": "Kidnapping Game 1",
-    "text": "Kidnapping Game 1\nA kidnapper named Guy has contacted the victim’s wife, named Vivica, to demand a ransom.\nTo predict what will happen to the victim, Orlando, we need to create a game theoretic model of the situation.\nLet’s use the language of the tree graph to visualize this game.\nHarrington, pg 18",
-    "crumbs": [
-      "Slides",
-      "Introduction to Game Theory"
-    ]
-  },
-  {
-    "objectID": "Slides/02SequentialGames/02-main.html#applying-the-extensive-form",
-    "href": "Slides/02SequentialGames/02-main.html#applying-the-extensive-form",
-    "title": "Introduction to Game Theory",
-    "section": "Applying the Extensive Form",
-    "text": "Applying the Extensive Form\n\n\nWho are the players?\nWhere are the decisions?\nWhat are the branches? What do they represent?\nWhat do the terminal nodes represent?\nIs this a complete representation of a game? What’s missing?",
+    "text": "Kidnapping Game 1\nA kidnapper named Guy has contacted the victim’s wife, named Vivica, to demand a ransom.\nTo predict what will happen to the victim, Orlando, we need to create a game theoretic model of the situation.\nLet’s use the language of the tree graph to visualize this game.\n\n\nDraw game on chalkboard step-by-step so students see how it’s constructed\nExplain order of each action for each node, starting w/ inital choice to kidnap or not\n\n\nHarrington, pg 18",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -301,7 +340,18 @@
     "href": "Slides/02SequentialGames/02-main.html#kidnapping-game-payoffs",
     "title": "Introduction to Game Theory",
     "section": "Kidnapping Game payoffs",
-    "text": "Kidnapping Game payoffs\n\n\n\n\n\n\n\n\nOutcome\nGuy\nVivica\n\n\n\n\nNo kidnapping\n3\n5\n\n\nKidnapping, ransom paid, Orlando killed\n4\n1\n\n\nKidnapping, ransom paid, Orlando released\n5\n3\n\n\nKidnapping, no ransom paid, Orlando killed\n2\n2\n\n\nKidnapping, no ransom paid, Orlando released\n1\n4",
+    "text": "Kidnapping Game payoffs\n\n\n\nOutcome\nGuy\n\n\n\n\nNo kidnapping\n3\n\n\nKidnapping, ransom paid, Orlando killed\n4\n\n\nKidnapping, ransom paid, Orlando released\n5\n\n\nKidnapping, no ransom paid, Orlando killed\n2\n\n\nKidnapping, no ransom paid, Orlando released\n1\n\n\n\n\n\nGuy’s preferences:\n\nBest case: Gets ransom money and he doesn’t have to kill Orlando\nNext best: Gets money but he has to kill Orlando :(\nMiddle: No kidnapping, status quo, everyone goes about their lives\nNext worst: Kidnaps Orlando, gets no ransom, but at least gets to play tough for next kidnapping victim\nWorst case: Kidnaps Orlando but gets no ransom, and has to release Orlando",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#kidnapping-game-payoffs-1",
+    "href": "Slides/02SequentialGames/02-main.html#kidnapping-game-payoffs-1",
+    "title": "Introduction to Game Theory",
+    "section": "Kidnapping Game payoffs",
+    "text": "Kidnapping Game payoffs\n\n\n\n\n\n\n\n\nOutcome\nGuy\nVivica\n\n\n\n\nNo kidnapping\n3\n5\n\n\nKidnapping, ransom paid, Orlando killed\n4\n1\n\n\nKidnapping, ransom paid, Orlando released\n5\n3\n\n\nKidnapping, no ransom paid, Orlando killed\n2\n2\n\n\nKidnapping, no ransom paid, Orlando released\n1\n4\n\n\n\n\n\nVivica’s preferences\n\nBest case: She and Orlando get to go about their lives without experiencing kidnapping\nNext best: Orlando is kidnapped, but is released without needing to pay\nMiddle: Orlando is kidnapped, but is released after ransom is paid\nNext worst: Orlando is killed, but no ransom paid\nWorst: Orlando is killed and loses money",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -312,7 +362,7 @@
     "href": "Slides/02SequentialGames/02-main.html#kidnapping-game-tree-with-payoffs",
     "title": "Introduction to Game Theory",
     "section": "Kidnapping game tree with payoffs",
-    "text": "Kidnapping game tree with payoffs",
+    "text": "Kidnapping game tree with payoffs\n\n\n\nWe added the correct payoffs to the terminal node corresponding to each outcome from the table\nNote how the convention is that the first player to move has their payoffs listed first",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -323,7 +373,7 @@
     "href": "Slides/02SequentialGames/02-main.html#predictions",
     "title": "Introduction to Game Theory",
     "section": "Predictions?",
-    "text": "Predictions?\nBased on the extensive form game tree with payoffs, do you have any predictions for what strategies each player will choose?",
+    "text": "Predictions?\nBased on the extensive form game tree with payoffs,\n\nDo you have any predictions for what strategies each player will choose?\n\n\n\nAsk students what they would do in Guy’s position,\nin Vivica’s?\nShould they think about what the other player is thinking?\nWould they have different preference orederings of the outcomes?",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -334,7 +384,7 @@
     "href": "Slides/02SequentialGames/02-main.html#a-definition-of-an-extensive-form-game",
     "title": "Introduction to Game Theory",
     "section": "a Definition of an Extensive Form Game: 1",
-    "text": "a Definition of an Extensive Form Game: 1\n\nA collection of decision-makers, called players or agents\nA set of decision nodes, each of which represents the information available to the player of that node\nBranches from each node which represent the possible actions available to the players\nThe entire game tree serves as the mapping from intersections of players’ strategy profiles to the outcomes at each terminal nodes\n\nfor finite, perfect information games",
+    "text": "a Definition of an Extensive Form Game: 1\n\n\nA collection of decision-makers, called players or agents\nA set of decision nodes, each represents the information available to the player of that node\nStrategies for each player which list the branches from each node that represetn the actions a player would take if faced with that choice\nA tree diagram which maps the intersections of players’ strategy profiles to the outcomes represented at each terminal nodes\n\n\n\n\nconnect this definition to the more general defition of a game from lecture 1\n\nplayers are a part of every game\ndecision nodes are a specific representation of information sets\nstrategies will be defined by paths players take along the branches\npreferences are represented by the payoffs at terminal nodes\n\n\n\nfor finite, perfect information games",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -345,7 +395,7 @@
     "href": "Slides/02SequentialGames/02-main.html#strategies-in-extensive-form-games",
     "title": "Introduction to Game Theory",
     "section": "Strategies in Extensive Form Games",
-    "text": "Strategies in Extensive Form Games\n\n\n\n\n\n\n\nDefinition 1\n\n\nA strategy for a player in a perfect-information game is a list of choices, one for each decision node of that player.\n\n\n\n\n\n\n\n\n\nWarning\n\n\nBe careful to distinguish between a strategy and a single action/choice\n\n\n\nWhat’s the difference?\n\nBonanno, pg 83",
+    "text": "Strategies in Extensive Form Games\n\n\n\n\n\n\n\nDefinition\n\n\nA strategy is a complete plan of action which assigns an action at every node where a player makes a decision\n\n\n\n\n\n\n\n\n\nWarning\n\n\nBe careful to distinguish between a strategy and a single action/choice\n\n\n\nWhat’s the difference?\n\n\n\nThe difference between a complete strategy and a single action is that a strategy contains a list of multiple actions and the conditions for when that action will be taken",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -356,29 +406,51 @@
     "href": "Slides/02SequentialGames/02-main.html#apply-this-definition-to-the-kidnapping-game",
     "title": "Introduction to Game Theory",
     "section": "Apply this definition to the kidnapping game:",
-    "text": "Apply this definition to the kidnapping game:\n\nHow many choices does Guy make?\n\n\n3\n\n\nVivica?\n\n\n1\n\n\nWrite out a strategy list for each player:",
+    "text": "Apply this definition to the kidnapping game:\n\n\n\n\n\n\n\n\n\n\nHow many decisions does Guy make?\n\n3\n\nHow many decisions does Vivica make?\n\n1\n\n\n\n\n\n\n\ncount the nodes labeled with each player’s name",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
     ]
   },
   {
-    "objectID": "Slides/02SequentialGames/02-main.html#write-out-a-strategy-for-each-player",
-    "href": "Slides/02SequentialGames/02-main.html#write-out-a-strategy-for-each-player",
+    "objectID": "Slides/02SequentialGames/02-main.html#apply-this-definition-to-the-kidnapping-game-1",
+    "href": "Slides/02SequentialGames/02-main.html#apply-this-definition-to-the-kidnapping-game-1",
     "title": "Introduction to Game Theory",
-    "section": "Write out a strategy for each player",
-    "text": "Write out a strategy for each player\n\nGuy:\n\n{Kidnap, Kill if ransom paid, Don’t Kill if no ransom paid} is one strategy\n\nGuy has \\(8\\) total strategies:\n{Kidnap, Kill, Kill}, {Kidnap, Kill, Don’t}, {Kidnap, Don’t, Kill}, {Kidnap, Don’t, Don’t}, {No Kidnap, Kill, Kill}, {No Kidnap, Kill, Don’t}, {No Kidnap, Kill, Kill}, {Kidnap, Don’t, Kill}\n\n\nVivica:\n\nOnly two strategies: {Pay the ransom}, or {Don’t pay}",
+    "section": "Apply this definition to the kidnapping game:",
+    "text": "Apply this definition to the kidnapping game:\n\n\n\n\n\n\n\n\n\n\nWrite out a complete strategy for Vivica\n\nOnly two strategies:\n\nPay the ransom,\nor Don’t pay\n\n\n\n\n\n\n\n\nVivica only has to make a decision in the branch where Orlando is kidnapped",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
     ]
   },
   {
-    "objectID": "Slides/02SequentialGames/02-main.html#letting-nature-take-the-wheel",
-    "href": "Slides/02SequentialGames/02-main.html#letting-nature-take-the-wheel",
+    "objectID": "Slides/02SequentialGames/02-main.html#apply-this-definition-to-the-kidnapping-game-2",
+    "href": "Slides/02SequentialGames/02-main.html#apply-this-definition-to-the-kidnapping-game-2",
     "title": "Introduction to Game Theory",
-    "section": "Letting Nature take the wheel",
-    "text": "Letting Nature take the wheel\nOne way to represent risk or uncertainty is to represent Nature as a ‘player’.\n\nfigures/doubleornothing.png",
+    "section": "Apply this definition to the kidnapping game:",
+    "text": "Apply this definition to the kidnapping game:\n\n\n\n\n\n\n\n\n\n\nWrite out at complete strategy for Guy\n\nLet’s give some shorter names for Guy’s actions:\n\n\\(A\\) \\(\\equiv\\) Kidnap Orlando (Abduct)\n\\(I\\) \\(\\equiv\\) Don’t kidnap Orlando (Ignore)\n\\(K\\) \\(\\equiv\\) Kill Orlando\n\\(L\\) \\(\\equiv\\) Let Orlando live\n\n\n\n\n\n\n\n\nBut Guy’s choices depend on what Vivica chooses, so his strategy is more complicated",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#apply-this-definition-to-the-kidnapping-game-3",
+    "href": "Slides/02SequentialGames/02-main.html#apply-this-definition-to-the-kidnapping-game-3",
+    "title": "Introduction to Game Theory",
+    "section": "Apply this definition to the kidnapping game:",
+    "text": "Apply this definition to the kidnapping game:\nGuy has \\(8\\) total complete strategies:\n\n\n\n\n\n\n\nIf Guy \\(A\\)bducts\nIf Guy \\(I\\)gnores\n\n\n\n\n( \\(A\\), \\(K\\), \\(K\\) )\n( \\(I\\), \\(K\\), \\(K\\) )\n\n\n( \\(A\\), \\(L\\), \\(K\\) )\n( \\(I\\), \\(L\\), \\(L\\) )\n\n\n( \\(A\\), \\(K\\), \\(L\\) )\n( \\(I\\), \\(K\\), \\(L\\) )\n\n\n( \\(A\\), \\(L\\), \\(L\\) )\n( \\(I\\), \\(L\\), \\(L\\) )",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#solving-sequential-games",
+    "href": "Slides/02SequentialGames/02-main.html#solving-sequential-games",
+    "title": "Introduction to Game Theory",
+    "section": "Solving Sequential Games",
+    "text": "Solving Sequential Games\nNow that we have defined all the parts of what a sequential game is we can start to solve them.\n\n\nA solution in our case will be a prediction of what rational agents would do in a sequential game",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -389,7 +461,7 @@
     "href": "Slides/02SequentialGames/02-main.html#the-smoking-decision",
     "title": "Introduction to Game Theory",
     "section": "The smoking decision",
-    "text": "The smoking decision\n\nfigures/fig3.2.png",
+    "text": "The smoking decision",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -400,7 +472,7 @@
     "href": "Slides/02SequentialGames/02-main.html#the-smoking-game",
     "title": "Introduction to Game Theory",
     "section": "The smoking game",
-    "text": "The smoking game\n\nfigures/fig3.3.png",
+    "text": "The smoking game",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -418,8 +490,8 @@
     ]
   },
   {
-    "objectID": "Slides/02SequentialGames/02-main.html#section-3",
-    "href": "Slides/02SequentialGames/02-main.html#section-3",
+    "objectID": "Slides/02SequentialGames/02-main.html#section",
+    "href": "Slides/02SequentialGames/02-main.html#section",
     "title": "Introduction to Game Theory",
     "section": "",
     "text": "figures/fig3.5.png",
@@ -631,60 +703,18 @@
     "href": "Slides/02SequentialGames/02-main.html#discussion-efficiency-vs-other-social-comparisons",
     "title": "Introduction to Game Theory",
     "section": "Discussion: Efficiency vs other social comparisons",
-    "text": "Discussion: Efficiency vs other social comparisons\n\n\nHow useful is Pareto Efficiency in the real world?\nHow else could we group outcomes?\nWe might address this later in the class with what is known as Cooperative Game Theory",
+    "text": "Discussion: Efficiency vs other social comparisons\n\n\nHow useful is Pareto Efficiency in the real world?\nHow else could we group outcomes?\nWe might address this later in the class with what is known as Cooperative Game Theory\n\n\n\n\n\n\nEC327 | Lecture 2 | Sequential Games",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
     ]
   },
   {
-    "objectID": "Slides/01Intro/Intro-examples.html",
-    "href": "Slides/01Intro/Intro-examples.html",
-    "title": "Examples",
-    "section": "",
-    "text": "The “Man in Black” and Vizzini agree to a battle of wits to break the impasse.\nVizzini claims that his own brain puts Plato, Aristotle, and Socrates to shame and demonstrates his recursive strategic reasoning.\n\n\n\n\n\n\nGood pitching will always stop good hitting and vice-versa. -Casey Stengel\n\n\n\n\nBatter\nPitcher\nBatting Average\n\n\n\n\n\\(Right\\)\n\\(Left\\)\n.255\n\n\n\\(Right\\)\n\\(Left\\)\n.274\n\n\n\\(Left\\)\n\\(Right\\)\n.291\n\n\n\\(Left\\)\n\\(Left\\)\n.266\n\n\n\n\nRank each player’s preferences over strategy profile intersections\n\n\n\n\n\n\nIt is the bottom of the ninth inning, and the game is tied between the Orioles and the Yankees. The pitcher on the mound for the Yankees is Masahiro Tanaka, who is a right-hander, and the batter due up for the Orioles is Adam Jones, who is also a right-hander. The Orioles’ manager is thinking about whether to substitute Chris Davis, who is a left-handed batter, for Jones. He would prefer to have Davis face Tanaka in order to have a lefty–righty matchup and thus a better chance of getting a hit. However, the Yankees’ manager could respond to Davis’ pinch-hitting by substituting the left-handed pitcher Cesar Cabral for Tanaka. The Orioles’ manager would rather have Jones face Tanaka than have Davis face Cabral. Of course, the Yankees’ manager has the exact opposite preferences.\n\n\n\n\n\n\nDraw the extensive form of this situation:"
-  },
-  {
-    "objectID": "Slides/01Intro/Intro-examples.html#the-battle-of-wits-the-princess-bride---1987",
-    "href": "Slides/01Intro/Intro-examples.html#the-battle-of-wits-the-princess-bride---1987",
-    "title": "Examples",
-    "section": "",
-    "text": "The “Man in Black” and Vizzini agree to a battle of wits to break the impasse.\nVizzini claims that his own brain puts Plato, Aristotle, and Socrates to shame and demonstrates his recursive strategic reasoning."
-  },
-  {
-    "objectID": "Slides/01Intro/Intro-examples.html#baseball-i",
-    "href": "Slides/01Intro/Intro-examples.html#baseball-i",
-    "title": "Examples",
-    "section": "",
-    "text": "Good pitching will always stop good hitting and vice-versa. -Casey Stengel\n\n\n\n\nBatter\nPitcher\nBatting Average\n\n\n\n\n\\(Right\\)\n\\(Left\\)\n.255\n\n\n\\(Right\\)\n\\(Left\\)\n.274\n\n\n\\(Left\\)\n\\(Right\\)\n.291\n\n\n\\(Left\\)\n\\(Left\\)\n.266\n\n\n\n\nRank each player’s preferences over strategy profile intersections"
-  },
-  {
-    "objectID": "Slides/01Intro/Intro-examples.html#baseball-i-1",
-    "href": "Slides/01Intro/Intro-examples.html#baseball-i-1",
-    "title": "Examples",
-    "section": "",
-    "text": "It is the bottom of the ninth inning, and the game is tied between the Orioles and the Yankees. The pitcher on the mound for the Yankees is Masahiro Tanaka, who is a right-hander, and the batter due up for the Orioles is Adam Jones, who is also a right-hander. The Orioles’ manager is thinking about whether to substitute Chris Davis, who is a left-handed batter, for Jones. He would prefer to have Davis face Tanaka in order to have a lefty–righty matchup and thus a better chance of getting a hit. However, the Yankees’ manager could respond to Davis’ pinch-hitting by substituting the left-handed pitcher Cesar Cabral for Tanaka. The Orioles’ manager would rather have Jones face Tanaka than have Davis face Cabral. Of course, the Yankees’ manager has the exact opposite preferences."
-  },
-  {
-    "objectID": "Slides/01Intro/Intro-examples.html#baseball-i-2",
-    "href": "Slides/01Intro/Intro-examples.html#baseball-i-2",
-    "title": "Examples",
-    "section": "",
-    "text": "Draw the extensive form of this situation:"
-  },
-  {
-    "objectID": "Slides/01Intro/Intro-examples.html#footnotes",
-    "href": "Slides/01Intro/Intro-examples.html#footnotes",
-    "title": "Examples",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nHarrington, pg 21↩︎\nHarrington, pg 21↩︎"
-  },
-  {
     "objectID": "Slides/01Intro/0103-definitions.html",
     "href": "Slides/01Intro/0103-definitions.html",
     "title": "What is a Game? Definitions",
     "section": "",
-    "text": "They all involve people making choices which depend on the choices of others\nIn other words, they are questions of strategy:\n\nStrategic interdependence is present in a social situation when what is best for someone depends on what someone else does. 1\n\n\n\n\n\n\nA Game consists of:\n\na collection of decision-makers, called players;\nthe set of information available to each player;\nthe strategies available to each player in each information state;\na mapping from the intersection strategies of all players to outcomes;\npreferences of the individual players over all possible outcomes"
+    "text": "They all involve people making choices which depend on the choices of others\nIn other words, they are questions of strategy:\n\nStrategic interdependence is present in a social situation when what is best for someone depends on what someone else does. 1\n\n\n\n\n\n\n\n\n\nEconomics is the study of constrained choice; in EC311, we introduce the utility maximization problem as the workhorse model\n\nThese types of problems usually only involve one agent; the consumer, who is only constrained by their budget\n\nWe use the term strategic games to distinguish from these single-agent optimization problems\n\nA game is a type of problem featuring multiple agents, called players,\n\nin which their optimal choice depends on the optimal choices of other players.\n\n\n\n\n\n\nA Game consists of:\n\n\na collection of decision-makers, called players;\nthe set of information available to each player;\nthe strategies available to each player in each information state;\na mapping from the intersection strategies of all players to outcomes;\npreferences of the individual players over all possible outcomes"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#what-do-all-these-questions-have-in-common",
@@ -694,25 +724,39 @@
     "text": "They all involve people making choices which depend on the choices of others\nIn other words, they are questions of strategy:\n\nStrategic interdependence is present in a social situation when what is best for someone depends on what someone else does. 1"
   },
   {
+    "objectID": "Slides/01Intro/0103-definitions.html#strategic-choice-vs.-other-types-of-choices",
+    "href": "Slides/01Intro/0103-definitions.html#strategic-choice-vs.-other-types-of-choices",
+    "title": "What is a Game? Definitions",
+    "section": "",
+    "text": "Economics is the study of constrained choice; in EC311, we introduce the utility maximization problem as the workhorse model\n\nThese types of problems usually only involve one agent; the consumer, who is only constrained by their budget\n\nWe use the term strategic games to distinguish from these single-agent optimization problems\n\nA game is a type of problem featuring multiple agents, called players,\n\nin which their optimal choice depends on the optimal choices of other players."
+  },
+  {
     "objectID": "Slides/01Intro/0103-definitions.html#a-definition-of-a-game",
     "href": "Slides/01Intro/0103-definitions.html#a-definition-of-a-game",
     "title": "What is a Game? Definitions",
     "section": "",
-    "text": "A Game consists of:\n\na collection of decision-makers, called players;\nthe set of information available to each player;\nthe strategies available to each player in each information state;\na mapping from the intersection strategies of all players to outcomes;\npreferences of the individual players over all possible outcomes"
+    "text": "A Game consists of:\n\n\na collection of decision-makers, called players;\nthe set of information available to each player;\nthe strategies available to each player in each information state;\na mapping from the intersection strategies of all players to outcomes;\npreferences of the individual players over all possible outcomes"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#what-defines-a-player",
     "href": "Slides/01Intro/0103-definitions.html#what-defines-a-player",
     "title": "What is a Game? Definitions",
     "section": "What defines a player?",
-    "text": "What defines a player?\n\nPreferences: Everyone has certain things they want.\nBut you usually can’t get everything you want; economics is all about constrained choices.\nSo its important to have priorities and to understand which things people prefer to others.\nInformation: Some people might be better informed than others.\nBeliefs: What do I think about when I have to make a strategic choice?"
+    "text": "What defines a player?\n\nPreferences:\n\n\n\nIn economics, we say people have unlimited wants and limited needs\nTherefore, we have to think about how people prioritize what they want more\n\n\n\nBeliefs:"
+  },
+  {
+    "objectID": "Slides/01Intro/0103-definitions.html#what-defines-a-player-1",
+    "href": "Slides/01Intro/0103-definitions.html#what-defines-a-player-1",
+    "title": "What is a Game? Definitions",
+    "section": "What defines a player?",
+    "text": "What defines a player?\n\nPreferences:\nBeliefs:\n\n\n\nMy beliefs about the world define how I act\nIf I am exposed to new information it can potentially change my beliefs, and therefore change my actions\nInformation and beliefs of players will define later game theory topics"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#preferences",
     "href": "Slides/01Intro/0103-definitions.html#preferences",
     "title": "What is a Game? Definitions",
     "section": "Preferences",
-    "text": "Preferences\nPreferences describe the subjective ranking that we put on different alternatives.\nFor example, on the set of Eugene boba stores, my preference ranking goes like this;\n\n\nDay & Night - they have mango sago, cute location\nTea 4 - major chain, good quality and selection\nBobahead - no more campus location 😔\nNo boba\nRabbit Hole - no hate, just not for me"
+    "text": "Preferences\nPreferences describe the subjective ranking that we put on different alternatives.\nFor example, on the set of Eugene boba stores, my preference ranking goes like this;\n\n\nTea 4 - major chain, good quality and selection\nDay & Night - they have mango sago, cute location\nBobahead - no more campus location 😔\nNo boba\nRabbit Hole - no hate, just not for me"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#rational-preferences",
@@ -722,11 +766,11 @@
     "text": "Rational Preferences\nThe rational model of choice is the foundation of all economics.\nIts assumptions are that:\n\n\nPeople have complete preferences\n\nfor every pair of options, you can either tell me which you prefer or that you are indifferent\nfor any pair of deserts, \\(\\{ \\ 🍨 \\ , \\ 🍩 \\ \\}\\), either \\((🍨 \\succ 🍩 \\ )\\), or \\((🍩 \\ \\succ 🍨 \\ )\\), or \\((🍨 \\sim 🍩 \\ )\\)\n\nPreferences are transitive\n\nif \\((☕ \\succ 🍵 \\ )\\) and \\((🍵 \\succ 🍶 \\ )\\), then \\((☕ \\succ 🍶)\\) ( for any \\(\\{☕ \\ , 🍵 \\ , 🍶 \\ \\} \\in 🫖 \\ \\))"
   },
   {
-    "objectID": "Slides/01Intro/0103-definitions.html#rational-preferences-cont.",
-    "href": "Slides/01Intro/0103-definitions.html#rational-preferences-cont.",
+    "objectID": "Slides/01Intro/0103-definitions.html#rationality",
+    "href": "Slides/01Intro/0103-definitions.html#rationality",
     "title": "What is a Game? Definitions",
-    "section": "Rational Preferences (cont.)",
-    "text": "Rational Preferences (cont.)\nAnother key assumption of rationality is that we can represent preferences by real numbers.\nA utility function maps a choice to a single number.\nFor example, let \\(u(.)\\) be the utility function from emoji to utils\n\nI can have \\(u(🍺) =5\\), \\(u(🌯)=10\\), \\(u(🤸)=25\\)\nI can also have \\(u(🍺 \\ , 🌯) = 20\\), \\(u(🍺 \\ , 🌯 \\ , 🤸) = 15\\)"
+    "section": "Rationality",
+    "text": "Rationality\nOne key proposition of rationality is that we can represent preferences by real numbers.\n\nA utility function maps a choice to a single number.\nFor example, let \\(u(.)\\) be the utility function from emoji to utils\n\nI can have \\(u(🍺) =5\\), \\(u(🌯)=10\\), \\(u(🤸)=25\\)\nI can also have \\(u(🍺 \\ , 🌯) = 20\\), \\(u(🍺 \\ , 🌯 \\ , 🤸) = 15\\)"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#ordinal-vs.-cardinal-numbers",
@@ -740,14 +784,14 @@
     "href": "Slides/01Intro/0103-definitions.html#dont-worry",
     "title": "What is a Game? Definitions",
     "section": "Don’t worry!",
-    "text": "Don’t worry!\n\n\nFor this class, you won’t need to worry about utility functions (if you want to, take EC311).\nI will almost always give you specific values of utility which we will call payoffs.\nThe table on the previous page is a good example."
+    "text": "Don’t worry!\n\n\nFor this class, you won’t need to worry about utility functions (if you want to, take EC311).\nI will almost always give you specific values of utility which we will call payoffs."
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#payoffs",
     "href": "Slides/01Intro/0103-definitions.html#payoffs",
     "title": "What is a Game? Definitions",
     "section": "Payoffs",
-    "text": "Payoffs\nWhat is a player’s goal in a game?\n\nTo maximize their expected payoff\n\n. . .\n\nA payoff can represent many things.\nBut for simplicity we will abstract them down to a single numerical value.\nA payoff doesn’t need to be abstract; it could be dollars"
+    "text": "Payoffs\nWhat is a player’s goal in a game?\n\nTo maximize their expected payoff\n\n\n\nA payoff can represent many things which come with a specific outcome\nWhenever you see a payoff, assume that it represents everything about that outcome which an agent cares about\nFor example, your payoff to giving to charity would include the emotional benefit you feel towards giving to others"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#payoffs-1",
@@ -757,39 +801,39 @@
     "text": "Payoffs\nWhat is true of payoffs?\n\nHigher numbers are more preferred\n\n\nThey are Ordinal; i.e., the relative units don’t matter 3\n\n\nThey capture everything in a game that a player cares about"
   },
   {
-    "objectID": "Slides/01Intro/0103-definitions.html#strategic-choice-vs.-other-types-of-choices",
-    "href": "Slides/01Intro/0103-definitions.html#strategic-choice-vs.-other-types-of-choices",
+    "objectID": "Slides/01Intro/0103-definitions.html#payoffs-2",
+    "href": "Slides/01Intro/0103-definitions.html#payoffs-2",
     "title": "What is a Game? Definitions",
-    "section": "Strategic Choice vs. other types of choices",
-    "text": "Strategic Choice vs. other types of choices\n\n\nEconomics is the study of constrained choice; in EC311, we introduce the utility maximization problem as the workhorse model\n\nThese types of problems usually only involve one agent; the consumer, who is only constrained by their budget\n\nWe use the term strategic games to distinguish from these single-agent optimization problems\nA game is a type of problem featuring multiple agents, called players, in which their optimal choice depends on the optimal choices of other players."
+    "section": "Payoffs",
+    "text": "Payoffs\n\n\nSometimes my enjoyment of a thing depends on the state of the world\n\n\nsocially-dependent preferences\n\n\nMy choice\nMy friends’ choice\nMy payoff\n\n\n\n\nDuck’s game\nDuck’s game\n3\n\n\nDuck’s game\nStay home\n2\n\n\nStay home\nDuck’s game\n1\n\n\nStay home\nStay home\n2\n\n\n\n\nIs this an example of a strategic or non-strategic choice?\n\n\n\n\nExpected Payoffs\nOften games involve some amount of chance; with random probabilities of each outcome happening\n\nWe need tools for thinking about how people think about risk\n\n\n\n\nExpected Payoffs\n\nIn math, an expected value is the average value of a random variable, weighted by the probability of each value occuring"
   },
   {
-    "objectID": "Slides/01Intro/0103-definitions.html#state-dependent-utility-table",
-    "href": "Slides/01Intro/0103-definitions.html#state-dependent-utility-table",
+    "objectID": "Slides/01Intro/0103-definitions.html#expected-payoffs-2",
+    "href": "Slides/01Intro/0103-definitions.html#expected-payoffs-2",
     "title": "What is a Game? Definitions",
-    "section": "State-dependent utility table",
-    "text": "State-dependent utility table\n\n\nSometimes my enjoyment of a thing depends on the state of the world\n\n\nsocially-dependent preferences\n\n\nMy choice\nMy friends’ choice\nMy payoff\n\n\n\n\nDuck’s game\nDuck’s game\n3\n\n\nDuck’s game\nStay home\n2\n\n\nStay home\nDuck’s game\n1\n\n\nStay home\nStay home\n2\n\n\n\n\nIs this an example of a strategic or non-strategic choice?"
+    "section": "Expected Payoffs",
+    "text": "Expected Payoffs\nFor example, suppose \\(X\\) is a random variable which is equal to:\n\n1 with 50% probability,\n2 with 25% probability,\n3 with 25% probability\n\nWhat is the expected value of \\(X\\)? (\\(E(X)\\))\n. . .\n\\[\n\\begin{align}\nE(X) & = .5 (1) + .25 (2) + .25 (3) \\\\\n& = .5 + .5 + .75 = 2.75\n\\end{align}\n\\]\n\n\nExpected Payoffs\nAn Expected Payoff is just the expected value of possible payoffs\n\nAn average of the payoffs associated with every possible outcome, weighted by the corresponding probability of each outcome happening\n\n\n\n\nExpected Payoffs\nConsider the following choice:\n\n\n\n\n\n\nOption A:\n\n\n\nI flip two coins; - if both land heads, you win $100 - otherwise you get $0\n\n\n\n\n\n\n\n\nOption B:\n\n\n\nYou just get $25 for sure\n\n\n\n\n\nExpected Payoffs\n\nIf you choose Option A, we call you risk loving\nIf you choose Option B, you are risk averse\nIf you are indifferent between the two options, you would be risk neutral\n\nAll of these difference preferences can be incorporated in the rational model with the right utility function"
   },
   {
-    "objectID": "Slides/01Intro/0103-definitions.html#common-knowledge",
-    "href": "Slides/01Intro/0103-definitions.html#common-knowledge",
+    "objectID": "Slides/01Intro/0103-definitions.html#beliefs",
+    "href": "Slides/01Intro/0103-definitions.html#beliefs",
     "title": "What is a Game? Definitions",
-    "section": "Common Knowledge",
-    "text": "Common Knowledge\nOur theories will have to make assumptions about what players know.\nAll of our games will at least assume that all players know all of the rules."
+    "section": "Beliefs",
+    "text": "Beliefs\nOur theories will have to make assumptions about what players know.\nAll of our games will at least assume that all players know all of the rules."
   },
   {
-    "objectID": "Slides/01Intro/0103-definitions.html#rules-of-the-game",
-    "href": "Slides/01Intro/0103-definitions.html#rules-of-the-game",
+    "objectID": "Slides/01Intro/0103-definitions.html#beliefs-1",
+    "href": "Slides/01Intro/0103-definitions.html#beliefs-1",
     "title": "What is a Game? Definitions",
-    "section": "Rules of the Game",
-    "text": "Rules of the Game\nWe will assume that all players know:\n\nWho else is playing,\nall of the strategies each player could potentially choose,\neveryone’s payoffs for all possible combinations of strategies by all players,\nand that everyone else is maximizing their payoffs"
+    "section": "Beliefs",
+    "text": "Beliefs\nWe will assume that all players know4:\n\n\nWho else is playing,\nall of the strategies each player could potentially choose,\neveryone’s payoffs for all possible combinations of strategies by all players,\nand that everyone else is maximizing their payoffs"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#footnotes",
     "href": "Slides/01Intro/0103-definitions.html#footnotes",
     "title": "What is a Game? Definitions",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nHarrington, pg. 2↩︎\nadapted from Leigh Tesfatsion’s slides↩︎\nexcept when we talk about expected payoffs later↩︎"
+    "text": "Footnotes\n\n\nHarrington, pg. 2↩︎\nadapted from Leigh Tesfatsion’s slides↩︎\nexcept when we talk about expected payoffs later↩︎\nand believe↩︎"
   },
   {
     "objectID": "Slides/01Intro/0101-prologue.html",
@@ -846,29 +890,106 @@
     "href": "Slides/01Intro/01-main.html#syllabus-document",
     "title": "Introduction to Game Theory",
     "section": "Syllabus Document",
-    "text": "Syllabus Document\n\n\n\nMost up to date version on github\nI will also upload to Canvas\nprint, sign, and upload as your first assignment",
+    "text": "Syllabus Document\n\n\nMost up to date version on github\nI will also upload to Canvas\nprint, sign, and upload as your first assignment",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
     ]
   },
   {
-    "objectID": "Slides/01Intro/01-main.html#class-expectations",
-    "href": "Slides/01Intro/01-main.html#class-expectations",
+    "objectID": "Slides/01Intro/01-main.html#prerequisites",
+    "href": "Slides/01Intro/01-main.html#prerequisites",
     "title": "Introduction to Game Theory",
-    "section": "Class Expectations",
-    "text": "Class Expectations\nPrerequisites\n\nCourses: EC201 or EC202\nKnowledge: This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.\n\nThere are great free resources out there like Khan Academy, but always feel free to reach out for help or other suggestions.",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nCourses: EC201 or EC202\nKnowledge: This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.\n\nThere are great free resources out there like Khan Academy, but always feel free to reach out for help or other suggestions.",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
     ]
   },
   {
-    "objectID": "Slides/01Intro/01-main.html#admin-stuff",
-    "href": "Slides/01Intro/01-main.html#admin-stuff",
+    "objectID": "Slides/01Intro/01-main.html#student-expectations",
+    "href": "Slides/01Intro/01-main.html#student-expectations",
     "title": "Introduction to Game Theory",
-    "section": "Admin Stuff",
-    "text": "Admin Stuff\nProblem Sets\nYou will practice what we learn in class on independently.\nEach homework assignment will include a few problems that will be similar to what you will see on exams.\n\n\nLearning something new takes practice, so these are designed to help you keep up with the concepts\nYou will be graded not only on whether you got a certain answer, but also more importantly on how you communicate your understanding\n\nSee Canvas rubric for more info",
+    "section": "Student Expectations",
+    "text": "Student Expectations\n\n\nCome to class\n\nPay attention to lectures, take notes, review topics at home\nParticipate in group work & activities\nAsk questions!\n\nRead the textbook\nCommunicate respectfully\n\nWith your classmates\nWith me & grader\n\nHave academic integrity 1\n\nVerify that all submitted work is your own\nProvide sources for all information that you found outside this class\n\n\n\nsee UO’s Student Conduct Code",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#instructor-expectations",
+    "href": "Slides/01Intro/01-main.html#instructor-expectations",
+    "title": "Introduction to Game Theory",
+    "section": "Instructor Expectations",
+    "text": "Instructor Expectations\n\nProvide course material\n\nSlides will be updated on github\nI will also try to post them on Canvas, but not as regularly\nAssignments posted on Canvas w/ due dates, submission entry\n\nFace-to-face Interaction\n\nClasses\n\nAsk me to clarify if something doesn’t make sense\nAsk me to slow down if I’m going too fast\n\nOffice Hours\n\nUse them!!",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#problem-sets",
+    "href": "Slides/01Intro/01-main.html#problem-sets",
+    "title": "Introduction to Game Theory",
+    "section": "Problem Sets",
+    "text": "Problem Sets\nYou will practice what we learn in class on independently.\nEach homework assignment will include a few problems that will be similar to what you will see on exams.\n\n\nLearning something new takes practice, so these are designed to help you keep up with the concepts\nYou will be graded not only on whether you got a certain answer, but also more importantly on how you communicate your understanding\n\nSee Canvas rubric for more info",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#class-activities",
+    "href": "Slides/01Intro/01-main.html#class-activities",
+    "title": "Introduction to Game Theory",
+    "section": "Class Activities",
+    "text": "Class Activities\n\n\nSometimes I will ask you to play the types of games we discuss in lectures\n\nRecord the strategies you chose and the outcomes\nReflect on how you played the game\nRelate it to lecture concepts\n\n\n\n\n\nI’m still working out how best to implement\nthis is how you participate, records attendance on activity days\nhopefully lets you experience first-hand the things we learn",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#exams",
+    "href": "Slides/01Intro/01-main.html#exams",
+    "title": "Introduction to Game Theory",
+    "section": "Exams",
+    "text": "Exams\nYou will demonstrate how well you understand concepts individually on a midterm and a final exam\n\n\nMidterm\n\nsometime around week 5 (Oct. 28th or 30th)\nWill test you on definitions, solution concepts, and apply them to critical thinking problems\n\nFinal\n\nfinals week of December 9 (check duckweb for specific date)\nCovers everything we learned in the quarter, with more focus on concepts from the 2nd half\n\n\n\n\n\nDept policy is 65% As & Bs\nexpect exams to be difficult\nBest way to prepare is lots of practice",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#grading",
+    "href": "Slides/01Intro/01-main.html#grading",
+    "title": "Introduction to Game Theory",
+    "section": "Grading",
+    "text": "Grading\n\n\nProblem Sets\nIn-class Activities\nMidterm\nFinal\n\n30%\n10%\n30%\n30%",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#campus-resources",
+    "href": "Slides/01Intro/01-main.html#campus-resources",
+    "title": "Introduction to Game Theory",
+    "section": "Campus Resources",
+    "text": "Campus Resources\n\nAccessible Education Center\n\naec.uoregon.edu\n\nSupport for vicitms of assault, harassment, stalking\n\nsafe.uoregon.edu\n24/7 hotline: (+1) 541-346-SAFE (7244)\n\nHealth and Wellbeing\n\nUniversity Counseling Services\nBasic Needs Program\n\nReligious Observance Accomadations\n\nProvost website\n\n\n\n\n\nI am here to support you, but not trained or equipped for emergencies\nI will not ask for reasons you cannot attend class or exams\nI am not a mandated reporter: will only pass on info if you request\n\n\n\nThese resources and others are also included in the course syllabus",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#course-pages",
+    "href": "Slides/01Intro/01-main.html#course-pages",
+    "title": "Introduction to Game Theory",
+    "section": "Course Pages",
+    "text": "Course Pages\nhttps://canvas.uoregon.edu/courses/251353 - submit your assignments - check deadlines\ngithub.com/dyasui/EC327 - Find up-to-date versions of slides/assignments - let me know if links are broken",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -1007,11 +1128,22 @@
     ]
   },
   {
+    "objectID": "Slides/01Intro/01-main.html#strategic-choice-vs.-other-types-of-choices",
+    "href": "Slides/01Intro/01-main.html#strategic-choice-vs.-other-types-of-choices",
+    "title": "Introduction to Game Theory",
+    "section": "Strategic Choice vs. other types of choices",
+    "text": "Strategic Choice vs. other types of choices\n\n\nEconomics is the study of constrained choice; in EC311, we introduce the utility maximization problem as the workhorse model\n\nThese types of problems usually only involve one agent; the consumer, who is only constrained by their budget\n\nWe use the term strategic games to distinguish from these single-agent optimization problems\n\nA game is a type of problem featuring multiple agents, called players,\n\nin which their optimal choice depends on the optimal choices of other players.",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
     "objectID": "Slides/01Intro/01-main.html#a-definition-of-a-game",
     "href": "Slides/01Intro/01-main.html#a-definition-of-a-game",
     "title": "Introduction to Game Theory",
     "section": "A definition of a game 1",
-    "text": "A definition of a game 1\nA Game consists of:\n\na collection of decision-makers, called players;\nthe set of information available to each player;\nthe strategies available to each player in each information state;\na mapping from the intersection strategies of all players to outcomes;\npreferences of the individual players over all possible outcomes\n\nadapted from Leigh Tesfatsion’s slides",
+    "text": "A definition of a game 1\nA Game consists of:\n\n\na collection of decision-makers, called players;\nthe set of information available to each player;\nthe strategies available to each player in each information state;\na mapping from the intersection strategies of all players to outcomes;\npreferences of the individual players over all possible outcomes\n\n\nadapted from Leigh Tesfatsion’s slides",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -1022,7 +1154,18 @@
     "href": "Slides/01Intro/01-main.html#what-defines-a-player",
     "title": "Introduction to Game Theory",
     "section": "What defines a player?",
-    "text": "What defines a player?\n\nPreferences: Everyone has certain things they want.\nBut you usually can’t get everything you want; economics is all about constrained choices.\nSo its important to have priorities and to understand which things people prefer to others.\nInformation: Some people might be better informed than others.\nBeliefs: What do I think about when I have to make a strategic choice?",
+    "text": "What defines a player?\n\nPreferences:\n\n\n\nIn economics, we say people have unlimited wants and limited needs\nTherefore, we have to think about how people prioritize what they want more\n\n\n\nBeliefs:",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#what-defines-a-player-1",
+    "href": "Slides/01Intro/01-main.html#what-defines-a-player-1",
+    "title": "Introduction to Game Theory",
+    "section": "What defines a player?",
+    "text": "What defines a player?\n\nPreferences:\nBeliefs:\n\n\n\nMy beliefs about the world define how I act\nIf I am exposed to new information it can potentially change my beliefs, and therefore change my actions\nInformation and beliefs of players will define later game theory topics",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -1033,7 +1176,7 @@
     "href": "Slides/01Intro/01-main.html#preferences",
     "title": "Introduction to Game Theory",
     "section": "Preferences",
-    "text": "Preferences\nPreferences describe the subjective ranking that we put on different alternatives.\nFor example, on the set of Eugene boba stores, my preference ranking goes like this;\n\n\nDay & Night - they have mango sago, cute location\nTea 4 - major chain, good quality and selection\nBobahead - no more campus location 😔\nNo boba\nRabbit Hole - no hate, just not for me",
+    "text": "Preferences\nPreferences describe the subjective ranking that we put on different alternatives.\nFor example, on the set of Eugene boba stores, my preference ranking goes like this;\n\n\nTea 4 - major chain, good quality and selection\nDay & Night - they have mango sago, cute location\nBobahead - no more campus location 😔\nNo boba\nRabbit Hole - no hate, just not for me",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -1051,11 +1194,11 @@
     ]
   },
   {
-    "objectID": "Slides/01Intro/01-main.html#rational-preferences-cont.",
-    "href": "Slides/01Intro/01-main.html#rational-preferences-cont.",
+    "objectID": "Slides/01Intro/01-main.html#rationality",
+    "href": "Slides/01Intro/01-main.html#rationality",
     "title": "Introduction to Game Theory",
-    "section": "Rational Preferences (cont.)",
-    "text": "Rational Preferences (cont.)\nAnother key assumption of rationality is that we can represent preferences by real numbers.\nA utility function maps a choice to a single number.\nFor example, let \\(u(.)\\) be the utility function from emoji to utils\n\nI can have \\(u(🍺) =5\\), \\(u(🌯)=10\\), \\(u(🤸)=25\\)\nI can also have \\(u(🍺 \\ , 🌯) = 20\\), \\(u(🍺 \\ , 🌯 \\ , 🤸) = 15\\)",
+    "section": "Rationality",
+    "text": "Rationality\nOne key proposition of rationality is that we can represent preferences by real numbers.\n\nA utility function maps a choice to a single number.\nFor example, let \\(u(.)\\) be the utility function from emoji to utils\n\nI can have \\(u(🍺) =5\\), \\(u(🌯)=10\\), \\(u(🤸)=25\\)\nI can also have \\(u(🍺 \\ , 🌯) = 20\\), \\(u(🍺 \\ , 🌯 \\ , 🤸) = 15\\)",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -1077,7 +1220,7 @@
     "href": "Slides/01Intro/01-main.html#dont-worry",
     "title": "Introduction to Game Theory",
     "section": "Don’t worry!",
-    "text": "Don’t worry!\n\n\nFor this class, you won’t need to worry about utility functions (if you want to, take EC311).\nI will almost always give you specific values of utility which we will call payoffs.\nThe table on the previous page is a good example.",
+    "text": "Don’t worry!\n\n\nFor this class, you won’t need to worry about utility functions (if you want to, take EC311).\nI will almost always give you specific values of utility which we will call payoffs.",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -1088,7 +1231,7 @@
     "href": "Slides/01Intro/01-main.html#payoffs",
     "title": "Introduction to Game Theory",
     "section": "Payoffs",
-    "text": "Payoffs\nWhat is a player’s goal in a game?\n\nTo maximize their expected payoff\n\n\n\nA payoff can represent many things.\nBut for simplicity we will abstract them down to a single numerical value.\nA payoff doesn’t need to be abstract; it could be dollars",
+    "text": "Payoffs\nWhat is a player’s goal in a game?\n\nTo maximize their expected payoff\n\n\n\nA payoff can represent many things which come with a specific outcome\nWhenever you see a payoff, assume that it represents everything about that outcome which an agent cares about\nFor example, your payoff to giving to charity would include the emotional benefit you feel towards giving to others",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -1106,44 +1249,44 @@
     ]
   },
   {
-    "objectID": "Slides/01Intro/01-main.html#strategic-choice-vs.-other-types-of-choices",
-    "href": "Slides/01Intro/01-main.html#strategic-choice-vs.-other-types-of-choices",
+    "objectID": "Slides/01Intro/01-main.html#payoffs-2",
+    "href": "Slides/01Intro/01-main.html#payoffs-2",
     "title": "Introduction to Game Theory",
-    "section": "Strategic Choice vs. other types of choices",
-    "text": "Strategic Choice vs. other types of choices\n\n\nEconomics is the study of constrained choice; in EC311, we introduce the utility maximization problem as the workhorse model\n\nThese types of problems usually only involve one agent; the consumer, who is only constrained by their budget\n\nWe use the term strategic games to distinguish from these single-agent optimization problems\nA game is a type of problem featuring multiple agents, called players, in which their optimal choice depends on the optimal choices of other players.",
+    "section": "Payoffs",
+    "text": "Payoffs\n\n\nSometimes my enjoyment of a thing depends on the state of the world\n\n\nsocially-dependent preferences\n\n\nMy choice\nMy friends’ choice\nMy payoff\n\n\n\n\nDuck’s game\nDuck’s game\n3\n\n\nDuck’s game\nStay home\n2\n\n\nStay home\nDuck’s game\n1\n\n\nStay home\nStay home\n2\n\n\n\n\nIs this an example of a strategic or non-strategic choice?",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
     ]
   },
   {
-    "objectID": "Slides/01Intro/01-main.html#state-dependent-utility-table",
-    "href": "Slides/01Intro/01-main.html#state-dependent-utility-table",
+    "objectID": "Slides/01Intro/01-main.html#expected-payoffs-2",
+    "href": "Slides/01Intro/01-main.html#expected-payoffs-2",
     "title": "Introduction to Game Theory",
-    "section": "State-dependent utility table",
-    "text": "State-dependent utility table\n\n\nSometimes my enjoyment of a thing depends on the state of the world\n\n\nsocially-dependent preferences\n\n\nMy choice\nMy friends’ choice\nMy payoff\n\n\n\n\nDuck’s game\nDuck’s game\n3\n\n\nDuck’s game\nStay home\n2\n\n\nStay home\nDuck’s game\n1\n\n\nStay home\nStay home\n2\n\n\n\n\nIs this an example of a strategic or non-strategic choice?",
+    "section": "Expected Payoffs",
+    "text": "Expected Payoffs\nFor example, suppose \\(X\\) is a random variable which is equal to:\n\n1 with 50% probability,\n2 with 25% probability,\n3 with 25% probability\n\nWhat is the expected value of \\(X\\)? (\\(E(X)\\))\n\n\\[\n\\begin{align}\nE(X) & = .5 (1) + .25 (2) + .25 (3) \\\\\n& = .5 + .5 + .75 = 2.75\n\\end{align}\n\\]",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
     ]
   },
   {
-    "objectID": "Slides/01Intro/01-main.html#common-knowledge",
-    "href": "Slides/01Intro/01-main.html#common-knowledge",
+    "objectID": "Slides/01Intro/01-main.html#beliefs",
+    "href": "Slides/01Intro/01-main.html#beliefs",
     "title": "Introduction to Game Theory",
-    "section": "Common Knowledge",
-    "text": "Common Knowledge\nOur theories will have to make assumptions about what players know.\nAll of our games will at least assume that all players know all of the rules.",
+    "section": "Beliefs",
+    "text": "Beliefs\nOur theories will have to make assumptions about what players know.\nAll of our games will at least assume that all players know all of the rules.",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
     ]
   },
   {
-    "objectID": "Slides/01Intro/01-main.html#rules-of-the-game",
-    "href": "Slides/01Intro/01-main.html#rules-of-the-game",
+    "objectID": "Slides/01Intro/01-main.html#beliefs-1",
+    "href": "Slides/01Intro/01-main.html#beliefs-1",
     "title": "Introduction to Game Theory",
-    "section": "Rules of the Game",
-    "text": "Rules of the Game\nWe will assume that all players know:\n\nWho else is playing,\nall of the strategies each player could potentially choose,\neveryone’s payoffs for all possible combinations of strategies by all players,\nand that everyone else is maximizing their payoffs",
+    "section": "Beliefs",
+    "text": "Beliefs\nWe will assume that all players know1:\n\n\nWho else is playing,\nall of the strategies each player could potentially choose,\neveryone’s payoffs for all possible combinations of strategies by all players,\nand that everyone else is maximizing their payoffs\n\n\nand believe",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -1165,7 +1308,29 @@
     "href": "Slides/01Intro/01-main.html#sequential-vs.-simultaneous",
     "title": "Introduction to Game Theory",
     "section": "Sequential vs. Simultaneous",
-    "text": "Sequential vs. Simultaneous\n\n\nSequential Games\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n. . .\nSimultaneous Games\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats",
+    "text": "Sequential vs. Simultaneous\n\n\nSequential Games\n\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n\n\nSimultaneous Games\n\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#sequential-games",
+    "href": "Slides/01Intro/01-main.html#sequential-games",
+    "title": "Introduction to Game Theory",
+    "section": "Sequential Games",
+    "text": "Sequential Games\nIn sequential games, you have to think about how what you do now will affect what your opponent will do in the future.\n\n\nThis hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.\n\n\n\n\nWe’ll see that sometimes moving first can be adventageous\n\n\n\n\nWhile other times it’s best to wait and see what someone else does",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#simultaneous-games",
+    "href": "Slides/01Intro/01-main.html#simultaneous-games",
+    "title": "Introduction to Game Theory",
+    "section": "Simultaneous Games",
+    "text": "Simultaneous Games\nIn simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will will do now.\n\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4.",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -1177,6 +1342,17 @@
     "title": "Introduction to Game Theory",
     "section": "Conflicting vs. Common Interests?",
     "text": "Conflicting vs. Common Interests?\nMany games you are familiar with have distince winners and losers.\n\nBut in other types of games, it’s possible for everyone to come out ahead.",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#zero-sum-or-constant-sum-games",
+    "href": "Slides/01Intro/01-main.html#zero-sum-or-constant-sum-games",
+    "title": "Introduction to Game Theory",
+    "section": "Zero-sum (or constant-sum) Games",
+    "text": "Zero-sum (or constant-sum) Games\n\nWhen the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExamples: NCAA Football Championship, Scramble for Africa (technically constant-sum)\n\n. . .\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc.\n\n\nor sum to some constant",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -1227,11 +1403,44 @@
     ]
   },
   {
+    "objectID": "Slides/01Intro/01-main.html#equilibrium",
+    "href": "Slides/01Intro/01-main.html#equilibrium",
+    "title": "Introduction to Game Theory",
+    "section": "Equilibrium",
+    "text": "Equilibrium\nIn each of these different categories of games, we will want to make predictions as to how rational agents will behave\n\nOur methods of solving each type of game will be to look for different types of equilibria\n\n\n\n\n\n\n\nEquilibrium\n\n\nWhere every player’s strategy is a best-response to the other player(s)",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#equilibrium-2",
+    "href": "Slides/01Intro/01-main.html#equilibrium-2",
+    "title": "Introduction to Game Theory",
+    "section": "Equilibrium",
+    "text": "Equilibrium\nWhy study equilibria?\n\n\nThey are stable: if nobody has anything better to do than what they’re doing now then why change?\nWe can adapt our models to all types of equilibria\n\nMarket or non-market\nDynamic or static",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/01Intro/01-main.html#equilibrium-3",
+    "href": "Slides/01Intro/01-main.html#equilibrium-3",
+    "title": "Introduction to Game Theory",
+    "section": "Equilibrium",
+    "text": "Equilibrium\nA few different types of equilibria in this class:\n\nNash equilibrium\n\nSubgame perfect NE\nMixed strategy NE\nBayes-Nash equilibrium",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
     "objectID": "Slides/01Intro/01-main.html#tentative-schedule",
     "href": "Slides/01Intro/01-main.html#tentative-schedule",
     "title": "Introduction to Game Theory",
     "section": "Tentative Schedule",
-    "text": "Tentative Schedule\n\n\n\n\n\n\n\n\nWeek\nChapter(s)\nTopic\n\n\n\n\n1\n1, 2\nIntro & General Principles\n\n\n2\n3\nSequential Move Games\n\n\n3\n4\nSimultaneous Move Games\n\n\n4\n6\nCombining Sequential and Simultaneous Moves\n\n\n5\n6\nReview & Midterm\n\n\n6\n5\nSimultaneous Games: Continuous Strategies, Discussion, and Evidence\n\n\n7\n7\nMixed Strategies\n\n\n8\n8\nStrategic Moves\n\n\n9\n9\nUncertainty and Information\n\n\n10\n10\nRepeated Games\n\n\nFinals\nTBA\nExam\n\n\n\n\n\n\n\nEC327 | Lecture 1 | Introduction",
+    "text": "Tentative Schedule\n\n\n\n\n\n\n\n\nWeek\nChapter(s)\nTopic\n\n\n\n\n1\n1, 2\nIntro & General Principles\n\n\n2\n3\nSequential Move Games\n\n\n3\n4\nSimultaneous Move Games\n\n\n4\n6\nCombining Sequential and Simultaneous Moves\n\n\n5\n6\nReview & Midterm\n\n\n6\n5\nSimultaneous Games: Continuous Strategies, Discussion, and Evidence\n\n\n7\n7\nMixed Strategies\n\n\n8\n8\nStrategic Moves\n\n\n9\n9\nUncertainty and Information\n\n\n10\n10\nRepeated Games\n\n\n\n\n\n\n\nEC327 | Lecture 1 | Introduction",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -1240,35 +1449,84 @@
   {
     "objectID": "Slides/01Intro/0100-syllabus.html",
     "href": "Slides/01Intro/0100-syllabus.html",
-    "title": "University Policies",
+    "title": "Class Expectations",
     "section": "",
     "text": "Most up to date version on github\nI will also upload to Canvas\nprint, sign, and upload as your first assignment"
   },
   {
     "objectID": "Slides/01Intro/0100-syllabus.html#syllabus-document",
     "href": "Slides/01Intro/0100-syllabus.html#syllabus-document",
-    "title": "University Policies",
+    "title": "Class Expectations",
     "section": "",
     "text": "Most up to date version on github\nI will also upload to Canvas\nprint, sign, and upload as your first assignment"
   },
   {
-    "objectID": "Slides/01Intro/0100-syllabus.html#class-expectations",
-    "href": "Slides/01Intro/0100-syllabus.html#class-expectations",
-    "title": "University Policies",
-    "section": "Class Expectations",
-    "text": "Class Expectations\n\nPrerequisites\n\nCourses: EC201 or EC202\nKnowledge: This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.\n\nThere are great free resources out there like Khan Academy, but always feel free to reach out for help or other suggestions.\n\n\n\n\n\nStudent Expectations\n\n\nCome to class\n\nPay attention to lectures, take notes, review topics at home\nParticipate in group work & activities\nAsk questions!\n\nRead the textbook\nCommunicate respectfully\n\nWith your classmates\nWith me & grader\n\nHave academic integrity 1\n\nVerify that all submitted work is your own\nProvide sources for all information that you found outside this class\n\n\n\n\n\n\nInstructor Expectations\n\nProvide course material\n\nSlides will be updated on github\nI will also try to post them on Canvas, but not as regularly\nAssignments posted on Canvas w/ due dates, submission entry\n\nFace-to-face Interaction\n\nClasses\n\nAsk me to clarify if something doesn’t make sense\nAsk me to slow down if I’m going too fast\n\nOffice Hours\n\nUse them!!"
+    "objectID": "Slides/01Intro/0100-syllabus.html#prerequisites",
+    "href": "Slides/01Intro/0100-syllabus.html#prerequisites",
+    "title": "Class Expectations",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nCourses: EC201 or EC202\nKnowledge: This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.\n\nThere are great free resources out there like Khan Academy, but always feel free to reach out for help or other suggestions."
   },
   {
-    "objectID": "Slides/01Intro/0100-syllabus.html#admin-stuff",
-    "href": "Slides/01Intro/0100-syllabus.html#admin-stuff",
-    "title": "University Policies",
-    "section": "Admin Stuff",
-    "text": "Admin Stuff\n\nProblem Sets\nYou will practice what we learn in class on independently.\nEach homework assignment will include a few problems that will be similar to what you will see on exams.\n\n\nLearning something new takes practice, so these are designed to help you keep up with the concepts\nYou will be graded not only on whether you got a certain answer, but also more importantly on how you communicate your understanding\n\nSee Canvas rubric for more info\n\n\n\n\n\n\nClass Activities\n\n\nSometimes I will ask you to play the types of games we discuss in lectures\n\nRecord the strategies you chose and the outcomes\nReflect on how you played the game\nRelate it to lecture concepts\n\n\n\n\n\nI’m still working out how best to implement\nthis is how you participate, records attendance on activity days\nhopefully lets you experience first-hand the things we learn\n\n\n\n\n\nExams\nYou will demonstrate how well you understand concepts individually on a midterm and a final exam\n\n\nMidterm\n\nsometime around week 5 (Oct. 28th or 30th)\nWill test you on definitions, solution concepts, and apply them to critical thinking problems\n\nFinal\n\nfinals week of December 9 (check duckweb for specific date)\nCovers everything we learned in the quarter, with more focus on concepts from the 2nd half\n\n\n\n\n\nDept policy is 65% As & Bs\nexpect exams to be difficult\nBest way to prepare is lots of practice\n\n\n\n\n\nGrading\n\n\nProblem Sets\nIn-class Activities\nMidterm\nFinal\n\n30%\n10%\n30%\n30%\n\n\n\n\n\nPolicies\n\n\nNo make-up exams!\n\nif you absolutely cannot attend midterm, you can add its weight to final exam\n\nProblem set keys posted automatically after deadline\n\n-&gt; no late submissions accepted"
+    "objectID": "Slides/01Intro/0100-syllabus.html#student-expectations",
+    "href": "Slides/01Intro/0100-syllabus.html#student-expectations",
+    "title": "Class Expectations",
+    "section": "Student Expectations",
+    "text": "Student Expectations\n\n\nCome to class\n\nPay attention to lectures, take notes, review topics at home\nParticipate in group work & activities\nAsk questions!\n\nRead the textbook\nCommunicate respectfully\n\nWith your classmates\nWith me & grader\n\nHave academic integrity 1\n\nVerify that all submitted work is your own\nProvide sources for all information that you found outside this class"
+  },
+  {
+    "objectID": "Slides/01Intro/0100-syllabus.html#instructor-expectations",
+    "href": "Slides/01Intro/0100-syllabus.html#instructor-expectations",
+    "title": "Class Expectations",
+    "section": "Instructor Expectations",
+    "text": "Instructor Expectations\n\nProvide course material\n\nSlides will be updated on github\nI will also try to post them on Canvas, but not as regularly\nAssignments posted on Canvas w/ due dates, submission entry\n\nFace-to-face Interaction\n\nClasses\n\nAsk me to clarify if something doesn’t make sense\nAsk me to slow down if I’m going too fast\n\nOffice Hours\n\nUse them!!"
+  },
+  {
+    "objectID": "Slides/01Intro/0100-syllabus.html#problem-sets",
+    "href": "Slides/01Intro/0100-syllabus.html#problem-sets",
+    "title": "Class Expectations",
+    "section": "Problem Sets",
+    "text": "Problem Sets\nYou will practice what we learn in class on independently.\nEach homework assignment will include a few problems that will be similar to what you will see on exams.\n\n\nLearning something new takes practice, so these are designed to help you keep up with the concepts\nYou will be graded not only on whether you got a certain answer, but also more importantly on how you communicate your understanding\n\nSee Canvas rubric for more info"
+  },
+  {
+    "objectID": "Slides/01Intro/0100-syllabus.html#class-activities",
+    "href": "Slides/01Intro/0100-syllabus.html#class-activities",
+    "title": "Class Expectations",
+    "section": "Class Activities",
+    "text": "Class Activities\n\n\nSometimes I will ask you to play the types of games we discuss in lectures\n\nRecord the strategies you chose and the outcomes\nReflect on how you played the game\nRelate it to lecture concepts\n\n\n\n\n\nI’m still working out how best to implement\nthis is how you participate, records attendance on activity days\nhopefully lets you experience first-hand the things we learn"
+  },
+  {
+    "objectID": "Slides/01Intro/0100-syllabus.html#exams",
+    "href": "Slides/01Intro/0100-syllabus.html#exams",
+    "title": "Class Expectations",
+    "section": "Exams",
+    "text": "Exams\nYou will demonstrate how well you understand concepts individually on a midterm and a final exam\n\n\nMidterm\n\nsometime around week 5 (Oct. 28th or 30th)\nWill test you on definitions, solution concepts, and apply them to critical thinking problems\n\nFinal\n\nfinals week of December 9 (check duckweb for specific date)\nCovers everything we learned in the quarter, with more focus on concepts from the 2nd half\n\n\n\n\n\nDept policy is 65% As & Bs\nexpect exams to be difficult\nBest way to prepare is lots of practice"
+  },
+  {
+    "objectID": "Slides/01Intro/0100-syllabus.html#grading",
+    "href": "Slides/01Intro/0100-syllabus.html#grading",
+    "title": "Class Expectations",
+    "section": "Grading",
+    "text": "Grading\n\n\nProblem Sets\nIn-class Activities\nMidterm\nFinal\n\n30%\n10%\n30%\n30%\n\n\n\n\nPolicies\n\n\nNo make-up exams!\n\nif you absolutely cannot attend midterm, you can add its weight to final exam\n\nProblem set keys posted automatically after deadline\n\n-&gt; no late submissions accepted"
+  },
+  {
+    "objectID": "Slides/01Intro/0100-syllabus.html#campus-resources",
+    "href": "Slides/01Intro/0100-syllabus.html#campus-resources",
+    "title": "Class Expectations",
+    "section": "Campus Resources",
+    "text": "Campus Resources\n\nAccessible Education Center\n\naec.uoregon.edu\n\nSupport for vicitms of assault, harassment, stalking\n\nsafe.uoregon.edu\n24/7 hotline: (+1) 541-346-SAFE (7244)\n\nHealth and Wellbeing\n\nUniversity Counseling Services\nBasic Needs Program\n\nReligious Observance Accomadations\n\nProvost website\n\n\n\n\nThese resources and others are also included in the course syllabus\n\n\nI am here to support you, but not trained or equipped for emergencies\nI will not ask for reasons you cannot attend class or exams\nI am not a mandated reporter: will only pass on info if you request"
+  },
+  {
+    "objectID": "Slides/01Intro/0100-syllabus.html#course-pages",
+    "href": "Slides/01Intro/0100-syllabus.html#course-pages",
+    "title": "Class Expectations",
+    "section": "Course Pages",
+    "text": "Course Pages\nhttps://canvas.uoregon.edu/courses/251353 - submit your assignments - check deadlines\ngithub.com/dyasui/EC327 - Find up-to-date versions of slides/assignments - let me know if links are broken"
   },
   {
     "objectID": "Slides/01Intro/0100-syllabus.html#footnotes",
     "href": "Slides/01Intro/0100-syllabus.html#footnotes",
-    "title": "University Policies",
+    "title": "Class Expectations",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nsee UO’s Student Conduct Code↩︎"
   },
@@ -1340,7 +1598,7 @@
     "href": "Slides/01Intro/0104-taxonomy.html",
     "title": "Taxonomy of Games",
     "section": "",
-    "text": "Sequential or Simultaneous?\nZero-sum or not\nPerfect or Imperfect information?\n\nis info symmetric or asymmetric?\n\nOne-shot or Repeated?\n‘Noncooperative’ or ‘Cooperative’?\n\n\n\n\n\n\n\nSequential Games\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n. . .\nSimultaneous Games\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats\n\n\n\n\n\n\nIn sequential games, you have to think about how what you do now will affect what your opponent will do in the future.\n. . .\n\nThis hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.\n\n. . .\n\nWe’ll see that sometimes moving first can be adventageous\n\n. . .\n\nWhile other times it’s best to wait and see what someone else does\n\n\n\n\n\nIn simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will will do now.\n. . .\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4.\n\n\n\n\n\n\nMany games you are familiar with have distince winners and losers.\n. . .\nBut in other types of games, it’s possible for everyone to come out ahead.\n\n\n\n\nWhen the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExamples: NCAA Football Championship, Scramble for Africa (technically constant-sum)\n\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc.\n\n\n\n\n\n\n\nA one-shot game is played only once by the same set of players.\n\n\nIf you’ve never played against someone before, you can’t form any beliefs about them\nSecrecy or surprise are potentially good strategies in these games\n\n\nA game is called repeated if the same players play it with each other many times.\n\n\nIf you know your opponent, then your reputation becomes valuable if you want to cooperate\n\n\n\n\n\n\nHow much does each player know when they decide?\n\n\nPerfect Information: when players know all previous moves and external circumstances\n\nplayers may have imperfect info; uncertainty about the state of the world, previous’ moves, or other player’s ‘type’\n\nAsymmetric Info: when one player has access to information that other players do not\n\nExamples: hand in poker, used car salesmen\nTopics: Signaling, Screening\n\n\n\n\n\n\n\n\nSelf-interest and common good can often conflict.\nIn these situations, players need to form agreements in order to achieve cooperative outcomes.\n\n. . .\n\nBut can people actually be held to those agreements?\n\nFor example:\n\nParis Climate accords; who polices nation-state’s carbon reductions?\nPublic goods; why do we need the Internal Revenue Service?\n\n\n\n\n\nTwo broad categories of the field are cooperative game theory and noncooperative game theory 2\n\nCooperative games are those in which agreements are enforceable\n\n\nIn Noncooperative games, no-one can be forced not to act in their own self-interest"
+    "text": "Sequential or Simultaneous?\nZero-sum or not\nPerfect or Imperfect information?\n\nis info symmetric or asymmetric?\n\nOne-shot or Repeated?\n‘Noncooperative’ or ‘Cooperative’?\n\n\n\n\n\n\n\nSequential Games\n\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n\n\nSimultaneous Games\n\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats\n\n\n\n\n\n\n\n\nIn sequential games, you have to think about how what you do now will affect what your opponent will do in the future.\n. . .\n\nThis hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.\n\n. . .\n\nWe’ll see that sometimes moving first can be adventageous\n\n. . .\n\nWhile other times it’s best to wait and see what someone else does\n\n\n\n\n\nIn simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will will do now.\n. . .\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4.\n\n\n\n\n\nMany games you are familiar with have distince winners and losers.\n. . .\nBut in other types of games, it’s possible for everyone to come out ahead.\n\n\n\n\n\nWhen the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExamples: NCAA Football Championship, Scramble for Africa (technically constant-sum)\n\n. . .\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc.\n\n\n\n\n\n\nA one-shot game is played only once by the same set of players.\n\n\nIf you’ve never played against someone before, you can’t form any beliefs about them\nSecrecy or surprise are potentially good strategies in these games\n\n\nA game is called repeated if the same players play it with each other many times.\n\n\nIf you know your opponent, then your reputation becomes valuable if you want to cooperate\n\n\n\n\n\n\nHow much does each player know when they decide?\n\n\nPerfect Information: when players know all previous moves and external circumstances\n\nplayers may have imperfect info; uncertainty about the state of the world, previous’ moves, or other player’s ‘type’\n\nAsymmetric Info: when one player has access to information that other players do not\n\nExamples: hand in poker, used car salesmen\nTopics: Signaling, Screening\n\n\n\n\n\n\n\n\nSelf-interest and common good can often conflict.\nIn these situations, players need to form agreements in order to achieve cooperative outcomes.\n\n. . .\n\nBut can people actually be held to those agreements?\n\nFor example:\n\nParis Climate accords; who polices nation-state’s carbon reductions?\nPublic goods; why do we need the Internal Revenue Service?\n\n\n\n\n\nTwo broad categories of the field are cooperative game theory and noncooperative game theory 2\n\nCooperative games are those in which agreements are enforceable\n\n\nIn Noncooperative games, no-one can be forced not to act in their own self-interest\n\n\n\n\n\nIn each of these different categories of games, we will want to make predictions as to how rational agents will behave\n\nOur methods of solving each type of game will be to look for different types of equilibria\n\n\n\n\n\n\n\nEquilibrium\n\n\n\nWhere every player’s strategy is a best-response to the other player(s)\n\n\n\n\n\n\nWhy study equilibria?\n\n\nThey are stable: if nobody has anything better to do than what they’re doing now then why change?\nWe can adapt our models to all types of equilibria\n\nMarket or non-market\nDynamic or static\n\n\n\n\n\n\n\nA few different types of equilibria in this class:\n\nNash equilibrium\n\nSubgame perfect NE\nMixed strategy NE\nBayes-Nash equilibrium"
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html#general-categorical-terms",
@@ -1354,14 +1612,35 @@
     "href": "Slides/01Intro/0104-taxonomy.html#sequential-vs.-simultaneous",
     "title": "Taxonomy of Games",
     "section": "",
-    "text": "Sequential Games\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n. . .\nSimultaneous Games\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats\n\n\n\n\n\n\nIn sequential games, you have to think about how what you do now will affect what your opponent will do in the future.\n. . .\n\nThis hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.\n\n. . .\n\nWe’ll see that sometimes moving first can be adventageous\n\n. . .\n\nWhile other times it’s best to wait and see what someone else does\n\n\n\n\n\nIn simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will will do now.\n. . .\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4."
+    "text": "Sequential Games\n\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n\n\nSimultaneous Games\n\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats"
+  },
+  {
+    "objectID": "Slides/01Intro/0104-taxonomy.html#sequential-games",
+    "href": "Slides/01Intro/0104-taxonomy.html#sequential-games",
+    "title": "Taxonomy of Games",
+    "section": "",
+    "text": "In sequential games, you have to think about how what you do now will affect what your opponent will do in the future.\n. . .\n\nThis hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.\n\n. . .\n\nWe’ll see that sometimes moving first can be adventageous\n\n. . .\n\nWhile other times it’s best to wait and see what someone else does"
+  },
+  {
+    "objectID": "Slides/01Intro/0104-taxonomy.html#simultaneous-games",
+    "href": "Slides/01Intro/0104-taxonomy.html#simultaneous-games",
+    "title": "Taxonomy of Games",
+    "section": "",
+    "text": "In simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will will do now.\n. . .\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4."
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html#conflicting-vs.-common-interests",
     "href": "Slides/01Intro/0104-taxonomy.html#conflicting-vs.-common-interests",
     "title": "Taxonomy of Games",
     "section": "",
-    "text": "Many games you are familiar with have distince winners and losers.\n. . .\nBut in other types of games, it’s possible for everyone to come out ahead.\n\n\n\n\nWhen the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExamples: NCAA Football Championship, Scramble for Africa (technically constant-sum)\n\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc."
+    "text": "Many games you are familiar with have distince winners and losers.\n. . .\nBut in other types of games, it’s possible for everyone to come out ahead."
+  },
+  {
+    "objectID": "Slides/01Intro/0104-taxonomy.html#zero-sum-or-constant-sum-games",
+    "href": "Slides/01Intro/0104-taxonomy.html#zero-sum-or-constant-sum-games",
+    "title": "Taxonomy of Games",
+    "section": "",
+    "text": "When the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExamples: NCAA Football Championship, Scramble for Africa (technically constant-sum)\n\n. . .\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc."
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html#are-strategic-interactions-repeated",
@@ -1392,6 +1671,27 @@
     "text": "Two broad categories of the field are cooperative game theory and noncooperative game theory 2\n\nCooperative games are those in which agreements are enforceable\n\n\nIn Noncooperative games, no-one can be forced not to act in their own self-interest"
   },
   {
+    "objectID": "Slides/01Intro/0104-taxonomy.html#equilibrium",
+    "href": "Slides/01Intro/0104-taxonomy.html#equilibrium",
+    "title": "Taxonomy of Games",
+    "section": "",
+    "text": "In each of these different categories of games, we will want to make predictions as to how rational agents will behave\n\nOur methods of solving each type of game will be to look for different types of equilibria\n\n\n\n\n\n\n\nEquilibrium\n\n\n\nWhere every player’s strategy is a best-response to the other player(s)"
+  },
+  {
+    "objectID": "Slides/01Intro/0104-taxonomy.html#equilibrium-2",
+    "href": "Slides/01Intro/0104-taxonomy.html#equilibrium-2",
+    "title": "Taxonomy of Games",
+    "section": "",
+    "text": "Why study equilibria?\n\n\nThey are stable: if nobody has anything better to do than what they’re doing now then why change?\nWe can adapt our models to all types of equilibria\n\nMarket or non-market\nDynamic or static"
+  },
+  {
+    "objectID": "Slides/01Intro/0104-taxonomy.html#equilibrium-3",
+    "href": "Slides/01Intro/0104-taxonomy.html#equilibrium-3",
+    "title": "Taxonomy of Games",
+    "section": "",
+    "text": "A few different types of equilibria in this class:\n\nNash equilibrium\n\nSubgame perfect NE\nMixed strategy NE\nBayes-Nash equilibrium"
+  },
+  {
     "objectID": "Slides/01Intro/0104-taxonomy.html#footnotes",
     "href": "Slides/01Intro/0104-taxonomy.html#footnotes",
     "title": "Taxonomy of Games",
@@ -1399,232 +1699,183 @@
     "text": "Footnotes\n\n\nor sum to some constant↩︎\nbut if you ask real game theorists, they will probably tell you these names are misleading↩︎"
   },
   {
-    "objectID": "Slides/01Intro/Pareto.html",
-    "href": "Slides/01Intro/Pareto.html",
-    "title": "EC327 Game Theory",
+    "objectID": "Slides/02SequentialGames/0201-trees.html",
+    "href": "Slides/02SequentialGames/0201-trees.html",
+    "title": "Extensive Form",
     "section": "",
-    "text": "What are the good outcomes in the planting game?\nCan we rank outcomes by collective welfare?\n\n\n\n\n\nfigures/fig3.6.png"
+    "text": "Before we learn how to solve a game, it will helpful to be able to visualize them\nBecause of the ordered nature of sequential games, a tree diagram makes sense\n\n\n\n\n\n\n\n\n\n\n\n\nIs this a strategic decision?\n\nNo: if it’s only me\n\nJust because there are no other branches leading to the intiial node doesn’t mean there are no other decisions that lead us here. Just that we are not modeling them for the sake of this decision.\n\n\n\n\n\n\n\nA Tree Graph consists of:\n\nMultiple nodes with an ordered hierarchy starting from one initial node\nBranches coming from each node which connect it to later nodes\nThe tree ends in any of the multiple terminal nodes\n\n\n. . .\n\n\n\n\n\n\nWarning\n\n\n\nEach (non-initial) terminal node may have multiple branches leading from it; but must only have one branch that leads to it.\n\n\n\n\nThis is because actions are different from strategies\n\neven if the actions are practically similar, it matters how we got there\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThere are three nodes in this tree,\n\none initial node at the top: this is where the game begins\ntwo other nodes follow after the choice at the initial node is decided\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn this case, each decision node has its own two branches\n\nIt helps to label each branch with the name of the action it represents\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe game ends with four terminal nodes\n\nUnlike the nodes before, there is no decision to be made because the game is over\nBy convention, they won’t be drawn as dots to differentiate them\n\n\n\n\n\n\n\nA kidnapper named Guy has contacted the victim’s wife, named Vivica, to demand a ransom.\nTo predict what will happen to the victim, Orlando, we need to create a game theoretic model of the situation.\nLet’s use the language of the tree graph to visualize this game.\n\n\nDraw game on chalkboard step-by-step so students see how it’s constructed\nExplain order of each action for each node, starting w/ inital choice to kidnap or not\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWho are the players?\nWhere are the decisions?\nWhat are the branches? What do they represent?\nWhat do the terminal nodes represent?\nIs this a complete representation of a game? What’s missing?\n\n\n\n\n\n\nGuy and Vivica are players because they have decisions which influence the outcome\nOrlando is not a player\ndecisions are at each of the 4 nodes\nEach action is a decision\nA complete game needs preferences of the players!\nNote that even though Guy has two branches each for Kill and Release, they show up in different parts of the tree.\n\nPrior decisions matter!\n\n\n\n\n\n\n\n\n\n\n\nOutcome\nGuy\n\n\n\n\nNo kidnapping\n3\n\n\nKidnapping, ransom paid, Orlando killed\n4\n\n\nKidnapping, ransom paid, Orlando released\n5\n\n\nKidnapping, no ransom paid, Orlando killed\n2\n\n\nKidnapping, no ransom paid, Orlando released\n1\n\n\n\n\n\nGuy’s preferences:\n\nBest case: Gets ransom money and he doesn’t have to kill Orlando\nNext best: Gets money but he has to kill Orlando :(\nMiddle: No kidnapping, status quo, everyone goes about their lives\nNext worst: Kidnaps Orlando, gets no ransom, but at least gets to play tough for next kidnapping victim\nWorst case: Kidnaps Orlando but gets no ransom, and has to release Orlando\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOutcome\nGuy\nVivica\n\n\n\n\nNo kidnapping\n3\n5\n\n\nKidnapping, ransom paid, Orlando killed\n4\n1\n\n\nKidnapping, ransom paid, Orlando released\n5\n3\n\n\nKidnapping, no ransom paid, Orlando killed\n2\n2\n\n\nKidnapping, no ransom paid, Orlando released\n1\n4\n\n\n\n\n\nVivica’s preferences\n\nBest case: She and Orlando get to go about their lives without experiencing kidnapping\nNext best: Orlando is kidnapped, but is released without needing to pay\nMiddle: Orlando is kidnapped, but is released after ransom is paid\nNext worst: Orlando is killed, but no ransom paid\nWorst: Orlando is killed and loses money\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe added the correct payoffs to the terminal node corresponding to each outcome from the table\nNote how the convention is that the first player to move has their payoffs listed first\n\n\n\n\n\n\nBased on the extensive form game tree with payoffs,\n\nDo you have any predictions for what strategies each player will choose?\n\n\n\nAsk students what they would do in Guy’s position,\nin Vivica’s?\nShould they think about what the other player is thinking?\nWould they have different preference orederings of the outcomes?\n\n\n\n\n\n\n\n\nA collection of decision-makers, called players or agents\nA set of decision nodes, each represents the information available to the player of that node\nStrategies for each player which list the branches from each node that represetn the actions a player would take if faced with that choice\nA tree diagram which maps the intersections of players’ strategy profiles to the outcomes represented at each terminal nodes\n\n\n\n\nconnect this definition to the more general defition of a game from lecture 1\n\nplayers are a part of every game\ndecision nodes are a specific representation of information sets\nstrategies will be defined by paths players take along the branches\npreferences are represented by the payoffs at terminal nodes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefinition\n\n\n\nA strategy is a complete plan of action which assigns an action at every node where a player makes a decision\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBe careful to distinguish between a strategy and a single action/choice\n\n\nWhat’s the difference?\n\n\n\nThe difference between a complete strategy and a single action is that a strategy contains a list of multiple actions and the conditions for when that action will be taken\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow many decisions does Guy make?\n\n3\n\nHow many decisions does Vivica make?\n\n1\n\n\n\n\n\n\n\ncount the nodes labeled with each player’s name\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWrite out a complete strategy for Vivica\n\nOnly two strategies:\n\nPay the ransom,\nor Don’t pay\n\n\n\n\n\n\n\n\nVivica only has to make a decision in the branch where Orlando is kidnapped\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWrite out at complete strategy for Guy\n\nLet’s give some shorter names for Guy’s actions:\n\n\\(A\\) \\(\\equiv\\) Kidnap Orlando (Abduct)\n\\(I\\) \\(\\equiv\\) Don’t kidnap Orlando (Ignore)\n\\(K\\) \\(\\equiv\\) Kill Orlando\n\\(L\\) \\(\\equiv\\) Let Orlando live\n\n\n\n\n\n\n\n\nBut Guy’s choices depend on what Vivica chooses, so his strategy is more complicated\n\n\n\n\n\n\nGuy has \\(8\\) total complete strategies:\n\n\n\n\n\n\n\nIf Guy \\(A\\)bducts\nIf Guy \\(I\\)gnores\n\n\n\n\n( \\(A\\), \\(K\\), \\(K\\) )\n( \\(I\\), \\(K\\), \\(K\\) )\n\n\n( \\(A\\), \\(L\\), \\(K\\) )\n( \\(I\\), \\(L\\), \\(L\\) )\n\n\n( \\(A\\), \\(K\\), \\(L\\) )\n( \\(I\\), \\(K\\), \\(L\\) )\n\n\n( \\(A\\), \\(L\\), \\(L\\) )\n( \\(I\\), \\(L\\), \\(L\\) )"
   },
   {
-    "objectID": "Slides/01Intro/Pareto.html#welfare-and-efficiency",
-    "href": "Slides/01Intro/Pareto.html#welfare-and-efficiency",
-    "title": "EC327 Game Theory",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#game-treesextensive-form-as-a-tool",
+    "href": "Slides/02SequentialGames/0201-trees.html#game-treesextensive-form-as-a-tool",
+    "title": "Extensive Form",
     "section": "",
-    "text": "What are the good outcomes in the planting game?\nCan we rank outcomes by collective welfare?\n\n\n\n\n\nfigures/fig3.6.png"
+    "text": "Before we learn how to solve a game, it will helpful to be able to visualize them\nBecause of the ordered nature of sequential games, a tree diagram makes sense"
   },
   {
-    "objectID": "Slides/01Intro/Pareto.html#pareto-dominance",
-    "href": "Slides/01Intro/Pareto.html#pareto-dominance",
-    "title": "EC327 Game Theory",
-    "section": "Pareto Dominance",
-    "text": "Pareto Dominance\nPareto optimality (or efficiency) is econonomists’ best shot at coming up with a ranking of which outcomes are objectively ‘better’\n\nFor any two outcomes (🎉, 🎊), 🎉 is Pareto dominated by 🎊 if both:\n\nNo one strictly prefers 🎉 to 🎊 - U👤(🎊) \\(\\geq\\) U👤(🎉) \\(\\forall 👤 \\in \\{ 🙍, 🧑, 💆, 🧖, 🧑, 😺, ...\\}\\)\nAt least one person strictly🎉 prefers 🎉 to 🎊 - \\(\\exists 👤\\) such that U👤(🎊) \\(&gt;\\) U👤(🎉)"
-  },
-  {
-    "objectID": "Slides/01Intro/Pareto.html#pareto-improvement",
-    "href": "Slides/01Intro/Pareto.html#pareto-improvement",
-    "title": "EC327 Game Theory",
-    "section": "Pareto Improvement",
-    "text": "Pareto Improvement\nThe move from a policy y to an alternative policy x is a Pareto improvement if x Pareto dominates y.\n\nSuch a policy change should reasonably be seen as unambiguously good\nAnother perspective is that no-one would veto a pareto improvement"
-  },
-  {
-    "objectID": "Slides/01Intro/Pareto.html#pareto-efficiency",
-    "href": "Slides/01Intro/Pareto.html#pareto-efficiency",
-    "title": "EC327 Game Theory",
-    "section": "Pareto Efficiency",
-    "text": "Pareto Efficiency\nAn outcome is Pareto Efficient (Optimal) if no other outcome Pareto dominates it.\nAn outcome is Pareto Infficient if at least one other outcome Pareto dominates it."
-  },
-  {
-    "objectID": "Slides/01Intro/Pareto.html#ranking-the-planting-payoffs",
-    "href": "Slides/01Intro/Pareto.html#ranking-the-planting-payoffs",
-    "title": "EC327 Game Theory",
-    "section": "Ranking the Planting Payoffs",
-    "text": "Ranking the Planting Payoffs\nCompare (4,3,3) to (1,2,2)\n\nWhich one is Pareto dominating?"
-  },
-  {
-    "objectID": "Slides/01Intro/Pareto.html#ranking-the-planting-payoffs-1",
-    "href": "Slides/01Intro/Pareto.html#ranking-the-planting-payoffs-1",
-    "title": "EC327 Game Theory",
-    "section": "Ranking the Planting Payoffs",
-    "text": "Ranking the Planting Payoffs\nNow compare (4,3,3) to (3,4,3) or (3,3,4)\n\nWhich one is Pareto dominating?\n\nIs the rollback equilibrium outcome a Pareto efficient one?"
-  },
-  {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#a-decision-tree",
+    "href": "Slides/02SequentialGames/0201-trees.html#a-decision-tree",
+    "title": "Extensive Form",
     "section": "",
-    "text": "figures/fig3.2.png\n\n\n\n\n\n\n\n\n\nfigures/fig3.3.png\n\n\n\n\n\n\n\n\n\nfigures/fig3.4.png\n\n\n\n\n\n\n\n\n\nfigures/fig3.5.png\n\n\n\n\n\n\nThe method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\n\nWhen all players do rollback analysis to choose their optimal strategies, we call this set of strategies the rollback equilibrium2 of the game; the outcome that arises from playing these strategies is the rollback equilibrium outcome\n\n\n\n\n\n\nConsider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.\n\nDraw the extensive form game tree complete with all payoff for both teams.\nHow many total strategies are there for team 1?\nUse pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?\n\n\n\n\n\nWe can start to add more complexity with more than two players\n\n\n\n\n\n\nEmily, Nina, and Talia are roommates who want to get a start on their communal garden.\nThey like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.\n2 or 3 people working is enough to keep the garden healthy, but if 1 or 0 work, then the garden will die.\n\n\n\n\n\n\n\n\n\noutcome:\nutlity:\n\n\n\n\nI don’t contribute, but garden lives\n4\n\n\nI contribute, and get garden.\n3\n\n\nI don’t contribute, and garden dies\n2\n\n\nI contribute, but garden dies\n1\n\n\n\n\n\n\n\n\n\n\nfigures/fig3.6.png\n\n\n\n\n\n\n\nNote that there is one continuous path we traced from the initial node to a final equilibrium outcome.\nHowever, we couldn’t have gotten their without the other arrows paths even though they are never reached in equilibrium.\nRecall that a strategy is a collection of choices at every decision node.\n\n\n\n\n\nEven though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:\n\n“Nina’s strategy in the rollback equilibrium is { Don’t Contribute at b, Contribute at c }”.\n\n\nTo make it even shorter, let’s call this strategy DC.\n\n\n\n\n\n\n\nCCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD\n16 total strategies\n\n\n\n\n\n\nThe equilibrium is:\n\n{ D3, DC4, DCCD5 }\n\n\n\n\n\nEven a simple game get complicated fast\n\n\n\n\n\n\n\n\n\n\nEven though it looks complicated, the main branches are really just copies of each other\nMost people probably figure out the rollback equilibrium after playing it enough\nInsert relevant xkcd here: https://xkcd.com/832/\n\n\n\n\n\n\nWhat about more complicated games like chess?\n\ntechnically rollback solvable, but with \\(10^{120}\\) possible moves, it hasn’t been solved by either human or machine\n\nPlayers of complicated sequential games often implement some intermediate valuation function to assign payoffs to non-terminal nodes."
+    "text": "Is this a strategic decision?\n\nNo: if it’s only me\n\nJust because there are no other branches leading to the intiial node doesn’t mean there are no other decisions that lead us here. Just that we are not modeling them for the sake of this decision."
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#the-smoking-decision",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#the-smoking-decision",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#extensive-form-definition",
+    "href": "Slides/02SequentialGames/0201-trees.html#extensive-form-definition",
+    "title": "Extensive Form",
     "section": "",
-    "text": "figures/fig3.2.png"
+    "text": "A Tree Graph consists of:\n\nMultiple nodes with an ordered hierarchy starting from one initial node\nBranches coming from each node which connect it to later nodes\nThe tree ends in any of the multiple terminal nodes\n\n\n. . .\n\n\n\n\n\n\nWarning\n\n\n\nEach (non-initial) terminal node may have multiple branches leading from it; but must only have one branch that leads to it.\n\n\n\n\nThis is because actions are different from strategies\n\neven if the actions are practically similar, it matters how we got there"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#the-smoking-game",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#the-smoking-game",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#anatomy-of-a-tree",
+    "href": "Slides/02SequentialGames/0201-trees.html#anatomy-of-a-tree",
+    "title": "Extensive Form",
     "section": "",
-    "text": "figures/fig3.3.png"
+    "text": "There are three nodes in this tree,\n\none initial node at the top: this is where the game begins\ntwo other nodes follow after the choice at the initial node is decided"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#pruning-branches",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#pruning-branches",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#anatomy-of-a-tree-1",
+    "href": "Slides/02SequentialGames/0201-trees.html#anatomy-of-a-tree-1",
+    "title": "Extensive Form",
     "section": "",
-    "text": "figures/fig3.4.png"
+    "text": "In this case, each decision node has its own two branches\n\nIt helps to label each branch with the name of the action it represents"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#section",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#section",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#anatomy-of-a-tree-2",
+    "href": "Slides/02SequentialGames/0201-trees.html#anatomy-of-a-tree-2",
+    "title": "Extensive Form",
     "section": "",
-    "text": "figures/fig3.5.png"
+    "text": "The game ends with four terminal nodes\n\nUnlike the nodes before, there is no decision to be made because the game is over\nBy convention, they won’t be drawn as dots to differentiate them"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#backwards-induction-defined",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#backwards-induction-defined",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#kidnapping-game",
+    "href": "Slides/02SequentialGames/0201-trees.html#kidnapping-game",
+    "title": "Extensive Form",
     "section": "",
-    "text": "The method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\n\nWhen all players do rollback analysis to choose their optimal strategies, we call this set of strategies the rollback equilibrium2 of the game; the outcome that arises from playing these strategies is the rollback equilibrium outcome"
+    "text": "A kidnapper named Guy has contacted the victim’s wife, named Vivica, to demand a ransom.\nTo predict what will happen to the victim, Orlando, we need to create a game theoretic model of the situation.\nLet’s use the language of the tree graph to visualize this game.\n\n\nDraw game on chalkboard step-by-step so students see how it’s constructed\nExplain order of each action for each node, starting w/ inital choice to kidnap or not\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWho are the players?\nWhere are the decisions?\nWhat are the branches? What do they represent?\nWhat do the terminal nodes represent?\nIs this a complete representation of a game? What’s missing?\n\n\n\n\n\n\nGuy and Vivica are players because they have decisions which influence the outcome\nOrlando is not a player\ndecisions are at each of the 4 nodes\nEach action is a decision\nA complete game needs preferences of the players!\nNote that even though Guy has two branches each for Kill and Release, they show up in different parts of the tree.\n\nPrior decisions matter!"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#group-exercise",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#group-exercise",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#kidnapping-game-payoffs",
+    "href": "Slides/02SequentialGames/0201-trees.html#kidnapping-game-payoffs",
+    "title": "Extensive Form",
     "section": "",
-    "text": "Consider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.\n\nDraw the extensive form game tree complete with all payoff for both teams.\nHow many total strategies are there for team 1?\nUse pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?"
+    "text": "Outcome\nGuy\n\n\n\n\nNo kidnapping\n3\n\n\nKidnapping, ransom paid, Orlando killed\n4\n\n\nKidnapping, ransom paid, Orlando released\n5\n\n\nKidnapping, no ransom paid, Orlando killed\n2\n\n\nKidnapping, no ransom paid, Orlando released\n1\n\n\n\n\n\nGuy’s preferences:\n\nBest case: Gets ransom money and he doesn’t have to kill Orlando\nNext best: Gets money but he has to kill Orlando :(\nMiddle: No kidnapping, status quo, everyone goes about their lives\nNext worst: Kidnaps Orlando, gets no ransom, but at least gets to play tough for next kidnapping victim\nWorst case: Kidnaps Orlando but gets no ransom, and has to release Orlando"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#adding-more-players",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#adding-more-players",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#kidnapping-game-payoffs-1",
+    "href": "Slides/02SequentialGames/0201-trees.html#kidnapping-game-payoffs-1",
+    "title": "Extensive Form",
     "section": "",
-    "text": "We can start to add more complexity with more than two players"
+    "text": "Outcome\nGuy\nVivica\n\n\n\n\nNo kidnapping\n3\n5\n\n\nKidnapping, ransom paid, Orlando killed\n4\n1\n\n\nKidnapping, ransom paid, Orlando released\n5\n3\n\n\nKidnapping, no ransom paid, Orlando killed\n2\n2\n\n\nKidnapping, no ransom paid, Orlando released\n1\n4\n\n\n\n\n\nVivica’s preferences\n\nBest case: She and Orlando get to go about their lives without experiencing kidnapping\nNext best: Orlando is kidnapped, but is released without needing to pay\nMiddle: Orlando is kidnapped, but is released after ransom is paid\nNext worst: Orlando is killed, but no ransom paid\nWorst: Orlando is killed and loses money"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#player-planting-game",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#player-planting-game",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#kidnapping-game-tree-with-payoffs",
+    "href": "Slides/02SequentialGames/0201-trees.html#kidnapping-game-tree-with-payoffs",
+    "title": "Extensive Form",
     "section": "",
-    "text": "Emily, Nina, and Talia are roommates who want to get a start on their communal garden.\nThey like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.\n2 or 3 people working is enough to keep the garden healthy, but if 1 or 0 work, then the garden will die."
+    "text": "We added the correct payoffs to the terminal node corresponding to each outcome from the table\nNote how the convention is that the first player to move has their payoffs listed first"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#planting-game-payoffs",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#planting-game-payoffs",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#predictions",
+    "href": "Slides/02SequentialGames/0201-trees.html#predictions",
+    "title": "Extensive Form",
     "section": "",
-    "text": "outcome:\nutlity:\n\n\n\n\nI don’t contribute, but garden lives\n4\n\n\nI contribute, and get garden.\n3\n\n\nI don’t contribute, and garden dies\n2\n\n\nI contribute, but garden dies\n1"
+    "text": "Based on the extensive form game tree with payoffs,\n\nDo you have any predictions for what strategies each player will choose?\n\n\n\nAsk students what they would do in Guy’s position,\nin Vivica’s?\nShould they think about what the other player is thinking?\nWould they have different preference orederings of the outcomes?"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#planding-game-tree",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#planding-game-tree",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#a-definition-of-an-extensive-form-game",
+    "href": "Slides/02SequentialGames/0201-trees.html#a-definition-of-an-extensive-form-game",
+    "title": "Extensive Form",
     "section": "",
-    "text": "figures/fig3.6.png"
+    "text": "A collection of decision-makers, called players or agents\nA set of decision nodes, each represents the information available to the player of that node\nStrategies for each player which list the branches from each node that represetn the actions a player would take if faced with that choice\nA tree diagram which maps the intersections of players’ strategy profiles to the outcomes represented at each terminal nodes\n\n\n\n\nconnect this definition to the more general defition of a game from lecture 1\n\nplayers are a part of every game\ndecision nodes are a specific representation of information sets\nstrategies will be defined by paths players take along the branches\npreferences are represented by the payoffs at terminal nodes"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#equilibrium-path-of-play",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#equilibrium-path-of-play",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#strategies-in-extensive-form-games",
+    "href": "Slides/02SequentialGames/0201-trees.html#strategies-in-extensive-form-games",
+    "title": "Extensive Form",
     "section": "",
-    "text": "Note that there is one continuous path we traced from the initial node to a final equilibrium outcome.\nHowever, we couldn’t have gotten their without the other arrows paths even though they are never reached in equilibrium.\nRecall that a strategy is a collection of choices at every decision node."
+    "text": "Definition\n\n\n\nA strategy is a complete plan of action which assigns an action at every node where a player makes a decision\n\n\n\n\n\n\n\n\nWarning\n\n\n\nBe careful to distinguish between a strategy and a single action/choice\n\n\nWhat’s the difference?\n\n\n\nThe difference between a complete strategy and a single action is that a strategy contains a list of multiple actions and the conditions for when that action will be taken"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#equilibrium-strategies",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#equilibrium-strategies",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#apply-this-definition-to-the-kidnapping-game",
+    "href": "Slides/02SequentialGames/0201-trees.html#apply-this-definition-to-the-kidnapping-game",
+    "title": "Extensive Form",
     "section": "",
-    "text": "Even though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:\n\n“Nina’s strategy in the rollback equilibrium is { Don’t Contribute at b, Contribute at c }”.\n\n\nTo make it even shorter, let’s call this strategy DC."
+    "text": "How many decisions does Guy make?\n\n3\n\nHow many decisions does Vivica make?\n\n1\n\n\n\n\n\n\n\ncount the nodes labeled with each player’s name"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#how-many-strategies-does-talia-have",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#how-many-strategies-does-talia-have",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#apply-this-definition-to-the-kidnapping-game-1",
+    "href": "Slides/02SequentialGames/0201-trees.html#apply-this-definition-to-the-kidnapping-game-1",
+    "title": "Extensive Form",
     "section": "",
-    "text": "CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD\n16 total strategies"
+    "text": "Write out a complete strategy for Vivica\n\nOnly two strategies:\n\nPay the ransom,\nor Don’t pay\n\n\n\n\n\n\n\n\nVivica only has to make a decision in the branch where Orlando is kidnapped"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#rollback-equilibrium-strategies",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#rollback-equilibrium-strategies",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#apply-this-definition-to-the-kidnapping-game-2",
+    "href": "Slides/02SequentialGames/0201-trees.html#apply-this-definition-to-the-kidnapping-game-2",
+    "title": "Extensive Form",
     "section": "",
-    "text": "The equilibrium is:\n\n{ D3, DC4, DCCD5 }"
+    "text": "Write out at complete strategy for Guy\n\nLet’s give some shorter names for Guy’s actions:\n\n\\(A\\) \\(\\equiv\\) Kidnap Orlando (Abduct)\n\\(I\\) \\(\\equiv\\) Don’t kidnap Orlando (Ignore)\n\\(K\\) \\(\\equiv\\) Kill Orlando\n\\(L\\) \\(\\equiv\\) Let Orlando live\n\n\n\n\n\n\n\n\nBut Guy’s choices depend on what Vivica chooses, so his strategy is more complicated"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#adding-more-moves",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#adding-more-moves",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#apply-this-definition-to-the-kidnapping-game-3",
+    "href": "Slides/02SequentialGames/0201-trees.html#apply-this-definition-to-the-kidnapping-game-3",
+    "title": "Extensive Form",
     "section": "",
-    "text": "Even a simple game get complicated fast"
+    "text": "Guy has \\(8\\) total complete strategies:\n\n\n\n\n\n\n\nIf Guy \\(A\\)bducts\nIf Guy \\(I\\)gnores\n\n\n\n\n( \\(A\\), \\(K\\), \\(K\\) )\n( \\(I\\), \\(K\\), \\(K\\) )\n\n\n( \\(A\\), \\(L\\), \\(K\\) )\n( \\(I\\), \\(L\\), \\(L\\) )\n\n\n( \\(A\\), \\(K\\), \\(L\\) )\n( \\(I\\), \\(K\\), \\(L\\) )\n\n\n( \\(A\\), \\(L\\), \\(L\\) )\n( \\(I\\), \\(L\\), \\(L\\) )"
   },
   {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#tic-tac-toe",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#tic-tac-toe",
-    "title": "Backwards Induction",
-    "section": "",
-    "text": "Even though it looks complicated, the main branches are really just copies of each other\nMost people probably figure out the rollback equilibrium after playing it enough\nInsert relevant xkcd here: https://xkcd.com/832/"
-  },
-  {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#chess",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#chess",
-    "title": "Backwards Induction",
-    "section": "",
-    "text": "What about more complicated games like chess?\n\ntechnically rollback solvable, but with \\(10^{120}\\) possible moves, it hasn’t been solved by either human or machine\n\nPlayers of complicated sequential games often implement some intermediate valuation function to assign payoffs to non-terminal nodes."
-  },
-  {
-    "objectID": "Slides/02SequentialGames/BackwardsInduction.html#footnotes",
-    "href": "Slides/02SequentialGames/BackwardsInduction.html#footnotes",
-    "title": "Backwards Induction",
+    "objectID": "Slides/02SequentialGames/0201-trees.html#footnotes",
+    "href": "Slides/02SequentialGames/0201-trees.html#footnotes",
+    "title": "Extensive Form",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nDixit et al, pg 56↩︎\naka subgame perfect equilibrium↩︎\nEmily↩︎\nNina↩︎\nTalia↩︎"
+    "text": "Footnotes\n\n\nHarrington, pg 18↩︎\nfor finite, perfect information games↩︎"
   },
   {
-    "objectID": "Slides/02SequentialGames/Pareto.html",
-    "href": "Slides/02SequentialGames/Pareto.html",
+    "objectID": "Slides/02SequentialGames/0203-pareto.html",
+    "href": "Slides/02SequentialGames/0203-pareto.html",
     "title": "Welfare and Efficiency",
     "section": "",
     "text": "What are the good outcomes in the planting game?\nCan we rank outcomes by collective welfare?\n\n\n\n\n\nPareto optimality (or efficiency) is econonomists’ best shot at coming up with a ranking of which outcomes are objectively ‘better’\n\nFor any two outcomes (🎉, 🎊), 🎉 is Pareto dominated by 🎊 if both:\n\nNo one strictly prefers 🎉 to 🎊 - U👤(🎊) \\(\\geq\\) U👤(🎉) \\(\\forall 👤 \\in \\{ 🙍, 🧑, 💆, 🧖, 🧑, 😺, ...\\}\\)\nAt least one person strictly🎉 prefers 🎉 to 🎊 - \\(\\exists 👤\\) such that U👤(🎊) \\(&gt;\\) U👤(🎉)\n\n\n\n\n\n\nThe move from a policy y to an alternative policy x is a Pareto improvement if x Pareto dominates y.\n\nSuch a policy change should reasonably be seen as unambiguously good\nAnother perspective is that no-one would veto a pareto improvement\n\n\n\n\n\nAn outcome is Pareto Efficient (Optimal) if no other outcome Pareto dominates it.\nAn outcome is Pareto Infficient if at least one other outcome Pareto dominates it.\n\n\n\n\nCompare (4,3,3) to (1,2,2)\n\nWhich one is Pareto dominating?\n\n\n\n\n\nNow compare (4,3,3) to (3,4,3) or (3,3,4)\n\nWhich one is Pareto dominating?\n\nIs the rollback equilibrium outcome a Pareto efficient one?\n\n\n\n\n\n\nHow useful is Pareto Efficiency in the real world?\nHow else could we group outcomes?\nWe might address this later in the class with what is known as Cooperative Game Theory"
   },
   {
-    "objectID": "Slides/02SequentialGames/Pareto.html#pareto-dominance",
-    "href": "Slides/02SequentialGames/Pareto.html#pareto-dominance",
+    "objectID": "Slides/02SequentialGames/0203-pareto.html#pareto-dominance",
+    "href": "Slides/02SequentialGames/0203-pareto.html#pareto-dominance",
     "title": "Welfare and Efficiency",
     "section": "",
     "text": "Pareto optimality (or efficiency) is econonomists’ best shot at coming up with a ranking of which outcomes are objectively ‘better’\n\nFor any two outcomes (🎉, 🎊), 🎉 is Pareto dominated by 🎊 if both:\n\nNo one strictly prefers 🎉 to 🎊 - U👤(🎊) \\(\\geq\\) U👤(🎉) \\(\\forall 👤 \\in \\{ 🙍, 🧑, 💆, 🧖, 🧑, 😺, ...\\}\\)\nAt least one person strictly🎉 prefers 🎉 to 🎊 - \\(\\exists 👤\\) such that U👤(🎊) \\(&gt;\\) U👤(🎉)"
   },
   {
-    "objectID": "Slides/02SequentialGames/Pareto.html#pareto-improvement",
-    "href": "Slides/02SequentialGames/Pareto.html#pareto-improvement",
+    "objectID": "Slides/02SequentialGames/0203-pareto.html#pareto-improvement",
+    "href": "Slides/02SequentialGames/0203-pareto.html#pareto-improvement",
     "title": "Welfare and Efficiency",
     "section": "",
     "text": "The move from a policy y to an alternative policy x is a Pareto improvement if x Pareto dominates y.\n\nSuch a policy change should reasonably be seen as unambiguously good\nAnother perspective is that no-one would veto a pareto improvement"
   },
   {
-    "objectID": "Slides/02SequentialGames/Pareto.html#pareto-efficiency",
-    "href": "Slides/02SequentialGames/Pareto.html#pareto-efficiency",
+    "objectID": "Slides/02SequentialGames/0203-pareto.html#pareto-efficiency",
+    "href": "Slides/02SequentialGames/0203-pareto.html#pareto-efficiency",
     "title": "Welfare and Efficiency",
     "section": "",
     "text": "An outcome is Pareto Efficient (Optimal) if no other outcome Pareto dominates it.\nAn outcome is Pareto Infficient if at least one other outcome Pareto dominates it."
   },
   {
-    "objectID": "Slides/02SequentialGames/Pareto.html#ranking-the-planting-payoffs",
-    "href": "Slides/02SequentialGames/Pareto.html#ranking-the-planting-payoffs",
+    "objectID": "Slides/02SequentialGames/0203-pareto.html#ranking-the-planting-payoffs",
+    "href": "Slides/02SequentialGames/0203-pareto.html#ranking-the-planting-payoffs",
     "title": "Welfare and Efficiency",
     "section": "",
     "text": "Compare (4,3,3) to (1,2,2)\n\nWhich one is Pareto dominating?"
   },
   {
-    "objectID": "Slides/02SequentialGames/Pareto.html#ranking-the-planting-payoffs-1",
-    "href": "Slides/02SequentialGames/Pareto.html#ranking-the-planting-payoffs-1",
+    "objectID": "Slides/02SequentialGames/0203-pareto.html#ranking-the-planting-payoffs-1",
+    "href": "Slides/02SequentialGames/0203-pareto.html#ranking-the-planting-payoffs-1",
     "title": "Welfare and Efficiency",
     "section": "",
     "text": "Now compare (4,3,3) to (3,4,3) or (3,3,4)\n\nWhich one is Pareto dominating?\n\nIs the rollback equilibrium outcome a Pareto efficient one?"
   },
   {
-    "objectID": "Slides/02SequentialGames/Pareto.html#discussion-efficiency-vs-other-social-comparisons",
-    "href": "Slides/02SequentialGames/Pareto.html#discussion-efficiency-vs-other-social-comparisons",
+    "objectID": "Slides/02SequentialGames/0203-pareto.html#discussion-efficiency-vs-other-social-comparisons",
+    "href": "Slides/02SequentialGames/0203-pareto.html#discussion-efficiency-vs-other-social-comparisons",
     "title": "Welfare and Efficiency",
     "section": "",
     "text": "How useful is Pareto Efficiency in the real world?\nHow else could we group outcomes?\nWe might address this later in the class with what is known as Cooperative Game Theory"
@@ -1824,7 +2075,7 @@
     "href": "activities/01GuessTwoThirds/GuessTwoThirds.html#activity-1",
     "title": "EC327 Game Theory",
     "section": "Activity 1",
-    "text": "Activity 1\n\n\nThis is a simple example, but illustrates how complicated strategic reasoning can be.\nThe theoretical solution to this game says that anyone who is rational and knows that everyone else is rational (Common Knowledge of Rationality) should only choose 0 or 1. However, Nagel, R. (1995), “Unravelling in guessing games=: An experimental study” showed that over 12,000 answers, the average is 35.24. Is Common Knowledge of Rationality a ‘bad’ assumption? How can we connect our theories with experimental evidence?\n\n\n\n\ndiscuss different types of approaches people took\nhow would they revise guess 2nd time?",
+    "text": "Activity 1\n\n\nThis is a simple example, but illustrates how complicated strategic reasoning can be.\nThe theoretical solution to this game says that anyone who is rational and knows that everyone else is rational (Common Knowledge of Rationality) should only choose 0 or 1.\nHowever, Nagel, R. (1995), “Unravelling in guessing games : An experimental study” showed that over 12,000 answers, the average is 35.24.\nIs Common Knowledge of Rationality a ‘bad’ assumption? How can we connect our theories with experimental evidence?\n\n\n\n\ndiscuss different types of approaches people took\nhow would they revise guess 2nd time?",
     "crumbs": [
       "Activities",
       "Activity 1: Guess 2/3rds of the average"

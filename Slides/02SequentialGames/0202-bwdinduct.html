@@ -201,330 +201,197 @@ window.Quarto = {
 
 
 
-<section id="what-is-a-game-definitions" class="level1">
-<h1>What is a Game? Definitions</h1>
-<section id="what-do-all-these-questions-have-in-common" class="level2">
-<h2 class="anchored" data-anchor-id="what-do-all-these-questions-have-in-common">What do all these questions have in common?</h2>
-<div class="incremental">
-<ul class="incremental">
-<li><p>They all involve people making choices which depend on the choices of others</p></li>
-<li><p>In other words, they are questions of <span class="hi">strategy</span>:</p>
-<blockquote class="blockquote">
-<p><strong>Strategic interdependence</strong> is present in a social situation when what is best for someone <em>depends</em> on what someone else does. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-</blockquote></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="strategic-choice-vs.-other-types-of-choices" class="level2">
-<h2 class="anchored" data-anchor-id="strategic-choice-vs.-other-types-of-choices"><em>Strategic</em> Choice vs.&nbsp;other types of choices</h2>
-<div class="incremental">
-<ul class="incremental">
-<li><p>Economics is the study of <span class="hi">constrained choice</span>; in EC311, we introduce the <em>utility maximization problem</em> as the workhorse model</p>
-<ul class="incremental">
-<li>These types of problems usually only involve one agent; the consumer, who is only constrained by their budget</li>
-</ul></li>
-<li><p>We use the term <span class="hi"><em>strategic games</em></span> to distinguish from these single-agent optimization problems</p></li>
-</ul>
-<p>A <span class="hi"><em>game</em></span> is a type of problem featuring multiple agents, called <span class="hi">players</span>,</p>
-<ul class="incremental">
-<li>in which their optimal choice <span class="hii">depends on the optimal choices of other players</span>.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="a-definition-of-a-game" class="level2">
-<h2 class="anchored" data-anchor-id="a-definition-of-a-game">A definition of a game <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
-<p>A <strong>Game</strong> consists of:</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>a collection of decision-makers, called <span class="hi">players</span>;</p></li>
-<li><p>the set of <span class="hi">information</span> available to each player;</p></li>
-<li><p>the <span class="hi">strategies</span> available to each player in each information state;</p></li>
-<li><p>a mapping from the intersection strategies of all players to outcomes;</p></li>
-<li><p><span class="hi">preferences</span> of the individual players over all possible outcomes</p></li>
-</ul>
-</div>
-</section>
-</section>
-<section id="who-are-the-players" class="level1">
-<h1>Who are the players?</h1>
-<section id="what-defines-a-player" class="level2">
-<h2 class="anchored" data-anchor-id="what-defines-a-player">What defines a player?</h2>
+<section id="backwards-induction" class="level1">
+<h1>Backwards Induction</h1>
+<section id="solving-sequential-games" class="level2">
+<h2 class="anchored" data-anchor-id="solving-sequential-games">Solving Sequential Games</h2>
+<p>Now that we have defined all the parts of what a sequential game is we can start to <em>solve</em> them.</p>
+<p>. . .</p>
 <ul>
-<li><span class="h">Preferences</span>:</li>
-</ul>
-<div class="incremental">
-<ul class="incremental">
-<li><p>In economics, we say people have <em>unlimited</em> wants and <em>limited</em> needs</p></li>
-<li><p>Therefore, we have to think about how people <em>prioritize</em> what they want more</p></li>
-</ul>
-</div>
-<ul>
-<li><span class="h">Beliefs</span>:</li>
+<li>A solution in our case will be a prediction of what rational agents would do in a sequential game</li>
 </ul>
 <hr>
 </section>
-<section id="what-defines-a-player-1" class="level2">
-<h2 class="anchored" data-anchor-id="what-defines-a-player-1">What defines a player?</h2>
-<ul>
-<li><p><span class="h">Preferences</span>:</p></li>
-<li><p><span class="h">Beliefs</span>:</p></li>
-</ul>
-<div class="incremental">
-<ul class="incremental">
-<li><p>My beliefs about the world define how I act</p></li>
-<li><p>If I am exposed to new <em>information</em> it can potentially change my beliefs, and therefore change my actions</p></li>
-<li><p>Information and beliefs of players will define later game theory topics</p></li>
-</ul>
+<section id="the-smoking-decision" class="level2">
+<h2 class="anchored" data-anchor-id="the-smoking-decision">The smoking decision</h2>
+<p><img src="figures/fig3.2.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="the-smoking-game" class="level2">
+<h2 class="anchored" data-anchor-id="the-smoking-game">The smoking <em>game</em></h2>
+<p><img src="figures/fig3.3.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="pruning-branches" class="level2">
+<h2 class="anchored" data-anchor-id="pruning-branches">‘Pruning’ branches</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig3.4.png" class="img-fluid figure-img"></p>
+<figcaption>figures/fig3.4.png</figcaption>
+</figure>
 </div>
 <hr>
 </section>
-<section id="preferences" class="level2">
-<h2 class="anchored" data-anchor-id="preferences">Preferences</h2>
-<p><span class="h">Preferences</span> describe the subjective ranking that we put on different alternatives.</p>
-<p>For example, on the set of Eugene boba stores, my preference ranking goes like this;</p>
-<div class="incremental">
-<ol class="incremental" type="1">
-<li><a href="https://maps.app.goo.gl/zCVTUnaaYLD1Rwaw6">Tea 4</a> - major chain, good quality and selection</li>
-<li><a href="https://www.daynightboba.com/">Day &amp; Night</a> - they have mango sago, cute location</li>
-<li><a href="">Bobahead</a> - no more campus location 😔</li>
-<li>No boba</li>
-<li><a href="http://therabbitholeteabar.com/">Rabbit Hole</a> - no hate, just not for me</li>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig3.5.png" class="img-fluid figure-img"></p>
+<figcaption>figures/fig3.5.png</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="backwards-induction-defined" class="level2">
+<h2 class="anchored" data-anchor-id="backwards-induction-defined">Backwards Induction defined</h2>
+<p>The method of looking at decisions in the future to decide what to do now is called <span class="h">Backwards Induction</span> or <span class="h">Rollback</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Definition <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When all players do <em>rollback analysis</em> to choose their optimal strategies, we call this set of strategies the <span class="h"><em>rollback equilibrium</em></span><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> of the game; the outcome that arises from playing these strategies is the <span class="hi"><em>rollback equilibrium outcome</em></span></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="group-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="group-exercise">Group Exercise:</h2>
+<p>Consider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.</p>
+<ol type="1">
+<li><p><em>Draw the extensive form game tree complete with all payoff for both teams.</em></p></li>
+<li><p><em>How many total strategies are there for team 1?</em></p></li>
+<li><p><em>Use pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?</em></p></li>
 </ol>
-</div>
 <hr>
 </section>
-<section id="rational-preferences" class="level2">
-<h2 class="anchored" data-anchor-id="rational-preferences">Rational Preferences</h2>
-<p>The <span class="h">rational model</span> of choice is the foundation of all economics.</p>
-<p>Its assumptions are that:</p>
+<section id="adding-more-players" class="level2">
+<h2 class="anchored" data-anchor-id="adding-more-players">Adding more players</h2>
+<p>We can start to add more complexity with more than two players</p>
+<hr>
+</section>
+<section id="player-planting-game" class="level2">
+<h2 class="anchored" data-anchor-id="player-planting-game">3-player planting game</h2>
 <div class="incremental">
 <ul class="incremental">
-<li>People have <span class="h">complete preferences</span>
-<ul class="incremental">
-<li>for <em>every</em> pair of options, you can either tell me which you prefer or that you are <em>indifferent</em></li>
-<li>for any pair of deserts, <span class="math inline">\(\{ \ 🍨 \ , \ 🍩 \ \}\)</span>, either <span class="math inline">\((🍨 \succ 🍩 \ )\)</span>, or <span class="math inline">\((🍩 \ \succ 🍨 \ )\)</span>, or <span class="math inline">\((🍨 \sim 🍩 \ )\)</span></li>
-</ul></li>
-<li>Preferences are <span class="h">transitive</span>
-<ul class="incremental">
-<li>if <span class="math inline">\((☕ \succ 🍵 \ )\)</span> and <span class="math inline">\((🍵 \succ 🍶 \ )\)</span>, then <span class="math inline">\((☕ \succ 🍶)\)</span> ( for any <span class="math inline">\(\{☕ \ , 🍵 \ , 🍶 \ \} \in 🫖 \ \)</span>)</li>
-</ul></li>
+<li><p><span class="hi">Emily</span>, <span class="hi">Nina</span>, and <span class="hi">Talia</span> are roommates who want to get a start on their communal garden.</p></li>
+<li><p>They like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.</p></li>
+<li><p><strong>2 or 3 people</strong> working is enough to keep the garden healthy, but if <strong>1 or 0</strong> work, then the garden will die.</p></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="rationality" class="level2">
-<h2 class="anchored" data-anchor-id="rationality">Rationality</h2>
-<p>One key proposition of rationality is that we can represent preferences by real numbers.</p>
-<div class="incremental">
-<p>A <span class="h">utility function</span> maps a choice to a single number.</p>
-<p>For example, let <span class="math inline">\(u(.)\)</span> be the utility function from emoji to utils</p>
-<ul class="incremental">
-<li><p>I can have <span class="math inline">\(u(🍺) =5\)</span>, <span class="math inline">\(u(🌯)=10\)</span>, <span class="math inline">\(u(🤸)=25\)</span></p></li>
-<li><p>I can also have <span class="math inline">\(u(🍺 \ , 🌯) = 20\)</span>, <span class="math inline">\(u(🍺 \ , 🌯 \ , 🤸) = 15\)</span></p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="ordinal-vs.-cardinal-numbers" class="level2">
-<h2 class="anchored" data-anchor-id="ordinal-vs.-cardinal-numbers">Ordinal vs.&nbsp;Cardinal numbers</h2>
-<div class="incremental">
-<ul class="incremental">
-<li><p><span class="h">Cardinal:</span> amounts which can be measured in meaningful units are <em>cardinal numbers</em></p>
-<ul class="incremental">
-<li>examples: $9.99, 80 students, 50:50 odds</li>
-</ul></li>
-<li><p><span class="h">Ordinal:</span> all that matters is the <em>relative ranking</em></p>
-<ul class="incremental">
-<li>examples: utility; what does 100 utility mean? (it’s less than 200)</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="dont-worry" class="level2">
-<h2 class="anchored" data-anchor-id="dont-worry">Don’t worry!</h2>
-<div class="incremental">
-<ul class="incremental">
-<li><p>For this class, you won’t need to worry about utility functions (if you want to, take EC311).</p></li>
-<li><p>I will almost always give you specific values of utility which we will call <span class="hi">payoffs</span>.</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="payoffs">Payoffs</h2>
-<p>What is a player’s goal in a game?</p>
-<blockquote class="blockquote">
-<p>To maximize their expected <span class="h">payoff</span></p>
-</blockquote>
-<div class="incremental">
-<ul class="incremental">
-<li><p>A payoff can represent many things which come with a specific outcome</p></li>
-<li><p>Whenever you see a payoff, assume that it represents everything about that outcome which an agent cares about</p></li>
-<li><p>For example, your payoff to giving to charity would include the emotional benefit you feel towards giving to others</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="payoffs-1" class="level2">
-<h2 class="anchored" data-anchor-id="payoffs-1">Payoffs</h2>
-<p>What is true of payoffs?</p>
-<blockquote class="blockquote">
-<p>Higher numbers are more preferred</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>They are <span class="hi">Ordinal</span>; i.e., the relative units don’t matter <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-</blockquote>
-<blockquote class="blockquote">
-<p>They capture <em>everything</em> in a game that a player cares about</p>
-</blockquote>
-<hr>
-</section>
-<section id="payoffs-2" class="level2">
-<h2 class="anchored" data-anchor-id="payoffs-2">Payoffs</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Sometimes my enjoyment of a thing depends on the <em>state</em> of the world</li>
-</ul>
-<table class="table-striped table-hover table">
-<caption>socially-dependent preferences</caption>
+<section id="planting-game-payoffs" class="level2">
+<h2 class="anchored" data-anchor-id="planting-game-payoffs">Planting Game payoffs</h2>
+<table class="table">
 <thead>
 <tr class="header">
-<th>My choice</th>
-<th>My friends’ choice</th>
-<th>My payoff</th>
+<th>outcome:</th>
+<th>utlity:</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Duck’s game</td>
-<td>Duck’s game</td>
+<td>I don’t contribute, but garden lives</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>I contribute, and get garden.</td>
 <td>3</td>
 </tr>
-<tr class="even">
-<td>Duck’s game</td>
-<td>Stay home</td>
-<td>2</td>
-</tr>
 <tr class="odd">
-<td>Stay home</td>
-<td>Duck’s game</td>
-<td>1</td>
+<td>I don’t contribute, and garden dies</td>
+<td>2</td>
 </tr>
 <tr class="even">
-<td>Stay home</td>
-<td>Stay home</td>
-<td>2</td>
+<td>I contribute, but garden dies</td>
+<td>1</td>
 </tr>
 </tbody>
 </table>
-<ul class="incremental">
-<li>Is this an example of a <span class="hi">strategic</span> or <span class="hi">non-strategic</span> choice?</li>
-</ul>
-</div>
-<hr>
-<section id="expected-payoffs" class="level3">
-<h3 class="anchored" data-anchor-id="expected-payoffs"><em>Expected</em> Payoffs</h3>
-<p>Often games involve some amount of <em>chance</em>; with random probabilities of each outcome happening</p>
-<ul>
-<li>We need tools for thinking about how people think about <span class="hi">risk</span></li>
-</ul>
 <hr>
 </section>
-<section id="expected-payoffs-1" class="level3">
-<h3 class="anchored" data-anchor-id="expected-payoffs-1"><em>Expected</em> Payoffs</h3>
+<section id="planding-game-tree" class="level2">
+<h2 class="anchored" data-anchor-id="planding-game-tree">Planding Game Tree</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig3.6.png" class="img-fluid figure-img"></p>
+<figcaption>figures/fig3.6.png</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="equilibrium-path-of-play" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-path-of-play">Equilibrium Path of Play</h2>
+<div class="incremental">
+<p>Note that there is one continuous path we traced from the initial node to a final equilibrium outcome.</p>
+<p>However, we couldn’t have gotten their without the other arrows paths <strong>even though they are never reached</strong> in equilibrium.</p>
+<p>Recall that a <span class="hi">strategy</span> is a collection of choices at <strong>every</strong> decision node.</p>
+</div>
+<hr>
+</section>
+<section id="equilibrium-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-strategies">Equilibrium Strategies</h2>
+<p>Even though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:</p>
 <blockquote class="blockquote">
-<p>In math, an <span class="hii">expected value</span> is the average value of a <em>random variable</em>, weighted by the probability of each value occuring</p>
+<p>“Nina’s <strong>strategy</strong> in the rollback equilibrium is { <span class="hii"><em>Don’t Contribute</em></span> at <span class="hi">b</span>, <span class="hii"><em>Contribute</em></span> at <span class="hi">c</span> }”.</p>
 </blockquote>
-<hr>
-</section>
-</section>
-<section id="expected-payoffs-2" class="level2">
-<h2 class="anchored" data-anchor-id="expected-payoffs-2"><em>Expected</em> Payoffs</h2>
-<p>For example, suppose <span class="math inline">\(X\)</span> is a random variable which is equal to:</p>
 <ul>
-<li><span class="hii">1</span> with <span class="hi">50%</span> probability,</li>
-<li><span class="hii">2</span> with <span class="hi">25%</span> probability,</li>
-<li><span class="hii">3</span> with <span class="hi">25%</span> probability</li>
+<li>To make it even shorter, let’s call this strategy <span class="hii">DC</span>.</li>
 </ul>
-<p>What is the <em>expected value</em> of <span class="math inline">\(X\)</span>? (<span class="math inline">\(E(X)\)</span>)</p>
-<p>. . .</p>
-<p><span class="math display">\[
-\begin{align}
-E(X) &amp; = .5 (1) + .25 (2) + .25 (3) \\
-&amp; = .5 + .5 + .75 = 2.75
-\end{align}
-\]</span></p>
-<hr>
-<section id="expected-payoffs-3" class="level3">
-<h3 class="anchored" data-anchor-id="expected-payoffs-3"><em>Expected</em> Payoffs</h3>
-<p>An <span class="hi">Expected Payoff</span> is just the <em>expected value</em> of possible payoffs</p>
-<blockquote class="blockquote">
-<p>An average of the payoffs associated with every possible outcome, weighted by the corresponding probability of each outcome happening</p>
-</blockquote>
 <hr>
 </section>
-<section id="expected-payoffs-4" class="level3">
-<h3 class="anchored" data-anchor-id="expected-payoffs-4"><em>Expected</em> Payoffs</h3>
-<p>Consider the following choice:</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Option A:
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>I flip two coins; - if both land <strong>heads</strong>, you win $100 - otherwise you get $0</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Option B:
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You just get $25 for sure</p>
-</div>
-</div>
-<hr>
-</section>
-<section id="expected-payoffs-5" class="level3">
-<h3 class="anchored" data-anchor-id="expected-payoffs-5"><em>Expected Payoffs</em></h3>
-<ul>
-<li><p>If you choose <span class="h">Option A</span>, we call you <span class="hii">risk loving</span></p></li>
-<li><p>If you choose <span class="h">Option B</span>, you are <span class="hii">risk averse</span></p></li>
-<li><p>If you are <em>indifferent</em> between the two options, you would be <span class="hii">risk neutral</span></p></li>
-</ul>
-<p>All of these difference preferences can be incorporated in the <em>rational</em> model with the right <em>utility function</em></p>
-<hr>
-</section>
-</section>
-<section id="beliefs" class="level2">
-<h2 class="anchored" data-anchor-id="beliefs">Beliefs</h2>
-<p>Our theories will have to make assumptions about what players <strong>know</strong>.</p>
-<p>All of our games will at least assume that <span class="h">all players know all of the rules</span>.</p>
-<hr>
-</section>
-<section id="beliefs-1" class="level2">
-<h2 class="anchored" data-anchor-id="beliefs-1">Beliefs</h2>
-<p>We will assume that all players know<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>:</p>
+<section id="how-many-strategies-does-talia-have" class="level2">
+<h2 class="anchored" data-anchor-id="how-many-strategies-does-talia-have">How many strategies does Talia have?</h2>
 <div class="incremental">
 <ul class="incremental">
-<li><p>Who else is playing,</p></li>
-<li><p>all of the strategies each player could <em>potentially</em> choose,</p></li>
-<li><p>everyone’s payoffs for all possible combinations of strategies by all players,</p></li>
-<li><p>and that everyone else is maximizing their payoffs</p></li>
+<li><p>CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD</p></li>
+<li><p>16 total strategies</p></li>
 </ul>
 </div>
+<hr>
+</section>
+<section id="rollback-equilibrium-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="rollback-equilibrium-strategies">Rollback Equilibrium Strategies</h2>
+<p>The equilibrium is:</p>
+<ul>
+<li>{ <span class="hi">D</span><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, <span class="hi">DC</span><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, <span class="hi">DCCD</span><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> }</li>
+</ul>
+<hr>
+</section>
+<section id="adding-more-moves" class="level2">
+<h2 class="anchored" data-anchor-id="adding-more-moves">Adding More Moves</h2>
+<p><span class="hi align-center">Even a simple game get complicated fast</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig3.7.png" class="quarto-figure quarto-figure-center figure-img" width="600" height="500"></p>
+</figure>
+</div>
+<hr>
+</section>
+<section id="tic-tac-toe" class="level2">
+<h2 class="anchored" data-anchor-id="tic-tac-toe">Tic-Tac-Toe</h2>
+<ul>
+<li><p>Even though it looks complicated, the main branches are really just copies of each other</p></li>
+<li><p>Most people probably figure out the rollback equilibrium after playing it enough</p></li>
+<li><p>Insert relevant xkcd here: <a href="https://xkcd.com/832/">https://xkcd.com/832/</a></p></li>
+</ul>
+<hr>
+</section>
+<section id="chess" class="level2">
+<h2 class="anchored" data-anchor-id="chess">Chess</h2>
+<ul>
+<li><p>What about more complicated games like chess?</p>
+<ul>
+<li>technically rollback solvable, but with <span class="math inline">\(10^{120}\)</span> possible moves, it hasn’t been solved by either human or machine</li>
+</ul></li>
+<li><p>Players of complicated sequential games often implement some <span class="hi">intermediate valuation function</span> to assign payoffs to non-terminal nodes.</p></li>
+</ul>
 
 
 </section>
@@ -534,10 +401,11 @@ Option B:
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p><em>Harrington</em>, pg. 2<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>adapted from <a href="https://www2.econ.iastate.edu/tesfatsi/">Leigh Tesfatsion</a>’s slides<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>except when we talk about <em>expected</em> payoffs later<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>and believe<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Dixit et al, pg 56<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>aka subgame perfect equilibrium<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Emily<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Nina<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Talia<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
