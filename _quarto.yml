@@ -5,8 +5,19 @@ project:
     - "*.md"
 
 website: 
-  page-navigation: true
   title: "EC327 Game Theory"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: Slides/index.qmd
+        text: Slides
+  sidebar: 
+    - title: "Slides"
+      style: "docked"
+      contents:
+        - Slides/01Intro/01-main.qmd
+        - Slides/02SequentialGames/02-main.qmd
   
 page-footer:
   right: "This page is built with [Quarto](https://quarto.org/)."

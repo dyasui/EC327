@@ -1,0 +1,10 @@
+---
+title: "EC327 Introductory Game Theory"
+subtitle: "Economics Course at the University of Oregon"
+---
+
+## Course Materials
+
+### Slides
+  
+  - In html format (written in Quarto)
