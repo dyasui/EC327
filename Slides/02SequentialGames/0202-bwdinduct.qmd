@@ -15,9 +15,73 @@ we can start to *solve* them.
 
 ## The smoking decision
 
+Do I want to try smoking today? 
+
+::: {.incremental}
+
+> Suppose today I can either [Try]{.h} smoking for the first time, or [Not]{.h} try 
+
+If I choose [Try]{.h} today, then I will have another choice in the *future*:
+
+> [Continue]{.h} smoking, or [Quit]{.h}
+
+:::
+
+## The smoking decision
+
+Let's create some preferences over the three different outcomes:
+
+  - $U(\text{\textbf{Not}}) = 0$ - I'm no worse off, but don't get to experience what it's like
+
+  - $U(\text{\textbf{Try}}\rightarrow\text{\textbf{Quit}}) = 1$ - I get the experience of smoking without long-term health consequences, etc.
+
+  - $U(\text{\textbf{Try}}\rightarrow\text{\textbf{Continue}}) = -1$ - I become an addict
+
+## The smoking decision
+
+Let's model this as a *decision tree*
 ![](figures/fig3.2.png)
 
 ---
+
+## The smoking decision
+
+::::: {.columns}
+
+:::: {.column width="50%"}
+![](figures/fig3.2.png){fig-align="center"}
+::::
+
+
+:::: {.column width="50%"}
+::: {.incremental}
+
+  * What would a *rational* version of myself choose?
+
+  * Is this realistic?
+
+  * Why might Trying and then Quitting be a bad idea?
+
+:::
+::::
+
+:::::
+
+---
+
+## The smoking *game*
+
+We can apply the tools of game theory to this decision:
+
+::: {.incremental}
+  * Let's add *future Dante* as another player who acts at the second decision node
+
+  * Future Dante is different from *Present Dante* because he has different preferences:
+
+    - $U_{FD}(\text{Continue}) = 1$ because he's already addicted
+
+    - $U_{FD}(\text{Quit}) = -1$ because withdrawl is painful
+:::
 
 ## The smoking *game*
 
@@ -25,15 +89,89 @@ we can start to *solve* them.
 
 ---
 
+## The smoking *game*
+
+::::: {.columns}
+
+:::: {.column width="50%"}
+![](figures/fig3.3.png){fig-align="center"}
+::::
+
+
+:::: {.column width="50%"}
+::: {.incremental}
+
+  * What will Future Carmen choose?
+
+  * Should Carmen choose to Try smoking *if she knows what her future self would choose?*
+
+:::
+::::
+
+:::::
+
 ## 'Pruning' branches
 
-![figures/fig3.4.png](figures/fig3.4.png)
+If Carmen is *forward looking*, knows her *future self's preferences*, and knows that her future self is *rational*,
+
+Then she can eliminate the possibility that her future self would quit.
+
+::: {.incremental}
+
+  * [Pruning]{.hi} is this type of logic applied to eliminating certain branches in a game tree.
+:::
 
 ---
 
-## 
+## 'Pruning' branches
+
+If Future Carmen will never choose to Quit smoking once she is already an addict, 
+
+> what choices is **Today's Carmen** left with?
+
+::: {.incremental}
+  
+  * [Try]{.h} knowing that she will continue in the future and get -1 payoff
+
+  * or [Not]{.h} try smoking today and earn 0 payoff
+
+:::
+
+---
+
+## Backwards Induction (intuitively)
+
+Let's outline the logical steps we used to solve this game:
+
+::: {.incremental}
+
+  * We were uncertain about what would happen in this game, because **Today's Carmen**'s optimal strategy depended on what **Future Carmen** woud do
+
+  * But **Future Carmen** is the last player in this game, so her choice only depends on her *own preferences*
+
+  * Knowing what **Future Carmen** would choose allowed us to find **Today's Carmen**'s best strategy
+
+:::
+
+## Smoking Game Solution
 
 ![figures/fig3.5.png](figures/fig3.5.png)
+
+::: notes
+  - Either crossing off eliminated branches or highlighting chosen branches works
+  - Just make sure that the order of thinking is clear
+:::
+
+---
+
+## Backwards Induction defined
+
+The method of looking at decisions in the future to decide what to do now is called [Backwards Induction]{.h} or [Rollback]{.h}
+
+::: {.callout-tip}
+## Definition ^[Dixit et al, pg 56]
+... using [rollback]{.h} requires starting to think about what will happen at all the terminal nodes and literally "rolling back" through the tree to the initial node...
+:::
 
 ---
 
@@ -48,25 +186,34 @@ When all players do *rollback analysis* to choose their optimal strategies, we c
 
 ---
 
-## Group Exercise:
+## Solving the Kidnapping Game
 
-Consider the Flag game but instead of starting with 21 flags the game starts with 5
-flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2
-flags.
+![](figures/kidnapgame.png)
 
-1. _Draw the extensive form game tree complete with all payoff for both teams._
+... notes
+  - If Vivica paid ransom, Guy would rather Release
+  - If Vivica didn't pay, Guy would rather Kill
+  - Knowing this, Vivica would Pay to avoid Orland being killed
+  - Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando
+---
 
-2. _How many total strategies are there for team 1?_
+## Kidnapping Game Solution
 
-3. _Use pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?_
+The [Rollback Equilibrium]{.h} is:
+
+  * **{** ([Kidnap]{.red}, [Release]{.red}, [Kill]{.red}), ([Pay]{.blue}) **}**
+
+::: {.incremental}
+You should read this as:
+
+  - Guy [Kidnaps]{.red} and will [Release]{.red} if Vivica [Pays]{.blue}, but will [Kill]{.red} if Vivica [Doesn't Pay]{.blue}
+
+  - Vivica [Pays]{.blue} the ransom
+:::
 
 ---
 
-## Adding more players
-
-We can start to add more complexity with more than two players
-
----
+# Adding more players
 
 ## 3-player planting game
 

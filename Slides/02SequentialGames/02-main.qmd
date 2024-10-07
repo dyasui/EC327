@@ -23,6 +23,11 @@ tikz:
   cache:true
 ---
 
+```{r include = FALSE}
+library(tidyverse)
+library(pdftools)
+```
+
 ::: {.vertical-center}
 
 [Outline]{.hi .big}
@@ -34,52 +39,6 @@ tikz:
   * Efficiency
 
 :::
-
-```{r, engine = 'tikz'}
-\begin{tikzpicture}[scale=1.5,font=\footnotesize, edge from parent/.style={draw, very thick}]
-    \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
-    \tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
-    \tikzstyle{level 1}=[level distance=15mm,sibling distance=2.5cm]
-    \tikzstyle{level 2}=[level distance=15mm,sibling distance=1.5cm]
-    \tikzstyle{level 3}=[level distance=15mm,sibling distance=1cm]
-    
-    \node(0)[hollow node,label=above:{}]{}
-        child{node(1)[solid node,label=above left:{}]{}
-            child{node[label=below:{}]{} edge from parent node[left]{$Dave's$}}
-            child{node[label=below:{}]{} edge from parent node[right]{$Pad Thai$}}
-            edge from parent node[left,xshift=-5]{$Takeout$}
-        }
-        child{node(2)[solid node,label=above right:{}]{}
-            child{node[label=below:{}]{} edge from parent node[left]{$Ramen$}}
-            child{node[label=below:{}]{} edge from parent node[right]{$Pasta$}}
-            edge from parent node[right,xshift=5]{$Cook$}
-        };
-
-\end{tikzpicture}
-```
-
-```{.tikz embed_mode="link" scale=3 filename="testtikz"}
-\begin{tikzpicture}[scale=1.5,font=\footnotesize, edge from parent/.style={draw, very thick}]
-    \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
-    \tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
-    \tikzstyle{level 1}=[level distance=15mm,sibling distance=2.5cm]
-    \tikzstyle{level 2}=[level distance=15mm,sibling distance=1.5cm]
-    \tikzstyle{level 3}=[level distance=15mm,sibling distance=1cm]
-    
-    \node(0)[hollow node,label=above:{}]{}
-        child{node(1)[solid node,label=above left:{}]{}
-            child{node[label=below:{}]{} edge from parent node[left]{$Dave's$}}
-            child{node[label=below:{}]{} edge from parent node[right]{$Pad Thai$}}
-            edge from parent node[left,xshift=-5]{$Takeout$}
-        }
-        child{node(2)[solid node,label=above right:{}]{}
-            child{node[label=below:{}]{} edge from parent node[left]{$Ramen$}}
-            child{node[label=below:{}]{} edge from parent node[right]{$Pasta$}}
-            edge from parent node[right,xshift=5]{$Cook$}
-        };
-
-\end{tikzpicture}
-```
 
 {{< include 0201-trees.qmd >}}
 

@@ -97,6 +97,20 @@ https://youtu.be/K_MckZc8VvQ
 
 ---
 
+## Group Exercise:
+
+Consider the Flag game but instead of starting with 21 flags the game starts with 5
+flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2
+flags.
+
+1. _Draw the extensive form game tree complete with all payoff for both teams._
+
+2. _How many total strategies are there for team 1?_
+
+3. _Use pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?_
+
+---
+
 ## Recap
 
   * There *is* a correct way to play: we will later call the *Nash equilibrium*

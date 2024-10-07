@@ -13,6 +13,9 @@
 **.out
 **.fdb_latexmk
 **.dvi
+**.nav
+**.snm
+**.toc
 
 # don't check rendered site into git
 /.quarto/
