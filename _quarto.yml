@@ -22,7 +22,6 @@ website:
         contents: 
           - Homework/assignment1/main.pdf
 
-  
 page-footer:
   right: "This page is built with [Quarto](https://quarto.org/)."
   
