@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -113,9 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      EC327 Game Theory
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../activities/01GuessTwoThirds/GuessTwoThirds.html">Activities</a></li><li class="breadcrumb-item"><a href="../../activities/02SurvivorFlags/SurvivorFlags.html">Survivor Flags</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -152,18 +116,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/01Intro/01-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Game Theory</span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/02SequentialGames/02-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Game Theory</span></a>
+ <span class="menu-text">Sequential Games</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
- <span class="menu-text">Slides/03SimultaneousGames/03-main.qmd</span>
-  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -178,20 +139,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Activity 1: Guess 2/3rds of the average</span></a>
+ <span class="menu-text">Guessing Two Thirds of the Average</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Homework</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Survivor Flags</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -215,22 +171,109 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="split-into-groups" class="level2">
 <h2 class="anchored" data-anchor-id="split-into-groups">Split Into Groups</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>names <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"EC327names.csv"</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(First, Last)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="fu">nrow</span>(names)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>group_size <span class="ot">=</span> <span class="dv">4</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>num_groups <span class="ot">=</span> <span class="fu">round</span>(n<span class="sc">/</span><span class="dv">4</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># set seed to make group selection consistent across sessions</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2024</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># assign groups and make a table</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>names <span class="sc">%&gt;%</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Group =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>num_groups, n, <span class="at">replace =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Group) <span class="sc">%&gt;%</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">names =</span> <span class="fu">list</span>((First))) <span class="sc">%&gt;%</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> Group, <span class="at">values_from =</span> names) <span class="sc">%&gt;%</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 6%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 10%">
+<col style="width: 8%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Group1</th>
+<th style="text-align: left;">Group2</th>
+<th style="text-align: left;">Group3</th>
+<th style="text-align: left;">Group4</th>
+<th style="text-align: left;">Group5</th>
+<th style="text-align: left;">Group6</th>
+<th style="text-align: left;">Group7</th>
+<th style="text-align: left;">Group8</th>
+<th style="text-align: left;">Group9</th>
+<th style="text-align: left;">Group10</th>
+<th style="text-align: left;">Group11</th>
+<th style="text-align: left;">Group12</th>
+<th style="text-align: left;">Group13</th>
+<th style="text-align: left;">Group14</th>
+<th style="text-align: left;">Group15</th>
+<th style="text-align: left;">Group16</th>
+<th style="text-align: left;">Group17</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Jackson F.</td>
+<td style="text-align: left;">Axel A.</td>
+<td style="text-align: left;">Tabor B.</td>
+<td style="text-align: left;">Joe F.</td>
+<td style="text-align: left;">Camryn P.</td>
+<td style="text-align: left;">Reid H.</td>
+<td style="text-align: left;">Daniel B.</td>
+<td style="text-align: left;">Nidal C.</td>
+<td style="text-align: left;">Cole C.</td>
+<td style="text-align: left;">Christopher F.</td>
+<td style="text-align: left;">Steven B.</td>
+<td style="text-align: left;">Ryan C.</td>
+<td style="text-align: left;">Kate H.</td>
+<td style="text-align: left;">Gaven B.</td>
+<td style="text-align: left;">Rex B.</td>
+<td style="text-align: left;">Grace C.</td>
+<td style="text-align: left;">Faith B.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Michael O.</td>
+<td style="text-align: left;">Miles D.</td>
+<td style="text-align: left;">Kyle F.</td>
+<td style="text-align: left;">Yvan G.</td>
+<td style="text-align: left;">Sydney P.</td>
+<td style="text-align: left;">Ry M.</td>
+<td style="text-align: left;">Avaani K.</td>
+<td style="text-align: left;">Jill L.</td>
+<td style="text-align: left;">Brayden D.</td>
+<td style="text-align: left;">Austin M.</td>
+<td style="text-align: left;">Aiden C.</td>
+<td style="text-align: left;">Matti E.</td>
+<td style="text-align: left;">Ryan S.</td>
+<td style="text-align: left;">Ebissa C.</td>
+<td style="text-align: left;">Nick S.</td>
+<td style="text-align: left;">Colin M.</td>
+<td style="text-align: left;">Jasper C.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jack S.</td>
+<td style="text-align: left;">Phillip X.</td>
+<td style="text-align: left;">Charlotte L.</td>
+<td style="text-align: left;">Caplan M.</td>
+<td style="text-align: left;">Hunter T.</td>
+<td style="text-align: left;">Connor V.</td>
+<td style="text-align: left;">Drew N.</td>
+<td style="text-align: left;">Max U.</td>
+<td style="text-align: left;">Jessie G. Secundino</td>
+<td style="text-align: left;">Jake Y.</td>
+<td style="text-align: left;">Test S.</td>
+<td style="text-align: left;">Nathan Y.</td>
+<td style="text-align: left;">Fu Z.</td>
+<td style="text-align: left;">Kendrick L.</td>
+<td style="text-align: left;">Brian T.</td>
+<td style="text-align: left;">Gavin S.</td>
+<td style="text-align: left;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <hr>
 </section>
@@ -248,6 +291,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </div>
+<hr>
+</section>
+<section id="record-your-data" class="level2">
+<h2 class="anchored" data-anchor-id="record-your-data">Record your Data!</h2>
+<p><a href="https://docs.google.com/spreadsheets/d/13rOHLWJa--0BuvfI83pGdGWFFANsx1gNkx3TJl3A8ek/edit?usp=sharing">Google Sheet</a></p>
+<ul>
+<li><p>Check the first sheet for an example of how to record your data</p></li>
+<li><p>Find a free sheet at the bottom of the page</p></li>
+<li><p>Ask me if something doesn’t make sense!</p></li>
+</ul>
 <hr>
 </section>
 <section id="modified-rules-choose-number-of-flags-to-start" class="level2">
