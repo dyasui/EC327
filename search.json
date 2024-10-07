@@ -28,67 +28,44 @@
     "text": "Section 2: Long Answer\n\nMixed Strategy in 3x3 game\n\nIdentify any PSNE\n\nCheck whether a mixed strategy profile is MSNE\nCheck a different mixed strategy profile\n\nStrategic move extensive form\n\nFind SPNE for some extensive form construction\nFind SPNE for another extensive form\nIdentify credible threat/promise\nIdentify credible commitment\n\nRepeated prisoners’ dilemma\n\nIdentify one-stage NE\nDiscuss ways to achieve cooperation\nCheck whether grim trigger works for some \\(\\delta\\)"
   },
   {
-    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html",
-    "href": "activities/02SurvivorFlags/SurvivorFlags.html",
+    "objectID": "activities/03PirateTreasure/makegroups/Groups.html#section",
+    "href": "activities/03PirateTreasure/makegroups/Groups.html#section",
+    "title": "EC327 - Game Theory",
+    "section": "",
+    "text": "Group\n4\n7\n11\n5\n16\n6\n1\n2\n14\n10\n15\n3\n8\n9\n12\n13\n\n\n\n\n1\nZaki Al-Hardan\nGeedi Ali\nCharlie Anderson\nJob Aquino-Rangel\nGabriel Arciga\nChay Bick\nChris Booras\nCampbell Brandt\nEli Brenn\nOwen Brown\nXavy Clawson\nSophie Cross\nJoseph Doolan\nAdelle Iseri\nRyan Kato\nBraden Magdelain\n\n\n2\nChristian Banegas\nCody Chase\nWilliam Doerr\nJennifer Barnett\nMax Cronk\nRyan Hirth\nTate Drebes\nJack Grage\nArthur Fargher\nElliott Nichols\nJeremy Goldenstein\nOlivia Maslowski\nMax Farquhar\nTobias Miller\nEric Li\nScott O’Meara\n\n\n3\nAshley Jones\nDelilah Kohn\nParker Ross\nChristopher Grimsley\nEmily Dixon\nDaniel Howton\nIsaac Ko\nAndrew Keepes\nSean Loder\nCarson Powell\nAidan Kye\nMizuki Nakano\nSam Gribb\nMiles Padilla Grafilo\nParker Morgan\nCara Reinke\n\n\n4\nHarrison Kremer\nNick Musgrove\nMiguel Torres Escobedo\nJonathan Herr\nJosh Gassner\nKaitlyn Klotz\nJohn Medlin\nDeegan Smith\nJack Peeples\nGriffin Rea\nSebbe Lind\nLeonardo Sajasi\nAlden McVay\nDrew Rampelberg\nLogan Sanford\nAlbert Savage\n\n\n5\nFloor Van Hameren\nCharlie Pickard\nNA\nMatthew Mabadi\nDillon Horner\nDrew Morales\nJustin White\nOwen Switzer\nWalker Stone\nMichael Sobnosky\nOscar Oeding\nNoah Soto\nAndy Yarrington\nJack Thayer\nNA\nNA"
+  },
+  {
+    "objectID": "activities/01GuessTwoThirds/GuessTwoThirds.html",
+    "href": "activities/01GuessTwoThirds/GuessTwoThirds.html",
     "title": "EC327 Game Theory",
     "section": "",
-    "text": "https://youtu.be/aonCsvi0LKc"
+    "text": "You will each choose an integer between 0 and 100.\nThe winner is the person who’s guess is closest to the average of all guesses times 2/3\nSubmit your guess on Canvas\nBackup Google forms version",
+    "crumbs": [
+      "Activities",
+      "Activity 1: Guess 2/3rds of the average"
+    ]
   },
   {
-    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#activity-2-survivor-21-flags-challenge",
-    "href": "activities/02SurvivorFlags/SurvivorFlags.html#activity-2-survivor-21-flags-challenge",
+    "objectID": "activities/01GuessTwoThirds/GuessTwoThirds.html#activity-1-guess-23rds-of-the-average",
+    "href": "activities/01GuessTwoThirds/GuessTwoThirds.html#activity-1-guess-23rds-of-the-average",
     "title": "EC327 Game Theory",
     "section": "",
-    "text": "https://youtu.be/aonCsvi0LKc"
+    "text": "You will each choose an integer between 0 and 100.\nThe winner is the person who’s guess is closest to the average of all guesses times 2/3\nSubmit your guess on Canvas\nBackup Google forms version",
+    "crumbs": [
+      "Activities",
+      "Activity 1: Guess 2/3rds of the average"
+    ]
   },
   {
-    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#split-into-groups",
-    "href": "activities/02SurvivorFlags/SurvivorFlags.html#split-into-groups",
+    "objectID": "activities/01GuessTwoThirds/GuessTwoThirds.html#activity-1",
+    "href": "activities/01GuessTwoThirds/GuessTwoThirds.html#activity-1",
     "title": "EC327 Game Theory",
-    "section": "Split Into Groups",
-    "text": "Split Into Groups\n\nlibrary(tidyverse)\n\nnames &lt;- read_csv(\"EC327names.csv\") %&gt;% select(First, Last)\nn = nrow(names)\ngroup_size = 4\nnum_groups = round(n/4)\n\n# set seed to make group selection consistent across sessions\nset.seed(2024)\n# assign groups and make a table\nnames %&gt;%\n  mutate(Group = sample(1:num_groups, n, replace = TRUE)) %&gt;%\n  group_by(Group) %&gt;%\n  summarise(names = list((First))) %&gt;%\n  pivot_wider(names_from = Group, values_from = names) %&gt;%\n  knitr::kable()"
-  },
-  {
-    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#set-up",
-    "href": "activities/02SurvivorFlags/SurvivorFlags.html#set-up",
-    "title": "EC327 Game Theory",
-    "section": "Set Up",
-    "text": "Set Up\n\n\nFind an opposing group\nPick someone to record flags for each round\nDraw 21 flags on whiteboard\nDiscuss strategy w/ your group for 1 minute\nPlay the game!\n\nDon’t forget to record how many flags each round!!!"
-  },
-  {
-    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#modified-rules-choose-number-of-flags-to-start",
-    "href": "activities/02SurvivorFlags/SurvivorFlags.html#modified-rules-choose-number-of-flags-to-start",
-    "title": "EC327 Game Theory",
-    "section": "Modified Rules: choose number of flags to start",
-    "text": "Modified Rules: choose number of flags to start\nFind a new team to play against (losers move)\n\n\nThis time, one team will choose the number of starting flags: between 15-25\nThe other team will choose whether to allow max. of 2-5 flags per round\nPlay and record!"
-  },
-  {
-    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#discuss",
-    "href": "activities/02SurvivorFlags/SurvivorFlags.html#discuss",
-    "title": "EC327 Game Theory",
-    "section": "Discuss",
-    "text": "Discuss\nIn your teams briefly discuss the following:\n\nIs there a correct way to play the game?\nHow did you find out the best way to play the game?\nIs the game solved meaning that the winner can be correctly predicted from any point in the game? If so, should the first or second team always win?\nWere there more errors in the first games played than the last games played? Why?\nHow was this game different from the guessing 2/3rds game?"
-  },
-  {
-    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#solution",
-    "href": "activities/02SurvivorFlags/SurvivorFlags.html#solution",
-    "title": "EC327 Game Theory",
-    "section": "Solution:",
-    "text": "Solution:\n\nhttps://youtu.be/K_MckZc8VvQ"
-  },
-  {
-    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#group-exercise",
-    "href": "activities/02SurvivorFlags/SurvivorFlags.html#group-exercise",
-    "title": "EC327 Game Theory",
-    "section": "Group Exercise:",
-    "text": "Group Exercise:\nConsider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.\n\nDraw the extensive form game tree complete with all payoff for both teams.\nHow many total strategies are there for team 1?\nUse pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?"
-  },
-  {
-    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#recap",
-    "href": "activities/02SurvivorFlags/SurvivorFlags.html#recap",
-    "title": "EC327 Game Theory",
-    "section": "Recap",
-    "text": "Recap\n\nThere is a correct way to play: we will later call the Nash equilibrium\nYou likely used some form of backwards induction or rollback reasoning\nThis game was sequential unlike the simultaneous 2/3rds game"
+    "section": "Activity 1",
+    "text": "Activity 1\n\n\nThis is a simple example, but illustrates how complicated strategic reasoning can be.\nThe theoretical solution to this game says that anyone who is rational and knows that everyone else is rational (Common Knowledge of Rationality) should only choose 0 or 1.\nHowever, Nagel, R. (1995), “Unravelling in guessing games : An experimental study” showed that over 12,000 answers, the average is 35.24.\nIs Common Knowledge of Rationality a ‘bad’ assumption? How can we connect our theories with experimental evidence?\n\n\n\n\ndiscuss different types of approaches people took\nhow would they revise guess 2nd time?",
+    "crumbs": [
+      "Activities",
+      "Activity 1: Guess 2/3rds of the average"
+    ]
   },
   {
     "objectID": "Slides/03SimultaneousGames/StrategicForm.html",
@@ -144,7 +121,7 @@
     "href": "Slides/02SequentialGames/0202-bwdinduct.html",
     "title": "Backwards Induction",
     "section": "",
-    "text": "Now that we have defined all the parts of what a sequential game is we can start to solve them.\n. . .\n\nA solution in our case will be a prediction of what rational agents would do in a sequential game\n\n\n\n\n\nDo I want to try smoking today?\n\n\nSuppose today I can either Try smoking for the first time, or Not try\n\nIf I choose Try today, then I will have another choice in the future:\n\nContinue smoking, or Quit\n\n\n\n\n\nLet’s create some preferences over the three different outcomes:\n\n\\(U(\\text{\\textbf{Not}}) = 0\\) - I’m no worse off, but don’t get to experience what it’s like\n\\(U(\\text{\\textbf{Try}}\\rightarrow\\text{\\textbf{Quit}}) = 1\\) - I get the experience of smoking without long-term health consequences, etc.\n\\(U(\\text{\\textbf{Try}}\\rightarrow\\text{\\textbf{Continue}}) = -1\\) - I become an addict\n\n\n\n\nLet’s model this as a decision tree \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat would a rational version of myself choose?\nIs this realistic?\nWhy might Trying and then Quitting be a bad idea?\n\n\n\n\n\n\n\n\nWe can apply the tools of game theory to this decision:\n\n\nLet’s add future Dante as another player who acts at the second decision node\nFuture Dante is different from Present Dante because he has different preferences:\n\n\\(U_{FD}(\\text{Continue}) = 1\\) because he’s already addicted\n\\(U_{FD}(\\text{Quit}) = -1\\) because withdrawl is painful\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat will Future Carmen choose?\nShould Carmen choose to Try smoking if she knows what her future self would choose?\n\n\n\n\n\n\n\nIf Carmen is forward looking, knows her future self’s preferences, and knows that her future self is rational,\nThen she can eliminate the possibility that her future self would quit.\n\n\nPruning is this type of logic applied to eliminating certain branches in a game tree.\n\n\n\n\n\n\nIf Future Carmen will never choose to Quit smoking once she is already an addict,\n\nwhat choices is Today’s Carmen left with?\n\n\n\nTry knowing that she will continue in the future and get -1 payoff\nor Not try smoking today and earn 0 payoff\n\n\n\n\n\n\nLet’s outline the logical steps we used to solve this game:\n\n\nWe were uncertain about what would happen in this game, because Today’s Carmen’s optimal strategy depended on what Future Carmen woud do\nBut Future Carmen is the last player in this game, so her choice only depends on her own preferences\nKnowing what Future Carmen would choose allowed us to find Today’s Carmen’s best strategy\n\n\n\n\n\n\n\n\nfigures/fig3.5.png\n\n\n\n\nEither crossing off eliminated branches or highlighting chosen branches works\nJust make sure that the order of thinking is clear\n\n\n\n\n\n\nThe method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\n\n… using rollback requires starting to think about what will happen at all the terminal nodes and literally “rolling back” through the tree to the initial node…\n\n\n\n\n\n\nThe method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 2\n\n\n\nWhen all players do rollback analysis to choose their optimal strategies, we call this set of strategies the rollback equilibrium3 of the game; the outcome that arises from playing these strategies is the rollback equilibrium outcome\n\n\n\n\n\n\n\n… notes - If Vivica paid ransom, Guy would rather Release - If Vivica didn’t pay, Guy would rather Kill - Knowing this, Vivica would Pay to avoid Orland being killed - Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando\n\n\n\n\nThe Rollback Equilibrium is:\n\n{ (Kidnap, Release, Kill), (Pay) }\n\n\nYou should read this as:\n\nGuy Kidnaps and will Release if Vivica Pays, but will Kill if Vivica Doesn’t Pay\nVivica Pays the ransom"
+    "text": "Now that we have defined all the parts of what a sequential game is we can start to solve them.\n. . .\n\nA solution in our case will be a prediction of what rational agents would do in a sequential game\n\n\n\n\n\nDo I want to try smoking today?\n\n\nSuppose today I can either Try smoking for the first time, or Not try\n\nIf I choose Try today, then I will have another choice in the future:\n\nContinue smoking, or Quit\n\n\n\n\n\nLet’s create some preferences over the three different outcomes:\n\n\\(U(\\text{Not}) = 0\\) - I’m no worse off, but don’t get to experience what it’s like\n\\(U(\\text{Try}\\rightarrow\\textbf{Quit}) = 1\\) - I get the experience of smoking without long-term health consequences, etc.\n\\(U(\\text{Try}\\rightarrow\\textbf{Continue}) = -1\\) - I become an addict\n\n\n\n\nLet’s model this as a decision tree \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat would a rational version of myself choose?\nIs this realistic?\nWhy might Trying and then Quitting be a bad idea?\n\n\n\n\n\n\n\n\nWe can apply the tools of game theory to this decision:\n\n\nLet’s add future Dante as another player who acts at the second decision node\nFuture Dante is different from Present Dante because he has different preferences:\n\n\\(U_{FD}(\\text{Continue}) = 1\\) because he’s already addicted\n\\(U_{FD}(\\text{Quit}) = -1\\) because withdrawl is painful\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat will Future Carmen choose?\nShould Carmen choose to Try smoking if she knows what her future self would choose?\n\n\n\n\n\n\n\nIf Carmen is forward looking, knows her future self’s preferences, and knows that her future self is rational,\nThen she can eliminate the possibility that her future self would quit.\n\n\nPruning is this type of logic applied to eliminating certain branches in a game tree.\n\n\n\n\n\n\nIf Future Carmen will never choose to Quit smoking once she is already an addict,\n\nwhat choices is Today’s Carmen left with?\n\n\n\nTry knowing that she will continue in the future and get -1 payoff\nor Not try smoking today and earn 0 payoff\n\n\n\n\n\n\nLet’s outline the logical steps we used to solve this game:\n\n\nWe were uncertain about what would happen in this game, because Today’s Carmen’s optimal strategy depended on what Future Carmen woud do\nBut Future Carmen is the last player in this game, so her choice only depends on her own preferences\nKnowing what Future Carmen would choose allowed us to find Today’s Carmen’s best strategy\n\n\n\n\n\n\n\n\nfigures/fig3.5.png\n\n\n\n\nEither crossing off eliminated branches or highlighting chosen branches works\nJust make sure that the order of thinking is clear\n\n\n\n\n\n\nThe method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\n\n… using rollback requires starting to think about what will happen at all the terminal nodes and literally “rolling back” through the tree to the initial node…\n\n\n\n\n\n\nThe method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 2\n\n\n\nWhen all players do rollback analysis to choose their optimal strategies, we call this set of strategies the rollback equilibrium3 of the game; the outcome that arises from playing these strategies is the rollback equilibrium outcome\n\n\n\n\n\n\n\n\n\nIf Vivica paid ransom, Guy would rather Release\nIf Vivica didn’t pay, Guy would rather Kill\nKnowing this, Vivica would Pay to avoid Orland being killed\nTherefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando\n\n\n\n\n\n\nThe Rollback Equilibrium is:\n\n{ (Kidnap, Release, Kill), (Pay) }\n\n\nYou should read this as:\n\nGuy Kidnaps and will Release if Vivica Pays, but will Kill if Vivica Doesn’t Pay\nVivica Pays the ransom"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#solving-sequential-games",
@@ -165,7 +142,7 @@
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-decision-1",
     "title": "Backwards Induction",
     "section": "",
-    "text": "Let’s create some preferences over the three different outcomes:\n\n\\(U(\\text{\\textbf{Not}}) = 0\\) - I’m no worse off, but don’t get to experience what it’s like\n\\(U(\\text{\\textbf{Try}}\\rightarrow\\text{\\textbf{Quit}}) = 1\\) - I get the experience of smoking without long-term health consequences, etc.\n\\(U(\\text{\\textbf{Try}}\\rightarrow\\text{\\textbf{Continue}}) = -1\\) - I become an addict"
+    "text": "Let’s create some preferences over the three different outcomes:\n\n\\(U(\\text{Not}) = 0\\) - I’m no worse off, but don’t get to experience what it’s like\n\\(U(\\text{Try}\\rightarrow\\textbf{Quit}) = 1\\) - I get the experience of smoking without long-term health consequences, etc.\n\\(U(\\text{Try}\\rightarrow\\textbf{Continue}) = -1\\) - I become an addict"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-decision-2",
@@ -242,7 +219,7 @@
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#solving-the-kidnapping-game",
     "title": "Backwards Induction",
     "section": "",
-    "text": "… notes - If Vivica paid ransom, Guy would rather Release - If Vivica didn’t pay, Guy would rather Kill - Knowing this, Vivica would Pay to avoid Orland being killed - Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando"
+    "text": "If Vivica paid ransom, Guy would rather Release\nIf Vivica didn’t pay, Guy would rather Kill\nKnowing this, Vivica would Pay to avoid Orland being killed\nTherefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#kidnapping-game-solution",
@@ -542,7 +519,7 @@
     "href": "Slides/02SequentialGames/02-main.html#the-smoking-decision-1",
     "title": "Introduction to Game Theory",
     "section": "The smoking decision",
-    "text": "The smoking decision\nLet’s create some preferences over the three different outcomes:\n\n\\(U(\\text{\\textbf{Not}}) = 0\\) - I’m no worse off, but don’t get to experience what it’s like\n\\(U(\\text{\\textbf{Try}}\\rightarrow\\text{\\textbf{Quit}}) = 1\\) - I get the experience of smoking without long-term health consequences, etc.\n\\(U(\\text{\\textbf{Try}}\\rightarrow\\text{\\textbf{Continue}}) = -1\\) - I become an addict",
+    "text": "The smoking decision\nLet’s create some preferences over the three different outcomes:\n\n\\(U(\\text{Not}) = 0\\) - I’m no worse off, but don’t get to experience what it’s like\n\\(U(\\text{Try}\\rightarrow\\textbf{Quit}) = 1\\) - I get the experience of smoking without long-term health consequences, etc.\n\\(U(\\text{Try}\\rightarrow\\textbf{Continue}) = -1\\) - I become an addict",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -674,7 +651,7 @@
     "href": "Slides/02SequentialGames/02-main.html#solving-the-kidnapping-game",
     "title": "Introduction to Game Theory",
     "section": "Solving the Kidnapping Game",
-    "text": "Solving the Kidnapping Game\n\n… notes - If Vivica paid ransom, Guy would rather Release - If Vivica didn’t pay, Guy would rather Kill - Knowing this, Vivica would Pay to avoid Orland being killed - Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando",
+    "text": "Solving the Kidnapping Game\n\n\n\nIf Vivica paid ransom, Guy would rather Release\nIf Vivica didn’t pay, Guy would rather Kill\nKnowing this, Vivica would Pay to avoid Orland being killed\nTherefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -2207,43 +2184,87 @@
     "text": "Discuss\n\nDid Nick change the structure of the game?\n\n\n\n\n\nEC327 | Lecture 3 | Simulataneous Games"
   },
   {
-    "objectID": "activities/01GuessTwoThirds/GuessTwoThirds.html",
-    "href": "activities/01GuessTwoThirds/GuessTwoThirds.html",
-    "title": "EC327 Game Theory",
+    "objectID": "Slides/index.html",
+    "href": "Slides/index.html",
+    "title": "Slides",
     "section": "",
-    "text": "You will each choose an integer between 0 and 100.\nThe winner is the person who’s guess is closest to the average of all guesses times 2/3\nSubmit your guess on Canvas\nBackup Google forms version",
-    "crumbs": [
-      "Activities",
-      "Activity 1: Guess 2/3rds of the average"
-    ]
+    "text": "Slides go here"
   },
   {
-    "objectID": "activities/01GuessTwoThirds/GuessTwoThirds.html#activity-1-guess-23rds-of-the-average",
-    "href": "activities/01GuessTwoThirds/GuessTwoThirds.html#activity-1-guess-23rds-of-the-average",
+    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html",
+    "href": "activities/02SurvivorFlags/SurvivorFlags.html",
     "title": "EC327 Game Theory",
     "section": "",
-    "text": "You will each choose an integer between 0 and 100.\nThe winner is the person who’s guess is closest to the average of all guesses times 2/3\nSubmit your guess on Canvas\nBackup Google forms version",
-    "crumbs": [
-      "Activities",
-      "Activity 1: Guess 2/3rds of the average"
-    ]
+    "text": "https://youtu.be/aonCsvi0LKc"
   },
   {
-    "objectID": "activities/01GuessTwoThirds/GuessTwoThirds.html#activity-1",
-    "href": "activities/01GuessTwoThirds/GuessTwoThirds.html#activity-1",
+    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#activity-2-survivor-21-flags-challenge",
+    "href": "activities/02SurvivorFlags/SurvivorFlags.html#activity-2-survivor-21-flags-challenge",
     "title": "EC327 Game Theory",
-    "section": "Activity 1",
-    "text": "Activity 1\n\n\nThis is a simple example, but illustrates how complicated strategic reasoning can be.\nThe theoretical solution to this game says that anyone who is rational and knows that everyone else is rational (Common Knowledge of Rationality) should only choose 0 or 1.\nHowever, Nagel, R. (1995), “Unravelling in guessing games : An experimental study” showed that over 12,000 answers, the average is 35.24.\nIs Common Knowledge of Rationality a ‘bad’ assumption? How can we connect our theories with experimental evidence?\n\n\n\n\ndiscuss different types of approaches people took\nhow would they revise guess 2nd time?",
-    "crumbs": [
-      "Activities",
-      "Activity 1: Guess 2/3rds of the average"
-    ]
+    "section": "",
+    "text": "https://youtu.be/aonCsvi0LKc"
   },
   {
-    "objectID": "activities/03PirateTreasure/makegroups/Groups.html#section",
-    "href": "activities/03PirateTreasure/makegroups/Groups.html#section",
-    "title": "EC327 - Game Theory",
+    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#split-into-groups",
+    "href": "activities/02SurvivorFlags/SurvivorFlags.html#split-into-groups",
+    "title": "EC327 Game Theory",
+    "section": "Split Into Groups",
+    "text": "Split Into Groups\n\nlibrary(tidyverse)\n\nnames &lt;- read_csv(\"EC327names.csv\") %&gt;% select(First, Last)\nn = nrow(names)\ngroup_size = 4\nnum_groups = round(n/4)\n\n# set seed to make group selection consistent across sessions\nset.seed(2024)\n# assign groups and make a table\nnames %&gt;%\n  mutate(Group = sample(1:num_groups, n, replace = TRUE)) %&gt;%\n  group_by(Group) %&gt;%\n  summarise(names = list((First))) %&gt;%\n  pivot_wider(names_from = Group, values_from = names) %&gt;%\n  knitr::kable()"
+  },
+  {
+    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#set-up",
+    "href": "activities/02SurvivorFlags/SurvivorFlags.html#set-up",
+    "title": "EC327 Game Theory",
+    "section": "Set Up",
+    "text": "Set Up\n\n\nFind an opposing group\nPick someone to record flags for each round\nDraw 21 flags on whiteboard\nDiscuss strategy w/ your group for 1 minute\nPlay the game!\n\nDon’t forget to record how many flags each round!!!"
+  },
+  {
+    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#modified-rules-choose-number-of-flags-to-start",
+    "href": "activities/02SurvivorFlags/SurvivorFlags.html#modified-rules-choose-number-of-flags-to-start",
+    "title": "EC327 Game Theory",
+    "section": "Modified Rules: choose number of flags to start",
+    "text": "Modified Rules: choose number of flags to start\nFind a new team to play against (losers move)\n\n\nThis time, one team will choose the number of starting flags: between 15-25\nThe other team will choose whether to allow max. of 2-5 flags per round\nPlay and record!"
+  },
+  {
+    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#discuss",
+    "href": "activities/02SurvivorFlags/SurvivorFlags.html#discuss",
+    "title": "EC327 Game Theory",
+    "section": "Discuss",
+    "text": "Discuss\nIn your teams briefly discuss the following:\n\nIs there a correct way to play the game?\nHow did you find out the best way to play the game?\nIs the game solved meaning that the winner can be correctly predicted from any point in the game? If so, should the first or second team always win?\nWere there more errors in the first games played than the last games played? Why?\nHow was this game different from the guessing 2/3rds game?"
+  },
+  {
+    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#solution",
+    "href": "activities/02SurvivorFlags/SurvivorFlags.html#solution",
+    "title": "EC327 Game Theory",
+    "section": "Solution:",
+    "text": "Solution:\n\nhttps://youtu.be/K_MckZc8VvQ"
+  },
+  {
+    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#group-exercise",
+    "href": "activities/02SurvivorFlags/SurvivorFlags.html#group-exercise",
+    "title": "EC327 Game Theory",
+    "section": "Group Exercise:",
+    "text": "Group Exercise:\nConsider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.\n\nDraw the extensive form game tree complete with all payoff for both teams.\nHow many total strategies are there for team 1?\nUse pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?"
+  },
+  {
+    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#recap",
+    "href": "activities/02SurvivorFlags/SurvivorFlags.html#recap",
+    "title": "EC327 Game Theory",
+    "section": "Recap",
+    "text": "Recap\n\nThere is a correct way to play: we will later call the Nash equilibrium\nYou likely used some form of backwards induction or rollback reasoning\nThis game was sequential unlike the simultaneous 2/3rds game"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "EC327 Introductory Game Theory",
     "section": "",
-    "text": "Group\n4\n7\n11\n5\n16\n6\n1\n2\n14\n10\n15\n3\n8\n9\n12\n13\n\n\n\n\n1\nZaki Al-Hardan\nGeedi Ali\nCharlie Anderson\nJob Aquino-Rangel\nGabriel Arciga\nChay Bick\nChris Booras\nCampbell Brandt\nEli Brenn\nOwen Brown\nXavy Clawson\nSophie Cross\nJoseph Doolan\nAdelle Iseri\nRyan Kato\nBraden Magdelain\n\n\n2\nChristian Banegas\nCody Chase\nWilliam Doerr\nJennifer Barnett\nMax Cronk\nRyan Hirth\nTate Drebes\nJack Grage\nArthur Fargher\nElliott Nichols\nJeremy Goldenstein\nOlivia Maslowski\nMax Farquhar\nTobias Miller\nEric Li\nScott O’Meara\n\n\n3\nAshley Jones\nDelilah Kohn\nParker Ross\nChristopher Grimsley\nEmily Dixon\nDaniel Howton\nIsaac Ko\nAndrew Keepes\nSean Loder\nCarson Powell\nAidan Kye\nMizuki Nakano\nSam Gribb\nMiles Padilla Grafilo\nParker Morgan\nCara Reinke\n\n\n4\nHarrison Kremer\nNick Musgrove\nMiguel Torres Escobedo\nJonathan Herr\nJosh Gassner\nKaitlyn Klotz\nJohn Medlin\nDeegan Smith\nJack Peeples\nGriffin Rea\nSebbe Lind\nLeonardo Sajasi\nAlden McVay\nDrew Rampelberg\nLogan Sanford\nAlbert Savage\n\n\n5\nFloor Van Hameren\nCharlie Pickard\nNA\nMatthew Mabadi\nDillon Horner\nDrew Morales\nJustin White\nOwen Switzer\nWalker Stone\nMichael Sobnosky\nOscar Oeding\nNoah Soto\nAndy Yarrington\nJack Thayer\nNA\nNA"
+    "text": "In html format (written in Quarto)"
+  },
+  {
+    "objectID": "index.html#course-materials",
+    "href": "index.html#course-materials",
+    "title": "EC327 Introductory Game Theory",
+    "section": "",
+    "text": "In html format (written in Quarto)"
   }
 ]
