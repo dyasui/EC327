@@ -1,0 +1,74 @@
+# Order Advantages
+
+## Order Advantages
+:::: {.columns}
+
+::: {.column width="50%"}
+![](figures/fig3.6.png)
+:::
+
+::: {.column width="50%"}
+Who came out ahead in the Planting Game?
+
+  * Why?
+:::
+
+::::
+
+---
+
+## First-mover advantage
+
+Emily received her best outcome of 4 because she can take advantage of acting first.
+
+::: {.incremental}
+
+  * When a game favors those who act first, we say there is a [first-mover advantage]{.hi}
+
+  * But it's not always helpful to act first!
+
+:::
+
+---
+
+## Second-mover advantage
+
+Sometimes you want to see the actions of others before you know your best response
+
+::: {.incremental}
+
+  * When a game favors those who decide after another player, there is a [second-mover advantage]{.hi}
+
+  * For example, [Squid Game bridge](https://youtu.be/Kyjms3DLXAE) game
+
+:::
+
+---
+
+# Adding More Moves
+
+## Even a simple game get complicated fast]
+
+![](figures/fig3.7.png){height="500" width="600" fig-align="center"}
+
+
+---
+
+## Tic-Tac-Toe
+
+  * Even though it looks complicated, the main branches are really just copies of each other
+
+  * Most people probably figure out the rollback equilibrium after playing it enough
+  
+  * Insert relevant xkcd here: [https://xkcd.com/832/](https://xkcd.com/832/)
+  
+---
+
+## Chess
+
+  * What about more complicated games like chess?
+  
+    + technically rollback solvable, but with $10^{120}$ possible moves, it hasn't been solved by either human or machine
+    
+  * Players of complicated sequential games often implement some [intermediate valuation function]{.hi} to assign payoffs to non-terminal nodes.
+  

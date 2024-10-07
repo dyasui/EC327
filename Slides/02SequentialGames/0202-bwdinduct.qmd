@@ -240,9 +240,90 @@ You should read this as:
 
 ---
 
-## Planding Game Tree
+## Planting Game Tree
 
-![figures/fig3.6.png](figures/fig3.6.png)
+![](figures/plantinggame.png)
+
+---
+
+## Rollback in the Planting Game
+
+::::: {.columns}
+
+:::: {.column width="50%"}
+![](figures/plantinggame.png)
+::::
+
+:::: {.column width="50%"}
+::: {.incremental}
+Who should we start with to solve this game?
+
+  * Talia, because she is the last one to move, her choices don't depend on other players
+:::
+::::
+
+:::::
+---
+
+## Rollback in the Planting Game
+
+::::: {.columns}
+
+:::: {.column width="50%"}
+![](figures/plantinggame.png)
+::::
+
+:::: {.column width="50%"}
+::: {.incremental}
+How many strategies does Talia have?
+
+  * 16 total complete strategies
+
+  * CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD
+
+:::
+::::
+
+:::::
+---
+
+## Rollback in the Planting Game
+
+::::: {.columns}
+
+:::: {.column width="50%"}
+![](figures/plantinggame.png)
+::::
+
+:::: {.column width="50%"}
+::: {.incremental}
+Which of Talia's strategies can be eliminated as *irrational*?
+
+  * Any which include an action which would lead to a lower payoff than another possible action at the same node
+
+:::
+::::
+
+:::::
+---
+
+## Rollback in the Planting Game
+
+Let's simplify the game by pruning Talia's eliminated branches
+
+![](figures/plantinggame.png)
+
+::: notes
+  - Draw new tree on board with only Emily and Nina's branches, 
+      - replace Talia's decision nodes with new terminal nodes with payoffs corresponding to non-pruned end branches
+:::
+
+---
+
+## Rollback in the Planting Game
+
+![](figures/fig3.6.png)
+
 ---
 
 ## Equilibrium Path of Play
@@ -269,18 +350,6 @@ Even though the players available actions are all called the same (Contribute or
   
 ---
 
-
-## How many strategies does Talia have?
-  
-::: {.incremental}
-
-  * CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD
-
-* 16 total strategies
-
-:::
-
----
   
 ## Rollback Equilibrium Strategies
 
@@ -290,30 +359,13 @@ The equilibrium is:
   
 ---
 
-## Adding More Moves
+## Three new concepts
 
-[Even a simple game get complicated fast]{.hi .align-center}
+  1. A list of *available strategies* for each player ^[could be very long]
 
-![](figures/fig3.7.png){height="500" width="600" fig-align="center"}
+  2. An *optimal strategy* for each player
 
-
----
-
-## Tic-Tac-Toe
-
-  * Even though it looks complicated, the main branches are really just copies of each other
-
-  * Most people probably figure out the rollback equilibrium after playing it enough
+     - A complete plan of action states a player's best choice at each node where she *could* make a decision ^[even if never reached in equilibrium]
   
-  * Insert relevant xkcd here: [https://xkcd.com/832/](https://xkcd.com/832/)
-  
----
+  3. The path of play in [rollback equilibrium]{.hi} which combines optimal strategies for all players
 
-## Chess
-
-  * What about more complicated games like chess?
-  
-    + technically rollback solvable, but with $10^{120}$ possible moves, it hasn't been solved by either human or machine
-    
-  * Players of complicated sequential games often implement some [intermediate valuation function]{.hi} to assign payoffs to non-terminal nodes.
-  

@@ -46,4 +46,4 @@ library(pdftools)
 
 {{< include 0203-pareto.qmd >}}
 
-
+{{< include 0204-ordermatters.qmd >}}
