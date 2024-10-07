@@ -31,11 +31,11 @@ If I choose [Try]{.h} today, then I will have another choice in the *future*:
 
 Let's create some preferences over the three different outcomes:
 
-  - $U(\text{\textbf{Not}}) = 0$ - I'm no worse off, but don't get to experience what it's like
+  - $U(\text{Not}) = 0$ - I'm no worse off, but don't get to experience what it's like
 
-  - $U(\text{\textbf{Try}}\rightarrow\text{\textbf{Quit}}) = 1$ - I get the experience of smoking without long-term health consequences, etc.
+  - $U(\text{Try}\rightarrow\textbf{Quit}) = 1$ - I get the experience of smoking without long-term health consequences, etc.
 
-  - $U(\text{\textbf{Try}}\rightarrow\text{\textbf{Continue}}) = -1$ - I become an addict
+  - $U(\text{Try}\rightarrow\textbf{Continue}) = -1$ - I become an addict
 
 ## The smoking decision
 
