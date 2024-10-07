@@ -1,9 +1,9 @@
 ## Slides:
 
 ### 02SequentialGames:
-  - [ ] Clean up Planting Game slides in adding more players section
-    - [ ] summary slide w/ four distinct concepts from Dixit pg. 62
-  - [ ] Add order advantages section (short?)
+  - [x] Clean up Planting Game slides in adding more players section
+    - [x] summary slide w/ four distinct concepts from Dixit pg. 62
+  - [x] Add order advantages section (short?)
   - [ ] Flesh out adding more moves section
     - what's the point of checkers and chess examples?
   - [ ] Add Evidence concerning rollback section (Probably save for Thursay centipede game)
@@ -16,3 +16,4 @@
 ### 04CombiningForms: 
   - [ ] convert beamer slides to quarto
   - [ ] Follow chapter 6 of Dixit more carefully
+

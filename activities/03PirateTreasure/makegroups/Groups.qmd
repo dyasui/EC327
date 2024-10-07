@@ -20,14 +20,7 @@ output:
 
 ```{r}
 # load packages
-library(dplyr)
-library(readr)
-library(tidyr)
-library(tibble)
-library(ggplot2)
-library(viridis)
-library(ggthemes)
-library(xtable)
+library(tidyverse)
 
 PirateGroups <- read_csv("PirateGroups.csv") # %>% 
   # mutate(team = parse_number(group_name)) %>% 

@@ -14,18 +14,10 @@ format:
         logo: UOSignature-356.png
 title-slide-attributes:
   data-background-position: left
-output:
-  beamer_presentation:
-    keep_tex: yes
-filters:
-  - tikz
-tikz:
-  cache:true
 ---
 
 ```{r include = FALSE}
 library(tidyverse)
-library(pdftools)
 ```
 
 ::: {.vertical-center}
@@ -47,3 +39,5 @@ library(pdftools)
 {{< include 0203-pareto.qmd >}}
 
 {{< include 0204-ordermatters.qmd >}}
+
+{{< include 0205-evidence.qmd >>}}

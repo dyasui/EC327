@@ -51,24 +51,71 @@ Sometimes you want to see the actions of others before you know your best respon
 
 ![](figures/fig3.7.png){height="500" width="600" fig-align="center"}
 
-
 ---
 
-## Tic-Tac-Toe
+## 2x2 Tic-Tac-Toe
+
+:::: {.columns}
+::: {.column width="50%"}
+![](figures/fig3.7.png){ fig-align="center"}
+:::
+
+::: {.column width="50%"}
+
+This is just for a simpler game with a 2x2 grid.
 
   * Even though it looks complicated, the main branches are really just copies of each other
 
+  * What is the rollback equilibrium?
+:::
+
+::::
+
+---
+
+## 3x3 Tic-Tac-Toe
+
+![](figures/tic_tac_toe_xkcd.png)
+
+[https://xkcd.com/832/](https://xkcd.com/832/)
+
+---
+
+## 3x3 Tic-Tac-Toe
+
   * Most people probably figure out the rollback equilibrium after playing it enough
   
-  * Insert relevant xkcd here: [https://xkcd.com/832/](https://xkcd.com/832/)
-  
+::: {.incremental}
+  * The second player can always get at least a tie:
+
+    - If first player chooses middle, then take a corner
+
+    - If first player chose anything else, take the middle
+
+    - After the first stages, block any attempt by player 1 to get 3 in a row
+:::
+
 ---
+
+## More complicated games
+
+Do all games have theoretical solutions?
+
+::: {.incremental}
+  * Checkers?
+
+  * Chess?
+
+  * Go?
+:::
 
 ## Chess
 
-  * What about more complicated games like chess?
-  
-    + technically rollback solvable, but with $10^{120}$ possible moves, it hasn't been solved by either human or machine
+::: {.incremental}
+  * Technically rollback solvable, but with $10^{120}$ possible moves, it hasn't been solved by either human or machine
     
-  * Players of complicated sequential games often implement some [intermediate valuation function]{.hi} to assign payoffs to non-terminal nodes.
-  
+  * Human experts and computer programs instead rely on *experience* of past game possibilities
+
+  * and on some partial rollback, or an [intermediate valuation function]{.hi}, where you look at all possibilities in the next few moves and assign probabilistic payoffs
+
+:::
