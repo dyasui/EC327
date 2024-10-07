@@ -61,7 +61,8 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 ## Activities
 
-*TBA*
+[Activity 1 - Guessing Two Thirds of the Average](https://dyasui.github.io/EC327/activities/01GuessTwoThirds/GuessTwoThirds.html)
+[Activity 2 - Survivor Flags](https://dyasui.github.io/EC327/activities/02SurvivorFlags/SurvivorFlags.html)
 
 ## Assignments 
 
