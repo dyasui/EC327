@@ -30,71 +30,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -1048,39 +983,159 @@ Dante Yasui
 </section>
 <section id="the-smoking-decision" class="slide level2">
 <h2>The smoking decision</h2>
-
-<img data-src="figures/fig3.2.png" class="r-stretch"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource dot number-lines code-with-copy"><code class="sourceCode dot"><span id="cb1-1"><a></a><span class="va">graph</span> <span class="va">G</span> <span class="ot">{</span></span>
-<span id="cb1-2"><a></a><span class="co">    </span><span class="kw">node</span><span class="ot">[</span><span class="at">shape</span><span class="ot">=</span><span class="va">box</span><span class="ot">];</span></span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a><span class="co">    </span><span class="va">Today_Carmen</span><span class="co"> </span><span class="ot">[</span><span class="at">label</span><span class="ot">=</span><span class="st">""</span><span class="co">, </span><span class="at">color</span><span class="ot">=</span><span class="va">blue</span><span class="ot">];</span></span>
-<span id="cb1-5"><a></a><span class="co">    </span><span class="va">Future_Carmen</span><span class="co"> </span><span class="ot">[</span><span class="at">label</span><span class="ot">=</span><span class="st">""</span><span class="co">, </span><span class="at">color</span><span class="ot">=</span><span class="va">black</span><span class="ot">];</span></span>
-<span id="cb1-6"><a></a><span class="co">    </span><span class="va">Try_smoking</span><span class="co"> </span><span class="ot">[</span><span class="at">label</span><span class="ot">=</span><span class="st">"Try smoking"</span><span class="ot">];</span></span>
-<span id="cb1-7"><a></a><span class="co">    </span><span class="va">Continue</span><span class="co"> </span><span class="ot">[</span><span class="at">label</span><span class="ot">=</span><span class="st">"Continue"</span><span class="co">, </span><span class="at">fillcolor</span><span class="ot">=</span><span class="va">gray</span><span class="co">, </span><span class="at">style</span><span class="ot">=</span><span class="va">filled</span><span class="ot">];</span></span>
-<span id="cb1-8"><a></a><span class="co">    </span><span class="va">Stop_smoking</span><span class="co"> </span><span class="ot">[</span><span class="at">label</span><span class="ot">=</span><span class="st">"Stop smoking"</span><span class="ot">];</span></span>
-<span id="cb1-9"><a></a></span>
-<span id="cb1-10"><a></a><span class="co">    </span><span class="kw">edge</span><span class="ot">[</span><span class="at">arrowhead</span><span class="ot">=</span><span class="va">open</span><span class="co">, </span><span class="at">arrowtail</span><span class="ot">=</span><span class="va">open</span><span class="ot">];</span></span>
-<span id="cb1-11"><a></a></span>
-<span id="cb1-12"><a></a><span class="co">    </span><span class="va">Today_Carmen</span><span class="co"> </span><span class="ot">-&gt;</span><span class="co"> </span><span class="va">Try_smoking</span><span class="ot">[</span><span class="at">label</span><span class="ot">=</span><span class="st">"0"</span><span class="ot">];</span></span>
-<span id="cb1-13"><a></a><span class="co">    </span><span class="va">Try_smoking</span><span class="co"> </span><span class="ot">-&gt;</span><span class="co"> </span><span class="va">Future_Carmen</span><span class="ot">[</span><span class="at">label</span><span class="ot">=</span><span class="st">"1"</span><span class="ot">];</span></span>
-<span id="cb1-14"><a></a><span class="co">    </span><span class="va">Future_Carmen</span><span class="co"> </span><span class="ot">-&gt;</span><span class="co"> </span><span class="va">Continue</span><span class="ot">[</span><span class="at">label</span><span class="ot">=</span><span class="st">"-1"</span><span class="ot">];</span></span>
-<span id="cb1-15"><a></a><span class="co">    </span><span class="va">Future_Carmen</span><span class="co"> </span><span class="ot">-&gt;</span><span class="co"> </span><span class="va">Stop_smoking</span><span class="ot">[</span><span class="at">label</span><span class="ot">=</span><span class="st">"+1"</span><span class="ot">];</span></span>
-<span id="cb1-16"><a></a></span>
-<span id="cb1-17"><a></a><span class="co">    </span><span class="at">label</span><span class="co"> </span><span class="va">Justify</span><span class="ot">;</span></span>
-<span id="cb1-18"><a></a><span class="ot">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Do I want to try smoking today?</p>
+<div>
+<blockquote>
+<p>Suppose today I can either <span class="h">Try</span> smoking for the first time, or <span class="h">Not</span> try</p>
+</blockquote>
+<p>If I choose <span class="h">Try</span> today, then I will have another choice in the <em>future</em>:</p>
+<blockquote>
+<p><span class="h">Continue</span> smoking, or <span class="h">Quit</span></p>
+</blockquote>
+</div>
+</section>
+<section id="the-smoking-decision-1" class="slide level2">
+<h2>The smoking decision</h2>
+<p>Let’s create some preferences over the three different outcomes:</p>
+<ul>
+<li><p><span class="math inline">\(U(\text{\textbf{Not}}) = 0\)</span> - I’m no worse off, but don’t get to experience what it’s like</p></li>
+<li><p><span class="math inline">\(U(\text{\textbf{Try}}\rightarrow\text{\textbf{Quit}}) = 1\)</span> - I get the experience of smoking without long-term health consequences, etc.</p></li>
+<li><p><span class="math inline">\(U(\text{\textbf{Try}}\rightarrow\text{\textbf{Continue}}) = -1\)</span> - I become an addict</p></li>
+</ul>
+</section>
+<section id="the-smoking-decision-2" class="slide level2">
+<h2>The smoking decision</h2>
+<p>Let’s model this as a <em>decision tree</em> <img data-src="figures/fig3.2.png"></p>
+</section>
+<section id="the-smoking-decision-3" class="slide level2">
+<h2>The smoking decision</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/fig3.2.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment"><p>What would a <em>rational</em> version of myself choose?</p></li>
+<li class="fragment"><p>Is this realistic?</p></li>
+<li class="fragment"><p>Why might Trying and then Quitting be a bad idea?</p></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="the-smoking-game" class="slide level2">
 <h2>The smoking <em>game</em></h2>
+<p>We can apply the tools of game theory to this decision:</p>
+<div>
+<ul>
+<li class="fragment"><p>Let’s add <em>future Dante</em> as another player who acts at the second decision node</p></li>
+<li class="fragment"><p>Future Dante is different from <em>Present Dante</em> because he has different preferences:</p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(U_{FD}(\text{Continue}) = 1\)</span> because he’s already addicted</p></li>
+<li class="fragment"><p><span class="math inline">\(U_{FD}(\text{Quit}) = -1\)</span> because withdrawl is painful</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="the-smoking-game-1" class="slide level2">
+<h2>The smoking <em>game</em></h2>
 
 <img data-src="figures/fig3.3.png" class="r-stretch"></section>
+<section id="the-smoking-game-2" class="slide level2">
+<h2>The smoking <em>game</em></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/fig3.3.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment"><p>What will Future Carmen choose?</p></li>
+<li class="fragment"><p>Should Carmen choose to Try smoking <em>if she knows what her future self would choose?</em></p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 <section id="pruning-branches" class="slide level2">
 <h2>‘Pruning’ branches</h2>
+<p>If Carmen is <em>forward looking</em>, knows her <em>future self’s preferences</em>, and knows that her future self is <em>rational</em>,</p>
+<p>Then she can eliminate the possibility that her future self would quit.</p>
+<div>
+<ul>
+<li class="fragment"><span class="hi">Pruning</span> is this type of logic applied to eliminating certain branches in a game tree.</li>
+</ul>
+</div>
+</section>
+<section id="pruning-branches-1" class="slide level2">
+<h2>‘Pruning’ branches</h2>
+<p>If Future Carmen will never choose to Quit smoking once she is already an addict,</p>
+<blockquote>
+<p>what choices is <strong>Today’s Carmen</strong> left with?</p>
+</blockquote>
+<div>
+<ul>
+<li class="fragment"><p><span class="h">Try</span> knowing that she will continue in the future and get -1 payoff</p></li>
+<li class="fragment"><p>or <span class="h">Not</span> try smoking today and earn 0 payoff</p></li>
+</ul>
+</div>
+</section>
+<section id="backwards-induction-intuitively" class="slide level2">
+<h2>Backwards Induction (intuitively)</h2>
+<p>Let’s outline the logical steps we used to solve this game:</p>
+<div>
+<ul>
+<li class="fragment"><p>We were uncertain about what would happen in this game, because <strong>Today’s Carmen</strong>’s optimal strategy depended on what <strong>Future Carmen</strong> woud do</p></li>
+<li class="fragment"><p>But <strong>Future Carmen</strong> is the last player in this game, so her choice only depends on her <em>own preferences</em></p></li>
+<li class="fragment"><p>Knowing what <strong>Future Carmen</strong> would choose allowed us to find <strong>Today’s Carmen</strong>’s best strategy</p></li>
+</ul>
+</div>
+</section>
+<section id="smoking-game-solution" class="slide level2">
+<h2>Smoking Game Solution</h2>
 
-<img data-src="figures/fig3.4.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.4.png</p></section>
-<section id="section" class="slide level2">
-<h2></h2>
-
-<img data-src="figures/fig3.5.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.5.png</p></section>
+<img data-src="figures/fig3.5.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.5.png</p><aside class="notes">
+<ul>
+<li>Either crossing off eliminated branches or highlighting chosen branches works</li>
+<li>Just make sure that the order of thinking is clear</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="backwards-induction-defined" class="slide level2">
+<h2>Backwards Induction defined</h2>
+<p>The method of looking at decisions in the future to decide what to do now is called <span class="h">Backwards Induction</span> or <span class="h">Rollback</span></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Definition <sup>1</sup></strong></p>
+</div>
+<div class="callout-content">
+<p>… using <span class="h">rollback</span> requires starting to think about what will happen at all the terminal nodes and literally “rolling back” through the tree to the initial node…</p>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>Dixit et al, pg 56</p></li></ol></aside></section>
+<section id="backwards-induction-defined-1" class="slide level2">
 <h2>Backwards Induction defined</h2>
 <p>The method of looking at decisions in the future to decide what to do now is called <span class="h">Backwards Induction</span> or <span class="h">Rollback</span></p>
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -1096,19 +1151,33 @@ Dante Yasui
 </div>
 </div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>Dixit et al, pg 56</p></li><li id="fn4"><p>aka subgame perfect equilibrium</p></li></ol></aside></section>
-<section id="group-exercise" class="slide level2">
-<h2>Group Exercise:</h2>
-<p>Consider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.</p>
-<ol type="1">
-<li><p><em>Draw the extensive form game tree complete with all payoff for both teams.</em></p></li>
-<li><p><em>How many total strategies are there for team 1?</em></p></li>
-<li><p><em>Use pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?</em></p></li>
-</ol>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>Dixit et al, pg 56</p></li><li id="fn5"><p>aka subgame perfect equilibrium</p></li></ol></aside></section>
+<section id="solving-the-kidnapping-game" class="slide level2">
+<h2>Solving the Kidnapping Game</h2>
+
+<img data-src="figures/kidnapgame.png" class="r-stretch"><p>… notes - If Vivica paid ransom, Guy would rather Release - If Vivica didn’t pay, Guy would rather Kill - Knowing this, Vivica would Pay to avoid Orland being killed - Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando</p>
 </section>
-<section id="adding-more-players" class="slide level2">
-<h2>Adding more players</h2>
-<p>We can start to add more complexity with more than two players</p>
+<section id="kidnapping-game-solution" class="slide level2">
+<h2>Kidnapping Game Solution</h2>
+<p>The <span class="h">Rollback Equilibrium</span> is:</p>
+<ul>
+<li><strong>{</strong> (<span class="red">Kidnap</span>, <span class="red">Release</span>, <span class="red">Kill</span>), (<span class="blue">Pay</span>) <strong>}</strong></li>
+</ul>
+<div>
+<p>You should read this as:</p>
+<ul>
+<li class="fragment"><p>Guy <span class="red">Kidnaps</span> and will <span class="red">Release</span> if Vivica <span class="blue">Pays</span>, but will <span class="red">Kill</span> if Vivica <span class="blue">Doesn’t Pay</span></p></li>
+<li class="fragment"><p>Vivica <span class="blue">Pays</span> the ransom</p></li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="adding-more-players" class="title-slide slide level1 center">
+<h1>Adding more players</h1>
+
 </section>
 <section id="player-planting-game" class="slide level2">
 <h2>3-player planting game</h2>
@@ -1186,7 +1255,7 @@ Dante Yasui
 <ul>
 <li>{ <span class="hi">D</span><sup>1</sup>, <span class="hi">DC</span><sup>2</sup>, <span class="hi">DCCD</span><sup>3</sup> }</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn5"><p>Emily</p></li><li id="fn6"><p>Nina</p></li><li id="fn7"><p>Talia</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn6"><p>Emily</p></li><li id="fn7"><p>Nina</p></li><li id="fn8"><p>Talia</p></li></ol></aside></section>
 <section id="adding-more-moves" class="slide level2">
 <h2>Adding More Moves</h2>
 <p><span class="hi align-center">Even a simple game get complicated fast</span></p>

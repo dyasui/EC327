@@ -77,6 +77,13 @@
     "text": "Solution:\n\nhttps://youtu.be/K_MckZc8VvQ"
   },
   {
+    "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#group-exercise",
+    "href": "activities/02SurvivorFlags/SurvivorFlags.html#group-exercise",
+    "title": "EC327 Game Theory",
+    "section": "Group Exercise:",
+    "text": "Group Exercise:\nConsider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.\n\nDraw the extensive form game tree complete with all payoff for both teams.\nHow many total strategies are there for team 1?\nUse pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?"
+  },
+  {
     "objectID": "activities/02SurvivorFlags/SurvivorFlags.html#recap",
     "href": "activities/02SurvivorFlags/SurvivorFlags.html#recap",
     "title": "EC327 Game Theory",
@@ -137,7 +144,7 @@
     "href": "Slides/02SequentialGames/0202-bwdinduct.html",
     "title": "Backwards Induction",
     "section": "",
-    "text": "Now that we have defined all the parts of what a sequential game is we can start to solve them.\n. . .\n\nA solution in our case will be a prediction of what rational agents would do in a sequential game\n\n\n\n\n\n\ngraph G {\n    node[shape=box];\n\n    Today_Carmen [label=\"\", color=blue];\n    Future_Carmen [label=\"\", color=black];\n    Try_smoking [label=\"Try smoking\"];\n    Continue [label=\"Continue\", fillcolor=gray, style=filled];\n    Stop_smoking [label=\"Stop smoking\"];\n\n    edge[arrowhead=open, arrowtail=open];\n\n    Today_Carmen -&gt; Try_smoking[label=\"0\"];\n    Try_smoking -&gt; Future_Carmen[label=\"1\"];\n    Future_Carmen -&gt; Continue[label=\"-1\"];\n    Future_Carmen -&gt; Stop_smoking[label=\"+1\"];\n\n    label Justify;\n}\n\n\n\n\n\n\n\n\n\n\n\n\nfigures/fig3.4.png\n\n\n\n\n\n\n\n\n\nfigures/fig3.5.png\n\n\n\n\n\n\nThe method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\n\nWhen all players do rollback analysis to choose their optimal strategies, we call this set of strategies the rollback equilibrium2 of the game; the outcome that arises from playing these strategies is the rollback equilibrium outcome\n\n\n\n\n\n\nConsider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.\n\nDraw the extensive form game tree complete with all payoff for both teams.\nHow many total strategies are there for team 1?\nUse pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?\n\n\n\n\n\nWe can start to add more complexity with more than two players\n\n\n\n\n\n\nEmily, Nina, and Talia are roommates who want to get a start on their communal garden.\nThey like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.\n2 or 3 people working is enough to keep the garden healthy, but if 1 or 0 work, then the garden will die.\n\n\n\n\n\n\n\n\n\noutcome:\nutlity:\n\n\n\n\nI don’t contribute, but garden lives\n4\n\n\nI contribute, and get garden.\n3\n\n\nI don’t contribute, and garden dies\n2\n\n\nI contribute, but garden dies\n1\n\n\n\n\n\n\n\n\n\n\nfigures/fig3.6.png\n\n\n\n\n\n\n\nNote that there is one continuous path we traced from the initial node to a final equilibrium outcome.\nHowever, we couldn’t have gotten their without the other arrows paths even though they are never reached in equilibrium.\nRecall that a strategy is a collection of choices at every decision node.\n\n\n\n\n\nEven though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:\n\n“Nina’s strategy in the rollback equilibrium is { Don’t Contribute at b, Contribute at c }”.\n\n\nTo make it even shorter, let’s call this strategy DC.\n\n\n\n\n\n\n\nCCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD\n16 total strategies\n\n\n\n\n\n\nThe equilibrium is:\n\n{ D3, DC4, DCCD5 }\n\n\n\n\n\nEven a simple game get complicated fast\n\n\n\n\n\n\n\n\n\n\nEven though it looks complicated, the main branches are really just copies of each other\nMost people probably figure out the rollback equilibrium after playing it enough\nInsert relevant xkcd here: https://xkcd.com/832/\n\n\n\n\n\n\nWhat about more complicated games like chess?\n\ntechnically rollback solvable, but with \\(10^{120}\\) possible moves, it hasn’t been solved by either human or machine\n\nPlayers of complicated sequential games often implement some intermediate valuation function to assign payoffs to non-terminal nodes."
+    "text": "Now that we have defined all the parts of what a sequential game is we can start to solve them.\n. . .\n\nA solution in our case will be a prediction of what rational agents would do in a sequential game\n\n\n\n\n\nDo I want to try smoking today?\n\n\nSuppose today I can either Try smoking for the first time, or Not try\n\nIf I choose Try today, then I will have another choice in the future:\n\nContinue smoking, or Quit\n\n\n\n\n\nLet’s create some preferences over the three different outcomes:\n\n\\(U(\\text{\\textbf{Not}}) = 0\\) - I’m no worse off, but don’t get to experience what it’s like\n\\(U(\\text{\\textbf{Try}}\\rightarrow\\text{\\textbf{Quit}}) = 1\\) - I get the experience of smoking without long-term health consequences, etc.\n\\(U(\\text{\\textbf{Try}}\\rightarrow\\text{\\textbf{Continue}}) = -1\\) - I become an addict\n\n\n\n\nLet’s model this as a decision tree \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat would a rational version of myself choose?\nIs this realistic?\nWhy might Trying and then Quitting be a bad idea?\n\n\n\n\n\n\n\n\nWe can apply the tools of game theory to this decision:\n\n\nLet’s add future Dante as another player who acts at the second decision node\nFuture Dante is different from Present Dante because he has different preferences:\n\n\\(U_{FD}(\\text{Continue}) = 1\\) because he’s already addicted\n\\(U_{FD}(\\text{Quit}) = -1\\) because withdrawl is painful\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat will Future Carmen choose?\nShould Carmen choose to Try smoking if she knows what her future self would choose?\n\n\n\n\n\n\n\nIf Carmen is forward looking, knows her future self’s preferences, and knows that her future self is rational,\nThen she can eliminate the possibility that her future self would quit.\n\n\nPruning is this type of logic applied to eliminating certain branches in a game tree.\n\n\n\n\n\n\nIf Future Carmen will never choose to Quit smoking once she is already an addict,\n\nwhat choices is Today’s Carmen left with?\n\n\n\nTry knowing that she will continue in the future and get -1 payoff\nor Not try smoking today and earn 0 payoff\n\n\n\n\n\n\nLet’s outline the logical steps we used to solve this game:\n\n\nWe were uncertain about what would happen in this game, because Today’s Carmen’s optimal strategy depended on what Future Carmen woud do\nBut Future Carmen is the last player in this game, so her choice only depends on her own preferences\nKnowing what Future Carmen would choose allowed us to find Today’s Carmen’s best strategy\n\n\n\n\n\n\n\n\nfigures/fig3.5.png\n\n\n\n\nEither crossing off eliminated branches or highlighting chosen branches works\nJust make sure that the order of thinking is clear\n\n\n\n\n\n\nThe method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\n\n… using rollback requires starting to think about what will happen at all the terminal nodes and literally “rolling back” through the tree to the initial node…\n\n\n\n\n\n\nThe method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 2\n\n\n\nWhen all players do rollback analysis to choose their optimal strategies, we call this set of strategies the rollback equilibrium3 of the game; the outcome that arises from playing these strategies is the rollback equilibrium outcome\n\n\n\n\n\n\n\n… notes - If Vivica paid ransom, Guy would rather Release - If Vivica didn’t pay, Guy would rather Kill - Knowing this, Vivica would Pay to avoid Orland being killed - Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando\n\n\n\n\nThe Rollback Equilibrium is:\n\n{ (Kidnap, Release, Kill), (Pay) }\n\n\nYou should read this as:\n\nGuy Kidnaps and will Release if Vivica Pays, but will Kill if Vivica Doesn’t Pay\nVivica Pays the ransom"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#solving-sequential-games",
@@ -151,119 +158,175 @@
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-decision",
     "title": "Backwards Induction",
     "section": "",
-    "text": "graph G {\n    node[shape=box];\n\n    Today_Carmen [label=\"\", color=blue];\n    Future_Carmen [label=\"\", color=black];\n    Try_smoking [label=\"Try smoking\"];\n    Continue [label=\"Continue\", fillcolor=gray, style=filled];\n    Stop_smoking [label=\"Stop smoking\"];\n\n    edge[arrowhead=open, arrowtail=open];\n\n    Today_Carmen -&gt; Try_smoking[label=\"0\"];\n    Try_smoking -&gt; Future_Carmen[label=\"1\"];\n    Future_Carmen -&gt; Continue[label=\"-1\"];\n    Future_Carmen -&gt; Stop_smoking[label=\"+1\"];\n\n    label Justify;\n}"
+    "text": "Do I want to try smoking today?\n\n\nSuppose today I can either Try smoking for the first time, or Not try\n\nIf I choose Try today, then I will have another choice in the future:\n\nContinue smoking, or Quit"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-decision-1",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-decision-1",
+    "title": "Backwards Induction",
+    "section": "",
+    "text": "Let’s create some preferences over the three different outcomes:\n\n\\(U(\\text{\\textbf{Not}}) = 0\\) - I’m no worse off, but don’t get to experience what it’s like\n\\(U(\\text{\\textbf{Try}}\\rightarrow\\text{\\textbf{Quit}}) = 1\\) - I get the experience of smoking without long-term health consequences, etc.\n\\(U(\\text{\\textbf{Try}}\\rightarrow\\text{\\textbf{Continue}}) = -1\\) - I become an addict"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-decision-2",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-decision-2",
+    "title": "Backwards Induction",
+    "section": "",
+    "text": "Let’s model this as a decision tree"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-decision-3",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-decision-3",
+    "title": "Backwards Induction",
+    "section": "",
+    "text": "What would a rational version of myself choose?\nIs this realistic?\nWhy might Trying and then Quitting be a bad idea?"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-game",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-game",
+    "title": "Backwards Induction",
+    "section": "",
+    "text": "We can apply the tools of game theory to this decision:\n\n\nLet’s add future Dante as another player who acts at the second decision node\nFuture Dante is different from Present Dante because he has different preferences:\n\n\\(U_{FD}(\\text{Continue}) = 1\\) because he’s already addicted\n\\(U_{FD}(\\text{Quit}) = -1\\) because withdrawl is painful"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-game-2",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#the-smoking-game-2",
+    "title": "Backwards Induction",
+    "section": "",
+    "text": "What will Future Carmen choose?\nShould Carmen choose to Try smoking if she knows what her future self would choose?"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#pruning-branches",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#pruning-branches",
     "title": "Backwards Induction",
     "section": "",
-    "text": "figures/fig3.4.png"
+    "text": "If Carmen is forward looking, knows her future self’s preferences, and knows that her future self is rational,\nThen she can eliminate the possibility that her future self would quit.\n\n\nPruning is this type of logic applied to eliminating certain branches in a game tree."
   },
   {
-    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#section",
-    "href": "Slides/02SequentialGames/0202-bwdinduct.html#section",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#pruning-branches-1",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#pruning-branches-1",
     "title": "Backwards Induction",
     "section": "",
-    "text": "figures/fig3.5.png"
+    "text": "If Future Carmen will never choose to Quit smoking once she is already an addict,\n\nwhat choices is Today’s Carmen left with?\n\n\n\nTry knowing that she will continue in the future and get -1 payoff\nor Not try smoking today and earn 0 payoff"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#backwards-induction-intuitively",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#backwards-induction-intuitively",
+    "title": "Backwards Induction",
+    "section": "",
+    "text": "Let’s outline the logical steps we used to solve this game:\n\n\nWe were uncertain about what would happen in this game, because Today’s Carmen’s optimal strategy depended on what Future Carmen woud do\nBut Future Carmen is the last player in this game, so her choice only depends on her own preferences\nKnowing what Future Carmen would choose allowed us to find Today’s Carmen’s best strategy"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#smoking-game-solution",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#smoking-game-solution",
+    "title": "Backwards Induction",
+    "section": "",
+    "text": "figures/fig3.5.png\n\n\n\n\nEither crossing off eliminated branches or highlighting chosen branches works\nJust make sure that the order of thinking is clear"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#backwards-induction-defined",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#backwards-induction-defined",
     "title": "Backwards Induction",
     "section": "",
-    "text": "The method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\n\nWhen all players do rollback analysis to choose their optimal strategies, we call this set of strategies the rollback equilibrium2 of the game; the outcome that arises from playing these strategies is the rollback equilibrium outcome"
+    "text": "The method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\n\n… using rollback requires starting to think about what will happen at all the terminal nodes and literally “rolling back” through the tree to the initial node…"
   },
   {
-    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#group-exercise",
-    "href": "Slides/02SequentialGames/0202-bwdinduct.html#group-exercise",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#backwards-induction-defined-1",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#backwards-induction-defined-1",
     "title": "Backwards Induction",
     "section": "",
-    "text": "Consider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.\n\nDraw the extensive form game tree complete with all payoff for both teams.\nHow many total strategies are there for team 1?\nUse pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?"
+    "text": "The method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 2\n\n\n\nWhen all players do rollback analysis to choose their optimal strategies, we call this set of strategies the rollback equilibrium3 of the game; the outcome that arises from playing these strategies is the rollback equilibrium outcome"
   },
   {
-    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#adding-more-players",
-    "href": "Slides/02SequentialGames/0202-bwdinduct.html#adding-more-players",
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#solving-the-kidnapping-game",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#solving-the-kidnapping-game",
     "title": "Backwards Induction",
     "section": "",
-    "text": "We can start to add more complexity with more than two players"
+    "text": "… notes - If Vivica paid ransom, Guy would rather Release - If Vivica didn’t pay, Guy would rather Kill - Knowing this, Vivica would Pay to avoid Orland being killed - Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando"
+  },
+  {
+    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#kidnapping-game-solution",
+    "href": "Slides/02SequentialGames/0202-bwdinduct.html#kidnapping-game-solution",
+    "title": "Backwards Induction",
+    "section": "",
+    "text": "The Rollback Equilibrium is:\n\n{ (Kidnap, Release, Kill), (Pay) }\n\n\nYou should read this as:\n\nGuy Kidnaps and will Release if Vivica Pays, but will Kill if Vivica Doesn’t Pay\nVivica Pays the ransom"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#player-planting-game",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#player-planting-game",
     "title": "Backwards Induction",
-    "section": "",
-    "text": "Emily, Nina, and Talia are roommates who want to get a start on their communal garden.\nThey like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.\n2 or 3 people working is enough to keep the garden healthy, but if 1 or 0 work, then the garden will die."
+    "section": "3-player planting game",
+    "text": "3-player planting game\n\n\nEmily, Nina, and Talia are roommates who want to get a start on their communal garden.\nThey like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.\n2 or 3 people working is enough to keep the garden healthy, but if 1 or 0 work, then the garden will die."
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#planting-game-payoffs",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#planting-game-payoffs",
     "title": "Backwards Induction",
-    "section": "",
-    "text": "outcome:\nutlity:\n\n\n\n\nI don’t contribute, but garden lives\n4\n\n\nI contribute, and get garden.\n3\n\n\nI don’t contribute, and garden dies\n2\n\n\nI contribute, but garden dies\n1"
+    "section": "Planting Game payoffs",
+    "text": "Planting Game payoffs\n\n\n\noutcome:\nutlity:\n\n\n\n\nI don’t contribute, but garden lives\n4\n\n\nI contribute, and get garden.\n3\n\n\nI don’t contribute, and garden dies\n2\n\n\nI contribute, but garden dies\n1"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#planding-game-tree",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#planding-game-tree",
     "title": "Backwards Induction",
-    "section": "",
-    "text": "figures/fig3.6.png"
+    "section": "Planding Game Tree",
+    "text": "Planding Game Tree\n\n\n\nfigures/fig3.6.png"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#equilibrium-path-of-play",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#equilibrium-path-of-play",
     "title": "Backwards Induction",
-    "section": "",
-    "text": "Note that there is one continuous path we traced from the initial node to a final equilibrium outcome.\nHowever, we couldn’t have gotten their without the other arrows paths even though they are never reached in equilibrium.\nRecall that a strategy is a collection of choices at every decision node."
+    "section": "Equilibrium Path of Play",
+    "text": "Equilibrium Path of Play\n\nNote that there is one continuous path we traced from the initial node to a final equilibrium outcome.\nHowever, we couldn’t have gotten their without the other arrows paths even though they are never reached in equilibrium.\nRecall that a strategy is a collection of choices at every decision node."
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#equilibrium-strategies",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#equilibrium-strategies",
     "title": "Backwards Induction",
-    "section": "",
-    "text": "Even though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:\n\n“Nina’s strategy in the rollback equilibrium is { Don’t Contribute at b, Contribute at c }”.\n\n\nTo make it even shorter, let’s call this strategy DC."
+    "section": "Equilibrium Strategies",
+    "text": "Equilibrium Strategies\nEven though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:\n\n“Nina’s strategy in the rollback equilibrium is { Don’t Contribute at b, Contribute at c }”.\n\n\nTo make it even shorter, let’s call this strategy DC."
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#how-many-strategies-does-talia-have",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#how-many-strategies-does-talia-have",
     "title": "Backwards Induction",
-    "section": "",
-    "text": "CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD\n16 total strategies"
+    "section": "How many strategies does Talia have?",
+    "text": "How many strategies does Talia have?\n\n\nCCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD\n16 total strategies"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#rollback-equilibrium-strategies",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#rollback-equilibrium-strategies",
     "title": "Backwards Induction",
-    "section": "",
-    "text": "The equilibrium is:\n\n{ D3, DC4, DCCD5 }"
+    "section": "Rollback Equilibrium Strategies",
+    "text": "Rollback Equilibrium Strategies\nThe equilibrium is:\n\n{ D4, DC5, DCCD6 }"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#adding-more-moves",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#adding-more-moves",
     "title": "Backwards Induction",
-    "section": "",
-    "text": "Even a simple game get complicated fast"
+    "section": "Adding More Moves",
+    "text": "Adding More Moves\nEven a simple game get complicated fast"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#tic-tac-toe",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#tic-tac-toe",
     "title": "Backwards Induction",
-    "section": "",
-    "text": "Even though it looks complicated, the main branches are really just copies of each other\nMost people probably figure out the rollback equilibrium after playing it enough\nInsert relevant xkcd here: https://xkcd.com/832/"
+    "section": "Tic-Tac-Toe",
+    "text": "Tic-Tac-Toe\n\nEven though it looks complicated, the main branches are really just copies of each other\nMost people probably figure out the rollback equilibrium after playing it enough\nInsert relevant xkcd here: https://xkcd.com/832/"
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#chess",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#chess",
     "title": "Backwards Induction",
-    "section": "",
-    "text": "What about more complicated games like chess?\n\ntechnically rollback solvable, but with \\(10^{120}\\) possible moves, it hasn’t been solved by either human or machine\n\nPlayers of complicated sequential games often implement some intermediate valuation function to assign payoffs to non-terminal nodes."
+    "section": "Chess",
+    "text": "Chess\n\nWhat about more complicated games like chess?\n\ntechnically rollback solvable, but with \\(10^{120}\\) possible moves, it hasn’t been solved by either human or machine\n\nPlayers of complicated sequential games often implement some intermediate valuation function to assign payoffs to non-terminal nodes."
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#footnotes",
     "href": "Slides/02SequentialGames/0202-bwdinduct.html#footnotes",
     "title": "Backwards Induction",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nDixit et al, pg 56↩︎\naka subgame perfect equilibrium↩︎\nEmily↩︎\nNina↩︎\nTalia↩︎"
+    "text": "Footnotes\n\n\nDixit et al, pg 56↩︎\nDixit et al, pg 56↩︎\naka subgame perfect equilibrium↩︎\nEmily↩︎\nNina↩︎\nTalia↩︎"
   },
   {
     "objectID": "Slides/02SequentialGames/02-main.html#game-treesextensive-form-as-a-tool",
@@ -468,7 +531,40 @@
     "href": "Slides/02SequentialGames/02-main.html#the-smoking-decision",
     "title": "Introduction to Game Theory",
     "section": "The smoking decision",
-    "text": "The smoking decision\n\ngraph G {\n    node[shape=box];\n\n    Today_Carmen [label=\"\", color=blue];\n    Future_Carmen [label=\"\", color=black];\n    Try_smoking [label=\"Try smoking\"];\n    Continue [label=\"Continue\", fillcolor=gray, style=filled];\n    Stop_smoking [label=\"Stop smoking\"];\n\n    edge[arrowhead=open, arrowtail=open];\n\n    Today_Carmen -&gt; Try_smoking[label=\"0\"];\n    Try_smoking -&gt; Future_Carmen[label=\"1\"];\n    Future_Carmen -&gt; Continue[label=\"-1\"];\n    Future_Carmen -&gt; Stop_smoking[label=\"+1\"];\n\n    label Justify;\n}",
+    "text": "The smoking decision\nDo I want to try smoking today?\n\n\nSuppose today I can either Try smoking for the first time, or Not try\n\nIf I choose Try today, then I will have another choice in the future:\n\nContinue smoking, or Quit",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#the-smoking-decision-1",
+    "href": "Slides/02SequentialGames/02-main.html#the-smoking-decision-1",
+    "title": "Introduction to Game Theory",
+    "section": "The smoking decision",
+    "text": "The smoking decision\nLet’s create some preferences over the three different outcomes:\n\n\\(U(\\text{\\textbf{Not}}) = 0\\) - I’m no worse off, but don’t get to experience what it’s like\n\\(U(\\text{\\textbf{Try}}\\rightarrow\\text{\\textbf{Quit}}) = 1\\) - I get the experience of smoking without long-term health consequences, etc.\n\\(U(\\text{\\textbf{Try}}\\rightarrow\\text{\\textbf{Continue}}) = -1\\) - I become an addict",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#the-smoking-decision-2",
+    "href": "Slides/02SequentialGames/02-main.html#the-smoking-decision-2",
+    "title": "Introduction to Game Theory",
+    "section": "The smoking decision",
+    "text": "The smoking decision\nLet’s model this as a decision tree",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#the-smoking-decision-3",
+    "href": "Slides/02SequentialGames/02-main.html#the-smoking-decision-3",
+    "title": "Introduction to Game Theory",
+    "section": "The smoking decision",
+    "text": "The smoking decision\n\n\n\n\n\n\n\n\n\n\nWhat would a rational version of myself choose?\nIs this realistic?\nWhy might Trying and then Quitting be a bad idea?",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -479,7 +575,29 @@
     "href": "Slides/02SequentialGames/02-main.html#the-smoking-game",
     "title": "Introduction to Game Theory",
     "section": "The smoking game",
+    "text": "The smoking game\nWe can apply the tools of game theory to this decision:\n\n\nLet’s add future Dante as another player who acts at the second decision node\nFuture Dante is different from Present Dante because he has different preferences:\n\n\\(U_{FD}(\\text{Continue}) = 1\\) because he’s already addicted\n\\(U_{FD}(\\text{Quit}) = -1\\) because withdrawl is painful",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#the-smoking-game-1",
+    "href": "Slides/02SequentialGames/02-main.html#the-smoking-game-1",
+    "title": "Introduction to Game Theory",
+    "section": "The smoking game",
     "text": "The smoking game",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#the-smoking-game-2",
+    "href": "Slides/02SequentialGames/02-main.html#the-smoking-game-2",
+    "title": "Introduction to Game Theory",
+    "section": "The smoking game",
+    "text": "The smoking game\n\n\n\n\n\n\n\n\n\n\nWhat will Future Carmen choose?\nShould Carmen choose to Try smoking if she knows what her future self would choose?",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -490,18 +608,40 @@
     "href": "Slides/02SequentialGames/02-main.html#pruning-branches",
     "title": "Introduction to Game Theory",
     "section": "‘Pruning’ branches",
-    "text": "‘Pruning’ branches\n\nfigures/fig3.4.png",
+    "text": "‘Pruning’ branches\nIf Carmen is forward looking, knows her future self’s preferences, and knows that her future self is rational,\nThen she can eliminate the possibility that her future self would quit.\n\n\nPruning is this type of logic applied to eliminating certain branches in a game tree.",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
     ]
   },
   {
-    "objectID": "Slides/02SequentialGames/02-main.html#section",
-    "href": "Slides/02SequentialGames/02-main.html#section",
+    "objectID": "Slides/02SequentialGames/02-main.html#pruning-branches-1",
+    "href": "Slides/02SequentialGames/02-main.html#pruning-branches-1",
     "title": "Introduction to Game Theory",
-    "section": "",
-    "text": "figures/fig3.5.png",
+    "section": "‘Pruning’ branches",
+    "text": "‘Pruning’ branches\nIf Future Carmen will never choose to Quit smoking once she is already an addict,\n\nwhat choices is Today’s Carmen left with?\n\n\n\nTry knowing that she will continue in the future and get -1 payoff\nor Not try smoking today and earn 0 payoff",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#backwards-induction-intuitively",
+    "href": "Slides/02SequentialGames/02-main.html#backwards-induction-intuitively",
+    "title": "Introduction to Game Theory",
+    "section": "Backwards Induction (intuitively)",
+    "text": "Backwards Induction (intuitively)\nLet’s outline the logical steps we used to solve this game:\n\n\nWe were uncertain about what would happen in this game, because Today’s Carmen’s optimal strategy depended on what Future Carmen woud do\nBut Future Carmen is the last player in this game, so her choice only depends on her own preferences\nKnowing what Future Carmen would choose allowed us to find Today’s Carmen’s best strategy",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#smoking-game-solution",
+    "href": "Slides/02SequentialGames/02-main.html#smoking-game-solution",
+    "title": "Introduction to Game Theory",
+    "section": "Smoking Game Solution",
+    "text": "Smoking Game Solution\n\nfigures/fig3.5.png\n\nEither crossing off eliminated branches or highlighting chosen branches works\nJust make sure that the order of thinking is clear",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
@@ -512,6 +652,17 @@
     "href": "Slides/02SequentialGames/02-main.html#backwards-induction-defined",
     "title": "Introduction to Game Theory",
     "section": "Backwards Induction defined",
+    "text": "Backwards Induction defined\nThe method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\n… using rollback requires starting to think about what will happen at all the terminal nodes and literally “rolling back” through the tree to the initial node…\n\n\n\nDixit et al, pg 56",
+    "crumbs": [
+      "Slides",
+      "Introduction to Game Theory"
+    ]
+  },
+  {
+    "objectID": "Slides/02SequentialGames/02-main.html#backwards-induction-defined-1",
+    "href": "Slides/02SequentialGames/02-main.html#backwards-induction-defined-1",
+    "title": "Introduction to Game Theory",
+    "section": "Backwards Induction defined",
     "text": "Backwards Induction defined\nThe method of looking at decisions in the future to decide what to do now is called Backwards Induction or Rollback\n\n\n\n\n\n\nDefinition 1\n\n\nWhen all players do rollback analysis to choose their optimal strategies, we call this set of strategies the rollback equilibrium2 of the game; the outcome that arises from playing these strategies is the rollback equilibrium outcome\n\n\n\nDixit et al, pg 56aka subgame perfect equilibrium",
     "crumbs": [
       "Slides",
@@ -519,22 +670,22 @@
     ]
   },
   {
-    "objectID": "Slides/02SequentialGames/02-main.html#group-exercise",
-    "href": "Slides/02SequentialGames/02-main.html#group-exercise",
+    "objectID": "Slides/02SequentialGames/02-main.html#solving-the-kidnapping-game",
+    "href": "Slides/02SequentialGames/02-main.html#solving-the-kidnapping-game",
     "title": "Introduction to Game Theory",
-    "section": "Group Exercise:",
-    "text": "Group Exercise:\nConsider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.\n\nDraw the extensive form game tree complete with all payoff for both teams.\nHow many total strategies are there for team 1?\nUse pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?",
+    "section": "Solving the Kidnapping Game",
+    "text": "Solving the Kidnapping Game\n\n… notes - If Vivica paid ransom, Guy would rather Release - If Vivica didn’t pay, Guy would rather Kill - Knowing this, Vivica would Pay to avoid Orland being killed - Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
     ]
   },
   {
-    "objectID": "Slides/02SequentialGames/02-main.html#adding-more-players",
-    "href": "Slides/02SequentialGames/02-main.html#adding-more-players",
+    "objectID": "Slides/02SequentialGames/02-main.html#kidnapping-game-solution",
+    "href": "Slides/02SequentialGames/02-main.html#kidnapping-game-solution",
     "title": "Introduction to Game Theory",
-    "section": "Adding more players",
-    "text": "Adding more players\nWe can start to add more complexity with more than two players",
+    "section": "Kidnapping Game Solution",
+    "text": "Kidnapping Game Solution\nThe Rollback Equilibrium is:\n\n{ (Kidnap, Release, Kill), (Pay) }\n\n\nYou should read this as:\n\nGuy Kidnaps and will Release if Vivica Pays, but will Kill if Vivica Doesn’t Pay\nVivica Pays the ransom",
     "crumbs": [
       "Slides",
       "Introduction to Game Theory"
