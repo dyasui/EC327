@@ -193,373 +193,43 @@ window.Quarto = {
 
 
 
-<section id="backwards-induction" class="level1">
-<h1>Backwards Induction</h1>
-<section id="solving-sequential-games" class="level2">
-<h2 class="anchored" data-anchor-id="solving-sequential-games">Solving Sequential Games</h2>
-<p>Now that we have defined all the parts of what a sequential game is we can start to <em>solve</em> them.</p>
-<p>. . .</p>
-<ul>
-<li>A solution in our case will be a prediction of what rational agents would do in a sequential game</li>
-</ul>
-<hr>
-</section>
-<section id="the-smoking-decision" class="level2">
-<h2 class="anchored" data-anchor-id="the-smoking-decision">The smoking decision</h2>
-<p>Do I want to try smoking today?</p>
-<div class="incremental">
-<blockquote class="blockquote">
-<p>Suppose today I can either <span class="h">Try</span> smoking for the first time, or <span class="h">Not</span> try</p>
-</blockquote>
-<p>If I choose <span class="h">Try</span> today, then I will have another choice in the <em>future</em>:</p>
-<blockquote class="blockquote">
-<p><span class="h">Continue</span> smoking, or <span class="h">Quit</span></p>
-</blockquote>
-</div>
-</section>
-<section id="the-smoking-decision-1" class="level2">
-<h2 class="anchored" data-anchor-id="the-smoking-decision-1">The smoking decision</h2>
-<p>Let’s create some preferences over the three different outcomes:</p>
-<ul>
-<li><p><span class="math inline">\(U(\text{Not}) = 0\)</span> - I’m no worse off, but don’t get to experience what it’s like</p></li>
-<li><p><span class="math inline">\(U(\text{Try}\rightarrow\textbf{Quit}) = 1\)</span> - I get the experience of smoking without long-term health consequences, etc.</p></li>
-<li><p><span class="math inline">\(U(\text{Try}\rightarrow\textbf{Continue}) = -1\)</span> - I become an addict</p></li>
-</ul>
-</section>
-<section id="the-smoking-decision-2" class="level2">
-<h2 class="anchored" data-anchor-id="the-smoking-decision-2">The smoking decision</h2>
-<p>Let’s model this as a <em>decision tree</em> <img src="figures/fig3.2.png" class="img-fluid"></p>
-<hr>
-</section>
-<section id="the-smoking-decision-3" class="level2">
-<h2 class="anchored" data-anchor-id="the-smoking-decision-3">The smoking decision</h2>
+<section id="order-advantages" class="level1">
+<h1>Order Advantages</h1>
+<section id="order-advantages-1" class="level2">
+<h2 class="anchored" data-anchor-id="order-advantages-1">Order Advantages</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig3.2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="incremental">
-<ul class="incremental">
-<li><p>What would a <em>rational</em> version of myself choose?</p></li>
-<li><p>Is this realistic?</p></li>
-<li><p>Why might Trying and then Quitting be a bad idea?</p></li>
-</ul>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="the-smoking-game" class="level2">
-<h2 class="anchored" data-anchor-id="the-smoking-game">The smoking <em>game</em></h2>
-<p>We can apply the tools of game theory to this decision:</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>Let’s add <em>future Dante</em> as another player who acts at the second decision node</p></li>
-<li><p>Future Dante is different from <em>Present Dante</em> because he has different preferences:</p>
-<ul class="incremental">
-<li><p><span class="math inline">\(U_{FD}(\text{Continue}) = 1\)</span> because he’s already addicted</p></li>
-<li><p><span class="math inline">\(U_{FD}(\text{Quit}) = -1\)</span> because withdrawl is painful</p></li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="the-smoking-game-1" class="level2">
-<h2 class="anchored" data-anchor-id="the-smoking-game-1">The smoking <em>game</em></h2>
-<p><img src="figures/fig3.3.png" class="img-fluid"></p>
-<hr>
-</section>
-<section id="the-smoking-game-2" class="level2">
-<h2 class="anchored" data-anchor-id="the-smoking-game-2">The smoking <em>game</em></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig3.3.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="incremental">
-<ul class="incremental">
-<li><p>What will Future Carmen choose?</p></li>
-<li><p>Should Carmen choose to Try smoking <em>if she knows what her future self would choose?</em></p></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="pruning-branches" class="level2">
-<h2 class="anchored" data-anchor-id="pruning-branches">‘Pruning’ branches</h2>
-<p>If Carmen is <em>forward looking</em>, knows her <em>future self’s preferences</em>, and knows that her future self is <em>rational</em>,</p>
-<p>Then she can eliminate the possibility that her future self would quit.</p>
-<div class="incremental">
-<ul class="incremental">
-<li><span class="hi">Pruning</span> is this type of logic applied to eliminating certain branches in a game tree.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="pruning-branches-1" class="level2">
-<h2 class="anchored" data-anchor-id="pruning-branches-1">‘Pruning’ branches</h2>
-<p>If Future Carmen will never choose to Quit smoking once she is already an addict,</p>
-<blockquote class="blockquote">
-<p>what choices is <strong>Today’s Carmen</strong> left with?</p>
-</blockquote>
-<div class="incremental">
-<ul class="incremental">
-<li><p><span class="h">Try</span> knowing that she will continue in the future and get -1 payoff</p></li>
-<li><p>or <span class="h">Not</span> try smoking today and earn 0 payoff</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="backwards-induction-intuitively" class="level2">
-<h2 class="anchored" data-anchor-id="backwards-induction-intuitively">Backwards Induction (intuitively)</h2>
-<p>Let’s outline the logical steps we used to solve this game:</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>We were uncertain about what would happen in this game, because <strong>Today’s Carmen</strong>’s optimal strategy depended on what <strong>Future Carmen</strong> woud do</p></li>
-<li><p>But <strong>Future Carmen</strong> is the last player in this game, so her choice only depends on her <em>own preferences</em></p></li>
-<li><p>Knowing what <strong>Future Carmen</strong> would choose allowed us to find <strong>Today’s Carmen</strong>’s best strategy</p></li>
-</ul>
-</div>
-</section>
-<section id="smoking-game-solution" class="level2">
-<h2 class="anchored" data-anchor-id="smoking-game-solution">Smoking Game Solution</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig3.5.png" class="img-fluid figure-img"></p>
-<figcaption>figures/fig3.5.png</figcaption>
-</figure>
-</div>
-<div class="notes">
-<ul>
-<li>Either crossing off eliminated branches or highlighting chosen branches works</li>
-<li>Just make sure that the order of thinking is clear</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="backwards-induction-defined" class="level2">
-<h2 class="anchored" data-anchor-id="backwards-induction-defined">Backwards Induction defined</h2>
-<p>The method of looking at decisions in the future to decide what to do now is called <span class="h">Backwards Induction</span> or <span class="h">Rollback</span></p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Definition <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>… using <span class="h">rollback</span> requires starting to think about what will happen at all the terminal nodes and literally “rolling back” through the tree to the initial node…</p>
-</div>
-</div>
-<hr>
-</section>
-<section id="backwards-induction-defined-1" class="level2">
-<h2 class="anchored" data-anchor-id="backwards-induction-defined-1">Backwards Induction defined</h2>
-<p>The method of looking at decisions in the future to decide what to do now is called <span class="h">Backwards Induction</span> or <span class="h">Rollback</span></p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Definition <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>When all players do <em>rollback analysis</em> to choose their optimal strategies, we call this set of strategies the <span class="h"><em>rollback equilibrium</em></span><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> of the game; the outcome that arises from playing these strategies is the <span class="hi"><em>rollback equilibrium outcome</em></span></p>
-</div>
-</div>
-<hr>
-</section>
-<section id="solving-the-kidnapping-game" class="level2">
-<h2 class="anchored" data-anchor-id="solving-the-kidnapping-game">Solving the Kidnapping Game</h2>
-<p><img src="figures/kidnapgame.png" class="img-fluid"></p>
-<div class="notes">
-<ul>
-<li>If Vivica paid ransom, Guy would rather Release</li>
-<li>If Vivica didn’t pay, Guy would rather Kill</li>
-<li>Knowing this, Vivica would Pay to avoid Orland being killed</li>
-<li>Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="kidnapping-game-solution" class="level2">
-<h2 class="anchored" data-anchor-id="kidnapping-game-solution">Kidnapping Game Solution</h2>
-<p>The <span class="h">Rollback Equilibrium</span> is:</p>
-<ul>
-<li><strong>{</strong> (<span class="red">Kidnap</span>, <span class="red">Release</span>, <span class="red">Kill</span>), (<span class="blue">Pay</span>) <strong>}</strong></li>
-</ul>
-<div class="incremental">
-<p>You should read this as:</p>
-<ul class="incremental">
-<li><p>Guy <span class="red">Kidnaps</span> and will <span class="red">Release</span> if Vivica <span class="blue">Pays</span>, but will <span class="red">Kill</span> if Vivica <span class="blue">Doesn’t Pay</span></p></li>
-<li><p>Vivica <span class="blue">Pays</span> the ransom</p></li>
-</ul>
-</div>
-</section>
-</section>
-<section id="adding-more-players" class="level1">
-<h1>Adding more players</h1>
-<section id="player-planting-game" class="level2">
-<h2 class="anchored" data-anchor-id="player-planting-game">3-player planting game</h2>
-<div class="incremental">
-<ul class="incremental">
-<li><p><span class="hi">Emily</span>, <span class="hi">Nina</span>, and <span class="hi">Talia</span> are roommates who want to get a start on their communal garden.</p></li>
-<li><p>They like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.</p></li>
-<li><p><strong>2 or 3 people</strong> working is enough to keep the garden healthy, but if <strong>1 or 0</strong> work, then the garden will die.</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="planting-game-payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="planting-game-payoffs">Planting Game payoffs</h2>
-<table class="table">
-<thead>
-<tr class="header">
-<th>outcome:</th>
-<th>utlity:</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>I don’t contribute, but garden lives</td>
-<td>4</td>
-</tr>
-<tr class="even">
-<td>I contribute, and get garden.</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>I don’t contribute, and garden dies</td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>I contribute, but garden dies</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="planting-game-tree" class="level2">
-<h2 class="anchored" data-anchor-id="planting-game-tree">Planting Game Tree</h2>
-<p><img src="figures/plantinggame.png" class="img-fluid"></p>
-<hr>
-</section>
-<section id="rollback-in-the-planting-game" class="level2">
-<h2 class="anchored" data-anchor-id="rollback-in-the-planting-game">Rollback in the Planting Game</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img src="figures/plantinggame.png" class="img-fluid"></p>
-</div><div class="column" style="width:50%;">
-<div class="incremental">
-<p>Who should we start with to solve this game?</p>
-<ul class="incremental">
-<li>Talia, because she is the last one to move, her choices don’t depend on other players</li>
-</ul>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="rollback-in-the-planting-game-1" class="level2">
-<h2 class="anchored" data-anchor-id="rollback-in-the-planting-game-1">Rollback in the Planting Game</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img src="figures/plantinggame.png" class="img-fluid"></p>
-</div><div class="column" style="width:50%;">
-<div class="incremental">
-<p>How many strategies does Talia have?</p>
-<ul class="incremental">
-<li><p>16 total complete strategies</p></li>
-<li><p>CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD</p></li>
-</ul>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="rollback-in-the-planting-game-2" class="level2">
-<h2 class="anchored" data-anchor-id="rollback-in-the-planting-game-2">Rollback in the Planting Game</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img src="figures/plantinggame_1.png" class="img-fluid"></p>
-</div><div class="column" style="width:50%;">
-<div class="incremental">
-<p>Which of Talia’s strategies can be eliminated as <em>irrational</em>?</p>
-<ul class="incremental">
-<li>Any which include an action which would lead to a lower payoff than another possible action at the same node</li>
-</ul>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="rollback-in-the-planting-game-3" class="level2">
-<h2 class="anchored" data-anchor-id="rollback-in-the-planting-game-3">Rollback in the Planting Game</h2>
-<p>Let’s simplify the game by pruning Talia’s eliminated branches</p>
-<p><img src="figures/plantinggame_1.png" class="img-fluid"></p>
-<div class="notes">
-<ul>
-<li>Draw new tree on board with only Emily and Nina’s branches,
-<ul>
-<li>replace Talia’s decision nodes with new terminal nodes with payoffs corresponding to non-pruned end branches</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="rollback-in-the-planting-game-4" class="level2">
-<h2 class="anchored" data-anchor-id="rollback-in-the-planting-game-4">Rollback in the Planting Game</h2>
 <p><img src="figures/fig3.6.png" class="img-fluid"></p>
-<hr>
-</section>
-<section id="equilibrium-path-of-play" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium-path-of-play">Equilibrium Path of Play</h2>
-<div class="incremental">
-<p>Note that there is one continuous path we traced from the initial node to a final equilibrium outcome.</p>
-<p>However, we couldn’t have gotten their without the other arrows paths <strong>even though they are never reached</strong> in equilibrium.</p>
-<p>Recall that a <span class="hi">strategy</span> is a collection of choices at <strong>every</strong> decision node.</p>
+</div><div class="column" style="width:50%;">
+<p>Who came out ahead in the Planting Game?</p>
+<ul>
+<li>Why?</li>
+</ul>
+</div>
 </div>
 <hr>
 </section>
-<section id="equilibrium-strategies" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium-strategies">Equilibrium Strategies</h2>
-<p>Even though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:</p>
-<blockquote class="blockquote">
-<p>“Nina’s <strong>strategy</strong> in the rollback equilibrium is { <span class="hii"><em>Don’t Contribute</em></span> at <span class="hi">b</span>, <span class="hii"><em>Contribute</em></span> at <span class="hi">c</span> }”.</p>
-</blockquote>
-<ul>
-<li>To make it even shorter, let’s call this strategy <span class="hii">DC</span>.</li>
+<section id="first-mover-advantage" class="level2">
+<h2 class="anchored" data-anchor-id="first-mover-advantage">First-mover advantage</h2>
+<p>Emily received her best outcome of 4 because she can take advantage of acting first.</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>When a game favors those who act first, we say there is a <span class="hi">first-mover advantage</span></p></li>
+<li><p>But it’s not always helpful to act first!</p></li>
 </ul>
+</div>
 <hr>
 </section>
-<section id="rollback-equilibrium-strategies" class="level2">
-<h2 class="anchored" data-anchor-id="rollback-equilibrium-strategies">Rollback Equilibrium Strategies</h2>
-<p>The equilibrium is:</p>
-<ul>
-<li>{ <span class="hi">D</span><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, <span class="hi">DC</span><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, <span class="hi">DCCD</span><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> }</li>
+<section id="second-mover-advantage" class="level2">
+<h2 class="anchored" data-anchor-id="second-mover-advantage">Second-mover advantage</h2>
+<p>Sometimes you want to see the actions of others before you know your best response</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>When a game favors those who decide after another player, there is a <span class="hi">second-mover advantage</span></p></li>
+<li><p>For example, <a href="https://youtu.be/Kyjms3DLXAE">Squid Game bridge</a> game</p></li>
 </ul>
+</div>
 <hr>
-</section>
-<section id="three-new-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="three-new-concepts">Three new concepts</h2>
-<ol type="1">
-<li><p>A list of <em>available strategies</em> for each player <a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p></li>
-<li><p>An <em>optimal strategy</em> for each player</p>
-<ul>
-<li>A complete plan of action states a player’s best choice at each node where she <em>could</em> make a decision <a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></li>
-</ul></li>
-<li><p>The path of play in <span class="hi">rollback equilibrium</span> which combines optimal strategies for all players</p></li>
-</ol>
 </section>
 </section>
 <section id="adding-more-moves" class="level1">
@@ -596,20 +266,7 @@ Definition <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><s
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Dixit et al, pg 56<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Dixit et al, pg 56<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>aka subgame perfect equilibrium<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Emily<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>Nina<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>Talia<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>could be very long<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>even if never reached in equilibrium<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
