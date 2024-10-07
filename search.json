@@ -1805,39 +1805,6 @@
     ]
   },
   {
-    "objectID": "Slides/02SequentialGames/02-main.html#even-a-simple-game-get-complicated-fast",
-    "href": "Slides/02SequentialGames/02-main.html#even-a-simple-game-get-complicated-fast",
-    "title": "Introduction to Game Theory",
-    "section": "Even a simple game get complicated fast]",
-    "text": "Even a simple game get complicated fast]",
-    "crumbs": [
-      "Slides",
-      "Sequential Games"
-    ]
-  },
-  {
-    "objectID": "Slides/02SequentialGames/02-main.html#tic-tac-toe",
-    "href": "Slides/02SequentialGames/02-main.html#tic-tac-toe",
-    "title": "Introduction to Game Theory",
-    "section": "Tic-Tac-Toe",
-    "text": "Tic-Tac-Toe\n\nEven though it looks complicated, the main branches are really just copies of each other\nMost people probably figure out the rollback equilibrium after playing it enough\nInsert relevant xkcd here: https://xkcd.com/832/",
-    "crumbs": [
-      "Slides",
-      "Sequential Games"
-    ]
-  },
-  {
-    "objectID": "Slides/02SequentialGames/02-main.html#chess",
-    "href": "Slides/02SequentialGames/02-main.html#chess",
-    "title": "Introduction to Game Theory",
-    "section": "Chess",
-    "text": "Chess\n\nWhat about more complicated games like chess?\n\ntechnically rollback solvable, but with \\(10^{120}\\) possible moves, it hasn’t been solved by either human or machine\n\nPlayers of complicated sequential games often implement some intermediate valuation function to assign payoffs to non-terminal nodes.",
-    "crumbs": [
-      "Slides",
-      "Sequential Games"
-    ]
-  },
-  {
     "objectID": "Slides/02SequentialGames/02-main.html#pareto-dominance",
     "href": "Slides/02SequentialGames/02-main.html#pareto-dominance",
     "title": "Introduction to Game Theory",
@@ -1937,8 +1904,8 @@
     ]
   },
   {
-    "objectID": "Slides/02SequentialGames/02-main.html#even-a-simple-game-get-complicated-fast-1",
-    "href": "Slides/02SequentialGames/02-main.html#even-a-simple-game-get-complicated-fast-1",
+    "objectID": "Slides/02SequentialGames/02-main.html#even-a-simple-game-get-complicated-fast",
+    "href": "Slides/02SequentialGames/02-main.html#even-a-simple-game-get-complicated-fast",
     "title": "Introduction to Game Theory",
     "section": "Even a simple game get complicated fast]",
     "text": "Even a simple game get complicated fast]",
@@ -1948,8 +1915,8 @@
     ]
   },
   {
-    "objectID": "Slides/02SequentialGames/02-main.html#tic-tac-toe-1",
-    "href": "Slides/02SequentialGames/02-main.html#tic-tac-toe-1",
+    "objectID": "Slides/02SequentialGames/02-main.html#tic-tac-toe",
+    "href": "Slides/02SequentialGames/02-main.html#tic-tac-toe",
     "title": "Introduction to Game Theory",
     "section": "Tic-Tac-Toe",
     "text": "Tic-Tac-Toe\n\nEven though it looks complicated, the main branches are really just copies of each other\nMost people probably figure out the rollback equilibrium after playing it enough\nInsert relevant xkcd here: https://xkcd.com/832/",
@@ -1959,8 +1926,8 @@
     ]
   },
   {
-    "objectID": "Slides/02SequentialGames/02-main.html#chess-1",
-    "href": "Slides/02SequentialGames/02-main.html#chess-1",
+    "objectID": "Slides/02SequentialGames/02-main.html#chess",
+    "href": "Slides/02SequentialGames/02-main.html#chess",
     "title": "Introduction to Game Theory",
     "section": "Chess",
     "text": "Chess\n\nWhat about more complicated games like chess?\n\ntechnically rollback solvable, but with \\(10^{120}\\) possible moves, it hasn’t been solved by either human or machine\n\nPlayers of complicated sequential games often implement some intermediate valuation function to assign payoffs to non-terminal nodes.\n\n\n\n\n\nEC327 | Lecture 2 | Sequential Games",
@@ -2164,27 +2131,6 @@
     "title": "Backwards Induction",
     "section": "Three new concepts",
     "text": "Three new concepts\n\nA list of available strategies for each player 7\nAn optimal strategy for each player\n\nA complete plan of action states a player’s best choice at each node where she could make a decision 8\n\nThe path of play in rollback equilibrium which combines optimal strategies for all players"
-  },
-  {
-    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#even-a-simple-game-get-complicated-fast",
-    "href": "Slides/02SequentialGames/0202-bwdinduct.html#even-a-simple-game-get-complicated-fast",
-    "title": "Backwards Induction",
-    "section": "Even a simple game get complicated fast]",
-    "text": "Even a simple game get complicated fast]"
-  },
-  {
-    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#tic-tac-toe",
-    "href": "Slides/02SequentialGames/0202-bwdinduct.html#tic-tac-toe",
-    "title": "Backwards Induction",
-    "section": "Tic-Tac-Toe",
-    "text": "Tic-Tac-Toe\n\nEven though it looks complicated, the main branches are really just copies of each other\nMost people probably figure out the rollback equilibrium after playing it enough\nInsert relevant xkcd here: https://xkcd.com/832/"
-  },
-  {
-    "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#chess",
-    "href": "Slides/02SequentialGames/0202-bwdinduct.html#chess",
-    "title": "Backwards Induction",
-    "section": "Chess",
-    "text": "Chess\n\nWhat about more complicated games like chess?\n\ntechnically rollback solvable, but with \\(10^{120}\\) possible moves, it hasn’t been solved by either human or machine\n\nPlayers of complicated sequential games often implement some intermediate valuation function to assign payoffs to non-terminal nodes."
   },
   {
     "objectID": "Slides/02SequentialGames/0202-bwdinduct.html#footnotes",
