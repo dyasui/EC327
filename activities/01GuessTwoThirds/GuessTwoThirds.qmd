@@ -11,17 +11,26 @@ name: GuessTwoThirds
 :::
 ---
 
-## Activity 1
+## Results
+
+![](01GuessTwoThirds/histogram_1.png)
+
+---
+
+## Results from Winter 2024
+
+![](01GuessTwoThirds/histogram.png)
+
+---
+
+## Discussion
 
 ::: {.incremental}
+  - Knowing the results, how would you change your strategies?
   - This is a simple example, but illustrates how complicated strategic reasoning can be.
   - The theoretical solution to this game says that anyone who is *rational* and knows that *everyone else is rational* (Common Knowledge of Rationality) should only choose 0 or 1. 
   - However, [Nagel, R. (1995), "*Unravelling in guessing games : An experimental study*"](https://www.jstor.org/stable/2950991) showed that over 12,000 answers, the average is 35.24.
   - Is Common Knowledge of Rationality a 'bad' assumption? How can we connect our theories with experimental evidence?
 :::
 
-::: notes
-  * discuss different types of approaches people took
-  * how would they revise guess 2nd time?
-:::
 ---

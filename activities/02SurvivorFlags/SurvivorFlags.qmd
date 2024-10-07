@@ -14,28 +14,39 @@ https://youtu.be/aonCsvi0LKc
 
 ```{r}
 #| warning: false
-#| eval: false
+#| echo: false
 library(tidyverse)
 
-names <- read_csv("EC327names.csv") %>% select(First, Last)
+names <- read_csv("EC327names.csv") %>% select(First, Last) %>%
+  # combine first and last names
+  unite(name, c(First, Last), sep = " ", remove = TRUE) %>%
+  # shorten last names to initial
+  mutate(name = sub("(\\w+)\\s(\\w)\\w+", "\\1 \\2.", name))
+
 n = nrow(names)
-group_size = 4
-num_groups = round(n/4)
+group_size = 3
+num_groups = round(n/group_size)
 
 # set seed to make group selection consistent across sessions
 set.seed(2024)
 # assign groups and make a table
 names %>%
-  mutate(Group = sample(1:num_groups, n, replace = TRUE)) %>%
+  mutate(
+         row_number = row_number(),
+         Group = sample(rep_len(1:num_groups, n), n, replace = FALSE)
+         ) %>%
+  arrange(Group, row_number) %>%  # Sort by group and then row number
+  select(-row_number) %>%  # Remove temporary row_number column
   group_by(Group) %>%
-  summarise(names = list((First))) %>%
-  pivot_wider(names_from = Group, values_from = names) %>%
+  mutate(row = row_number()) %>%
+  pivot_wider(names_from = Group, values_from = name, names_prefix = "Group") %>%
+  ungroup() %>%
+  select(-row) %>%
   knitr::kable()
 
 ```
 
 ---
-
 
 ## Set Up
 
@@ -55,6 +66,18 @@ names %>%
   
 :::
   
+---
+
+## Record your Data!
+
+[Google Sheet](https://docs.google.com/spreadsheets/d/13rOHLWJa--0BuvfI83pGdGWFFANsx1gNkx3TJl3A8ek/edit?usp=sharing)
+
+  * Check the first sheet for an example of how to record your data
+
+  * Find a free sheet at the bottom of the page
+
+  * Ask me if something doesn't make sense!
+
 ---
 
 ## Modified Rules: choose number of flags to start

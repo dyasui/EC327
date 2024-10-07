@@ -12,15 +12,16 @@ website:
     contents: 
       - section: "Slides"
         contents:
-          - Slides/01Intro/01-main.qmd
-          - Slides/02SequentialGames/02-main.qmd
-          - Slides/03SimultaneousGames/03-main.qmd
+          - text: "Introduction"
+            href: Slides/01Intro/01-main.qmd
+          - text: "Sequential Games"
+            href: Slides/02SequentialGames/02-main.qmd
       - section: "Activities"
         contents: 
-          - activities/01GuessTwoThirds/GuessTwoThirds.qmd
-      - section: "Homework"
-        contents: 
-          - Homework/assignment1/main.pdf
+          - text: "Guessing Two Thirds of the Average"
+            href: activities/01GuessTwoThirds/GuessTwoThirds.qmd
+          - text: "Survivor Flags"
+            href: activities/02SurvivorFlags/SurvivorFlags.qmd
 
 page-footer:
   right: "This page is built with [Quarto](https://quarto.org/)."
