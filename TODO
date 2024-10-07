@@ -1,2 +1,18 @@
-Send announcement w/ github link
-Ask about which day for midterm on intro quiz
+## Slides:
+
+### 02SequentialGames:
+  - [ ] Clean up Planting Game slides in adding more players section
+    - [ ] summary slide w/ four distinct concepts from Dixit pg. 62
+  - [ ] Add order advantages section (short?)
+  - [ ] Flesh out adding more moves section
+    - what's the point of checkers and chess examples?
+  - [ ] Add Evidence concerning rollback section (Probably save for Thursay centipede game)
+  - [ ] Add examples section to work through solving simple ext. form games from textbook
+
+### 03SimultaneousGames:
+  - [ ] Outline construction of game table/matrix more carefully 
+  - [ ] flesh out all sections from book material
+
+### 04CombiningForms: 
+  - [ ] convert beamer slides to quarto
+  - [ ] Follow chapter 6 of Dixit more carefully

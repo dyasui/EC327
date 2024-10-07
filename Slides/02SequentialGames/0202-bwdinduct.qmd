@@ -213,7 +213,6 @@ You should read this as:
   - Vivica [Pays]{.blue} the ransom
 :::
 
----
 
 # Adding more players
 
