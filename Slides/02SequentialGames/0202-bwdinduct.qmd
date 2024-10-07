@@ -190,11 +190,13 @@ When all players do *rollback analysis* to choose their optimal strategies, we c
 
 ![](figures/kidnapgame.png)
 
-... notes
+::: notes
   - If Vivica paid ransom, Guy would rather Release
   - If Vivica didn't pay, Guy would rather Kill
   - Knowing this, Vivica would Pay to avoid Orland being killed
   - Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando
+:::
+
 ---
 
 ## Kidnapping Game Solution
