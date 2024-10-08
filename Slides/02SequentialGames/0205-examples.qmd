@@ -1,0 +1,54 @@
+# Examples
+
+## Dixit Chapter 3: question U4
+
+> Two distinct proposals, A and B, are being debated in Washington. Congress likes proposal A, and the president likes proposal B.
+
+| Outcome | Congress | President |
+|---------|----------|-----------|
+| A becomes law | 4 | 1 |
+| B becomes law | 1 | 4 |
+| Both A and B become law | 3 | 3 |
+| Neither (status quo prevails) | 2 | 2 |
+
+---
+
+## Dixit Chapter 3: question U4
+
+> The moves in the game are as follows. First, Congress decides whether to pass a bill and whether the bill is to contain A or B or both. Then the president decides whether to sign or veto the bill. Congress does not have enough votes to override a veto. Draw a tree for this game and find the rollback equilibrium.
+
+---
+
+## Dixit Chapter 3: question U4
+
+> Now suppose the rules of the game are changed in only one respect: the president is given the extra power of a line-item veto. Thus, if Congress passes a bill containing both A and B, the president may choose not only to sign or veto the bill as a whole, but also to veto just one of the two items. Show the new tree and find the rollback equilibrium.
+
+---
+
+## Harrington Chapter 8: question 4
+
+:::: {.columns}
+::: {.column width="60%"}
+![](figures/Harrington-figPR8.4.png)
+:::
+::: {.column width="40%"}
+> "Laws too gentle are seldom obeyed; too severe, seldom executed"
+>
+> - Benjamin Franklin
+:::
+::::
+
+---
+
+## Harrington Chapter 8: question 4
+
+:::: {.columns}
+::: {.column width="60%"}
+![](figures/Harrington-figPR8.4.png)
+:::
+::: {.column width="40%"}
+What values of `a-l` make the lawmaker choose a [*Moderate*]{.blue} penalty?
+:::
+::::
+
+---

@@ -40,4 +40,6 @@ library(tidyverse)
 
 {{< include 0204-ordermatters.qmd >}}
 
-{{< include 0205-evidence.qmd >>}}
+{{< include 0205-examples.qmd >}}
+
+{{< include 0206-evidence.qmd >}}

@@ -119,3 +119,17 @@ Do all games have theoretical solutions?
   * and on some partial rollback, or an [intermediate valuation function]{.hi}, where you look at all possibilities in the next few moves and assign probabilistic payoffs
 
 :::
+
+## Theory in complicated situations
+
+Is rollback still useful for complicated games where the theoretical solutions are infeasible to solve?
+
+::: {.incremental}
+
+>Yes!
+
+  * Understanding simpler games can help you develop intuition for solving more complicated ones
+
+  * Complicated games can be decomposed into smaller parts where solving is easier
+
+:::
