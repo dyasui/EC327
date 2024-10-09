@@ -3,17 +3,21 @@
 ################################################################################
 #
 # load packages
-library(dplyr)
-library(readr)
-library(tidyr)
-library(tibble)
-library(ggplot2)
-library(viridis)
-library(ggthemes)
-library(paletteer)
+library(tidyverse)
 
 # get results from csv
-results_df <- read_csv("activities/02SurvivorFlags/Results.csv")
+results_W2024 <- read_csv("SurvivorResults - W2024.csv") %>%
+  select(game, match_id, round, flagsleft) %>% 
+  mutate(term = "W2024")
+results_F2024 <- read_csv("SurvivorResults - F2024.csv") %>% 
+  select(game, match_id, round, flagsleft) %>%
+  mutate(
+    term = "F2024",
+    start_rule = 21
+  )
+
+results_df <-
+  bind_rows(results_F2024, results_W2024)
 
 # rollback solution is first team always leaves multiple of 4 flags
 solution = tibble(
@@ -24,38 +28,46 @@ solution = tibble(
   )
 
 # Plot Game 1 results against backwards induction solution
-results_df %>% filter(game==1) %>% 
-  ggplot() +
-  geom_point( # plot rollback solution
-    data = solution,
-    aes(x = round, y = flagsleft),
-    shape = 0, size = 4) +
-  geom_line(
-    aes(x = round, y = flagsleft, 
-        group = match_id, color=as.factor(match_id)),
-    linetype = "dashed", linewidth = .5, alpha = .5
-  ) +
-  # geom_step(
-  #   aes(x = round, y = flagsleft, group = match_id, color=as.factor(match_id)),
-  #   direction = "vh", linetype = "solid", linewidth = .5, alpha = .5
-  # ) +
-  geom_point( # flags left at end
-    aes( x = round, y = flagsleft,
-         group = match_id, color=as.factor(match_id)),
-    size = 2, 
-  ) +
-  labs(title = "Game 1 match histories",
-       subtitle = "squares indicate rollback solution", ) +
-  guides(color = guide_legend(title = "Match")) +
-  ylab("flags left") +
-  theme_bw() +
-  theme(legend.position = c(.92, .7)) +
-  scale_x_continuous(breaks = seq(1, 15, by = 2)) +
-  scale_y_continuous(breaks = seq(0, 25, by = 4)) +
-  scale_color_viridis_d(option = "H")
+for (term in unique(results_df$term)) {
+  results_df %>% 
+    filter(
+      start_rule == 21,
+      term == term
+    ) %>% 
+    ggplot() +
+    geom_point( # plot rollback solution
+      data = solution,
+      aes(x = round, y = flagsleft),
+      shape = 0, size = 4) +
+    geom_line(
+      aes(x = round, y = flagsleft, 
+          group = match_id, color=as.factor(match_id)),
+      linetype = "dashed", linewidth = .5, alpha = .5
+    ) +
+    # geom_step(
+    #   aes(x = round, y = flagsleft, group = match_id, color=as.factor(match_id)),
+    #   direction = "vh", linetype = "solid", linewidth = .5, alpha = .5
+    # ) +
+    geom_point( # flags left at end
+      aes( x = round, y = flagsleft,
+           group = match_id, color=as.factor(match_id)),
+      size = 2, 
+    ) +
+    labs(title = paste(term, "Match Histories", sep = " "),
+         subtitle = "squares indicate rollback solution", ) +
+    guides(color = guide_legend(title = "Match")) +
+    ylab("flags left") +
+    theme_bw() +
+    theme(legend.position = c(.92, .7)) +
+    scale_x_continuous(breaks = seq(1, 15, by = 2)) +
+    scale_y_continuous(breaks = seq(0, 25, by = 4)) +
+    scale_color_viridis_d(option = "H") 
+    ggsave(filename = paste(term, "Results.png", sep = "-"))
+}
 
 # Plot Game 2 results with starting points
-results_df %>% filter(game==2) %>% 
+results_df %>% 
+  filter(start_rule != 21) %>% 
   ggplot() +
   # geom_line( # plot rollback solutions for each ruleset
   #   aes( x = round, 
