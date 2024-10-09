@@ -1,6 +1,6 @@
 # Examples
 
-## Dixit Chapter 3: question U4
+## Lawmakers' Game ^[Dixit Chapter 3: question U4]
 
 > Two distinct proposals, A and B, are being debated in Washington. Congress likes proposal A, and the president likes proposal B.
 
@@ -13,19 +13,19 @@
 
 ---
 
-## Dixit Chapter 3: question U4
+## Lawmakers' Game ^[Dixit Chapter 3: question U4]
 
 > The moves in the game are as follows. First, Congress decides whether to pass a bill and whether the bill is to contain A or B or both. Then the president decides whether to sign or veto the bill. Congress does not have enough votes to override a veto. Draw a tree for this game and find the rollback equilibrium.
 
 ---
 
-## Dixit Chapter 3: question U4
+## Lawmakers' Game ^[Dixit Chapter 3: question U4]
 
 > Now suppose the rules of the game are changed in only one respect: the president is given the extra power of a line-item veto. Thus, if Congress passes a bill containing both A and B, the president may choose not only to sign or veto the bill as a whole, but also to veto just one of the two items. Show the new tree and find the rollback equilibrium.
 
 ---
 
-## Harrington Chapter 8: question 4
+## Optimal Punishment Game ^[Harrington Chapter 8: question 4]
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -40,7 +40,7 @@
 
 ---
 
-## Harrington Chapter 8: question 4
+## Optimal Punishment Game ^[Harrington Chapter 8: question 4]
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -52,3 +52,161 @@ What values of `a-l` make the lawmaker choose a [*Moderate*]{.blue} penalty?
 ::::
 
 ---
+
+## Preemption
+
+> You're at the airport waiting to board your flight to go on vacation to Croatia with your carry-on backpack stuffed with everything you'll need so you don't have to pay for a checked bag.
+> You look around and notice it seems like a lot of other people have had the same idea.
+>
+> A voice comes on the intercom with a familiar announcement: 
+>
+> *Due to this being a full flight, we will be asking passengers to check their bags at the gate*
+>
+> Even though boarding hasn't officially started yet, everyone is starting to stand around the ticket counter.
+
+---
+
+## Preemption
+
+A [preemption game]{.hi} is one in which:
+
+  1. players' payoff increase when they act before others
+
+  2. but their payoffs are also higher when they act later in time
+
+::: {.incremental}
+
+  * You've probably noticed yourself playing a few different preemption games in different settings, even if you didn't have a name for it
+
+:::
+
+---
+
+## Preemption
+
+:::: {.columns}
+::: {.column width="40%"}
+![](figures/Harrington-tbl8.3.png)
+:::
+::: {.column width="60%"}
+* Here's a table to represent the time costs of waiting in that boarding line
+
+* Also assume that the benefit to being the first to board is $30$ and being second is $20$
+:::
+::::
+
+---
+
+## Preemption
+
+:::: {.columns}
+::: {.column width="40%"}
+![](figures/Harrington-fig8.17.png)
+:::
+::: {.column width="60%"}
+  * Here are the net payoffs (benefits - costs) applied to an extensive form representation of the simplified two-player boarding game
+
+  * Let's find the [rollback equilibrium]{.hi}
+:::
+::::
+
+---
+
+## Preemption
+
+:::: {.columns}
+::: {.column width="40%"}
+![](figures/Harrington-fig8.17.png)
+:::
+::: {.column width="60%"}
+  * Is the equilibrium outcome of this game a [Pareto efficient]{.hi} one?
+
+  * Why or why not?
+:::
+::::
+
+---
+
+## Preemption
+
+A general lesson of all preemption games is that **players act too soon** from a social efficiency perspective.
+
+::: {.incremental}
+  * Everyone would be better off in the outcome where we all wait,
+  but because there is an incentive to try to jump the line, 
+  rational agents cannot be expected to wait instead of getting ahead
+:::
+
+---
+
+## War of Attrition
+
+Not all games that involve waiting are *preemption games*, though.
+
+::: {.incremental}
+A [war of attrition]{.hi} is a type of game where:
+
+  1. Players' payoffs are higher when they act *after* other players
+
+  2. and higher the *sooner* in time they act
+:::
+
+---
+
+## War of Attrition
+
+:::: {.columns}
+::: {.column width="40%"}
+![](figures/Harrington-fig8.18.png)
+:::
+::: {.column width="60%"}
+  * What is the rollback equilibrium of this game?
+:::
+::::
+
+---
+
+## War of Attrition
+
+A general lesson of all premption games is that **players wait too long** than what would be socially efficient if they collectively acted sooner.
+
+---
+
+## War of Attrition
+
+::::: {.columns}
+:::: {.column width="40%"}
+![](figures/Harrington-fig8.18.png)
+::::
+:::: {.column width="60%"}
+::: {.incremental} 
+  * What if the players flipped a coin to decide who would act and then that player would immediately act?
+
+  * What would be their *expected payoffs*
+
+  * The problem is that such an agreement is *not enforcable*
+    
+    - Once the coin flip has been observed, there's nothing to stop the player who would be directed to act first to ignore the flip and wait.
+:::
+::::
+:::::
+
+---
+
+## Why don't NBA stars pass more?
+
+::::: {.columns}
+:::: {.column width="40%"}
+![](figures/Harrington-fig8.19.png)
+::::
+:::: {.column width="60%"}
+::: {.incremental} 
+  * What is the rollback equilibrium?
+
+  * This is a variation of a game called Centipede which comes up a lot in lab experiments
+
+  * We'll use come back to the centipede game in our discussion of how well our theoretical predictions actually match peoples' behavior
+:::
+::::
+:::::
+

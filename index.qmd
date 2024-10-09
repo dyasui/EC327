@@ -6,14 +6,17 @@ subtitle: "Economics Course at the University of Oregon"
 # Welcome to Intro to Game Theory! 
 
 ---
+
 This elective game theory class EC327 is taught by [Dante Yasui](https://cas.uoregon.edu/directory/economics/all/dyasui)
 at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
-## **Fall 2024** Schedule
-**Class Time** Monday and Wednesday 8:30-9:50 am
-**Classroom** Gerlinger 302
+## Fall 2024 Schedule
 
-**Office Hours** Monday 10-11 am \& Wednesday 1-2 pm
+Class Time : Monday and Wednesday 8:30-9:50 am
+
+Classroom : Gerlinger 302
+
+Office Hours : Monday 10-11 am \& Wednesday 1-2 pm
 
 ---
 
@@ -47,13 +50,13 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 ## Lectures
 
-[01 - Introduction](https://dyasui.github.io/EC327/Slides/01Intro/01-main.html)
+[01 - Introduction](/Slides/01Intro/01-main.html)
 
-[02 - Sequential Games](https://dyasui.github.io/EC327/Slides/02SequentialGames/02-main.html)
+[02 - Sequential Games](/Slides/02SequentialGames/02-main.html)
 
-[03 - Simultaneous Games](https://dyasui.github.io/EC327/Slides/03SimultaneousGames/beamer/main.html)
+[03 - Simultaneous Games](/Slides/03SimultaneousGames/beamer/main.html)
 
-[04 - Information Sets](https://dyasui.github.io/EC327/Slides/04InfoSets/main.html)
+[04 - Information Sets](/Slides/04InfoSets/main.html)
 
 [05 - Uncertainty]()
 

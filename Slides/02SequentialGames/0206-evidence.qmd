@@ -1,2 +1,201 @@
 # Evidence concerning Rollback
 
+## Does rollback hold up in the real world?
+
+One of the goals of game theory is to generate *testable predictions*
+
+> You have all participated in a few such tests of the theory in this class
+
+---
+
+## Survivor Flags game results
+
+![](figures/F2024-Results.png)
+
+---
+
+## Survivor Flags game results
+
+The last time I taught this class:
+
+![](figures/W2024-results.png)
+
+---
+
+## Why didn't all teams find the rollback equilibrium?
+
+:::{.incremental}
+
+  * Did everyone have perfect information about the rules?
+
+  * Were people thinking ahead?
+
+  * Were there disagreements within any teams as to the optimal strategy?
+
+:::
+
+---
+
+## Why didn't all teams find the rollback equilibrium?
+
+What about common knowledge of rationality?
+
+:::{.incremental}
+
+  * If you were on the second team to choose, and you see the first team doesn't take one flag, what should you think?
+
+  * Should you still stick to the optimal strategy?
+
+:::
+
+--- 
+
+## Survivor Flag Results Discussion
+
+This game was relatively simple because it only relied on *one team* to come up with the optimal strategy
+
+::: {.incremental}
+
+  * As long as the first team always took the right number of flags, 
+  the second team didn't have any impact on the game
+
+  * This is also a *zero-sum* game, so there were no opportunities for teams to benefit by cooperating
+
+  * Let's look at a similar game, but with non-zero-sum payoffs
+
+:::
+
+---
+
+## Centipede Game
+
+Two participants play this game, taking turns over several rounds.
+
+The first is offered a choice between:
+
+  a) splitting 50 cents where they keep 40 and the other player gets 10
+
+  or b) they pass the choice to the next player who gets the same choice but the pot they can choose to split from doubles
+
+---
+
+## Centipede Game
+
+First, what is the theoretical solution?
+
+![](figures/Harrington-fig8.20.png)
+
+---
+
+## Centipede Game
+
+Now what would you do if you were in this situation?
+
+When would you grab?
+
+![](figures/Harrington-fig8.20.png)
+
+---
+
+## Centipede Game
+
+Out of 100 pairs of your peers, how many times do you think that player 1 would grab in the first node?
+
+::: {.incremental}
+  * In a lab experiment, only 2 times out of 281 did the first player take the first 40 cents (~1%)
+
+How many times do you think player 2 grabed in the second node?
+
+  * Only 18 out of 279 (~6%) did
+
+How many pairs do you think got to the end of the tree without anyone grabbing?
+So the last player giving up $12.80 for only $6.40
+
+  * 15%!
+:::
+
+---
+
+## Centipede Game Evidence Discussion
+
+What explains the drastic departure in lab experiments from the preditiction of backwards induction?
+
+::: {.incremental}
+  * Are players' not looking ahead to the end of the game?
+
+    - Maybe? But in that experiment, the percentage of players grabbing increased over later stages. In the 5th node, 73% of player 1's grabbed.
+
+  * Are college students driven by more than money?
+
+    - Probably. What are some other things which could factor into these participants' payoffs?
+
+    - What about how much they care about how much their opponent gets?
+:::
+
+---
+
+## Ultimatum Game
+
+Player A and Player B are offered a dollar to divide amongst them.
+
+  * Player A gets to propose how to split the dollar (i.e., 50:50, 75 to me 25 to you, etc)
+
+  * Player B can either accept the proposed split, or reject so that both players get nothing
+
+::: {.incremental}
+
+> What is the rollback solution if both players payoffs are only determined by how much money they earn?
+
+:::
+
+---
+
+## Ultimatum Game Evidence
+
+In spite of the theoretical prediction, the most common proposal in lab experiments is 50:50.
+
+Most player B's actually reject any offer of 25% or less.
+
+::: {.incremental}
+  * This seems to indicate that most people have some sort of *aversion to inequity* 
+
+  * If you're interested in learning more, **behavioral economics** develops on the basic rational agent model to make sense of some of these experimental findings
+:::
+
+## A logical paradox with Backward induction
+
+::::: {.columns}
+:::: {.column width="50%"}
+![](figures/Harrington-fig8.21.png)
+::::
+:::: {.column width="50%"}
+::: {.incremental}
+  * What should Jane do if Jon chose $b$?
+
+  * If she knows Jon is rational, then he would choose $d$ if she chose $x$, and $c$ if she chose $y$
+
+  * So Jane should choose $x$ to get a payoff of $5$ over $3$ if she chose $y$
+:::
+::::
+:::::
+
+---
+
+## A logical paradox with Backward induction
+
+::::: {.columns}
+:::: {.column width="50%"}
+![](figures/Harrington-fig8.21.png)
+::::
+:::: {.column width="50%"}
+::: {.incremental}
+  * But if Jon chose $b$, doesn't that mean that he can't be rational?
+
+  * What should Jane do?
+
+  * Maybe Jon just made a mistake, and Jane should stick to her assumption that he will continue to try to make rational choices
+:::
+::::
+:::::
+
+---
