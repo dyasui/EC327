@@ -1,7 +1,3 @@
----
-name: StrategicForm
----
-
 # Strategic Form
 
 ## Split or Steal

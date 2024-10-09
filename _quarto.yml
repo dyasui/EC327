@@ -16,6 +16,8 @@ website:
             href: Slides/01Intro/01-main.qmd
           - text: "Sequential Games"
             href: Slides/02SequentialGames/02-main.qmd
+          - text: "Simultaneous Games"
+            href: Slides/03SimultaneousGames/03-html.qmd
       - section: "Activities"
         contents: 
           - text: "Guessing Two Thirds of the Average"

@@ -54,7 +54,7 @@ Office Hours : Monday 10-11 am \& Wednesday 1-2 pm
 
 [02 - Sequential Games](/Slides/02SequentialGames/02-main.html)
 
-[03 - Simultaneous Games](/Slides/03SimultaneousGames/beamer/main.html)
+[03 - Simultaneous Games](/Slides/03SimultaneousGames/03-main.html)
 
 [04 - Information Sets](/Slides/04InfoSets/main.html)
 

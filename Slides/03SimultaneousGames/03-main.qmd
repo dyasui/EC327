@@ -14,9 +14,8 @@ format:
         logo: UOSignature-356.png
 title-slide-attributes:
   data-background-position: left
-output:
-  beamer_presentation:
-    keep_tex: yes
+filters:
+  - parse-latex
 ---
 
 ::: {.vertical-center}
@@ -31,8 +30,10 @@ output:
 
 :::
 
-{{< include StrategicForm.qmd >}}
+{{< include 0301-strategicform.qmd >}}
 
-{{< include Nash.qmd >}}
+{{< include 0302-nash.qmd >}}
 
+{{< include 0303-elimination.qmd >}}
 
+{{< include 0304-bestresponses.qmd >}}
