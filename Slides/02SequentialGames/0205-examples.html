@@ -147,18 +147,21 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/01Intro/01-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Game Theory</span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/02SequentialGames/02-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Game Theory</span></a>
+ <span class="menu-text">Sequential Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">Slides/03SimultaneousGames/03-main.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../Slides/03SimultaneousGames/03-html.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simultaneous Games</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -173,20 +176,15 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Activity 1: Guess 2/3rds of the average</span></a>
+ <span class="menu-text">Guessing Two Thirds of the Average</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Homework</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Survivor Flags</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -201,73 +199,244 @@ window.Quarto = {
 
 
 
-<section id="welfare-and-efficiency" class="level1">
-<h1>Welfare and Efficiency</h1>
-<div class="incremental">
-<p>What are the <strong>good</strong> outcomes in the planting game?</p>
-<p>Can we rank outcomes by collective welfare?</p>
+<section id="examples" class="level1">
+<h1>Examples</h1>
+<section id="lawmakers-game" class="level2">
+<h2 class="anchored" data-anchor-id="lawmakers-game">Lawmakers’ Game <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<blockquote class="blockquote">
+<p>Two distinct proposals, A and B, are being debated in Washington. Congress likes proposal A, and the president likes proposal B.</p>
+</blockquote>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Outcome</th>
+<th>Congress</th>
+<th>President</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A becomes law</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>B becomes law</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>Both A and B become law</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Neither (status quo prevails)</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="lawmakers-game-1" class="level2">
+<h2 class="anchored" data-anchor-id="lawmakers-game-1">Lawmakers’ Game <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
+<blockquote class="blockquote">
+<p>The moves in the game are as follows. First, Congress decides whether to pass a bill and whether the bill is to contain A or B or both. Then the president decides whether to sign or veto the bill. Congress does not have enough votes to override a veto. Draw a tree for this game and find the rollback equilibrium.</p>
+</blockquote>
+<hr>
+</section>
+<section id="lawmakers-game-2" class="level2">
+<h2 class="anchored" data-anchor-id="lawmakers-game-2">Lawmakers’ Game <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></h2>
+<blockquote class="blockquote">
+<p>Now suppose the rules of the game are changed in only one respect: the president is given the extra power of a line-item veto. Thus, if Congress passes a bill containing both A and B, the president may choose not only to sign or veto the bill as a whole, but also to veto just one of the two items. Show the new tree and find the rollback equilibrium.</p>
+</blockquote>
+<hr>
+</section>
+<section id="optimal-punishment-game" class="level2">
+<h2 class="anchored" data-anchor-id="optimal-punishment-game">Optimal Punishment Game <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img src="figures/Harrington-figPR8.4.png" class="img-fluid"></p>
+</div><div class="column" style="width:40%;">
+<blockquote class="blockquote">
+<p>“Laws too gentle are seldom obeyed; too severe, seldom executed”</p>
+<ul>
+<li>Benjamin Franklin</li>
+</ul>
+</blockquote>
+</div>
 </div>
 <hr>
-<p><img src="figures/fig3.6.png" class="img-fluid"></p>
-<section id="pareto-dominance" class="level2">
-<h2 class="anchored" data-anchor-id="pareto-dominance">Pareto Dominance</h2>
-<p>Pareto optimality (or efficiency) is econonomists’ best shot at coming up with a ranking of which outcomes are objectively ‘better’</p>
-<ul>
-<li><p>For any two outcomes (🎉, 🎊), 🎉 is <span class="hi">Pareto dominated</span> by 🎊 if both:</p>
+</section>
+<section id="optimal-punishment-game-1" class="level2">
+<h2 class="anchored" data-anchor-id="optimal-punishment-game-1">Optimal Punishment Game <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img src="figures/Harrington-figPR8.4.png" class="img-fluid"></p>
+</div><div class="column" style="width:40%;">
+<p>What values of <code>a-l</code> make the lawmaker choose a <span class="blue"><em>Moderate</em></span> penalty?</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="preemption" class="level2">
+<h2 class="anchored" data-anchor-id="preemption">Preemption</h2>
+<blockquote class="blockquote">
+<p>You’re at the airport waiting to board your flight to go on vacation to Croatia with your carry-on backpack stuffed with everything you’ll need so you don’t have to pay for a checked bag. You look around and notice it seems like a lot of other people have had the same idea.</p>
+<p>A voice comes on the intercom with a familiar announcement:</p>
+<p><em>Due to this being a full flight, we will be asking passengers to check their bags at the gate</em></p>
+<p>Even though boarding hasn’t officially started yet, everyone is starting to stand around the ticket counter.</p>
+</blockquote>
+<hr>
+</section>
+<section id="preemption-1" class="level2">
+<h2 class="anchored" data-anchor-id="preemption-1">Preemption</h2>
+<p>A <span class="hi">preemption game</span> is one in which:</p>
 <ol type="1">
-<li><p>No one strictly prefers 🎉 to 🎊 - U<sub>👤</sub>(🎊) <span class="math inline">\(\geq\)</span> U<sub>👤</sub>(🎉) <span class="math inline">\(\forall 👤 \in \{ 🙍, 🧑, 💆, 🧖, 🧑, 😺, ...\}\)</span></p></li>
-<li><p>At least one person strictly<sub>🎉</sub> prefers 🎉 to 🎊 - <span class="math inline">\(\exists 👤\)</span> such that U<sub>👤</sub>(🎊) <span class="math inline">\(&gt;\)</span> U<sub>👤</sub>(🎉)</p></li>
-</ol></li>
-</ul>
-<hr>
-</section>
-<section id="pareto-improvement" class="level2">
-<h2 class="anchored" data-anchor-id="pareto-improvement">Pareto Improvement</h2>
-<p>The move from a policy y to an alternative policy x is a <span class="hi">Pareto improvement</span> if x Pareto dominates y.</p>
-<ul>
-<li><p>Such a policy change should reasonably be seen as unambiguously good</p></li>
-<li><p>Another perspective is that <em>no-one would veto</em> a pareto improvement</p></li>
-</ul>
-<hr>
-</section>
-<section id="pareto-efficiency" class="level2">
-<h2 class="anchored" data-anchor-id="pareto-efficiency">Pareto Efficiency</h2>
-<p>An outcome is <span class="h">Pareto Efficient</span> (Optimal) if no other outcome Pareto dominates it.</p>
-<p>An outcome is <span class="hi">Pareto Infficient</span> if at least one other outcome Pareto dominates it.</p>
-<hr>
-</section>
-<section id="ranking-the-planting-payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="ranking-the-planting-payoffs">Ranking the Planting Payoffs</h2>
-<p>Compare (4,3,3) to (1,2,2)</p>
-<ul>
-<li>Which one is Pareto dominating?</li>
-</ul>
-<hr>
-</section>
-<section id="ranking-the-planting-payoffs-1" class="level2">
-<h2 class="anchored" data-anchor-id="ranking-the-planting-payoffs-1">Ranking the Planting Payoffs</h2>
-<p>Now compare (4,3,3) to (3,4,3) or (3,3,4)</p>
-<ul>
-<li>Which one is Pareto dominating?</li>
-</ul>
-<p>Is the rollback equilibrium outcome a <em>Pareto efficient</em> one?</p>
-<hr>
-</section>
-<section id="discussion-efficiency-vs-other-social-comparisons" class="level2">
-<h2 class="anchored" data-anchor-id="discussion-efficiency-vs-other-social-comparisons">Discussion: Efficiency vs other social comparisons</h2>
+<li><p>players’ payoff increase when they act before others</p></li>
+<li><p>but their payoffs are also higher when they act later in time</p></li>
+</ol>
 <div class="incremental">
 <ul class="incremental">
-<li><p>How useful is Pareto Efficiency in the real world?</p></li>
-<li><p>How else could we group outcomes?</p></li>
-<li><p>We might address this later in the class with what is known as <em>Cooperative Game Theory</em></p></li>
+<li>You’ve probably noticed yourself playing a few different preemption games in different settings, even if you didn’t have a name for it</li>
 </ul>
+</div>
+<hr>
+</section>
+<section id="preemption-2" class="level2">
+<h2 class="anchored" data-anchor-id="preemption-2">Preemption</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img src="figures/Harrington-tbl8.3.png" class="img-fluid"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><p>Here’s a table to represent the time costs of waiting in that boarding line</p></li>
+<li><p>Also assume that the benefit to being the first to board is <span class="math inline">\(30\)</span> and being second is <span class="math inline">\(20\)</span></p></li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="preemption-3" class="level2">
+<h2 class="anchored" data-anchor-id="preemption-3">Preemption</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img src="figures/Harrington-fig8.17.png" class="img-fluid"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><p>Here are the net payoffs (benefits - costs) applied to an extensive form representation of the simplified two-player boarding game</p></li>
+<li><p>Let’s find the <span class="hi">rollback equilibrium</span></p></li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="preemption-4" class="level2">
+<h2 class="anchored" data-anchor-id="preemption-4">Preemption</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img src="figures/Harrington-fig8.17.png" class="img-fluid"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><p>Is the equilibrium outcome of this game a <span class="hi">Pareto efficient</span> one?</p></li>
+<li><p>Why or why not?</p></li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="preemption-5" class="level2">
+<h2 class="anchored" data-anchor-id="preemption-5">Preemption</h2>
+<p>A general lesson of all preemption games is that <strong>players act too soon</strong> from a social efficiency perspective.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Everyone would be better off in the outcome where we all wait, but because there is an incentive to try to jump the line, rational agents cannot be expected to wait instead of getting ahead</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="war-of-attrition" class="level2">
+<h2 class="anchored" data-anchor-id="war-of-attrition">War of Attrition</h2>
+<p>Not all games that involve waiting are <em>preemption games</em>, though.</p>
+<div class="incremental">
+<p>A <span class="hi">war of attrition</span> is a type of game where:</p>
+<ol class="incremental" type="1">
+<li><p>Players’ payoffs are higher when they act <em>after</em> other players</p></li>
+<li><p>and higher the <em>sooner</em> in time they act</p></li>
+</ol>
+</div>
+<hr>
+</section>
+<section id="war-of-attrition-1" class="level2">
+<h2 class="anchored" data-anchor-id="war-of-attrition-1">War of Attrition</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img src="figures/Harrington-fig8.18.png" class="img-fluid"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li>What is the rollback equilibrium of this game?</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="war-of-attrition-2" class="level2">
+<h2 class="anchored" data-anchor-id="war-of-attrition-2">War of Attrition</h2>
+<p>A general lesson of all premption games is that <strong>players wait too long</strong> than what would be socially efficient if they collectively acted sooner.</p>
+<hr>
+</section>
+<section id="war-of-attrition-3" class="level2">
+<h2 class="anchored" data-anchor-id="war-of-attrition-3">War of Attrition</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img src="figures/Harrington-fig8.18.png" class="img-fluid"></p>
+</div><div class="column" style="width:60%;">
+<div class="incremental">
+<ul class="incremental">
+<li><p>What if the players flipped a coin to decide who would act and then that player would immediately act?</p></li>
+<li><p>What would be their <em>expected payoffs</em></p></li>
+<li><p>The problem is that such an agreement is <em>not enforcable</em></p>
+<ul class="incremental">
+<li>Once the coin flip has been observed, there’s nothing to stop the player who would be directed to act first to ignore the flip and wait.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="why-dont-nba-stars-pass-more" class="level2">
+<h2 class="anchored" data-anchor-id="why-dont-nba-stars-pass-more">Why don’t NBA stars pass more?</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img src="figures/Harrington-fig8.19.png" class="img-fluid"></p>
+</div><div class="column" style="width:60%;">
+<div class="incremental">
+<ul class="incremental">
+<li><p>What is the rollback equilibrium?</p></li>
+<li><p>This is a variation of a game called Centipede which comes up a lot in lab experiments</p></li>
+<li><p>We’ll use come back to the centipede game in our discussion of how well our theoretical predictions actually match peoples’ behavior</p></li>
+</ul>
+</div>
+</div>
 </div>
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Dixit Chapter 3: question U4<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Dixit Chapter 3: question U4<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Dixit Chapter 3: question U4<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Harrington Chapter 8: question 4<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Harrington Chapter 8: question 4<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

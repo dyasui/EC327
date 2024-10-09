@@ -147,18 +147,21 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/01Intro/01-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Game Theory</span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/02SequentialGames/02-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Game Theory</span></a>
+ <span class="menu-text">Sequential Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">Slides/03SimultaneousGames/03-main.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../Slides/03SimultaneousGames/03-html.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simultaneous Games</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -173,20 +176,15 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Activity 1: Guess 2/3rds of the average</span></a>
+ <span class="menu-text">Guessing Two Thirds of the Average</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Homework</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Survivor Flags</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -201,271 +199,400 @@ window.Quarto = {
 
 
 
-<section id="extensive-form" class="level1">
-<h1>Extensive Form</h1>
-<section id="game-treesextensive-form-as-a-tool" class="level2">
-<h2 class="anchored" data-anchor-id="game-treesextensive-form-as-a-tool">Game Trees/Extensive Form as a tool</h2>
-<ul>
-<li><p>Before we learn how to solve a game, it will helpful to be able to visualize them</p></li>
-<li><p>Because of the ordered nature of sequential games, a <span class="hi">tree diagram</span> makes sense</p></li>
-</ul>
-<hr>
-</section>
-<section id="a-decision-tree" class="level2">
-<h2 class="anchored" data-anchor-id="a-decision-tree">A <em>Decision</em> Tree</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/decisiontree.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
-</figure>
-</div>
-<ul>
-<li>Is this a <em>strategic</em> decision?</li>
-</ul>
-<hr>
-</section>
-<section id="extensive-form-definition" class="level2">
-<h2 class="anchored" data-anchor-id="extensive-form-definition">Extensive Form Definition</h2>
+<section id="prisoners-dilemma" class="level2">
+<h2 class="anchored" data-anchor-id="prisoners-dilemma">Prisoner’s Dilemma</h2>
 <div class="incremental">
-<p>A <span class="h">Tree Graph</span> consists of:</p>
 <ul class="incremental">
-<li><p>Multiple <span class="hi">nodes</span> with an ordered hierarchy starting from one <span class="hii">initial node</span></p></li>
-<li><p><span class="hi">Branches</span> coming from each node which connect it to later nodes</p></li>
-<li><p>The tree ends in any of the multiple <span class="hi">terminal nodes</span></p></li>
+<li>Suppose that you are Guido in the Prisoner’s Dilemma, above. Which strategy would you pick?
+<ol class="incremental" type="1">
+<li>Testify</li>
+<li>Keep Quiet</li>
+</ol></li>
 </ul>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Each (non-initial) terminal node may have multiple branches leading from it; but must only have <em>one</em> branch that <em>leads to it</em>.</p>
-</div>
-</div>
 </div>
 <hr>
 </section>
-<section id="anatomy-of-a-tree" class="level2">
-<h2 class="anchored" data-anchor-id="anatomy-of-a-tree">Anatomy of a tree</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/tree-nodes.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
-</figure>
+<section id="prisoners-dilemma-1" class="level2">
+<h2 class="anchored" data-anchor-id="prisoners-dilemma-1">Prisoner’s Dilemma</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>What if we change the Prisoner’s Dilemma like this? What would you pick if you were Guido?</p>
+<ol class="incremental" type="1">
+<li>Testify</li>
+<li>Keep Quiet</li>
+<li>False Confession</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="prisoners-dilemma-2" class="level2">
+<h2 class="anchored" data-anchor-id="prisoners-dilemma-2">Prisoner’s Dilemma</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>What about this third variation? What would you pick if you were Guido?</p>
+<ol class="incremental" type="1">
+<li>Testify</li>
+<li>Keep Quiet</li>
+<li>False Confession</li>
+</ol></li>
+</ul>
 </div>
 <hr>
 </section>
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section"></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/tree-branches.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
-</figure>
+<p>One last question, and this one isn’t based on a Prisoner’s Dilemma…</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>This game models a game of Rock-Paper-Scissors. If you are Lisa, which strategy will you choose?</p>
+<ol class="incremental" type="1">
+<li>R(ock)</li>
+<li>P(aper)</li>
+<li>S(cissors)</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="obviously-wrong-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="obviously-wrong-strategies">Obviously-Wrong Strategies</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>The first three of those games contained strategies that were <strong>obviously bad choices</strong>.</p></li>
+<li><p>Rock-Paper-Scissors did not.</p></li>
+<li><p>One of the simplest things you can do with a strategic-form game is to start by finding and eliminating (ruling out) the strategies which are obviously bad.</p></li>
+<li><p>In some games, this can even be enough to identify the Nash Equilibrium!</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="the-problem-of-finding-nash-equilibria" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-of-finding-nash-equilibria">The Problem of Finding Nash Equilibria</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>When we first discussed Nash Equilibria (which I’m going to start abbreviating as NEs), we found them by checking all of the strategy profiles in the game to see which of them were stable.</p></li>
+<li><p>This is not a problem in a 2x2 game like we’ve been working with—but it gets much more time-consuming in games with more players and more strategies per player, not to mention the more complicated games we’ll look at later in the term.</p></li>
+<li><p>We can make it easier to find NEs with a few useful shortcuts—such as eliminating entire strategies (not just strategy profiles) that can’t possibly be part of a NE.</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="strict-dominance" class="level2">
+<h2 class="anchored" data-anchor-id="strict-dominance">Strict Dominance</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>A strategy is said to be strictly dominated if there is some other strategy, in the same player’s strategy set, which provides that player a higher payoff, no matter what strategies the other players pick.</p>
+<ul class="incremental">
+<li>Another way to phrase it is that a strategy is strictly dominated if some other strategy is a better alternative for the player, no matter what other players do.</li>
+</ul></li>
+<li><p>Recall that, in the Prisoner’s Dilemma, both Guido and Luca prefer to Testify, no matter whether the other player Testified or kept Quiet: this means that Quiet is strictly dominated, , for both players.</p></li>
+<li><p>It is not rational to play a strictly dominated strategy—meaning that in the Prisoner’s Dilemma, we can immediately deduce that neither player would play Quiet, and the only remaining strategy profile is (Testify, Testify).</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="finding-nes-by-elimination" class="level2">
+<h2 class="anchored" data-anchor-id="finding-nes-by-elimination">Finding NEs by Elimination</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>If all but one of each player’s strategies can be eliminated like this (leaving only a single strategy profile), then the remaining strategy profile is a NE.
+<ul class="incremental">
+<li>A strictly dominated strategy can never be part of a NE.</li>
+</ul></li>
+<li>However, it’s rare that a player has one strategy which strictly dominates all of their others from the very start, as in the Prisoner’s Dilemma. (This is called a strategy.)</li>
+<li>Even if a player doesn’t have a strictly dominant strategy, we can still sometimes use elimination to find a NE, by using a process called <span class="hi">Iterated Elimination of Strictly Dominated Strategies (IESDS)</span>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="commonly-known-rationality" class="level2">
+<h2 class="anchored" data-anchor-id="commonly-known-rationality">Commonly Known Rationality</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Let’s assume that, not only is every player rational, they all know that the other players are rational too.</li>
+<li>This means that players can deduce which strategies the <strong>other</strong> players would never play.</li>
+<li>And if a player can eliminate another player’s strategy, it may reveal additional strictly dominated strategies that can be eliminated.</li>
+<li>Let’s see an <a href="https://www.youtube.com/watch?v=EZSx3zNZOaU">example</a>…</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-iesds" class="level2">
+<h2 class="anchored" data-anchor-id="example-iesds">Example: IESDS</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>In the game table above, there are no strictly domin strategies. ::: {.incremental}
+<ul class="incremental">
+<li><p>For Player 1, A is strictly dominated by B, but C is neither dominant nor dominated.</p></li>
+<li><p>And for Player 2, a is strictly dominated by b, but c is also neither dominant nor dominated.</p>
+<p>:::</p></li>
+</ul></li>
+<li>So, we could eliminate A and a, but we’d still have a 2x2 game left over.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-iesds-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-iesds-1">Example: IESDS</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>However, the assumption of Commonly Known Rationality allows Player 1 to <strong>deduce</strong> that Player 2 would never play a.</li>
+<li>Player 1 can eliminate a, just like we did—and once they do, C is strictly dominated by B.</li>
+<li>Player 2 can deduce all of this—and once they eliminate A, a, and C, b is strictly dominated by c.</li>
+<li>This leaves us one strategy per player, and so the NE here is (B, c).</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="flaws-of-iesds-the-deer-hunt" class="level2">
+<h2 class="anchored" data-anchor-id="flaws-of-iesds-the-deer-hunt">Flaws of IESDS: the Deer Hunt</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>IESDS doesn’t always reveal a NE. The strategies involved in a NE don’t have to be strictly dominant—they just can’t be strictly dominat.</li>
+<li>As an example, the Deer Hunt game (above) contains no strictly dominated strategies.</li>
+<li>Even if IESDS doesn’t reveal a NE, it can still be useful for simplifying a game before applying other methods.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="order-doesnt-matter" class="level2">
+<h2 class="anchored" data-anchor-id="order-doesnt-matter">Order Doesn’t Matter</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><strong>In IESDS</strong>, the order in which you eliminate strategies doesn’t matter. You’ll get the same result no matter how you do it—as long as you keep going to the end.</li>
+<li>Consider this even larger game, and suppose we start by looking for Player 1’s strictly dominated strategies:</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="order-doesnt-matter-1" class="level2">
+<h2 class="anchored" data-anchor-id="order-doesnt-matter-1">Order Doesn’t Matter</h2>
+<p>And now suppose we start by looking for Player 2’s strictly dominated strategies:</p>
+<hr>
+</section>
+<section id="iesds-in-a-nutshell" class="level2">
+<h2 class="anchored" data-anchor-id="iesds-in-a-nutshell">IESDS in a Nutshell</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>The process of IESDS can be summed up in three steps: [1.] Search for a strictly dominated strategy belonging to any player. If none exists, stop here: IESDS is completed. [2.] Eliminate (cross out) that strategy. Optionally, re-draw the game table without the eliminated strategy. [3.] Return to step 1.</li>
+</ul>
 </div>
 <hr>
 </section>
 <section id="section-1" class="level2">
 <h2 class="anchored" data-anchor-id="section-1"></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/tree-terminalnodes.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
-</figure>
+<div class="incremental">
+<ul class="incremental">
+<li>In the game above, which strategy is strictly dominated?
+<ol class="incremental" type="1">
+<li>X</li>
+<li>Y</li>
+<li>Z</li>
+<li>x</li>
+<li>y</li>
+</ol></li>
+</ul>
 </div>
-<hr>
-</section>
-<section id="kidnapping-game" class="level2">
-<h2 class="anchored" data-anchor-id="kidnapping-game">Kidnapping Game <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
-<p>A kidnapper named <span class="hi">Guy</span> has contacted the victim’s wife, named <span class="hi">Vivica</span>, to demand a ransom.</p>
-<p>To predict what will happen to the victim, <span class="hi">Orlando</span>, we need to create a game theoretic model of the situation.</p>
-<p>Let’s use the language of the tree graph to visualize this game.</p>
 <hr>
 </section>
 <section id="section-2" class="level2">
 <h2 class="anchored" data-anchor-id="section-2"></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/kidnapgame_blank.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<hr>
-</section>
-<section id="applying-the-extensive-form" class="level2">
-<h2 class="anchored" data-anchor-id="applying-the-extensive-form">Applying the Extensive Form</h2>
 <div class="incremental">
 <ul class="incremental">
-<li><p>Who are the players?</p></li>
-<li><p>Where are the decisions?</p></li>
-<li><p>What are the branches? What do they represent?</p></li>
-<li><p>What do the terminal nodes represent?</p></li>
-<li><p>Is this a <em>complete</em> representation of a game? What’s missing?</p></li>
+<li>Strategy Z is strictly dominated. Which strategy strictly dominates it?
+<ol class="incremental" type="1">
+<li>X</li>
+<li>Y</li>
+<li>Both X and Y</li>
+</ol></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="kidnapping-game-payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="kidnapping-game-payoffs">Kidnapping Game payoffs</h2>
-<table class="table">
-<colgroup>
-<col style="width: 54%">
-<col style="width: 20%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Outcome</strong></th>
-<th><span class="red"><strong>Guy</strong></span></th>
-<th><span class="blue"><strong>Vivica</strong></span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>No kidnapping</td>
-<td><span class="red">3</span></td>
-<td><span class="blue">5</span></td>
-</tr>
-<tr class="even">
-<td>Kidnapping, ransom paid, Orlando killed</td>
-<td><span class="red">4</span></td>
-<td><span class="blue">1</span></td>
-</tr>
-<tr class="odd">
-<td>Kidnapping, ransom paid, Orlando released</td>
-<td><span class="red">5</span></td>
-<td><span class="blue">3</span></td>
-</tr>
-<tr class="even">
-<td>Kidnapping, no ransom paid, Orlando killed</td>
-<td><span class="red">2</span></td>
-<td><span class="blue">2</span></td>
-</tr>
-<tr class="odd">
-<td>Kidnapping, no ransom paid, Orlando released</td>
-<td><span class="red">1</span></td>
-<td><span class="blue">4</span></td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="kidnapping-game-tree-with-payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="kidnapping-game-tree-with-payoffs">Kidnapping game tree with payoffs</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/kidnapgame.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-<hr>
-</section>
-<section id="predictions" class="level2">
-<h2 class="anchored" data-anchor-id="predictions">Predictions?</h2>
-<p>Based on the extensive form game tree with payoffs, do you have any predictions for what strategies each player will choose?</p>
-<hr>
-</section>
-<section id="a-definition-of-an-extensive-form-game" class="level2">
-<h2 class="anchored" data-anchor-id="a-definition-of-an-extensive-form-game">a Definition of an Extensive Form Game: <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
-<ul>
-<li><p>A collection of decision-makers, called <span class="hi">players</span> or <em>agents</em></p></li>
-<li><p>A set of <span class="hi">decision nodes</span>, each of which represents the information available to the player of that node</p></li>
-<li><p><span class="hi">Branches</span> from each node which represent the possible actions available to the players</p></li>
-<li><p>The entire game tree serves as the <span class="h">mapping</span> from intersections of players’ strategy profiles to the outcomes at each <span class="hi">terminal nodes</span></p></li>
-</ul>
-<hr>
-</section>
-<section id="strategies-in-extensive-form-games" class="level2">
-<h2 class="anchored" data-anchor-id="strategies-in-extensive-form-games">Strategies in Extensive Form Games</h2>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3"></h2>
 <div class="incremental">
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Definition <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A <span class="hi">strategy</span> for a player in a perfect-information game is a <em>list of choices</em>, one for <em>each decision node</em> of that player.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Be careful to distinguish between a <span class="hi"><em>strategy</em></span> and a single <em>action/choice</em></p>
-</div>
-</div>
-<p>What’s the difference?</p>
+<ul class="incremental">
+<li>Perform IESDS all the way to completion. What does IESDS tell you about the NE of this game?
+<ol class="incremental" type="1">
+<li>The NE is (X, x).</li>
+<li>The NE is (X, y).</li>
+<li>The NE is (Y, y).</li>
+<li>The NE is (Y, z).</li>
+<li>IESDS by itself does not reveal the NE of this game.</li>
+</ol></li>
+</ul>
 </div>
 <hr>
 </section>
-<section id="apply-this-definition-to-the-kidnapping-game" class="level2">
-<h2 class="anchored" data-anchor-id="apply-this-definition-to-the-kidnapping-game">Apply this definition to the kidnapping game:</h2>
-<ul>
-<li>How many choices does Guy make?</li>
-</ul>
-<div class="fragment fade-in">
-<p>3</p>
-</div>
-<ul>
-<li>Vivica?</li>
-</ul>
-<div class="fragment fade-in">
-<p>1</p>
-</div>
-<ul>
-<li>Write out a strategy list for each player:</li>
-</ul>
-<hr>
-</section>
-<section id="write-out-a-strategy-for-each-player" class="level2">
-<h2 class="anchored" data-anchor-id="write-out-a-strategy-for-each-player">Write out a strategy for each player</h2>
+<section id="other-elimination-methods-weakly-dominated-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="other-elimination-methods-weakly-dominated-strategies">Other Elimination Methods: Weakly Dominated Strategies</h2>
 <div class="incremental">
-<p><em><span class="h">Guy</span></em>:</p>
 <ul class="incremental">
-<li><p><strong><em>{</em></strong><span class="hii"><em>Kidnap</em></span><strong><em>,</em></strong> <span class="hii"><em>Kill</em></span> if ransom paid<strong><em>,</em></strong> <span class="hii"><em>Don’t Kill</em></span> if no ransom paid<strong><em>}</em></strong> is <em>one</em> strategy</p>
-<ul class="incremental">
-<li><p>Guy has <span class="math inline">\(8\)</span> total strategies:</p></li>
-<li><p><strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Don’t</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Don’t</em></span>}, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Don’t</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>No Kidnap</em></span>, <span class="hii"><em>Kill</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong>, <strong>{</strong><span class="hii"><em>Kidnap</em></span>, <span class="hii"><em>Don’t</em></span>, <span class="hii"><em>Kill</em></span><strong>}</strong></p></li>
-</ul></li>
-</ul>
-<p><em><span class="h">Vivica</span></em>:</p>
-<ul class="incremental">
-<li>Only two strategies: <strong><em>{</em></strong><span class="hii"><em>Pay</em></span> the ransom<strong><em>}</em></strong>, or <strong><em>{</em></strong><span class="hii"><em>Don’t</em></span> pay<strong><em>}</em></strong></li>
+<li>It is also possible to find Nash Equilibria by eliminating <span class="hi">weakly dominated</span> strategies (strategies for which there is an alternative that is never worse, and sometimes better).</li>
+<li>We will not spend a lot of time on this method, because it has two serious flaws: [1.] It is possible for a Nash Equilibrium to involve playing a weakly dominated strategy. IEWDS may therefore eliminate actual Nash Equilibria. [2.] Unlike IESDS, the order in which you eliminate weakly dominated strategies matters: you may get different results from different orders of elimination.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="letting-nature-take-the-wheel" class="level2">
-<h2 class="anchored" data-anchor-id="letting-nature-take-the-wheel">Letting Nature take the wheel</h2>
-<p>One way to represent risk or uncertainty is to represent <strong>Nature</strong> as a ‘player’.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/doubleornothing.png" class="img-fluid figure-img"></p>
-<figcaption>figures/doubleornothing.png</figcaption>
-</figure>
+<section id="example-why-weak-dominance-is-not-useful" class="level2">
+<h2 class="anchored" data-anchor-id="example-why-weak-dominance-is-not-useful">Example: Why Weak Dominance is Not Useful</h2>
+<p>In the game below, B is weakly dominated for both players.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>If we eliminate the weakly dominated strategy for both players, then the only remaining strategy profile is (A, A)—and this is a Nash equilibrium.</li>
+<li>However, (B, B) is also a Nash equilibrium: both players get payoff 1, and neither can improve that payoff by changing their own strategy. We failed to find this equilibrium by eliminating weakly dominated strategies.</li>
+</ul>
 </div>
+<hr>
+</section>
+<section id="another-example-why-weak-dominance-is-not-useful" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-why-weak-dominance-is-not-useful">Another Example: Why Weak Dominance is Not Useful</h2>
+<p>In the game below, M and R are weakly dominated.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>If we begin by eliminating R, then afterwards, M and B are both weakly dominated, and we would eliminate them, leaving only (T, L).</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-why-weak-dominance-is-not-useful-1" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-why-weak-dominance-is-not-useful-1">Another Example: Why Weak Dominance is Not Useful</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>However, if we begin by eliminating M, then T and R are both weakly dominated, and if we eliminate them, we are left with only (B, L).</li>
+<li>Not only does the outcome of IEWDS depend on what we eliminate first, it still fails to find a <strong>third</strong> Nash equilibrium, which is (B, R).</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="other-elimination-methods-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="other-elimination-methods-non-best-responses">Other Elimination Methods: Non-Best-Responses</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Generally speaking, we can eliminate any strategy which is not rational to play in a NE.</li>
+<li>It’s never rational to play strictly dominated strategies, but it’s sometimes rational to play weakly dominated strategies.</li>
+<li>There are other categories of non-rational strategies:</li>
+<li>A strategy is a <span class="hi">non-best-response</span> or <span class="hi">non-rationalizable strategy</span> if and only if, regardless of what the other players choose, it never provides the best possible payoff.</li>
+<li>I like to describe non-rationalizable strategies as strategies that you’d have to be crazy to think were a good idea, i.e.&nbsp;you can’t rationalize playing them.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="strictly-dominated-vs.-non-best-response" class="level2">
+<h2 class="anchored" data-anchor-id="strictly-dominated-vs.-non-best-response">Strictly Dominated vs.&nbsp;Non-Best-Response}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Non-rationalizability is very similar to strict dominance, but here’s the difference:</li>
+<li>Strict dominance is pairwise: a strategy <span class="math inline">\(s\)</span> dominates another, <span class="math inline">\(s'\)</span>, if <span class="math inline">\(s\)</span> specifically always gives a better payoff than <span class="math inline">\(s'\)</span>.</li>
+<li>Non-rationalizability is a property of a single strategy: for a strategy to be non-rationalizable, it means that there is always <em>some</em> option that gives a better payoff—but the better option doesn’t always have to be the same strategy.</li>
+<li>To put it another way: strategy <span class="math inline">\(s\)</span> is not a best response if there is always <strong>some strategy* which is better. To be strictly dominated, there must be </strong>one particular strategy** which is always better.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="example-non-best-responses">Example: Non-Best-Responses}</h2>
+<p>In the game below, there are no strictly dominated strategies, meaning that IESDS will not do anything to simplify it.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>However, we can see that B is non-rationalizable for Player 1: regardless of whether Player 2 chooses a, b, or c, Player 1 is better off playing either A or C.</li>
+<li>Also, b is non-rationalizable for Player 2.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-non-best-responses">Another Example: Non-Best-Responses</h2>
+<hr>
+</section>
+<section id="iterated-elimination-of-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="iterated-elimination-of-non-best-responses">Iterated Elimination of Non-Best-Responses</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>It is not rational to play a non-best-response strategy in a pure-strategy context. (As we’ll see much later, it’s more complicated in a mixed-strategy context).</li>
+<li>Any strictly dominated strategy is also not a best response, but not all NBR strategies are strictly dominated.</li>
+<li>Because of this, if we eliminate non-best-responses, using the same steps as IESDS, this process will always eliminate the same strategies, and it may eliminate even more!</li>
+<li>This process is, naturally, called Iterative Elimination of Non-Best-Responses (IENBR).</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-ienbr" class="level2">
+<h2 class="anchored" data-anchor-id="example-ienbr">Example: IENBR</h2>
+<p>Returning to this same example, we can start by eliminating B.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Once we do this, we can now see that b and c are non-rationalizable, and eliminate them.</li>
+<li>Finally, we can see that B is non-rationalizable and eliminate it, leaving only the strategy profile (C, a), which is the Nash equilibrium of this game.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-ienbr" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-ienbr">Another Example: IENBR</h2>
+<hr>
+</section>
+<section id="iclicker-q4" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-q4">iClicker Q4</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>After eliminating Z, which is strictly dominated, what strategy is a non-best-response?
+<ol class="incremental" type="1">
+<li>X</li>
+<li>Y</li>
+<li>Z</li>
+<li>y</li>
+<li>z</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="iclicker-q5" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-q5">iClicker Q5</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>If we complete IENBR on this game table, what strategy profile is left at the end?
+<ol class="incremental" type="1">
+<li>(X, x)</li>
+<li>(X, z)</li>
+<li>(Y, x)</li>
+<li>(Y, z)</li>
+<li>There is more than one strategy profile left.</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="failures-of-elimination-methods" class="level2">
+<h2 class="anchored" data-anchor-id="failures-of-elimination-methods">Failures of Elimination Methods</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>There’s no guarantee that any particular game will contain strategies that are either strictly dominated or non-rationalizable.</li>
+<li>Even when there are strategies we can eliminate, there may not be enough of them to find a NE just by elimination.</li>
+<li>So why bother with this?</li>
+<li>Even if elimination doesn’t immediately identify a NE, it can still be helpful to simplify the game before trying other methods.</li>
+<li>Simplifying by elimination is <strong>especially</strong> useful when dealing with mixed strategies—which we’ll get to after the midterm.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="best-responses">Best-Responses}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>In this discussion of non-best-response strategies, we’ve sort of skipped over one thing: if a strategy is NOT a non-best-response, then logically, it must sometimes be a best response.</li>
+<li>This is arguably an even more important concept—and one that we’ll get to tomorrow.</li>
+</ul>
+</div>
+<hr>
 
 
 </section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Harrington, pg 18<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>for finite, perfect information games<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Bonanno, pg 83<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

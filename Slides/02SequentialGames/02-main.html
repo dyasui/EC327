@@ -1468,23 +1468,454 @@ Dante Yasui
 </figure>
 </div>
 </section>
-<section id="tic-tac-toe" class="slide level2">
-<h2>Tic-Tac-Toe</h2>
+<section id="x2-tic-tac-toe" class="slide level2">
+<h2>2x2 Tic-Tac-Toe</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/fig3.7.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p>This is just for a simpler game with a 2x2 grid.</p>
 <ul>
 <li><p>Even though it looks complicated, the main branches are really just copies of each other</p></li>
-<li><p>Most people probably figure out the rollback equilibrium after playing it enough</p></li>
-<li><p>Insert relevant xkcd here: <a href="https://xkcd.com/832/">https://xkcd.com/832/</a></p></li>
+<li><p>What is the rollback equilibrium?</p></li>
 </ul>
+</div>
+</div>
+</section>
+<section id="x3-tic-tac-toe" class="slide level2">
+<h2>3x3 Tic-Tac-Toe</h2>
+
+<img data-src="figures/tic_tac_toe_xkcd.png" class="r-stretch"><p><a href="https://xkcd.com/832/">https://xkcd.com/832/</a></p>
+</section>
+<section id="x3-tic-tac-toe-1" class="slide level2">
+<h2>3x3 Tic-Tac-Toe</h2>
+<ul>
+<li>Most people probably figure out the rollback equilibrium after playing it enough</li>
+</ul>
+<div>
+<ul>
+<li class="fragment"><p>The second player can always get at least a tie:</p>
+<ul>
+<li class="fragment"><p>If first player chooses middle, then take a corner</p></li>
+<li class="fragment"><p>If first player chose anything else, take the middle</p></li>
+<li class="fragment"><p>After the first stages, block any attempt by player 1 to get 3 in a row</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="more-complicated-games" class="slide level2">
+<h2>More complicated games</h2>
+<p>Do all games have theoretical solutions?</p>
+<div>
+<ul>
+<li class="fragment"><p>Checkers?</p></li>
+<li class="fragment"><p>Chess?</p></li>
+<li class="fragment"><p>Go?</p></li>
+</ul>
+</div>
 </section>
 <section id="chess" class="slide level2">
 <h2>Chess</h2>
+<div>
 <ul>
-<li><p>What about more complicated games like chess?</p>
-<ul>
-<li>technically rollback solvable, but with <span class="math inline">\(10^{120}\)</span> possible moves, it hasn’t been solved by either human or machine</li>
-</ul></li>
-<li><p>Players of complicated sequential games often implement some <span class="hi">intermediate valuation function</span> to assign payoffs to non-terminal nodes.</p></li>
+<li class="fragment"><p>Technically rollback solvable, but with <span class="math inline">\(10^{120}\)</span> possible moves, it hasn’t been solved by either human or machine</p></li>
+<li class="fragment"><p>Human experts and computer programs instead rely on <em>experience</em> of past game possibilities</p></li>
+<li class="fragment"><p>and on some partial rollback, or an <span class="hi">intermediate valuation function</span>, where you look at all possibilities in the next few moves and assign probabilistic payoffs</p></li>
 </ul>
+</div>
+</section>
+<section id="theory-in-complicated-situations" class="slide level2">
+<h2>Theory in complicated situations</h2>
+<p>Is rollback still useful for complicated games where the theoretical solutions are infeasible to solve?</p>
+<div>
+<blockquote>
+<p>Yes!</p>
+</blockquote>
+<ul>
+<li class="fragment"><p>Understanding simpler games can help you develop intuition for solving more complicated ones</p></li>
+<li class="fragment"><p>Complicated games can be decomposed into smaller parts where solving is easier</p></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="examples" class="title-slide slide level1 center">
+<h1>Examples</h1>
+
+</section>
+<section id="lawmakers-game" class="slide level2">
+<h2>Lawmakers’ Game <sup>1</sup></h2>
+<blockquote>
+<p>Two distinct proposals, A and B, are being debated in Washington. Congress likes proposal A, and the president likes proposal B.</p>
+</blockquote>
+<table>
+<thead>
+<tr class="header">
+<th>Outcome</th>
+<th>Congress</th>
+<th>President</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A becomes law</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>B becomes law</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>Both A and B become law</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Neither (status quo prevails)</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<aside><ol class="aside-footnotes"><li id="fn11"><p>Dixit Chapter 3: question U4</p></li></ol></aside></section>
+<section id="lawmakers-game-1" class="slide level2">
+<h2>Lawmakers’ Game <sup>1</sup></h2>
+<blockquote>
+<p>The moves in the game are as follows. First, Congress decides whether to pass a bill and whether the bill is to contain A or B or both. Then the president decides whether to sign or veto the bill. Congress does not have enough votes to override a veto. Draw a tree for this game and find the rollback equilibrium.</p>
+</blockquote>
+<aside><ol class="aside-footnotes"><li id="fn12"><p>Dixit Chapter 3: question U4</p></li></ol></aside></section>
+<section id="lawmakers-game-2" class="slide level2">
+<h2>Lawmakers’ Game <sup>1</sup></h2>
+<blockquote>
+<p>Now suppose the rules of the game are changed in only one respect: the president is given the extra power of a line-item veto. Thus, if Congress passes a bill containing both A and B, the president may choose not only to sign or veto the bill as a whole, but also to veto just one of the two items. Show the new tree and find the rollback equilibrium.</p>
+</blockquote>
+<aside><ol class="aside-footnotes"><li id="fn13"><p>Dixit Chapter 3: question U4</p></li></ol></aside></section>
+<section id="optimal-punishment-game" class="slide level2">
+<h2>Optimal Punishment Game <sup>1</sup></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="figures/Harrington-figPR8.4.png"></p>
+</div><div class="column" style="width:40%;">
+<blockquote>
+<p>“Laws too gentle are seldom obeyed; too severe, seldom executed”</p>
+<ul>
+<li>Benjamin Franklin</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn14"><p>Harrington Chapter 8: question 4</p></li></ol></aside></section>
+<section id="optimal-punishment-game-1" class="slide level2">
+<h2>Optimal Punishment Game <sup>1</sup></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="figures/Harrington-figPR8.4.png"></p>
+</div><div class="column" style="width:40%;">
+<p>What values of <code>a-l</code> make the lawmaker choose a <span class="blue"><em>Moderate</em></span> penalty?</p>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn15"><p>Harrington Chapter 8: question 4</p></li></ol></aside></section>
+<section id="preemption" class="slide level2">
+<h2>Preemption</h2>
+<blockquote>
+<p>You’re at the airport waiting to board your flight to go on vacation to Croatia with your carry-on backpack stuffed with everything you’ll need so you don’t have to pay for a checked bag. You look around and notice it seems like a lot of other people have had the same idea.</p>
+<p>A voice comes on the intercom with a familiar announcement:</p>
+<p><em>Due to this being a full flight, we will be asking passengers to check their bags at the gate</em></p>
+<p>Even though boarding hasn’t officially started yet, everyone is starting to stand around the ticket counter.</p>
+</blockquote>
+</section>
+<section id="preemption-1" class="slide level2">
+<h2>Preemption</h2>
+<p>A <span class="hi">preemption game</span> is one in which:</p>
+<ol type="1">
+<li><p>players’ payoff increase when they act before others</p></li>
+<li><p>but their payoffs are also higher when they act later in time</p></li>
+</ol>
+<div>
+<ul>
+<li class="fragment">You’ve probably noticed yourself playing a few different preemption games in different settings, even if you didn’t have a name for it</li>
+</ul>
+</div>
+</section>
+<section id="preemption-2" class="slide level2">
+<h2>Preemption</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="figures/Harrington-tbl8.3.png"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><p>Here’s a table to represent the time costs of waiting in that boarding line</p></li>
+<li><p>Also assume that the benefit to being the first to board is <span class="math inline">\(30\)</span> and being second is <span class="math inline">\(20\)</span></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="preemption-3" class="slide level2">
+<h2>Preemption</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="figures/Harrington-fig8.17.png"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><p>Here are the net payoffs (benefits - costs) applied to an extensive form representation of the simplified two-player boarding game</p></li>
+<li><p>Let’s find the <span class="hi">rollback equilibrium</span></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="preemption-4" class="slide level2">
+<h2>Preemption</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="figures/Harrington-fig8.17.png"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><p>Is the equilibrium outcome of this game a <span class="hi">Pareto efficient</span> one?</p></li>
+<li><p>Why or why not?</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="preemption-5" class="slide level2">
+<h2>Preemption</h2>
+<p>A general lesson of all preemption games is that <strong>players act too soon</strong> from a social efficiency perspective.</p>
+<div>
+<ul>
+<li class="fragment">Everyone would be better off in the outcome where we all wait, but because there is an incentive to try to jump the line, rational agents cannot be expected to wait instead of getting ahead</li>
+</ul>
+</div>
+</section>
+<section id="war-of-attrition" class="slide level2">
+<h2>War of Attrition</h2>
+<p>Not all games that involve waiting are <em>preemption games</em>, though.</p>
+<div>
+<p>A <span class="hi">war of attrition</span> is a type of game where:</p>
+<ol type="1">
+<li class="fragment"><p>Players’ payoffs are higher when they act <em>after</em> other players</p></li>
+<li class="fragment"><p>and higher the <em>sooner</em> in time they act</p></li>
+</ol>
+</div>
+</section>
+<section id="war-of-attrition-1" class="slide level2">
+<h2>War of Attrition</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="figures/Harrington-fig8.18.png"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li>What is the rollback equilibrium of this game?</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="war-of-attrition-2" class="slide level2">
+<h2>War of Attrition</h2>
+<p>A general lesson of all premption games is that <strong>players wait too long</strong> than what would be socially efficient if they collectively acted sooner.</p>
+</section>
+<section id="war-of-attrition-3" class="slide level2">
+<h2>War of Attrition</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="figures/Harrington-fig8.18.png"></p>
+</div><div class="column" style="width:60%;">
+<div>
+<ul>
+<li class="fragment"><p>What if the players flipped a coin to decide who would act and then that player would immediately act?</p></li>
+<li class="fragment"><p>What would be their <em>expected payoffs</em></p></li>
+<li class="fragment"><p>The problem is that such an agreement is <em>not enforcable</em></p>
+<ul>
+<li class="fragment">Once the coin flip has been observed, there’s nothing to stop the player who would be directed to act first to ignore the flip and wait.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="why-dont-nba-stars-pass-more" class="slide level2">
+<h2>Why don’t NBA stars pass more?</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="figures/Harrington-fig8.19.png"></p>
+</div><div class="column" style="width:60%;">
+<div>
+<ul>
+<li class="fragment"><p>What is the rollback equilibrium?</p></li>
+<li class="fragment"><p>This is a variation of a game called Centipede which comes up a lot in lab experiments</p></li>
+<li class="fragment"><p>We’ll use come back to the centipede game in our discussion of how well our theoretical predictions actually match peoples’ behavior</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="evidence-concerning-rollback" class="title-slide slide level1 center">
+<h1>Evidence concerning Rollback</h1>
+
+</section>
+<section id="does-rollback-hold-up-in-the-real-world" class="slide level2">
+<h2>Does rollback hold up in the real world?</h2>
+<p>One of the goals of game theory is to generate <em>testable predictions</em></p>
+<blockquote>
+<p>You have all participated in a few such tests of the theory in this class</p>
+</blockquote>
+</section>
+<section id="survivor-flags-game-results" class="slide level2">
+<h2>Survivor Flags game results</h2>
+
+<img data-src="figures/F2024-Results.png" class="r-stretch"></section>
+<section id="survivor-flags-game-results-1" class="slide level2">
+<h2>Survivor Flags game results</h2>
+<p>The last time I taught this class:</p>
+
+<img data-src="figures/W2024-results.png" class="r-stretch"></section>
+<section id="why-didnt-all-teams-find-the-rollback-equilibrium" class="slide level2">
+<h2>Why didn’t all teams find the rollback equilibrium?</h2>
+<div>
+<ul>
+<li class="fragment"><p>Did everyone have perfect information about the rules?</p></li>
+<li class="fragment"><p>Were people thinking ahead?</p></li>
+<li class="fragment"><p>Were there disagreements within any teams as to the optimal strategy?</p></li>
+</ul>
+</div>
+</section>
+<section id="why-didnt-all-teams-find-the-rollback-equilibrium-1" class="slide level2">
+<h2>Why didn’t all teams find the rollback equilibrium?</h2>
+<p>What about common knowledge of rationality?</p>
+<div>
+<ul>
+<li class="fragment"><p>If you were on the second team to choose, and you see the first team doesn’t take one flag, what should you think?</p></li>
+<li class="fragment"><p>Should you still stick to the optimal strategy?</p></li>
+</ul>
+</div>
+</section>
+<section id="survivor-flag-results-discussion" class="slide level2">
+<h2>Survivor Flag Results Discussion</h2>
+<p>This game was relatively simple because it only relied on <em>one team</em> to come up with the optimal strategy</p>
+<div>
+<ul>
+<li class="fragment"><p>As long as the first team always took the right number of flags, the second team didn’t have any impact on the game</p></li>
+<li class="fragment"><p>This is also a <em>zero-sum</em> game, so there were no opportunities for teams to benefit by cooperating</p></li>
+<li class="fragment"><p>Let’s look at a similar game, but with non-zero-sum payoffs</p></li>
+</ul>
+</div>
+</section>
+<section id="centipede-game" class="slide level2">
+<h2>Centipede Game</h2>
+<p>Two participants play this game, taking turns over several rounds.</p>
+<p>The first is offered a choice between:</p>
+<ol type="a">
+<li>splitting 50 cents where they keep 40 and the other player gets 10</li>
+</ol>
+<p>or b) they pass the choice to the next player who gets the same choice but the pot they can choose to split from doubles</p>
+</section>
+<section id="centipede-game-1" class="slide level2">
+<h2>Centipede Game</h2>
+<p>First, what is the theoretical solution?</p>
+
+<img data-src="figures/Harrington-fig8.20.png" class="r-stretch"></section>
+<section id="centipede-game-2" class="slide level2">
+<h2>Centipede Game</h2>
+<p>Now what would you do if you were in this situation?</p>
+<p>When would you grab?</p>
+
+<img data-src="figures/Harrington-fig8.20.png" class="r-stretch"></section>
+<section id="centipede-game-3" class="slide level2">
+<h2>Centipede Game</h2>
+<p>Out of 100 pairs of your peers, how many times do you think that player 1 would grab in the first node?</p>
+<div>
+<ul>
+<li class="fragment">In a lab experiment, only 2 times out of 281 did the first player take the first 40 cents (~1%)</li>
+</ul>
+<p>How many times do you think player 2 grabed in the second node?</p>
+<ul>
+<li class="fragment">Only 18 out of 279 (~6%) did</li>
+</ul>
+<p>How many pairs do you think got to the end of the tree without anyone grabbing? So the last player giving up $12.80 for only $6.40</p>
+<ul>
+<li class="fragment">15%!</li>
+</ul>
+</div>
+</section>
+<section id="centipede-game-evidence-discussion" class="slide level2">
+<h2>Centipede Game Evidence Discussion</h2>
+<p>What explains the drastic departure in lab experiments from the preditiction of backwards induction?</p>
+<div>
+<ul>
+<li class="fragment"><p>Are players’ not looking ahead to the end of the game?</p>
+<ul>
+<li class="fragment">Maybe? But in that experiment, the percentage of players grabbing increased over later stages. In the 5th node, 73% of player 1’s grabbed.</li>
+</ul></li>
+<li class="fragment"><p>Are college students driven by more than money?</p>
+<ul>
+<li class="fragment"><p>Probably. What are some other things which could factor into these participants’ payoffs?</p></li>
+<li class="fragment"><p>What about how much they care about how much their opponent gets?</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="ultimatum-game" class="slide level2">
+<h2>Ultimatum Game</h2>
+<p>Player A and Player B are offered a dollar to divide amongst them.</p>
+<ul>
+<li><p>Player A gets to propose how to split the dollar (i.e., 50:50, 75 to me 25 to you, etc)</p></li>
+<li><p>Player B can either accept the proposed split, or reject so that both players get nothing</p></li>
+</ul>
+<div>
+<blockquote>
+<p>What is the rollback solution if both players payoffs are only determined by how much money they earn?</p>
+</blockquote>
+</div>
+</section>
+<section id="ultimatum-game-evidence" class="slide level2">
+<h2>Ultimatum Game Evidence</h2>
+<p>In spite of the theoretical prediction, the most common proposal in lab experiments is 50:50.</p>
+<p>Most player B’s actually reject any offer of 25% or less.</p>
+<div>
+<ul>
+<li class="fragment"><p>This seems to indicate that most people have some sort of <em>aversion to inequity</em></p></li>
+<li class="fragment"><p>If you’re interested in learning more, <strong>behavioral economics</strong> develops on the basic rational agent model to make sense of some of these experimental findings</p></li>
+</ul>
+</div>
+</section>
+<section id="a-logical-paradox-with-backward-induction" class="slide level2">
+<h2>A logical paradox with Backward induction</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="figures/Harrington-fig8.21.png"></p>
+</div><div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment"><p>What should Jane do if Jon chose <span class="math inline">\(b\)</span>?</p></li>
+<li class="fragment"><p>If she knows Jon is rational, then he would choose <span class="math inline">\(d\)</span> if she chose <span class="math inline">\(x\)</span>, and <span class="math inline">\(c\)</span> if she chose <span class="math inline">\(y\)</span></p></li>
+<li class="fragment"><p>So Jane should choose <span class="math inline">\(x\)</span> to get a payoff of <span class="math inline">\(5\)</span> over <span class="math inline">\(3\)</span> if she chose <span class="math inline">\(y\)</span></p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="a-logical-paradox-with-backward-induction-1" class="slide level2">
+<h2>A logical paradox with Backward induction</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="figures/Harrington-fig8.21.png"></p>
+</div><div class="column" style="width:50%;">
+<div>
+<ul>
+<li class="fragment"><p>But if Jon chose <span class="math inline">\(b\)</span>, doesn’t that mean that he can’t be rational?</p></li>
+<li class="fragment"><p>What should Jane do?</p></li>
+<li class="fragment"><p>Maybe Jon just made a mistake, and Jane should stick to her assumption that he will continue to try to make rational choices</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
 
 <div class="quarto-auto-generated-content">
 <p><img src="UOSignature-356.png" class="slide-logo"></p>

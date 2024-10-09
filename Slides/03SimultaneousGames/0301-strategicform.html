@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -170,222 +199,135 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="taxonomy-of-games" class="level1">
-<h1>Taxonomy of Games</h1>
-<section id="general-categorical-terms" class="level2">
-<h2 class="anchored" data-anchor-id="general-categorical-terms">General Categorical Terms</h2>
+<section id="strategic-form" class="level1">
+<h1>Strategic Form</h1>
+<section id="split-or-steal" class="level2">
+<h2 class="anchored" data-anchor-id="split-or-steal">Split or Steal</h2>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/S0qjK3TWZE8" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>https://youtu.be/S0qjK3TWZE8</p>
+<p>Pause at 2:20. We’ll come back to Nick and Ibrahim!</p>
+<hr>
+</section>
+<section id="how-to-represent-simultaneous-games" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-represent-simultaneous-games">How to represent simultaneous games?</h2>
+<p>From the perspective of Nick, his payoffs depend on what Ibrahim has chosen:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th>if Ibrahim Splits</th>
+<th>if Ibrahim Steals</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>if Nick Splits he wins:</td>
+<td><span class="math inline">\(\$6,800\)</span></td>
+<td><span class="math inline">\(\$ 0\)</span></td>
+</tr>
+<tr class="even">
+<td>if Nick Steals he wins:</td>
+<td><span class="math inline">\(\$13,600\)</span></td>
+<td><span class="math inline">\(\$ 0\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<p>From the perspective of <em>Ibrahim</em>, his payoffs depend on what <em>Nick</em> has chosen:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th>if Nick Splits</th>
+<th>if Nick Steals</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>if Ibrahim Splits he wins:</td>
+<td><span class="math inline">\(\$6,800\)</span></td>
+<td><span class="math inline">\(\$ 0\)</span></td>
+</tr>
+<tr class="even">
+<td>if Ibrahim Steals he wins:</td>
+<td><span class="math inline">\(\$13,600\)</span></td>
+<td><span class="math inline">\(\$ 0\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="intersection-of-payoff-tables" class="level2">
+<h2 class="anchored" data-anchor-id="intersection-of-payoff-tables">Intersection of payoff tables</h2>
+<p>In a <em>game</em>, the best choices are interdependent:</p>
+<table class="table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 30%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>(Nick: <span class="math inline">\(\$x\)</span>, Ibrahim: <span class="math inline">\(\$y\)</span>)</th>
+<th>Ibrahim Splits</th>
+<th>Ibrahim Steals</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nick Splits</td>
+<td><span class="math inline">\((\$6,800, \$6,800)\)</span></td>
+<td><span class="math inline">\((\$0, 13,600)\)</span></td>
+</tr>
+<tr class="even">
+<td>Nick Steals</td>
+<td><span class="math inline">\((\$13,600, \$0)\)</span></td>
+<td><span class="math inline">\((\$0, \$0)\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-strategic-form" class="level2">
+<h2 class="anchored" data-anchor-id="the-strategic-form">The Strategic Form</h2>
+<p>A <span class="h">Strategic Form</span> game is defined by:</p>
 <ul>
-<li><p><span class="h">Sequential</span> or <span class="h">Simultaneous</span>?</p></li>
-<li><p><span class="h">Zero-sum</span> or not</p></li>
-<li><p><span class="h">Perfect</span> or <span class="h">Imperfect</span> information?</p>
-<ul>
-<li>is info <span class="hi">symmetric</span> or <span class="hi">asymmetric</span>?</li>
-</ul></li>
-<li><p><span class="h">One-shot</span> or <span class="h">Repeated</span>?</p></li>
-<li><p>‘<span class="h">Noncooperative</span>’ or ‘<span class="h">Cooperative</span>’?</p></li>
+<li><p>A <span class="hi">set of players</span> who have decisions</p></li>
+<li><p>A <span class="hi">strategy set</span> for each player which is the collection of strategies they choose from</p></li>
+<li><p>A <span class="hi">payoff function</span> which tells us how the player evaluates a <em>strategy profile</em>.</p></li>
 </ul>
-<hr>
-</section>
-<section id="sequential-vs.-simultaneous" class="level2">
-<h2 class="anchored" data-anchor-id="sequential-vs.-simultaneous">Sequential vs.&nbsp;Simultaneous</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><span class="h">Sequential</span> Games</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>players make their moves one after the other</p></li>
-<li><p><span class="hi">Chapter</span> 3</p></li>
-<li><p><span class="hi">Visual tool</span>: <em>game trees</em></p></li>
-<li><p><span class="hi">Solution Method</span>: <em>backwards induction</em></p></li>
-</ul>
-</div>
-</div><div class="column" style="width:50%;">
-<p><span class="h">Simultaneous</span> Games</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>players make their moves at the same time</p></li>
-<li><p><span class="hi">Chapter</span> 4 &amp; 5</p></li>
-<li><p><span class="hi">Visual tool</span>: <em>payoff tables</em></p></li>
-<li><p><span class="hi">Solution Method</span>: <em>best responses</em>, deletion of <em>dominated strats</em></p></li>
-</ul>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="sequential-games" class="level2">
-<h2 class="anchored" data-anchor-id="sequential-games">Sequential Games</h2>
-<p>In <span class="hii">sequential</span> games, you have to think about how what you do <span class="hi"><em>now</em></span> will affect what your opponent will do in the <span class="hi"><em>future</em></span>.</p>
-<p>. . .</p>
-<blockquote class="blockquote">
-<p>This hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.</p>
-</blockquote>
-<p>. . .</p>
-<ul>
-<li>We’ll see that sometimes <span class="hii">moving first</span> can be adventageous</li>
-</ul>
-<p>. . .</p>
-<ul>
-<li>While other times it’s best to <span class="hii">wait and see</span> what someone else does</li>
-</ul>
-<hr>
-</section>
-<section id="simultaneous-games" class="level2">
-<h2 class="anchored" data-anchor-id="simultaneous-games">Simultaneous Games</h2>
-<p>In <span class="hii">simultaneous</span> games, you have to figure out what to do <span class="hi"><em>now</em></span> while also thinking about what your opponent is thinking you will will do <span class="hi"><em>now</em></span>.</p>
-<p>. . .</p>
-<blockquote class="blockquote">
-<p>This circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4.</p>
-</blockquote>
-<hr>
-</section>
-<section id="conflicting-vs.-common-interests" class="level2">
-<h2 class="anchored" data-anchor-id="conflicting-vs.-common-interests">Conflicting vs.&nbsp;Common Interests?</h2>
-<p>Many games you are familiar with have distince <em>winners</em> and <em>losers</em>.</p>
-<p>. . .</p>
-<p>But in other types of games, it’s possible for everyone to come out ahead.</p>
-<hr>
-</section>
-<section id="zero-sum-or-constant-sum-games" class="level2">
-<h2 class="anchored" data-anchor-id="zero-sum-or-constant-sum-games">Zero-sum (or constant-sum) Games</h2>
-<div class="incremental">
-<p>When the <em>total payoffs of all players sum to 0</em> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<ul class="incremental">
-<li><p>i.e, one player’s gain is another player’s loss</p></li>
-<li><p>Examples: NCAA Football Championship, Scramble for Africa (technically <em>constant</em>-sum)</p></li>
-</ul>
-<p>. . .</p>
-<p>Not all games are fixed or zero sum;</p>
-<ul class="incremental">
-<li>Examples: Hiring a tutor (mutual gains), International Trade, etc.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="are-strategic-interactions-repeated" class="level2">
-<h2 class="anchored" data-anchor-id="are-strategic-interactions-repeated">Are strategic interactions Repeated?</h2>
-<p>A <span class="hi">one-shot</span> game is played only once by the same set of players.</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>If you’ve never played against someone before, you can’t form any <span class="hii">beliefs</span> about them</p></li>
-<li><p>Secrecy or surprise are potentially good strategies in these games</p></li>
-</ul>
-</div>
-<p>A game is called <span class="hi">repeated</span> if the same players play it with each other many times.</p>
-<div class="incremental">
-<ul class="incremental">
-<li>If you know your opponent, then your <span class="hii">reputation</span> becomes valuable if you want to cooperate</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="full-or-equal-information" class="level2">
-<h2 class="anchored" data-anchor-id="full-or-equal-information">Full or Equal Information</h2>
-<p>How much does each player know when they decide?</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p><span class="h">Perfect Information</span>: when players know all previous moves and external circumstances</p>
-<ul class="incremental">
-<li>players may have <span class="hi"><em>imperfect info</em></span>; uncertainty about the state of the world, previous’ moves, or other player’s ‘type’</li>
-</ul></li>
-<li><p><span class="h">Asymmetric Info</span>: when one player has access to information that other players do not</p>
-<ul class="incremental">
-<li><p>Examples: hand in poker, used car salesmen</p></li>
-<li><p>Topics: Signaling, Screening</p></li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="can-agreements-be-enforced" class="level2">
-<h2 class="anchored" data-anchor-id="can-agreements-be-enforced">Can agreements be Enforced?</h2>
-<ul>
-<li><p>Self-interest and common good can often conflict.</p></li>
-<li><p>In these situations, players need to form agreements in order to achieve cooperative outcomes.</p></li>
-</ul>
-<p>. . .</p>
-<blockquote class="blockquote">
-<p>But can people actually be held to those agreements?</p>
-</blockquote>
-<p>For example:</p>
-<ul>
-<li><p>Paris Climate accords; who polices nation-state’s carbon reductions?</p></li>
-<li><p>Public goods; why do we need the Internal Revenue Service?</p></li>
-</ul>
-<hr>
-</section>
-<section id="can-agreements-be-enforced-1" class="level2">
-<h2 class="anchored" data-anchor-id="can-agreements-be-enforced-1">Can agreements be Enforced?</h2>
-<p>Two broad categories of the field are <span class="h">cooperative</span> game theory and <span class="h">noncooperative</span> game theory <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<blockquote class="blockquote">
-<p><span class="h">Cooperative</span> games are those in which agreements are enforceable</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>In <span class="h">Noncooperative</span> games, no-one can be forced not to act in their own self-interest</p>
-</blockquote>
-<hr>
-</section>
-<section id="equilibrium" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium">Equilibrium</h2>
-<p>In each of these different categories of games, we will want to make predictions as to how rational agents will behave</p>
-<ul>
-<li>Our methods of <em>solving</em> each type of game will be to look for different types of <span class="hi">equilibria</span></li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Equilibrium
+Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Where every player’s strategy is a <span class="hi">best-response</span> to the other player(s)</p>
+<p>A <span class="hi">strategy profile</span> is a combination of strategies made by all players.</p>
 </div>
 </div>
 <hr>
 </section>
-<section id="equilibrium-2" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium-2">Equilibrium</h2>
-<p>Why study equilibria?</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>They are <strong>stable</strong>: if nobody has anything better to do than what they’re doing now then why change?</p></li>
-<li><p>We can adapt our models to all types of equilibria</p>
-<ul class="incremental">
-<li><p>Market or non-market</p></li>
-<li><p>Dynamic or static</p></li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="equilibrium-3" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium-3">Equilibrium</h2>
-<p>A few different types of equilibria in this class:</p>
+<section id="strategy-profiles-in-split-or-steal" class="level2">
+<h2 class="anchored" data-anchor-id="strategy-profiles-in-split-or-steal">Strategy profiles in Split or Steal</h2>
 <ul>
-<li><p><span class="hi">Nash equilibrium</span></p>
-<ul>
-<li><p><span class="hii">Subgame perfect</span> NE</p></li>
-<li><p><span class="hii">Mixed strategy</span> NE</p></li>
-<li><p><span class="hii">Bayes-Nash</span> equilibrium</p></li>
-</ul></li>
+<li><p>Each player’s strategy <em>set</em> has two strategies, each of one choice: Split <span class="math inline">\(Sp\)</span> or Steal <span class="math inline">\(St\)</span>.</p></li>
+<li><p>There are four different <em>strategy profiles</em> possible in this game:</p></li>
 </ul>
+<p><span class="math inline">\(\{Sp, Sp\}\)</span>, <span class="math inline">\(\{Sp, St\}\)</span>, <span class="math inline">\(\{St, Sp\}\)</span>, and <span class="math inline">\(\{St, St\}\)</span></p>
+<p>each of which was represented by a cell in our game table.</p>
 <hr>
 
 
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>or sum to some constant<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>but if you ask real game theorists, they will probably tell you these names are misleading<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

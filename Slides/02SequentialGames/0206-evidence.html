@@ -147,18 +147,21 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/01Intro/01-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Game Theory</span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/02SequentialGames/02-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Game Theory</span></a>
+ <span class="menu-text">Sequential Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">Slides/03SimultaneousGames/03-main.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../Slides/03SimultaneousGames/03-html.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simultaneous Games</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -173,20 +176,15 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Activity 1: Guess 2/3rds of the average</span></a>
+ <span class="menu-text">Guessing Two Thirds of the Average</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Homework</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Survivor Flags</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -201,65 +199,181 @@ window.Quarto = {
 
 
 
-<section id="welfare-and-efficiency" class="level2">
-<h2 class="anchored" data-anchor-id="welfare-and-efficiency">Welfare and Efficiency</h2>
+<section id="evidence-concerning-rollback" class="level1">
+<h1>Evidence concerning Rollback</h1>
+<section id="does-rollback-hold-up-in-the-real-world" class="level2">
+<h2 class="anchored" data-anchor-id="does-rollback-hold-up-in-the-real-world">Does rollback hold up in the real world?</h2>
+<p>One of the goals of game theory is to generate <em>testable predictions</em></p>
+<blockquote class="blockquote">
+<p>You have all participated in a few such tests of the theory in this class</p>
+</blockquote>
+<hr>
+</section>
+<section id="survivor-flags-game-results" class="level2">
+<h2 class="anchored" data-anchor-id="survivor-flags-game-results">Survivor Flags game results</h2>
+<p><img src="figures/F2024-Results.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="survivor-flags-game-results-1" class="level2">
+<h2 class="anchored" data-anchor-id="survivor-flags-game-results-1">Survivor Flags game results</h2>
+<p>The last time I taught this class:</p>
+<p><img src="figures/W2024-results.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="why-didnt-all-teams-find-the-rollback-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="why-didnt-all-teams-find-the-rollback-equilibrium">Why didn’t all teams find the rollback equilibrium?</h2>
 <div class="incremental">
-<p>What are the <strong>good</strong> outcomes in the planting game?</p>
-<p>Can we rank outcomes by collective welfare?</p>
-</div>
-<hr>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig3.6.png" class="img-fluid figure-img"></p>
-<figcaption>figures/fig3.6.png</figcaption>
-</figure>
+<ul class="incremental">
+<li><p>Did everyone have perfect information about the rules?</p></li>
+<li><p>Were people thinking ahead?</p></li>
+<li><p>Were there disagreements within any teams as to the optimal strategy?</p></li>
+</ul>
 </div>
 <hr>
 </section>
-<section id="pareto-dominance" class="level2">
-<h2 class="anchored" data-anchor-id="pareto-dominance">Pareto Dominance</h2>
-<p>Pareto optimality (or efficiency) is econonomists’ best shot at coming up with a ranking of which outcomes are objectively ‘better’</p>
-<ul>
-<li><p>For any two outcomes (🎉, 🎊), 🎉 is <span class="hi">Pareto dominated</span> by 🎊 if both:</p>
-<ol type="1">
-<li><p>No one strictly prefers 🎉 to 🎊 - U<sub>👤</sub>(🎊) <span class="math inline">\(\geq\)</span> U<sub>👤</sub>(🎉) <span class="math inline">\(\forall 👤 \in \{ 🙍, 🧑, 💆, 🧖, 🧑, 😺, ...\}\)</span></p></li>
-<li><p>At least one person strictly<sub>🎉</sub> prefers 🎉 to 🎊 - <span class="math inline">\(\exists 👤\)</span> such that U<sub>👤</sub>(🎊) <span class="math inline">\(&gt;\)</span> U<sub>👤</sub>(🎉)</p></li>
-</ol></li>
+<section id="why-didnt-all-teams-find-the-rollback-equilibrium-1" class="level2">
+<h2 class="anchored" data-anchor-id="why-didnt-all-teams-find-the-rollback-equilibrium-1">Why didn’t all teams find the rollback equilibrium?</h2>
+<p>What about common knowledge of rationality?</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>If you were on the second team to choose, and you see the first team doesn’t take one flag, what should you think?</p></li>
+<li><p>Should you still stick to the optimal strategy?</p></li>
 </ul>
+</div>
 <hr>
 </section>
-<section id="pareto-improvement" class="level2">
-<h2 class="anchored" data-anchor-id="pareto-improvement">Pareto Improvement</h2>
-<p>The move from a policy y to an alternative policy x is a <span class="hi">Pareto improvement</span> if x Pareto dominates y.</p>
-<ul>
-<li><p>Such a policy change should reasonably be seen as unambiguously good</p></li>
-<li><p>Another perspective is that <em>no-one would veto</em> a pareto improvement</p></li>
+<section id="survivor-flag-results-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="survivor-flag-results-discussion">Survivor Flag Results Discussion</h2>
+<p>This game was relatively simple because it only relied on <em>one team</em> to come up with the optimal strategy</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>As long as the first team always took the right number of flags, the second team didn’t have any impact on the game</p></li>
+<li><p>This is also a <em>zero-sum</em> game, so there were no opportunities for teams to benefit by cooperating</p></li>
+<li><p>Let’s look at a similar game, but with non-zero-sum payoffs</p></li>
 </ul>
+</div>
 <hr>
 </section>
-<section id="pareto-efficiency" class="level2">
-<h2 class="anchored" data-anchor-id="pareto-efficiency">Pareto Efficiency</h2>
-<p>An outcome is <span class="h">Pareto Efficient</span> (Optimal) if no other outcome Pareto dominates it.</p>
-<p>An outcome is <span class="hi">Pareto Infficient</span> if at least one other outcome Pareto dominates it.</p>
+<section id="centipede-game" class="level2">
+<h2 class="anchored" data-anchor-id="centipede-game">Centipede Game</h2>
+<p>Two participants play this game, taking turns over several rounds.</p>
+<p>The first is offered a choice between:</p>
+<ol type="a">
+<li>splitting 50 cents where they keep 40 and the other player gets 10</li>
+</ol>
+<p>or b) they pass the choice to the next player who gets the same choice but the pot they can choose to split from doubles</p>
 <hr>
 </section>
-<section id="ranking-the-planting-payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="ranking-the-planting-payoffs">Ranking the Planting Payoffs</h2>
-<p>Compare (4,3,3) to (1,2,2)</p>
-<ul>
-<li>Which one is Pareto dominating?</li>
-</ul>
+<section id="centipede-game-1" class="level2">
+<h2 class="anchored" data-anchor-id="centipede-game-1">Centipede Game</h2>
+<p>First, what is the theoretical solution?</p>
+<p><img src="figures/Harrington-fig8.20.png" class="img-fluid"></p>
 <hr>
 </section>
-<section id="ranking-the-planting-payoffs-1" class="level2">
-<h2 class="anchored" data-anchor-id="ranking-the-planting-payoffs-1">Ranking the Planting Payoffs</h2>
-<p>Now compare (4,3,3) to (3,4,3) or (3,3,4)</p>
-<ul>
-<li>Which one is Pareto dominating?</li>
+<section id="centipede-game-2" class="level2">
+<h2 class="anchored" data-anchor-id="centipede-game-2">Centipede Game</h2>
+<p>Now what would you do if you were in this situation?</p>
+<p>When would you grab?</p>
+<p><img src="figures/Harrington-fig8.20.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="centipede-game-3" class="level2">
+<h2 class="anchored" data-anchor-id="centipede-game-3">Centipede Game</h2>
+<p>Out of 100 pairs of your peers, how many times do you think that player 1 would grab in the first node?</p>
+<div class="incremental">
+<ul class="incremental">
+<li>In a lab experiment, only 2 times out of 281 did the first player take the first 40 cents (~1%)</li>
 </ul>
-<p>Is the rollback equilibrium outcome a <em>Pareto efficient</em> one?</p>
+<p>How many times do you think player 2 grabed in the second node?</p>
+<ul class="incremental">
+<li>Only 18 out of 279 (~6%) did</li>
+</ul>
+<p>How many pairs do you think got to the end of the tree without anyone grabbing? So the last player giving up $12.80 for only $6.40</p>
+<ul class="incremental">
+<li>15%!</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="centipede-game-evidence-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="centipede-game-evidence-discussion">Centipede Game Evidence Discussion</h2>
+<p>What explains the drastic departure in lab experiments from the preditiction of backwards induction?</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Are players’ not looking ahead to the end of the game?</p>
+<ul class="incremental">
+<li>Maybe? But in that experiment, the percentage of players grabbing increased over later stages. In the 5th node, 73% of player 1’s grabbed.</li>
+</ul></li>
+<li><p>Are college students driven by more than money?</p>
+<ul class="incremental">
+<li><p>Probably. What are some other things which could factor into these participants’ payoffs?</p></li>
+<li><p>What about how much they care about how much their opponent gets?</p></li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="ultimatum-game" class="level2">
+<h2 class="anchored" data-anchor-id="ultimatum-game">Ultimatum Game</h2>
+<p>Player A and Player B are offered a dollar to divide amongst them.</p>
+<ul>
+<li><p>Player A gets to propose how to split the dollar (i.e., 50:50, 75 to me 25 to you, etc)</p></li>
+<li><p>Player B can either accept the proposed split, or reject so that both players get nothing</p></li>
+</ul>
+<div class="incremental">
+<blockquote class="blockquote">
+<p>What is the rollback solution if both players payoffs are only determined by how much money they earn?</p>
+</blockquote>
+</div>
+<hr>
+</section>
+<section id="ultimatum-game-evidence" class="level2">
+<h2 class="anchored" data-anchor-id="ultimatum-game-evidence">Ultimatum Game Evidence</h2>
+<p>In spite of the theoretical prediction, the most common proposal in lab experiments is 50:50.</p>
+<p>Most player B’s actually reject any offer of 25% or less.</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>This seems to indicate that most people have some sort of <em>aversion to inequity</em></p></li>
+<li><p>If you’re interested in learning more, <strong>behavioral economics</strong> develops on the basic rational agent model to make sense of some of these experimental findings</p></li>
+</ul>
+</div>
+</section>
+<section id="a-logical-paradox-with-backward-induction" class="level2">
+<h2 class="anchored" data-anchor-id="a-logical-paradox-with-backward-induction">A logical paradox with Backward induction</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="figures/Harrington-fig8.21.png" class="img-fluid"></p>
+</div><div class="column" style="width:50%;">
+<div class="incremental">
+<ul class="incremental">
+<li><p>What should Jane do if Jon chose <span class="math inline">\(b\)</span>?</p></li>
+<li><p>If she knows Jon is rational, then he would choose <span class="math inline">\(d\)</span> if she chose <span class="math inline">\(x\)</span>, and <span class="math inline">\(c\)</span> if she chose <span class="math inline">\(y\)</span></p></li>
+<li><p>So Jane should choose <span class="math inline">\(x\)</span> to get a payoff of <span class="math inline">\(5\)</span> over <span class="math inline">\(3\)</span> if she chose <span class="math inline">\(y\)</span></p></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="a-logical-paradox-with-backward-induction-1" class="level2">
+<h2 class="anchored" data-anchor-id="a-logical-paradox-with-backward-induction-1">A logical paradox with Backward induction</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="figures/Harrington-fig8.21.png" class="img-fluid"></p>
+</div><div class="column" style="width:50%;">
+<div class="incremental">
+<ul class="incremental">
+<li><p>But if Jon chose <span class="math inline">\(b\)</span>, doesn’t that mean that he can’t be rational?</p></li>
+<li><p>What should Jane do?</p></li>
+<li><p>Maybe Jon just made a mistake, and Jane should stick to her assumption that he will continue to try to make rational choices</p></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

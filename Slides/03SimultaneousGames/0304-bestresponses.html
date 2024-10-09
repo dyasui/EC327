@@ -147,18 +147,21 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/01Intro/01-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Game Theory</span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/02SequentialGames/02-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Game Theory</span></a>
+ <span class="menu-text">Sequential Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">Slides/03SimultaneousGames/03-main.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../Slides/03SimultaneousGames/03-html.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simultaneous Games</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -173,20 +176,15 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Activity 1: Guess 2/3rds of the average</span></a>
+ <span class="menu-text">Guessing Two Thirds of the Average</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Homework</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Survivor Flags</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -201,214 +199,442 @@ window.Quarto = {
 
 
 
-<section id="backwards-induction" class="level1">
-<h1>Backwards Induction</h1>
-<section id="the-smoking-decision" class="level2">
-<h2 class="anchored" data-anchor-id="the-smoking-decision">The smoking decision</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig3.2.png" class="img-fluid figure-img"></p>
-<figcaption>figures/fig3.2.png</figcaption>
-</figure>
-</div>
-<hr>
-</section>
-<section id="the-smoking-game" class="level2">
-<h2 class="anchored" data-anchor-id="the-smoking-game">The smoking <em>game</em></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig3.3.png" class="img-fluid figure-img"></p>
-<figcaption>figures/fig3.3.png</figcaption>
-</figure>
-</div>
-<hr>
-</section>
-<section id="pruning-branches" class="level2">
-<h2 class="anchored" data-anchor-id="pruning-branches">‘Pruning’ branches</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig3.4.png" class="img-fluid figure-img"></p>
-<figcaption>figures/fig3.4.png</figcaption>
-</figure>
-</div>
-<hr>
-</section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig3.5.png" class="img-fluid figure-img"></p>
-<figcaption>figures/fig3.5.png</figcaption>
-</figure>
-</div>
-<hr>
-</section>
-<section id="backwards-induction-defined" class="level2">
-<h2 class="anchored" data-anchor-id="backwards-induction-defined">Backwards Induction defined</h2>
-<p>The method of looking at decisions in the future to decide what to do now is called <span class="h">Backwards Induction</span> or <span class="h">Rollback</span></p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Definition <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>When all players do <em>rollback analysis</em> to choose their optimal strategies, we call this set of strategies the <span class="h"><em>rollback equilibrium</em></span><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> of the game; the outcome that arises from playing these strategies is the <span class="hi"><em>rollback equilibrium outcome</em></span></p>
-</div>
-</div>
-<hr>
-</section>
-<section id="group-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="group-exercise">Group Exercise:</h2>
-<p>Consider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.</p>
-<ol type="1">
-<li><p><em>Draw the extensive form game tree complete with all payoff for both teams.</em></p></li>
-<li><p><em>How many total strategies are there for team 1?</em></p></li>
-<li><p><em>Use pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?</em></p></li>
-</ol>
-<hr>
-</section>
-<section id="adding-more-players" class="level2">
-<h2 class="anchored" data-anchor-id="adding-more-players">Adding more players</h2>
-<p>We can start to add more complexity with more than two players</p>
-<hr>
-</section>
-<section id="player-planting-game" class="level2">
-<h2 class="anchored" data-anchor-id="player-planting-game">3-player planting game</h2>
+<section id="iclicker-poll" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-poll">iClicker Poll}</h2>
 <div class="incremental">
 <ul class="incremental">
-<li><p><span class="hi">Emily</span>, <span class="hi">Nina</span>, and <span class="hi">Talia</span> are roommates who want to get a start on their communal garden.</p></li>
-<li><p>They like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.</p></li>
-<li><p><strong>2 or 3 people</strong> working is enough to keep the garden healthy, but if <strong>1 or 0</strong> work, then the garden will die.</p></li>
+<li>Suppose that you KNEW, without a doubt, that Player 2 would play <span class="math inline">\(b\)</span>. If you were Player 1, what strategy would you choose?
+<ol class="incremental" type="1">
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>D</li>
+<li>I would be indifferent between two or more strategies.</li>
+</ol></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="planting-game-payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="planting-game-payoffs">Planting Game payoffs</h2>
-<table class="table">
-<thead>
-<tr class="header">
-<th>outcome:</th>
-<th>utlity:</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>I don’t contribute, but garden lives</td>
-<td>4</td>
-</tr>
-<tr class="even">
-<td>I contribute, and get garden.</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>I don’t contribute, and garden dies</td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>I contribute, but garden dies</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="planding-game-tree" class="level2">
-<h2 class="anchored" data-anchor-id="planding-game-tree">Planding Game Tree</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig3.6.png" class="img-fluid figure-img"></p>
-<figcaption>figures/fig3.6.png</figcaption>
-</figure>
-</div>
-<hr>
-</section>
-<section id="equilibrium-path-of-play" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium-path-of-play">Equilibrium Path of Play</h2>
-<div class="incremental">
-<p>Note that there is one continuous path we traced from the initial node to a final equilibrium outcome.</p>
-<p>However, we couldn’t have gotten their without the other arrows paths <strong>even though they are never reached</strong> in equilibrium.</p>
-<p>Recall that a <span class="hi">strategy</span> is a collection of choices at <strong>every</strong> decision node.</p>
-</div>
-<hr>
-</section>
-<section id="equilibrium-strategies" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium-strategies">Equilibrium Strategies</h2>
-<p>Even though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:</p>
-<blockquote class="blockquote">
-<p>“Nina’s <strong>strategy</strong> in the rollback equilibrium is { <span class="hii"><em>Don’t Contribute</em></span> at <span class="hi">b</span>, <span class="hii"><em>Contribute</em></span> at <span class="hi">c</span> }”.</p>
-</blockquote>
-<ul>
-<li>To make it even shorter, let’s call this strategy <span class="hii">DC</span>.</li>
-</ul>
-<hr>
-</section>
-<section id="how-many-strategies-does-talia-have" class="level2">
-<h2 class="anchored" data-anchor-id="how-many-strategies-does-talia-have">How many strategies does Talia have?</h2>
+<section id="iclicker-poll-1" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-poll-1">iClicker Poll}</h2>
 <div class="incremental">
 <ul class="incremental">
-<li><p>CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD</p></li>
-<li><p>16 total strategies</p></li>
+<li>Suppose that you KNEW, without a doubt, that Player 1 would play <span class="math inline">\(C\)</span>. If you were Player 2, what strategy would you choose?
+<ol class="incremental" type="1">
+<li>a</li>
+<li>b</li>
+<li>c</li>
+<li>d</li>
+<li>I would be indifferent between two or more strategies.</li>
+</ol></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="rollback-equilibrium-strategies" class="level2">
-<h2 class="anchored" data-anchor-id="rollback-equilibrium-strategies">Rollback Equilibrium Strategies</h2>
-<p>The equilibrium is:</p>
-<ul>
-<li>{ <span class="hi">D</span><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, <span class="hi">DC</span><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, <span class="hi">DCCD</span><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> }</li>
+<section id="iclicker-poll-2" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-poll-2">iClicker Poll}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Suppose that you KNEW, without a doubt, that Player 2 would play <span class="math inline">\(a\)</span>. If you were Player 1, what strategy would you choose?
+<ol class="incremental" type="1">
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>D</li>
+<li>I would be indifferent between two or more strategies.</li>
+</ol></li>
 </ul>
-<hr>
-</section>
-<section id="adding-more-moves" class="level2">
-<h2 class="anchored" data-anchor-id="adding-more-moves">Adding More Moves</h2>
-<p><span class="hi align-center">Even a simple game get complicated fast</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/fig3.7.png" class="quarto-figure quarto-figure-center figure-img" width="600" height="500"></p>
-</figure>
 </div>
 <hr>
 </section>
-<section id="tic-tac-toe" class="level2">
-<h2 class="anchored" data-anchor-id="tic-tac-toe">Tic-Tac-Toe</h2>
-<ul>
-<li><p>Even though it looks complicated, the main branches are really just copies of each other</p></li>
-<li><p>Most people probably figure out the rollback equilibrium after playing it enough</p></li>
-<li><p>Insert relevant xkcd here: <a href="https://xkcd.com/832/">https://xkcd.com/832/</a></p></li>
+<section id="iclicker-poll-3" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-poll-3">iClicker Poll}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Suppose that you KNEW, without a doubt, that Player 1 would play <span class="math inline">\(D\)</span>. If you were Player 2, what strategy would you choose?
+<ol class="incremental" type="1">
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>D</li>
+<li>I would be indifferent between two or more strategies.</li>
+</ol></li>
 </ul>
+</div>
 <hr>
 </section>
-<section id="chess" class="level2">
-<h2 class="anchored" data-anchor-id="chess">Chess</h2>
-<ul>
-<li><p>What about more complicated games like chess?</p>
-<ul>
-<li>technically rollback solvable, but with <span class="math inline">\(10^{120}\)</span> possible moves, it hasn’t been solved by either human or machine</li>
+<section id="best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="best-responses">Best Responses}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>If you know what strategy the other player will choose, then you can easily figure out what your best option (or options) are.</li>
+<li>Of course, you don’t actually know what the other player will do when you choose your strategy in a game like this—but thinking about the game this way makes it easy to find NEs.</li>
+<li>A strategy <span class="math inline">\(s_i\)</span> is a <span class="hi">best response</span> to another player’s strategy <span class="math inline">\(s_{-i}\)</span> if and only if it provides the highest payoff possible when the other player chooses <span class="math inline">\(s_{-i}\)</span>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="some-notes-on-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="some-notes-on-best-responses">Some Notes on Best Responses}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>The phrase “to another player’s strategy” in the definition of a best response is <strong>important</strong>.</li>
+<li>A strategy can only be a best response <strong>to some strategy of the other player</strong>. There is no such thing as a strategy which is just ``a best response.”</li>
+<li>When dealing with strategic-form games with game tables, there is always at least one best response to another player’s strategy—and there may be multiple, if there is more than one strategy which provides the best payoff.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="best-responses-in-practice" class="level2">
+<h2 class="anchored" data-anchor-id="best-responses-in-practice">Best Responses in Practice}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>It’s easy to depict best responses in a game table: we can go through each strategy in the game, and mark each strategy which is a best response to them.</li>
+<li>We do this by marking the payoffs—however, it’s important to understand that it’s not the payoff itself which is a best response–we’re just using them as a convenient way to depict where the best responses are.
+<ul class="incremental">
+<li>In other words: don’t try to describe the best response using the payoff. The best response is always the strategy.</li>
 </ul></li>
-<li><p>Players of complicated sequential games often implement some <span class="hi">intermediate valuation function</span> to assign payoffs to non-terminal nodes.</p></li>
 </ul>
+</div>
+<hr>
+</section>
+<section id="example-best-responses-in-game-table" class="level2">
+<h2 class="anchored" data-anchor-id="example-best-responses-in-game-table">Example: Best Responses in Game Table}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>To find Player 1’s best responses, we will go through each column of the table (i.e.&nbsp;each of Player 2’s strategies) and look for which of Player 1’s strategies gives Player 1 the best payoff in that column.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-best-responses-in-game-table-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-best-responses-in-game-table-1">Example: Best Responses in Game Table}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Likewise, to find Player 2’s best responses, we will go through each <strong>row</strong> of the table (each of Player 1’s strategies) and look for which of Player 2’s strategies gives <strong>Player 2</strong> the best payoff in that column. ::: {.incremental}
+<ul class="incremental">
+<li><p>The bolded parts are important: you have to look at Player 1’s payoffs to find Player 1’s best responses, and Player 2’s payoffs to find Player 2’s best responses.</p>
+<p>:::</p></li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-best-responses-in-the-deer-hunt" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-best-responses-in-the-deer-hunt">Another Example: Best Responses in the Deer Hunt}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Recall the Deer Hunt game, in which two cavemen each decide whether to hunt Deer or Rabbit.</li>
+<li>We couldn’t find a Nash Equilibrium to this game using elimination methods, because there was nothing to eliminate: no strategies are strictly dominated, and there are no strategies which are non-best-responses.</li>
+<li>Here are Igg’s best responses…</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-best-responses-in-the-deer-hunt-1" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-best-responses-in-the-deer-hunt-1">Another Example: Best Responses in the Deer Hunt}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>And here are Ogg’s best responses…</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-non-unique-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-non-unique-best-responses">Another Example: Non-Unique Best Responses}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>As mentioned earlier, best responses don’t have to be unique.</li>
+</ul>
+</div>
+<div class="incremental">
+<ul class="incremental">
+<li>Here, for both players, both Straight and Swerve are best responses to Swerve. When the other player chooses Swerve, both strategies provide payoff of 1.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="iclicker-q1" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-q1">iClicker Q1}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>In the game shown above, what is Player 1’s best response to X?
+<ol class="incremental" type="1">
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>A and B are both best responses.</li>
+<li>A and C are both best responses.</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="iclicker-q2" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-q2">iClicker Q2}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>In the game shown above, what is Player 1’s best response to <strong>Y</strong>?
+<ol class="incremental" type="1">
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>A and B are both best responses.</li>
+<li>A and C are both best responses.</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="iclicker-q3" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-q3">iClicker Q3}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>In the game shown above, what is <strong>Player 2’s</strong> best response to <strong>C</strong>?
+<ol class="incremental" type="1">
+<li>X</li>
+<li>Y</li>
+<li>Z</li>
+<li>X and Y are both best responses.</li>
+<li>X and Z are both best responses.</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="nash-equilibrium-from-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-from-best-responses">Nash Equilibrium from Best Responses}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Recall the various definitions of a Nash Equilibrium:
+<ul class="incremental">
+<li>a strategy profile such that no player can obtain a larger payoff by (changing only their own strategy).</li>
+<li>A strategy profile such that no single player can make themselves better off by changing only their own strategy.</li>
+<li>A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision.</li>
+</ul></li>
+<li>Another definition we can use now is “A strategy profile such that each player’s strategy is a best responses to the other player’s strategy.”</li>
+<li>“Playing a best response” is equivalent to “cannot obtain a larger payoff by unilaterally deviating,” or any of the other ways to describe this condition.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="nash-equilibrium-from-best-responses-1" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-from-best-responses-1">Nash Equilibrium from Best Responses}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>If we find each player’s best responses in a game table, and do it using the same table for each player…</li>
+</ul>
+</div>
+<div class="incremental">
+<ul class="incremental">
+<li>Then any cell of the table in which all payoffs are marked to indicate a best response represents a NE.</li>
+<li>Here, the two NEs are (D, a) and (A, d), which we could never have found from elimination.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-nash-equilibrium-in-the-deer-hunt" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-nash-equilibrium-in-the-deer-hunt">Another Example: Nash Equilibrium in the Deer Hunt}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>We did already find the NEs of the Deer Hunt, but we had to go through and check all four strategy profiles. We can do it much faster by just using best responses:</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-when-elimination-does-nothing" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-when-elimination-does-nothing">Another Example: When Elimination Does Nothing}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>This game has <strong>absolutely no strategies</strong> that can be eliminated: none are strictly dominated or non-rationalizable.</li>
+<li>We can still find the NEs (of which there are quite a few) using best responses:</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="iclicker-q4" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-q4">iClicker Q4}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>In the game shown above, which of the following are the Nash Equilibria? (You will need to find best responses for both players.)
+<ol class="incremental" type="1">
+<li>(A, X)</li>
+<li>(A, Y)</li>
+<li>(B, X)</li>
+<li>(C, Z)</li>
+<li>More than one of the above.</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="best-responses-and-non-rationalizability" class="level2">
+<h2 class="anchored" data-anchor-id="best-responses-and-non-rationalizability">Best Responses and Non-Rationalizability}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Finding best responses first makes it a lot easier to search for non-rationalizable strategies.</p></li>
+<li><p>Recall that a non-rationalizable strategy can also be called a non-best response: if none of the payoffs of a strategy are marked to indicate that it is a best-response, it is non-rationalizable.</p></li>
+</ul>
+<p>In other words</p>
+<ul class="incremental">
+<li>Any row in which none of Player 1’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
+<li>Any column in which none of Player 2’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-non-rationalizability-from-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="example-non-rationalizability-from-best-responses">Example: Non-Rationalizability from Best Responses}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Finding best responses first makes it a lot easier to search for non-rationalizable strategies.</li>
+<li>Recall that a non-rationalizable strategy can also be called a non-best response: if none of the payoffs of a strategy are marked to indicate that it is a best-response, it is non-rationalizable. In other words:::: {.incremental}
+<ul class="incremental">
+<li>Any row in which none of Player 1’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
+<li>Any column in which none of Player 2’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
+</ul></li>
+</ul>
+</div>
+<p>:::</p>
+<hr>
+</section>
+<section id="example-non-rationalizability-from-best-responses-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-non-rationalizability-from-best-responses-1">Example: Non-Rationalizability from Best Responses}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>We found these best responses earlier (as well as the NEs of this game): note that in the row for Player 1’s strategy B, none of Player 1’s strategies are marked.</li>
+<li>Likewise, none of Player 2’s payoffs are marked in column c.&nbsp;B and c are non-rationalizable strategies.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-non-rationalizability-from-best-responses-2" class="level2">
+<h2 class="anchored" data-anchor-id="example-non-rationalizability-from-best-responses-2">Example: Non-Rationalizability from Best Responses}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Performing IENBR reveals additional non-rationalizable strategies:
+<ul class="incremental">
+<li>Once we eliminate B, b becomes non-rationalizable.</li>
+<li>Once we eliminate b, C becomes non-rationalizable.</li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="classifying-nes" class="level2">
+<h2 class="anchored" data-anchor-id="classifying-nes">Classifying NEs}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Nash Equilibria may be either or .</li>
+<li>A Nash Equilibrium is strict if and only if each player would receive a smaller payoff by changing their own strategy.</li>
+<li>If a Nash Equilibrium is not strict—meaning that at least one player could change their own strategy and receive an equal (but not larger) payoff—it is weak.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="intuition-on-strict-vs.-weak-equilibria" class="level2">
+<h2 class="anchored" data-anchor-id="intuition-on-strict-vs.-weak-equilibria">Intuition on Strict vs.&nbsp;Weak Equilibria}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>In any Nash Equilibrium, no player has a reason to change their own strategy—they cannot get a higher payoff this way.</li>
+<li>Strict Nash Equilibria go a little further: not only does no player have a reason to change their own strategy, they also have a reason <strong>not</strong> to, because any other strategy would provide them a worse payoff.</li>
+<li>If a Nash Equilibrium is weak, it means that some player could change their strategy, and get exactly the same payoff they already were. They have no reason to do this, but also no reason <strong>not</strong> to.</li>
+<li>We can also say that a strict Nash Equilibrium is one where each player is playing a strategy which is a <strong>unique</strong> best response to the strategies chosen by other players.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="deer-hunt-strict-nash-equilibria" class="level2">
+<h2 class="anchored" data-anchor-id="deer-hunt-strict-nash-equilibria">Deer Hunt: Strict Nash Equilibria}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Here, note that at each Nash Equilibrium, each player has no other strategy providing the same payoff. This is a strict Nash Equilibrium.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="not-quite-the-trolley-problem-weak-nash-equilibria" class="level2">
+<h2 class="anchored" data-anchor-id="not-quite-the-trolley-problem-weak-nash-equilibria">Not Quite the Trolley Problem: Weak Nash Equilibria}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>However, in this game, each Nash Equilibrium features at least one player who could still get the same payoff if they change their strategy.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="classifying-games-based-on-nes" class="level2">
+<h2 class="anchored" data-anchor-id="classifying-games-based-on-nes">Classifying Games Based on NEs}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Now that we’ve talked about several ways to find a game’s NEs, we can start to talk about classifying games using them.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="prisoners-dilemmas" class="level2">
+<h2 class="anchored" data-anchor-id="prisoners-dilemmas">Prisoners’ Dilemmas}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>So far, I’ve only used the payoffs above to describe the Prisoner’s Dilemma.</li>
+<li>But we can change those payoffs—we can also change the story behind the game, and the names of the players and strategies, and it would still count as a Prisoner’s Dilemma.</li>
+</ul>
+<p>In general, a Prisoner’s Dilemma is any game in which:</p>
+<ul class="incremental">
+<li>The players have the same strategies, A and B.</li>
+<li>A strictly dominates B, making (A, A) the only NE.</li>
+<li>But (B, B) is better for both players than (A, A).</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="other-representations-of-the-prisoners-dilemmas" class="level2">
+<h2 class="anchored" data-anchor-id="other-representations-of-the-prisoners-dilemmas">Other Representations of the Prisoners’ Dilemmas}</h2>
+<hr>
+</section>
+<section id="coordination-games" class="level2">
+<h2 class="anchored" data-anchor-id="coordination-games">Coordination Games}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>A <span class="hi">coordination game</span> is a game in which the players all have the same strategy sets, and the NEs are all of the strategy profiles where the players choose the same strategy.</li>
+<li>The Deer Hunt is a coordination game.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="other-coordination-games" class="level2">
+<h2 class="anchored" data-anchor-id="other-coordination-games">Other Coordination Games}</h2>
+<hr>
+</section>
+<section id="anti-coordination-games" class="level2">
+<h2 class="anchored" data-anchor-id="anti-coordination-games">Anti-Coordination Games}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>An <span class="hi">anti-coordination game</span> is a game in which the players all have the same strategy sets, but the NEs are all of the strategy profiles where the players choose different strategies.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="symmetric-games" class="level2">
+<h2 class="anchored" data-anchor-id="symmetric-games">Symmetric Games}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>A <span class="hi">symmetric game</span> is a game which is <strong>indifferent to an exchange of players</strong> in other words, a game where the players are interchangeable.</li>
+<li>Consider the Prisoner’s Dilemma: if we swap the players’ names, and their positions in the game table, and the order of their payoffs, we get the same game that we started with.</li>
+<li>A two-player game with a game table is symmetric if:
+<ul class="incremental">
+<li>The players have the same strategy sets.</li>
+<li>In the on-diagonal cells of the game table, the players receive equal payoffs.</li>
+<li>In the “mirrored” off-diagonal cells of the game table, the players’ payoffs are reversed.</li>
+</ul></li>
+<li>Of the games we’ve just looked at, the Deer Hunt, the 3x3 coordination game, and Chicken are symmetric games. Bach and Stravinsky is not.</li>
+</ul>
+</div>
+<hr>
 
 
 </section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Dixit et al, pg 56<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>aka subgame perfect equilibrium<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Emily<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Nina<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>Talia<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

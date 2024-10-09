@@ -156,6 +156,12 @@ window.Quarto = {
  <span class="menu-text">Sequential Games</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Slides/03SimultaneousGames/03-html.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simultaneous Games</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -243,24 +249,81 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="tic-tac-toe" class="level2">
-<h2 class="anchored" data-anchor-id="tic-tac-toe">Tic-Tac-Toe</h2>
+<section id="x2-tic-tac-toe" class="level2">
+<h2 class="anchored" data-anchor-id="x2-tic-tac-toe">2x2 Tic-Tac-Toe</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/fig3.7.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p>This is just for a simpler game with a 2x2 grid.</p>
 <ul>
 <li><p>Even though it looks complicated, the main branches are really just copies of each other</p></li>
-<li><p>Most people probably figure out the rollback equilibrium after playing it enough</p></li>
-<li><p>Insert relevant xkcd here: <a href="https://xkcd.com/832/">https://xkcd.com/832/</a></p></li>
+<li><p>What is the rollback equilibrium?</p></li>
 </ul>
+</div>
+</div>
 <hr>
+</section>
+<section id="x3-tic-tac-toe" class="level2">
+<h2 class="anchored" data-anchor-id="x3-tic-tac-toe">3x3 Tic-Tac-Toe</h2>
+<p><img src="figures/tic_tac_toe_xkcd.png" class="img-fluid"></p>
+<p><a href="https://xkcd.com/832/">https://xkcd.com/832/</a></p>
+<hr>
+</section>
+<section id="x3-tic-tac-toe-1" class="level2">
+<h2 class="anchored" data-anchor-id="x3-tic-tac-toe-1">3x3 Tic-Tac-Toe</h2>
+<ul>
+<li>Most people probably figure out the rollback equilibrium after playing it enough</li>
+</ul>
+<div class="incremental">
+<ul class="incremental">
+<li><p>The second player can always get at least a tie:</p>
+<ul class="incremental">
+<li><p>If first player chooses middle, then take a corner</p></li>
+<li><p>If first player chose anything else, take the middle</p></li>
+<li><p>After the first stages, block any attempt by player 1 to get 3 in a row</p></li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="more-complicated-games" class="level2">
+<h2 class="anchored" data-anchor-id="more-complicated-games">More complicated games</h2>
+<p>Do all games have theoretical solutions?</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Checkers?</p></li>
+<li><p>Chess?</p></li>
+<li><p>Go?</p></li>
+</ul>
+</div>
 </section>
 <section id="chess" class="level2">
 <h2 class="anchored" data-anchor-id="chess">Chess</h2>
-<ul>
-<li><p>What about more complicated games like chess?</p>
-<ul>
-<li>technically rollback solvable, but with <span class="math inline">\(10^{120}\)</span> possible moves, it hasn’t been solved by either human or machine</li>
-</ul></li>
-<li><p>Players of complicated sequential games often implement some <span class="hi">intermediate valuation function</span> to assign payoffs to non-terminal nodes.</p></li>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Technically rollback solvable, but with <span class="math inline">\(10^{120}\)</span> possible moves, it hasn’t been solved by either human or machine</p></li>
+<li><p>Human experts and computer programs instead rely on <em>experience</em> of past game possibilities</p></li>
+<li><p>and on some partial rollback, or an <span class="hi">intermediate valuation function</span>, where you look at all possibilities in the next few moves and assign probabilistic payoffs</p></li>
 </ul>
+</div>
+</section>
+<section id="theory-in-complicated-situations" class="level2">
+<h2 class="anchored" data-anchor-id="theory-in-complicated-situations">Theory in complicated situations</h2>
+<p>Is rollback still useful for complicated games where the theoretical solutions are infeasible to solve?</p>
+<div class="incremental">
+<blockquote class="blockquote">
+<p>Yes!</p>
+</blockquote>
+<ul class="incremental">
+<li><p>Understanding simpler games can help you develop intuition for solving more complicated ones</p></li>
+<li><p>Complicated games can be decomposed into smaller parts where solving is easier</p></li>
+</ul>
+</div>
 
 
 </section>

@@ -147,18 +147,21 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/01Intro/01-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Game Theory</span></a>
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/02SequentialGames/02-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Game Theory</span></a>
+ <span class="menu-text">Sequential Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">Slides/03SimultaneousGames/03-main.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../Slides/03SimultaneousGames/03-html.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simultaneous Games</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -173,20 +176,15 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Activity 1: Guess 2/3rds of the average</span></a>
+ <span class="menu-text">Guessing Two Thirds of the Average</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Homework</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Survivor Flags</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -201,83 +199,102 @@ window.Quarto = {
 
 
 
-<section id="examples" class="level1">
-<h1>Examples</h1>
-<section id="the-battle-of-wits-the-princess-bride---1987" class="level2">
-<h2 class="anchored" data-anchor-id="the-battle-of-wits-the-princess-bride---1987">The Battle of Wits (<em>The Princess Bride</em> - 1987)</h2>
+<section id="nash-equilibrium" class="level1">
+<h1>Nash Equilibrium</h1>
+<section id="solving-simultaneous-games" class="level2">
+<h2 class="anchored" data-anchor-id="solving-simultaneous-games">Solving Simultaneous Games</h2>
 <ul>
-<li>The “Man in Black” and Vizzini agree to a battle of wits to break the impasse.</li>
-<li>Vizzini claims that his own brain puts Plato, Aristotle, and Socrates to shame and demonstrates his recursive strategic reasoning.</li>
+<li><p>Before we cover how to solve a game, we first need to discuss what a solution to a game even is.</p></li>
+<li><p>As with many types of problem in economics, we’re interested in finding an <em>equilibrium</em>:</p>
+<ul>
+<li>equilibrium a situation which is “stable,” in that there is no incentive to change.</li>
+</ul></li>
 </ul>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/rMz7JBRbmNo" width="1000" height="400" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
 </section>
-<section id="baseball-i" class="level2">
-<h2 class="anchored" data-anchor-id="baseball-i">Baseball, I <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
-<blockquote class="blockquote">
-<p>Good pitching will always stop good hitting and vice-versa. -Casey Stengel</p>
-</blockquote>
+<section id="nash-equilibrium-1" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-1">Nash Equilibrium</h2>
+<p>The most basic form of equilibrium in game theory is the <span class="h">Nash Equilibrium (NE)</span>, which can be described as:</p>
+<ul>
+<li><p>A strategy profile such that no player can obtain a larger payoff by <em>unilaterally deviating</em></p></li>
+<li><p>A strategy profile such that no single player can make themselves better off by changing only their own strategy.</p></li>
+<li><p>A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision</p></li>
+</ul>
+<hr>
+</section>
+<section id="the-prisoners-dilemma" class="level2">
+<h2 class="anchored" data-anchor-id="the-prisoners-dilemma">The Prisoner’s Dilemma</h2>
+<p>Two criminal conspirators have been arrested and brought to interrogation. The police put them in separate cells and offer each prisoner a choice.</p>
+<p>If both cooperate with the investigation, they will get a lighter sentence of 10 years.</p>
+<p>If either one agrees to testify but not the other, the one who cooperated will go free and the one who didn’t gets a full 20 years.</p>
+<p>If neither cooperates, the prosecutor won’t have enough of a case and the criminals will only serve 1 year each for misdemeanors.</p>
+<hr>
+</section>
+<section id="what-would-you-choose" class="level2">
+<h2 class="anchored" data-anchor-id="what-would-you-choose">What would you choose?</h2>
+<ul>
+<li><p>Remember that you cannot communicate with your fellow prisoner</p></li>
+<li><p>How would you have to be that they won’t sell you out for you to choose to keep quiet?</p></li>
+</ul>
+<hr>
+</section>
+<section id="nash-equilibrium-in-the-prisoners-dilemma" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-in-the-prisoners-dilemma">Nash Equilibrium in the Prisoners’ Dilemma</h2>
+<p>Although the outcome where both criminals keep quiet <em>Pareto dominates</em> the outcome where they both testify and serve 10 years, would it be stable?</p>
+<ul>
+<li><p>In the {Quiet, Quiet} strategy profile, either player could deviate to Testify and shorten their prison time.</p></li>
+<li><p>{Testify, Testify} is the only <em>stable</em> strategy profile, where no one could unilaterally deviate to decrease their sentence.</p></li>
+</ul>
+<hr>
+</section>
+<section id="draw-prisoners-dilemma-in-strategic-form" class="level2">
+<h2 class="anchored" data-anchor-id="draw-prisoners-dilemma-in-strategic-form">Draw Prisoners’ Dilemma in Strategic Form:</h2>
+<hr>
+</section>
+<section id="does-this-look-familiar" class="level2">
+<h2 class="anchored" data-anchor-id="does-this-look-familiar">Does this look familiar?</h2>
 <table class="table">
 <thead>
 <tr class="header">
-<th><strong>Batter</strong></th>
-<th><strong>Pitcher</strong></th>
-<th><strong>Batting Average</strong></th>
+<th></th>
+<th>Split</th>
+<th>Steal</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(Right\)</span></td>
-<td><span class="math inline">\(Left\)</span></td>
-<td>.255</td>
+<td>Split</td>
+<td><span class="math inline">\((\$6,800, \$6,800)\)</span></td>
+<td><span class="math inline">\((\$0, 13,600)\)</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(Right\)</span></td>
-<td><span class="math inline">\(Left\)</span></td>
-<td>.274</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(Left\)</span></td>
-<td><span class="math inline">\(Right\)</span></td>
-<td>.291</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Left\)</span></td>
-<td><span class="math inline">\(Left\)</span></td>
-<td>.266</td>
+<td>Steal</td>
+<td><span class="math inline">\((\$13,600, \$0)\)</span></td>
+<td><span class="math inline">\((\$0, \$0)\)</span></td>
 </tr>
 </tbody>
 </table>
+<p>Although the numbers are different, the structure is the same.</p>
+<p><em>Split or Steal</em> is a <em>Prisoners’ Dilemma</em></p>
+<hr>
+</section>
+<section id="watch-what-happens" class="level2">
+<h2 class="anchored" data-anchor-id="watch-what-happens">Watch what happens</h2>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/S0qjK3TWZE8?t=141" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>start from 2:20</p>
+<hr>
+</section>
+<section id="discuss" class="level2">
+<h2 class="anchored" data-anchor-id="discuss">Discuss</h2>
 <ul>
-<li>Rank each player’s preferences over strategy profile intersections</li>
+<li>Did Nick change the structure of the game?</li>
 </ul>
-<hr>
-</section>
-<section id="baseball-i-1" class="level2">
-<h2 class="anchored" data-anchor-id="baseball-i-1">Baseball, I <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
-<blockquote class="blockquote">
-<p>It is the bottom of the ninth inning, and the game is tied between the Orioles and the Yankees. The pitcher on the mound for the Yankees is Masahiro Tanaka, who is a right-hander, and the batter due up for the Orioles is Adam Jones, who is also a right-hander. The Orioles’ manager is thinking about whether to substitute Chris Davis, who is a left-handed batter, for Jones. He would prefer to have Davis face Tanaka in order to have a lefty–righty matchup and thus a better chance of getting a hit. However, the Yankees’ manager could respond to Davis’ pinch-hitting by substituting the left-handed pitcher Cesar Cabral for Tanaka. The Orioles’ manager would rather have Jones face Tanaka than have Davis face Cabral. Of course, the Yankees’ manager has the exact opposite preferences.</p>
-</blockquote>
-<hr>
-</section>
-<section id="baseball-i-2" class="level2">
-<h2 class="anchored" data-anchor-id="baseball-i-2">Baseball, I</h2>
-<ul>
-<li>Draw the extensive form of this situation:</li>
-</ul>
-<hr>
 
 
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Harrington, pg 21<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Harrington, pg 21<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
