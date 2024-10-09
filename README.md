@@ -43,7 +43,7 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 [02 - Sequential Games](https://dyasui.github.io/EC327/Slides/02SequentialGames/02-main.html)
 
-[03 - Simultaneous Games](https://dyasui.github.io/EC327/Slides/03SimultaneousGames/beamer/main.html)
+[03 - Simultaneous Games](https://dyasui.github.io/EC327/Slides/03SimultaneousGames/03-main.html)
 
 [04 - Information Sets](https://dyasui.github.io/EC327/Slides/04InfoSets/main.html)
 
