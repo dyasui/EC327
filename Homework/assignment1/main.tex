@@ -18,7 +18,7 @@
 \pagestyle{headandfoot}
 \lhead{EC327 Game Theory}
 \chead{Homework 1}
-\rhead{Winter 2024}
+\rhead{Fall 2024}
 \runningheadrule
 
 \title{
@@ -235,7 +235,7 @@ win $\succ$ tie $\succ$ loss.
 
   \part
   \begin{center}[!h]
-    \include{figures/rockpaperscissors}
+    \input{figures/rockpaperscissors}
   \end{center}
   
   In the figure, dashed lines represent those which have been pruned.
@@ -251,7 +251,7 @@ win $\succ$ tie $\succ$ loss.
 
   \part
   \begin{center}[!h]
-    \include{figures/rockpaperscissors2}
+    \input{figures/rockpaperscissors2}
   \end{center}
 
   I represented Player 1's preferences as:
@@ -280,22 +280,19 @@ win $\succ$ tie $\succ$ loss.
    
   \textbf{Grading:}
 
-  This question is worth 20 points total, 
-  with 10 for correctness, 5 for format, and 5 for explanation.
-
   \begin{itemize}
   \item 
   For part a, each correct number is worth 1 point.
 
   \item
-  For part b, give 1 point if the overall structure is there,
-  1 point if the payoffs go to the right node, 
-  and 1 point if the correct 6 branches are pruned and no others.
-  
+  For part b, an answer that only states the number of nodes without any explanation or a game tree diagram 
+  should get half points.
+  The number of pruned branches should match the diagram and should be the correct ones.
+
   \item
-  For part a on the second page (sorry), 
-  give 1 correctness point for every correctly pruned branch,
-  with -1 point for pruning other branches.
+  For part c, again, just stating the number of branches is not enough. 
+  The payoffs don't have to match the ones given above, but they should lead to pruning the same branches. 
+  
   \end{itemize}
 
   Scores for formatting and explanation are left up to the grader's interpretation of the rubric.
@@ -329,6 +326,46 @@ Read the 2022 Policito Opinion article,
   and explain how it changes what the model predicts.
 
 \end{parts}
+
+\begin{solution}
+
+The authors' main point is that if the US and allies even if sanctions on Russia were costly to enact for those nations,
+they were still important to deter either Russia in the future or other nations from breaking international law.
+If the game in their tree diagram is played only once, the subgame perfect Nash equilibrium has Player 1 choosing to transgress
+because Player 2's only rational strategy is to choose Don't Punish in both of their decision nodes.
+Once Player 1 has already made the transgresssion, the cost of that transgression is already felt by Player 2 
+and Sanctions will just decrease their payoff more.
+
+However, the authors argue that because this game is likely to be repeated in the future, 
+(either against Putin again or another world leader),
+the payoff of deterring future transgressions should mean that Nato countries should apply sanctions on Russia
+even though they will be costly in the short term.
+
+\begin{parts}
+
+  \part
+  Relevant tools/terms which we have discussed include backwards induction,
+  common knowledge of rationality, perfect information, Pareto dominance/efficiency,
+  game tree/extensive form, forward-looking, subgame perfect Nash Equilibrium/rollback equilibrium.
+  A complete answer should relate at least on of these terms to the international sanctions placed on Russia.
+
+  \part
+  Some potential answers are: 
+  rationality of Putin, 
+  the relative rankings of the payoffs in the game (i.e., international community prefers Don't Punish after Putin Transgresses over Sanctioning),
+  the potential future players care about future iterations of the game enough,
+  etc.
+
+  \part
+  For example, consider what happens if the payoff to Player 2 of Don't Punish after a Transgression is 
+  $ -c - f $ where $f$ is the cost in the future to other Players observing that Transgressions will go unpunished.
+  If $f > s$, i.e., if the future cost of additional repeated Transgressions outweighs the cost of sanctions today,
+  then the equilibrium of the game changes to ${$ Transgress, (Sanction if Transgress, Don't Punish if Don't Transgress) $}$
+  because now Player 2 it is rational for Player 2 to Sanction after a Transgression, 
+  where it wasn't rational in the original one-shot game.
+
+\end{parts}
+\end{solution}
 
 %------------------------------------------------------------------
 
