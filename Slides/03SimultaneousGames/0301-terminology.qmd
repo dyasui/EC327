@@ -1,0 +1,160 @@
+# Simultaneous-Move Games
+
+## What are Simultaneous-Move Games?
+::: {.incremental}
+- Recall from **Chapter 2**:
+  Simultaneous games occur when players must move without knowing their rivals' choices.
+- This includes cases where decisions are made at different times but without knowledge of others' decisions.
+:::
+
+---
+
+## Real-World Examples
+
+::: {.incremental}
+- **Soccer penalty kick**: Striker and goalie must choose directions simultaneously, leading to strategic guessing.
+- **Television manufacturers**: Decide on features and pricing without knowing competitors' decisions.
+- **Voting**: Voters cast ballots without knowing others' choices.
+:::
+
+---
+
+## Simultaneous vs Sequential Games {.smaller}
+
+::::: {.columns}
+:::: {.column width="50%"}
+::: {.incremental}
+[Simultaneous games]{.hi}
+
+- neither know the other player's actions when they act
+- **graphical representation:** [game matrix]{.h} (aka *game table*, *payoff table*)
+- **solution method:** [best response]{.h}, [elimination of dominated strategies]{.h}
+- **equlibrium concept:** [nash equilibrium]{.h} 
+:::
+::::
+:::: {.column width="50%"}
+::: {.incremental}
+[Sequential games]{.hi}
+
+- prior actions are *observable* to later players
+- **graphical representation:** [game tree]{.h} 
+- **solution method:** [backwards induction]{.h} (aka *rollback*)
+- **equlibrium concept:** [subgame perfect nash equilibrium]{.h} (aka *SPNE*, *rollback equilibrium*)
+:::
+::::
+:::::
+
+---
+
+## The Strategic Form
+
+
+A [Strategic Form]{.h} game is defined by:
+
+  * A [set of players]{.hi} who have decisions
+  
+  * A [strategy set]{.hi} for each player which is the collection of strategies they choose from
+  
+  * A [payoff function]{.hi} which tells us how the player evaluates a *strategy profile*. 
+
+::: {.callout-tip}
+
+A [strategy profile]{.hi} is a combination of strategies made by all players.
+
+:::
+
+---
+
+## Depicting Simultaneous Games
+
+::: {.incremental}
+
+- Simultaneous-move games are often depicted using **payoff matrices** or **game tables**.
+
+| Row, Column | Left    | Middle   | Right    |
+| -------     | ------- | -------- | -------- |
+| **Top**     | (3,1)   | (2,3)    | (10,2)   |
+| **High**    | (4,5)   | (3,0)    | (6,4)    |
+| **Low**     | (2,2)   | (5,4)    | (12,3)   |
+| **Bottom**  | (5,6)   | (4,5)    | (9,7)    |
+
+: An example of a *strategic form* game {#tbl-basic4x3game}
+
+- Row chooses a strategy, and Column does as well, simultaneously.
+:::
+
+---
+
+## Strategy Sets in @tbl-basic4x3game
+
+In this game, each players' complete *strategy* only contains one *action* each
+
+::: {.incremental}
+  * **Player 1**: 
+    
+    - (Top), (High), (Low), or (Bottom)
+
+:::
+  
+---
+
+## Strategy Sets in @tbl-basic4x3game
+
+In this game, each players' complete *strategy* only contains one *action* each
+
+::: {.incremental}
+  * **Player 2**: 
+    
+    - (Left), (Middle), (Right)
+
+  * For now, we assume that these players can only choose one strategy at a time
+
+    - I.e., not (Left, Right), (High, Low, Bottom), etc
+
+    - In Chapter 7, we will relax this assumption by allowing for random *mixing of strategies*
+
+:::
+  
+---
+
+## Strategy Profiles in @tbl-basic4x3game
+
+There are twelve different *strategy profiles* possible in this game: 
+  
+  * {T,L}, {T,M}, {T,R}, {H,L}, {H,M}, {H,R}, {L,L}, {L,M}, {L,R}, {B,L}, {B,M}, {B,R}
+  
+each of which was represented by a cell in our game table.
+  
+---
+
+## Payoffs in Table @tbl-basic4x3game
+
+Notice how each cell has two numbers for the payoffs. 
+
+::: {.incremental}
+
+  - For example, the first cell for the strategy profile **{ Top, Left }**:
+
+    + `(3,1)` means that the *row* player has a payoff of 3, the *column* player gets a payoff of 1
+:::
+  
+---
+
+## Big 10 Game 
+
+| **Ducks , Buckeyes** | Run     | Pass      | Blitz       |
+| -------------------  | --      | --        | --          |
+| **Run**              | 2, –2   | 5, –5     | 13, –13     |
+| **Short Pass**       | 6, –6   | 5.6, –5.6 | 10.5, –10.5 |
+| **Medium Pass**      | 6, –6   | 4.5, –4.5 | 1, –1       |
+| **Long Pass**        | 10, –10 | 3, –3     | –2, 2       |
+
+: Big 10 Game {#tbl-footballplay}
+
+::: {.incremental}
+Notice that in this game, the payoffs in every cell add up to one
+
+  - This is what we mean by a [zero-sum]{.hi} game
+
+:::
+

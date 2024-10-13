@@ -22,63 +22,237 @@ The most basic form of equilibrium in game theory is the [Nash Equilibrium (NE)]
   
 ---
 
-## The Prisoner's Dilemma
+## Nash Equilibrium
 
-Two criminal conspirators have been arrested and brought to interrogation. The police put them in separate cells and offer each prisoner a choice.
+::: {.callout-note} 
+## Nash Equilibrium
 
-If both cooperate with the investigation, they will get a lighter sentence of 10 years.
+A list of strategies where each player's strategy is the best response to the other's best response strategy
+:::
 
-If either one agrees to testify but not the other, the one who cooperated will go free and the one who didn't gets a full 20 years.
-
-If neither cooperates, the prosecutor won't have enough of a case and the criminals will only serve 1 year each for misdemeanors.
+:::: {.incremental}
+- In other words, no player has any incentive to [deviate]{.hii} in their strategy away from an equilibrium strategy
+- It is central to the analysis of simultaneous-move games.
+- Can occur in **pure strategies** (where players choose a single action) or **mixed strategies** (randomized choices).
+::::
 
 ---
 
-## What would you choose?
+## Nash Equilibrium in @tbl-basic4x3game
 
-  * Remember that you cannot communicate with your fellow prisoner
+Let's look at one specific strategy profile in this game:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+|         | Left    | Middle      | Right    |
+| ------- | ------- | --------    | -------- |
+| Top     | (3,1)   | (2,3)       | (10,2)   |
+| High    | (4,5)   | (3,0)       | (6,4)    |
+| Low     | (2,2)   | [(5,4)]{.h} | (12,3)   |
+| Bottom  | (5,6)   | (4,5)       | (9,7)    |
+
+:::
+
+::: {.column width="50%"}
+
+> Row chooses Low and Column chooses Middle
+
+  - Is this *stable*?
+:::
+
+::::
+
+---
+
+## Nash Equilibrium in @tbl-basic4x3game
+
+Let's look at one specific strategy profile in this game:
+
+:::: {.columns}
+
+::: {.column .smaller width="50%"}
+
+|         | Left    | [Middle]{.hii} | Right    |
+| ------- | ------- | --------       | -------- |
+| Top     | (3,1)   | [(2,3)]{.hii}  | (10,2)   |
+| High    | (4,5)   | [(3,0)]{.hii}  | (6,4)    |
+| Low     | (2,2)   | [(5,4)]{.h}    | (12,3)   |
+| Bottom  | (5,6)   | [(4,5)]{.hii}  | (9,7)    |
+
+:::
+
+::: {.column width="50%"}
+
+> Row chooses Low and Column chooses Middle
+
+  - Given that Column plays Middle, is there any way for Row to get a higher payoff?
+:::
+
+::::
+
+---
+
+## Nash Equilibrium in @tbl-basic4x3game
+
+Let's look at one specific strategy profile in this game:
+
+:::: {.columns}
+
+::: {.column .smaller width="50%"}
+
+|             | Left          | Middle      | Right          |
+| -------     | -------       | --------    | --------       |
+| Top         | (3,1)         | (2,3)       | (10,2)         |
+| High        | (4,5)         | (3,0)       | (6,4)          |
+| [Low]{.hii} | [(2,2)]{.hii} | [(5,4)]{.h} | [(12,3)]{.hii} |
+| Bottom      | (5,6)         | (4,5)       | (9,7)          |
+
+:::
+::: {.column width="50%"}
+
+> Row chooses Low and Column chooses Middle
+
+  - Given that Row plays Low, is there any way for Column to get a higher payoff?
+:::
+
+::::
+
+---
+
+## Nash Equilibrium in @tbl-basic4x3game
+
+What is special about the strategy profile (Low, Middle)?
+
+::: {.incremental}
+
+  * It's *stable* because neither player would have any incentive to change what they're doing 
+
+  * In other words, neither player has regrets over their choice given what the other player is doing
   
-  * How would you have to be that they won't sell you out for you to choose to keep quiet?
+  * However, notice that this doesn't mean that this is the best that the players could do jointly
+:::
+
+---
+
+## Other Strategy Profiles in @tbl-basic4x3game
+
+|         | Left    | Middle   | Right       |
+| ------- | ------- | -------- | --------    |
+| Top     | (3,1)   | (2,3)    | (10,2)      |
+| High    | (4,5)   | (3,0)    | (6,4)       |
+| Low     | (2,2)   | (5,4)    | (12,3)      |
+| Bottom  | (5,6)   | (4,5)    | [(9,7)]{.h} |
+
+What about (Bottom, Right)?
+
+---
+
+## Other Strategy Profiles in @tbl-basic4x3game
+
+|         | Left    | Middle   | Right         |
+| ------- | ------- | -------- | --------      |
+| Top     | (3,1)   | (2,3)    | (10,2)        |
+| High    | (4,5)   | (3,0)    | (6,4)         |
+| Low     | (2,2)   | (5,4)    | [(12,3)]{.h}  |
+| Bottom  | (5,6)   | (4,5)    | [(9,7)]{.red} |
+
+Even though (Bottom, Right) is a Pareto improvement on (Low, Middle), 
+it is *unstable* because it would be rational for Row player to change their strategy to Low to try to get the higher payoff of 12
+
+---
+
+## Other Strategy Profiles in @tbl-basic4x3game
+
+|         | Left        | Middle   | Right    |
+| ------- | -------     | -------- | -------- |
+| Top     | [(3,1)]{.h} | (2,3)    | (10,2)   |
+| High    | (4,5)       | (3,0)    | (6,4)    |
+| Low     | (2,2)       | (5,4)    | (12,3)   |
+| Bottom  | (5,6)       | (4,5)    | (9,7)    |
+
+What about (Top, Left)?
+
+---
+
+## @tbl-basic4x3game with a tie in payoffs
+
+|         | Left    | Middle    | Right    |
+| ------- | ------- | --------  | -------- |
+| Top     | (3,1)   | (2,3)     | (10,2)   |
+| High    | (4,5)   | (3,0)     | (6,4)    |
+| Low     | (2,2)   | (**5**,4) | (12,3)   |
+| Bottom  | (5,6)   | (**5**,5) | (9,7)    |
+
+A Nash equilibrium doesn't require the equilibrium strategies 
+to be *strict* improvements.
+
+  * (Low, Middle) is still a NE because the payoff of 5 to Row player is *weakly* ($\geq$) higher than the payoff of Bottom 
+
+---
+
+## Nash Equilibrium as a System of Beliefs
+
+So a Nash Equilibrium requires players *best responding* to each other.
+
+::: {.incremental}
+
+  * But if a game is *simultaneous*, then players can't observe what the other does
+
+  * So how can someone respond to something that hasn't happened yet?
+:::
+
+## Nash Equilibrium as a System of Beliefs
+
+How to make sense of best-responses in simultaneous games:
+
+::: {.incremental}
+
+  * Players might base their beliefs of the other players' strategies on *experience* from playing similar games before
+
+  * You might also *put yourself into your opponents' shoes* to think about what they might do
+    
+  * You should also expect that *they are thinking about what you're thinking*
+
+    - and also that *you would be thinking about what they are thinking* about what you are thinking
+:::
+
+---
+
+## The Battle of Wits
+
+Let's see an example of this logic in action:
+
+{{< video https://youtu.be/pRJ8CrTSSR0 width="800" height="450" fig-align="center" >}}
+
+---
+
+## Nash Equilibrium as a System of Beliefs
+
+- Nash equilibrium assumes:
+    1. Players form [beliefs]{.hi} about the strategies of others.
+    2. These beliefs must be **correct**.
+    3. Each player then chooses their **best response** based on these beliefs.
   
 ---
 
-## Nash Equilibrium in the Prisoners' Dilemma
+## Strategic Uncertainty
 
-Although the outcome where both criminals keep quiet *Pareto dominates* the outcome where they both testify and serve 10 years, would it be stable?
+- Players are uncertain about others' choices but form subjective **beliefs** about them.
+- These beliefs are central to decision-making in Nash equilibrium.
+- The equilibrium is found when every player's belief about others' actions is correct, and their response to these beliefs is optimal.
 
-  * In the {Quiet, Quiet} strategy profile, either player could deviate to Testify and shorten their prison time. 
+---
+
+## An Equivalent Definition of NE ^[Dixit, pg. 98]
+
+::: {.callout-note}
+## Nash Equilibrium
+
+A set of strategies, one for each player, such that:
   
-  * {Testify, Testify} is the only *stable* strategy profile, where no one could unilaterally deviate to decrease their sentence.
-  
----
+  1. each player has correct beliefs about the strategies of the others and 
 
-## Draw Prisoners' Dilemma in Strategic Form:
+  2. the strategy of each is the best for herself, given her beliefs about the strategies of the others.
 
----
-
-## Does this look familiar?
-
-|        | Split                | Steal             |
-|--------|----------------------|-------------------|
-| Split  | $(\$6,800, \$6,800)$ | $(\$0, 13,600)$   |
-| Steal  | $(\$13,600, \$0)$    | $(\$0, \$0)$      |
-
-Although the numbers are different, the structure is the same.
-
-*Split or Steal* is a *Prisoners' Dilemma*
-
----
-
-## Watch what happens
-
-{{< video https://youtu.be/S0qjK3TWZE8?t=141 width="800" height="450" fig-align="center" >}}
-
-start from 2:20
-
----
-
-## Discuss
-
-  * Did Nick change the structure of the game?
-  
-
+:::

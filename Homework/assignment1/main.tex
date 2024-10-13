@@ -1,5 +1,7 @@
 \documentclass[addpoints]{exam}
 
+\printanswers
+\CorrectChoiceEmphasis{\color{red}\bfseries}
 \usepackage{amssymb, amsmath, amsfonts}
 \usepackage{geometry}
 \usepackage{graphicx}
@@ -85,9 +87,9 @@
 %     continue on the back of the page or another sheet of paper.}}}
 % \end{center}
 
-\newpage
-
 \begin{questions}
+
+\newpage
 
 %------------------------------------------------------------------%
 
@@ -144,7 +146,7 @@
   Which of the following is a \textbf{complete strategy for Player 2}?
   \begin{choices}
     \choice ($\ell$ if $M$)
-    \choice ($r$ if $M$, $\ell$ if $R$)
+    \CorrectChoice($r$ if $M$, $\ell$ if $R$)
     \choice ($\ell$)
     \choice ($\ell$ if \L, $r$ if $M$, $r$ if $R$)
   \end{choices}
@@ -154,7 +156,7 @@
   \part[4] Consider the game tree below
   \begin{figure}[!h]
     \centering
-    \include{figures/haiyunchenexample}
+    \input{figures/haiyunchenexample}
   \end{figure}
   Find the \textbf{rollback equilibrium}.
   \begin{choices}
@@ -234,26 +236,38 @@ win $\succ$ tie $\succ$ loss.
 \begin{parts}
 
   \part
-  \begin{center}[!h]
-    \input{figures/rockpaperscissors}
-  \end{center}
-  
-  In the figure, dashed lines represent those which have been pruned.
+
+  In the figure below, dashed lines represent those which have been pruned.
 
   The tree has 4 nodes, 12 branches, and 9 terminal nodes.
 
   \part
+
   In each of Player 2's subgames,
   we can prune the two branches where they would lose or tie
   based on what Player 1 chose.
   We can't prune any more branches
   because Player 1 is indifferent between all outcomes where they lose.
 
-  \part
-  \begin{center}[!h]
-    \input{figures/rockpaperscissors2}
+  \begin{center}
+    \input{figures/rockpaperscissors}
   \end{center}
 
+  In this case, there are three equilibria:
+
+  \begin{itemize}
+      \item $\{$ {\color{red} Rock},     
+      {\color{blue} (Paper, Scissors, Rock} $\}$,
+      \item $\{$ {\color{red} Paper},
+      {\color{blue} (Paper, Scissors, Rock} $\}$,
+      \item $\{$ {\color{red} Scissors},
+      {\color{blue} (Paper, Scissors, Rock} $\}$
+  \end{itemize}
+
+  \newpage
+
+  \part
+  
   I represented Player 1's preferences as:
 
   payoff to winning with rock = 4,
@@ -265,16 +279,24 @@ win $\succ$ tie $\succ$ loss.
 
   Because payoffs are \textit{ordinal}, 
   you can choose any values as long as the ranking is the same.
+  
+  \begin{center}
+    \input{figures/rockpaperscissors2}
+  \end{center}
 
   Now because Player 1 prefers to lose with rock to any other loss, 
   we can prune the branches where they choose either 
   paper or scissors.
   
-  The rollback solution is 
-  \{ Player 1 chooses Rock, 
-  (Player 2 chooses paper if rock,
-  scissors if paper,
-  and rock if scissors) \}.
+  There is only one equilibrium for this modified game:
+  
+  \{ 
+  {\color{red} Rock}, 
+  (
+  {\color{blue} Paper},
+  {\color{blue} Scissors},
+  {\color{blue} Rock}
+  ) \}.
 
   \noindent\rule[0.5ex]{\linewidth}{1pt}
    
@@ -360,8 +382,7 @@ even though they will be costly in the short term.
   For example, consider what happens if the payoff to Player 2 of Don't Punish after a Transgression is 
   $ -c - f $ where $f$ is the cost in the future to other Players observing that Transgressions will go unpunished.
   If $f > s$, i.e., if the future cost of additional repeated Transgressions outweighs the cost of sanctions today,
-  then the equilibrium of the game changes to ${$ Transgress, (Sanction if Transgress, Don't Punish if Don't Transgress) $}$
-  because now Player 2 it is rational for Player 2 to Sanction after a Transgression, 
+  then the equilibrium of the game changes to { Transgress, (Sanction if Transgress, Don't Punish if Don't Transgress) } because now Player 2 it is rational for Player 2 to Sanction after a Transgression, 
   where it wasn't rational in the original one-shot game.
 
 \end{parts}

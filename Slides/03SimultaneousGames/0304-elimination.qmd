@@ -1,0 +1,451 @@
+# Dominance
+
+## Dominance and Strategy Elimination
+
+::: {.incremental}
+- A **dominant strategy** is one that performs best no matter what others do.
+- Strategies can be eliminated if they are dominated by others.
+- **Elimination of dominated strategies** can simplify finding equilibria.
+:::
+
+---
+
+## The Problem of Finding Nash Equilibria
+
+::: {.incremental}
+
+  * When we first discussed Nash Equilibria (which I'm going to start abbreviating as NEs), we found them by checking all of the strategy profiles in the game to see which of them were stable.
+
+  * This is not a problem in a 2x2 game like we've been working with---but it gets much more time-consuming in games with more players and more strategies per player, not to mention the more complicated games we'll look at later in the term.
+
+  * We can make it easier to find NEs with a few useful shortcuts---such as eliminating entire strategies (not just strategy profiles) that can't possibly be part of a NE.
+
+:::
+
+---
+
+## Strict Dominance
+
+::: {.incremental}
+
+  * A strategy is said to be strictly dominated if there is some other strategy, in the same player's strategy set, which provides that player a higher payoff, no matter what strategies the other players pick.
+
+    - Another way to phrase it is that a strategy is strictly dominated if some other strategy is a better alternative for the player, no matter what other players do.
+
+:::
+
+---
+
+## Strict Dominance
+
+| Guido, Luca            | Testify        | [Keep Quiet]{.red}     |
+| -------------          | ---------      | ------------   |
+| **Testify**            | -10, -10       | 0, [-20]{.red}         |
+| [**Keep Quiet**]{.red} | [-20]{.red}, 0 | [-1]{.red}, [-1]{.red} |
+
+  * Both Guido and Luca prefer to Testify, no matter whether the other player chose: 
+
+    - this means that Quiet is [strictly dominated]{,hi}, **by Testify** for both players.
+
+---
+
+## Strict Dominance
+
+| Guido, Luca            | Testify         | [Keep Quiet]{.red}     |
+| -------------          | ---------       | ------------           |
+| **Testify**            | [-10, -10]{.hi} | 0, [-20]{.red}         |
+| [**Keep Quiet**]{.red} | [-20]{.red}, 0  | [-1]{.red}, [-1]{.red} |
+
+  * It is not rational to play a strictly dominated strategy
+
+    - So we can immediately deduce that neither player would play Quiet, and the only remaining strategy profile is (Testify, Testify).
+
+---
+
+## One Player has a Dominant Strategy
+
+In the Prisoners' Dilemma, both players have each have one dominant strategy, 
+which made finding the NE easy.
+
+| CONGRESS, FEDERAL RESERVE | Low interest rates | High interest rates |
+|---------------------------+--------------------+---------------------|
+| Budget balance            | 3,4                | 4,1                 |
+| Budget deficit            | 1,3                | 2,2                 |
+
+  * What if only one player has a dominant strategy?
+
+---
+
+## One Player has a Dominant Strategy
+
+| CONGRESS, FEDERAL RESERVE | Low interest rates | High interest rates |
+|---------------------------+--------------------+---------------------|
+| Budget balance            | 3,[4]{.green}      | 1,3                 |
+| Budget deficit            | 4,1                | 2,[2]{.green}       |
+
+  * The Fed would like to set low interest rates, but only if Congress keeps the budget under control
+
+    + Neither Low nor High interest rates are a *dominant strategy*
+
+---
+
+## One Player has a Dominant Strategy
+
+| CONGRESS, FEDERAL RESERVE | Low interest rates | High interest rates |
+|---------------------------+--------------------+---------------------|
+| [Budget balance]{.red}    | [3]{.red},4        | [1]{.red},3         |
+| Budget deficit            | 4,1                | 2,2                 |
+
+  * But Congress wants to run a budget deficit no matter what interest rates are 
+
+---
+
+## Finding NEs by Elimination
+
+::: {.incremental}
+
+  * If all but one of each player's strategies can be eliminated like this (leaving only a single strategy profile), then the remaining strategy profile is a NE.
+    * A strictly dominated strategy can never be part of a NE.
+  * However, it's rare that a player has one strategy which strictly dominates all of their others from the very start, as in the Prisoner's Dilemma. (This is called a [strictly dominant]{.hi} strategy.) 
+  * Even if a player doesn't have a strictly dominant strategy, we can still sometimes use elimination to find a NE, by using a process called [Iterated Elimination of Strictly Dominated Strategies (IESDS)]{.hi}.
+:::
+---
+
+## Commonly Known Rationality
+::: {.incremental}
+  * Let's assume that, not only is every player rational, they all know that the other players are rational too.
+  * This means that players can deduce which strategies the **other** players would never play.
+  * And if a player can eliminate another player's strategy, it may reveal additional strictly dominated strategies that can be eliminated.
+:::
+---
+
+## Eliminating Strictly Dominated Strategies
+
+| $P_1$, $P_2$ | $a$  | $b$  | $c$  |
+|--------------+------+------+------|
+| $A$          | 1, 1 | 2, 2 | 3, 3 |
+| $B$          | 2, 0 | 3, 1 | 4, 2 |
+| $C$          | 3, 1 | 2, 2 | 1, 1 |
+
+::: {.incremental}
+  * In the game table above, there are no strictly domin**ant** strategies.
+    + For Player 1, A is strictly dominated by B, but C is neither dominant nor dominated.
+    + And for Player 2, a is strictly dominated by b, but c is also neither dominant nor dominated.
+:::
+---
+
+## Eliminating Strictly Dominated Strategies
+
+| $P_1$, $P_2$ | [$a$]{.red}  | $b$          | $c$          |
+|--------------+--------------+--------------+--------------|
+| [$A$]{.red}  | [1, 1]{.red} | [2, 2]{.red} | [3, 3]{.red} |
+| $B$          | [2, 0]{.red} | 3, 1         | 4, 2         |
+| $C$          | [3, 1]{.red} | 2, 2         | 1, 1         |
+
+::: {.incremental}
+  * However, the assumption of Commonly Known Rationality allows Player 1 to **deduce** that Player 2 would never play a.
+:::
+
+---
+
+## Eliminating Strictly Dominated Strategies
+
+| $P_1$, $P_2$ | [$a$]{.hi-grey}  | $b$           | $c$           |
+|--------------+---------------+---------------+---------------|
+| [$A$]{.hi-grey} | [1, 1]{.hi-grey} | [2, 2]{.hi-grey} | [3, 3]{.hi-grey} |
+| $B$          | [2, 0]{.hi-grey} | 3, 1          | 4, 2          |
+| [$C$]{.red}  | [3, 1]{.hi-grey} | [2, 2]{.red}  | [1, 1]{.red}  |
+
+::: {.incremental}
+  * Player 1 can eliminate a, just like we did---and once they do, C is strictly dominated by B.
+:::
+---
+
+## Eliminating Strictly Dominated Strategies
+
+| $P_1$, $P_2$ | [$a$]{.hi-grey}  | [$b$]{.red}   | $c$           |
+|--------------+---------------+---------------+---------------|
+| [$A$]{.hi-grey} | [1, 1]{.hi-grey} | [2, 2]{.hi-grey} | [3, 3]{.hi-grey} |
+| $B$          | [2, 0]{.hi-grey} | [3, 1]{.red}  | 4, 2          |
+| [$C$]{.hi-grey} | [3, 1]{.hi-grey} | [2, 2]{.hi-grey} | [1, 1]{.hi-grey} |
+
+::: {.incremental}
+  * Player 2 can deduce all of this
+    - and once they eliminate A, a, and C, b is strictly dominated by c.
+  * This leaves us one strategy per player, and so the NE here is (B, c).
+:::
+---
+
+## Eliminating Strictly Dominated Strategies
+
+| $P_1$, $P_2$ | [$a$]{.hi-grey}  | [$b$]{.hi-grey}  | [$c$]{.hi}    |
+|--------------+---------------+---------------+---------------|
+| [$A$]{.hi-grey} | [1, 1]{.hi-grey} | [2, 2]{.hi-grey} | [3, 3]{.hi-grey} |
+| [$B$]{.hi}   | [2, 0]{.hi-grey} | [3, 1]{.hi-grey} | [4, 2]{.hi}   |
+| [$C$]{.hi-grey} | [3, 1]{.hi-grey} | [2, 2]{.hi-grey} | [1, 1]{.hi-grey} |
+
+::: {.incremental}
+  * This leaves us one strategy per player, and so the NE here is [(B, c)]{,hi}.
+:::
+---
+
+## Order Doesn't Matter
+  * **In IESDS**, the order in which you eliminate strategies doesn't matter. You'll get the same result no matter how you do it---as long as you keep going to the end.
+
+---
+
+
+## Order Doesn't Matter
+
+Consider this even larger game:
+
+| $P_1$, $P_2$ | $a$  | $b$  | $c$  | $d$  | $e$  |
+|--------------+------+------+------+------+------|
+| **$A$**      | 1, 1 | 2, 2 | 2, 2 | 2, 1 | 4, 1 |
+| **$B$**      | 1, 3 | 1, 3 | 2, 2 | 2, 3 | 3, 2 |
+| **$C$**      | 1, 2 | 2, 4 | 1, 3 | 2, 3 | 1, 3 |
+| **$D$**      | 3, 2 | 2, 3 | 1, 4 | 2, 2 | 1, 2 |
+| **$E$**      | 2, 1 | 3, 2 | 3, 2 | 3, 3 | 4, 1 |
+
+---
+
+## Order Doesn't Matter (start w/ $P_1$)
+
+Suppose we start by looking for **Player 1's** strictly dominated strategies:
+
+| $P_1$, $P_2$ | $a$  | $b$  | $c$  | $d$  | $e$  |
+|--------------+------+------+------+------+------|
+| **$A$**      | 1, 1 | 2, 2 | 2, 2 | 2, 1 | 4, 1 |
+| **$B$**      | 1, 3 | 1, 3 | 2, 2 | 2, 3 | 3, 2 |
+| **$C$**      | 1, 2 | 2, 4 | 1, 3 | 2, 3 | 1, 3 |
+| **$D$**      | 3, 2 | 2, 3 | 1, 4 | 2, 2 | 1, 2 |
+| **$E$**      | 2, 1 | 3, 2 | 3, 2 | 3, 3 | 4, 1 |
+
+---
+
+## Order Doesn't Matter (start w/ $P_1$)
+
+Suppose we start by looking for **Player 1's** strictly dominated strategies:
+
+| $P_1$, $P_2$    | $a$            | $b$            | $c$            | $d$            | $e$            |
+|-----------------+----------------+----------------+----------------+----------------+----------------|
+| **$A$**         | 1, 1           | 2, 2           | 2, 2           | 2, 1           | 4, 1           |
+| [**$B$**]{.red} | [1]{.red}, 3   | [1]{.red}, 3   | [2]{.red}, 2   | [2]{.red}, 3   | [3]{.red}, 2   |
+| [**$C$**]{.red} | [1]{.red}, 2   | [2]{.red}, 4   | [1]{.red}, 3   | [2]{.red}, 3   | [1]{.red}, 3   |
+| **$D$**         | 3, 2           | 2, 3           | 1, 4           | 2, 2           | 1, 2           |
+| **$E$**         | [2]{.green}, 1 | [3]{.green}, 2 | [3]{.green}, 2 | [3]{.green}, 3 | [4]{.green}, 1 |
+
+  * $B$ and $C$ are strictly dominated by $E$
+
+---
+
+## Order Doesn't Matter (start w/ $P_1$)
+
+| $P_1$, $P_2$        | $a$              | $b$              | $c$              | $d$              | $e$              |
+|---------------------+------------------+------------------+------------------+------------------+------------------|
+| **$A$**             | 1, 1             | 2, 2             | 2, 2             | 2, 1             | 4, 1             |
+| [**$B$**]{.hi-grey} | [1, 3]{.hi-grey} | [1, 3]{.hi-grey} | [2, 2]{.hi-grey} | [2, 3]{.hi-grey} | [3, 2]{.hi-grey} |
+| [**$C$**]{.hi-grey} | [1, 2]{.hi-grey} | [2, 4]{.hi-grey} | [1, 3]{.hi-grey} | [2, 3]{.hi-grey} | [1, 3]{.hi-grey} |
+| **$D$**             | 3, 2             | 2, 3             | 1, 4             | 2, 2             | 1, 2             |
+| **$E$**             | 2, 1             | 3, 2             | 3, 2             | 3, 3             | 4, 1             |
+
+  * Are there any newly strictly dominated strategies after eliminating $B$ and $C$?
+---
+
+## Order Doesn't Matter (start w/ $P_1$)
+
+| $P_1$, $P_2$        | [$a$]{.red}      | $b$              | $c$              | $d$              | [$e$]{.red}      |
+|---------------------+------------------+------------------+------------------+------------------+------------------|
+| **$A$**             | 1, [1]{.red}     | 2, 2             | 2, 2             | 2, 1             | 4, [1]{.red}     |
+| [**$B$**]{.hi-grey} | [1, 3]{.hi-grey} | [1, 3]{.hi-grey} | [2, 2]{.hi-grey} | [2, 3]{.hi-grey} | [3, 2]{.hi-grey} |
+| [**$C$**]{.hi-grey} | [1, 2]{.hi-grey} | [2, 4]{.hi-grey} | [1, 3]{.hi-grey} | [2, 3]{.hi-grey} | [1, 3]{.hi-grey} |
+| **$D$**             | 3, [2]{.red}     | 2, 3             | 1, 4             | 2, 2             | 1, [2]{.red}     |
+| **$E$**             | 2, [1]{.red}     | 3, 2             | 3, 2             | 3, 3             | 4, [1]{.red}     |
+
+::: {.incremental}
+
+  * After eliminating $B$ and $C$, now $a$ and $e$ are strictly dominated by $b$ for Player 2
+
+  * This is conditional on Player 2 knowing that if Player 1 is rational, they would never play $B$ or $C$
+
+:::
+
+---
+
+## Order Doesn't Matter (start w/ $P_1$)
+
+| $P_1$, $P_2$     | [$a$]{.hi-grey}  | $b$           | $c$           | $d$           | [$e$]{.hi-grey}  |
+|------------------+---------------+---------------+---------------+---------------+---------------|
+| [**$A$**]{.red}  | [1, 1]{.hi-grey} | [2]{.red}, 2  | [2]{.red}, 2  | [2]{.red}, 1  | [4, 1]{.hi-grey} |
+| [**$B$**]{.hi-grey} | [1, 3]{.hi-grey} | [1, 3]{.hi-grey} | [2, 2]{.hi-grey} | [2, 3]{.hi-grey} | [3, 2]{.hi-grey} |
+| [**$C$**]{.hi-grey} | [1, 2]{.hi-grey} | [2, 4]{.hi-grey} | [1, 3]{.hi-grey} | [2, 3]{.hi-grey} | [1, 3]{.hi-grey} |
+| [**$D$**]{.red}  | [3, 2]{.hi-grey} | [2]{.red}, 3  | [1]{.red}, 4  | [2]{.red}, 2  | [1, 2]{.hi-grey} |
+| **$E$**          | [2, 1]{.hi-grey} | 3, 2          | 3, 2          | 3, 3          | [4, 1]{.hi-grey} |
+
+  * Now $A$ and $D$ are strictly dominated by $E$ for Player 1
+
+---
+
+## Order Doesn't Matter (start w/ $P_1$)
+
+| $P_1$, $P_2$     | [$a$]{.hi-grey}  | [$b$]{.red}   | [$c$]{.red}   | $d$           | [$e$]{.hi-grey}  |
+|------------------+---------------+---------------+---------------+---------------+---------------|
+| [**$A$**]{.hi-grey} | [1, 1]{.hi-grey} | [2, 2]{.hi-grey} | [2, 2]{.hi-grey} | [2, 1]{.hi-grey} | [4, 1]{.hi-grey} |
+| [**$B$**]{.hi-grey} | [1, 3]{.hi-grey} | [1, 3]{.hi-grey} | [2, 2]{.hi-grey} | [2, 3]{.hi-grey} | [3, 2]{.hi-grey} |
+| [**$C$**]{.hi-grey} | [1, 2]{.hi-grey} | [2, 4]{.hi-grey} | [1, 3]{.hi-grey} | [2, 3]{.hi-grey} | [1, 3]{.hi-grey} |
+| [**$D$**]{.hi-grey} | [3, 2]{.hi-grey} | [2, 3]{.hi-grey} | [1, 4]{.hi-grey} | [2, 2]{.hi-grey} | [1, 2]{.hi-grey} |
+| **$E$**          | [2, 1]{.hi-grey} | 3, [2]{.red}  | 3, [2]{.red}  | 3, 3          | [4, 1]{.hi-grey} |
+
+  * And finally, $b$ and $c$ are strictly dominated by $d$
+
+---
+
+## Order Doesn't Matter (start w/ $P_1$)
+
+| $P_1$, $P_2$     | [$a$]{.hi-grey}  | [$b$]{.hi-grey}  | [$c$]{.hi-grey}  | [$d$]{.hi}    | [$e$]{.hi-grey}  |
+|------------------+---------------+---------------+---------------+---------------+---------------|
+| [**$A$**]{.hi-grey} | [1, 1]{.hi-grey} | [2, 2]{.hi-grey} | [2, 2]{.hi-grey} | [2, 1]{.hi-grey} | [4, 1]{.hi-grey} |
+| [**$B$**]{.hi-grey} | [1, 3]{.hi-grey} | [1, 3]{.hi-grey} | [2, 2]{.hi-grey} | [2, 3]{.hi-grey} | [3, 2]{.hi-grey} |
+| [**$C$**]{.hi-grey} | [1, 2]{.hi-grey} | [2, 4]{.hi-grey} | [1, 3]{.hi-grey} | [2, 3]{.hi-grey} | [1, 3]{.hi-grey} |
+| [**$D$**]{.hi-grey} | [3, 2]{.hi-grey} | [2, 3]{.hi-grey} | [1, 4]{.hi-grey} | [2, 2]{.hi-grey} | [1, 2]{.hi-grey} |
+| [**$E$**]{.hi}   | [2, 1]{.hi-grey} | [3, 2]{.hi-grey} | [3, 2]{.hi-grey} | [3, 3]{.hi}   | [4, 1]{.hi-grey} |
+
+So we are left with a single strategy profile:
+
+  * ([**$E$**]{.hi} , [$d$]{.hi}) 
+
+---
+
+## Order Doesn't Matter (start w/ $P_1$)
+
+| $P_1$, $P_2$     | [$a$]{.hi-grey}  | [$b$]{.hi-grey}  | [$c$]{.hi-grey}  | [$d$]{.hi}    | [$e$]{.hi-grey}  |
+|------------------+---------------+---------------+---------------+---------------+---------------|
+| [**$A$**]{.hi-grey} | [1, 1]{.hi-grey} | [2, 2]{.hi-grey} | [2, 2]{.hi-grey} | [2, 1]{.hi-grey} | [4, 1]{.hi-grey} |
+| [**$B$**]{.hi-grey} | [1, 3]{.hi-grey} | [1, 3]{.hi-grey} | [2, 2]{.hi-grey} | [2, 3]{.hi-grey} | [3, 2]{.hi-grey} |
+| [**$C$**]{.hi-grey} | [1, 2]{.hi-grey} | [2, 4]{.hi-grey} | [1, 3]{.hi-grey} | [2, 3]{.hi-grey} | [1, 3]{.hi-grey} |
+| [**$D$**]{.hi-grey} | [3, 2]{.hi-grey} | [2, 3]{.hi-grey} | [1, 4]{.hi-grey} | [2, 2]{.hi-grey} | [1, 2]{.hi-grey} |
+| [**$E$**]{.hi}   | [2, 1]{.hi-grey} | [3, 2]{.hi-grey} | [3, 2]{.hi-grey} | [3, 3]{.hi}   | [4, 1]{.hi-grey} |
+
+  * is this a NE?
+
+    + is there any way either player could *unilateraly deviate* to a higher payoff?
+
+---
+
+## Order Doesn't Matter (start w/ $P_2$)
+
+Now what happens if we reset and start instead by looking for **Player 2's** strictly dominated strategies?
+
+| $P_1$, $P_2$ | $a$  | $b$  | $c$  | $d$  | $e$  |
+|--------------+------+------+------+------+------|
+| **$A$**      | 1, 1 | 2, 2 | 2, 2 | 2, 1 | 4, 1 |
+| **$B$**      | 1, 3 | 1, 3 | 2, 2 | 2, 3 | 3, 2 |
+| **$C$**      | 1, 2 | 2, 4 | 1, 3 | 2, 3 | 1, 3 |
+| **$D$**      | 3, 2 | 2, 3 | 1, 4 | 2, 2 | 1, 2 |
+| **$E$**      | 2, 1 | 3, 2 | 3, 2 | 3, 3 | 4, 1 |
+
+---
+
+## Order Doesn't Matter (start w/ $P_2$)
+
+| $P_1$, $P_2$ | [$a$]{.red}  | $b$  | $c$  | $d$  | [$e$]{.red}  |
+|--------------+--------------+------+------+------+--------------|
+| **$A$**      | 1, [1]{.red} | 2, 2 | 2, 2 | 2, 1 | 4, [1]{.red} |
+| **$B$**      | 1, [3]{.red} | 1, 3 | 2, 2 | 2, 3 | 3, [2]{.red} |
+| **$C$**      | 1, [2]{.red} | 2, 4 | 1, 3 | 2, 3 | 1, [3]{.red} |
+| **$D$**      | 3, [2]{.red} | 2, 3 | 1, 4 | 2, 2 | 1, [2]{.red} |
+| **$E$**      | 2, [1]{.red} | 3, 2 | 3, 2 | 3, 3 | 4, [1]{.red} |
+
+  * $a$ and $e$ are strictly dominated by $b$
+
+---
+
+## Order Doesn't Matter (start w/ $P_2$)
+
+| $P_1$, $P_2$    | [$a$]{.hi-grey}  | $b$          | $c$          | $d$          | [$e$]{.hi-grey}  |
+|-----------------+---------------+--------------+--------------+--------------+---------------|
+| [**$A$**]{.red} | [1, 1]{.hi-grey} | [2]{.red}, 2 | [2]{.red}, 2 | [2]{.red}, 1 | [4, 1]{.hi-grey} |
+| [**$B$**]{.red} | [1, 3]{.hi-grey} | [1]{.red}, 3 | [2]{.red}, 2 | [2]{.red}, 3 | [3, 2]{.hi-grey} |
+| [**$C$**]{.red} | [1, 2]{.hi-grey} | [2]{.red}, 4 | [1]{.red}, 3 | [2]{.red}, 3 | [1, 3]{.hi-grey} |
+| [**$D$**]{.red} | [3, 2]{.hi-grey} | [2]{.red}, 3 | [1]{.red}, 4 | [2]{.red}, 2 | [1, 2]{.hi-grey} |
+| **$E$**         | [2, 1]{.hi-grey} | 3, 2         | 3, 2         | 3, 3         | [4, 1]{.hi-grey} |
+
+  * $A$, $B$, $C$, and $D$ are now strictly dominated by $E$
+
+---
+
+## Order Doesn't Matter (start w/ $P_2$)
+
+| $P_1$, $P_2$     | [$a$]{.hi-grey}  | [$b$]{.red}   | [$c$]{.red}   | $d$           | [$e$]{.hi-grey}  |
+|------------------+---------------+---------------+---------------+---------------+---------------|
+| [**$A$**]{.hi-grey} | [1, 1]{.hi-grey} | [2, 2]{.hi-grey} | [2, 2]{.hi-grey} | [2, 1]{.hi-grey} | [4, 1]{.hi-grey} |
+| [**$B$**]{.hi-grey} | [1, 3]{.hi-grey} | [1, 3]{.hi-grey} | [2, 2]{.hi-grey} | [2, 3]{.hi-grey} | [3, 2]{.hi-grey} |
+| [**$C$**]{.hi-grey} | [1, 2]{.hi-grey} | [2, 4]{.hi-grey} | [1, 3]{.hi-grey} | [2, 3]{.hi-grey} | [1, 3]{.hi-grey} |
+| [**$D$**]{.hi-grey} | [3, 2]{.hi-grey} | [2, 3]{.hi-grey} | [1, 4]{.hi-grey} | [2, 2]{.hi-grey} | [1, 2]{.hi-grey} |
+| **$E$**          | [2, 1]{.hi-grey} | 3, [2]{.red}  | 3, [2]{.red}  | 3, 3          | [4, 1]{.hi-grey} |
+
+  * $b$ and $c$ are now strictly dominated by $d$
+
+---
+
+## Order Doesn't Matter (start w/ $P_2$)
+
+| $P_1$, $P_2$        | [$a$]{.hi-grey}  | [$b$]{.hi-grey}  | [$c$]{.hi-grey}  | [$d$]{.hi}       | [$e$]{.hi-grey}  |
+|---------------------+------------------+------------------+------------------+------------------+------------------|
+| [**$A$**]{.hi-grey} | [1, 1]{.hi-grey} | [2, 2]{.hi-grey} | [2, 2]{.hi-grey} | [2, 1]{.hi-grey} | [4, 1]{.hi-grey} |
+| [**$B$**]{.hi-grey} | [1, 3]{.hi-grey} | [1, 3]{.hi-grey} | [2, 2]{.hi-grey} | [2, 3]{.hi-grey} | [3, 2]{.hi-grey} |
+| [**$C$**]{.hi-grey} | [1, 2]{.hi-grey} | [2, 4]{.hi-grey} | [1, 3]{.hi-grey} | [2, 3]{.hi-grey} | [1, 3]{.hi-grey} |
+| [**$D$**]{.hi-grey} | [3, 2]{.hi-grey} | [2, 3]{.hi-grey} | [1, 4]{.hi-grey} | [2, 2]{.hi-grey} | [1, 2]{.hi-grey} |
+| [**$E$**]{.hi}      | [2, 1]{.hi-grey} | [3, 2]{.hi-grey} | [3, 2]{.hi-grey} | [3, 3]{.hi}      | [4, 1]{.hi-grey} |
+
+Once again we're left with the same strategy profile:
+
+  * ([**$E$**]{.hi} , [$d$]{.hi}) 
+
+---
+
+## IESDS in a Nutshell
+
+::: {.incremental}
+  * The process of IESDS can be summed up in three steps:
+
+    1. Search for a strictly dominated strategy belonging to any player. If none exists, stop here: IESDS is completed.
+    2. Eliminate (cross out) that strategy. Optionally, re-draw the game table without the eliminated strategy.
+    3. Return to step 1.
+:::
+
+---
+
+## IESDS Example:
+
+| $P_1$, $P_2$ | x   | y   | z   |
+|--------------+-----+-----+-----|
+| **X**        | 1,3 | 2,2 | 3,2 |
+| **Y**        | 2,2 | 2,2 | 4,3 |
+| **Z**        | 1,1 | 0,2 | 1,1 |
+
+Which strategy is strictly dominated?
+
+---
+
+## IESDS Example:
+
+| $P_1$, $P_2$ | x   | y   | z   |
+|--------------+-----+-----+-----|
+| **X**        | 1,3 | 2,2 | 3,2 |
+| **Y**        | 2,2 | 2,2 | 4,3 |
+| **Z**        | 1,1 | 0,2 | 1,1 |
+
+What does IESDS tell you about the NE of this game?
+
+---
+
+## Failures of Elimination Methods {.smaller}
+
+::: {.incremental}
+  - There’s no guarantee that any particular game will contain strictly dominated strategies
+  - Even when there are strategies we can eliminate, there may not be enough of them to find a NE just by elimination.
+  - So why bother with this?
+  - Even if elimination doesn’t immediately identify a NE, it can still be helpful to simplify the game before trying other methods.
+  - Simplifying by elimination is especially useful when dealing with mixed strategies
+:::

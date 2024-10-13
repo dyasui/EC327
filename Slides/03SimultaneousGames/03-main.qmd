@@ -24,16 +24,76 @@ filters:
 
   * Game Tables/Strategic Form
   
-  * Dominant Strategies
-  
   * Nash Equilibrium
 
+  * Dominant Strategies
+  
 :::
 
-{{< include 0301-strategicform.qmd >}}
+# Split or Steal
+
+{{< video https://youtu.be/S0qjK3TWZE8 width="800" height="450" fig-align="center" >}}
+
+Pause at 2:20. We'll come back to Nick and Ibrahim!
+
+---
+
+## Split or Steal
+
+From the perspective of [Nick]{.brown}, his payoffs depend on what Ibrahim has chosen:
+
+|                         | if Ibrahim Splits | if Ibrahim Steals |
+|-------------------------|-------------------|-------------------|
+| if Nick Splits he wins: | $\$6,800$         | $\$ 0$            |
+| if Nick Steals he wins: | $\$13,600$        | $\$ 0$            |
+
+---
+  
+## Split or Steal
+
+From the perspective of [Ibrahim]{.blue}, his payoffs depend on what *Nick* has chosen:
+
+|                            | if Nick Splits    | if Nick Steals    |
+|----------------------------|-------------------|-------------------|
+| if Ibrahim Splits he wins: | $\$6,800$         | $\$ 0$            |
+| if Ibrahim Steals he wins: | $\$13,600$        | $\$ 0$            |
+
+---
+
+## Intersection of payoff tables
+
+In a *game*, the best choices are interdependent:
+
+| (Nick: $\$x$, Ibrahim: $\$y$) | Ibrahim Splits       | Ibrahim Steals    |
+|-------------------------------|----------------------|-------------------|
+| Nick Splits                   | $(\$6,800, \$6,800)$ | $(\$0, 13,600)$   |
+| Nick Steals                   | $(\$13,600, \$0)$    | $(\$0, \$0)$      |
+
+---
+
+## Split or Steal Predictions
+
+What do you think will happen in this game?
+
+::: {.incremental}
+  - Would you choose [Split]{.hi} or [Steal]{.hi}
+  
+  - What would you say to your opponent?
+:::
+
+---
+
+## Split or Steal: Nick and Ibrahim
+
+{{< video https://youtu.be/S0qjK3TWZE8?t=142 width="800" height="450" fig-align="center" >}}
+
+
+{{< include 0301-terminology.qmd >}}
 
 {{< include 0302-nash.qmd >}}
 
-{{< include 0303-elimination.qmd >}}
+{{< include 0303-prisdilemma.qmd >}}
 
-{{< include 0304-bestresponses.qmd >}}
+{{< include 0304-elimination.qmd >}}
+
+{{< include 0305-bestresponses.qmd >}}

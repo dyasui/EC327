@@ -1,0 +1,187 @@
+# Prisoners' Dilemma
+
+## Prisoners' Dilemma
+
+To see the concept of Nash Equilibrium in action,
+we will start with the most famous example.
+
+## Prisoners' Dilemma ^[as defined by Zachary Kiefer]
+
+There are two criminals, who I like to call Guido and Luca.
+
+::: {.incremental}
+  - Guido and Luca have each committed murder, but the police have no way of proving it.
+  - However, the police can prove that they have lied on their taxes, which is a much lesser offense.
+  - The police get Guido and Luca into separate rooms so that they can’t talk, and offer them a choice: Testify against the other, or stay Quiet.
+  - If they Testify, they will receive lenient sentencing, and the police will be able to convict the other criminal.
+:::
+
+---
+
+## Prisoner's Dilemma {.smaller}
+
+There are four different possibilities of what could happen:
+
+::: {.incremental}
+  * Both *Keep Quiet*: Police can only convict them of tax fraud, so Guido and Luca only serve 1 year in prison each
+  * Guido *Testifies*, but Luca *Keeps Quiet*: Guido gets 0 prison time for cooperating, Guido gets hit with a full 20 year sentence
+  * Luca *Testifies*, but Guido *Keeps Quiet*: Luca gets 0 prison time, Luca gets hit with a full 20 year sentence
+  * Both *Testify*: Both get convicted of murder, but get their prison sentences reduced to 10 years each because they cooperated
+
+:::
+
+---
+
+## Prisoner's Dilemma in Strategic Form
+
+| Guido, Luca    | Testify   | Keep Quiet   |
+| -------------  | --------- | ------------ |
+| **Testify**    | -10, -10  | 0, -20       |
+| **Keep Quiet** | -20, 0    | -1, -1       |
+
+---
+
+## What would you choose?
+
+  * Remember that you cannot communicate with your fellow prisoner
+  
+  * How would you have to be that they won't sell you out for you to choose to keep quiet?
+  
+---
+
+## Prisoners' Dilemma {.smaller}
+
+::: {.incremental}
+
+Let’s think through this from Guido’s perspective.
+
+  - Imagine that Luca keeps Quiet. This gives Guido a choice of two options: he can also keep Quiet, and get a short prison sentence, or he can Testify and get released. Obviously, Guido prefers to Testify.
+
+  - Now imagine that Luca Testifies. This again gives Guido a choice of two options: he can also keep Quiet, and get a long prison sentence, or he can Testify and get a medium sentence. Obviously, Guido still prefers to Testify.
+
+  - In other words, Guido prefers to Testify, no matter what Luca does.
+
+  - If we go through this logic from Luca’s perspective, we find that Luca also always prefers to Testify.
+
+:::
+
+---
+
+## Nash Equilibrium in the Prisoners' Dilemma
+
+Although the outcome where both criminals keep quiet *Pareto dominates* the outcome where they both testify and serve 10 years, would it be stable?
+
+  * In the {Quiet, Quiet} strategy profile, either player could deviate to Testify and shorten their prison time. 
+  
+  * {Testify, Testify} is the only *stable* strategy profile, where no one could unilaterally deviate to decrease their sentence.
+  
+---
+
+## Paradox of the Prisoner’s Dilemma {.smaller}
+
+  - So, if Guido and Luca each act in their own self-interest, they will wind up each getting a medium prison sentence.
+  - This is despite the fact that, if they both kept Quiet, they could each get a short prison sentence instead.
+
+---
+
+## Does this look familiar?
+
+|          | Split                  | Steal               |
+| -------- | ---------------------- | ------------------- |
+| Split    | $(\$6,800, \$6,800)$   | $(\$0, 13,600)$     |
+| Steal    | $(\$13,600, \$0)$      | $(\$0, \$0)$        |
+
+Although the numbers are different, the structure is the same.
+
+*Split or Steal* is a *Prisoners' Dilemma*
+
+---
+
+## Watch what happens
+
+{{< video https://youtu.be/S0qjK3TWZE8?t=141 width="800" height="450" fig-align="center" >}}
+
+start from 2:20
+
+---
+
+## Discuss
+
+  * Did Nick change the structure of the game?
+  
+---
+
+## Prisoner's Dilemma
+
+| Guido, Luca          | Testify | Keep Quiet |
+|----------------------+---------+------------|
+| **Testify**          | -10,-10 | 0,-20      |
+| **Keep Quiet**       | -20,0   | -1,-1      |
+| **False Confession** | -20, 0  | -20, -1    |
+
+::: {.incremental}
+* What if we change the Prisoner's Dilemma like this? What would you pick if you were Guido?
+
+  1. Testify
+  1. Keep Quiet
+  1. False Confession
+:::
+---
+
+## Prisoner's Dilemma
+
+| Guido, Luca          | Testify  | Keep Quiet | False Confession |
+|----------------------+----------+------------+------------------|
+| **Testify**          | -10, -10 | 0, -20     | 0, -20           |
+| **Keep Quiet**       | -20, 0   | -1, -1     | -1, -20          |
+| **False Confession** | -20, 0   | -20, -1    | -10, -10         |
+
+::: {.incremental}
+* What about this third variation? What would you pick if you were Guido?
+
+  1. Testify
+  1. Keep Quiet
+  1. False Confession
+
+:::
+
+---
+
+## Rock Paper Scissors
+
+{{< video https://youtu.be/b0SoKWLkmLU width="800" height="450" fig-align="center" >}}
+
+One last question, and this one isn't based on a Prisoner's Dilemma...
+
+---
+
+## Rock Paper Scissors
+
+| Lisa, Bart | R     | P     | S     |
+|------------+-------+-------+-------|
+| **R**      | 0, 0  | -1, 1 | 1, -1 |
+| **P**      | 1, -1 | 0, 0  | -1, 1 |
+| **S**      | -1, 1 | 1, -1 | 0,0   |
+
+::: {.incremental}
+  * This game models a game of Rock-Paper-Scissors. If you are Lisa, which strategy will you choose?
+
+    1. R(ock)
+    1. P(aper)
+    1. S(cissors)
+:::
+---
+
+## Obviously-Wrong Strategies
+
+::: {.incremental}
+
+  * The first three of those games contained strategies that were **obviously bad choices**.
+
+  * Rock-Paper-Scissors did not.
+
+  * One of the simplest things you can do with a strategic-form game is to start by finding and eliminating (ruling out) the strategies which are obviously bad.
+
+  * In some games, this can even be enough to identify the Nash Equilibrium!
+:::
+

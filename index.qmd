@@ -7,6 +7,46 @@ subtitle: "Economics Course at the University of Oregon"
 
 ---
 
+## Lectures
+
+[01 - Introduction](/Slides/01Intro/01-main.html)
+
+[02 - Sequential Games](/Slides/02SequentialGames/02-main.html)
+
+[03 - Simultaneous Games](/Slides/03SimultaneousGames/03-main.html)
+
+[04 - Information Sets](/Slides/04InfoSets/main.html)
+
+[05 - Uncertainty]()
+
+[06 - Mixed Strategies]()
+
+[07 - Asymmetric Information]()
+
+[08 - Strategic Moves]()
+
+[09 - Repeated Games]()
+
+---
+
+## Activities
+
+[Activity 1 - Guessing Two Thirds of the Average](https://dyasui.github.io/EC327/activities/01GuessTwoThirds/GuessTwoThirds.html)
+
+[Activity 2 - Survivor Flags](https://dyasui.github.io/EC327/activities/02SurvivorFlags/SurvivorFlags.html)
+
+## Assignments 
+
+<a href="Homework/assignment1/main.pdf" target="_blank">Homework 1</a>
+
+[Homework 2](https://dyasui.github.io/EC327/Homework/assignment2/main.pdf)
+
+[Homework 3](https://dyasui.github.io/EC327/Homework/assignment3/main.pdf)
+
+[Homework 4](https://dyasui.github.io/EC327/Homework/assignment4/main.pdf)
+
+---
+
 This elective game theory class EC327 is taught by [Dante Yasui](https://cas.uoregon.edu/directory/economics/all/dyasui)
 at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
@@ -45,46 +85,6 @@ Office Hours : Monday 10-11 am \& Wednesday 1-2 pm
 | 9        | 9              | Uncertainty and Information                                         |
 | 10       | 10             | Repeated Games                                                      |
 | *Finals* | *TBA*          | *Exam*                                                              |
-
----
-
-## Lectures
-
-[01 - Introduction](/Slides/01Intro/01-main.html)
-
-[02 - Sequential Games](/Slides/02SequentialGames/02-main.html)
-
-[03 - Simultaneous Games](/Slides/03SimultaneousGames/03-main.html)
-
-[04 - Information Sets](/Slides/04InfoSets/main.html)
-
-[05 - Uncertainty]()
-
-[06 - Mixed Strategies]()
-
-[07 - Asymmetric Information]()
-
-[08 - Strategic Moves]()
-
-[09 - Repeated Games]()
-
----
-
-## Activities
-
-[Activity 1 - Guessing Two Thirds of the Average](https://dyasui.github.io/EC327/activities/01GuessTwoThirds/GuessTwoThirds.html)
-
-[Activity 2 - Survivor Flags](https://dyasui.github.io/EC327/activities/02SurvivorFlags/SurvivorFlags.html)
-
-## Assignments 
-
-<a href="Homework/assignment1/main.pdf" target="_blank">Homework 1</a>
-
-[Homework 2](https://dyasui.github.io/EC327/Homework/assignment2/main.pdf)
-
-[Homework 3](https://dyasui.github.io/EC327/Homework/assignment3/main.pdf)
-
-[Homework 4](https://dyasui.github.io/EC327/Homework/assignment4/main.pdf)
 
 ---
 

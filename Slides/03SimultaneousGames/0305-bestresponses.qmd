@@ -1,0 +1,542 @@
+# Best-Response Analysis
+
+## Limits of IESDS
+
+Not every simultaneous-move strategy can by only eliminating dominated strategies
+
+Can we still find NE in those games?
+
+::: {.incremental}
+
+  * Yes! We just need to remember the *best-responding* part of our definition of NE
+
+:::
+
+---
+
+## Best-Responding
+::: {.incremental}
+- In finding Nash equilibrium, **best-response analysis** is key.
+- Each player chooses their best action in response to the strategies of others.
+- This iterative process helps in solving games with multiple strategies.
+:::
+
+---
+
+## Best Responses
+::: {.incremental}
+  * If you know what strategy the other player will choose, then you can easily figure out what your best option (or options) are.
+  * Of course, you don't actually know what the other player will do when you choose your strategy in a game like this---but thinking about the game this way makes it easy to find NEs.
+  * A strategy $s_i$ is a [best response]{.hi} to another player's strategy $s_{-i}$ if and only if it provides the highest payoff possible when the other player chooses $s_{-i}$.
+:::
+---
+
+## Some Notes on Best Responses
+::: {.incremental}
+  * The phrase "to another player's strategy" in the definition of a best response is **important**.
+  * A strategy can only be a best response **to some strategy of the other player**. There is no such thing as a strategy which is just "a best response."
+  * When dealing with strategic-form games with game tables, there is always at least one best response to another player's strategy---and there may be multiple, if there is more than one strategy which provides the best payoff.
+:::
+---
+
+## Best Responses in Practice}
+
+::: {.incremental}
+  * It's easy to depict best responses in a game table: we can go through each strategy in the game, and mark each strategy which is a best response to them.
+  * We do this by marking the payoffs---however, it's important to understand that it's not the payoff itself which is a best response--we're just using them as a convenient way to depict where the best responses are.
+    * In other words: don't try to describe the best response using the payoff. The best response is always the strategy.
+:::
+
+---
+
+## Best Response Analysis
+
+Let's revisit this game from the beginning of the lecture:
+
+| Row, Column | Left | Middle | Right |
+|-------------+------+--------+-------|
+| **Top**     | 3, 1 | 2, 3   | 10, 2 |
+| **High**    | 4, 5 | 3, 0   | 6, 4  |
+| **Low**     | 2, 2 | 5, 4   | 12, 3 |
+| **Bottom**  | 5, 6 | 4, 5   | 9, 7  |
+
+  * We'll break down the best responses one step at a time
+
+---
+
+## Best Response Analysis
+
+Suppose you're the Row player:
+
+| Row        | Left |
+|------------+------|
+| **Top**    | 3    |
+| **High**   | 4    |
+| **Low**    | 2    |
+| **Bottom** | 5    |
+
+What would you do if you *knew* Column will play **Left**?
+
+---
+
+## Best Response Analysis
+
+| Row        | Left     |
+|------------+----------|
+| **Top**    | 3        |
+| **High**   | 4        |
+| **Low**    | 2        |
+| **Bottom** | <u>5</u> |
+
+We'll underline this payoff as **Bottom** is the [best response]{.hi} to **Left**
+
+---
+
+## Best Response Analysis
+
+| Row        | Left     | Middle   |
+|------------+----------+----------|
+| **Top**    | 3        | 2        |
+| **High**   | 4        | 3        |
+| **Low**    | 2        | <u>5</u> |
+| **Bottom** | <u>5</u> | 4        |
+
+Also, **Low** is the [best response]{.hi} to **Middle**
+
+---
+
+## Best Response Analysis
+
+| Row        | Left     | Middle   | Right     |
+|------------+----------+----------+-----------|
+| **Top**    | 3        | 2        | 10        |
+| **High**   | 4        | 3        | 6         |
+| **Low**    | 2        | <u>5</u> | <u>12</u> |
+| **Bottom** | <u>5</u> | 4        | 9         |
+
+And **Low** is also the [best response]{.hi} to **Right**
+
+---
+
+## Best Response Analysis
+
+| Row, [Column]{.blue} | Left          | Middle               | Right          |
+|----------------------+---------------+----------------------+----------------|
+| **Top**              | 3, [1]{.blue} | 2, [<u>3</u>]{.blue} | 10, [2]{.blue} |
+| **High**             | 4             | 3                    | 6              |
+| **Low**              | 2             | <u>5</u>             | <u>12</u>      |
+| **Bottom**           | <u>5</u>      | 4                    | 9              |
+
+For Column, **Middle** is a [best response]{.hi} to **Top**
+
+---
+
+## Best Response Analysis
+
+| Row, [Column]{.blue} | Left                 | Middle               | Right          |
+|----------------------+----------------------+----------------------+----------------|
+| **Top**              | 3, [1]{.blue}        | 2, [<u>3</u>]{.blue} | 10, [2]{.blue} |
+| **High**             | 4, [<u>5</u>]{.blue} | 3, [0]{.blue}        | 6, [6]{.blue}  |
+| **Low**              | 2                    | <u>5</u>             | <u>12</u>      |
+| **Bottom**           | <u>5</u>             | 4                    | 9              |
+
+**Left** is a [best response]{.hi} to **High**
+
+---
+
+## Best Response Analysis
+
+| Row, [Column]{.blue} | Left                 | Middle                      | Right                 |
+|----------------------+----------------------+-----------------------------+-----------------------|
+| **Top**              | 3, [1]{.blue}        | 2, [<u>3</u>]{.blue}        | 10, [2]{.blue}        |
+| **High**             | 4, [<u>5</u>]{.blue} | 3, [0]{.blue}               | 6, [6]{.blue}         |
+| **Low**              | 2, [2]{.blue}        | <u>5</u>, [<u>4</u>]{.blue} | <u>12</u>, [3]{.blue} |
+| **Bottom**           | <u>5</u>             | 4                           | 9                     |
+
+**Middle** is a [best response]{.hi} to **Low**
+
+---
+
+## Best Response Analysis
+
+| Row, [Column]{.blue} | Left                 | Middle                      | Right                 |
+|----------------------+----------------------+-----------------------------+-----------------------|
+| **Top**              | 3, [1]{.blue}        | 2, [<u>3</u>]{.blue}        | 10, [2]{.blue}        |
+| **High**             | 4, [<u>5</u>]{.blue} | 3, [0]{.blue}               | 6, [6]{.blue}         |
+| **Low**              | 2, [2]{.blue}        | <u>5</u>, [<u>4</u>]{.blue} | <u>12</u>, [3]{.blue} |
+| **Bottom**           | <u>5</u>, [6]{.blue} | 4, [5]{.blue}               | 9, [<u>7</u>]{.blue}  |
+
+And **Right** is a [best response]{.hi} to **Bottom**
+
+---
+
+## Best Response Analysis
+
+| Row, [Column]{.blue} | Left                 | Middle                      | Right                 |
+|----------------------+----------------------+-----------------------------+-----------------------|
+| **Top**              | 3, [1]{.blue}        | 2, [<u>3</u>]{.blue}        | 10, [2]{.blue}        |
+| **High**             | 4, [<u>5</u>]{.blue} | 3, [0]{.blue}               | 6, [6]{.blue}         |
+| **Low**              | 2, [2]{.blue}        | <u>5</u>, [<u>4</u>]{.blue} | <u>12</u>, [3]{.blue} |
+| **Bottom**           | <u>5</u>, [6]{.blue} | 4, [5]{.blue}               | 9, [<u>7</u>]{.blue}  |
+
+The NE of this game is where the best responses intersect:
+
+  * (**Low**, **Middle**)
+
+---
+
+## Three-Player Simultaneous Games
+
+Let's create a modified version of the three-roommate planting game:
+
+::: {.incremental}
+  * Now instead of observing who contributed to the garden already in certain order, 
+    suppose that Emily, Nina, and Talia have to choose *simultaneously*
+
+  * Also instead of the garden either *dying* or *surviving*, we'll add more detailed levels of quality depending on who contributed
+
+:::
+
+---
+
+## Simultaneous Planting Game
+
+What are Emily's preferences in this modified game? ^[this is a symmetric game, so Nina and Talia will have equivalent rankings]
+
+| Outcome                                         | Payoff |
+|-------------------------------------------------+--------|
+| Nina and Talia contribute, Emily doesn't        | 6      |
+| Everyone contributes                            | 5      |
+| Either Nina or Talia contribute, Emily doesn't  | 4      |
+| Either Nina or Talia contribute, and Emily does | 3      |
+| No-one contributes                              | 2      |
+| Emily is the only one to contribute             | 1      |
+
+---
+
+## Simultaneous Planting Game
+
+[Talia chooses:]{.hi-grey}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+[Contribute]{.hi-grey}
+
+| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                | [Don't]{.hi-bb}                     |
+|-----------------------------+-------------------------------------+-------------------------------------|
+| [Contribute]{.h}            | [5]{.h}, [5]{.hi-bb}, [5]{.hi-grey} | [3]{.h}, [6]{.hi-bb}, [3]{.hi-grey} |
+| [Don't]{.h}                 | [6]{.h}, [3]{.hi-bb}, [3]{.hi-grey} | [4]{.h}, [4]{.hi-bb}, [1]{.hi-grey} |
+
+:::
+
+::: {.column width="50%"}
+
+[Don't Contribute]{.hi-grey}
+
+| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                | [Don't]{.hi-bb}                     |
+|-----------------------------+-------------------------------------+-------------------------------------|
+| [Contribute]{.h}            | [3]{.h}, [3]{.hi-bb}, [6]{.hi-grey} | [1]{.h}, [4]{.hi-bb}, [4]{.hi-grey} |
+| [Don't]{.h}                 | [4]{.h}, [1]{.hi-bb}, [4]{.hi-grey} | [2]{.h}, [2]{.hi-bb}, [2]{.hi-grey} |
+
+:::
+
+::::
+
+. . .
+
+  * Can you find any dominant strategies?
+
+---
+
+## Simultaneous Planting Game
+
+[Talia chooses:]{.hi-grey}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+[Contribute]{.hi-grey}
+
+| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                       | [Don't]{.hi-bb}                                   |
+|-----------------------------+--------------------------------------------+---------------------------------------------------|
+| [Contribute]{.h}            | [5]{.h}, [5]{.hi-bb}, [5]{.hi-grey}        | [3]{.h}, [<u>6</u>]{.hi-bb}, [3]{.hi-grey}        |
+| [Don't]{.h}                 | [<u>6</u>]{.h}, [3]{.hi-bb}, [3]{.hi-grey} | [<u>4</u>]{.h}, [<u>4</u>]{.hi-bb}, [1]{.hi-grey} |
+
+:::
+::: {.column width="50%"}
+
+[Don't Contribute]{.hi-grey}
+
+| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                              | [Don't]{.hi-bb}                                           |
+|-----------------------------+---------------------------------------------------+-----------------------------------------------------------|
+| [Contribute]{.h}            | [3]{.h}, [3]{.hi-bb}, [<u>6</u>]{.hi-grey}        | [1]{.h}, [<u>4</u>]{.hi-bb}, [<u>4</u>]{.hi-grey}         |
+| [Don't]{.h}                 | [<u>4</u>]{.h}, [1]{.hi-bb}, [<u>4</u>]{.hi-grey} | [<u>2</u>]{.h}, [<u>2</u>]{.hi-bb}, [<u>2</u>]{.hi-grey} |
+
+:::
+
+::::
+
+---
+
+## The Deer Hunt Game
+
+Two cavemen, Igg and Ogg, each decide whether to hunt Deer or Rabbit.
+
+  * If both hunt Deer, they can work together to bring one down and have enough meat to share with leftovers
+
+    + Each earn payoffs of 2
+
+  * If instead the other goes off chasing a rabbit, the cameman hunting deer won't be able to catch any meat, 
+    but the one hunting rabbit will get just enough to feed themselves
+
+    + Unsuccessful Deer hunter gets 0, rabbit hunter gets 1
+
+  * Or both cavemen could just decide to go off and hunt rabbits by themselves,
+    ensuring they get can feed themselves
+
+    + Both get 1
+
+---
+
+## The Deer Hunt Game
+
+| Igg, Ogg   | Deer | Rabbit |
+|------------+------+--------|
+| **Deer**   | 2, 2 | 0, 1   |
+| **Rabbit** | 1, 0 | 1, 1   |
+
+::: {.incremental}
+  * Are there any *strictly dominated strategies*?
+  * What about *best responses*?
+:::
+---
+
+## The Deer Hunt Game
+Here are Igg's best responses...
+
+| Igg, Ogg   | Deer        | Rabbit      |
+|------------+-------------+-------------|
+| **Deer**   | <u>2</u>, 2 | 0, 1        |
+| **Rabbit** | 1, 0        | <u>1</u>, 1 |
+
+---
+
+## The Deer Hunt Game
+And here are Ogg's best responses...
+
+| Igg, Ogg   | Deer               | Rabbit             |
+|------------+--------------------+--------------------|
+| **Deer**   | <u>2</u>, <u>2</u> | 0, 1               |
+| **Rabbit** | 1, 0               | <u>1</u>, <u>1</u> |
+
+---
+
+## Another Example: Non-Unique Best Responses
+::: {.incremental}
+  * As mentioned earlier, best responses don't have to be unique.
+:::
+
+```{=latex}
+\begin{table}[h]
+\centering
+\begin{tabular}{cc|c|c|}
+  & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Michael}\\
+  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Swerve$}  & \multicolumn{1}{c}{$Straight$} \\\cline{3-4}
+  \multirow{2}*{Eleanor}  & $Swerve$ & $\underline{1}, 1$ & $\underline{1}, 1$ \\\cline{3-4}
+  & $Straight$ & $\underline{1}, 1$ & $0, 0$ \\\cline{3-4}
+\end{tabular}
+\end{table}
+
+```
+::: {.incremental}
+  * Here, for both players, both Straight and Swerve are best responses to Swerve. When the other player chooses Swerve, both strategies provide payoff of 1.
+:::
+---
+
+## Nash Equilibrium from Best Responses
+
+::: {.incremental}
+  * Recall the various definitions of a Nash Equilibrium:
+    * a strategy profile such that no player can obtain a larger payoff by *unilaterally deviating* (changing only their own strategy).
+    * A strategy profile such that no single player can make themselves better off by changing only their own strategy.
+    * A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision.
+  * Another definition we can use now is "A strategy profile such that each player's strategy is a best responses to the other player's strategy."
+  * "Playing a best response" is equivalent to "cannot obtain a larger payoff by unilaterally deviating," or any of the other ways to describe this condition.
+:::
+---
+
+## Another Example: When Elimination Does Nothing
+```{=latex}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{cc|c|c|c|c|}
+    & \multicolumn{1}{c}{} & \multicolumn{4}{c}{P$_2$}\\
+    & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} & \multicolumn{1}{c}{$d$}  \\\cline{3-6}
+    \multirow{5}*{P$_1$}  & $A$ & 1, 1 & 2, 2 & 2, 2 & 2, 1 \\\cline{3-6}
+    & $B$ & 1, 3 & 1, 3 & 2, 2 & 2, 3 \\\cline{3-6}
+    & $C$ & 1, 2 & 2, 4 & 1, 3 & 2, 3 \\\cline{3-6}
+    & $D$ & 3, 2 & 2, 3 & 1, 4 & 2, 2 \\\cline{3-6}
+  \end{tabular}
+\end{table}
+```
+---
+
+## Classifying NEs
+::: {.incremental}
+  * Nash Equilibria may be either *strict* or *weak*.
+  * A Nash Equilibrium is strict if and only if each player would receive a smaller payoff by changing their own strategy.
+  * If a Nash Equilibrium is not strict---meaning that at least one player could change their own strategy and receive an equal (but not larger) payoff---it is weak.
+:::
+---
+
+## Intuition on Strict vs. Weak Equilibria
+::: {.incremental}
+* In any Nash Equilibrium, no player has a reason to change their own strategy---they cannot get a higher payoff this way.
+* Strict Nash Equilibria go a little further: not only does no player have a reason to change their own strategy, they also have a reason **not** to, because any other strategy would provide them a worse payoff.
+* If a Nash Equilibrium is weak, it means that some player could change their strategy, and get exactly the same payoff they already were. They have no reason to do this, but also no reason **not** to.
+* We can also say that a strict Nash Equilibrium is one where each player is playing a strategy which is a **unique** best response to the strategies chosen by other players.
+:::
+---
+
+## Deer Hunt: Strict Nash Equilibria
+```{=latex}
+\begin{table}[h]
+\centering
+\begin{tabular}{cc|c|c|}
+& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Ogg}\\
+& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Deer$}  & \multicolumn{1}{c}{$Rabbit$} \\\cline{3-4}
+\multirow{2}*{Igg}  & $Deer$ & $\underline{2},\underline{2}$ & $0,1$ \\\cline{3-4}
+& $Rabbit$ & $1,0$ & $\underline{1},\underline{1}$ \\\cline{3-4}
+\end{tabular}
+\end{table}
+```
+::: {.incremental}
+* Here, note that at each Nash Equilibrium, each player has no other strategy providing the same payoff. This is a strict Nash Equilibrium.
+:::
+---
+
+## Not Quite the Trolley Problem: Weak Nash Equilibria
+```{=latex}
+\begin{table}[h]
+\centering
+\begin{tabular}{cc|c|c|}
+& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Michael}\\
+& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Swerve$}  & \multicolumn{1}{c}{$Straight$} \\\cline{3-4}
+\multirow{2}*{Eleanor}  & $Swerve$ & $\underline{1}, \underline{1}$ & $\underline{1}, \underline{1}$ \\\cline{3-4}
+& $Straight$ & $\underline{1}, \underline{1}$ & $0, 0$ \\\cline{3-4}
+\end{tabular}
+\end{table}
+```
+::: {.incremental}
+* However, in this game, each Nash Equilibrium features at least one player who could still get the same payoff if they change their strategy.
+:::
+---
+
+## Classifying Games Based on NEs
+::: {.incremental}
+  * Now that we've talked about several ways to find a game's NEs, we can start to talk about classifying games using them.
+:::
+---
+
+## Prisoners' Dilemmas
+```{=latex}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{cc|c|c|}
+    & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Luca}\\
+    & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Testify$}  & \multicolumn{1}{c}{$Keep~Quiet$} \\\cline{3-4}
+    \multirow{2}*{Guido}  & $Testify$ & $-10,-10$ & $0,-20$ \\\cline{3-4}
+    & $Keep~Quiet$ & $-20,0$ & $-1,-1$ \\\cline{3-4}
+  \end{tabular}
+\end{table}
+```
+::: {.incremental}
+In general, a Prisoner's Dilemma is any game in which:
+
+  * The players have the same strategies, A and B.
+  * A strictly dominates B, making (A, A) the only NE.
+  * But (B, B) is better for both players than (A, A).
+:::
+---
+
+## Coordination Games
+::: {.incremental}
+  * A [coordination game]{.hi} is a game in which the players all have the same strategy sets, and the NEs are all of the strategy profiles where the players choose the same strategy.
+  * The Deer Hunt is a coordination game.
+:::
+```{=latex}
+\begin{table}[h]
+\centering
+\begin{tabular}{cc|c|c|}
+  & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Ogg}\\
+  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Deer$}  & \multicolumn{1}{c}{$Rabbit$} \\\cline{3-4}
+  \multirow{2}*{Igg}  & $Deer$ & \colorbox{blue!25}{\textbf{2,2}} & 0,1 \\\cline{3-4}
+  & $Rabbit$ & 1,0 & \colorbox{blue!25}{\textbf{1,1}} \\\cline{3-4}
+\end{tabular}
+\end{table}
+```
+---
+
+## Other Coordination Games
+```{=latex}
+\begin{table}[h]
+  \caption*{Bach or Stravinsky?}
+  \centering
+  \begin{tabular}{cc|c|c|}
+    & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Stravinsky Fan}\\
+    & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Bach}  & \multicolumn{1}{c}{Strav.} \\\cline{3-4}
+    \multirow{2}*{Bach Fan}  & Bach & \colorbox{blue!25}{\textbf{3, 2}} & 0,0 \\\cline{3-4}
+    & Strav. & 0,0 & \colorbox{blue!25}{\textbf{2, 3}} \\\cline{3-4}
+  \end{tabular}
+\end{table}
+```
+
+---
+
+## Other Coordination Games
+```{=latex}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{cc|c|c|c|}
+    & \multicolumn{1}{c}{} & \multicolumn{3}{c}{$P_2$}\\
+    & \multicolumn{1}{c}{} & \multicolumn{1}{c}{A}  & \multicolumn{1}{c}{B}  & \multicolumn{1}{c}{C} \\\cline{3-5}
+    \multirow{2}*{$P_1$}  & A & \colorbox{blue!25}{\textbf{1, 1}} & 1, 0 & 3, 0 \\\cline{3-5}
+    & B & 0, 1 & \colorbox{blue!25}{\textbf{2, 2}} & 2, 1 \\\cline{3-5}
+    & B & 0, 3 & 1, 2 & \colorbox{blue!25}{\textbf{4, 4}} \\\cline{3-5}
+  \end{tabular}
+\end{table}
+```
+---
+
+
+## Anti-Coordination Games
+::: {.incremental}
+  * An [anti-coordination game]{.hi} is a game in which the players all have the same strategy sets, but the NEs are all of the strategy profiles where the players choose different strategies.
+:::
+```{=latex}
+\begin{table}[h]
+  \caption*{Chicken}
+  \centering
+  \begin{tabular}{cc|c|c|}
+    & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Buzz}\\
+    & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Straight}  & \multicolumn{1}{c}{Swerve} \\\cline{3-4}
+    \multirow{2}*{Jim}  & Straight & -10, -10 & \colorbox{blue!25}{\textbf{5, -1}} \\\cline{3-4}
+    & Swerve & \colorbox{blue!25}{\textbf{-1, 5}} & 0, 0 \\\cline{3-4}
+  \end{tabular}
+\end{table}
+```
+---
+
+## Symmetric Games
+::: {.incremental}
+  * A [symmetric game]{.hi} is a game which is **indifferent to an exchange of players** in other words, a game where the players are interchangeable.
+  * Consider the Prisoner's Dilemma: if we swap the players' names, and their positions in the game table, and the order of their payoffs, we get the same game that we started with.
+  * A two-player game with a game table is symmetric if:
+    * The players have the same strategy sets.
+    * In the on-diagonal cells of the game table, the players receive equal payoffs.
+    * In the "mirrored" off-diagonal cells of the game table, the players' payoffs are reversed.
+  * Of the games we've just looked at, the Deer Hunt, the 3x3 coordination game, and Chicken are symmetric games. Bach and Stravinsky is not.
+:::
+
