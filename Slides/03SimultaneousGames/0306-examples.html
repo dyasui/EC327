@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>survivorflags – EC327 Game Theory</title>
+<title>examples – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -79,7 +108,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../activities/01GuessTwoThirds/GuessTwoThirds.html">Activities</a></li><li class="breadcrumb-item"><a href="../../activities/02SurvivorFlags/SurvivorFlags.html">Survivor Flags</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      EC327 Game Theory
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -150,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Survivor Flags</span></a>
   </div>
 </li>
@@ -168,89 +199,278 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="activity-2-survivor-21-flags-challenge" class="level2">
-<h2 class="anchored" data-anchor-id="activity-2-survivor-21-flags-challenge">Activity 2: Survivor 21 Flags Challenge</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/aonCsvi0LKc" width="800" height="600" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>https://youtu.be/aonCsvi0LKc</p>
-<hr>
-</section>
-<section id="split-into-groups" class="level2">
-<h2 class="anchored" data-anchor-id="split-into-groups">Split Into Groups</h2>
-<hr>
-</section>
-<section id="set-up" class="level2">
-<h2 class="anchored" data-anchor-id="set-up">Set Up</h2>
+<section id="iesds-example" class="level2">
+<h2 class="anchored" data-anchor-id="iesds-example">IESDS Example</h2>
 <div class="incremental">
 <ul class="incremental">
-<li><p>Find an opposing group</p></li>
-<li><p>Pick someone to record flags for each round</p></li>
-<li><p>Draw 21 flags on whiteboard</p></li>
-<li><p>Discuss strategy w/ your group for 1 minute</p></li>
-<li><p>Play the game!</p>
-<ul class="incremental">
-<li>Don’t forget to record how many flags each round!!!</li>
-</ul></li>
+<li>In the game above, which strategy is strictly dominated?
+<ol class="incremental" type="1">
+<li>X</li>
+<li>Y</li>
+<li>Z</li>
+<li>x</li>
+<li>y</li>
+</ol></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="record-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="record-your-data">Record your Data!</h2>
-<p><a href="https://docs.google.com/spreadsheets/d/13rOHLWJa--0BuvfI83pGdGWFFANsx1gNkx3TJl3A8ek/edit?usp=sharing">Google Sheet</a></p>
-<ul>
-<li><p>Check the first sheet for an example of how to record your data</p></li>
-<li><p>Find a free sheet at the bottom of the page</p></li>
-<li><p>Ask me if something doesn’t make sense!</p></li>
-</ul>
-<hr>
-</section>
-<section id="modified-rules-choose-number-of-flags-to-start" class="level2">
-<h2 class="anchored" data-anchor-id="modified-rules-choose-number-of-flags-to-start">Modified Rules: choose number of flags to start</h2>
-<p>Find a new team to play against (losers move)</p>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
 <div class="incremental">
 <ul class="incremental">
-<li><p>This time, one team will choose the number of starting flags: between 15-25</p></li>
-<li><p>The other team will choose whether to allow max. of 2-5 flags per round</p></li>
-<li><p>Play and record!</p></li>
+<li>Strategy Z is strictly dominated. Which strategy strictly dominates it?
+<ol class="incremental" type="1">
+<li>X</li>
+<li>Y</li>
+<li>Both X and Y</li>
+</ol></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="discuss" class="level2">
-<h2 class="anchored" data-anchor-id="discuss">Discuss</h2>
-<p>In your teams briefly discuss the following:</p>
-<ul>
-<li><p>Is there a correct way to play the game?</p></li>
-<li><p>How did you find out the best way to play the game?</p></li>
-<li><p>Is the game solved meaning that the winner can be correctly predicted from any point in the game? If so, should the first or second team always win?</p></li>
-<li><p>Were there more errors in the first games played than the last games played? Why?</p></li>
-<li><p>How was this game different from the guessing 2/3rds game?</p></li>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Perform IESDS all the way to completion. What does IESDS tell you about the NE of this game?
+<ol class="incremental" type="1">
+<li>The NE is (X, x).</li>
+<li>The NE is (X, y).</li>
+<li>The NE is (Y, y).</li>
+<li>The NE is (Y, z).</li>
+<li>IESDS by itself does not reveal the NE of this game.</li>
+</ol></li>
 </ul>
+</div>
 <hr>
 </section>
-<section id="solution" class="level2">
-<h2 class="anchored" data-anchor-id="solution">Solution:</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/K_MckZc8VvQ" width="1000" height="600" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>https://youtu.be/K_MckZc8VvQ</p>
-<hr>
-</section>
-<section id="group-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="group-exercise">Group Exercise:</h2>
-<p>Consider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.</p>
-<ol type="1">
-<li><p><em>Draw the extensive form game tree complete with all payoff for both teams.</em></p></li>
-<li><p><em>How many total strategies are there for team 1?</em></p></li>
-<li><p><em>Use pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?</em></p></li>
-</ol>
-<hr>
-</section>
-<section id="recap" class="level2">
-<h2 class="anchored" data-anchor-id="recap">Recap</h2>
-<ul>
-<li><p>There <em>is</em> a correct way to play: we will later call the <em>Nash equilibrium</em></p></li>
-<li><p>You likely used some form of <em>backwards induction</em> or <em>rollback</em> reasoning</p></li>
-<li><p>This game was <em>sequential</em> unlike the <em>simultaneous</em> 2/3rds game</p></li>
+<section id="other-elimination-methods-weakly-dominated-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="other-elimination-methods-weakly-dominated-strategies">Other Elimination Methods: Weakly Dominated Strategies</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>It is also possible to find Nash Equilibria by eliminating <span class="hi">weakly dominated</span> strategies (strategies for which there is an alternative that is never worse, and sometimes better).</li>
+<li>We will not spend a lot of time on this method, because it has two serious flaws: [1.] It is possible for a Nash Equilibrium to involve playing a weakly dominated strategy. IEWDS may therefore eliminate actual Nash Equilibria. [2.] Unlike IESDS, the order in which you eliminate weakly dominated strategies matters: you may get different results from different orders of elimination.</li>
 </ul>
+</div>
+<hr>
+</section>
+<section id="example-why-weak-dominance-is-not-useful" class="level2">
+<h2 class="anchored" data-anchor-id="example-why-weak-dominance-is-not-useful">Example: Why Weak Dominance is Not Useful</h2>
+<p>In the game below, B is weakly dominated for both players.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>If we eliminate the weakly dominated strategy for both players, then the only remaining strategy profile is (A, A)—and this is a Nash equilibrium.</li>
+<li>However, (B, B) is also a Nash equilibrium: both players get payoff 1, and neither can improve that payoff by changing their own strategy. We failed to find this equilibrium by eliminating weakly dominated strategies.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-why-weak-dominance-is-not-useful" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-why-weak-dominance-is-not-useful">Another Example: Why Weak Dominance is Not Useful</h2>
+<p>In the game below, M and R are weakly dominated.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>If we begin by eliminating R, then afterwards, M and B are both weakly dominated, and we would eliminate them, leaving only (T, L).</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-why-weak-dominance-is-not-useful-1" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-why-weak-dominance-is-not-useful-1">Another Example: Why Weak Dominance is Not Useful</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>However, if we begin by eliminating M, then T and R are both weakly dominated, and if we eliminate them, we are left with only (B, L).</li>
+<li>Not only does the outcome of IEWDS depend on what we eliminate first, it still fails to find a <strong>third</strong> Nash equilibrium, which is (B, R).</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="other-elimination-methods-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="other-elimination-methods-non-best-responses">Other Elimination Methods: Non-Best-Responses</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Generally speaking, we can eliminate any strategy which is not rational to play in a NE.</li>
+<li>It’s never rational to play strictly dominated strategies, but it’s sometimes rational to play weakly dominated strategies.</li>
+<li>There are other categories of non-rational strategies:</li>
+<li>A strategy is a <span class="hi">non-best-response</span> or <span class="hi">non-rationalizable strategy</span> if and only if, regardless of what the other players choose, it never provides the best possible payoff.</li>
+<li>I like to describe non-rationalizable strategies as strategies that you’d have to be crazy to think were a good idea, i.e.&nbsp;you can’t rationalize playing them.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="strictly-dominated-vs.-non-best-response" class="level2">
+<h2 class="anchored" data-anchor-id="strictly-dominated-vs.-non-best-response">Strictly Dominated vs.&nbsp;Non-Best-Response</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Non-rationalizability is very similar to strict dominance, but here’s the difference:</li>
+<li>Strict dominance is pairwise: a strategy <span class="math inline">\(s\)</span> dominates another, <span class="math inline">\(s'\)</span>, if <span class="math inline">\(s\)</span> specifically always gives a better payoff than <span class="math inline">\(s'\)</span>.</li>
+<li>Non-rationalizability is a property of a single strategy: for a strategy to be non-rationalizable, it means that there is always <em>some</em> option that gives a better payoff—but the better option doesn’t always have to be the same strategy.</li>
+<li>To put it another way: strategy <span class="math inline">\(s\)</span> is not a best response if there is always <strong>some strategy* which is better. To be strictly dominated, there must be </strong>one particular strategy** which is always better.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="example-non-best-responses">Example: Non-Best-Responses</h2>
+<p>In the game below, there are no strictly dominated strategies, meaning that IESDS will not do anything to simplify it.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>However, we can see that B is non-rationalizable for Player 1: regardless of whether Player 2 chooses a, b, or c, Player 1 is better off playing either A or C.</li>
+<li>Also, b is non-rationalizable for Player 2.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-non-best-responses">Another Example: Non-Best-Responses</h2>
+<hr>
+</section>
+<section id="iterated-elimination-of-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="iterated-elimination-of-non-best-responses">Iterated Elimination of Non-Best-Responses</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>It is not rational to play a non-best-response strategy in a pure-strategy context. (As we’ll see much later, it’s more complicated in a mixed-strategy context).</li>
+<li>Any strictly dominated strategy is also not a best response, but not all NBR strategies are strictly dominated.</li>
+<li>Because of this, if we eliminate non-best-responses, using the same steps as IESDS, this process will always eliminate the same strategies, and it may eliminate even more!</li>
+<li>This process is, naturally, called Iterative Elimination of Non-Best-Responses (IENBR).</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-ienbr" class="level2">
+<h2 class="anchored" data-anchor-id="example-ienbr">Example: IENBR</h2>
+<p>Returning to this same example, we can start by eliminating B.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Once we do this, we can now see that b and c are non-rationalizable, and eliminate them.</li>
+<li>Finally, we can see that B is non-rationalizable and eliminate it, leaving only the strategy profile (C, a), which is the Nash equilibrium of this game.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-ienbr" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-ienbr">Another Example: IENBR</h2>
+<hr>
+</section>
+<section id="iclicker-q4" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-q4">iClicker Q4</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>After eliminating Z, which is strictly dominated, what strategy is a non-best-response?
+<ol class="incremental" type="1">
+<li>X</li>
+<li>Y</li>
+<li>Z</li>
+<li>y</li>
+<li>z</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="iclicker-q5" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-q5">iClicker Q5</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>If we complete IENBR on this game table, what strategy profile is left at the end?
+<ol class="incremental" type="1">
+<li>(X, x)</li>
+<li>(X, z)</li>
+<li>(Y, x)</li>
+<li>(Y, z)</li>
+<li>There is more than one strategy profile left.</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="failures-of-elimination-methods" class="level2">
+<h2 class="anchored" data-anchor-id="failures-of-elimination-methods">Failures of Elimination Methods</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>There’s no guarantee that any particular game will contain strategies that are either strictly dominated or non-rationalizable.</li>
+<li>Even when there are strategies we can eliminate, there may not be enough of them to find a NE just by elimination.</li>
+<li>So why bother with this?</li>
+<li>Even if elimination doesn’t immediately identify a NE, it can still be helpful to simplify the game before trying other methods.</li>
+<li>Simplifying by elimination is <strong>especially</strong> useful when dealing with mixed strategies—which we’ll get to after the midterm.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="best-responses">Best-Responses}</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>In this discussion of non-best-response strategies, we’ve sort of skipped over one thing: if a strategy is NOT a non-best-response, then logically, it must sometimes be a best response.</li>
+<li>This is arguably an even more important concept—and one that we’ll get to tomorrow.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="iclicker-poll" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-poll">iClicker Poll</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Suppose that you KNEW, without a doubt, that Player 2 would play <span class="math inline">\(b\)</span>. If you were Player 1, what strategy would you choose?
+<ol class="incremental" type="1">
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>D</li>
+<li>I would be indifferent between two or more strategies.</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="iclicker-poll-1" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-poll-1">iClicker Poll</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Suppose that you KNEW, without a doubt, that Player 1 would play <span class="math inline">\(C\)</span>. If you were Player 2, what strategy would you choose?
+<ol class="incremental" type="1">
+<li>a</li>
+<li>b</li>
+<li>c</li>
+<li>d</li>
+<li>I would be indifferent between two or more strategies.</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="iclicker-poll-2" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-poll-2">iClicker Poll</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Suppose that you KNEW, without a doubt, that Player 2 would play <span class="math inline">\(a\)</span>. If you were Player 1, what strategy would you choose?
+<ol class="incremental" type="1">
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>D</li>
+<li>I would be indifferent between two or more strategies.</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="iclicker-poll-3" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-poll-3">iClicker Poll</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Suppose that you KNEW, without a doubt, that Player 1 would play <span class="math inline">\(D\)</span>. If you were Player 2, what strategy would you choose?
+<ol class="incremental" type="1">
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>D</li>
+<li>I would be indifferent between two or more strategies.</li>
+</ol></li>
+</ul>
+</div>
+<hr>
 
 
 </section>

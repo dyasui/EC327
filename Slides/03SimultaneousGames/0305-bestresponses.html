@@ -199,72 +199,32 @@ window.Quarto = {
 
 
 
-<section id="iclicker-poll" class="level2">
-<h2 class="anchored" data-anchor-id="iclicker-poll">iClicker Poll}</h2>
+<section id="best-response-analysis" class="level1">
+<h1>Best-Response Analysis</h1>
+<section id="limits-of-iesds" class="level2">
+<h2 class="anchored" data-anchor-id="limits-of-iesds">Limits of IESDS</h2>
+<p>Not every simultaneous-move strategy can by only eliminating dominated strategies</p>
+<p>Can we still find NE in those games?</p>
 <div class="incremental">
 <ul class="incremental">
-<li>Suppose that you KNEW, without a doubt, that Player 2 would play <span class="math inline">\(b\)</span>. If you were Player 1, what strategy would you choose?
-<ol class="incremental" type="1">
-<li>A</li>
-<li>B</li>
-<li>C</li>
-<li>D</li>
-<li>I would be indifferent between two or more strategies.</li>
-</ol></li>
+<li>Yes! We just need to remember the <em>best-responding</em> part of our definition of NE</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="iclicker-poll-1" class="level2">
-<h2 class="anchored" data-anchor-id="iclicker-poll-1">iClicker Poll}</h2>
+<section id="best-responding" class="level2">
+<h2 class="anchored" data-anchor-id="best-responding">Best-Responding</h2>
 <div class="incremental">
 <ul class="incremental">
-<li>Suppose that you KNEW, without a doubt, that Player 1 would play <span class="math inline">\(C\)</span>. If you were Player 2, what strategy would you choose?
-<ol class="incremental" type="1">
-<li>a</li>
-<li>b</li>
-<li>c</li>
-<li>d</li>
-<li>I would be indifferent between two or more strategies.</li>
-</ol></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="iclicker-poll-2" class="level2">
-<h2 class="anchored" data-anchor-id="iclicker-poll-2">iClicker Poll}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Suppose that you KNEW, without a doubt, that Player 2 would play <span class="math inline">\(a\)</span>. If you were Player 1, what strategy would you choose?
-<ol class="incremental" type="1">
-<li>A</li>
-<li>B</li>
-<li>C</li>
-<li>D</li>
-<li>I would be indifferent between two or more strategies.</li>
-</ol></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="iclicker-poll-3" class="level2">
-<h2 class="anchored" data-anchor-id="iclicker-poll-3">iClicker Poll}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Suppose that you KNEW, without a doubt, that Player 1 would play <span class="math inline">\(D\)</span>. If you were Player 2, what strategy would you choose?
-<ol class="incremental" type="1">
-<li>A</li>
-<li>B</li>
-<li>C</li>
-<li>D</li>
-<li>I would be indifferent between two or more strategies.</li>
-</ol></li>
+<li>In finding Nash equilibrium, <strong>best-response analysis</strong> is key.</li>
+<li>Each player chooses their best action in response to the strategies of others.</li>
+<li>This iterative process helps in solving games with multiple strategies.</li>
 </ul>
 </div>
 <hr>
 </section>
 <section id="best-responses" class="level2">
-<h2 class="anchored" data-anchor-id="best-responses">Best Responses}</h2>
+<h2 class="anchored" data-anchor-id="best-responses">Best Responses</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>If you know what strategy the other player will choose, then you can easily figure out what your best option (or options) are.</li>
@@ -275,11 +235,11 @@ window.Quarto = {
 <hr>
 </section>
 <section id="some-notes-on-best-responses" class="level2">
-<h2 class="anchored" data-anchor-id="some-notes-on-best-responses">Some Notes on Best Responses}</h2>
+<h2 class="anchored" data-anchor-id="some-notes-on-best-responses">Some Notes on Best Responses</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>The phrase “to another player’s strategy” in the definition of a best response is <strong>important</strong>.</li>
-<li>A strategy can only be a best response <strong>to some strategy of the other player</strong>. There is no such thing as a strategy which is just ``a best response.”</li>
+<li>A strategy can only be a best response <strong>to some strategy of the other player</strong>. There is no such thing as a strategy which is just “a best response.”</li>
 <li>When dealing with strategic-form games with game tables, there is always at least one best response to another player’s strategy—and there may be multiple, if there is more than one strategy which provides the best payoff.</li>
 </ul>
 </div>
@@ -298,50 +258,714 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="example-best-responses-in-game-table" class="level2">
-<h2 class="anchored" data-anchor-id="example-best-responses-in-game-table">Example: Best Responses in Game Table}</h2>
+<section id="best-response-analysis-1" class="level2">
+<h2 class="anchored" data-anchor-id="best-response-analysis-1">Best Response Analysis</h2>
+<p>Let’s revisit this game from the beginning of the lecture:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Row, Column</th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Top</strong></td>
+<td>3, 1</td>
+<td>2, 3</td>
+<td>10, 2</td>
+</tr>
+<tr class="even">
+<td><strong>High</strong></td>
+<td>4, 5</td>
+<td>3, 0</td>
+<td>6, 4</td>
+</tr>
+<tr class="odd">
+<td><strong>Low</strong></td>
+<td>2, 2</td>
+<td>5, 4</td>
+<td>12, 3</td>
+</tr>
+<tr class="even">
+<td><strong>Bottom</strong></td>
+<td>5, 6</td>
+<td>4, 5</td>
+<td>9, 7</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>We’ll break down the best responses one step at a time</li>
+</ul>
+<hr>
+</section>
+<section id="best-response-analysis-2" class="level2">
+<h2 class="anchored" data-anchor-id="best-response-analysis-2">Best Response Analysis</h2>
+<p>Suppose you’re the Row player:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Row</th>
+<th>Left</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Top</strong></td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td><strong>High</strong></td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td><strong>Low</strong></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><strong>Bottom</strong></td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>What would you do if you <em>knew</em> Column will play <strong>Left</strong>?</p>
+<hr>
+</section>
+<section id="best-response-analysis-3" class="level2">
+<h2 class="anchored" data-anchor-id="best-response-analysis-3">Best Response Analysis</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Row</th>
+<th>Left</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Top</strong></td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td><strong>High</strong></td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td><strong>Low</strong></td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><strong>Bottom</strong></td>
+<td><u>5</u></td>
+</tr>
+</tbody>
+</table>
+<p>We’ll underline this payoff as <strong>Bottom</strong> is the <span class="hi">best response</span> to <strong>Left</strong></p>
+<hr>
+</section>
+<section id="best-response-analysis-4" class="level2">
+<h2 class="anchored" data-anchor-id="best-response-analysis-4">Best Response Analysis</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Row</th>
+<th>Left</th>
+<th>Middle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Top</strong></td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td><strong>High</strong></td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td><strong>Low</strong></td>
+<td>2</td>
+<td><u>5</u></td>
+</tr>
+<tr class="even">
+<td><strong>Bottom</strong></td>
+<td><u>5</u></td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>Also, <strong>Low</strong> is the <span class="hi">best response</span> to <strong>Middle</strong></p>
+<hr>
+</section>
+<section id="best-response-analysis-5" class="level2">
+<h2 class="anchored" data-anchor-id="best-response-analysis-5">Best Response Analysis</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Row</th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Top</strong></td>
+<td>3</td>
+<td>2</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td><strong>High</strong></td>
+<td>4</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td><strong>Low</strong></td>
+<td>2</td>
+<td><u>5</u></td>
+<td><u>12</u></td>
+</tr>
+<tr class="even">
+<td><strong>Bottom</strong></td>
+<td><u>5</u></td>
+<td>4</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>And <strong>Low</strong> is also the <span class="hi">best response</span> to <strong>Right</strong></p>
+<hr>
+</section>
+<section id="best-response-analysis-6" class="level2">
+<h2 class="anchored" data-anchor-id="best-response-analysis-6">Best Response Analysis</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 20%">
+<col style="width: 29%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Row, <span class="blue">Column</span></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Top</strong></td>
+<td>3, <span class="blue">1</span></td>
+<td>2, <span class="blue"><u>3</u></span></td>
+<td>10, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><strong>High</strong></td>
+<td>4</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td><strong>Low</strong></td>
+<td>2</td>
+<td><u>5</u></td>
+<td><u>12</u></td>
+</tr>
+<tr class="even">
+<td><strong>Bottom</strong></td>
+<td><u>5</u></td>
+<td>4</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>For Column, <strong>Middle</strong> is a <span class="hi">best response</span> to <strong>Top</strong></p>
+<hr>
+</section>
+<section id="best-response-analysis-7" class="level2">
+<h2 class="anchored" data-anchor-id="best-response-analysis-7">Best Response Analysis</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Row, <span class="blue">Column</span></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Top</strong></td>
+<td>3, <span class="blue">1</span></td>
+<td>2, <span class="blue"><u>3</u></span></td>
+<td>10, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><strong>High</strong></td>
+<td>4, <span class="blue"><u>5</u></span></td>
+<td>3, <span class="blue">0</span></td>
+<td>6, <span class="blue">6</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Low</strong></td>
+<td>2</td>
+<td><u>5</u></td>
+<td><u>12</u></td>
+</tr>
+<tr class="even">
+<td><strong>Bottom</strong></td>
+<td><u>5</u></td>
+<td>4</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Left</strong> is a <span class="hi">best response</span> to <strong>High</strong></p>
+<hr>
+</section>
+<section id="best-response-analysis-8" class="level2">
+<h2 class="anchored" data-anchor-id="best-response-analysis-8">Best Response Analysis</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 30%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Row, <span class="blue">Column</span></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Top</strong></td>
+<td>3, <span class="blue">1</span></td>
+<td>2, <span class="blue"><u>3</u></span></td>
+<td>10, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><strong>High</strong></td>
+<td>4, <span class="blue"><u>5</u></span></td>
+<td>3, <span class="blue">0</span></td>
+<td>6, <span class="blue">6</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Low</strong></td>
+<td>2, <span class="blue">2</span></td>
+<td><u>5</u>, <span class="blue"><u>4</u></span></td>
+<td><u>12</u>, <span class="blue">3</span></td>
+</tr>
+<tr class="even">
+<td><strong>Bottom</strong></td>
+<td><u>5</u></td>
+<td>4</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Middle</strong> is a <span class="hi">best response</span> to <strong>Low</strong></p>
+<hr>
+</section>
+<section id="best-response-analysis-9" class="level2">
+<h2 class="anchored" data-anchor-id="best-response-analysis-9">Best Response Analysis</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 30%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Row, <span class="blue">Column</span></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Top</strong></td>
+<td>3, <span class="blue">1</span></td>
+<td>2, <span class="blue"><u>3</u></span></td>
+<td>10, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><strong>High</strong></td>
+<td>4, <span class="blue"><u>5</u></span></td>
+<td>3, <span class="blue">0</span></td>
+<td>6, <span class="blue">6</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Low</strong></td>
+<td>2, <span class="blue">2</span></td>
+<td><u>5</u>, <span class="blue"><u>4</u></span></td>
+<td><u>12</u>, <span class="blue">3</span></td>
+</tr>
+<tr class="even">
+<td><strong>Bottom</strong></td>
+<td><u>5</u>, <span class="blue">6</span></td>
+<td>4, <span class="blue">5</span></td>
+<td>9, <span class="blue"><u>7</u></span></td>
+</tr>
+</tbody>
+</table>
+<p>And <strong>Right</strong> is a <span class="hi">best response</span> to <strong>Bottom</strong></p>
+<hr>
+</section>
+<section id="best-response-analysis-10" class="level2">
+<h2 class="anchored" data-anchor-id="best-response-analysis-10">Best Response Analysis</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 30%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Row, <span class="blue">Column</span></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Top</strong></td>
+<td>3, <span class="blue">1</span></td>
+<td>2, <span class="blue"><u>3</u></span></td>
+<td>10, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><strong>High</strong></td>
+<td>4, <span class="blue"><u>5</u></span></td>
+<td>3, <span class="blue">0</span></td>
+<td>6, <span class="blue">6</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Low</strong></td>
+<td>2, <span class="blue">2</span></td>
+<td><u>5</u>, <span class="blue"><u>4</u></span></td>
+<td><u>12</u>, <span class="blue">3</span></td>
+</tr>
+<tr class="even">
+<td><strong>Bottom</strong></td>
+<td><u>5</u>, <span class="blue">6</span></td>
+<td>4, <span class="blue">5</span></td>
+<td>9, <span class="blue"><u>7</u></span></td>
+</tr>
+</tbody>
+</table>
+<p>The NE of this game is where the best responses intersect:</p>
+<ul>
+<li>(<strong>Low</strong>, <strong>Middle</strong>)</li>
+</ul>
+<hr>
+</section>
+<section id="three-player-simultaneous-games" class="level2">
+<h2 class="anchored" data-anchor-id="three-player-simultaneous-games">Three-Player Simultaneous Games</h2>
+<p>Let’s create a modified version of the three-roommate planting game:</p>
 <div class="incremental">
 <ul class="incremental">
-<li>To find Player 1’s best responses, we will go through each column of the table (i.e.&nbsp;each of Player 2’s strategies) and look for which of Player 1’s strategies gives Player 1 the best payoff in that column.</li>
+<li><p>Now instead of observing who contributed to the garden already in certain order, suppose that Emily, Nina, and Talia have to choose <em>simultaneously</em></p></li>
+<li><p>Also instead of the garden either <em>dying</em> or <em>surviving</em>, we’ll add more detailed levels of quality depending on who contributed</p></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="example-best-responses-in-game-table-1" class="level2">
-<h2 class="anchored" data-anchor-id="example-best-responses-in-game-table-1">Example: Best Responses in Game Table}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Likewise, to find Player 2’s best responses, we will go through each <strong>row</strong> of the table (each of Player 1’s strategies) and look for which of Player 2’s strategies gives <strong>Player 2</strong> the best payoff in that column. ::: {.incremental}
-<ul class="incremental">
-<li><p>The bolded parts are important: you have to look at Player 1’s payoffs to find Player 1’s best responses, and Player 2’s payoffs to find Player 2’s best responses.</p>
-<p>:::</p></li>
+<section id="simultaneous-planting-game" class="level2">
+<h2 class="anchored" data-anchor-id="simultaneous-planting-game">Simultaneous Planting Game</h2>
+<p>What are Emily’s preferences in this modified game? <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Outcome</th>
+<th>Payoff</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nina and Talia contribute, Emily doesn’t</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Everyone contributes</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>Either Nina or Talia contribute, Emily doesn’t</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>Either Nina or Talia contribute, and Emily does</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>No-one contributes</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Emily is the only one to contribute</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="simultaneous-planting-game-1" class="level2">
+<h2 class="anchored" data-anchor-id="simultaneous-planting-game-1">Simultaneous Planting Game</h2>
+<p><span class="hi-grey">Talia chooses:</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><span class="hi-grey">Contribute</span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="h">Emily</span>, <span class="hi-bb">Nina</span></th>
+<th><span class="hi-bb">Contribute</span></th>
+<th><span class="hi-bb">Don’t</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="h">Contribute</span></td>
+<td><span class="h">5</span>, <span class="hi-bb">5</span>, <span class="hi-grey">5</span></td>
+<td><span class="h">3</span>, <span class="hi-bb">6</span>, <span class="hi-grey">3</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">Don’t</span></td>
+<td><span class="h">6</span>, <span class="hi-bb">3</span>, <span class="hi-grey">3</span></td>
+<td><span class="h">4</span>, <span class="hi-bb">4</span>, <span class="hi-grey">1</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<p><span class="hi-grey">Don’t Contribute</span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="h">Emily</span>, <span class="hi-bb">Nina</span></th>
+<th><span class="hi-bb">Contribute</span></th>
+<th><span class="hi-bb">Don’t</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="h">Contribute</span></td>
+<td><span class="h">3</span>, <span class="hi-bb">3</span>, <span class="hi-grey">6</span></td>
+<td><span class="h">1</span>, <span class="hi-bb">4</span>, <span class="hi-grey">4</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">Don’t</span></td>
+<td><span class="h">4</span>, <span class="hi-bb">1</span>, <span class="hi-grey">4</span></td>
+<td><span class="h">2</span>, <span class="hi-bb">2</span>, <span class="hi-grey">2</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>. . .</p>
+<ul>
+<li>Can you find any dominant strategies?</li>
+</ul>
+<hr>
+</section>
+<section id="simultaneous-planting-game-2" class="level2">
+<h2 class="anchored" data-anchor-id="simultaneous-planting-game-2">Simultaneous Planting Game</h2>
+<p><span class="hi-grey">Talia chooses:</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><span class="hi-grey">Contribute</span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 35%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="h">Emily</span>, <span class="hi-bb">Nina</span></th>
+<th><span class="hi-bb">Contribute</span></th>
+<th><span class="hi-bb">Don’t</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="h">Contribute</span></td>
+<td><span class="h">5</span>, <span class="hi-bb">5</span>, <span class="hi-grey">5</span></td>
+<td><span class="h">3</span>, <span class="hi-bb"><u>6</u></span>, <span class="hi-grey">3</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">Don’t</span></td>
+<td><span class="h"><u>6</u></span>, <span class="hi-bb">3</span>, <span class="hi-grey">3</span></td>
+<td><span class="h"><u>4</u></span>, <span class="hi-bb"><u>4</u></span>, <span class="hi-grey">1</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<p><span class="hi-grey">Don’t Contribute</span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 36%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="h">Emily</span>, <span class="hi-bb">Nina</span></th>
+<th><span class="hi-bb">Contribute</span></th>
+<th><span class="hi-bb">Don’t</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="h">Contribute</span></td>
+<td><span class="h">3</span>, <span class="hi-bb">3</span>, <span class="hi-grey"><u>6</u></span></td>
+<td><span class="h">1</span>, <span class="hi-bb"><u>4</u></span>, <span class="hi-grey"><u>4</u></span></td>
+</tr>
+<tr class="even">
+<td><span class="h">Don’t</span></td>
+<td><span class="h"><u>4</u></span>, <span class="hi-bb">1</span>, <span class="hi-grey"><u>4</u></span></td>
+<td><span class="h"><u>2</u></span>, <span class="hi-bb"><u>2</u></span>, <span class="hi-grey"><u>2</u></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-deer-hunt-game" class="level2">
+<h2 class="anchored" data-anchor-id="the-deer-hunt-game">The Deer Hunt Game</h2>
+<p>Two cavemen, Igg and Ogg, each decide whether to hunt Deer or Rabbit.</p>
+<ul>
+<li><p>If both hunt Deer, they can work together to bring one down and have enough meat to share with leftovers</p>
+<ul>
+<li>Each earn payoffs of 2</li>
+</ul></li>
+<li><p>If instead the other goes off chasing a rabbit, the cameman hunting deer won’t be able to catch any meat, but the one hunting rabbit will get just enough to feed themselves</p>
+<ul>
+<li>Unsuccessful Deer hunter gets 0, rabbit hunter gets 1</li>
+</ul></li>
+<li><p>Or both cavemen could just decide to go off and hunt rabbits by themselves, ensuring they get can feed themselves</p>
+<ul>
+<li>Both get 1</li>
 </ul></li>
 </ul>
-</div>
 <hr>
 </section>
-<section id="another-example-best-responses-in-the-deer-hunt" class="level2">
-<h2 class="anchored" data-anchor-id="another-example-best-responses-in-the-deer-hunt">Another Example: Best Responses in the Deer Hunt}</h2>
+<section id="the-deer-hunt-game-1" class="level2">
+<h2 class="anchored" data-anchor-id="the-deer-hunt-game-1">The Deer Hunt Game</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Igg, Ogg</th>
+<th>Deer</th>
+<th>Rabbit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Deer</strong></td>
+<td>2, 2</td>
+<td>0, 1</td>
+</tr>
+<tr class="even">
+<td><strong>Rabbit</strong></td>
+<td>1, 0</td>
+<td>1, 1</td>
+</tr>
+</tbody>
+</table>
 <div class="incremental">
 <ul class="incremental">
-<li>Recall the Deer Hunt game, in which two cavemen each decide whether to hunt Deer or Rabbit.</li>
-<li>We couldn’t find a Nash Equilibrium to this game using elimination methods, because there was nothing to eliminate: no strategies are strictly dominated, and there are no strategies which are non-best-responses.</li>
-<li>Here are Igg’s best responses…</li>
+<li>Are there any <em>strictly dominated strategies</em>?</li>
+<li>What about <em>best responses</em>?</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="another-example-best-responses-in-the-deer-hunt-1" class="level2">
-<h2 class="anchored" data-anchor-id="another-example-best-responses-in-the-deer-hunt-1">Another Example: Best Responses in the Deer Hunt}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>And here are Ogg’s best responses…</li>
-</ul>
-</div>
+<section id="the-deer-hunt-game-2" class="level2">
+<h2 class="anchored" data-anchor-id="the-deer-hunt-game-2">The Deer Hunt Game</h2>
+<p>Here are Igg’s best responses…</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Igg, Ogg</th>
+<th>Deer</th>
+<th>Rabbit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Deer</strong></td>
+<td><u>2</u>, 2</td>
+<td>0, 1</td>
+</tr>
+<tr class="even">
+<td><strong>Rabbit</strong></td>
+<td>1, 0</td>
+<td><u>1</u>, 1</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="the-deer-hunt-game-3" class="level2">
+<h2 class="anchored" data-anchor-id="the-deer-hunt-game-3">The Deer Hunt Game</h2>
+<p>And here are Ogg’s best responses…</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Igg, Ogg</th>
+<th>Deer</th>
+<th>Rabbit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Deer</strong></td>
+<td><u>2</u>, <u>2</u></td>
+<td>0, 1</td>
+</tr>
+<tr class="even">
+<td><strong>Rabbit</strong></td>
+<td>1, 0</td>
+<td><u>1</u>, <u>1</u></td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
 <section id="another-example-non-unique-best-responses" class="level2">
-<h2 class="anchored" data-anchor-id="another-example-non-unique-best-responses">Another Example: Non-Unique Best Responses}</h2>
+<h2 class="anchored" data-anchor-id="another-example-non-unique-best-responses">Another Example: Non-Unique Best Responses</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>As mentioned earlier, best responses don’t have to be unique.</li>
@@ -354,61 +978,13 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="iclicker-q1" class="level2">
-<h2 class="anchored" data-anchor-id="iclicker-q1">iClicker Q1}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>In the game shown above, what is Player 1’s best response to X?
-<ol class="incremental" type="1">
-<li>A</li>
-<li>B</li>
-<li>C</li>
-<li>A and B are both best responses.</li>
-<li>A and C are both best responses.</li>
-</ol></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="iclicker-q2" class="level2">
-<h2 class="anchored" data-anchor-id="iclicker-q2">iClicker Q2}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>In the game shown above, what is Player 1’s best response to <strong>Y</strong>?
-<ol class="incremental" type="1">
-<li>A</li>
-<li>B</li>
-<li>C</li>
-<li>A and B are both best responses.</li>
-<li>A and C are both best responses.</li>
-</ol></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="iclicker-q3" class="level2">
-<h2 class="anchored" data-anchor-id="iclicker-q3">iClicker Q3}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>In the game shown above, what is <strong>Player 2’s</strong> best response to <strong>C</strong>?
-<ol class="incremental" type="1">
-<li>X</li>
-<li>Y</li>
-<li>Z</li>
-<li>X and Y are both best responses.</li>
-<li>X and Z are both best responses.</li>
-</ol></li>
-</ul>
-</div>
-<hr>
-</section>
 <section id="nash-equilibrium-from-best-responses" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-from-best-responses">Nash Equilibrium from Best Responses}</h2>
+<h2 class="anchored" data-anchor-id="nash-equilibrium-from-best-responses">Nash Equilibrium from Best Responses</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>Recall the various definitions of a Nash Equilibrium:
 <ul class="incremental">
-<li>a strategy profile such that no player can obtain a larger payoff by (changing only their own strategy).</li>
+<li>a strategy profile such that no player can obtain a larger payoff by <em>unilaterally deviating</em> (changing only their own strategy).</li>
 <li>A strategy profile such that no single player can make themselves better off by changing only their own strategy.</li>
 <li>A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision.</li>
 </ul></li>
@@ -418,114 +994,15 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="nash-equilibrium-from-best-responses-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-from-best-responses-1">Nash Equilibrium from Best Responses}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>If we find each player’s best responses in a game table, and do it using the same table for each player…</li>
-</ul>
-</div>
-<div class="incremental">
-<ul class="incremental">
-<li>Then any cell of the table in which all payoffs are marked to indicate a best response represents a NE.</li>
-<li>Here, the two NEs are (D, a) and (A, d), which we could never have found from elimination.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="another-example-nash-equilibrium-in-the-deer-hunt" class="level2">
-<h2 class="anchored" data-anchor-id="another-example-nash-equilibrium-in-the-deer-hunt">Another Example: Nash Equilibrium in the Deer Hunt}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>We did already find the NEs of the Deer Hunt, but we had to go through and check all four strategy profiles. We can do it much faster by just using best responses:</li>
-</ul>
-</div>
-<hr>
-</section>
 <section id="another-example-when-elimination-does-nothing" class="level2">
-<h2 class="anchored" data-anchor-id="another-example-when-elimination-does-nothing">Another Example: When Elimination Does Nothing}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>This game has <strong>absolutely no strategies</strong> that can be eliminated: none are strictly dominated or non-rationalizable.</li>
-<li>We can still find the NEs (of which there are quite a few) using best responses:</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="iclicker-q4" class="level2">
-<h2 class="anchored" data-anchor-id="iclicker-q4">iClicker Q4}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>In the game shown above, which of the following are the Nash Equilibria? (You will need to find best responses for both players.)
-<ol class="incremental" type="1">
-<li>(A, X)</li>
-<li>(A, Y)</li>
-<li>(B, X)</li>
-<li>(C, Z)</li>
-<li>More than one of the above.</li>
-</ol></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="best-responses-and-non-rationalizability" class="level2">
-<h2 class="anchored" data-anchor-id="best-responses-and-non-rationalizability">Best Responses and Non-Rationalizability}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li><p>Finding best responses first makes it a lot easier to search for non-rationalizable strategies.</p></li>
-<li><p>Recall that a non-rationalizable strategy can also be called a non-best response: if none of the payoffs of a strategy are marked to indicate that it is a best-response, it is non-rationalizable.</p></li>
-</ul>
-<p>In other words</p>
-<ul class="incremental">
-<li>Any row in which none of Player 1’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
-<li>Any column in which none of Player 2’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="example-non-rationalizability-from-best-responses" class="level2">
-<h2 class="anchored" data-anchor-id="example-non-rationalizability-from-best-responses">Example: Non-Rationalizability from Best Responses}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Finding best responses first makes it a lot easier to search for non-rationalizable strategies.</li>
-<li>Recall that a non-rationalizable strategy can also be called a non-best response: if none of the payoffs of a strategy are marked to indicate that it is a best-response, it is non-rationalizable. In other words:::: {.incremental}
-<ul class="incremental">
-<li>Any row in which none of Player 1’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
-<li>Any column in which none of Player 2’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
-</ul></li>
-</ul>
-</div>
-<p>:::</p>
-<hr>
-</section>
-<section id="example-non-rationalizability-from-best-responses-1" class="level2">
-<h2 class="anchored" data-anchor-id="example-non-rationalizability-from-best-responses-1">Example: Non-Rationalizability from Best Responses}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>We found these best responses earlier (as well as the NEs of this game): note that in the row for Player 1’s strategy B, none of Player 1’s strategies are marked.</li>
-<li>Likewise, none of Player 2’s payoffs are marked in column c.&nbsp;B and c are non-rationalizable strategies.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="example-non-rationalizability-from-best-responses-2" class="level2">
-<h2 class="anchored" data-anchor-id="example-non-rationalizability-from-best-responses-2">Example: Non-Rationalizability from Best Responses}</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Performing IENBR reveals additional non-rationalizable strategies:
-<ul class="incremental">
-<li>Once we eliminate B, b becomes non-rationalizable.</li>
-<li>Once we eliminate b, C becomes non-rationalizable.</li>
-</ul></li>
-</ul>
-</div>
+<h2 class="anchored" data-anchor-id="another-example-when-elimination-does-nothing">Another Example: When Elimination Does Nothing</h2>
 <hr>
 </section>
 <section id="classifying-nes" class="level2">
-<h2 class="anchored" data-anchor-id="classifying-nes">Classifying NEs}</h2>
+<h2 class="anchored" data-anchor-id="classifying-nes">Classifying NEs</h2>
 <div class="incremental">
 <ul class="incremental">
-<li>Nash Equilibria may be either or .</li>
+<li>Nash Equilibria may be either <em>strict</em> or <em>weak</em>.</li>
 <li>A Nash Equilibrium is strict if and only if each player would receive a smaller payoff by changing their own strategy.</li>
 <li>If a Nash Equilibrium is not strict—meaning that at least one player could change their own strategy and receive an equal (but not larger) payoff—it is weak.</li>
 </ul>
@@ -533,7 +1010,7 @@ window.Quarto = {
 <hr>
 </section>
 <section id="intuition-on-strict-vs.-weak-equilibria" class="level2">
-<h2 class="anchored" data-anchor-id="intuition-on-strict-vs.-weak-equilibria">Intuition on Strict vs.&nbsp;Weak Equilibria}</h2>
+<h2 class="anchored" data-anchor-id="intuition-on-strict-vs.-weak-equilibria">Intuition on Strict vs.&nbsp;Weak Equilibria</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>In any Nash Equilibrium, no player has a reason to change their own strategy—they cannot get a higher payoff this way.</li>
@@ -545,7 +1022,7 @@ window.Quarto = {
 <hr>
 </section>
 <section id="deer-hunt-strict-nash-equilibria" class="level2">
-<h2 class="anchored" data-anchor-id="deer-hunt-strict-nash-equilibria">Deer Hunt: Strict Nash Equilibria}</h2>
+<h2 class="anchored" data-anchor-id="deer-hunt-strict-nash-equilibria">Deer Hunt: Strict Nash Equilibria</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>Here, note that at each Nash Equilibrium, each player has no other strategy providing the same payoff. This is a strict Nash Equilibrium.</li>
@@ -554,7 +1031,7 @@ window.Quarto = {
 <hr>
 </section>
 <section id="not-quite-the-trolley-problem-weak-nash-equilibria" class="level2">
-<h2 class="anchored" data-anchor-id="not-quite-the-trolley-problem-weak-nash-equilibria">Not Quite the Trolley Problem: Weak Nash Equilibria}</h2>
+<h2 class="anchored" data-anchor-id="not-quite-the-trolley-problem-weak-nash-equilibria">Not Quite the Trolley Problem: Weak Nash Equilibria</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>However, in this game, each Nash Equilibrium features at least one player who could still get the same payoff if they change their strategy.</li>
@@ -563,7 +1040,7 @@ window.Quarto = {
 <hr>
 </section>
 <section id="classifying-games-based-on-nes" class="level2">
-<h2 class="anchored" data-anchor-id="classifying-games-based-on-nes">Classifying Games Based on NEs}</h2>
+<h2 class="anchored" data-anchor-id="classifying-games-based-on-nes">Classifying Games Based on NEs</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>Now that we’ve talked about several ways to find a game’s NEs, we can start to talk about classifying games using them.</li>
@@ -572,12 +1049,8 @@ window.Quarto = {
 <hr>
 </section>
 <section id="prisoners-dilemmas" class="level2">
-<h2 class="anchored" data-anchor-id="prisoners-dilemmas">Prisoners’ Dilemmas}</h2>
+<h2 class="anchored" data-anchor-id="prisoners-dilemmas">Prisoners’ Dilemmas</h2>
 <div class="incremental">
-<ul class="incremental">
-<li>So far, I’ve only used the payoffs above to describe the Prisoner’s Dilemma.</li>
-<li>But we can change those payoffs—we can also change the story behind the game, and the names of the players and strategies, and it would still count as a Prisoner’s Dilemma.</li>
-</ul>
 <p>In general, a Prisoner’s Dilemma is any game in which:</p>
 <ul class="incremental">
 <li>The players have the same strategies, A and B.</li>
@@ -587,12 +1060,8 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="other-representations-of-the-prisoners-dilemmas" class="level2">
-<h2 class="anchored" data-anchor-id="other-representations-of-the-prisoners-dilemmas">Other Representations of the Prisoners’ Dilemmas}</h2>
-<hr>
-</section>
 <section id="coordination-games" class="level2">
-<h2 class="anchored" data-anchor-id="coordination-games">Coordination Games}</h2>
+<h2 class="anchored" data-anchor-id="coordination-games">Coordination Games</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>A <span class="hi">coordination game</span> is a game in which the players all have the same strategy sets, and the NEs are all of the strategy profiles where the players choose the same strategy.</li>
@@ -602,11 +1071,15 @@ window.Quarto = {
 <hr>
 </section>
 <section id="other-coordination-games" class="level2">
-<h2 class="anchored" data-anchor-id="other-coordination-games">Other Coordination Games}</h2>
+<h2 class="anchored" data-anchor-id="other-coordination-games">Other Coordination Games</h2>
+<hr>
+</section>
+<section id="other-coordination-games-1" class="level2">
+<h2 class="anchored" data-anchor-id="other-coordination-games-1">Other Coordination Games</h2>
 <hr>
 </section>
 <section id="anti-coordination-games" class="level2">
-<h2 class="anchored" data-anchor-id="anti-coordination-games">Anti-Coordination Games}</h2>
+<h2 class="anchored" data-anchor-id="anti-coordination-games">Anti-Coordination Games</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>An <span class="hi">anti-coordination game</span> is a game in which the players all have the same strategy sets, but the NEs are all of the strategy profiles where the players choose different strategies.</li>
@@ -615,7 +1088,7 @@ window.Quarto = {
 <hr>
 </section>
 <section id="symmetric-games" class="level2">
-<h2 class="anchored" data-anchor-id="symmetric-games">Symmetric Games}</h2>
+<h2 class="anchored" data-anchor-id="symmetric-games">Symmetric Games</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>A <span class="hi">symmetric game</span> is a game which is <strong>indifferent to an exchange of players</strong> in other words, a game where the players are interchangeable.</li>
@@ -629,12 +1102,18 @@ window.Quarto = {
 <li>Of the games we’ve just looked at, the Deer Hunt, the 3x3 coordination game, and Chicken are symmetric games. Bach and Stravinsky is not.</li>
 </ul>
 </div>
-<hr>
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>this is a symmetric game, so Nina and Talia will have equivalent rankings<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -727,7 +1206,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/dyasui\.github\.io\/EC327\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

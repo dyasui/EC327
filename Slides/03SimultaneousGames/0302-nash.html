@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EC327 Game Theory</title>
+<title>nash – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -105,15 +105,15 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
       EC327 Game Theory
       </li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -137,9 +137,9 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Slides</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -158,7 +158,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Slides/03SimultaneousGames/03-html.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/03SimultaneousGames/03-main.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Simultaneous Games</span></a>
   </div>
 </li>
@@ -166,9 +166,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Activities</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -222,79 +222,448 @@ window.Quarto = {
 </ul>
 <hr>
 </section>
-<section id="the-prisoners-dilemma" class="level2">
-<h2 class="anchored" data-anchor-id="the-prisoners-dilemma">The Prisoner’s Dilemma</h2>
-<p>Two criminal conspirators have been arrested and brought to interrogation. The police put them in separate cells and offer each prisoner a choice.</p>
-<p>If both cooperate with the investigation, they will get a lighter sentence of 10 years.</p>
-<p>If either one agrees to testify but not the other, the one who cooperated will go free and the one who didn’t gets a full 20 years.</p>
-<p>If neither cooperates, the prosecutor won’t have enough of a case and the criminals will only serve 1 year each for misdemeanors.</p>
-<hr>
-</section>
-<section id="what-would-you-choose" class="level2">
-<h2 class="anchored" data-anchor-id="what-would-you-choose">What would you choose?</h2>
-<ul>
-<li><p>Remember that you cannot communicate with your fellow prisoner</p></li>
-<li><p>How would you have to be that they won’t sell you out for you to choose to keep quiet?</p></li>
+<section id="nash-equilibrium-2" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-2">Nash Equilibrium</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nash Equilibrium
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A list of strategies where each player’s strategy is the best response to the other’s best response strategy</p>
+</div>
+</div>
+<div class="incremental">
+<ul class="incremental">
+<li>In other words, no player has any incentive to <span class="hii">deviate</span> in their strategy away from an equilibrium strategy</li>
+<li>It is central to the analysis of simultaneous-move games.</li>
+<li>Can occur in <strong>pure strategies</strong> (where players choose a single action) or <strong>mixed strategies</strong> (randomized choices).</li>
 </ul>
+</div>
 <hr>
 </section>
-<section id="nash-equilibrium-in-the-prisoners-dilemma" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-the-prisoners-dilemma">Nash Equilibrium in the Prisoners’ Dilemma</h2>
-<p>Although the outcome where both criminals keep quiet <em>Pareto dominates</em> the outcome where they both testify and serve 10 years, would it be stable?</p>
-<ul>
-<li><p>In the {Quiet, Quiet} strategy profile, either player could deviate to Testify and shorten their prison time.</p></li>
-<li><p>{Testify, Testify} is the only <em>stable</em> strategy profile, where no one could unilaterally deviate to decrease their sentence.</p></li>
-</ul>
-<hr>
-</section>
-<section id="draw-prisoners-dilemma-in-strategic-form" class="level2">
-<h2 class="anchored" data-anchor-id="draw-prisoners-dilemma-in-strategic-form">Draw Prisoners’ Dilemma in Strategic Form:</h2>
-<hr>
-</section>
-<section id="does-this-look-familiar" class="level2">
-<h2 class="anchored" data-anchor-id="does-this-look-familiar">Does this look familiar?</h2>
-<table class="table">
+<section id="nash-equilibrium-in-tbl-basic4x3game" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
+<p>Let’s look at one specific strategy profile in this game:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th></th>
-<th>Split</th>
-<th>Steal</th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Split</td>
-<td><span class="math inline">\((\$6,800, \$6,800)\)</span></td>
-<td><span class="math inline">\((\$0, 13,600)\)</span></td>
+<td>Top</td>
+<td>(3,1)</td>
+<td>(2,3)</td>
+<td>(10,2)</td>
 </tr>
 <tr class="even">
-<td>Steal</td>
-<td><span class="math inline">\((\$13,600, \$0)\)</span></td>
-<td><span class="math inline">\((\$0, \$0)\)</span></td>
+<td>High</td>
+<td>(4,5)</td>
+<td>(3,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td>Low</td>
+<td>(2,2)</td>
+<td><span class="h">(5,4)</span></td>
+<td>(12,3)</td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td>(4,5)</td>
+<td>(9,7)</td>
 </tr>
 </tbody>
 </table>
-<p>Although the numbers are different, the structure is the same.</p>
-<p><em>Split or Steal</em> is a <em>Prisoners’ Dilemma</em></p>
-<hr>
-</section>
-<section id="watch-what-happens" class="level2">
-<h2 class="anchored" data-anchor-id="watch-what-happens">Watch what happens</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/S0qjK3TWZE8?t=141" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>start from 2:20</p>
-<hr>
-</section>
-<section id="discuss" class="level2">
-<h2 class="anchored" data-anchor-id="discuss">Discuss</h2>
+</div><div class="column" style="width:50%;">
+<blockquote class="blockquote">
+<p>Row chooses Low and Column chooses Middle</p>
+</blockquote>
 <ul>
-<li>Did Nick change the structure of the game?</li>
+<li>Is this <em>stable</em>?</li>
 </ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="nash-equilibrium-in-tbl-basic4x3game-1" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game-1">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
+<p>Let’s look at one specific strategy profile in this game:</p>
+<div class="columns">
+<div class="column smaller" style="width:50%;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Left</th>
+<th><span class="hii">Middle</span></th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top</td>
+<td>(3,1)</td>
+<td><span class="hii">(2,3)</span></td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>(4,5)</td>
+<td><span class="hii">(3,0)</span></td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td>Low</td>
+<td>(2,2)</td>
+<td><span class="h">(5,4)</span></td>
+<td>(12,3)</td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td><span class="hii">(4,5)</span></td>
+<td>(9,7)</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<blockquote class="blockquote">
+<p>Row chooses Low and Column chooses Middle</p>
+</blockquote>
+<ul>
+<li>Given that Column plays Middle, is there any way for Row to get a higher payoff?</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="nash-equilibrium-in-tbl-basic4x3game-2" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game-2">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
+<p>Let’s look at one specific strategy profile in this game:</p>
+<div class="columns">
+<div class="column smaller" style="width:50%;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top</td>
+<td>(3,1)</td>
+<td>(2,3)</td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>(4,5)</td>
+<td>(3,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td><span class="hii">Low</span></td>
+<td><span class="hii">(2,2)</span></td>
+<td><span class="h">(5,4)</span></td>
+<td><span class="hii">(12,3)</span></td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td>(4,5)</td>
+<td>(9,7)</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<blockquote class="blockquote">
+<p>Row chooses Low and Column chooses Middle</p>
+</blockquote>
+<ul>
+<li>Given that Row plays Low, is there any way for Column to get a higher payoff?</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="nash-equilibrium-in-tbl-basic4x3game-3" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game-3">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
+<p>What is special about the strategy profile (Low, Middle)?</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>It’s <em>stable</em> because neither player would have any incentive to change what they’re doing</p></li>
+<li><p>In other words, neither player has regrets over their choice given what the other player is doing</p></li>
+<li><p>However, notice that this doesn’t mean that this is the best that the players could do jointly</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="other-strategy-profiles-in-tbl-basic4x3game" class="level2">
+<h2 class="anchored" data-anchor-id="other-strategy-profiles-in-tbl-basic4x3game">Other Strategy Profiles in <strong>?@tbl-basic4x3game</strong></h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top</td>
+<td>(3,1)</td>
+<td>(2,3)</td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>(4,5)</td>
+<td>(3,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td>Low</td>
+<td>(2,2)</td>
+<td>(5,4)</td>
+<td>(12,3)</td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td>(4,5)</td>
+<td><span class="h">(9,7)</span></td>
+</tr>
+</tbody>
+</table>
+<p>What about (Bottom, Right)?</p>
+<hr>
+</section>
+<section id="other-strategy-profiles-in-tbl-basic4x3game-1" class="level2">
+<h2 class="anchored" data-anchor-id="other-strategy-profiles-in-tbl-basic4x3game-1">Other Strategy Profiles in <strong>?@tbl-basic4x3game</strong></h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top</td>
+<td>(3,1)</td>
+<td>(2,3)</td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>(4,5)</td>
+<td>(3,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td>Low</td>
+<td>(2,2)</td>
+<td>(5,4)</td>
+<td><span class="h">(12,3)</span></td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td>(4,5)</td>
+<td><span class="red">(9,7)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Even though (Bottom, Right) is a Pareto improvement on (Low, Middle), it is <em>unstable</em> because it would be rational for Row player to change their strategy to Low to try to get the higher payoff of 12</p>
+<hr>
+</section>
+<section id="other-strategy-profiles-in-tbl-basic4x3game-2" class="level2">
+<h2 class="anchored" data-anchor-id="other-strategy-profiles-in-tbl-basic4x3game-2">Other Strategy Profiles in <strong>?@tbl-basic4x3game</strong></h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top</td>
+<td><span class="h">(3,1)</span></td>
+<td>(2,3)</td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>(4,5)</td>
+<td>(3,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td>Low</td>
+<td>(2,2)</td>
+<td>(5,4)</td>
+<td>(12,3)</td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td>(4,5)</td>
+<td>(9,7)</td>
+</tr>
+</tbody>
+</table>
+<p>What about (Top, Left)?</p>
+<hr>
+</section>
+<section id="tbl-basic4x3game-with-a-tie-in-payoffs" class="level2">
+<h2 class="anchored" data-anchor-id="tbl-basic4x3game-with-a-tie-in-payoffs"><strong>?@tbl-basic4x3game</strong> with a tie in payoffs</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top</td>
+<td>(3,1)</td>
+<td>(2,3)</td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>(4,5)</td>
+<td>(3,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td>Low</td>
+<td>(2,2)</td>
+<td>(<strong>5</strong>,4)</td>
+<td>(12,3)</td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td>(<strong>5</strong>,5)</td>
+<td>(9,7)</td>
+</tr>
+</tbody>
+</table>
+<p>A Nash equilibrium doesn’t require the equilibrium strategies to be <em>strict</em> improvements.</p>
+<ul>
+<li>(Low, Middle) is still a NE because the payoff of 5 to Row player is <em>weakly</em> (<span class="math inline">\(\geq\)</span>) higher than the payoff of Bottom</li>
+</ul>
+<hr>
+</section>
+<section id="nash-equilibrium-as-a-system-of-beliefs" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-as-a-system-of-beliefs">Nash Equilibrium as a System of Beliefs</h2>
+<p>So a Nash Equilibrium requires players <em>best responding</em> to each other.</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>But if a game is <em>simultaneous</em>, then players can’t observe what the other does</p></li>
+<li><p>So how can someone respond to something that hasn’t happened yet?</p></li>
+</ul>
+</div>
+</section>
+<section id="nash-equilibrium-as-a-system-of-beliefs-1" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-as-a-system-of-beliefs-1">Nash Equilibrium as a System of Beliefs</h2>
+<p>How to make sense of best-responses in simultaneous games:</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Players might base their beliefs of the other players’ strategies on <em>experience</em> from playing similar games before</p></li>
+<li><p>You might also <em>put yourself into your opponents’ shoes</em> to think about what they might do</p></li>
+<li><p>You should also expect that <em>they are thinking about what you’re thinking</em></p>
+<ul class="incremental">
+<li>and also that <em>you would be thinking about what they are thinking</em> about what you are thinking</li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="the-battle-of-wits" class="level2">
+<h2 class="anchored" data-anchor-id="the-battle-of-wits">The Battle of Wits</h2>
+<p>Let’s see an example of this logic in action:</p>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/pRJ8CrTSSR0" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<hr>
+</section>
+<section id="nash-equilibrium-as-a-system-of-beliefs-2" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-as-a-system-of-beliefs-2">Nash Equilibrium as a System of Beliefs</h2>
+<ul>
+<li>Nash equilibrium assumes:
+<ol type="1">
+<li>Players form <span class="hi">beliefs</span> about the strategies of others.</li>
+<li>These beliefs must be <strong>correct</strong>.</li>
+<li>Each player then chooses their <strong>best response</strong> based on these beliefs.</li>
+</ol></li>
+</ul>
+<hr>
+</section>
+<section id="strategic-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="strategic-uncertainty">Strategic Uncertainty</h2>
+<ul>
+<li>Players are uncertain about others’ choices but form subjective <strong>beliefs</strong> about them.</li>
+<li>These beliefs are central to decision-making in Nash equilibrium.</li>
+<li>The equilibrium is found when every player’s belief about others’ actions is correct, and their response to these beliefs is optimal.</li>
+</ul>
+<hr>
+</section>
+<section id="an-equivalent-definition-of-ne" class="level2">
+<h2 class="anchored" data-anchor-id="an-equivalent-definition-of-ne">An Equivalent Definition of NE <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nash Equilibrium
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A set of strategies, one for each player, such that:</p>
+<ol type="1">
+<li><p>each player has correct beliefs about the strategies of the others and</p></li>
+<li><p>the strategy of each is the best for herself, given her beliefs about the strategies of the others.</p></li>
+</ol>
+</div>
+</div>
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Dixit, pg. 98<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -330,18 +699,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -373,7 +731,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/dyasui\.github\.io\/EC327\/");
@@ -381,7 +761,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

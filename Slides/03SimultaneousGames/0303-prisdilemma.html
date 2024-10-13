@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>survivorflags – EC327 Game Theory</title>
+<title>prisdilemma – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -79,7 +108,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../activities/01GuessTwoThirds/GuessTwoThirds.html">Activities</a></li><li class="breadcrumb-item"><a href="../../activities/02SurvivorFlags/SurvivorFlags.html">Survivor Flags</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      EC327 Game Theory
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -150,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Survivor Flags</span></a>
   </div>
 </li>
@@ -168,94 +199,297 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="activity-2-survivor-21-flags-challenge" class="level2">
-<h2 class="anchored" data-anchor-id="activity-2-survivor-21-flags-challenge">Activity 2: Survivor 21 Flags Challenge</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/aonCsvi0LKc" width="800" height="600" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>https://youtu.be/aonCsvi0LKc</p>
-<hr>
+<section id="prisoners-dilemma" class="level1">
+<h1>Prisoners’ Dilemma</h1>
+<section id="prisoners-dilemma-1" class="level2">
+<h2 class="anchored" data-anchor-id="prisoners-dilemma-1">Prisoners’ Dilemma</h2>
+<p>To see the concept of Nash Equilibrium in action, we will start with the most famous example.</p>
 </section>
-<section id="split-into-groups" class="level2">
-<h2 class="anchored" data-anchor-id="split-into-groups">Split Into Groups</h2>
-<hr>
-</section>
-<section id="set-up" class="level2">
-<h2 class="anchored" data-anchor-id="set-up">Set Up</h2>
+<section id="prisoners-dilemma-2" class="level2">
+<h2 class="anchored" data-anchor-id="prisoners-dilemma-2">Prisoners’ Dilemma <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<p>There are two criminals, who I like to call Guido and Luca.</p>
 <div class="incremental">
 <ul class="incremental">
-<li><p>Find an opposing group</p></li>
-<li><p>Pick someone to record flags for each round</p></li>
-<li><p>Draw 21 flags on whiteboard</p></li>
-<li><p>Discuss strategy w/ your group for 1 minute</p></li>
-<li><p>Play the game!</p>
-<ul class="incremental">
-<li>Don’t forget to record how many flags each round!!!</li>
-</ul></li>
+<li>Guido and Luca have each committed murder, but the police have no way of proving it.</li>
+<li>However, the police can prove that they have lied on their taxes, which is a much lesser offense.</li>
+<li>The police get Guido and Luca into separate rooms so that they can’t talk, and offer them a choice: Testify against the other, or stay Quiet.</li>
+<li>If they Testify, they will receive lenient sentencing, and the police will be able to convict the other criminal.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="record-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="record-your-data">Record your Data!</h2>
-<p><a href="https://docs.google.com/spreadsheets/d/13rOHLWJa--0BuvfI83pGdGWFFANsx1gNkx3TJl3A8ek/edit?usp=sharing">Google Sheet</a></p>
+<section id="prisoners-dilemma-3" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="prisoners-dilemma-3">Prisoner’s Dilemma</h2>
+<p>There are four different possibilities of what could happen:</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Both <em>Keep Quiet</em>: Police can only convict them of tax fraud, so Guido and Luca only serve 1 year in prison each</li>
+<li>Guido <em>Testifies</em>, but Luca <em>Keeps Quiet</em>: Guido gets 0 prison time for cooperating, Guido gets hit with a full 20 year sentence</li>
+<li>Luca <em>Testifies</em>, but Guido <em>Keeps Quiet</em>: Luca gets 0 prison time, Luca gets hit with a full 20 year sentence</li>
+<li>Both <em>Testify</em>: Both get convicted of murder, but get their prison sentences reduced to 10 years each because they cooperated</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="prisoners-dilemma-in-strategic-form" class="level2">
+<h2 class="anchored" data-anchor-id="prisoners-dilemma-in-strategic-form">Prisoner’s Dilemma in Strategic Form</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Guido, Luca</th>
+<th>Testify</th>
+<th>Keep Quiet</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Testify</strong></td>
+<td>-10, -10</td>
+<td>0, -20</td>
+</tr>
+<tr class="even">
+<td><strong>Keep Quiet</strong></td>
+<td>-20, 0</td>
+<td>-1, -1</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="what-would-you-choose" class="level2">
+<h2 class="anchored" data-anchor-id="what-would-you-choose">What would you choose?</h2>
 <ul>
-<li><p>Check the first sheet for an example of how to record your data</p></li>
-<li><p>Find a free sheet at the bottom of the page</p></li>
-<li><p>Ask me if something doesn’t make sense!</p></li>
+<li><p>Remember that you cannot communicate with your fellow prisoner</p></li>
+<li><p>How would you have to be that they won’t sell you out for you to choose to keep quiet?</p></li>
 </ul>
 <hr>
 </section>
-<section id="modified-rules-choose-number-of-flags-to-start" class="level2">
-<h2 class="anchored" data-anchor-id="modified-rules-choose-number-of-flags-to-start">Modified Rules: choose number of flags to start</h2>
-<p>Find a new team to play against (losers move)</p>
+<section id="prisoners-dilemma-4" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="prisoners-dilemma-4">Prisoners’ Dilemma</h2>
 <div class="incremental">
+<p>Let’s think through this from Guido’s perspective.</p>
 <ul class="incremental">
-<li><p>This time, one team will choose the number of starting flags: between 15-25</p></li>
-<li><p>The other team will choose whether to allow max. of 2-5 flags per round</p></li>
-<li><p>Play and record!</p></li>
+<li><p>Imagine that Luca keeps Quiet. This gives Guido a choice of two options: he can also keep Quiet, and get a short prison sentence, or he can Testify and get released. Obviously, Guido prefers to Testify.</p></li>
+<li><p>Now imagine that Luca Testifies. This again gives Guido a choice of two options: he can also keep Quiet, and get a long prison sentence, or he can Testify and get a medium sentence. Obviously, Guido still prefers to Testify.</p></li>
+<li><p>In other words, Guido prefers to Testify, no matter what Luca does.</p></li>
+<li><p>If we go through this logic from Luca’s perspective, we find that Luca also always prefers to Testify.</p></li>
 </ul>
 </div>
+<hr>
+</section>
+<section id="nash-equilibrium-in-the-prisoners-dilemma" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-in-the-prisoners-dilemma">Nash Equilibrium in the Prisoners’ Dilemma</h2>
+<p>Although the outcome where both criminals keep quiet <em>Pareto dominates</em> the outcome where they both testify and serve 10 years, would it be stable?</p>
+<ul>
+<li><p>In the {Quiet, Quiet} strategy profile, either player could deviate to Testify and shorten their prison time.</p></li>
+<li><p>{Testify, Testify} is the only <em>stable</em> strategy profile, where no one could unilaterally deviate to decrease their sentence.</p></li>
+</ul>
+<hr>
+</section>
+<section id="paradox-of-the-prisoners-dilemma" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="paradox-of-the-prisoners-dilemma">Paradox of the Prisoner’s Dilemma</h2>
+<ul>
+<li>So, if Guido and Luca each act in their own self-interest, they will wind up each getting a medium prison sentence.</li>
+<li>This is despite the fact that, if they both kept Quiet, they could each get a short prison sentence instead.</li>
+</ul>
+<hr>
+</section>
+<section id="does-this-look-familiar" class="level2">
+<h2 class="anchored" data-anchor-id="does-this-look-familiar">Does this look familiar?</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Split</th>
+<th>Steal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Split</td>
+<td><span class="math inline">\((\$6,800, \$6,800)\)</span></td>
+<td><span class="math inline">\((\$0, 13,600)\)</span></td>
+</tr>
+<tr class="even">
+<td>Steal</td>
+<td><span class="math inline">\((\$13,600, \$0)\)</span></td>
+<td><span class="math inline">\((\$0, \$0)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Although the numbers are different, the structure is the same.</p>
+<p><em>Split or Steal</em> is a <em>Prisoners’ Dilemma</em></p>
+<hr>
+</section>
+<section id="watch-what-happens" class="level2">
+<h2 class="anchored" data-anchor-id="watch-what-happens">Watch what happens</h2>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/S0qjK3TWZE8?t=141" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>start from 2:20</p>
 <hr>
 </section>
 <section id="discuss" class="level2">
 <h2 class="anchored" data-anchor-id="discuss">Discuss</h2>
-<p>In your teams briefly discuss the following:</p>
 <ul>
-<li><p>Is there a correct way to play the game?</p></li>
-<li><p>How did you find out the best way to play the game?</p></li>
-<li><p>Is the game solved meaning that the winner can be correctly predicted from any point in the game? If so, should the first or second team always win?</p></li>
-<li><p>Were there more errors in the first games played than the last games played? Why?</p></li>
-<li><p>How was this game different from the guessing 2/3rds game?</p></li>
+<li>Did Nick change the structure of the game?</li>
 </ul>
 <hr>
 </section>
-<section id="solution" class="level2">
-<h2 class="anchored" data-anchor-id="solution">Solution:</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/K_MckZc8VvQ" width="1000" height="600" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>https://youtu.be/K_MckZc8VvQ</p>
+<section id="prisoners-dilemma-5" class="level2">
+<h2 class="anchored" data-anchor-id="prisoners-dilemma-5">Prisoner’s Dilemma</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Guido, Luca</th>
+<th>Testify</th>
+<th>Keep Quiet</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Testify</strong></td>
+<td>-10,-10</td>
+<td>0,-20</td>
+</tr>
+<tr class="even">
+<td><strong>Keep Quiet</strong></td>
+<td>-20,0</td>
+<td>-1,-1</td>
+</tr>
+<tr class="odd">
+<td><strong>False Confession</strong></td>
+<td>-20, 0</td>
+<td>-20, -1</td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<ul class="incremental">
+<li><p>What if we change the Prisoner’s Dilemma like this? What would you pick if you were Guido?</p>
+<ol class="incremental" type="1">
+<li>Testify</li>
+<li>Keep Quiet</li>
+<li>False Confession</li>
+</ol></li>
+</ul>
+</div>
 <hr>
 </section>
-<section id="group-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="group-exercise">Group Exercise:</h2>
-<p>Consider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.</p>
-<ol type="1">
-<li><p><em>Draw the extensive form game tree complete with all payoff for both teams.</em></p></li>
-<li><p><em>How many total strategies are there for team 1?</em></p></li>
-<li><p><em>Use pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?</em></p></li>
+<section id="prisoners-dilemma-6" class="level2">
+<h2 class="anchored" data-anchor-id="prisoners-dilemma-6">Prisoner’s Dilemma</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Guido, Luca</th>
+<th>Testify</th>
+<th>Keep Quiet</th>
+<th>False Confession</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Testify</strong></td>
+<td>-10, -10</td>
+<td>0, -20</td>
+<td>0, -20</td>
+</tr>
+<tr class="even">
+<td><strong>Keep Quiet</strong></td>
+<td>-20, 0</td>
+<td>-1, -1</td>
+<td>-1, -20</td>
+</tr>
+<tr class="odd">
+<td><strong>False Confession</strong></td>
+<td>-20, 0</td>
+<td>-20, -1</td>
+<td>-10, -10</td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<ul class="incremental">
+<li><p>What about this third variation? What would you pick if you were Guido?</p>
+<ol class="incremental" type="1">
+<li>Testify</li>
+<li>Keep Quiet</li>
+<li>False Confession</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="rock-paper-scissors" class="level2">
+<h2 class="anchored" data-anchor-id="rock-paper-scissors">Rock Paper Scissors</h2>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/b0SoKWLkmLU" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>One last question, and this one isn’t based on a Prisoner’s Dilemma…</p>
+<hr>
+</section>
+<section id="rock-paper-scissors-1" class="level2">
+<h2 class="anchored" data-anchor-id="rock-paper-scissors-1">Rock Paper Scissors</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Lisa, Bart</th>
+<th>R</th>
+<th>P</th>
+<th>S</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>R</strong></td>
+<td>0, 0</td>
+<td>-1, 1</td>
+<td>1, -1</td>
+</tr>
+<tr class="even">
+<td><strong>P</strong></td>
+<td>1, -1</td>
+<td>0, 0</td>
+<td>-1, 1</td>
+</tr>
+<tr class="odd">
+<td><strong>S</strong></td>
+<td>-1, 1</td>
+<td>1, -1</td>
+<td>0,0</td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<ul class="incremental">
+<li><p>This game models a game of Rock-Paper-Scissors. If you are Lisa, which strategy will you choose?</p>
+<ol class="incremental" type="1">
+<li>R(ock)</li>
+<li>P(aper)</li>
+<li>S(cissors)</li>
+</ol></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="obviously-wrong-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="obviously-wrong-strategies">Obviously-Wrong Strategies</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>The first three of those games contained strategies that were <strong>obviously bad choices</strong>.</p></li>
+<li><p>Rock-Paper-Scissors did not.</p></li>
+<li><p>One of the simplest things you can do with a strategic-form game is to start by finding and eliminating (ruling out) the strategies which are obviously bad.</p></li>
+<li><p>In some games, this can even be enough to identify the Nash Equilibrium!</p></li>
+</ul>
+</div>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>as defined by Zachary Kiefer<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-<hr>
-</section>
-<section id="recap" class="level2">
-<h2 class="anchored" data-anchor-id="recap">Recap</h2>
-<ul>
-<li><p>There <em>is</em> a correct way to play: we will later call the <em>Nash equilibrium</em></p></li>
-<li><p>You likely used some form of <em>backwards induction</em> or <em>rollback</em> reasoning</p></li>
-<li><p>This game was <em>sequential</em> unlike the <em>simultaneous</em> 2/3rds game</p></li>
-</ul>
-
-
-</section>
-
-</main> <!-- /main -->
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

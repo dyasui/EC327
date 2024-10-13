@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>survivorflags – EC327 Game Theory</title>
+<title>terminology – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,7 +79,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../activities/01GuessTwoThirds/GuessTwoThirds.html">Activities</a></li><li class="breadcrumb-item"><a href="../../activities/02SurvivorFlags/SurvivorFlags.html">Survivor Flags</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      EC327 Game Theory
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -150,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Survivor Flags</span></a>
   </div>
 </li>
@@ -168,91 +170,245 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="activity-2-survivor-21-flags-challenge" class="level2">
-<h2 class="anchored" data-anchor-id="activity-2-survivor-21-flags-challenge">Activity 2: Survivor 21 Flags Challenge</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/aonCsvi0LKc" width="800" height="600" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>https://youtu.be/aonCsvi0LKc</p>
-<hr>
-</section>
-<section id="split-into-groups" class="level2">
-<h2 class="anchored" data-anchor-id="split-into-groups">Split Into Groups</h2>
-<hr>
-</section>
-<section id="set-up" class="level2">
-<h2 class="anchored" data-anchor-id="set-up">Set Up</h2>
+<section id="simultaneous-move-games" class="level1">
+<h1>Simultaneous-Move Games</h1>
+<section id="what-are-simultaneous-move-games" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-simultaneous-move-games">What are Simultaneous-Move Games?</h2>
 <div class="incremental">
 <ul class="incremental">
-<li><p>Find an opposing group</p></li>
-<li><p>Pick someone to record flags for each round</p></li>
-<li><p>Draw 21 flags on whiteboard</p></li>
-<li><p>Discuss strategy w/ your group for 1 minute</p></li>
-<li><p>Play the game!</p>
+<li>Recall from <strong>Chapter 2</strong>: Simultaneous games occur when players must move without knowing their rivals’ choices.</li>
+<li>This includes cases where decisions are made at different times but without knowledge of others’ decisions.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="real-world-examples" class="level2">
+<h2 class="anchored" data-anchor-id="real-world-examples">Real-World Examples</h2>
+<div class="incremental">
 <ul class="incremental">
-<li>Don’t forget to record how many flags each round!!!</li>
+<li><strong>Soccer penalty kick</strong>: Striker and goalie must choose directions simultaneously, leading to strategic guessing.</li>
+<li><strong>Television manufacturers</strong>: Decide on features and pricing without knowing competitors’ decisions.</li>
+<li><strong>Voting</strong>: Voters cast ballots without knowing others’ choices.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="simultaneous-vs-sequential-games" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="simultaneous-vs-sequential-games">Simultaneous vs Sequential Games</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="incremental">
+<p><span class="hi">Simultaneous games</span></p>
+<ul class="incremental">
+<li>neither know the other player’s actions when they act</li>
+<li><strong>graphical representation:</strong> <span class="h">game matrix</span> (aka <em>game table</em>, <em>payoff table</em>)</li>
+<li><strong>solution method:</strong> <span class="h">best response</span>, <span class="h">elimination of dominated strategies</span></li>
+<li><strong>equlibrium concept:</strong> <span class="h">nash equilibrium</span></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="incremental">
+<p><span class="hi">Sequential games</span></p>
+<ul class="incremental">
+<li>prior actions are <em>observable</em> to later players</li>
+<li><strong>graphical representation:</strong> <span class="h">game tree</span></li>
+<li><strong>solution method:</strong> <span class="h">backwards induction</span> (aka <em>rollback</em>)</li>
+<li><strong>equlibrium concept:</strong> <span class="h">subgame perfect nash equilibrium</span> (aka <em>SPNE</em>, <em>rollback equilibrium</em>)</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-strategic-form" class="level2">
+<h2 class="anchored" data-anchor-id="the-strategic-form">The Strategic Form</h2>
+<p>A <span class="h">Strategic Form</span> game is defined by:</p>
+<ul>
+<li><p>A <span class="hi">set of players</span> who have decisions</p></li>
+<li><p>A <span class="hi">strategy set</span> for each player which is the collection of strategies they choose from</p></li>
+<li><p>A <span class="hi">payoff function</span> which tells us how the player evaluates a <em>strategy profile</em>.</p></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A <span class="hi">strategy profile</span> is a combination of strategies made by all players.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="depicting-simultaneous-games" class="level2">
+<h2 class="anchored" data-anchor-id="depicting-simultaneous-games">Depicting Simultaneous Games</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Simultaneous-move games are often depicted using <strong>payoff matrices</strong> or <strong>game tables</strong>.</li>
+</ul>
+<div id="tbl-basic4x3game" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-basic4x3game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: An example of a <em>strategic form</em> game
+</figcaption>
+<div aria-describedby="tbl-basic4x3game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Row, Column</th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Top</strong></td>
+<td>(3,1)</td>
+<td>(2,3)</td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td><strong>High</strong></td>
+<td>(4,5)</td>
+<td>(3,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td><strong>Low</strong></td>
+<td>(2,2)</td>
+<td>(5,4)</td>
+<td>(12,3)</td>
+</tr>
+<tr class="even">
+<td><strong>Bottom</strong></td>
+<td>(5,6)</td>
+<td>(4,5)</td>
+<td>(9,7)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<ul class="incremental">
+<li>Row chooses a strategy, and Column does as well, simultaneously.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="strategy-sets-in-tbl-basic4x3game" class="level2">
+<h2 class="anchored" data-anchor-id="strategy-sets-in-tbl-basic4x3game">Strategy Sets in <a href="#tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
+<p>In this game, each players’ complete <em>strategy</em> only contains one <em>action</em> each</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p><strong>Player 1</strong>:</p>
+<ul class="incremental">
+<li>(Top), (High), (Low), or (Bottom)</li>
 </ul></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="record-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="record-your-data">Record your Data!</h2>
-<p><a href="https://docs.google.com/spreadsheets/d/13rOHLWJa--0BuvfI83pGdGWFFANsx1gNkx3TJl3A8ek/edit?usp=sharing">Google Sheet</a></p>
-<ul>
-<li><p>Check the first sheet for an example of how to record your data</p></li>
-<li><p>Find a free sheet at the bottom of the page</p></li>
-<li><p>Ask me if something doesn’t make sense!</p></li>
-</ul>
-<hr>
-</section>
-<section id="modified-rules-choose-number-of-flags-to-start" class="level2">
-<h2 class="anchored" data-anchor-id="modified-rules-choose-number-of-flags-to-start">Modified Rules: choose number of flags to start</h2>
-<p>Find a new team to play against (losers move)</p>
+<section id="strategy-sets-in-tbl-basic4x3game-1" class="level2">
+<h2 class="anchored" data-anchor-id="strategy-sets-in-tbl-basic4x3game-1">Strategy Sets in <a href="#tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
+<p>In this game, each players’ complete <em>strategy</em> only contains one <em>action</em> each</p>
 <div class="incremental">
 <ul class="incremental">
-<li><p>This time, one team will choose the number of starting flags: between 15-25</p></li>
-<li><p>The other team will choose whether to allow max. of 2-5 flags per round</p></li>
-<li><p>Play and record!</p></li>
+<li><p><strong>Player 2</strong>:</p>
+<ul class="incremental">
+<li>(Left), (Middle), (Right)</li>
+</ul></li>
+<li><p>For now, we assume that these players can only choose one strategy at a time</p>
+<ul class="incremental">
+<li><p>I.e., not (Left, Right), (High, Low, Bottom), etc</p></li>
+<li><p>In Chapter 7, we will relax this assumption by allowing for random <em>mixing of strategies</em></p></li>
+</ul></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="discuss" class="level2">
-<h2 class="anchored" data-anchor-id="discuss">Discuss</h2>
-<p>In your teams briefly discuss the following:</p>
+<section id="strategy-profiles-in-tbl-basic4x3game" class="level2">
+<h2 class="anchored" data-anchor-id="strategy-profiles-in-tbl-basic4x3game">Strategy Profiles in <a href="#tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
+<p>There are twelve different <em>strategy profiles</em> possible in this game:</p>
 <ul>
-<li><p>Is there a correct way to play the game?</p></li>
-<li><p>How did you find out the best way to play the game?</p></li>
-<li><p>Is the game solved meaning that the winner can be correctly predicted from any point in the game? If so, should the first or second team always win?</p></li>
-<li><p>Were there more errors in the first games played than the last games played? Why?</p></li>
-<li><p>How was this game different from the guessing 2/3rds game?</p></li>
+<li>{T,L}, {T,M}, {T,R}, {H,L}, {H,M}, {H,R}, {L,L}, {L,M}, {L,R}, {B,L}, {B,M}, {B,R}</li>
 </ul>
+<p>each of which was represented by a cell in our game table.</p>
 <hr>
 </section>
-<section id="solution" class="level2">
-<h2 class="anchored" data-anchor-id="solution">Solution:</h2>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/K_MckZc8VvQ" width="1000" height="600" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>https://youtu.be/K_MckZc8VvQ</p>
-<hr>
-</section>
-<section id="group-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="group-exercise">Group Exercise:</h2>
-<p>Consider the Flag game but instead of starting with 21 flags the game starts with 5 flags, and instead of being able to pick 1,2, or 3 flags teams can only pick 1 or 2 flags.</p>
-<ol type="1">
-<li><p><em>Draw the extensive form game tree complete with all payoff for both teams.</em></p></li>
-<li><p><em>How many total strategies are there for team 1?</em></p></li>
-<li><p><em>Use pruning to eliminate actions to get to a rollback equilibrium. Who will win? What is the winning strategy?</em></p></li>
-</ol>
-<hr>
-</section>
-<section id="recap" class="level2">
-<h2 class="anchored" data-anchor-id="recap">Recap</h2>
-<ul>
-<li><p>There <em>is</em> a correct way to play: we will later call the <em>Nash equilibrium</em></p></li>
-<li><p>You likely used some form of <em>backwards induction</em> or <em>rollback</em> reasoning</p></li>
-<li><p>This game was <em>sequential</em> unlike the <em>simultaneous</em> 2/3rds game</p></li>
+<section id="payoffs-in-table-tbl-basic4x3game" class="level2">
+<h2 class="anchored" data-anchor-id="payoffs-in-table-tbl-basic4x3game">Payoffs in Table <a href="#tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
+<p>Notice how each cell has two numbers for the payoffs.</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>For example, the first cell for the strategy profile <strong>{ Top, Left }</strong>:</p>
+<ul class="incremental">
+<li><code>(3,1)</code> means that the <em>row</em> player has a payoff of 3, the <em>column</em> player gets a payoff of 1</li>
+</ul></li>
 </ul>
+</div>
+<hr>
+</section>
+<section id="big-10-game" class="level2">
+<h2 class="anchored" data-anchor-id="big-10-game">Big 10 Game</h2>
+<div id="tbl-footballplay" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-footballplay-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Big 10 Game
+</figcaption>
+<div aria-describedby="tbl-footballplay-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Ducks , Buckeyes</strong></th>
+<th>Run</th>
+<th>Pass</th>
+<th>Blitz</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Run</strong></td>
+<td>2, –2</td>
+<td>5, –5</td>
+<td>13, –13</td>
+</tr>
+<tr class="even">
+<td><strong>Short Pass</strong></td>
+<td>6, –6</td>
+<td>5.6, –5.6</td>
+<td>10.5, –10.5</td>
+</tr>
+<tr class="odd">
+<td><strong>Medium Pass</strong></td>
+<td>6, –6</td>
+<td>4.5, –4.5</td>
+<td>1, –1</td>
+</tr>
+<tr class="even">
+<td><strong>Long Pass</strong></td>
+<td>10, –10</td>
+<td>3, –3</td>
+<td>–2, 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="incremental">
+<p>Notice that in this game, the payoffs in every cell add up to one</p>
+<ul class="incremental">
+<li>This is what we mean by a <span class="hi">zero-sum</span> game</li>
+</ul>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
