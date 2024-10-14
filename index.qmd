@@ -35,6 +35,10 @@ subtitle: "Economics Course at the University of Oregon"
 
 [Activity 2 - Survivor Flags](https://dyasui.github.io/EC327/activities/02SurvivorFlags/SurvivorFlags.html)
 
+[Activity 3 - Pirate Treasure](/activities/03PirateTreasure/PirateTreasure.qmd)
+
+[Activity 4 - Blotto Election](/activities/04BlottoElection/BlottoElection.qmd)
+
 ## Assignments 
 
 <a href="Homework/assignment1/main.pdf" target="_blank">Homework 1</a>

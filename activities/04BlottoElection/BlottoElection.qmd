@@ -1,0 +1,87 @@
+# Class Activity: Blotto 
+
+## - Presidential Campaign in Battleground States
+
+**Objective:**  
+
+In this activity, you will take on the role of campaign managers for two
+presidential candidates in the fictional country of Blotto. Your goal is to
+allocate political resources (ads and canvassers) across three battleground
+states—Montera, Caldeira, and Pacifica—in a way that maximizes your candidate's
+chances of winning the election.
+
+### The Battleground States:
+
+1. **Montera**: The smallest state, meaning it will always receive the least or
+   equal amount of resources.
+
+2. **Caldeira**: The second largest state, requiring more resources than
+   Montera but fewer than Pacifica.
+
+3. **Pacifica**: The largest state, which will need the most resources to sway
+   voters.
+
+### Game Setup: Each player represents a candidate. Your goal is to allocate a
+fixed number of political resources across the three states.
+
+  - **Initial Round**: Each player must write down three integers in descending
+    order (representing the number of resources spent on Montera, Caldeira, and
+    Pacifica). These integers must sum up to 6. 
+
+  - **Reveal**: After writing down your numbers, you and your opponent reveal
+    them to each other. 
+
+  - **Win Condition**: You compare your numbers to your opponent's for each
+    state: If your candidate has a higher number of resources than the other
+    player in two or more states, your candidate wins the election. If the
+    numbers are tied in a state, that state is considered a "draw," and you
+    only compare the other two.
+
+### Steps for Each Round:
+
+1. **Allocate Resources**: Write three integers that represent how many
+   resources you will allocate to Montera, Caldeira, and Pacifica. These
+   numbers must always follow the rule:
+
+   - Montera gets the smallest or an equal amount to the other states. Caldeira
+     receives more than or equal to Montera but less than or equal to Pacifica.
+     Pacifica must get the most or equal to Caldeira.
+
+2. **Reveal**: Once both players have written their numbers, reveal your
+   allocations.
+
+3. **Compare and Record**: Determine the winner by comparing your numbers.
+   Record which player won the majority of states (i.e., who had the higher
+   number of resources in at least two out of three states).
+
+### Rounds:
+
+  * **Round 1**: Each player allocates 6 total resources.
+
+  * **Round 2**: Each player allocates 12 total resources. 
+
+  * **Round 3**: Choose how many total resources you will allocate
+    (open-ended). 
+
+  * **Round 4**: Choose how many total resources and and how many battleground
+    states (you don't have to adhere to the population ranking).
+
+### Reflection: 
+
+After completing all rounds, reflect on how changing the number of total
+resources affected your strategy. Were there certain patterns in how you
+allocated resources that were more effective? Did your strategy change as the
+resource pool increased or decreased?
+
+### Recording Results: 
+
+For each round, record the following:
+
+  * The three numbers you allocated. The three numbers your opponent allocated.
+    The winner of each round (based on the majority of states won).
+  
+This activity simulates strategic decision-making in real-world campaigns,
+where candidates must allocate limited resources effectively to win crucial
+battlegrounds!
+
+**Good luck, candidates!**
