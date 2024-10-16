@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>elimination – EC327 Game Theory</title>
+<title>EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -105,15 +105,15 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
       EC327 Game Theory
       </li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -137,9 +137,9 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Slides</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -166,9 +166,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Activities</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -206,8 +206,13 @@ window.Quarto = {
 <div class="incremental">
 <ul class="incremental">
 <li>A <strong>dominant strategy</strong> is one that performs best no matter what others do.</li>
-<li>Strategies can be eliminated if they are dominated by others.</li>
-<li><strong>Elimination of dominated strategies</strong> can simplify finding equilibria.</li>
+<li>A strategy is <span class="hi">dominat<strong>ed</strong></span> if there is another strategy which is better no matter what the other player does.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Elimination of dominated strategies</strong> can simplify finding equilibria by removing strategies</p>
+</blockquote>
+<ul class="incremental">
+<li><strong>Dominated</strong> strategies will never by played by a rational agent</li>
 </ul>
 </div>
 <hr>
@@ -216,9 +221,12 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="the-problem-of-finding-nash-equilibria">The Problem of Finding Nash Equilibria</h2>
 <div class="incremental">
 <ul class="incremental">
-<li><p>When we first discussed Nash Equilibria (which I’m going to start abbreviating as NEs), we found them by checking all of the strategy profiles in the game to see which of them were stable.</p></li>
-<li><p>This is not a problem in a 2x2 game like we’ve been working with—but it gets much more time-consuming in games with more players and more strategies per player, not to mention the more complicated games we’ll look at later in the term.</p></li>
-<li><p>We can make it easier to find NEs with a few useful shortcuts—such as eliminating entire strategies (not just strategy profiles) that can’t possibly be part of a NE.</p></li>
+<li><p>When we first discussed NE, we found them by checking all of the strategy profiles in the game to see which of them were stable.</p></li>
+<li><p>This is easy for a 2x2 game or even a 3x3 game like we’ve seen</p>
+<ul class="incremental">
+<li>but it gets much more time-consuming in games with more players and more strategies per player</li>
+</ul></li>
+<li><p>We can make it easier to find NEs with a few useful shortcuts</p></li>
 </ul>
 </div>
 <hr>
@@ -227,7 +235,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="strict-dominance">Strict Dominance</h2>
 <div class="incremental">
 <ul class="incremental">
-<li><p>A strategy is said to be strictly dominated if there is some other strategy, in the same player’s strategy set, which provides that player a higher payoff, no matter what strategies the other players pick.</p>
+<li><p>A strategy is said to be <span class="hi">strictly dominated</span> if there is some other strategy, in the same player’s strategy set, which provides that player a higher payoff, no matter what strategies the other players pick.</p>
 <ul class="incremental">
 <li>Another way to phrase it is that a strategy is strictly dominated if some other strategy is a better alternative for the player, no matter what other players do.</li>
 </ul></li>
@@ -237,7 +245,7 @@ window.Quarto = {
 </section>
 <section id="strict-dominance-1" class="level2">
 <h2 class="anchored" data-anchor-id="strict-dominance-1">Strict Dominance</h2>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>Guido, Luca</th>
@@ -268,7 +276,7 @@ window.Quarto = {
 </section>
 <section id="strict-dominance-2" class="level2">
 <h2 class="anchored" data-anchor-id="strict-dominance-2">Strict Dominance</h2>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>Guido, Luca</th>
@@ -300,7 +308,7 @@ window.Quarto = {
 <section id="one-player-has-a-dominant-strategy" class="level2">
 <h2 class="anchored" data-anchor-id="one-player-has-a-dominant-strategy">One Player has a Dominant Strategy</h2>
 <p>In the Prisoners’ Dilemma, both players have each have one dominant strategy, which made finding the NE easy.</p>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>CONGRESS, FEDERAL RESERVE</th>
@@ -328,7 +336,7 @@ window.Quarto = {
 </section>
 <section id="one-player-has-a-dominant-strategy-1" class="level2">
 <h2 class="anchored" data-anchor-id="one-player-has-a-dominant-strategy-1">One Player has a Dominant Strategy</h2>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>CONGRESS, FEDERAL RESERVE</th>
@@ -359,7 +367,7 @@ window.Quarto = {
 </section>
 <section id="one-player-has-a-dominant-strategy-2" class="level2">
 <h2 class="anchored" data-anchor-id="one-player-has-a-dominant-strategy-2">One Player has a Dominant Strategy</h2>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>CONGRESS, FEDERAL RESERVE</th>
@@ -403,7 +411,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="commonly-known-rationality">Commonly Known Rationality</h2>
 <div class="incremental">
 <ul class="incremental">
-<li>Let’s assume that, not only is every player rational, they all know that the other players are rational too.</li>
+<li>Let’s assume that, not only is every player rational, <span class="hii">they all know that the other players are rational too</span>.</li>
 <li>This means that players can deduce which strategies the <strong>other</strong> players would never play.</li>
 <li>And if a player can eliminate another player’s strategy, it may reveal additional strictly dominated strategies that can be eliminated.</li>
 </ul>
@@ -412,7 +420,7 @@ window.Quarto = {
 </section>
 <section id="eliminating-strictly-dominated-strategies" class="level2">
 <h2 class="anchored" data-anchor-id="eliminating-strictly-dominated-strategies">Eliminating Strictly Dominated Strategies</h2>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
@@ -455,7 +463,7 @@ window.Quarto = {
 </section>
 <section id="eliminating-strictly-dominated-strategies-1" class="level2">
 <h2 class="anchored" data-anchor-id="eliminating-strictly-dominated-strategies-1">Eliminating Strictly Dominated Strategies</h2>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
@@ -494,7 +502,7 @@ window.Quarto = {
 </section>
 <section id="eliminating-strictly-dominated-strategies-2" class="level2">
 <h2 class="anchored" data-anchor-id="eliminating-strictly-dominated-strategies-2">Eliminating Strictly Dominated Strategies</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 23%">
 <col style="width: 25%">
@@ -539,7 +547,7 @@ window.Quarto = {
 </section>
 <section id="eliminating-strictly-dominated-strategies-3" class="level2">
 <h2 class="anchored" data-anchor-id="eliminating-strictly-dominated-strategies-3">Eliminating Strictly Dominated Strategies</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 23%">
 <col style="width: 25%">
@@ -588,7 +596,7 @@ window.Quarto = {
 </section>
 <section id="eliminating-strictly-dominated-strategies-4" class="level2">
 <h2 class="anchored" data-anchor-id="eliminating-strictly-dominated-strategies-4">Eliminating Strictly Dominated Strategies</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 23%">
 <col style="width: 25%">
@@ -641,7 +649,7 @@ window.Quarto = {
 <section id="order-doesnt-matter-1" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-1">Order Doesn’t Matter</h2>
 <p>Consider this even larger game:</p>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
@@ -700,7 +708,7 @@ window.Quarto = {
 <section id="order-doesnt-matter-start-w-p_1" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-start-w-p_1">Order Doesn’t Matter (start w/ <span class="math inline">\(P_1\)</span>)</h2>
 <p>Suppose we start by looking for <strong>Player 1’s</strong> strictly dominated strategies:</p>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
@@ -759,7 +767,7 @@ window.Quarto = {
 <section id="order-doesnt-matter-start-w-p_1-1" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-start-w-p_1-1">Order Doesn’t Matter (start w/ <span class="math inline">\(P_1\)</span>)</h2>
 <p>Suppose we start by looking for <strong>Player 1’s</strong> strictly dominated strategies:</p>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 17%">
 <col style="width: 16%">
@@ -828,7 +836,7 @@ window.Quarto = {
 </section>
 <section id="order-doesnt-matter-start-w-p_1-2" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-start-w-p_1-2">Order Doesn’t Matter (start w/ <span class="math inline">\(P_1\)</span>)</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 18%">
 <col style="width: 16%">
@@ -897,7 +905,7 @@ window.Quarto = {
 </section>
 <section id="order-doesnt-matter-start-w-p_1-3" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-start-w-p_1-3">Order Doesn’t Matter (start w/ <span class="math inline">\(P_1\)</span>)</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 18%">
 <col style="width: 16%">
@@ -969,7 +977,7 @@ window.Quarto = {
 </section>
 <section id="order-doesnt-matter-start-w-p_1-4" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-start-w-p_1-4">Order Doesn’t Matter (start w/ <span class="math inline">\(P_1\)</span>)</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 19%">
 <col style="width: 16%">
@@ -1038,7 +1046,7 @@ window.Quarto = {
 </section>
 <section id="order-doesnt-matter-start-w-p_1-5" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-start-w-p_1-5">Order Doesn’t Matter (start w/ <span class="math inline">\(P_1\)</span>)</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 19%">
 <col style="width: 16%">
@@ -1107,7 +1115,7 @@ window.Quarto = {
 </section>
 <section id="order-doesnt-matter-start-w-p_1-6" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-start-w-p_1-6">Order Doesn’t Matter (start w/ <span class="math inline">\(P_1\)</span>)</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 19%">
 <col style="width: 16%">
@@ -1177,7 +1185,7 @@ window.Quarto = {
 </section>
 <section id="order-doesnt-matter-start-w-p_1-7" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-start-w-p_1-7">Order Doesn’t Matter (start w/ <span class="math inline">\(P_1\)</span>)</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 19%">
 <col style="width: 16%">
@@ -1250,7 +1258,7 @@ window.Quarto = {
 <section id="order-doesnt-matter-start-w-p_2" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-start-w-p_2">Order Doesn’t Matter (start w/ <span class="math inline">\(P_2\)</span>)</h2>
 <p>Now what happens if we reset and start instead by looking for <strong>Player 2’s</strong> strictly dominated strategies?</p>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
@@ -1308,7 +1316,7 @@ window.Quarto = {
 </section>
 <section id="order-doesnt-matter-start-w-p_2-1" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-start-w-p_2-1">Order Doesn’t Matter (start w/ <span class="math inline">\(P_2\)</span>)</h2>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
@@ -1369,7 +1377,7 @@ window.Quarto = {
 </section>
 <section id="order-doesnt-matter-start-w-p_2-2" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-start-w-p_2-2">Order Doesn’t Matter (start w/ <span class="math inline">\(P_2\)</span>)</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 19%">
 <col style="width: 16%">
@@ -1438,7 +1446,7 @@ window.Quarto = {
 </section>
 <section id="order-doesnt-matter-start-w-p_2-3" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-start-w-p_2-3">Order Doesn’t Matter (start w/ <span class="math inline">\(P_2\)</span>)</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 19%">
 <col style="width: 16%">
@@ -1507,7 +1515,7 @@ window.Quarto = {
 </section>
 <section id="order-doesnt-matter-start-w-p_2-4" class="level2">
 <h2 class="anchored" data-anchor-id="order-doesnt-matter-start-w-p_2-4">Order Doesn’t Matter (start w/ <span class="math inline">\(P_2\)</span>)</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 18%">
 <col style="width: 16%">
@@ -1591,7 +1599,7 @@ window.Quarto = {
 </section>
 <section id="iesds-example" class="level2">
 <h2 class="anchored" data-anchor-id="iesds-example">IESDS Example:</h2>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
@@ -1626,7 +1634,7 @@ window.Quarto = {
 </section>
 <section id="iesds-example-1" class="level2">
 <h2 class="anchored" data-anchor-id="iesds-example-1">IESDS Example:</h2>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
@@ -1711,7 +1719,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1743,29 +1762,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/dyasui\.github\.io\/EC327\/");
@@ -1773,7 +1770,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

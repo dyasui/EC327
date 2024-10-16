@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>bestresponses – EC327 Game Theory</title>
+<title>EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -105,15 +105,15 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
       EC327 Game Theory
       </li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -137,9 +137,9 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Slides</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -166,9 +166,9 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Activities</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -246,7 +246,7 @@ window.Quarto = {
 <hr>
 </section>
 <section id="best-responses-in-practice" class="level2">
-<h2 class="anchored" data-anchor-id="best-responses-in-practice">Best Responses in Practice}</h2>
+<h2 class="anchored" data-anchor-id="best-responses-in-practice">Best Responses in Practice</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>It’s easy to depict best responses in a game table: we can go through each strategy in the game, and mark each strategy which is a best response to them.</li>
@@ -261,7 +261,7 @@ window.Quarto = {
 <section id="best-response-analysis-1" class="level2">
 <h2 class="anchored" data-anchor-id="best-response-analysis-1">Best Response Analysis</h2>
 <p>Let’s revisit this game from the beginning of the lecture:</p>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>Row, Column</th>
@@ -305,7 +305,7 @@ window.Quarto = {
 <section id="best-response-analysis-2" class="level2">
 <h2 class="anchored" data-anchor-id="best-response-analysis-2">Best Response Analysis</h2>
 <p>Suppose you’re the Row player:</p>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>Row</th>
@@ -336,7 +336,7 @@ window.Quarto = {
 </section>
 <section id="best-response-analysis-3" class="level2">
 <h2 class="anchored" data-anchor-id="best-response-analysis-3">Best Response Analysis</h2>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>Row</th>
@@ -367,7 +367,7 @@ window.Quarto = {
 </section>
 <section id="best-response-analysis-4" class="level2">
 <h2 class="anchored" data-anchor-id="best-response-analysis-4">Best Response Analysis</h2>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>Row</th>
@@ -403,7 +403,7 @@ window.Quarto = {
 </section>
 <section id="best-response-analysis-5" class="level2">
 <h2 class="anchored" data-anchor-id="best-response-analysis-5">Best Response Analysis</h2>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>Row</th>
@@ -444,7 +444,7 @@ window.Quarto = {
 </section>
 <section id="best-response-analysis-6" class="level2">
 <h2 class="anchored" data-anchor-id="best-response-analysis-6">Best Response Analysis</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 29%">
 <col style="width: 20%">
@@ -491,7 +491,7 @@ window.Quarto = {
 </section>
 <section id="best-response-analysis-7" class="level2">
 <h2 class="anchored" data-anchor-id="best-response-analysis-7">Best Response Analysis</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 26%">
 <col style="width: 26%">
@@ -538,7 +538,7 @@ window.Quarto = {
 </section>
 <section id="best-response-analysis-8" class="level2">
 <h2 class="anchored" data-anchor-id="best-response-analysis-8">Best Response Analysis</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 22%">
 <col style="width: 22%">
@@ -585,7 +585,7 @@ window.Quarto = {
 </section>
 <section id="best-response-analysis-9" class="level2">
 <h2 class="anchored" data-anchor-id="best-response-analysis-9">Best Response Analysis</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 22%">
 <col style="width: 22%">
@@ -632,7 +632,7 @@ window.Quarto = {
 </section>
 <section id="best-response-analysis-10" class="level2">
 <h2 class="anchored" data-anchor-id="best-response-analysis-10">Best Response Analysis</h2>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 22%">
 <col style="width: 22%">
@@ -694,7 +694,7 @@ window.Quarto = {
 <section id="simultaneous-planting-game" class="level2">
 <h2 class="anchored" data-anchor-id="simultaneous-planting-game">Simultaneous Planting Game</h2>
 <p>What are Emily’s preferences in this modified game? <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>Outcome</th>
@@ -736,7 +736,7 @@ window.Quarto = {
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><span class="hi-grey">Contribute</span></p>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 28%">
 <col style="width: 35%">
@@ -764,7 +764,7 @@ window.Quarto = {
 </table>
 </div><div class="column" style="width:50%;">
 <p><span class="hi-grey">Don’t Contribute</span></p>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 28%">
 <col style="width: 35%">
@@ -792,7 +792,6 @@ window.Quarto = {
 </table>
 </div>
 </div>
-<p>. . .</p>
 <ul>
 <li>Can you find any dominant strategies?</li>
 </ul>
@@ -804,7 +803,7 @@ window.Quarto = {
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><span class="hi-grey">Contribute</span></p>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
 <col style="width: 23%">
 <col style="width: 35%">
@@ -832,9 +831,9 @@ window.Quarto = {
 </table>
 </div><div class="column" style="width:50%;">
 <p><span class="hi-grey">Don’t Contribute</span></p>
-<table class="caption-top table">
+<table class="table">
 <colgroup>
-<col style="width: 20%">
+<col style="width: 21%">
 <col style="width: 36%">
 <col style="width: 42%">
 </colgroup>
@@ -862,6 +861,161 @@ window.Quarto = {
 </div>
 <hr>
 </section>
+<section id="nash-equilibrium-from-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="nash-equilibrium-from-best-responses">Nash Equilibrium from Best Responses</h2>
+<div class="incremental">
+<p>Recall the various definitions of a Nash Equilibrium: * a strategy profile such that [no player can obtain a larger payoff by <em>unilaterally deviating</em>[{.hi}] (changing only their own strategy). * A strategy profile such that <span class="hi">no single player can make themselves better off by <em>changing only their own strategy</em></span>. * A strategy profile such that, after the game is played, <span class="hi">each player is satisfied that they could not have made a better decision</span>.</p>
+<ul class="incremental">
+<li>Another definition we can use now is “A strategy profile such that each player’s strategy is a best responses to the other player’s strategy.”</li>
+<li>“Playing a best response” is equivalent to “cannot obtain a larger payoff by unilaterally deviating,” or any of the other ways to describe this condition.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="classifying-games-based-on-nes" class="level2">
+<h2 class="anchored" data-anchor-id="classifying-games-based-on-nes">Classifying Games Based on NEs</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Now that we’ve talked about several ways to find a game’s NEs, we can start to talk about classifying games using them.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="multiple-equilibria-in-pure-strategies" class="level1">
+<h1>Multiple Equilibria in Pure Strategies</h1>
+<section id="games-with-multiple-equilibria" class="level2">
+<h2 class="anchored" data-anchor-id="games-with-multiple-equilibria">Games with Multiple Equilibria</h2>
+<p>So we’ve seen games with <em>only one</em> unique NE</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>But this doesn’t have to be the case</p></li>
+<li><p>Next we will see games with <em>multiple</em> possible strategy profiles which are stable.</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="coordination-games" class="level2">
+<h2 class="anchored" data-anchor-id="coordination-games">Coordination Games</h2>
+<p>I agreed to meet my friend for coffee, but we didn’t decide on which cafe and now my phone is dead:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Dante, Jose</th>
+<th>Starbucks</th>
+<th>Peet’s</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Starbucks</strong></td>
+<td>1, 1</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong>Peet’s</strong></td>
+<td>0, 0</td>
+<td>1, 1</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="coordination-games-1" class="level2">
+<h2 class="anchored" data-anchor-id="coordination-games-1">Coordination Games</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Dante, Jose</th>
+<th>Starbucks</th>
+<th>Peet’s</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Starbucks</strong></td>
+<td>1, 1</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong>Peet’s</strong></td>
+<td>0, 0</td>
+<td>1, 1</td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<ul class="incremental">
+<li><p>There are two NE’s where we are both happy</p></li>
+<li><p>The problem is getting there</p></li>
+<li><p>This type of game is called a <span class="hi">coordination game</span></p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="coordination-games-2" class="level2">
+<h2 class="anchored" data-anchor-id="coordination-games-2">Coordination Games</h2>
+<p>Even when there is an obviously preferred NE for both players, it may not be guaranteed that we will get there:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Dante, Jose</th>
+<th>Starbucks</th>
+<th>Roma</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Starbucks</strong></td>
+<td>1, 1</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong>Roma</strong></td>
+<td>0, 0</td>
+<td>2, 2</td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Depending on the set of <span class="hi">beliefs</span> held by the players, both strategy profiles could be theoretically stable</p></li>
+<li><p>If for some reason we started out in a (Starbucks, Starbucks) equilibrium, there would be no incentive for either of us to deviate without communicating our intent to each other</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="coordination-games-3" class="level2">
+<h2 class="anchored" data-anchor-id="coordination-games-3">Coordination Games</h2>
+<p>What should happen when different players have different preferences over NE?</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Dante, Jose</th>
+<th>T4</th>
+<th>Metropol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>T4</strong></td>
+<td>2, 1</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong>Metropol</strong></td>
+<td>0, 0</td>
+<td>1, 2</td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<ul class="incremental">
+<li>If Dante tries to be <em>nice</em> and go to Metropol, what if Jose does the same thing and goes to T4?</li>
+<li>In chapter 10, with <em>repeated games</em>, there may be opportunities for us to alternate between each of our favorites</li>
+</ul>
+</div>
+<hr>
+</section>
 <section id="the-deer-hunt-game" class="level2">
 <h2 class="anchored" data-anchor-id="the-deer-hunt-game">The Deer Hunt Game</h2>
 <p>Two cavemen, Igg and Ogg, each decide whether to hunt Deer or Rabbit.</p>
@@ -883,7 +1037,7 @@ window.Quarto = {
 </section>
 <section id="the-deer-hunt-game-1" class="level2">
 <h2 class="anchored" data-anchor-id="the-deer-hunt-game-1">The Deer Hunt Game</h2>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>Igg, Ogg</th>
@@ -915,7 +1069,7 @@ window.Quarto = {
 <section id="the-deer-hunt-game-2" class="level2">
 <h2 class="anchored" data-anchor-id="the-deer-hunt-game-2">The Deer Hunt Game</h2>
 <p>Here are Igg’s best responses…</p>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>Igg, Ogg</th>
@@ -941,7 +1095,7 @@ window.Quarto = {
 <section id="the-deer-hunt-game-3" class="level2">
 <h2 class="anchored" data-anchor-id="the-deer-hunt-game-3">The Deer Hunt Game</h2>
 <p>And here are Ogg’s best responses…</p>
-<table class="caption-top table">
+<table class="table">
 <thead>
 <tr class="header">
 <th>Igg, Ogg</th>
@@ -964,38 +1118,116 @@ window.Quarto = {
 </table>
 <hr>
 </section>
-<section id="another-example-non-unique-best-responses" class="level2">
-<h2 class="anchored" data-anchor-id="another-example-non-unique-best-responses">Another Example: Non-Unique Best Responses</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>As mentioned earlier, best responses don’t have to be unique.</li>
+<section id="the-game-of-chicken" class="level2">
+<h2 class="anchored" data-anchor-id="the-game-of-chicken">The Game of Chicken</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>James, Dean</th>
+<th>Swerve (Chicken)</th>
+<th>Straight (Tough)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Swerve</strong></td>
+<td>0, 0</td>
+<td>-1, 1</td>
+</tr>
+<tr class="even">
+<td><strong>Straight</strong></td>
+<td>1, -1</td>
+<td>-2, -2</td>
+</tr>
+</tbody>
+</table>
+<p>Suppose that James and Dean are driving headlong towards each other, but neither one wants to be the ‘chicken’ by swerving out of the way</p>
+<ul>
+<li>What are the best respones?</li>
 </ul>
-</div>
-<div class="incremental">
-<ul class="incremental">
-<li>Here, for both players, both Straight and Swerve are best responses to Swerve. When the other player chooses Swerve, both strategies provide payoff of 1.</li>
-</ul>
-</div>
 <hr>
 </section>
-<section id="nash-equilibrium-from-best-responses" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-from-best-responses">Nash Equilibrium from Best Responses</h2>
+<section id="the-game-of-chicken-1" class="level2">
+<h2 class="anchored" data-anchor-id="the-game-of-chicken-1">The Game of Chicken</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>James, Dean</th>
+<th>Swerve (Chicken)</th>
+<th>Straight (Tough)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Swerve</strong></td>
+<td>0, 0</td>
+<td><u>-1</u>, <u>1</u></td>
+</tr>
+<tr class="even">
+<td><strong>Straight</strong></td>
+<td><u>1</u>, <u>-1</u></td>
+<td>-2, -2</td>
+</tr>
+</tbody>
+</table>
 <div class="incremental">
 <ul class="incremental">
-<li>Recall the various definitions of a Nash Equilibrium:
-<ul class="incremental">
-<li>a strategy profile such that no player can obtain a larger payoff by <em>unilaterally deviating</em> (changing only their own strategy).</li>
-<li>A strategy profile such that no single player can make themselves better off by changing only their own strategy.</li>
-<li>A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision.</li>
-</ul></li>
-<li>Another definition we can use now is “A strategy profile such that each player’s strategy is a best responses to the other player’s strategy.”</li>
-<li>“Playing a best response” is equivalent to “cannot obtain a larger payoff by unilaterally deviating,” or any of the other ways to describe this condition.</li>
+<li><p>There are two NE of this game</p></li>
+<li><p>But how can we decide which one will happen?</p></li>
+<li><p>Chapter 9 will look at potential commitment devices either player could use to try to achieve their preferred NE</p></li>
 </ul>
 </div>
 <hr>
 </section>
 <section id="another-example-when-elimination-does-nothing" class="level2">
 <h2 class="anchored" data-anchor-id="another-example-when-elimination-does-nothing">Another Example: When Elimination Does Nothing</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th><span class="math inline">\(a\)</span></th>
+<th><span class="math inline">\(b\)</span></th>
+<th><span class="math inline">\(c\)</span></th>
+<th><span class="math inline">\(d\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(A\)</span></td>
+<td>1, 1</td>
+<td>2, 2</td>
+<td>2, 2</td>
+<td>2, 1</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(B\)</span></td>
+<td>1, 3</td>
+<td>1, 3</td>
+<td>2, 2</td>
+<td>2, 3</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(C\)</span></td>
+<td>1, 2</td>
+<td>2, 4</td>
+<td>1, 3</td>
+<td>2, 3</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(D\)</span></td>
+<td>3, 2</td>
+<td>2, 3</td>
+<td>1, 4</td>
+<td>2, 2</td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<ul class="incremental">
+<li>Can you find any strictly dominated strategies?</li>
+<li>Can you find any NE?</li>
+</ul>
+</div>
 <hr>
 </section>
 <section id="classifying-nes" class="level2">
@@ -1003,8 +1235,11 @@ window.Quarto = {
 <div class="incremental">
 <ul class="incremental">
 <li>Nash Equilibria may be either <em>strict</em> or <em>weak</em>.</li>
-<li>A Nash Equilibrium is strict if and only if each player would receive a smaller payoff by changing their own strategy.</li>
-<li>If a Nash Equilibrium is not strict—meaning that at least one player could change their own strategy and receive an equal (but not larger) payoff—it is weak.</li>
+<li>A Nash Equilibrium is <span class="hi">strict</span> if and only if each player would receive a (strictly) smaller payoff by changing their own strategy.</li>
+<li>If a Nash Equilibrium is not strict—meaning that at least one player could change their own strategy and receive an equal (but not larger) payoff
+<ul class="incremental">
+<li>it is [weak]{hi}.</li>
+</ul></li>
 </ul>
 </div>
 <hr>
@@ -1023,15 +1258,58 @@ window.Quarto = {
 </section>
 <section id="deer-hunt-strict-nash-equilibria" class="level2">
 <h2 class="anchored" data-anchor-id="deer-hunt-strict-nash-equilibria">Deer Hunt: Strict Nash Equilibria</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Igg, Ogg</th>
+<th><span class="math inline">\(Deer\)</span></th>
+<th><span class="math inline">\(Rabbit\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(Deer\)</span></strong></td>
+<td><u>2</u>, <u>2</u></td>
+<td>0,1</td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(Rabbit\)</span></strong></td>
+<td>1,0</td>
+<td><u>1</u>, <u>1</u></td>
+</tr>
+</tbody>
+</table>
 <div class="incremental">
 <ul class="incremental">
-<li>Here, note that at each Nash Equilibrium, each player has no other strategy providing the same payoff. This is a strict Nash Equilibrium.</li>
+<li><p>Here, note that at each Nash Equilibrium, each player has no other strategy providing the same payoff.</p></li>
+<li><p>This is a <em>strict</em> Nash Equilibrium.</p></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="not-quite-the-trolley-problem-weak-nash-equilibria" class="level2">
-<h2 class="anchored" data-anchor-id="not-quite-the-trolley-problem-weak-nash-equilibria">Not Quite the Trolley Problem: Weak Nash Equilibria</h2>
+<section id="weak-nash-equilibria-example" class="level2">
+<h2 class="anchored" data-anchor-id="weak-nash-equilibria-example">Weak Nash Equilibria Example</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Eleanor, Michael</th>
+<th><span class="math inline">\(Swerve\)</span></th>
+<th><span class="math inline">\(Straight\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(Swerve\)</span></strong></td>
+<td><u>1</u>, <u>1</u></td>
+<td><u>1</u>, <u>1</u></td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(Straight\)</span></strong></td>
+<td><u>1</u>, <u>1</u></td>
+<td>0, 0</td>
+</tr>
+</tbody>
+</table>
 <div class="incremental">
 <ul class="incremental">
 <li>However, in this game, each Nash Equilibrium features at least one player who could still get the same payoff if they change their strategy.</li>
@@ -1039,29 +1317,39 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="classifying-games-based-on-nes" class="level2">
-<h2 class="anchored" data-anchor-id="classifying-games-based-on-nes">Classifying Games Based on NEs</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Now that we’ve talked about several ways to find a game’s NEs, we can start to talk about classifying games using them.</li>
-</ul>
-</div>
-<hr>
-</section>
 <section id="prisoners-dilemmas" class="level2">
 <h2 class="anchored" data-anchor-id="prisoners-dilemmas">Prisoners’ Dilemmas</h2>
-<div class="incremental">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Guido, Luca</th>
+<th><span class="math inline">\(Testify\)</span></th>
+<th><span class="math inline">\(Keep~Quiet\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(Testify\)</span></strong></td>
+<td>-10, -10</td>
+<td>0, -20</td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(Keep~Quiet\)</span></strong></td>
+<td>-20, 0</td>
+<td>-1, -1</td>
+</tr>
+</tbody>
+</table>
 <p>In general, a Prisoner’s Dilemma is any game in which:</p>
-<ul class="incremental">
+<ul>
 <li>The players have the same strategies, A and B.</li>
 <li>A strictly dominates B, making (A, A) the only NE.</li>
-<li>But (B, B) is better for both players than (A, A).</li>
+<li>But (B, B) is better for both players than (A, A). :::</li>
 </ul>
-</div>
 <hr>
 </section>
-<section id="coordination-games" class="level2">
-<h2 class="anchored" data-anchor-id="coordination-games">Coordination Games</h2>
+<section id="coordination-games-4" class="level2">
+<h2 class="anchored" data-anchor-id="coordination-games-4">Coordination Games</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>A <span class="hi">coordination game</span> is a game in which the players all have the same strategy sets, and the NEs are all of the strategy profiles where the players choose the same strategy.</li>
@@ -1072,10 +1360,36 @@ window.Quarto = {
 </section>
 <section id="other-coordination-games" class="level2">
 <h2 class="anchored" data-anchor-id="other-coordination-games">Other Coordination Games</h2>
-<hr>
-</section>
-<section id="other-coordination-games-1" class="level2">
-<h2 class="anchored" data-anchor-id="other-coordination-games-1">Other Coordination Games</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><strong>A</strong></td>
+<td style="text-align: center;">1, 1</td>
+<td style="text-align: center;">1, 0</td>
+<td style="text-align: center;">3, 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong>B</strong></td>
+<td style="text-align: center;">0, 1</td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">2, 1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong>B</strong></td>
+<td style="text-align: center;">0, 3</td>
+<td style="text-align: center;">1, 2</td>
+<td style="text-align: center;">4, 4</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
 <section id="anti-coordination-games" class="level2">
@@ -1085,6 +1399,27 @@ window.Quarto = {
 <li>An <span class="hi">anti-coordination game</span> is a game in which the players all have the same strategy sets, but the NEs are all of the strategy profiles where the players choose different strategies.</li>
 </ul>
 </div>
+<table class="table">
+<thead>
+<tr class="header">
+<th>James, Dean</th>
+<th>Swerve (Chicken)</th>
+<th>Straight (Tough)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Swerve</strong></td>
+<td>0, 0</td>
+<td><u>-1</u>, <u>1</u></td>
+</tr>
+<tr class="even">
+<td><strong>Straight</strong></td>
+<td><u>1</u>, <u>-1</u></td>
+<td>-2, -2</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
 <section id="symmetric-games" class="level2">
@@ -1093,6 +1428,14 @@ window.Quarto = {
 <ul class="incremental">
 <li>A <span class="hi">symmetric game</span> is a game which is <strong>indifferent to an exchange of players</strong> in other words, a game where the players are interchangeable.</li>
 <li>Consider the Prisoner’s Dilemma: if we swap the players’ names, and their positions in the game table, and the order of their payoffs, we get the same game that we started with.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="symmetric-games-1" class="level2">
+<h2 class="anchored" data-anchor-id="symmetric-games-1">Symmetric Games</h2>
+<div class="incremental">
+<ul class="incremental">
 <li>A two-player game with a game table is symmetric if:
 <ul class="incremental">
 <li>The players have the same strategy sets.</li>
@@ -1149,7 +1492,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1181,29 +1535,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/dyasui\.github\.io\/EC327\/");
@@ -1211,7 +1543,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
