@@ -1,0 +1,241 @@
+\question
+
+Consider the strategic form game below:
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{*{6}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{4}{c}{$P_2$} \\ \cline{3-6}
+      \multicolumn{1}{c}{} &  & $A$ & $B$ & $C$ & $D$ \\ \cline{2-6} 
+      \multirow{4}*{$P_1$}
+      & $H$ & 10,  1 & -3,  1 &  0,  1 &  3,  1 \\ \cline{2-6}
+      & $J$ & 16, -2 &  6,  6 &  1, -1 &  4,  0 \\ \cline{2-6} 
+      & $K$ & 11,  1 &  0,  3 &  2,  2 & 10, 15 \\ \cline{2-6} 
+      & $L$ & 13, 10 & -1, 16 &  4, 12 &  5, 20 \\ \cline{2-6} 
+  \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{parts}
+ 
+  \part[12] 
+  Use Iterated Deletion of Strictly Dominated Strategies
+  and write out a simplified game table with any remaining cells.
+
+  \begin{solution}
+    
+    \begin{itemize}
+      \item Step 1: $H$ is strictly dominated by $J$, eliminate $H$
+      \item Step 2: $A$ and $C$ are strictly dominated by $B$, eliminate $A$ and $C$
+      \item Step 3: $L$ is strictly dominated by $K$, eliminate $L$
+    \end{itemize}
+
+    \begin{center}
+      \begin{tabular}{*{4}{c|}}
+        \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\ \cline{3-4}
+        \multicolumn{1}{c}{} & & $B$ & $D$ \\ \cline{2-4}
+        \multirow{2}*{$P_1$}
+        & $J$ & \underline{6},\underline{6} &  4, 0 \\ \cline{2-4}
+        & $K$ & 0,3 & \underline{10},\underline{15} \\ \cline{2-4}
+      \end{tabular}
+    \end{center}
+  \end{solution}
+
+
+  \part[8]
+  Find all Nash equilibria in \textit{pure strategies}.
+
+  \begin{solution}
+      
+    The best response to $B$ is $J$,
+    and the best response to $J$ is $B$ 
+    so $\mathbf{(J,B)}$ is one Nash equilibrium.
+
+    The best response to $D$ is $K$,
+    and the best response to $K$ is $D$ 
+    so $\mathbf{(K,D)}$ is the other PSNE.
+
+    \par\noindent\rule{\textwidth}{0.4pt}
+
+    Partial credit may be awarded for an answer that is consistent with mistakes made in 
+    eliminating strictly dominated strategies in part $a$.
+
+  \end{solution}
+  
+  \part[6]
+  Explain why you know that the strategies you found in part b are Nash equilibria.
+
+  \begin{solution}
+  
+      These are they only pure strategy NE because we eliminated all strategies in part (a)
+    that will never be played in any NE.
+    We also found the intersection of either players best responses in the table from (a)
+    which is the definition of a NE.
+
+  \end{solution}
+  
+  % \part[6] 
+  % Define mixed strategies for each player
+  % using any pure strategies left after IDSDS.
+  % Make sure to define all variables you introduce.
+
+  % \begin{solution}
+    
+  %   Let $\alpha$ be the probability that $P_1$ plays $J$.
+
+  %   Player 1's mixed strategy will be $\mathbf{(\alpha J, (1-\alpha) K)}$ 
+  %   (and zero weight on $H$ and $L$).
+
+  %   Let $\beta$ be the probability that $P_2$ plays $B$.
+
+  %   Player 2's mixed strategy will be $\mathbf{(\beta B, (1-\beta) D)}$
+  %   (and zero weight on $A$ and $C$). 
+
+  %   \par\noindent\rule{\textwidth}{0.4pt}
+
+  %   The notation doesn't have to match, 
+  %   but a correct answer will have one probability associated with each player
+  %   and the remaining probability on the proper player's other strategy played in equilibrium.
+
+  % \end{solution}
+
+  % \section*{Extra Credit}
+
+  % \bonuspart[4]
+  % Graph each player's expected utilities as functions of the 
+  % other players' mixed strategy you defined in part (c).
+
+  % \begin{solution}
+
+  %   \begin{minipage}{.5\textwidth}
+  %     \centering
+  %      \begin{tikzpicture}
+  %        \begin{axis}[
+  %          width=.95\textwidth,
+  %          xlabel={$\alpha$},
+  %          % ylabel={Player 2's Expected Utility}
+  %          xmin=0, xmax=1,
+  %          ymin=0, ymax=16,
+  %          ]
+  %          % EU(D)
+  %          \addplot [
+  %            domain=0:1,
+  %            samples=10,
+  %            color=green,
+  %          ]
+  %          {15 - 15*x};
+  %          \addlegendentry{\(EU_2(D)=15-15\alpha\)}
+  %          % EU(B)
+  %          \addplot [
+  %            domain=0:1,
+  %            samples=10,
+  %            color=purple,
+  %          ]
+  %          {3 + 3*x};
+  %          \addlegendentry{\(EU_2(B)=3+3\alpha\)}
+
+  %        \end{axis} 
+  %      \end{tikzpicture}
+  %   \end{minipage}
+  %   \begin{minipage}{.5\textwidth}
+  %     \centering
+  %      \begin{tikzpicture}
+  %        \begin{axis}[
+  %          width=.95\textwidth,
+  %          xlabel={$\beta$},
+  %          % ylabel={Player 2's Expected Utility}
+  %          xmin=0, xmax=1,
+  %          ymin=0, ymax=16,
+  %          ]
+  %          % EU(K)
+  %          \addplot [
+  %            domain=0:1,
+  %            samples=10,
+  %            color=yellow,
+  %          ]
+  %          {10 - 10*x};
+  %          \addlegendentry{\(EU_1(K)=10-10\beta\)}
+  %          % EU(J)
+  %          \addplot [
+  %            domain=0:1,
+  %            samples=10,
+  %            color=blue,
+  %          ]
+  %          {4 + 2*x};
+  %          \addlegendentry{\(EU_1(J)=4+2\beta\)}
+
+  %        \end{axis} 
+  %      \end{tikzpicture}
+  %   \end{minipage}
+
+  %   When will Player 2 be indifferent between $B$ and $D$:
+
+  %   \begin{tabular}{r c l}
+  %     % $EU_2(B)$ & = & $EU_2(D)$ \\ 
+  %     % $6\alpha + 3 (1-\alpha)$ & = & $0\alpha + 15(1-\alpha)$ \\
+  %     % $3 + 3\alpha$ & = & $15 - 15\alpha$ \\ 
+  %     $\alpha$ & = & $2/3$ \\ 
+  %   \end{tabular}
+
+  %   When will Player 1 be indifferent between $J$ and $K$:
+
+  %   \begin{tabular}{r c l}
+  %     % $EU_1(J)$ & = & $EU_1(K)$ \\ 
+  %     % $6\beta + 4 (1-\beta)$ & = & $0\beta + 10(1-\beta)$ \\
+  %     % $4 + 2\beta$ & = & $10 - 10\beta$ \\ 
+  %     $\beta$ & = & $1/2$ \\ 
+  %   \end{tabular}
+  % \end{solution}
+
+
+  % \bonuspart[4]
+  % Solve for all Mixed Strategy Nash equilibria in this game.
+  % A complete answer will include all calculations used 
+  % and a graph of best response functions.
+
+  % \begin{solution}
+
+  %   \begin{tikzpicture}
+  %     \begin{axis}[
+  %       width=.8\textwidth,
+  %       xlabel={$\alpha$},
+  %       ylabel={$\beta$},
+  %       xmin=-0.01, xmax=1.01,
+  %       ymin=-0.01, ymax=1.01,
+  %       xtick={0,2/3,1},
+  %       ytick={0,1/2,1},
+  %       ]
+  %       \addplot [
+  %       dashed,
+  %       line width=4pt,
+  %       const plot,
+  %       color=purple
+  %       ] coordinates {
+  %       (0,0)
+  %       (2/3,0)
+  %       (2/3,1)
+  %       (1,1)
+  %       };
+  %       \addlegendentry{\(BR_2(\alpha)\)}
+  %       \addplot [
+  %       dashed,
+  %       line width=4pt,
+  %       const plot,
+  %       color=blue,
+  %       ] coordinates {
+  %       (0,0)
+  %       (0,1/2)
+  %       (1,1/2)
+  %       (1,1)
+  %       };
+  %       \addlegendentry{\(BR_1(\beta)\)}
+  %     \end{axis}
+      
+  %   \end{tikzpicture}
+
+  %   \textbf{MSNE:} $\sigma_1 = (2/3 B, 1/3 D), \sigma_2 = (1/2 J, 1/2 K) $
+  % \end{solution}
+
+\end{parts}
+
+\newpage

@@ -1,9 +1,11 @@
-\begin{tikzpicture}[font=\footnotesize]
+\begin{tikzpicture}[
+% font=\footnotesize
+]
     \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
     \tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
-    \tikzstyle{level 1}=[level distance=15mm,sibling distance=2cm]
-    \tikzstyle{level 2}=[level distance=15mm,sibling distance=.5cm]
-    \tikzstyle{level 3}=[level distance=15mm,sibling distance=.5cm]
+    \tikzstyle{level 1}=[level distance=15mm,sibling distance=2.5cm]
+    \tikzstyle{level 2}=[level distance=15mm,sibling distance=.75cm]
+    \tikzstyle{level 3}=[level distance=15mm,sibling distance=0.5cm]
     
     \node(0)[solid node,label=right:{\color{ducksgreen} Eurasia}]{}
         child{node(1)[solid node,label=above left:{ }]{}
