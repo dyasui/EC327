@@ -39,7 +39,7 @@ Can we still find NE in those games?
 :::
 ---
 
-## Best Responses in Practice}
+## Best Responses in Practice
 
 ::: {.incremental}
   * It's easy to depict best responses in a game table: we can go through each strategy in the game, and mark each strategy which is a best response to them.
@@ -243,8 +243,6 @@ What are Emily's preferences in this modified game? ^[this is a symmetric game, 
 
 ::::
 
-. . .
-
   * Can you find any dominant strategies?
 
 ---
@@ -269,14 +267,118 @@ What are Emily's preferences in this modified game? ^[this is a symmetric game, 
 
 [Don't Contribute]{.hi-grey}
 
-| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                              | [Don't]{.hi-bb}                                           |
-|-----------------------------+---------------------------------------------------+-----------------------------------------------------------|
-| [Contribute]{.h}            | [3]{.h}, [3]{.hi-bb}, [<u>6</u>]{.hi-grey}        | [1]{.h}, [<u>4</u>]{.hi-bb}, [<u>4</u>]{.hi-grey}         |
+| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                              | [Don't]{.hi-bb}                                          |
+|-----------------------------+---------------------------------------------------+----------------------------------------------------------|
+| [Contribute]{.h}            | [3]{.h}, [3]{.hi-bb}, [<u>6</u>]{.hi-grey}        | [1]{.h}, [<u>4</u>]{.hi-bb}, [<u>4</u>]{.hi-grey}        |
 | [Don't]{.h}                 | [<u>4</u>]{.h}, [1]{.hi-bb}, [<u>4</u>]{.hi-grey} | [<u>2</u>]{.h}, [<u>2</u>]{.hi-bb}, [<u>2</u>]{.hi-grey} |
 
 :::
 
 ::::
+
+---
+
+## Nash Equilibrium from Best Responses
+
+::: {.incremental}
+Recall the various definitions of a Nash Equilibrium:
+  * a strategy profile such that [no player can obtain a larger payoff by *unilaterally deviating*[{.hi}] (changing only their own strategy).
+  * A strategy profile such that [no single player can make themselves better off by *changing only their own strategy*]{.hi}.
+  * A strategy profile such that, after the game is played, [each player is satisfied that they could not have made a better decision]{.hi}.
+
+  * Another definition we can use now is "A strategy profile such that each player's strategy is a best responses to the other player's strategy."
+  * "Playing a best response" is equivalent to "cannot obtain a larger payoff by unilaterally deviating," or any of the other ways to describe this condition.
+:::
+---
+
+
+## Classifying Games Based on NEs
+::: {.incremental}
+  * Now that we've talked about several ways to find a game's NEs, we can start to talk about classifying games using them.
+:::
+
+
+# Multiple Equilibria in Pure Strategies
+
+## Games with Multiple Equilibria
+
+So we've seen games with *only one* unique NE
+
+::: {.incremental}
+  
+  * But this doesn't have to be the case
+
+  * Next we will see games with *multiple* possible strategy profiles which are stable.
+
+:::
+
+---
+
+## Coordination Games
+
+I agreed to meet my friend for coffee, but we didn't decide on which cafe and now my phone is dead:
+
+| Dante, Jose | Starbucks | Peet's |
+|-------------+-----------+--------|
+| **Starbucks** | 1, 1      | 0, 0   |
+| **Peet's**  | 0, 0      | 1, 1   |
+
+---
+
+## Coordination Games
+
+| Dante, Jose   | Starbucks | Peet's |
+|---------------+-----------+--------|
+| **Starbucks** | 1, 1      | 0, 0   |
+| **Peet's**    | 0, 0      | 1, 1   |
+
+::: {.incremental}
+  * There are two NE's where we are both happy
+
+  * The problem is getting there
+
+  * This type of game is called a [coordination game]{.hi}
+
+:::
+
+---
+
+## Coordination Games
+
+Even when there is an obviously preferred NE for both players,
+it may not be guaranteed that we will get there:
+
+| Dante, Jose   | Starbucks | Roma |
+|---------------+-----------+------|
+| **Starbucks** | 1, 1      | 0, 0 |
+| **Roma**      | 0, 0      | 2, 2 |
+
+::: {.incremental}
+  * Depending on the set of [beliefs]{.hi} held by the players, 
+    both strategy profiles could be theoretically stable
+
+  * If for some reason we started out in a (Starbucks, Starbucks)
+    equilibrium, there would be no incentive for either of us 
+    to deviate without communicating our intent to each other
+:::
+
+---
+
+## Coordination Games
+
+What should happen when different players have different preferences over NE?
+
+| Dante, Jose  | T4   | Metropol |
+|--------------+------+----------|
+| **T4**       | 2, 1 | 0, 0     |
+| **Metropol** | 0, 0 | 1, 2     |
+
+::: {.incremental}
+  * If Dante tries to be *nice* and go to Metropol, 
+    what if Jose does the same thing and goes to T4?
+  * In chapter 10, with *repeated games*, there may be opportunities for
+    us to alternate between each of our favorites
+:::
 
 ---
 
@@ -333,61 +435,61 @@ And here are Ogg's best responses...
 
 ---
 
-## Another Example: Non-Unique Best Responses
-::: {.incremental}
-  * As mentioned earlier, best responses don't have to be unique.
-:::
+## The Game of Chicken
 
-```{=latex}
-\begin{table}[h]
-\centering
-\begin{tabular}{cc|c|c|}
-  & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Michael}\\
-  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Swerve$}  & \multicolumn{1}{c}{$Straight$} \\\cline{3-4}
-  \multirow{2}*{Eleanor}  & $Swerve$ & $\underline{1}, 1$ & $\underline{1}, 1$ \\\cline{3-4}
-  & $Straight$ & $\underline{1}, 1$ & $0, 0$ \\\cline{3-4}
-\end{tabular}
-\end{table}
+| James, Dean  | Swerve (Chicken) | Straight (Tough) |
+|--------------+------------------+------------------|
+| **Swerve**   | 0, 0             | -1, 1            |
+| **Straight** | 1, -1            | -2, -2           |
 
-```
-::: {.incremental}
-  * Here, for both players, both Straight and Swerve are best responses to Swerve. When the other player chooses Swerve, both strategies provide payoff of 1.
-:::
+Suppose that James and Dean are driving headlong towards each other, 
+but neither one wants to be the 'chicken' by swerving out of the way
+
+  * What are the best respones?
+
 ---
 
-## Nash Equilibrium from Best Responses
+## The Game of Chicken
+
+| James, Dean  | Swerve (Chicken)    | Straight (Tough)    |
+|--------------+---------------------+---------------------|
+| **Swerve**   | 0, 0                | <u>-1</u>, <u>1</u> |
+| **Straight** | <u>1</u>, <u>-1</u> | -2, -2              |
 
 ::: {.incremental}
-  * Recall the various definitions of a Nash Equilibrium:
-    * a strategy profile such that no player can obtain a larger payoff by *unilaterally deviating* (changing only their own strategy).
-    * A strategy profile such that no single player can make themselves better off by changing only their own strategy.
-    * A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision.
-  * Another definition we can use now is "A strategy profile such that each player's strategy is a best responses to the other player's strategy."
-  * "Playing a best response" is equivalent to "cannot obtain a larger payoff by unilaterally deviating," or any of the other ways to describe this condition.
+
+  * There are two NE of this game
+
+  * But how can we decide which one will happen?
+
+  * Chapter 9 will look at potential commitment devices either player could use to try to achieve their preferred NE
+
 :::
+
 ---
 
 ## Another Example: When Elimination Does Nothing
-```{=latex}
-\begin{table}[h]
-  \centering
-  \begin{tabular}{cc|c|c|c|c|}
-    & \multicolumn{1}{c}{} & \multicolumn{4}{c}{P$_2$}\\
-    & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} & \multicolumn{1}{c}{$d$}  \\\cline{3-6}
-    \multirow{5}*{P$_1$}  & $A$ & 1, 1 & 2, 2 & 2, 2 & 2, 1 \\\cline{3-6}
-    & $B$ & 1, 3 & 1, 3 & 2, 2 & 2, 3 \\\cline{3-6}
-    & $C$ & 1, 2 & 2, 4 & 1, 3 & 2, 3 \\\cline{3-6}
-    & $D$ & 3, 2 & 2, 3 & 1, 4 & 2, 2 \\\cline{3-6}
-  \end{tabular}
-\end{table}
-```
+
+| $P_1$, $P_2$ | $a$  | $b$  | $c$  | $d$  |
+|--------------+------+------+------+------|
+| $A$          | 1, 1 | 2, 2 | 2, 2 | 2, 1 |
+| $B$          | 1, 3 | 1, 3 | 2, 2 | 2, 3 |
+| $C$          | 1, 2 | 2, 4 | 1, 3 | 2, 3 |
+| $D$          | 3, 2 | 2, 3 | 1, 4 | 2, 2 |
+
+::: {.incremental}
+  * Can you find any strictly dominated strategies?
+  * Can you find any NE?
+:::
+
 ---
 
 ## Classifying NEs
 ::: {.incremental}
   * Nash Equilibria may be either *strict* or *weak*.
-  * A Nash Equilibrium is strict if and only if each player would receive a smaller payoff by changing their own strategy.
-  * If a Nash Equilibrium is not strict---meaning that at least one player could change their own strategy and receive an equal (but not larger) payoff---it is weak.
+  * A Nash Equilibrium is [strict]{.hi} if and only if each player would receive a (strictly) smaller payoff by changing their own strategy.
+  * If a Nash Equilibrium is not strict---meaning that at least one player could change their own strategy and receive an equal (but not larger) payoff
+      - it is [weak]{hi}.
 :::
 ---
 
@@ -401,58 +503,36 @@ And here are Ogg's best responses...
 ---
 
 ## Deer Hunt: Strict Nash Equilibria
-```{=latex}
-\begin{table}[h]
-\centering
-\begin{tabular}{cc|c|c|}
-& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Ogg}\\
-& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Deer$}  & \multicolumn{1}{c}{$Rabbit$} \\\cline{3-4}
-\multirow{2}*{Igg}  & $Deer$ & $\underline{2},\underline{2}$ & $0,1$ \\\cline{3-4}
-& $Rabbit$ & $1,0$ & $\underline{1},\underline{1}$ \\\cline{3-4}
-\end{tabular}
-\end{table}
-```
+
+| Igg, Ogg     | $Deer$             | $Rabbit$           |
+|--------------+--------------------+--------------------|
+| **$Deer$**   | <u>2</u>, <u>2</u> | 0,1                |
+| **$Rabbit$** | 1,0                | <u>1</u>, <u>1</u> |
+
 ::: {.incremental}
-* Here, note that at each Nash Equilibrium, each player has no other strategy providing the same payoff. This is a strict Nash Equilibrium.
+  * Here, note that at each Nash Equilibrium, each player has no other strategy providing the same payoff.
+
+  * This is a *strict* Nash Equilibrium.
 :::
 ---
 
-## Not Quite the Trolley Problem: Weak Nash Equilibria
-```{=latex}
-\begin{table}[h]
-\centering
-\begin{tabular}{cc|c|c|}
-& \multicolumn{1}{c}{} & \multicolumn{2}{c}{Michael}\\
-& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Swerve$}  & \multicolumn{1}{c}{$Straight$} \\\cline{3-4}
-\multirow{2}*{Eleanor}  & $Swerve$ & $\underline{1}, \underline{1}$ & $\underline{1}, \underline{1}$ \\\cline{3-4}
-& $Straight$ & $\underline{1}, \underline{1}$ & $0, 0$ \\\cline{3-4}
-\end{tabular}
-\end{table}
-```
+## Weak Nash Equilibria Example
+| Eleanor, Michael | $Swerve$           | $Straight$         |
+|------------------+--------------------+--------------------|
+| **$Swerve$**     | <u>1</u>, <u>1</u> | <u>1</u>, <u>1</u> |
+| **$Straight$**   | <u>1</u>, <u>1</u> | 0, 0               |
+
 ::: {.incremental}
 * However, in this game, each Nash Equilibrium features at least one player who could still get the same payoff if they change their strategy.
 :::
 ---
 
-## Classifying Games Based on NEs
-::: {.incremental}
-  * Now that we've talked about several ways to find a game's NEs, we can start to talk about classifying games using them.
-:::
----
-
 ## Prisoners' Dilemmas
-```{=latex}
-\begin{table}[h]
-  \centering
-  \begin{tabular}{cc|c|c|}
-    & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Luca}\\
-    & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Testify$}  & \multicolumn{1}{c}{$Keep~Quiet$} \\\cline{3-4}
-    \multirow{2}*{Guido}  & $Testify$ & $-10,-10$ & $0,-20$ \\\cline{3-4}
-    & $Keep~Quiet$ & $-20,0$ & $-1,-1$ \\\cline{3-4}
-  \end{tabular}
-\end{table}
-```
-::: {.incremental}
+| Guido, Luca      | $Testify$ | $Keep~Quiet$ |
+|------------------+-----------+--------------|
+| **$Testify$**    | -10, -10  | 0, -20      |
+| **$Keep~Quiet$** | -20, 0    | -1, -1      |
+
 In general, a Prisoner's Dilemma is any game in which:
 
   * The players have the same strategies, A and B.
@@ -466,48 +546,17 @@ In general, a Prisoner's Dilemma is any game in which:
   * A [coordination game]{.hi} is a game in which the players all have the same strategy sets, and the NEs are all of the strategy profiles where the players choose the same strategy.
   * The Deer Hunt is a coordination game.
 :::
-```{=latex}
-\begin{table}[h]
-\centering
-\begin{tabular}{cc|c|c|}
-  & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Ogg}\\
-  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$Deer$}  & \multicolumn{1}{c}{$Rabbit$} \\\cline{3-4}
-  \multirow{2}*{Igg}  & $Deer$ & \colorbox{blue!25}{\textbf{2,2}} & 0,1 \\\cline{3-4}
-  & $Rabbit$ & 1,0 & \colorbox{blue!25}{\textbf{1,1}} \\\cline{3-4}
-\end{tabular}
-\end{table}
-```
----
-
-## Other Coordination Games
-```{=latex}
-\begin{table}[h]
-  \caption*{Bach or Stravinsky?}
-  \centering
-  \begin{tabular}{cc|c|c|}
-    & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Stravinsky Fan}\\
-    & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Bach}  & \multicolumn{1}{c}{Strav.} \\\cline{3-4}
-    \multirow{2}*{Bach Fan}  & Bach & \colorbox{blue!25}{\textbf{3, 2}} & 0,0 \\\cline{3-4}
-    & Strav. & 0,0 & \colorbox{blue!25}{\textbf{2, 3}} \\\cline{3-4}
-  \end{tabular}
-\end{table}
-```
 
 ---
 
 ## Other Coordination Games
-```{=latex}
-\begin{table}[h]
-  \centering
-  \begin{tabular}{cc|c|c|c|}
-    & \multicolumn{1}{c}{} & \multicolumn{3}{c}{$P_2$}\\
-    & \multicolumn{1}{c}{} & \multicolumn{1}{c}{A}  & \multicolumn{1}{c}{B}  & \multicolumn{1}{c}{C} \\\cline{3-5}
-    \multirow{2}*{$P_1$}  & A & \colorbox{blue!25}{\textbf{1, 1}} & 1, 0 & 3, 0 \\\cline{3-5}
-    & B & 0, 1 & \colorbox{blue!25}{\textbf{2, 2}} & 2, 1 \\\cline{3-5}
-    & B & 0, 3 & 1, 2 & \colorbox{blue!25}{\textbf{4, 4}} \\\cline{3-5}
-  \end{tabular}
-\end{table}
-```
+
+| $P_1$, $P_2$ |   A  |   B  |   C  |
+|-------------:+:----:+:----:+:----:|
+|        **A** | 1, 1 | 1, 0 | 3, 0 |
+|        **B** | 0, 1 | 2, 2 | 2, 1 |
+|        **B** | 0, 3 | 1, 2 | 4, 4 |
+
 ---
 
 
@@ -515,24 +564,22 @@ In general, a Prisoner's Dilemma is any game in which:
 ::: {.incremental}
   * An [anti-coordination game]{.hi} is a game in which the players all have the same strategy sets, but the NEs are all of the strategy profiles where the players choose different strategies.
 :::
-```{=latex}
-\begin{table}[h]
-  \caption*{Chicken}
-  \centering
-  \begin{tabular}{cc|c|c|}
-    & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Buzz}\\
-    & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Straight}  & \multicolumn{1}{c}{Swerve} \\\cline{3-4}
-    \multirow{2}*{Jim}  & Straight & -10, -10 & \colorbox{blue!25}{\textbf{5, -1}} \\\cline{3-4}
-    & Swerve & \colorbox{blue!25}{\textbf{-1, 5}} & 0, 0 \\\cline{3-4}
-  \end{tabular}
-\end{table}
-```
+| James, Dean  | Swerve (Chicken)    | Straight (Tough)    |
+|--------------+---------------------+---------------------|
+| **Swerve**   | 0, 0                | <u>-1</u>, <u>1</u> |
+| **Straight** | <u>1</u>, <u>-1</u> | -2, -2              |
+
 ---
 
 ## Symmetric Games
 ::: {.incremental}
   * A [symmetric game]{.hi} is a game which is **indifferent to an exchange of players** in other words, a game where the players are interchangeable.
   * Consider the Prisoner's Dilemma: if we swap the players' names, and their positions in the game table, and the order of their payoffs, we get the same game that we started with.
+:::
+---
+
+## Symmetric Games
+::: {.incremental}
   * A two-player game with a game table is symmetric if:
     * The players have the same strategy sets.
     * In the on-diagonal cells of the game table, the players receive equal payoffs.

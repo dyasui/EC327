@@ -4,8 +4,11 @@
 
 ::: {.incremental}
 - A **dominant strategy** is one that performs best no matter what others do.
-- Strategies can be eliminated if they are dominated by others.
-- **Elimination of dominated strategies** can simplify finding equilibria.
+- A strategy is [dominat**ed**]{.hi} if there is another strategy which is better no matter what the other player does.
+
+> **Elimination of dominated strategies** can simplify finding equilibria by removing strategies
+  
+  * **Dominated** strategies will never by played by a rational agent
 :::
 
 ---
@@ -14,11 +17,13 @@
 
 ::: {.incremental}
 
-  * When we first discussed Nash Equilibria (which I'm going to start abbreviating as NEs), we found them by checking all of the strategy profiles in the game to see which of them were stable.
+  * When we first discussed NE, we found them by checking all of the strategy profiles in the game to see which of them were stable.
 
-  * This is not a problem in a 2x2 game like we've been working with---but it gets much more time-consuming in games with more players and more strategies per player, not to mention the more complicated games we'll look at later in the term.
+  * This is easy for a 2x2 game or even a 3x3 game like we've seen
 
-  * We can make it easier to find NEs with a few useful shortcuts---such as eliminating entire strategies (not just strategy profiles) that can't possibly be part of a NE.
+    + but it gets much more time-consuming in games with more players and more strategies per player
+
+  * We can make it easier to find NEs with a few useful shortcuts
 
 :::
 
@@ -28,7 +33,7 @@
 
 ::: {.incremental}
 
-  * A strategy is said to be strictly dominated if there is some other strategy, in the same player's strategy set, which provides that player a higher payoff, no matter what strategies the other players pick.
+  * A strategy is said to be [strictly dominated]{.hi} if there is some other strategy, in the same player's strategy set, which provides that player a higher payoff, no matter what strategies the other players pick.
 
     - Another way to phrase it is that a strategy is strictly dominated if some other strategy is a better alternative for the player, no matter what other players do.
 
@@ -113,7 +118,7 @@ which made finding the NE easy.
 
 ## Commonly Known Rationality
 ::: {.incremental}
-  * Let's assume that, not only is every player rational, they all know that the other players are rational too.
+  * Let's assume that, not only is every player rational, [they all know that the other players are rational too]{.hii}.
   * This means that players can deduce which strategies the **other** players would never play.
   * And if a player can eliminate another player's strategy, it may reveal additional strictly dominated strategies that can be eliminated.
 :::
