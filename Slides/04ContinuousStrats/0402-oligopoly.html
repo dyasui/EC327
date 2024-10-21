@@ -67,10 +67,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-sidebar docked slimcontent">
+<body class="nav-sidebar docked fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -181,234 +210,252 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 
 
-<section id="syllabus-document" class="level2">
-<h2 class="anchored" data-anchor-id="syllabus-document">Syllabus Document</h2>
-<div class="{incremental}">
+<section id="economics-of-oligopoly" class="level1">
+<h1>Economics of Oligopoly</h1>
+<section id="competition-in-the-restaurant-game" class="level2">
+<h2 class="anchored" data-anchor-id="competition-in-the-restaurant-game">Competition in the Restaurant Game</h2>
+<p>In the last example, we found Xavier and Yvonne’s best responses independently of the other’s.</p>
 <ul>
-<li>Most up to date version on github</li>
-<li>I will also upload to Canvas</li>
-<li>print, sign, and upload as your first assignment</li>
-</ul>
-</div>
-</section>
-<section id="class-expectations" class="level1">
-<h1>Class Expectations</h1>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<ul>
-<li><p><strong>Courses:</strong> EC201 <em>or</em> EC202</p></li>
-<li><p><strong>Knowledge:</strong> This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.</p>
-<ul>
-<li>There are great free resources out there like <a href="https://www.khanacademy.org/math/algebra">Khan Academy</a>, but always feel free to reach out for help or other suggestions.</li>
-</ul></li>
+<li>But could they cooperate to raise prices more than in the NE?</li>
 </ul>
 <hr>
 </section>
-<section id="student-expectations" class="level2">
-<h2 class="anchored" data-anchor-id="student-expectations">Student Expectations</h2>
-<div class="incremental">
-<ul class="incremental">
-<li><span class="hii">Come to class</span>
-<ul class="incremental">
-<li>Pay attention to lectures, take notes, review topics at home</li>
-<li>Participate in group work &amp; activities</li>
-<li><span class="hi">Ask questions!</span></li>
-</ul></li>
-<li><span class="hii">Read the textbook</span></li>
-<li><span class="hii">Communicate respectfully</span>
-<ul class="incremental">
-<li>With your classmates</li>
-<li>With me &amp; grader</li>
-</ul></li>
-<li><span class="hii">Have academic integrity</span> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
-<ul class="incremental">
-<li>Verify that all submitted work is your own</li>
-<li>Provide sources for <em>all</em> information that you found outside this class</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="instructor-expectations" class="level2">
-<h2 class="anchored" data-anchor-id="instructor-expectations">Instructor Expectations</h2>
-<ul>
-<li><span class="h">Provide course material</span>
-<ul>
-<li>Slides will be updated on github</li>
-<li>I will also try to post them on Canvas, but not as regularly</li>
-<li>Assignments posted on Canvas w/ due dates, submission entry</li>
-</ul></li>
-<li><span class="h">Face-to-face Interaction</span>
-<ul>
-<li><span class="hi">Classes</span>
-<ul>
-<li>Ask me to clarify if something doesn’t make sense</li>
-<li>Ask me to slow down if I’m going too fast</li>
-</ul></li>
-<li><span class="hi">Office Hours</span>
-<ul>
-<li>Use them!!</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="admin-stuff" class="level1 page-columns page-full">
-<h1>Admin Stuff</h1>
-<section id="problem-sets" class="level2">
-<h2 class="anchored" data-anchor-id="problem-sets">Problem Sets</h2>
-<p>You will practice what we learn in class on independently.</p>
-<p>Each homework assignment will include a few problems that will be similar to what you will see on exams.</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>Learning something new takes practice, so these are designed to help you keep up with the concepts</p></li>
-<li><p>You will be graded not only on whether you got a certain answer, but also more importantly on <em>how you communicate your understanding</em></p>
-<ul class="incremental">
-<li>See Canvas rubric for more info</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="class-activities" class="level2">
-<h2 class="anchored" data-anchor-id="class-activities">Class Activities</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Sometimes I will ask you to play the types of games we discuss in lectures
-<ul class="incremental">
-<li>Record the strategies you chose and the outcomes</li>
-<li>Reflect on how you played the game</li>
-<li>Relate it to lecture concepts</li>
-</ul></li>
-</ul>
-</div>
-<div class="notes">
-<ul>
-<li>I’m still working out how best to implement</li>
-<li>this is how you participate, records attendance on activity days</li>
-<li>hopefully lets you experience first-hand the things we learn</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="exams" class="level2">
-<h2 class="anchored" data-anchor-id="exams">Exams</h2>
-<p>You will demonstrate how well you understand concepts individually on a <span class="hi">midterm</span> and a <span class="hi">final</span> exam</p>
-<div class="incremental">
-<ul class="incremental">
-<li><span class="hi">Midterm</span>
-<ul class="incremental">
-<li>sometime around week 5 (Oct.&nbsp;28th or 30th)</li>
-<li>Will test you on definitions, solution concepts, and apply them to critical thinking problems</li>
-</ul></li>
-<li><span class="hi">Final</span>
-<ul class="incremental">
-<li>finals week of December 9 (check duckweb for specific date)</li>
-<li>Covers everything we learned in the quarter, with more focus on concepts from the 2nd half</li>
-</ul></li>
-</ul>
-</div>
-<div class="notes">
-<ul>
-<li>Dept policy is 65% As &amp; Bs</li>
-<li>expect exams to be difficult</li>
-<li>Best way to prepare is lots of practice</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="grading" class="level2">
-<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<section id="competition-in-the-restaurant-game-1" class="level2">
+<h2 class="anchored" data-anchor-id="competition-in-the-restaurant-game-1">Competition in the Restaurant Game</h2>
 <div class="columns">
-<div class="column" style="width:40%;">
-<p><span class="hi">Problem Sets</span></p>
-<p><span class="hi">In-class Activities</span></p>
-<p><span class="hi">Midterm</span></p>
-<p><span class="hi">Final</span></p>
-</div><div class="column" style="width:40%;">
-<p>30%</p>
-<p>10%</p>
-<p>30%</p>
-<p>30%</p>
+<div class="column" style="width:50%;">
+<p>If both charged $24, then they could each get 2,000 customers:</p>
+<p><span class="math display">\[
+Q = 44 - 2($24) + 24 = 20
+\]</span></p>
+<p>And each would earn a profit of $32,000</p>
+<p><span class="math display">\[
+\pi = (24 - 8)(20)
+\]</span></p>
+<p>which is more than the $28,000 they earned in NE</p>
+</div><div class="column" style="width:50%;">
+<p><img src="figures/Dixit_fig5.1.png" class="img-fluid"></p>
 </div>
 </div>
 <hr>
-<section id="policies" class="level3">
-<h3 class="anchored" data-anchor-id="policies">Policies</h3>
+</section>
+<section id="introduction-to-oligopoly" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-oligopoly">Introduction to Oligopoly</h2>
+<p>In an oligopoly, a small number of firms (here just two) compete in the same market.</p>
+<section id="key-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="key-concepts">Key Concepts:</h3>
+<ul>
+<li><strong>Best-response curves</strong>: Show how one firm’s best price depends on the other’s.</li>
+<li><strong>Equilibrium</strong>: Each firm maximizes its profit, given the price set by the other firm.</li>
+</ul>
+<p><strong>Question:</strong> What do you think happens to prices when firms have fewer competitors?</p>
+<hr>
+</section>
+</section>
+<section id="best-response-curves-intuition" class="level2">
+<h2 class="anchored" data-anchor-id="best-response-curves-intuition">Best-Response Curves: Intuition</h2>
+<p>When one restaurant raises its price by $1:</p>
 <div class="incremental">
 <ul class="incremental">
-<li><span class="h">No make-up exams!</span>
+<li><p>The other restaurant’s best response is to raise its own price by $0.25.</p></li>
+<li><p>They lose some of their customers to their competitor who can reap some extra profit by raising their prices also (as long as they don’t raise it higher than their competitor)</p></li>
+<li><p>Thus by raising prices, one restaurant is providing a <em>positive externalitiy</em> to their competitor which isn’t priced into the NE profit function</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="allowing-for-cooperation-in-the-restaurant-game" class="level2">
+<h2 class="anchored" data-anchor-id="allowing-for-cooperation-in-the-restaurant-game">Allowing for cooperation in the Restaurant game</h2>
+<p>What if Xavier and Yvonne could coordinate their prices by setting them higher than equilibrium at $24?</p>
+<div class="incremental">
 <ul class="incremental">
-<li>if you absolutely cannot attend midterm, you can add its weight to final exam</li>
-</ul></li>
-<li>Problem set keys posted automatically after deadline
+<li>Xavier’s best response function <span class="math inline">\(P_X = 15 + 0.25 P_Y\)</span> tells us that if he knows Yvonne is setting her price at $24, he should lower his price to <span class="math inline">\(P_X = 21\)</span> to attract more customers away from Yvonne</li>
+<li>So there is always an incentive for either player to cheat the other at this cooperative strategy profile</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="allowing-for-cooperation-in-the-restaurant-game-1" class="level2">
+<h2 class="anchored" data-anchor-id="allowing-for-cooperation-in-the-restaurant-game-1">Allowing for cooperation in the Restaurant game</h2>
+<div class="incremental">
+<p>Does this sound familiar?</p>
 <ul class="incremental">
-<li>-&gt; no late submissions accepted</li>
+<li><p>This is a continuous version of the Prisoners’ Dilemma we studied earlier:</p>
+<ul class="incremental">
+<li><p>Each player is incentivized to independently add to their payoff by harming the other</p></li>
+<li><p>But if they could commit to coordinating, they could both be better off</p></li>
 </ul></li>
 </ul>
 </div>
 <hr>
 </section>
-</section>
-<section id="campus-resources" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="campus-resources">Campus Resources</h2>
-<ul>
-<li><span class="hi">Accessible Education Center</span>
-<ul>
-<li><a href="https://aec.uoregon.edu/">aec.uoregon.edu</a></li>
-</ul></li>
-<li><span class="hi">Support for vicitms of assault, harassment, stalking</span>
-<ul>
-<li><a href="https://safe.uoregon.edu/">safe.uoregon.edu</a></li>
-<li>24/7 hotline: (+1) 541-346-SAFE (7244)</li>
-</ul></li>
-<li><span class="hi">Health and Wellbeing</span>
-<ul>
-<li><a href="https://counseling.uoregon.edu">University Counseling Services</a></li>
-<li><a href="https://basicneeds.uoregon.edu/">Basic Needs Program</a></li>
-</ul></li>
-<li><span class="hi">Religious Observance Accomadations</span>
-<ul>
-<li><a href="https://provost.uoregon.edu/religious-observance-accommodations-policy">Provost website</a></li>
-</ul></li>
-</ul>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>These resources and others are also included in the course syllabus</p>
-</div></div><div class="notes">
-<ul>
-<li>I am here to support you, but not trained or equipped for emergencies</li>
-<li>I will not ask for reasons you cannot attend class or exams</li>
-<li>I am not a mandated reporter: will only pass on info if you request</li>
+<section id="optimal-oligopoly-pricing-in-the-restaurant-game" class="level2">
+<h2 class="anchored" data-anchor-id="optimal-oligopoly-pricing-in-the-restaurant-game">Optimal Oligopoly pricing in the Restaurant game</h2>
+<p>If Xavier and Yvonne could form a <span class="hi">cartel</span> and jointly set prices for both their restaurants, they should maximize the total payoff function:</p>
+<p><span class="math display">\[
+\begin{align}
+\pi_X = \pi_Y &amp; = (P - 8)(44 - 2P + P) \\
+              &amp; = -352 + 52P - P^2
+\end{align}
+\]</span></p>
+<div class="incremental">
+<ul class="incremental">
+<li>Using the formula for the profit-maximizing price in this equation:</li>
+<li><span class="math inline">\(P^* = 52/2 = 26\)</span></li>
+<li>The cartel should charge $26 and get $32,400 profit for each firm</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="course-pages" class="level2">
-<h2 class="anchored" data-anchor-id="course-pages">Course Pages</h2>
-<p><a href="https://canvas.uoregon.edu/courses/233504">https://canvas.uoregon.edu/courses/251353</a> - submit your assignments - check deadlines</p>
-<p><a href="https://github.com/dyasui/EC327">github.com/dyasui/EC327</a> - Find up-to-date versions of slides/assignments - <em>let me know if links are broken</em></p>
+<section id="why-does-the-best-response-curve-slope-upwards" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-the-best-response-curve-slope-upwards">Why Does the Best-Response Curve Slope Upwards?</h2>
+<p>Each firm’s <strong>best-response curve</strong> slopes upwards because:</p>
+<ul>
+<li><p>When one firm raises its price, the other can raise its price slightly and still maintain some customers.</p></li>
+<li><p>This is a characteristic of oligopolies where price competition is less intense than in markets with many competitors.</p></li>
+</ul>
+<hr>
+</section>
+<section id="types-of-oligopoly-cournot-vs-bertrand" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-oligopoly-cournot-vs-bertrand">Types of Oligopoly: Cournot vs Bertrand</h2>
+<p>Our restaurant example had firms choosing <em>prices</em> to compete.</p>
+<ul>
+<li>This type of competition is called <span class="hi">Bertrand competition</span></li>
+</ul>
+<p>The other type of competition is where firms choose how much <em>quantity</em> to produce.</p>
+<ul>
+<li>Otherwise known as <span class="hi">Cournot competition</span></li>
+</ul>
+<hr>
+</section>
+<section id="application-cournot-competition" class="level2">
+<h2 class="anchored" data-anchor-id="application-cournot-competition">Application: Cournot Competition</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Let’s see how we can use a game with continuous strategies to model a real-world situation.</p></li>
+<li><p>In <span class="hi">Cournot competition</span>, two firms produce the same product, and face the same market demand curve. The firms simultaneously decide how much product to produce, which they then sell at a price determined by that market demand curve.</p></li>
+<li><p>This is a game with two players (the firms), and continuous strategies (the firms must pick a quantity to produce, which can be any non-negative real number).</p></li>
+<li><p>In this example, we will use the following values:</p>
+<ul class="incremental">
+<li>Market Demand Curve: <span class="math inline">\(Q = 100 - P\)</span>, in which <span class="math inline">\(Q = q_1 + q_2\)</span></li>
+<li>Cost Functions: <span class="math inline">\(c_i(q_i) = 10q_i\)</span></li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="cournot-competition-creating-the-payoff-functions" class="level2">
+<h2 class="anchored" data-anchor-id="cournot-competition-creating-the-payoff-functions">Cournot Competition: Creating the Payoff Functions</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>First of all, we need payoff functions for each player.</li>
+<li>Since the players are firms, and the goal of a firm is to maximize profit, we’ll use the firms’ profits as their payoffs.</li>
+<li>We can construct the profit functions by taking TR - TC, or in this case, Pq - c(q).</li>
+<li>Solving for P, we find that <span class="math inline">\(P = 100 - Q = 100 - q_1 - q_2\)</span>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="cournot-competition-creating-the-payoff-functions-1" class="level2">
+<h2 class="anchored" data-anchor-id="cournot-competition-creating-the-payoff-functions-1">Cournot Competition: Creating the Payoff Functions</h2>
+<p>::: {.incremental} This gives us: <span class="math display">\[
+\begin{align}
+\pi_1 &amp;= (100 - q_1 - q_2)q_1 - 10q_1 &amp; \pi_2 &amp;= (100 - q_1 - q_2)q_2 - 10q_2\\
+&amp;= 100q_1 - q_1^2 - q_1q_2 - 10q_1 &amp; &amp;= 100q_2 - q_1q_2 - q_2^2 - 10q_2\\
+&amp;= 90q_1 - q_1^2 - q_1q_2 &amp; &amp;= 90q_2 - q_1q_2 - q_2^2
+\end{align}
+\]</span></p>
+<hr>
+</section>
+<section id="cournot-competition-creating-the-payoff-functions-2" class="level2">
+<h2 class="anchored" data-anchor-id="cournot-competition-creating-the-payoff-functions-2">Cournot Competition: Creating the Payoff Functions</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>First of all, we need payoff functions for each player.</p></li>
+<li><p>Since the players are firms, and the goal of a firm is to maximize profit, we’ll use the firms’ profits as their payoffs.</p></li>
+<li><p>We can construct the profit functions by taking TR - TC, or in this case, Pq - c(q).</p></li>
+<li><p>Solving for P, we find that <span class="math inline">\(P = 100 - Q = 100 - q_1 - q_2\)</span>.</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="cournot-competition-creating-the-payoff-functions-3" class="level2">
+<h2 class="anchored" data-anchor-id="cournot-competition-creating-the-payoff-functions-3">Cournot Competition: Creating the Payoff Functions</h2>
+<p>This gives us: <span class="math display">\[
+\begin{align}
+\pi_1 &amp;= (100 - q_1 - q_2)q_1 - 10q_1 &amp; \pi_2 &amp;= (100 - q_1 - q_2)q_2 - 10q_2\\
+&amp;= 100q_1 - q_1^2 - q_1q_2 - 10q_1 &amp; &amp;= 100q_2 - q_1q_2 - q_2^2 - 10q_2\\
+&amp;= 90q_1 - q_1^2 - q_1q_2 &amp; &amp;= 90q_2 - q_1q_2 - q_2^2\\
+&amp;= (90 - q_2)q_1 - q_1^2 &amp; &amp;= (90 - q_1)q_2 - q_2^2
+\end{align}
+\]</span></p>
+<hr>
+</section>
+<section id="cournot-competition-finding-best-response-functions" class="level2">
+<h2 class="anchored" data-anchor-id="cournot-competition-finding-best-response-functions">Cournot Competition: Finding Best-Response Functions</h2>
+<p>These best-response functions are in the by-now familiar quadratic form. Both of them have negative squared terms, so we can look for a maximum: <span class="math display">\[
+\begin{align}
+q_1 &amp;= \frac{-(90 - q_2)}{2(-1)} &amp; q_2 &amp;= \frac{-(90 - q_1)}{2(-1)}\\
+&amp;= \frac{90 - q_2}{2} &amp; &amp;= \frac{90 - q_1}{2}\\
+&amp;= 45 - \frac{q_2}{2} &amp; &amp;= 45 - \frac{q_1}{2}
+\end{align}
+\]</span></p>
+<hr>
+</section>
+<section id="cournot-oligopoly-finding-nash-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="cournot-oligopoly-finding-nash-equilibrium">Cournot Oligopoly: Finding Nash Equilibrium</h2>
+<p>Solve these best-response rules as a system of equations: <span class="math display">\[
+\begin{align}
+q_1 &amp;= 45 - \frac{1}{2}q_2\\
+q_2 &amp;= 45 - \frac{1}{2}q_1\\
+\implies q_1 &amp;= 45 - \frac{1}{2}(45 - \frac{1}{2}q_1) &amp; q_2 &amp;= 45 - \frac{1}{2}(30)\\
+q_1 &amp;= 45 - \frac{45}{2} + \frac{1}{4}q_1 &amp; &amp;= 45 - 15\\
+\frac{3}{4}q_1 &amp;= \frac{45}{2} &amp; q_2^* &amp;= \boxed{30}\\
+q_1^* &amp;= \boxed{30}
+\end{align}
+\]</span></p>
+<hr>
+</section>
+<section id="another-cournot-example" class="level2">
+<h2 class="anchored" data-anchor-id="another-cournot-example">Another Cournot Example</h2>
+<blockquote class="blockquote">
+<p>Crude oil is transported across the globe in enormous tanker ships called Very Large Crude Carriers (VLCCs). By 2001, more than 92% of all new VLCCs were built in South Korea and Japan. Assume that the price of new VLCCs (in millions of dollars) is determined by the function <span class="math inline">\(P = 180 - Q\)</span>, where <span class="math inline">\(Q = q_{Korea} + q_{Japan}\)</span>. (That is, assume that only Japan and Korea produce VLCCs, so they are a duopoly.) Assume that the cost of building each ship is $30 million in both Korea and Japan. That is, <span class="math inline">\(c_{Korea} = c_{Japan} = 30\)</span>, where the per-ship cost is measured in millions of dollars.</p>
+</blockquote>
+<hr>
+</section>
+<section id="conclusion-the-economics-of-oligopoly" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-the-economics-of-oligopoly">Conclusion: The Economics of Oligopoly</h2>
+<p>In an oligopoly:</p>
+<ul>
+<li><p>Firms’ prices (quantities) are interdependent.</p></li>
+<li><p>The best-response functions allow us to determine equilibrium prices (or quantities in Bertrand).</p></li>
+</ul>
+<hr>
+</section>
+<section id="interactive-exercise-market-dynamics" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-exercise-market-dynamics">Interactive Exercise: Market Dynamics</h2>
+<p>Let’s extend this:</p>
+<ul>
+<li><p><strong>What happens when a third firm enters the market?</strong></p>
+<ul>
+<li><p>Would prices fall? Would all three firms set similar prices?</p></li>
+<li><p>Or would competition force one firm out of the market?</p></li>
+</ul></li>
+</ul>
+<p>Discuss!</p>
 
 
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>see UO’s <a href="https://teaching.uoregon.edu/resources/academic-integrity-uo">Student Conduct Code</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -4053,6 +4053,818 @@ Table&nbsp;2: Big 10 Game
 <li class="fragment">Of the games we’ve just looked at, the Deer Hunt, the 3x3 coordination game, and Chicken are symmetric games. Bach and Stravinsky is not.</li>
 </ul>
 </div>
+</section></section>
+<section>
+<section id="other-elimination-methods-weakly-dominated-strategies" class="title-slide slide level1 center">
+<h1>Other Elimination Methods: Weakly Dominated Strategies</h1>
+
+</section>
+<section id="weakly-dominated-strategies" class="slide level2">
+<h2>Weakly Dominated Strategies</h2>
+<ul>
+<li><p>It is also possible to find Nash Equilibria by eliminating <span class="hi">weakly dominated</span> strategies</p>
+<ul>
+<li>(strategies for which there is an alternative that is never worse, and sometimes better).</li>
+</ul></li>
+</ul>
+</section>
+<section id="weakly-dominated-strategies-1" class="slide level2">
+<h2>Weakly Dominated Strategies</h2>
+<p>We will not spend a lot of time on this method, because it has two serious flaws:</p>
+<div>
+<ol type="1">
+<li class="fragment">It is possible for a Nash Equilibrium to involve playing a weakly dominated strategy.</li>
+</ol>
+<ul>
+<li class="fragment">IEWDS may therefore eliminate actual Nash Equilibria.</li>
+</ul>
+<ol start="2" type="1">
+<li class="fragment">Unlike IESDS, the order in which you eliminate weakly dominated strategies matters:</li>
+</ol>
+<ul>
+<li class="fragment">you may get different results from different orders of elimination.</li>
+</ul>
+</div>
+</section>
+<section id="example-why-weak-dominance-is-not-useful" class="slide level2">
+<h2>Example: Why Weak Dominance is Not Useful</h2>
+<p>In the game below, B is weakly dominated for both players.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Player 1, Player 2</th>
+<th><span class="math inline">\(A\)</span></th>
+<th><span class="math inline">\(B\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(A\)</span></strong></td>
+<td><span class="math inline">\(2,2\)</span></td>
+<td><span class="math inline">\(1,1\)</span></td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(B\)</span></strong></td>
+<td><span class="math inline">\(1,1\)</span></td>
+<td><span class="math inline">\(1,1\)</span></td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment"><p>If we eliminate the weakly dominated strategy for both players, then the only remaining strategy profile is (A, A)</p>
+<ul>
+<li class="fragment">this is a Nash equilibrium.</li>
+</ul></li>
+<li class="fragment"><p>However, (B, B) is also a Nash equilibrium:</p>
+<ul>
+<li class="fragment"><p>both players get payoff 1, and neither can improve that payoff by changing their own strategy.</p></li>
+<li class="fragment"><p>We failed to find this equilibrium by eliminating weakly dominated strategies.</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="another-example-why-weak-dominance-is-not-useful" class="slide level2">
+<h2>Another Example: Why Weak Dominance is Not Useful</h2>
+<p>In the game below, M and R are weakly dominated.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Player 1, Player 2</th>
+<th><span class="math inline">\(L\)</span></th>
+<th><span class="math inline">\(M\)</span></th>
+<th><span class="math inline">\(R\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(T\)</span></strong></td>
+<td>0, 1</td>
+<td>1, 0</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(B\)</span></strong></td>
+<td>0, 0</td>
+<td>0, 0</td>
+<td>1, 0</td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment">If we begin by eliminating R, then afterwards, M and B are both weakly dominated, and we would eliminate them, leaving only (T, L).</li>
+</ul>
+</div>
+</section>
+<section id="another-example-why-weak-dominance-is-not-useful-1" class="slide level2">
+<h2>Another Example: Why Weak Dominance is Not Useful</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Player 1, Player 2</th>
+<th><span class="math inline">\(L\)</span></th>
+<th><span class="math inline">\(M\)</span></th>
+<th><span class="math inline">\(R\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(T\)</span></strong></td>
+<td>0, 1</td>
+<td>1, 0</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(B\)</span></strong></td>
+<td>0, 0</td>
+<td>0, 0</td>
+<td>1, 0</td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment"><p>However, if we begin by eliminating M, then T and R are both weakly dominated, and if we eliminate them, we are left with only (B, L).</p></li>
+<li class="fragment"><p>Not only does the outcome of IEWDS depend on what we eliminate first, it still fails to find a <strong>third</strong> Nash equilibrium, which is (B, R).</p></li>
+</ul>
+</div>
+</section>
+<section id="other-elimination-methods-non-best-responses" class="slide level2">
+<h2>Other Elimination Methods: Non-Best-Responses</h2>
+<div>
+<ul>
+<li class="fragment">Generally speaking, we can eliminate any strategy which is not rational to play in a NE.</li>
+<li class="fragment">It’s never rational to play strictly dominated strategies, but it’s sometimes rational to play weakly dominated strategies.</li>
+<li class="fragment">There are other categories of non-rational strategies:</li>
+<li class="fragment">A strategy is a <span class="hi">non-best-response</span> or <span class="hi">non-rationalizable strategy</span> if and only if, regardless of what the other players choose, it never provides the best possible payoff.</li>
+<li class="fragment">I like to describe non-rationalizable strategies as strategies that you’d have to be crazy to think were a good idea, i.e.&nbsp;you can’t rationalize playing them.</li>
+</ul>
+</div>
+</section>
+<section id="strictly-dominated-vs.-non-best-response" class="slide level2">
+<h2>Strictly Dominated vs.&nbsp;Non-Best-Response</h2>
+<div>
+<ul>
+<li class="fragment">Non-rationalizability is very similar to strict dominance, but here’s the difference:</li>
+<li class="fragment">Strict dominance is pairwise: a strategy <span class="math inline">\(s\)</span> dominates another, <span class="math inline">\(s'\)</span>, if <span class="math inline">\(s\)</span> specifically always gives a better payoff than <span class="math inline">\(s'\)</span>.</li>
+<li class="fragment">Non-rationalizability is a property of a single strategy: for a strategy to be non-rationalizable, it means that there is always <em>some</em> option that gives a better payoff—but the better option doesn’t always have to be the same strategy.</li>
+<li class="fragment">To put it another way: strategy <span class="math inline">\(s\)</span> is not a best response if there is always <strong>some strategy* which is better. To be strictly dominated, there must be </strong>one particular strategy** which is always better.</li>
+</ul>
+</div>
+</section>
+<section id="example-non-best-responses" class="slide level2">
+<h2>Example: Non-Best-Responses</h2>
+<p>In the game below, there are no strictly dominated strategies, meaning that IESDS will not do anything to simplify it.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td colspan="3" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-5</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
+<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
+<td style="text-align: center;">0, 4</td>
+<td style="text-align: center;">1, 2</td>
+<td style="text-align: center;">3, 3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
+<td style="text-align: center;">1, 2</td>
+<td style="text-align: center;">0, 3</td>
+<td style="text-align: center;">1, 4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
+<td style="text-align: center;">3, 3</td>
+<td style="text-align: center;">1, 2</td>
+<td style="text-align: center;">0, 1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment"><p>However, we can see that B is non-rationalizable for Player 1: regardless of whether Player 2 chooses a, b, or c, Player 1 is better off playing either A or C.</p></li>
+<li class="fragment"><p>Also, b is non-rationalizable for Player 2.</p></li>
+</ul>
+</div>
+</section>
+<section id="another-example-non-best-responses" class="slide level2">
+<h2>Another Example: Non-Best-Responses</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td colspan="4" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
+<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
+<td style="text-align: center;">1, 0</td>
+<td style="text-align: center;">2, 1</td>
+<td style="text-align: center;">3, 1</td>
+<td style="text-align: center;">4, 2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
+<td style="text-align: center;">3, 1</td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">2, 0</td>
+<td style="text-align: center;">3, 0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
+<td style="text-align: center;">3, 1</td>
+<td style="text-align: center;">4, 0</td>
+<td style="text-align: center;">1, 0</td>
+<td style="text-align: center;">2, 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(D\)</span></td>
+<td style="text-align: center;">4, 2</td>
+<td style="text-align: center;">3, 0</td>
+<td style="text-align: center;">2, 1</td>
+<td style="text-align: center;">1, 1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="iterated-elimination-of-non-best-responses" class="slide level2">
+<h2>Iterated Elimination of Non-Best-Responses</h2>
+<div>
+<ul>
+<li class="fragment">It is not rational to play a non-best-response strategy in a pure-strategy context. (As we’ll see much later, it’s more complicated in a mixed-strategy context).</li>
+<li class="fragment">Any strictly dominated strategy is also not a best response, but not all NBR strategies are strictly dominated.</li>
+<li class="fragment">Because of this, if we eliminate non-best-responses, using the same steps as IESDS, this process will always eliminate the same strategies, and it may eliminate even more!</li>
+<li class="fragment">This process is, naturally, called Iterative Elimination of Non-Best-Responses (IENBR).</li>
+</ul>
+</div>
+</section>
+<section id="example-ienbr" class="slide level2">
+<h2>Example: IENBR</h2>
+<p>Returning to this same example, we can start by eliminating B.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td colspan="3" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-5</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
+<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
+<td style="text-align: center;">0, 4</td>
+<td style="text-align: center;">1, 2</td>
+<td style="text-align: center;">3, 3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
+<td style="text-align: center;">1, 2</td>
+<td style="text-align: center;">0, 3</td>
+<td style="text-align: center;">1, 4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
+<td style="text-align: center;">3, 3</td>
+<td style="text-align: center;">1, 2</td>
+<td style="text-align: center;">0, 1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment">Once we do this, we can now see that b and c are non-rationalizable, and eliminate them.</li>
+<li class="fragment">Finally, we can see that B is non-rationalizable and eliminate it, leaving only the strategy profile (C, a), which is the Nash equilibrium of this game.</li>
+</ul>
+</div>
+</section>
+<section id="another-example-ienbr" class="slide level2">
+<h2>Another Example: IENBR</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td colspan="4" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
+<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
+<td style="text-align: center;">1, 0</td>
+<td style="text-align: center;">2, 1</td>
+<td style="text-align: center;">3, 1</td>
+<td style="text-align: center;">4, 2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
+<td style="text-align: center;">3, 1</td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">2, 0</td>
+<td style="text-align: center;">3, 0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
+<td style="text-align: center;">3, 1</td>
+<td style="text-align: center;">4, 0</td>
+<td style="text-align: center;">1, 0</td>
+<td style="text-align: center;">2, 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(D\)</span></td>
+<td style="text-align: center;">4, 2</td>
+<td style="text-align: center;">3, 0</td>
+<td style="text-align: center;">2, 1</td>
+<td style="text-align: center;">1, 1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="iclicker-q4" class="slide level2">
+<h2>iClicker Q4</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td colspan="3" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(y\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(z\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-5</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1,3\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2,2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(3,2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"><span class="math inline">\(Y\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2,2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2,2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(4,3\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"><span class="math inline">\(Z\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1,1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0,2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1,1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>After eliminating Z, which is strictly dominated, what strategy is a non-best-response?
+<ol type="1">
+<li>X</li>
+<li>Y</li>
+<li>Z</li>
+<li>y</li>
+<li>z</li>
+</ol></li>
+</ul>
+</section>
+<section id="iclicker-q5" class="slide level2">
+<h2>iClicker Q5</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td colspan="3" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(y\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(z\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-5</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1,3\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2,2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(3,2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"><span class="math inline">\(Y\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2,2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(2,2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(4,3\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"><span class="math inline">\(Z\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1,1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0,2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(1,1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>If we complete IENBR on this game table, what strategy profile is left at the end?
+<ol type="1">
+<li>(X, x)</li>
+<li>(X, z)</li>
+<li>(Y, x)</li>
+<li>(Y, z)</li>
+<li>There is more than one strategy profile left.</li>
+</ol></li>
+</ul>
+</section>
+<section id="failures-of-elimination-methods-1" class="slide level2">
+<h2>Failures of Elimination Methods</h2>
+<div>
+<ul>
+<li class="fragment">There’s no guarantee that any particular game will contain strategies that are either strictly dominated or non-rationalizable.</li>
+<li class="fragment">Even when there are strategies we can eliminate, there may not be enough of them to find a NE just by elimination.</li>
+<li class="fragment">So why bother with this?</li>
+<li class="fragment">Even if elimination doesn’t immediately identify a NE, it can still be helpful to simplify the game before trying other methods.</li>
+<li class="fragment">Simplifying by elimination is <strong>especially</strong> useful when dealing with mixed strategies—which we’ll get to after the midterm.</li>
+</ul>
+</div>
+</section>
+<section id="another-example-when-elimination-does-nothing-1" class="slide level2">
+<h2>Another Example: When Elimination Does Nothing</h2>
+<div>
+<ul>
+<li class="fragment"><p>This game has <strong>absolutely no strategies</strong> that can be eliminated: none are strictly dominated or non-rationalizable.</p></li>
+<li class="fragment"><p>We can still find the NEs (of which there are quite a few) using best responses:</p></li>
+</ul>
+</div>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td colspan="4" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
+<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
+<td style="text-align: center;">1, 1</td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">2, 1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
+<td style="text-align: center;">1, 3</td>
+<td style="text-align: center;">1, 3</td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">2, 3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
+<td style="text-align: center;">1, 2</td>
+<td style="text-align: center;">2, 4</td>
+<td style="text-align: center;">1, 3</td>
+<td style="text-align: center;">2, 3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(D\)</span></td>
+<td style="text-align: center;">3, 2</td>
+<td style="text-align: center;">2, 3</td>
+<td style="text-align: center;">1, 4</td>
+<td style="text-align: center;">2, 2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="iclicker-q4-1" class="slide level2">
+<h2>iClicker Q4</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td colspan="3" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(Y\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(Z\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-5</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
+<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
+<td style="text-align: center;">3, 3</td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">1, 1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
+<td style="text-align: center;">4, 2</td>
+<td style="text-align: center;">1, 1</td>
+<td style="text-align: center;">2, 2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
+<td style="text-align: center;">1, 1</td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">3, 1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-5</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment">In the game shown above, which of the following are the Nash Equilibria? (You will need to find best responses for both players.)
+<ol type="1">
+<li class="fragment">(A, X)</li>
+<li class="fragment">(A, Y)</li>
+<li class="fragment">(B, X)</li>
+<li class="fragment">(C, Z)</li>
+<li class="fragment">More than one of the above.</li>
+</ol></li>
+</ul>
+</div>
+</section>
+<section id="best-responses-and-non-rationalizability" class="slide level2">
+<h2>Best Responses and Non-Rationalizability</h2>
+<div>
+<ul>
+<li class="fragment">Finding best responses first makes it a lot easier to search for non-rationalizable strategies.</li>
+<li class="fragment">Recall that a non-rationalizable strategy can also be called a non-best response: if none of the payoffs of a strategy are marked to indicate that it is a best-response, it is non-rationalizable. In other words:
+<ul>
+<li class="fragment">Any row in which none of Player 1’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
+<li class="fragment">Any column in which none of Player 2’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="example-non-rationalizability-from-best-responses" class="slide level2">
+<h2>Example: Non-Rationalizability from Best Responses</h2>
+<div>
+<ul>
+<li class="fragment"><p>Finding best responses first makes it a lot easier to search for non-rationalizable strategies.</p></li>
+<li class="fragment"><p>Recall that a non-rationalizable strategy can also be called a non-best response: if none of the payoffs of a strategy are marked to indicate that it is a best-response, it is non-rationalizable. In other words:</p>
+<ul>
+<li class="fragment"><p>Any row in which none of Player 1’s payoffs are marked to indicate a best response, is non-rationalizable.</p>
+<ul>
+<li class="fragment">Any column in which none of Player 2’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="example-non-rationalizability-from-best-responses-1" class="slide level2">
+<h2>Example: Non-Rationalizability from Best Responses</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td colspan="4" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
+<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
+<td style="text-align: center;">1, 0</td>
+<td style="text-align: center;">2, 1</td>
+<td style="text-align: center;"><strong>3</strong>, 1</td>
+<td style="text-align: center;"><strong>4</strong>, <strong>2</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
+<td style="text-align: center;">3, 1</td>
+<td style="text-align: center;">2, <strong>2</strong></td>
+<td style="text-align: center;">2, 0</td>
+<td style="text-align: center;">3, 0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
+<td style="text-align: center;">3, <strong>1</strong></td>
+<td style="text-align: center;"><strong>4</strong>, 0</td>
+<td style="text-align: center;">1, 0</td>
+<td style="text-align: center;">2, 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(D\)</span></td>
+<td style="text-align: center;"><strong>4</strong>, <strong>2</strong></td>
+<td style="text-align: center;">3, 0</td>
+<td style="text-align: center;">2, 1</td>
+<td style="text-align: center;">1, 1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment"><p>We found these best responses earlier (as well as the NEs of this game): note that in the row for Player 1’s strategy B, none of Player 1’s strategies are marked.</p></li>
+<li class="fragment"><p>Likewise, none of Player 2’s payoffs are marked in column c.&nbsp;B and c are non-rationalizable strategies.</p></li>
+</ul>
+</div>
+</section>
+<section id="example-non-rationalizability-from-best-responses-2" class="slide level2">
+<h2>Example: Non-Rationalizability from Best Responses</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td colspan="4" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
+<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
+<td style="text-align: center;">1, 0</td>
+<td style="text-align: center;">2, 1</td>
+<td style="text-align: center;"><strong>3</strong>, 1</td>
+<td style="text-align: center;"><strong>4</strong>, <strong>2</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
+<td style="text-align: center;">3, 1</td>
+<td style="text-align: center;">2, <strong>2</strong></td>
+<td style="text-align: center;">2, 0</td>
+<td style="text-align: center;">3, 0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
+<td style="text-align: center;">3, <strong>1</strong></td>
+<td style="text-align: center;"><strong>4</strong>, 0</td>
+<td style="text-align: center;">1, 0</td>
+<td style="text-align: center;">2, 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"><span class="math inline">\(D\)</span></td>
+<td style="text-align: center;"><strong>4</strong>, <strong>2</strong></td>
+<td style="text-align: center;">3, 0</td>
+<td style="text-align: center;">2, 1</td>
+<td style="text-align: center;">1, 1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span>3-6</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment">Performing IENBR reveals additional non-rationalizable strategies:
+<ul>
+<li class="fragment">Once we eliminate B, b becomes non-rationalizable.</li>
+<li class="fragment">Once we eliminate b, C becomes non-rationalizable.</li>
+</ul></li>
+</ul>
+</div>
 
 <div class="quarto-auto-generated-content">
 <p><img src="UOSignature-356.png" class="slide-logo"></p>

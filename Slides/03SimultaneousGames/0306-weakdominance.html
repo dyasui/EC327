@@ -67,10 +67,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-sidebar docked slimcontent">
+<body class="nav-sidebar docked fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -181,234 +210,263 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 
 
-<section id="syllabus-document" class="level2">
-<h2 class="anchored" data-anchor-id="syllabus-document">Syllabus Document</h2>
-<div class="{incremental}">
+<section id="other-elimination-methods-weakly-dominated-strategies" class="level1">
+<h1>Other Elimination Methods: Weakly Dominated Strategies</h1>
+<section id="weakly-dominated-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="weakly-dominated-strategies">Weakly Dominated Strategies</h2>
 <ul>
-<li>Most up to date version on github</li>
-<li>I will also upload to Canvas</li>
-<li>print, sign, and upload as your first assignment</li>
-</ul>
-</div>
-</section>
-<section id="class-expectations" class="level1">
-<h1>Class Expectations</h1>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<li><p>It is also possible to find Nash Equilibria by eliminating <span class="hi">weakly dominated</span> strategies</p>
 <ul>
-<li><p><strong>Courses:</strong> EC201 <em>or</em> EC202</p></li>
-<li><p><strong>Knowledge:</strong> This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.</p>
-<ul>
-<li>There are great free resources out there like <a href="https://www.khanacademy.org/math/algebra">Khan Academy</a>, but always feel free to reach out for help or other suggestions.</li>
+<li>(strategies for which there is an alternative that is never worse, and sometimes better).</li>
 </ul></li>
 </ul>
 <hr>
 </section>
-<section id="student-expectations" class="level2">
-<h2 class="anchored" data-anchor-id="student-expectations">Student Expectations</h2>
+<section id="weakly-dominated-strategies-1" class="level2">
+<h2 class="anchored" data-anchor-id="weakly-dominated-strategies-1">Weakly Dominated Strategies</h2>
+<p>We will not spend a lot of time on this method, because it has two serious flaws:</p>
 <div class="incremental">
-<ul class="incremental">
-<li><span class="hii">Come to class</span>
-<ul class="incremental">
-<li>Pay attention to lectures, take notes, review topics at home</li>
-<li>Participate in group work &amp; activities</li>
-<li><span class="hi">Ask questions!</span></li>
-</ul></li>
-<li><span class="hii">Read the textbook</span></li>
-<li><span class="hii">Communicate respectfully</span>
-<ul class="incremental">
-<li>With your classmates</li>
-<li>With me &amp; grader</li>
-</ul></li>
-<li><span class="hii">Have academic integrity</span> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
-<ul class="incremental">
-<li>Verify that all submitted work is your own</li>
-<li>Provide sources for <em>all</em> information that you found outside this class</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="instructor-expectations" class="level2">
-<h2 class="anchored" data-anchor-id="instructor-expectations">Instructor Expectations</h2>
-<ul>
-<li><span class="h">Provide course material</span>
-<ul>
-<li>Slides will be updated on github</li>
-<li>I will also try to post them on Canvas, but not as regularly</li>
-<li>Assignments posted on Canvas w/ due dates, submission entry</li>
-</ul></li>
-<li><span class="h">Face-to-face Interaction</span>
-<ul>
-<li><span class="hi">Classes</span>
-<ul>
-<li>Ask me to clarify if something doesn’t make sense</li>
-<li>Ask me to slow down if I’m going too fast</li>
-</ul></li>
-<li><span class="hi">Office Hours</span>
-<ul>
-<li>Use them!!</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="admin-stuff" class="level1 page-columns page-full">
-<h1>Admin Stuff</h1>
-<section id="problem-sets" class="level2">
-<h2 class="anchored" data-anchor-id="problem-sets">Problem Sets</h2>
-<p>You will practice what we learn in class on independently.</p>
-<p>Each homework assignment will include a few problems that will be similar to what you will see on exams.</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>Learning something new takes practice, so these are designed to help you keep up with the concepts</p></li>
-<li><p>You will be graded not only on whether you got a certain answer, but also more importantly on <em>how you communicate your understanding</em></p>
-<ul class="incremental">
-<li>See Canvas rubric for more info</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="class-activities" class="level2">
-<h2 class="anchored" data-anchor-id="class-activities">Class Activities</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Sometimes I will ask you to play the types of games we discuss in lectures
-<ul class="incremental">
-<li>Record the strategies you chose and the outcomes</li>
-<li>Reflect on how you played the game</li>
-<li>Relate it to lecture concepts</li>
-</ul></li>
-</ul>
-</div>
-<div class="notes">
-<ul>
-<li>I’m still working out how best to implement</li>
-<li>this is how you participate, records attendance on activity days</li>
-<li>hopefully lets you experience first-hand the things we learn</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="exams" class="level2">
-<h2 class="anchored" data-anchor-id="exams">Exams</h2>
-<p>You will demonstrate how well you understand concepts individually on a <span class="hi">midterm</span> and a <span class="hi">final</span> exam</p>
-<div class="incremental">
-<ul class="incremental">
-<li><span class="hi">Midterm</span>
-<ul class="incremental">
-<li>sometime around week 5 (Oct.&nbsp;28th or 30th)</li>
-<li>Will test you on definitions, solution concepts, and apply them to critical thinking problems</li>
-</ul></li>
-<li><span class="hi">Final</span>
-<ul class="incremental">
-<li>finals week of December 9 (check duckweb for specific date)</li>
-<li>Covers everything we learned in the quarter, with more focus on concepts from the 2nd half</li>
-</ul></li>
-</ul>
-</div>
-<div class="notes">
-<ul>
-<li>Dept policy is 65% As &amp; Bs</li>
-<li>expect exams to be difficult</li>
-<li>Best way to prepare is lots of practice</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="grading" class="level2">
-<h2 class="anchored" data-anchor-id="grading">Grading</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><span class="hi">Problem Sets</span></p>
-<p><span class="hi">In-class Activities</span></p>
-<p><span class="hi">Midterm</span></p>
-<p><span class="hi">Final</span></p>
-</div><div class="column" style="width:40%;">
-<p>30%</p>
-<p>10%</p>
-<p>30%</p>
-<p>30%</p>
-</div>
-</div>
-<hr>
-<section id="policies" class="level3">
-<h3 class="anchored" data-anchor-id="policies">Policies</h3>
-<div class="incremental">
-<ul class="incremental">
-<li><span class="h">No make-up exams!</span>
-<ul class="incremental">
-<li>if you absolutely cannot attend midterm, you can add its weight to final exam</li>
-</ul></li>
-<li>Problem set keys posted automatically after deadline
-<ul class="incremental">
-<li>-&gt; no late submissions accepted</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-</section>
-<section id="campus-resources" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="campus-resources">Campus Resources</h2>
-<ul>
-<li><span class="hi">Accessible Education Center</span>
-<ul>
-<li><a href="https://aec.uoregon.edu/">aec.uoregon.edu</a></li>
-</ul></li>
-<li><span class="hi">Support for vicitms of assault, harassment, stalking</span>
-<ul>
-<li><a href="https://safe.uoregon.edu/">safe.uoregon.edu</a></li>
-<li>24/7 hotline: (+1) 541-346-SAFE (7244)</li>
-</ul></li>
-<li><span class="hi">Health and Wellbeing</span>
-<ul>
-<li><a href="https://counseling.uoregon.edu">University Counseling Services</a></li>
-<li><a href="https://basicneeds.uoregon.edu/">Basic Needs Program</a></li>
-</ul></li>
-<li><span class="hi">Religious Observance Accomadations</span>
-<ul>
-<li><a href="https://provost.uoregon.edu/religious-observance-accommodations-policy">Provost website</a></li>
-</ul></li>
-</ul>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>These resources and others are also included in the course syllabus</p>
-</div></div><div class="notes">
-<ul>
-<li>I am here to support you, but not trained or equipped for emergencies</li>
-<li>I will not ask for reasons you cannot attend class or exams</li>
-<li>I am not a mandated reporter: will only pass on info if you request</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="course-pages" class="level2">
-<h2 class="anchored" data-anchor-id="course-pages">Course Pages</h2>
-<p><a href="https://canvas.uoregon.edu/courses/233504">https://canvas.uoregon.edu/courses/251353</a> - submit your assignments - check deadlines</p>
-<p><a href="https://github.com/dyasui/EC327">github.com/dyasui/EC327</a> - Find up-to-date versions of slides/assignments - <em>let me know if links are broken</em></p>
-
-
-</section>
-</section>
-
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>see UO’s <a href="https://teaching.uoregon.edu/resources/academic-integrity-uo">Student Conduct Code</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<ol class="incremental" type="1">
+<li>It is possible for a Nash Equilibrium to involve playing a weakly dominated strategy.</li>
 </ol>
-</section></div></main> <!-- /main -->
+<ul class="incremental">
+<li>IEWDS may therefore eliminate actual Nash Equilibria.</li>
+</ul>
+<ol class="incremental" start="2" type="1">
+<li>Unlike IESDS, the order in which you eliminate weakly dominated strategies matters:</li>
+</ol>
+<ul class="incremental">
+<li>you may get different results from different orders of elimination.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-why-weak-dominance-is-not-useful" class="level2">
+<h2 class="anchored" data-anchor-id="example-why-weak-dominance-is-not-useful">Example: Why Weak Dominance is Not Useful</h2>
+<p>In the game below, B is weakly dominated for both players.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Player 1, Player 2</th>
+<th><span class="math inline">\(A\)</span></th>
+<th><span class="math inline">\(B\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(A\)</span></strong></td>
+<td><span class="math inline">\(2,2\)</span></td>
+<td><span class="math inline">\(1,1\)</span></td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(B\)</span></strong></td>
+<td><span class="math inline">\(1,1\)</span></td>
+<td><span class="math inline">\(1,1\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<ul class="incremental">
+<li><p>If we eliminate the weakly dominated strategy for both players, then the only remaining strategy profile is (A, A)</p>
+<ul class="incremental">
+<li>this is a Nash equilibrium.</li>
+</ul></li>
+<li><p>However, (B, B) is also a Nash equilibrium:</p>
+<ul class="incremental">
+<li><p>both players get payoff 1, and neither can improve that payoff by changing their own strategy.</p></li>
+<li><p>We failed to find this equilibrium by eliminating weakly dominated strategies.</p></li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-why-weak-dominance-is-not-useful" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-why-weak-dominance-is-not-useful">Another Example: Why Weak Dominance is Not Useful</h2>
+<p>In the game below, M and R are weakly dominated.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Player 1, Player 2</th>
+<th><span class="math inline">\(L\)</span></th>
+<th><span class="math inline">\(M\)</span></th>
+<th><span class="math inline">\(R\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(T\)</span></strong></td>
+<td>0, 1</td>
+<td>1, 0</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(B\)</span></strong></td>
+<td>0, 0</td>
+<td>0, 0</td>
+<td>1, 0</td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<ul class="incremental">
+<li>If we begin by eliminating R, then afterwards, M and B are both weakly dominated, and we would eliminate them, leaving only (T, L).</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-why-weak-dominance-is-not-useful-1" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-why-weak-dominance-is-not-useful-1">Another Example: Why Weak Dominance is Not Useful</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Player 1, Player 2</th>
+<th><span class="math inline">\(L\)</span></th>
+<th><span class="math inline">\(M\)</span></th>
+<th><span class="math inline">\(R\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(T\)</span></strong></td>
+<td>0, 1</td>
+<td>1, 0</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(B\)</span></strong></td>
+<td>0, 0</td>
+<td>0, 0</td>
+<td>1, 0</td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<ul class="incremental">
+<li><p>However, if we begin by eliminating M, then T and R are both weakly dominated, and if we eliminate them, we are left with only (B, L).</p></li>
+<li><p>Not only does the outcome of IEWDS depend on what we eliminate first, it still fails to find a <strong>third</strong> Nash equilibrium, which is (B, R).</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="other-elimination-methods-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="other-elimination-methods-non-best-responses">Other Elimination Methods: Non-Best-Responses</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Generally speaking, we can eliminate any strategy which is not rational to play in a NE.</li>
+<li>It’s never rational to play strictly dominated strategies, but it’s sometimes rational to play weakly dominated strategies.</li>
+<li>There are other categories of non-rational strategies:</li>
+<li>A strategy is a <span class="hi">non-best-response</span> or <span class="hi">non-rationalizable strategy</span> if and only if, regardless of what the other players choose, it never provides the best possible payoff.</li>
+<li>I like to describe non-rationalizable strategies as strategies that you’d have to be crazy to think were a good idea, i.e.&nbsp;you can’t rationalize playing them.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="strictly-dominated-vs.-non-best-response" class="level2">
+<h2 class="anchored" data-anchor-id="strictly-dominated-vs.-non-best-response">Strictly Dominated vs.&nbsp;Non-Best-Response</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Non-rationalizability is very similar to strict dominance, but here’s the difference:</li>
+<li>Strict dominance is pairwise: a strategy <span class="math inline">\(s\)</span> dominates another, <span class="math inline">\(s'\)</span>, if <span class="math inline">\(s\)</span> specifically always gives a better payoff than <span class="math inline">\(s'\)</span>.</li>
+<li>Non-rationalizability is a property of a single strategy: for a strategy to be non-rationalizable, it means that there is always <em>some</em> option that gives a better payoff—but the better option doesn’t always have to be the same strategy.</li>
+<li>To put it another way: strategy <span class="math inline">\(s\)</span> is not a best response if there is always <strong>some strategy* which is better. To be strictly dominated, there must be </strong>one particular strategy** which is always better.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="example-non-best-responses">Example: Non-Best-Responses</h2>
+<p>In the game below, there are no strictly dominated strategies, meaning that IESDS will not do anything to simplify it.</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>However, we can see that B is non-rationalizable for Player 1: regardless of whether Player 2 chooses a, b, or c, Player 1 is better off playing either A or C.</p></li>
+<li><p>Also, b is non-rationalizable for Player 2.</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-non-best-responses">Another Example: Non-Best-Responses</h2>
+<hr>
+</section>
+<section id="iterated-elimination-of-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="iterated-elimination-of-non-best-responses">Iterated Elimination of Non-Best-Responses</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>It is not rational to play a non-best-response strategy in a pure-strategy context. (As we’ll see much later, it’s more complicated in a mixed-strategy context).</li>
+<li>Any strictly dominated strategy is also not a best response, but not all NBR strategies are strictly dominated.</li>
+<li>Because of this, if we eliminate non-best-responses, using the same steps as IESDS, this process will always eliminate the same strategies, and it may eliminate even more!</li>
+<li>This process is, naturally, called Iterative Elimination of Non-Best-Responses (IENBR).</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-ienbr" class="level2">
+<h2 class="anchored" data-anchor-id="example-ienbr">Example: IENBR</h2>
+<p>Returning to this same example, we can start by eliminating B.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Once we do this, we can now see that b and c are non-rationalizable, and eliminate them.</li>
+<li>Finally, we can see that B is non-rationalizable and eliminate it, leaving only the strategy profile (C, a), which is the Nash equilibrium of this game.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-ienbr" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-ienbr">Another Example: IENBR</h2>
+<hr>
+</section>
+<section id="iclicker-q4" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-q4">iClicker Q4</h2>
+<ul>
+<li>After eliminating Z, which is strictly dominated, what strategy is a non-best-response?
+<ol type="1">
+<li>X</li>
+<li>Y</li>
+<li>Z</li>
+<li>y</li>
+<li>z</li>
+</ol></li>
+</ul>
+<hr>
+</section>
+<section id="iclicker-q5" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-q5">iClicker Q5</h2>
+<ul>
+<li>If we complete IENBR on this game table, what strategy profile is left at the end?
+<ol type="1">
+<li>(X, x)</li>
+<li>(X, z)</li>
+<li>(Y, x)</li>
+<li>(Y, z)</li>
+<li>There is more than one strategy profile left.</li>
+</ol></li>
+</ul>
+<hr>
+</section>
+<section id="failures-of-elimination-methods" class="level2">
+<h2 class="anchored" data-anchor-id="failures-of-elimination-methods">Failures of Elimination Methods</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>There’s no guarantee that any particular game will contain strategies that are either strictly dominated or non-rationalizable.</li>
+<li>Even when there are strategies we can eliminate, there may not be enough of them to find a NE just by elimination.</li>
+<li>So why bother with this?</li>
+<li>Even if elimination doesn’t immediately identify a NE, it can still be helpful to simplify the game before trying other methods.</li>
+<li>Simplifying by elimination is <strong>especially</strong> useful when dealing with mixed strategies—which we’ll get to after the midterm.</li>
+</ul>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

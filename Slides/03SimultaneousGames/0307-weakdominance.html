@@ -162,6 +162,12 @@ window.Quarto = {
  <span class="menu-text">Simultaneous Games</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Slides/04ContinuousStrats/04-main.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Continuous Strategies</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -185,6 +191,18 @@ window.Quarto = {
  <span class="menu-text">Survivor Flags</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/03PirateTreasure/PirateTreasure.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pirate Treasure</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../activities/04BlottoElection/BlottoElection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Election Blotto</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -199,8 +217,8 @@ window.Quarto = {
 
 
 
-<section id="other-elimination-methods-weakly-dominated-strategies" class="level2">
-<h2 class="anchored" data-anchor-id="other-elimination-methods-weakly-dominated-strategies">Other Elimination Methods: Weakly Dominated Strategies</h2>
+<section id="other-elimination-methods-weakly-dominated-strategies" class="level1">
+<h1>Other Elimination Methods: Weakly Dominated Strategies</h1>
 <div class="incremental">
 <ul class="incremental">
 <li>It is also possible to find Nash Equilibria by eliminating <span class="hi">weakly dominated</span> strategies (strategies for which there is an alternative that is never worse, and sometimes better).</li>
@@ -208,7 +226,6 @@ window.Quarto = {
 </ul>
 </div>
 <hr>
-</section>
 <section id="example-why-weak-dominance-is-not-useful" class="level2">
 <h2 class="anchored" data-anchor-id="example-why-weak-dominance-is-not-useful">Example: Why Weak Dominance is Not Useful</h2>
 <p>In the game below, B is weakly dominated for both players.</p>
@@ -354,6 +371,7 @@ window.Quarto = {
 
 
 </section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -437,7 +455,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/dyasui\.github\.io\/EC327\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

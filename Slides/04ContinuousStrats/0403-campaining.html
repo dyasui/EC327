@@ -67,10 +67,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-sidebar docked slimcontent">
+<body class="nav-sidebar docked fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -181,234 +210,134 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 
 
-<section id="syllabus-document" class="level2">
-<h2 class="anchored" data-anchor-id="syllabus-document">Syllabus Document</h2>
-<div class="{incremental}">
+<section id="political-campaign-advertising" class="level1">
+<h1>Political Campaign Advertising</h1>
+<section id="setup-competing-with-ads" class="level2">
+<h2 class="anchored" data-anchor-id="setup-competing-with-ads">Setup: Competing with Ads</h2>
+<p>Two political parties, L and R, are competing in an election by spending money on campaign advertising.</p>
+<section id="key-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="key-concepts">Key Concepts:</h3>
 <ul>
-<li>Most up to date version on github</li>
-<li>I will also upload to Canvas</li>
-<li>print, sign, and upload as your first assignment</li>
-</ul>
-</div>
-</section>
-<section id="class-expectations" class="level1">
-<h1>Class Expectations</h1>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<li><strong>Vote shares</strong> depend on each party’s advertising:
 <ul>
-<li><p><strong>Courses:</strong> EC201 <em>or</em> EC202</p></li>
-<li><p><strong>Knowledge:</strong> This class will require you to use some simple algebra and graphing skills. If you felt uncomfortable with the level of math in EC201, I recommend that you review how to solve simple systems of equations, inequalities, and fractions.</p>
+<li>If party L spends <span class="math inline">\(x\)</span> million dollars and party R spends <span class="math inline">\(y\)</span> million dollars:
 <ul>
-<li>There are great free resources out there like <a href="https://www.khanacademy.org/math/algebra">Khan Academy</a>, but always feel free to reach out for help or other suggestions.</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="student-expectations" class="level2">
-<h2 class="anchored" data-anchor-id="student-expectations">Student Expectations</h2>
-<div class="incremental">
-<ul class="incremental">
-<li><span class="hii">Come to class</span>
-<ul class="incremental">
-<li>Pay attention to lectures, take notes, review topics at home</li>
-<li>Participate in group work &amp; activities</li>
-<li><span class="hi">Ask questions!</span></li>
-</ul></li>
-<li><span class="hii">Read the textbook</span></li>
-<li><span class="hii">Communicate respectfully</span>
-<ul class="incremental">
-<li>With your classmates</li>
-<li>With me &amp; grader</li>
-</ul></li>
-<li><span class="hii">Have academic integrity</span> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
-<ul class="incremental">
-<li>Verify that all submitted work is your own</li>
-<li>Provide sources for <em>all</em> information that you found outside this class</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="instructor-expectations" class="level2">
-<h2 class="anchored" data-anchor-id="instructor-expectations">Instructor Expectations</h2>
-<ul>
-<li><span class="h">Provide course material</span>
-<ul>
-<li>Slides will be updated on github</li>
-<li>I will also try to post them on Canvas, but not as regularly</li>
-<li>Assignments posted on Canvas w/ due dates, submission entry</li>
-</ul></li>
-<li><span class="h">Face-to-face Interaction</span>
-<ul>
-<li><span class="hi">Classes</span>
-<ul>
-<li>Ask me to clarify if something doesn’t make sense</li>
-<li>Ask me to slow down if I’m going too fast</li>
-</ul></li>
-<li><span class="hi">Office Hours</span>
-<ul>
-<li>Use them!!</li>
+<li>Party L’s vote share is <span class="math inline">\(\frac{x}{x + y}\)</span></li>
+<li>Party R’s vote share is <span class="math inline">\(\frac{y}{x + y}\)</span></li>
 </ul></li>
 </ul></li>
 </ul>
-</section>
-</section>
-<section id="admin-stuff" class="level1 page-columns page-full">
-<h1>Admin Stuff</h1>
-<section id="problem-sets" class="level2">
-<h2 class="anchored" data-anchor-id="problem-sets">Problem Sets</h2>
-<p>You will practice what we learn in class on independently.</p>
-<p>Each homework assignment will include a few problems that will be similar to what you will see on exams.</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>Learning something new takes practice, so these are designed to help you keep up with the concepts</p></li>
-<li><p>You will be graded not only on whether you got a certain answer, but also more importantly on <em>how you communicate your understanding</em></p>
-<ul class="incremental">
-<li>See Canvas rubric for more info</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="class-activities" class="level2">
-<h2 class="anchored" data-anchor-id="class-activities">Class Activities</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Sometimes I will ask you to play the types of games we discuss in lectures
-<ul class="incremental">
-<li>Record the strategies you chose and the outcomes</li>
-<li>Reflect on how you played the game</li>
-<li>Relate it to lecture concepts</li>
-</ul></li>
-</ul>
-</div>
-<div class="notes">
-<ul>
-<li>I’m still working out how best to implement</li>
-<li>this is how you participate, records attendance on activity days</li>
-<li>hopefully lets you experience first-hand the things we learn</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="exams" class="level2">
-<h2 class="anchored" data-anchor-id="exams">Exams</h2>
-<p>You will demonstrate how well you understand concepts individually on a <span class="hi">midterm</span> and a <span class="hi">final</span> exam</p>
-<div class="incremental">
-<ul class="incremental">
-<li><span class="hi">Midterm</span>
-<ul class="incremental">
-<li>sometime around week 5 (Oct.&nbsp;28th or 30th)</li>
-<li>Will test you on definitions, solution concepts, and apply them to critical thinking problems</li>
-</ul></li>
-<li><span class="hi">Final</span>
-<ul class="incremental">
-<li>finals week of December 9 (check duckweb for specific date)</li>
-<li>Covers everything we learned in the quarter, with more focus on concepts from the 2nd half</li>
-</ul></li>
-</ul>
-</div>
-<div class="notes">
-<ul>
-<li>Dept policy is 65% As &amp; Bs</li>
-<li>expect exams to be difficult</li>
-<li>Best way to prepare is lots of practice</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="grading" class="level2">
-<h2 class="anchored" data-anchor-id="grading">Grading</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><span class="hi">Problem Sets</span></p>
-<p><span class="hi">In-class Activities</span></p>
-<p><span class="hi">Midterm</span></p>
-<p><span class="hi">Final</span></p>
-</div><div class="column" style="width:40%;">
-<p>30%</p>
-<p>10%</p>
-<p>30%</p>
-<p>30%</p>
-</div>
-</div>
-<hr>
-<section id="policies" class="level3">
-<h3 class="anchored" data-anchor-id="policies">Policies</h3>
-<div class="incremental">
-<ul class="incremental">
-<li><span class="h">No make-up exams!</span>
-<ul class="incremental">
-<li>if you absolutely cannot attend midterm, you can add its weight to final exam</li>
-</ul></li>
-<li>Problem set keys posted automatically after deadline
-<ul class="incremental">
-<li>-&gt; no late submissions accepted</li>
-</ul></li>
-</ul>
-</div>
+<p><strong>Question:</strong> How might spending more on ads increase one party’s vote share?</p>
 <hr>
 </section>
 </section>
-<section id="campus-resources" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="campus-resources">Campus Resources</h2>
+<section id="step-1-payoffs-for-each-party" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-payoffs-for-each-party">Step 1: Payoffs for Each Party</h2>
+<p>Each party’s payoff is its vote share minus the cost of its advertising.</p>
 <ul>
-<li><span class="hi">Accessible Education Center</span>
-<ul>
-<li><a href="https://aec.uoregon.edu/">aec.uoregon.edu</a></li>
-</ul></li>
-<li><span class="hi">Support for vicitms of assault, harassment, stalking</span>
-<ul>
-<li><a href="https://safe.uoregon.edu/">safe.uoregon.edu</a></li>
-<li>24/7 hotline: (+1) 541-346-SAFE (7244)</li>
-</ul></li>
-<li><span class="hi">Health and Wellbeing</span>
-<ul>
-<li><a href="https://counseling.uoregon.edu">University Counseling Services</a></li>
-<li><a href="https://basicneeds.uoregon.edu/">Basic Needs Program</a></li>
-</ul></li>
-<li><span class="hi">Religious Observance Accomadations</span>
-<ul>
-<li><a href="https://provost.uoregon.edu/religious-observance-accommodations-policy">Provost website</a></li>
-</ul></li>
+<li><strong>L’s payoff</strong>: <span class="math display">\[
+100 \times \frac{x}{x + y} - x
+\]</span></li>
+<li><strong>R’s payoff</strong>: <span class="math display">\[
+100 \times \frac{y}{x + y} - y
+\]</span></li>
 </ul>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p>These resources and others are also included in the course syllabus</p>
-</div></div><div class="notes">
-<ul>
-<li>I am here to support you, but not trained or equipped for emergencies</li>
-<li>I will not ask for reasons you cannot attend class or exams</li>
-<li>I am not a mandated reporter: will only pass on info if you request</li>
-</ul>
-</div>
 <hr>
 </section>
-<section id="course-pages" class="level2">
-<h2 class="anchored" data-anchor-id="course-pages">Course Pages</h2>
-<p><a href="https://canvas.uoregon.edu/courses/233504">https://canvas.uoregon.edu/courses/251353</a> - submit your assignments - check deadlines</p>
-<p><a href="https://github.com/dyasui/EC327">github.com/dyasui/EC327</a> - Find up-to-date versions of slides/assignments - <em>let me know if links are broken</em></p>
+<section id="step-2-best-response-functions" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-best-response-functions">Step 2: Best-Response Functions</h2>
+<p>To find the best-response functions for each party, we use calculus.</p>
+<section id="for-party-r" class="level3">
+<h3 class="anchored" data-anchor-id="for-party-r"><strong>For Party R</strong>:</h3>
+<ul>
+<li>Differentiate R’s payoff with respect to <span class="math inline">\(y\)</span>: <span class="math display">\[
+\frac{d}{dy} \left( 100 \times \frac{y}{x + y} - y \right) = 0
+\]</span></li>
+<li>Simplifying: <span class="math display">\[
+100 \times \frac{x}{(x + y)^2} = 1
+\]</span></li>
+<li>This gives R’s best-response function: <span class="math display">\[
+y = 10 \sqrt{x} - x
+\]</span></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="step-3-party-ls-best-response" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-party-ls-best-response">Step 3: Party L’s Best Response</h2>
+<p>By symmetry, Party L’s best-response function is: <span class="math display">\[
+x = 10 \sqrt{y} - y
+\]</span></p>
+<p><strong>Question:</strong> How do you think these best-response functions help us find the Nash equilibrium?</p>
+<hr>
+</section>
+<section id="step-4-solving-for-nash-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-solving-for-nash-equilibrium">Step 4: Solving for Nash Equilibrium</h2>
+<p>We solve for <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> by substituting the best-response functions into each other.</p>
+<ul>
+<li>From <span class="math inline">\(y = 10 \sqrt{x} - x\)</span>, substitute into L’s equation: <span class="math display">\[
+x = 10 \sqrt{10 \sqrt{x} - x} - (10 \sqrt{x} - x)
+\]</span> Solve this system to find <span class="math inline">\(x = y = 25\)</span>.</li>
+</ul>
+<p><strong>Question:</strong> What does this tell us about each party’s optimal spending?</p>
+<hr>
+</section>
+<section id="graphical-representation" class="level2">
+<h2 class="anchored" data-anchor-id="graphical-representation">Graphical Representation</h2>
+<p><img src="figures/Dixit_fig5.2.png" class="img-fluid"></p>
+</section>
+<section id="step-5-interpretation-of-results" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-interpretation-of-results">Step 5: Interpretation of Results</h2>
+<p>At equilibrium: - Both parties spend $25 million on ads. - Neither party can improve its vote share by changing its spending.</p>
+<section id="discussion" class="level3">
+<h3 class="anchored" data-anchor-id="discussion">Discussion:</h3>
+<ul>
+<li>In this case, both parties overspend compared to the social optimum. This situation is similar to a <strong>prisoner’s dilemma</strong>.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="step-6-socially-optimal-solution" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-socially-optimal-solution">Step 6: Socially Optimal Solution</h2>
+<p>In the <strong>prisoner’s dilemma</strong> structure, both parties would be better off if they reduced their advertising spending, saving money without losing votes.</p>
+<p><strong>Question:</strong> Why don’t the parties naturally reduce their spending to reach this optimal outcome?</p>
+<hr>
+</section>
+<section id="asymmetries-in-political-advertising" class="level2">
+<h2 class="anchored" data-anchor-id="asymmetries-in-political-advertising">Asymmetries in Political Advertising</h2>
+<p>What if one party has an advantage, such as lower advertising costs or more effective ads?</p>
+<ul>
+<li>If Party R’s advertising dollars are twice as effective, its best-response curve shifts upwards, and it spends more than L.</li>
+</ul>
+<p><strong>Question:</strong> How might this advantage affect the equilibrium?</p>
+<hr>
+</section>
+<section id="conclusion-political-campaigns-as-a-game" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-political-campaigns-as-a-game">Conclusion: Political Campaigns as a Game</h2>
+<ul>
+<li>Political campaigns can be viewed as strategic games where each party competes for votes through advertising.</li>
+<li>While competition leads to higher spending, the results resemble a prisoner’s dilemma, where both parties might benefit from cooperation.</li>
+</ul>
+<hr>
+</section>
+<section id="interactive-exercise" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-exercise">Interactive Exercise</h2>
+<p><strong>What if</strong>: - There are three competing political parties? - Or one party has access to a significantly larger budget?</p>
+<p><strong>Discuss with your peers how this might change the outcome of the advertising game.</strong></p>
+<hr>
 
 
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>see UO’s <a href="https://teaching.uoregon.edu/resources/academic-integrity-uo">Student Conduct Code</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
