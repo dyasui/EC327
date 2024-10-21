@@ -1,53 +1,61 @@
+# Other Elimination Methods: Weakly Dominated Strategies
 
-## Other Elimination Methods: Weakly Dominated Strategies
+## Weakly Dominated Strategies
+
+  * It is also possible to find Nash Equilibria by eliminating [weakly dominated]{.hi} strategies 
+
+    + (strategies for which there is an alternative that is never worse, and sometimes better).
+
+---
+
+## Weakly Dominated Strategies
+
+We will not spend a lot of time on this method, because it has two serious flaws:
 
 ::: {.incremental}
-  * It is also possible to find Nash Equilibria by eliminating [weakly dominated]{.hi} strategies (strategies for which there is an alternative that is never worse, and sometimes better).
-  * We will not spend a lot of time on this method, because it has two serious flaws:
-    [1.] It is possible for a Nash Equilibrium to involve playing a weakly dominated strategy. IEWDS may therefore eliminate actual Nash Equilibria.
-    [2.] Unlike IESDS, the order in which you eliminate weakly dominated strategies matters: you may get different results from different orders of elimination.
+  1. It is possible for a Nash Equilibrium to involve playing a weakly dominated strategy.
+  
+  + IEWDS may therefore eliminate actual Nash Equilibria.
+  
+  2. Unlike IESDS, the order in which you eliminate weakly dominated strategies matters:
+  
+  + you may get different results from different orders of elimination.
 :::
+
 ---
 
 ## Example: Why Weak Dominance is Not Useful
 
 In the game below, B is weakly dominated for both players.
 
-```{=latex}
-\begin{table}[]
-\centering
-\setlength{\extrarowheight}{2pt}
-\begin{tabular}{cc|c|c|}
-  & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Player 2}\\
-  & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$A$}  & \multicolumn{1}{c}{$B$} \\\cline{3-4}
-  \multirow{2}*{Player 1}  & $A$ & $2,2$ & $1,1$ \\\cline{3-4}
-  & $B$ & $1,1$ & $1,1$ \\\cline{3-4}
-\end{tabular}
-\end{table}
-```
+| Player 1, Player 2 | $A$   | $B$   |
+|--------------------+-------+-------|
+| **$A$**            | $2,2$ | $1,1$ |
+| **$B$**            | $1,1$ | $1,1$ |
 
 ::: {.incremental}
-  * If we eliminate the weakly dominated strategy for both players, then the only remaining strategy profile is (A, A)---and this is a Nash equilibrium.
-  * However, (B, B) is also a Nash equilibrium: both players get payoff 1, and neither can improve that payoff by changing their own strategy. We failed to find this equilibrium by eliminating weakly dominated strategies.
+  * If we eliminate the weakly dominated strategy for both players, then the only remaining strategy profile is (A, A)
+
+    + this is a Nash equilibrium.
+
+  * However, (B, B) is also a Nash equilibrium:
+
+    + both players get payoff 1, and neither can improve that payoff by changing their own strategy.
+
+    + We failed to find this equilibrium by eliminating weakly dominated strategies.
+
 :::
+
 ---
 
 ## Another Example: Why Weak Dominance is Not Useful
 
 In the game below, M and R are weakly dominated.
 
-```{=latex}
-\begin{table}[]
-\centering
-\setlength{\extrarowheight}{2pt}
-\begin{tabular}{cc|c|c|c|}
-& \multicolumn{1}{c}{} & \multicolumn{3}{c}{Player 2}\\
-& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$L$}  & \multicolumn{1}{c}{$M$} & \multicolumn{1}{c}{$R$} \\\cline{3-5}
-\multirow{2}*{Player 1}  & $T$ & 0, 1 & 1, 0 & 0, 0  \\\cline{3-5}
-& $B$ & 0, 0 & 0, 0 & 1, 0 \\\cline{3-5}
-\end{tabular}
-\end{table}
-```
+| Player 1, Player 2 | $L$  | $M$  | $R$  |
+|--------------------+------+------+------|
+| **$T$**            | 0, 1 | 1, 0 | 0, 0 |
+| **$B$**            | 0, 0 | 0, 0 | 1, 0 |
 
 ::: {.incremental}
 * If we begin by eliminating R, then afterwards, M and B are both weakly dominated, and we would eliminate them, leaving only (T, L).
@@ -55,22 +63,17 @@ In the game below, M and R are weakly dominated.
 ---
 
 ## Another Example: Why Weak Dominance is Not Useful
-```{=latex}
-\begin{table}[]
-\centering
-\setlength{\extrarowheight}{2pt}
-\begin{tabular}{cc|c|c|c|}
-& \multicolumn{1}{c}{} & \multicolumn{3}{c}{Player 2}\\
-& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$L$}  & \multicolumn{1}{c}{$M$} & \multicolumn{1}{c}{$R$} \\\cline{3-5}
-\multirow{2}*{Player 1}  & $T$ & 0, 1 & 1, 0 & 0, 0  \\\cline{3-5}
-& $B$ & 0, 0 & 0, 0 & 1, 0 \\\cline{3-5}
-\end{tabular}
-\end{table}
-```
+
+| Player 1, Player 2 | $L$   | $M$  | $R$  |
+|--------------------+-------+------+------|
+| **$T$**            | 0,  1 | 1, 0 | 0, 0 |
+| **$B$**            | 0, 0  | 0, 0 | 1, 0 |
 
 ::: {.incremental}
 * However, if we begin by eliminating M, then T and R are both weakly dominated, and if we eliminate them, we are left with only (B, L).
+
 * Not only does the outcome of IEWDS depend on what we eliminate first, it still fails to find a **third** Nash equilibrium, which is (B, R).
+
 :::
 ---
 
@@ -114,9 +117,13 @@ In the game below, there are no strictly dominated strategies, meaning that IESD
 ```
 
 ::: {.incremental}
+
   * However, we can see that B is non-rationalizable for Player 1: regardless of whether Player 2 chooses a, b, or c, Player 1 is better off playing either A or C.
+  
   * Also, b is non-rationalizable for Player 2.
+
 :::
+
 ---
 
 ## Another Example: Non-Best-Responses
@@ -200,14 +207,13 @@ Returning to this same example, we can start by eliminating B.
   \end{tabular}
 \end{table}
 ```
-::: {.incremental}
-  * After eliminating Z, which is strictly dominated, what strategy is a non-best-response?
-    1. X
-    1. Y
-    1. Z
-    1. y
-    1. z
-:::
+* After eliminating Z, which is strictly dominated, what strategy is a non-best-response?
+  1. X
+  1. Y
+  1. Z
+  1. y
+  1. z
+
 ---
 
 ## iClicker Q5
@@ -226,14 +232,13 @@ Returning to this same example, we can start by eliminating B.
 \end{table}
 ```
 
-::: {.incremental}
-  * If we complete IENBR on this game table, what strategy profile is left at the end?
-    1. (X, x)
-    1. (X, z)
-    1. (Y, x)
-    1. (Y, z)
-    1. There is more than one strategy profile left.
-:::
+* If we complete IENBR on this game table, what strategy profile is left at the end?
+  1. (X, x)
+  1. (X, z)
+  1. (Y, x)
+  1. (Y, z)
+  1. There is more than one strategy profile left.
+
 ---
 
 ## Failures of Elimination Methods
@@ -244,5 +249,4 @@ Returning to this same example, we can start by eliminating B.
   * Even if elimination doesn't immediately identify a NE, it can still be helpful to simplify the game before trying other methods.
   * Simplifying by elimination is **especially** useful when dealing with mixed strategies---which we'll get to after the midterm.
 :::
----
 

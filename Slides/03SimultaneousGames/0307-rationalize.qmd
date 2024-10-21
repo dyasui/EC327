@@ -1,0 +1,116 @@
+## Another Example: When Elimination Does Nothing
+
+::: {.incremental}
+  * This game has **absolutely no strategies** that can be eliminated: none are strictly dominated or non-rationalizable.
+
+  * We can still find the NEs (of which there are quite a few) using best responses:
+
+:::
+
+```{=latex}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cc|c|c|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{4}{c}{P$_2$}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} & \multicolumn{1}{c}{$d$}  \\\cline{3-6}
+		\multirow{5}*{P$_1$}  & $A$ & 1, 1 & 2, 2 & 2, 2 & 2, 1 \\\cline{3-6}
+		& $B$ & 1, 3 & 1, 3 & 2, 2 & 2, 3 \\\cline{3-6}
+		& $C$ & 1, 2 & 2, 4 & 1, 3 & 2, 3 \\\cline{3-6}
+		& $D$ & 3, 2 & 2, 3 & 1, 4 & 2, 2 \\\cline{3-6}
+	\end{tabular}
+\end{table}
+```
+---
+
+## iClicker Q4
+
+```{=latex}
+\begin{table}[h]
+\centering
+\begin{tabular}{cc|c|c|c|}
+	& \multicolumn{1}{c}{} & \multicolumn{3}{c}{P$_2$}\\
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$X$} & \multicolumn{1}{c}{$Y$} & \multicolumn{1}{c}{$Z$} \\\cline{3-5}
+	\multirow{3}*{P$_1$}  & $A$ & 3, 3 & 2, 2 & 1, 1 \\\cline{3-5}
+	& $B$ & 4, 2 & 1, 1 & 2, 2 \\\cline{3-5}
+	& $C$ & 1, 1 & 2, 2 & 3, 1  \\\cline{3-5}
+\end{tabular}
+\end{table}
+```
+
+::: {.incremental}
+* In the game shown above, which of the following are the Nash Equilibria? (You will need to find best responses for both players.)
+  1. (A, X)
+  1. (A, Y)
+  1. (B, X)
+  1. (C, Z)
+  1. More than one of the above.
+:::
+---
+
+## Best Responses and Non-Rationalizability
+::: {.incremental}
+  * Finding best responses first makes it a lot easier to search for non-rationalizable strategies.
+  * Recall that a non-rationalizable strategy can also be called a non-best response: if none of the payoffs of a strategy are marked to indicate that it is a best-response, it is non-rationalizable. In other words:
+    + Any row in which none of Player 1's payoffs are marked to indicate a best response, is non-rationalizable.
+  	+ Any column in which none of Player 2's payoffs are marked to indicate a best response, is non-rationalizable.
+:::
+---
+
+## Example: Non-Rationalizability from Best Responses
+::: {.incremental}
+
+* Finding best responses first makes it a lot easier to search for non-rationalizable strategies.
+
+* Recall that a non-rationalizable strategy can also be called a non-best response: if none of the payoffs of a strategy are marked to indicate that it is a best-response, it is non-rationalizable. In other words:
+
+  * Any row in which none of Player 1's payoffs are marked to indicate a best response, is non-rationalizable.
+
+	* Any column in which none of Player 2's payoffs are marked to indicate a best response, is non-rationalizable.
+:::
+---
+
+## Example: Non-Rationalizability from Best Responses
+```{=latex}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cc|c|c|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{4}{c}{P$_2$}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} & \multicolumn{1}{c}{$d$} \\\cline{3-6}
+		\multirow{4}*{P$_1$}  & $A$ & 1, 0 & 2, 1 & \textbf{3}, 1 & \textbf{4}, \textbf{2} \\\cline{3-6}
+		& $B$ & 3, 1 & 2, \textbf{2} & 2, 0 & 3, 0 \\\cline{3-6}
+		& $C$ & 3, \textbf{1} & \textbf{4}, 0 & 1, 0 & 2, 0 \\\cline{3-6}
+		& $D$ & \textbf{4}, \textbf{2} & 3, 0 & 2, 1 & 1, 1 \\\cline{3-6}
+	\end{tabular}
+\end{table}
+```
+
+::: {.incremental}
+
+  * We found these best responses earlier (as well as the NEs of this game): note that in the row for Player 1's strategy B, none of Player 1's strategies are marked.
+
+  * Likewise, none of Player 2's payoffs are marked in column c. B and c are non-rationalizable strategies.
+
+:::
+---
+
+## Example: Non-Rationalizability from Best Responses
+```{=latex}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{cc|c|c|c|c|}
+		& \multicolumn{1}{c}{} & \multicolumn{4}{c}{P$_2$}\\
+		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} & \multicolumn{1}{c}{$d$} \\\cline{3-6}
+		\multirow{4}*{P$_1$}  & $A$ & 1, 0 & 2, 1 & \textbf{3}, 1 & \textbf{4}, \textbf{2} \\\cline{3-6}
+		& $B$ & 3, 1 & 2, \textbf{2} & 2, 0 & 3, 0 \\\cline{3-6}
+		& $C$ & 3, \textbf{1} & \textbf{4}, 0 & 1, 0 & 2, 0 \\\cline{3-6}
+		& $D$ & \textbf{4}, \textbf{2} & 3, 0 & 2, 1 & 1, 1 \\\cline{3-6}
+	\end{tabular}
+\end{table}
+```
+
+::: {.incremental}
+  * Performing IENBR reveals additional non-rationalizable strategies:
+    + Once we eliminate B, b becomes non-rationalizable.
+    + Once we eliminate b, C becomes non-rationalizable.
+:::
+

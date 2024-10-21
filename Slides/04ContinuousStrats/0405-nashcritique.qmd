@@ -1,0 +1,89 @@
+# Critical Discussion of the Nash Equilibrium Concept
+
+## Discussion of Nash Equilibrium
+
+Now that you've learned what it means and seen it applied to several different games,
+*what do you think about the concept of [Nash Equilbrium]{.hi}?*
+
+::: {.incremental}
+- Does it make intuitive sense? Do you think people really reason through their **best response** to any possible situation?
+- Is there anything relevant to strategic interactions you can think of that is left out of our models so far?
+:::
+  
+---
+
+## Step 1: The Appeal of Nash Equilibrium
+
+The Nash equilibrium is based on the idea that every player's strategy should be the best response to the strategies of others.
+
+### Example:
+- If you know your rival's strategy, you choose your best response. If this is true for all players, we have a Nash equilibrium.
+
+---
+
+## Criticism 1: Unrealistic Assumptions
+
+One major criticism is that Nash equilibrium assumes:
+- Players have perfect knowledge of others' strategies.
+- Everyone knows the structure of the game and others' payoffs.
+
+### Counter-Argument:
+- Critics argue that in the real world, it is rare for players to have perfect information.
+
+**Discussion Prompt:** Do you think it's possible for all players to have perfect information in real-world games?
+
+---
+
+## Criticism 2: Multiple Equilibria
+
+In some games, multiple Nash equilibria exist. This can create problems because:
+- It’s unclear which equilibrium the players will choose.
+- Some equilibria may not make sense in real-life situations.
+
+### Example:
+- In coordination games like **Battle of the Sexes**, there are multiple stable outcomes.
+
+**Question:** How should players decide which Nash equilibrium to follow when more than one exists?
+
+---
+
+## Criticism 3: Lack of Dynamic Considerations
+
+Nash equilibrium is often static, focusing only on one-time decisions. However, many games involve ongoing interactions and learning over time.
+
+### Counter-Argument:
+- Some theorists suggest that Nash equilibrium should be modified to reflect how players learn and adjust their strategies dynamically over time.
+
+---
+
+## Rebuttal to Critics: Why Not Nash Equilibrium?
+
+Game theorist Roger Myerson suggests:
+- "Why not Nash equilibrium?" If someone proposes an alternative strategy profile, that profile must be evaluated.
+- If it isn’t a Nash equilibrium, one of the players can improve by changing their strategy, disproving the alternative.
+
+**Interactive Question:** How does this defense of Nash equilibrium answer critics' concerns?
+
+---
+
+## Alternative Concepts
+
+Criticism has led to the development of alternative solution concepts, such as:
+- **Evolutionary Stable Strategies (ESS)**: Strategies that persist over time through evolutionary pressure.
+- **Correlated Equilibrium**: Players coordinate their strategies based on signals they receive from a common source.
+
+### **Discussion Prompt:** Do you think alternatives like ESS or correlated equilibrium offer improvements over Nash equilibrium?
+
+---
+
+## Conclusion
+
+While Nash equilibrium has clear limitations, it remains a central concept in game theory. Alternative solution concepts may provide better insights into certain situations, but Nash equilibrium is still the starting point for analyzing many strategic games.
+
+---
+
+## Interactive Exercise: Game Revisited
+
+Let’s revisit the **Coordination Game** from earlier. Can you identify the Nash equilibria? Then, discuss whether any of the criticisms apply to this game.
+
+---

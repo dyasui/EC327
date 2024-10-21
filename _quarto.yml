@@ -18,12 +18,18 @@ website:
             href: Slides/02SequentialGames/02-main.qmd
           - text: "Simultaneous Games"
             href: Slides/03SimultaneousGames/03-main.qmd
+          - text: "Continuous Strategies"
+            href: Slides/04ContinuousStrats/04-main.qmd
       - section: "Activities"
         contents: 
           - text: "Guessing Two Thirds of the Average"
             href: activities/01GuessTwoThirds/GuessTwoThirds.qmd
           - text: "Survivor Flags"
             href: activities/02SurvivorFlags/SurvivorFlags.qmd
+          - text: "Pirate Treasure"
+            href: activities/03PirateTreasure/PirateTreasure.qmd
+          - text: "Election Blotto"
+            href: activities/04BlottoElection/BlottoElection.qmd
 
 page-footer:
   right: "This page is built with [Quarto](https://quarto.org/)."

@@ -97,3 +97,7 @@ What do you think will happen in this game?
 {{< include 0304-elimination.qmd >}}
 
 {{< include 0305-bestresponses.qmd >}}
+
+{{< include 0306-weakdominance.qmd >}}
+
+{{< include 0307-rationalize.qmd >}}

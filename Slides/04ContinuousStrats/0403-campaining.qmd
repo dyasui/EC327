@@ -1,0 +1,125 @@
+# Political Campaign Advertising
+
+## Setup: Competing with Ads
+
+Two political parties, L and R, are competing in an election by spending money on campaign advertising.
+
+### Key Concepts:
+- **Vote shares** depend on each party's advertising:
+  - If party L spends $x$ million dollars and party R spends $y$ million dollars:
+    - Party L’s vote share is $\frac{x}{x + y}$
+    - Party R’s vote share is $\frac{y}{x + y}$
+
+**Question:** How might spending more on ads increase one party’s vote share?
+
+---
+
+## Step 1: Payoffs for Each Party
+
+Each party’s payoff is its vote share minus the cost of its advertising.
+
+- **L's payoff**: 
+  $$
+  100 \times \frac{x}{x + y} - x
+  $$
+- **R's payoff**: 
+  $$
+  100 \times \frac{y}{x + y} - y
+  $$
+
+---
+
+## Step 2: Best-Response Functions
+
+To find the best-response functions for each party, we use calculus.
+
+### **For Party R**:
+- Differentiate R’s payoff with respect to $y$:
+  $$
+  \frac{d}{dy} \left( 100 \times \frac{y}{x + y} - y \right) = 0
+  $$
+- Simplifying:
+  $$
+  100 \times \frac{x}{(x + y)^2} = 1
+  $$
+- This gives R’s best-response function:
+  $$
+  y = 10 \sqrt{x} - x
+  $$
+
+---
+
+## Step 3: Party L's Best Response
+
+By symmetry, Party L’s best-response function is:
+$$
+x = 10 \sqrt{y} - y
+$$
+
+**Question:** How do you think these best-response functions help us find the Nash equilibrium?
+
+---
+
+## Step 4: Solving for Nash Equilibrium
+
+We solve for $x$ and $y$ by substituting the best-response functions into each other.
+
+- From $y = 10 \sqrt{x} - x$, substitute into L’s equation:
+  $$
+  x = 10 \sqrt{10 \sqrt{x} - x} - (10 \sqrt{x} - x)
+  $$
+  Solve this system to find $x = y = 25$.
+
+**Question:** What does this tell us about each party’s optimal spending?
+
+---
+
+## Graphical Representation
+
+![](figures/Dixit_fig5.2.png)
+
+## Step 5: Interpretation of Results
+
+At equilibrium:
+- Both parties spend $25 million on ads.
+- Neither party can improve its vote share by changing its spending.
+
+### Discussion:
+- In this case, both parties overspend compared to the social optimum. This situation is similar to a **prisoner's dilemma**.
+
+---
+
+## Step 6: Socially Optimal Solution
+
+In the **prisoner's dilemma** structure, both parties would be better off if they reduced their advertising spending, saving money without losing votes.
+
+**Question:** Why don’t the parties naturally reduce their spending to reach this optimal outcome?
+
+---
+
+## Asymmetries in Political Advertising
+
+What if one party has an advantage, such as lower advertising costs or more effective ads?
+
+- If Party R’s advertising dollars are twice as effective, its best-response curve shifts upwards, and it spends more than L.
+
+**Question:** How might this advantage affect the equilibrium?
+
+---
+
+## Conclusion: Political Campaigns as a Game
+
+- Political campaigns can be viewed as strategic games where each party competes for votes through advertising.
+- While competition leads to higher spending, the results resemble a prisoner's dilemma, where both parties might benefit from cooperation.
+
+---
+
+## Interactive Exercise
+
+**What if**:
+- There are three competing political parties?
+- Or one party has access to a significantly larger budget?
+
+**Discuss with your peers how this might change the outcome of the advertising game.**
+
+---
