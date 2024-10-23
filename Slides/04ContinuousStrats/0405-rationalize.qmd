@@ -1,0 +1,149 @@
+# Applying Rationalizability
+
+## Rationalizability
+
+Recall the concept of [never a best response]{.hi} strategies.
+
+All strategies which survive the eliminations of **NBR**'s 
+are said to be [rationalizable]{.hi}.
+
+---
+
+## Applying Rationalizability
+
+Remember this game from before?
+
+| Row, Column | C1  | C2  | C3  |
+|-------------+-----+-----+-----|
+| **R1**      | 0,7 | 2,5 | 7,0 |
+| **R2**      | 5,2 | 3,3 | 5,2 |
+| **R3**      | 7,0 | 2,5 | 0,7 |
+
+::: {.incremental}
+  * We said that there is a unique NE (R2, C2) which could be justified with one set of beliefs
+  * But also there was another chain of beliefs which could justify R1
+  * That's because R1 is *rationalizable*
+:::
+
+---
+
+## Applying Rationalizability
+
+If we took away R2 and C2 from this game;
+
+| Row, Column | C1  | C3  |
+|-------------+-----+-----|
+| **R1**      | 0,7 | 7,0 |
+| **R3**      | 7,0 | 0,7 |
+
+then you can see that there is no NE in pure strategies,
+
+  * but all four strategy profiles are *rationalizable*
+
+  * So *rationalizability* can still be useful even when NE cannot be found
+
+---
+
+## Applying Rationalizability to Continuous Games
+
+There are two fishing boats in a small coastal town
+
+  * they can catch as many fish as they want, but too many will flood the local market
+  * the price of fish in the market is a function of how much each boat catches:
+
+  $$ P = 60 - (R + S) $$
+
+    + where $R$ and $S$ are barrels caught for each boat
+
+  * Unit cost for each barrel is **30** ducats for boat $R$ 
+    and **36** ducats for boat $S$
+
+---
+
+## Applying Rationalizability to Continuous Games
+
+The profits of each boat are:
+
+$$
+\pi_R = [(60 - R - S) - 30] \cdot R = (30 - S)R - R^2
+\pi_S = [(60 - R - S) - 36] \cdot S = (24 - R)S - S^2
+$$
+
+> what are the best-response rules?
+
+::: {.incremental}
+
+$$ 
+\begin{align}
+\frac{\delta \pi_R}{\delta R} & = (30 - S) - 2R \\
+\Rightarrow R^* = 15 - \frac{S}{2}
+\end{align}
+$$  
+
+$$ 
+\begin{align}
+\frac{\delta \pi_S}{\delta S} & = (24 - S) - 2S \\
+\Rightarrow S^* = 12 - \frac{R}{2}
+\end{align}
+$$  
+
+---
+
+## Applying Rationalizability to Continuous Games
+
+If you are the captian of boat $R$,
+
+and you know that boat $S$'s best response rule is $S^* = 12 - \frac{R}{2},
+
+> what values of $S$ should you plausibly expect them to ever pick?
+
+::: {.incremental}
+
+  * would they ever choose $S<0$?
+
+  * what about $S>12$?
+
+  * we can then say that only values $S \in [0,12]$ are *rationalizable*
+
+  * What is $R$'s range of possible best-responses if $S \in [0,12]$?
+
+    + $R^*(S = 0) = 15$, $R^*(S = 12) =  15 - 6 = 9$
+
+:::
+
+---
+
+## Applying Rationalizability to Continuous Games
+
+Now if you are the captian of boat $S$,
+
+and you know that $R$ knows that you will only choose $S \in [0,12]$,
+
+::: {.incremental}
+
+  * What is $S$'s range of possible best-responses if $R \in [9,15]$?
+
+    + $S^*(R = 9) = 12 - \frac{9}{2} = \frac{15}{2}$, 
+      $R^*(S = 15) =  12 - \frac{15}{2}  = \frac{9}{2}$
+
+:::
+
+---
+
+## Applying Rationalizability to Continuous Games
+
+:::: {.columns}
+::: {.column}
+![](figures/Dixit_fig5.7.png)
+:::
+::: {.column}
+Iteratively applying this logic of eliminating ranges of non-rationalizable strategies
+will converge on the unique NE:
+
+  * ($R = 12$, $S = 6$)
+
+  * this is also where the best-response rules intersect
+:::
+::::
+
+---

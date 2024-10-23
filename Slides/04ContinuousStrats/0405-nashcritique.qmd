@@ -12,25 +12,157 @@ Now that you've learned what it means and seen it applied to several different g
   
 ---
 
-## Step 1: The Appeal of Nash Equilibrium
+## The Appeal of Nash Equilibrium
 
 The Nash equilibrium is based on the idea that every player's strategy should be the best response to the strategies of others.
 
-### Example:
-- If you know your rival's strategy, you choose your best response. If this is true for all players, we have a Nash equilibrium.
+::: {.incremental}
+
+### Benefits of using NE:
+
+  * In non-cooperative games, it makes sense that each player is making their best response to their opponent
+
+    + If you can't enforce any strategy onto your opponent, you should stick with whatever doesn't make you worse off,
+      given what your opponent chose.
+
+    + In any situation which is not a Nash, there is some player who could have done better:
+
+      - I.E., an NE leaves no-one with any *regrets*
+
+:::
 
 ---
 
-## Criticism 1: Unrealistic Assumptions
+## Some Potential Critiques of NE predictions
 
-One major criticism is that Nash equilibrium assumes:
-- Players have perfect knowledge of others' strategies.
-- Everyone knows the structure of the game and others' payoffs.
+::: {.incremental}
 
-### Counter-Argument:
-- Critics argue that in the real world, it is rare for players to have perfect information.
+  * IESDS, Best-response functions may not be how players actually think
 
-**Discussion Prompt:** Do you think it's possible for all players to have perfect information in real-world games?
+    + But NE only describe the *stable* combinations of strategies, 
+      there are many ways of getting there: learning from experience, repeated play, intuition, etc.
+
+:::
+
+---
+
+## Some Potential Critiques of NE predictions
+
+::: {.incremental}
+
+  * IESDS, Best-response functions may not be how players actually think
+
+  * Nash doesn't explicitly take risk into account
+
+    + with *ordinal* payoffs, we might leave out the incentive to play it safe to avoid very bad outcomes
+
+    + but if we instead use *cardinal* payoffs, or expected utilities, we can still extend our models to those situations
+
+:::
+
+---
+
+## Some Potential Critiques of NE predictions
+
+::: {.incremental}
+
+  * IESDS, Best-response functions may not be how players actually think
+
+  * Nash doesn't explicitly take risk into account
+
+  * NE don't have to be *unique*
+
+    + If we care *predictions*, NE doesn't always tell us what will happen,
+      sometimes there can be multiple possible strategy profiles which are equally stable
+      which means any one could happen depending how the game plays out
+
+:::
+
+---
+
+## Criticism 1: Treatment of Risk
+
+We've mentioned before how sometimes the strategies played in NE don't line up with 
+what might intuitively feel like the 'safe' strategies.
+
+---
+
+## Criticism 1: Treatment of Risk
+
+Let's look an an example:
+
+| Row, Column | A   | B   | C   |
+|-------------+-----+-----+-----|
+| **A**       | 2,2 | 3,1 | 0,2 |
+| **B**       | 1,3 | 2,2 | 3,2 |
+| **C**       | 2,0 | 2,3 | 2,2 |
+
+> What's the NE?
+
+---
+
+## Criticism 1: Treatment of Risk
+
+Let's look an an example:
+
+| Row, Column | A                 | B          | C          |
+|-------------+-------------------+------------+------------|
+| **A**       | <u>2</u>,<u>2</u> | <u>3</u>,1 | 0,<u>2</u> |
+| **B**       | 1,<u>3</u>        | 2,2        | <u>3</u>,2 |
+| **C**       | <u>2</u>,0        | 2,<u>3</u> | 2,2        |
+
+> What's the NE?
+
+  * (**A**, **A**)
+
+---
+
+## Criticism 1: Treatment of Risk
+
+| Row, Column | A   | B   | C   |
+|-------------+-----+-----+-----|
+| **A**       | 2,2 | 3,1 | 0,2 |
+| **B**       | 1,3 | 2,2 | 3,2 |
+| **C**       | 2,0 | 2,3 | 2,2 |
+
+::: {.incremental}
+  * But what happens if the other player mistakenly plays **C**?
+  * Then it might make sense to choose the safe option of **C**
+  * You could get the same payoff of 2, but ensure that you wouldn't have a chance to get 0
+
+    + The idea of [trembling-hand perfection]{.hi} takes this into account by allowing probabilistic errors in strategies.
+:::
+
+---
+
+## Criticism 1: Treatment of Risk
+
+What about this game?
+
+| A, B     | Left   | Right      |
+|----------+--------+------------|
+| **Up**   | 9, 10  | 8, 9.9     |
+| **Down** | 10, 10 | -1000, 9.9 |
+
+::: {.incremental}
+Let's suppose that there is a small probability $p$ that Player B will accidentally play Right
+> What is Player A's expected utility of playing Up?
+
+$$ EU_A(Up) = 9(1-p) + 8p $$
+
+> What is Player A's expected utility of playing Down?
+
+$$ EU_B(Down) = 10(1-p) - 1000p $$
+
+So Player A should only play Down if:
+
+$$
+\begin{align}
+10(1-p) - 1000p > & 9(1-p) + 8p \\
+              p > & \frac{1}{1009}
+\end{align}
+$$
+:::
 
 ---
 
@@ -41,18 +173,166 @@ In some games, multiple Nash equilibria exist. This can create problems because:
 - Some equilibria may not make sense in real-life situations.
 
 ### Example:
-- In coordination games like **Battle of the Sexes**, there are multiple stable outcomes.
 
-**Question:** How should players decide which Nash equilibrium to follow when more than one exists?
+| Dante, Jose  | T4   | Metropol |
+|--------------+------+----------|
+| **T4**       | 2, 1 | 0, 0     |
+| **Metropol** | 0, 0 | 1, 2     |
+
+- In coordination games like **Battle of the Sexes**, there are multiple stable outcomes.
 
 ---
 
-## Criticism 3: Lack of Dynamic Considerations
+## Criticism 2: Multiple Equilibria
 
-Nash equilibrium is often static, focusing only on one-time decisions. However, many games involve ongoing interactions and learning over time.
+### Another Example
+
+Pick one player to be [Boston]{.h}, one player as [San Francisco]{.h}
+
+::::: {.incremental}
+Here are 9 cities which must be evenly divided between the two players:
+  
+:::: {.columns}
+::: {.column width="50%"}
+  * Atlanta
+  * Chicago
+  * Dallas
+  * Denver
+:::
+::: {.column width="50%"}
+  * Los Angeles
+  * New York
+  * Philidelphia
+  * Seattle
+:::
+::::
+
+:::::
+
+You win if you evenly split this list between you without communicating,
+and without overlaps or missed cities
+
+---
+
+## Criticism 2: Multiple Equilibria
+
+### Arriving at Specific NE
+
+This last example shows the importance of shared background and culture in forming strategic beliefs
+for cases with multiple NE
+
+::: {.incremental}
+
+  * So far, our theory have given us sets of NE which are stable given *any* set of realized beliefs
+
+  * But it doesn't help us exaplain how those beliefs might be formed
+
+  * [Evolutionary Game Theory]{.hi} adds tools to our basic toolkit to try to answer some of these limitations
+
+:::
+
+---
+
+## Criticism 2: Multiple Equilibria
+
+In the later chapters we will develop ideas to help narrow down the more general concept of NE
+
+### Refinements to NE 
+
+A [refinement]{.hi} is a restriction on the more general assumptions needed for Nash Equilibria
+
+**Examples:**
+
+  * [mixed-strategy Nash equilibrium]{.hi} allows for probabalistic plays
+  * [subgame-perfect Nash equilibria]{.hi} aka *rollback equilibria* are refinements in *sequential games*
+  * [perfect Bayesian equilibrium]{.hi} has to deal with informations asymmetries 
+
+---
+
+## Criticism 3: Requirements of Rationality
+
+One major criticism is that Nash equilibrium assumes:
+
+- Players have perfect knowledge of others' strategies.
+
+- Players have rational preferences *and know that their opponent is rational*
 
 ### Counter-Argument:
-- Some theorists suggest that Nash equilibrium should be modified to reflect how players learn and adjust their strategies dynamically over time.
+
+- What are some situations you can think of where these assumptions might break down?
+
+::: {.incremental}
+
+  * Players might not know *who* they are playing against and what preferences they might have
+
+  * Players might make *mistakes* and occasionally choose actions that don't fulfill their rational best response
+
+:::
+
+---
+
+## Criticism 3: Requirements of Rationality
+
+Consider this game:
+
+| Row, Column | C1   | C2   | C3   |
+|-------------+------+------+------|
+| **R1**      | 0, 7 | 2, 5 | 7, 0 |
+| **R2**      | 5, 2 | 3, 3 | 5, 2 |
+| **R3**      | 7, 0 | 2, 5 | 0, 7 |
+
+> What is the NE?
+
+---
+
+## Criticism 3: Requirements of Rationality
+
+Consider this game:
+
+| Row, Column | C1          | C2                 | C3          |
+|-------------+-------------+--------------------+-------------|
+| **R1**      | 0, <u>7</u> | 2, 5               | <u>7</u>, 0 |
+| **R2**      | 5, 2        | <u>3</u>, <u>3</u> | 5, 2        |
+| **R3**      | <u>7</u>, 0 | 2, 5               | 0, <u>7</u> |
+
+> What is the NE?
+
+::: {.incremental}
+
+  * (R2, C2) is the only NE in this game
+
+  * For this strategy profile, both players' beliefs about the other player's strategy are correct.
+
+    + Column believes that Row will choose R2, so she chooses her best response of C2
+
+    + Row believes that Column will choose C2, so he chooses his best response of R2
+
+    + So in NE, each player's belief matches their opponent's best response
+
+:::
+
+---
+
+## Criticism 3: Requirements of Rationality
+
+| Row, Column | C1          | C2                 | C3          |
+|-------------+-------------+--------------------+-------------|
+| **R1**      | 0, <u>7</u> | 2, 5               | <u>7</u>, 0 |
+| **R2**      | 5, 2        | <u>3</u>, <u>3</u> | 5, 2        |
+| **R3**      | <u>7</u>, 0 | 2, 5               | 0, <u>7</u> |
+
+But we could use similar logic for this game even when beliefs are *incorrect*
+
+::: {.incremental}
+
+  * We can justify Row playing **R1** if she believes that Column will play **C3**
+
+  * Row could beleive this if she believes that *Column believes she is playing* **R3**
+
+  * And if she also thinks that Column believes that she is playing **R3** 
+    because Column believes that *Row believes that Column is playing* **C1**
+
+:::
 
 ---
 
@@ -82,8 +362,3 @@ While Nash equilibrium has clear limitations, it remains a central concept in ga
 
 ---
 
-## Interactive Exercise: Game Revisited
-
-Let’s revisit the **Coordination Game** from earlier. Can you identify the Nash equilibria? Then, discuss whether any of the criticisms apply to this game.
-
----
