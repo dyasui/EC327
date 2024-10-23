@@ -8,11 +8,11 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.553">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Dante Yasui">
   <meta name="dcterms.date" content="2024-01-01">
-  <title>EC327 Game Theory - Introduction to Game Theory</title>
+  <title>EC327 Game Theory – Introduction to Game Theory</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -558,8 +558,7 @@ Dante Yasui
 <p>10%</p>
 <p>30%</p>
 <p>30%</p>
-</div>
-</div>
+</div></div>
 </section>
 <section class="slide level2">
 
@@ -993,7 +992,7 @@ Dante Yasui
 <ul>
 <li class="fragment">Sometimes my enjoyment of a thing depends on the <em>state</em> of the world</li>
 </ul>
-<table class="table-striped table-hover">
+<table class="table-striped table-hover caption-top">
 <caption>socially-dependent preferences</caption>
 <thead>
 <tr class="header">
@@ -1164,8 +1163,7 @@ E(X) &amp; = .5 (1) + .25 (2) + .25 (3) \\
 <li class="fragment"><p><span class="hi">Solution Method</span>: <em>best responses</em>, deletion of <em>dominated strats</em></p></li>
 </ul>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="sequential-games" class="slide level2">
 <h2>Sequential Games</h2>
@@ -1325,7 +1323,7 @@ E(X) &amp; = .5 (1) + .25 (2) + .25 (3) \\
 </section>
 <section id="tentative-schedule" class="slide level2">
 <h2>Tentative Schedule</h2>
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 10%">
 <col style="width: 16%">
@@ -1642,18 +1640,7 @@ E(X) &amp; = .5 (1) + .25 (2) + .25 (3) \\
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1685,7 +1672,29 @@ E(X) &amp; = .5 (1) + .25 (2) + .25 (3) \\
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/dyasui\.github\.io\/EC327\/");
@@ -1693,7 +1702,7 @@ E(X) &amp; = .5 (1) + .25 (2) + .25 (3) \\
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

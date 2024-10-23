@@ -8,11 +8,11 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.553">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Dante Yasui">
   <meta name="dcterms.date" content="2024-01-01">
-  <title>EC327 Game Theory - Introduction to Game Theory</title>
+  <title>EC327 Game Theory – Introduction to Game Theory</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -600,8 +600,7 @@ Q = 44 - 2($24) + 24 = 20
 <p>which is more than the $28,000 they earned in NE</p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="figures/Dixit_fig5.1.png"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="introduction-to-oligopoly" class="slide level2">
 <h2>Introduction to Oligopoly</h2>
@@ -702,27 +701,6 @@ Q = 44 - 2($24) + 24 = 20
 <h2>Cournot Competition: Creating the Payoff Functions</h2>
 <div>
 <ul>
-<li class="fragment">First of all, we need payoff functions for each player.</li>
-<li class="fragment">Since the players are firms, and the goal of a firm is to maximize profit, we’ll use the firms’ profits as their payoffs.</li>
-<li class="fragment">We can construct the profit functions by taking TR - TC, or in this case, Pq - c(q).</li>
-<li class="fragment">Solving for P, we find that <span class="math inline">\(P = 100 - Q = 100 - q_1 - q_2\)</span>.</li>
-</ul>
-</div>
-</section>
-<section id="cournot-competition-creating-the-payoff-functions-1" class="slide level2">
-<h2>Cournot Competition: Creating the Payoff Functions</h2>
-<p>::: {.incremental} This gives us: <span class="math display">\[
-\begin{align}
-\pi_1 &amp;= (100 - q_1 - q_2)q_1 - 10q_1 &amp; \pi_2 &amp;= (100 - q_1 - q_2)q_2 - 10q_2\\
-&amp;= 100q_1 - q_1^2 - q_1q_2 - 10q_1 &amp; &amp;= 100q_2 - q_1q_2 - q_2^2 - 10q_2\\
-&amp;= 90q_1 - q_1^2 - q_1q_2 &amp; &amp;= 90q_2 - q_1q_2 - q_2^2
-\end{align}
-\]</span></p>
-</section>
-<section id="cournot-competition-creating-the-payoff-functions-2" class="slide level2">
-<h2>Cournot Competition: Creating the Payoff Functions</h2>
-<div>
-<ul>
 <li class="fragment"><p>First of all, we need payoff functions for each player.</p></li>
 <li class="fragment"><p>Since the players are firms, and the goal of a firm is to maximize profit, we’ll use the firms’ profits as their payoffs.</p></li>
 <li class="fragment"><p>We can construct the profit functions by taking TR - TC, or in this case, Pq - c(q).</p></li>
@@ -730,7 +708,7 @@ Q = 44 - 2($24) + 24 = 20
 </ul>
 </div>
 </section>
-<section id="cournot-competition-creating-the-payoff-functions-3" class="slide level2">
+<section id="cournot-competition-creating-the-payoff-functions-1" class="slide level2">
 <h2>Cournot Competition: Creating the Payoff Functions</h2>
 <p>This gives us: <span class="math display">\[
 \begin{align}
@@ -749,7 +727,7 @@ q_1 &amp;= \frac{-(90 - q_2)}{2(-1)} &amp; q_2 &amp;= \frac{-(90 - q_1)}{2(-1)}\
 &amp;= \frac{90 - q_2}{2} &amp; &amp;= \frac{90 - q_1}{2}\\
 &amp;= 45 - \frac{q_2}{2} &amp; &amp;= 45 - \frac{q_1}{2}
 \end{align}
-\]</span> —</p>
+\]</span></p>
 </section>
 <section id="cournot-oligopoly-finding-nash-equilibrium" class="slide level2">
 <h2>Cournot Oligopoly: Finding Nash Equilibrium</h2>
@@ -999,39 +977,445 @@ P_X = 20, \quad P_Y = 20
 </ul>
 </div>
 </section>
-<section id="step-1-the-appeal-of-nash-equilibrium" class="slide level2">
-<h2>Step 1: The Appeal of Nash Equilibrium</h2>
+<section id="the-appeal-of-nash-equilibrium" class="slide level2">
+<h2>The Appeal of Nash Equilibrium</h2>
 <p>The Nash equilibrium is based on the idea that every player’s strategy should be the best response to the strategies of others.</p>
-<h3 id="example-2">Example:</h3>
+<section id="benefits-of-using-ne" class="incremental">
+<h3>Benefits of using NE:</h3>
 <ul>
-<li>If you know your rival’s strategy, you choose your best response. If this is true for all players, we have a Nash equilibrium.</li>
+<li><p>In non-cooperative games, it makes sense that each player is making their best response to their opponent</p>
+<ul>
+<li><p>If you can’t enforce any strategy onto your opponent, you should stick with whatever doesn’t make you worse off, given what your opponent chose.</p></li>
+<li><p>In any situation which is not a Nash, there is some player who could have done better:</p>
+<ul>
+<li>I.E., an NE leaves no-one with any <em>regrets</em></li>
+</ul></li>
+</ul></li>
 </ul>
 </section>
-<section id="criticism-1-unrealistic-assumptions" class="slide level2">
-<h2>Criticism 1: Unrealistic Assumptions</h2>
-<p>One major criticism is that Nash equilibrium assumes: - Players have perfect knowledge of others’ strategies. - Everyone knows the structure of the game and others’ payoffs.</p>
-<h3 id="counter-argument">Counter-Argument:</h3>
+</section>
+<section id="some-potential-critiques-of-ne-predictions" class="slide level2">
+<h2>Some Potential Critiques of NE predictions</h2>
+<div>
 <ul>
-<li>Critics argue that in the real world, it is rare for players to have perfect information.</li>
+<li class="fragment"><p>IESDS, Best-response functions may not be how players actually think</p>
+<ul>
+<li class="fragment">But NE only describe the <em>stable</em> combinations of strategies, there are many ways of getting there: learning from experience, repeated play, intuition, etc.</li>
+</ul></li>
 </ul>
-<p><strong>Discussion Prompt:</strong> Do you think it’s possible for all players to have perfect information in real-world games?</p>
+</div>
+</section>
+<section id="some-potential-critiques-of-ne-predictions-1" class="slide level2">
+<h2>Some Potential Critiques of NE predictions</h2>
+<div>
+<ul>
+<li class="fragment"><p>IESDS, Best-response functions may not be how players actually think</p></li>
+<li class="fragment"><p>Nash doesn’t explicitly take risk into account</p>
+<ul>
+<li class="fragment"><p>with <em>ordinal</em> payoffs, we might leave out the incentive to play it safe to avoid very bad outcomes</p></li>
+<li class="fragment"><p>but if we instead use <em>cardinal</em> payoffs, or expected utilities, we can still extend our models to those situations</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="some-potential-critiques-of-ne-predictions-2" class="slide level2">
+<h2>Some Potential Critiques of NE predictions</h2>
+<div>
+<ul>
+<li class="fragment"><p>IESDS, Best-response functions may not be how players actually think</p></li>
+<li class="fragment"><p>Nash doesn’t explicitly take risk into account</p></li>
+<li class="fragment"><p>NE don’t have to be <em>unique</em></p>
+<ul>
+<li class="fragment">If we care <em>predictions</em>, NE doesn’t always tell us what will happen, sometimes there can be multiple possible strategy profiles which are equally stable which means any one could happen depending how the game plays out</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="criticism-1-treatment-of-risk" class="slide level2">
+<h2>Criticism 1: Treatment of Risk</h2>
+<p>We’ve mentioned before how sometimes the strategies played in NE don’t line up with what might intuitively feel like the ‘safe’ strategies.</p>
+</section>
+<section id="criticism-1-treatment-of-risk-1" class="slide level2">
+<h2>Criticism 1: Treatment of Risk</h2>
+<p>Let’s look an an example:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Row, Column</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A</strong></td>
+<td>2,2</td>
+<td>3,1</td>
+<td>0,2</td>
+</tr>
+<tr class="even">
+<td><strong>B</strong></td>
+<td>1,3</td>
+<td>2,2</td>
+<td>3,2</td>
+</tr>
+<tr class="odd">
+<td><strong>C</strong></td>
+<td>2,0</td>
+<td>2,3</td>
+<td>2,2</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>What’s the NE?</p>
+</blockquote>
+</section>
+<section id="criticism-1-treatment-of-risk-2" class="slide level2">
+<h2>Criticism 1: Treatment of Risk</h2>
+<p>Let’s look an an example:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Row, Column</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A</strong></td>
+<td><u>2</u>,<u>2</u></td>
+<td><u>3</u>,1</td>
+<td>0,<u>2</u></td>
+</tr>
+<tr class="even">
+<td><strong>B</strong></td>
+<td>1,<u>3</u></td>
+<td>2,2</td>
+<td><u>3</u>,2</td>
+</tr>
+<tr class="odd">
+<td><strong>C</strong></td>
+<td><u>2</u>,0</td>
+<td>2,<u>3</u></td>
+<td>2,2</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>What’s the NE?</p>
+</blockquote>
+<ul>
+<li>(<strong>A</strong>, <strong>A</strong>)</li>
+</ul>
+</section>
+<section id="criticism-1-treatment-of-risk-3" class="slide level2">
+<h2>Criticism 1: Treatment of Risk</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Row, Column</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A</strong></td>
+<td>2,2</td>
+<td>3,1</td>
+<td>0,2</td>
+</tr>
+<tr class="even">
+<td><strong>B</strong></td>
+<td>1,3</td>
+<td>2,2</td>
+<td>3,2</td>
+</tr>
+<tr class="odd">
+<td><strong>C</strong></td>
+<td>2,0</td>
+<td>2,3</td>
+<td>2,2</td>
+</tr>
+</tbody>
+</table>
+<div>
+<ul>
+<li class="fragment"><p>But what happens if the other player mistakenly plays <strong>C</strong>?</p></li>
+<li class="fragment"><p>Then it might make sense to choose the safe option of <strong>C</strong></p></li>
+<li class="fragment"><p>You could get the same payoff of 2, but ensure that you wouldn’t have a chance to get 0</p>
+<ul>
+<li class="fragment">The idea of <span class="hi">trembling-hand perfection</span> takes this into account by allowing probabilistic errors in strategies.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="criticism-1-treatment-of-risk-4" class="slide level2">
+<h2>Criticism 1: Treatment of Risk</h2>
+<p>What about this game?</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>A, B</th>
+<th>Left</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Up</strong></td>
+<td>9, 10</td>
+<td>8, 9.9</td>
+</tr>
+<tr class="even">
+<td><strong>Down</strong></td>
+<td>10, 10</td>
+<td>-1000, 9.9</td>
+</tr>
+</tbody>
+</table>
+<div>
+<p>Let’s suppose that there is a small probability <span class="math inline">\(p\)</span> that Player B will accidentally play Right &gt; What is Player A’s expected utility of playing Up?</p>
+<p><span class="math display">\[ EU_A(Up) = 9(1-p) + 8p \]</span></p>
+<blockquote>
+<p>What is Player A’s expected utility of playing Down?</p>
+</blockquote>
+<p><span class="math display">\[ EU_B(Down) = 10(1-p) - 1000p \]</span></p>
+<p>So Player A should only play Down if:</p>
+<p><span class="math display">\[
+\begin{align}
+10(1-p) - 1000p &gt; &amp; 9(1-p) + 8p \\
+              p &gt; &amp; \frac{1}{1009}
+\end{align}
+\]</span></p>
+</div>
 </section>
 <section id="criticism-2-multiple-equilibria" class="slide level2">
 <h2>Criticism 2: Multiple Equilibria</h2>
 <p>In some games, multiple Nash equilibria exist. This can create problems because: - It’s unclear which equilibrium the players will choose. - Some equilibria may not make sense in real-life situations.</p>
-<h3 id="example-3">Example:</h3>
+<h3 id="example-2">Example:</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Dante, Jose</th>
+<th>T4</th>
+<th>Metropol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>T4</strong></td>
+<td>2, 1</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong>Metropol</strong></td>
+<td>0, 0</td>
+<td>1, 2</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>In coordination games like <strong>Battle of the Sexes</strong>, there are multiple stable outcomes.</li>
 </ul>
-<p><strong>Question:</strong> How should players decide which Nash equilibrium to follow when more than one exists?</p>
 </section>
-<section id="criticism-3-lack-of-dynamic-considerations" class="slide level2">
-<h2>Criticism 3: Lack of Dynamic Considerations</h2>
-<p>Nash equilibrium is often static, focusing only on one-time decisions. However, many games involve ongoing interactions and learning over time.</p>
-<h3 id="counter-argument-1">Counter-Argument:</h3>
+<section id="criticism-2-multiple-equilibria-1" class="slide level2">
+<h2>Criticism 2: Multiple Equilibria</h2>
+<h3 id="another-example">Another Example</h3>
+<p>Pick one player to be <span class="h">Boston</span>, one player as <span class="h">San Francisco</span></p>
+<div>
+<p>Here are 9 cities which must be evenly divided between the two players:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li>Some theorists suggest that Nash equilibrium should be modified to reflect how players learn and adjust their strategies dynamically over time.</li>
+<li class="fragment">Atlanta</li>
+<li class="fragment">Chicago</li>
+<li class="fragment">Dallas</li>
+<li class="fragment">Denver</li>
 </ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment">Los Angeles</li>
+<li class="fragment">New York</li>
+<li class="fragment">Philidelphia</li>
+<li class="fragment">Seattle</li>
+</ul>
+</div></div>
+</div>
+<p>You win if you evenly split this list between you without communicating, and without overlaps or missed cities</p>
+</section>
+<section id="criticism-2-multiple-equilibria-2" class="slide level2">
+<h2>Criticism 2: Multiple Equilibria</h2>
+<h3 id="arriving-at-specific-ne">Arriving at Specific NE</h3>
+<p>This last example shows the importance of shared background and culture in forming strategic beliefs for cases with multiple NE</p>
+<div>
+<ul>
+<li class="fragment"><p>So far, our theory have given us sets of NE which are stable given <em>any</em> set of realized beliefs</p></li>
+<li class="fragment"><p>But it doesn’t help us exaplain how those beliefs might be formed</p></li>
+<li class="fragment"><p><span class="hi">Evolutionary Game Theory</span> adds tools to our basic toolkit to try to answer some of these limitations</p></li>
+</ul>
+</div>
+</section>
+<section id="criticism-2-multiple-equilibria-3" class="slide level2">
+<h2>Criticism 2: Multiple Equilibria</h2>
+<p>In the later chapters we will develop ideas to help narrow down the more general concept of NE</p>
+<h3 id="refinements-to-ne">Refinements to NE</h3>
+<p>A <span class="hi">refinement</span> is a restriction on the more general assumptions needed for Nash Equilibria</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><span class="hi">mixed-strategy Nash equilibrium</span> allows for probabalistic plays</li>
+<li><span class="hi">subgame-perfect Nash equilibria</span> aka <em>rollback equilibria</em> are refinements in <em>sequential games</em></li>
+<li><span class="hi">perfect Bayesian equilibrium</span> has to deal with informations asymmetries</li>
+</ul>
+</section>
+<section id="criticism-3-requirements-of-rationality" class="slide level2">
+<h2>Criticism 3: Requirements of Rationality</h2>
+<p>One major criticism is that Nash equilibrium assumes:</p>
+<ul>
+<li><p>Players have perfect knowledge of others’ strategies.</p></li>
+<li><p>Players have rational preferences <em>and know that their opponent is rational</em></p></li>
+</ul>
+<h3 id="counter-argument">Counter-Argument:</h3>
+<ul>
+<li>What are some situations you can think of where these assumptions might break down?</li>
+</ul>
+<div>
+<ul>
+<li class="fragment"><p>Players might not know <em>who</em> they are playing against and what preferences they might have</p></li>
+<li class="fragment"><p>Players might make <em>mistakes</em> and occasionally choose actions that don’t fulfill their rational best response</p></li>
+</ul>
+</div>
+</section>
+<section id="criticism-3-requirements-of-rationality-1" class="slide level2">
+<h2>Criticism 3: Requirements of Rationality</h2>
+<p>Consider this game:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Row, Column</th>
+<th>C1</th>
+<th>C2</th>
+<th>C3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>R1</strong></td>
+<td>0, 7</td>
+<td>2, 5</td>
+<td>7, 0</td>
+</tr>
+<tr class="even">
+<td><strong>R2</strong></td>
+<td>5, 2</td>
+<td>3, 3</td>
+<td>5, 2</td>
+</tr>
+<tr class="odd">
+<td><strong>R3</strong></td>
+<td>7, 0</td>
+<td>2, 5</td>
+<td>0, 7</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>What is the NE?</p>
+</blockquote>
+</section>
+<section id="criticism-3-requirements-of-rationality-2" class="slide level2">
+<h2>Criticism 3: Requirements of Rationality</h2>
+<p>Consider this game:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Row, Column</th>
+<th>C1</th>
+<th>C2</th>
+<th>C3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>R1</strong></td>
+<td>0, <u>7</u></td>
+<td>2, 5</td>
+<td><u>7</u>, 0</td>
+</tr>
+<tr class="even">
+<td><strong>R2</strong></td>
+<td>5, 2</td>
+<td><u>3</u>, <u>3</u></td>
+<td>5, 2</td>
+</tr>
+<tr class="odd">
+<td><strong>R3</strong></td>
+<td><u>7</u>, 0</td>
+<td>2, 5</td>
+<td>0, <u>7</u></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>What is the NE?</p>
+</blockquote>
+<div>
+<ul>
+<li class="fragment"><p>(R2, C2) is the only NE in this game</p></li>
+<li class="fragment"><p>For this strategy profile, both players’ beliefs about the other player’s strategy are correct.</p>
+<ul>
+<li class="fragment"><p>Column believes that Row will choose R2, so she chooses her best response of C2</p></li>
+<li class="fragment"><p>Row believes that Column will choose C2, so he chooses his best response of R2</p></li>
+<li class="fragment"><p>So in NE, each player’s belief matches their opponent’s best response</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="criticism-3-requirements-of-rationality-3" class="slide level2">
+<h2>Criticism 3: Requirements of Rationality</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Row, Column</th>
+<th>C1</th>
+<th>C2</th>
+<th>C3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>R1</strong></td>
+<td>0, <u>7</u></td>
+<td>2, 5</td>
+<td><u>7</u>, 0</td>
+</tr>
+<tr class="even">
+<td><strong>R2</strong></td>
+<td>5, 2</td>
+<td><u>3</u>, <u>3</u></td>
+<td>5, 2</td>
+</tr>
+<tr class="odd">
+<td><strong>R3</strong></td>
+<td><u>7</u>, 0</td>
+<td>2, 5</td>
+<td>0, <u>7</u></td>
+</tr>
+</tbody>
+</table>
+<p>But we could use similar logic for this game even when beliefs are <em>incorrect</em></p>
+<div>
+<ul>
+<li class="fragment"><p>We can justify Row playing <strong>R1</strong> if she believes that Column will play <strong>C3</strong></p></li>
+<li class="fragment"><p>Row could beleive this if she believes that <em>Column believes she is playing</em> <strong>R3</strong></p></li>
+<li class="fragment"><p>And if she also thinks that Column believes that she is playing <strong>R3</strong> because Column believes that <em>Row believes that Column is playing</em> <strong>C1</strong></p></li>
+</ul>
+</div>
 </section>
 <section id="rebuttal-to-critics-why-not-nash-equilibrium" class="slide level2">
 <h2>Rebuttal to Critics: Why Not Nash Equilibrium?</h2>
@@ -1046,10 +1430,6 @@ P_X = 20, \quad P_Y = 20
 <section id="conclusion" class="slide level2">
 <h2>Conclusion</h2>
 <p>While Nash equilibrium has clear limitations, it remains a central concept in game theory. Alternative solution concepts may provide better insights into certain situations, but Nash equilibrium is still the starting point for analyzing many strategic games.</p>
-</section>
-<section id="interactive-exercise-game-revisited" class="slide level2">
-<h2>Interactive Exercise: Game Revisited</h2>
-<p>Let’s revisit the <strong>Coordination Game</strong> from earlier. Can you identify the Nash equilibria? Then, discuss whether any of the criticisms apply to this game.</p>
 </section>
 <section class="slide level2">
 
@@ -1303,18 +1683,7 @@ P_X = 20, \quad P_Y = 20
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1346,7 +1715,29 @@ P_X = 20, \quad P_Y = 20
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/dyasui\.github\.io\/EC327\/");
@@ -1354,7 +1745,7 @@ P_X = 20, \quad P_Y = 20
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
