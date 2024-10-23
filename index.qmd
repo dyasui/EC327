@@ -17,6 +17,8 @@ subtitle: "Economics Course at the University of Oregon"
 
 [04 - Continuous Strategies](/Slides/04ContinuousStrats/04-main.html)
 
+[05 - Combining Sequential and Simultaneous Games](/Slides/05CombinedGames/05-main.html)
+
 ---
 
 ## Activities

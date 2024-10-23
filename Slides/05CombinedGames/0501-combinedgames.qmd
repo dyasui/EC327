@@ -1,0 +1,136 @@
+# Games with both Simultaneous and Sequential Moves
+
+## Games with both types of moves
+
+We separated games by the timing of moves in the first few lectures
+
+  * it allowed us to introduce the relevant methods for each category
+
+  * it also gave us the intuition behind the more general concept of Nash Equilibrium in a few different settings
+
+  * but for many types of settings there are a mix of actions that are taken both *sequentially* and also taken *simultaneously*
+
+---
+
+## Two-Stage Games & Subgames
+
+[CrossTalk]{.h} and [GlobalDialog]{.h} are competing telecom companies
+
+  * Each could invest $10 billion in fiber-optic infrastructure
+
+::: {.incremenatl}
+
+  * If only one company has fiber-optic, they get the entire market
+
+    + A monopolist can charge **high** price $\rightarrow$ earn $24 billion
+
+    + or a **low** price to attract more customers $\rightarrow$ earn $16 billion
+
+:::
+
+---
+
+## Two-Stage Games & Subgames
+
+[CrossTalk]{.h} and [GlobalDialog]{.h} are competing telecom companies
+
+  * Each could invest $10 billion in fiber-optic infrastructure
+
+::: {.incremental}
+
+  * If *both* companies invest, they are locked in a ***simultaneous*** pricing game
+
+    + If both set **high** price in the fiber-optic market, each gets $12 billion
+
+    + If both choose **low**, they each get $8 billion
+
+    + If one sets **high** and the other sets **low**, 
+      
+      - the low-price setter gets the whole market and earns $24 billion,
+
+      - the high price setter gets $0
+
+:::
+
+---
+
+## Two-Stage Games & Subgames
+
+![](figures/Dixit_fig6.1.png)
+
+---
+
+## Two-Stage Games & Subgames
+
+We can use our tools from solving both game trees and game tables 
+
+::: {.incremental}
+
+  * first, notice that a monopolist will always set a **High** price
+
+  * So we can replace the payoffs from the **High** branch into the first-stage table
+
+:::
+
+---
+
+## Two-Stage Games & Subgames
+
+Take a look at the table labelled Second stage:
+
+| CrossTalk, GlobalDialog |  High  |   Low  |
+|:-----------------------:+:------:+:------:|
+|         **High**        |  2, 2  | -10, 6 |
+|         **Low**         | 6, -10 | -2, -2 |
+
+::: {.incremental}
+
+This is itself a complete game nested in the larger one
+
+  * so it's whats is called a [subgame]{.hi}
+
+  * we can solve it like we would any other game table
+
+  * The NE of this subgame is (**Low**, **Low**) 
+
+  * place the Nash payoffs of -2, -2 into the first-stage table
+:::
+
+---
+
+## Two-Stage Games & Subgames
+
+First-stage game with payoffs filled in:
+
+| CrossTalk, GlobalDialog |   Don't   |   Invest   |
+|:-----------------------:+:---------:+:----------:|
+|        **Don't**        |    0, 0   |  0, **14** |
+|        **Invest**       | **14**, 0 | **-2, -2** |
+
+::: {.incremental}
+Now we can solve for the NE of the whole game:
+  
+  * (**Invest** **High** **Low**, **Don't** **High** **Low**)
+
+  * (**Don't** **High** **Low**, **Invest** **High** **Low**)
+:::
+
+---
+
+## Two-Stage Games & Subgames
+
+### Football play game
+
+In football, each team chooses a play to run in the huddle where the other team can't observe
+
+  * after this *simultaneous* action which is not observable to their opponent, the teams line up at which point the coach *can* observe how the defensive team are aligned and choose to potentially pick a different play accordingly
+
+  * The defensive team could in also choose to respond to the offensive play changing their play
+
+---
+
+## Two-Stage Games & Subgames
+
+![](figures/Dixit_fig6.4.png)
+
+

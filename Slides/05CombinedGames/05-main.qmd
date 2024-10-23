@@ -1,0 +1,204 @@
+---
+title: "Introduction to Game Theory"
+subtitle: "Combining Sequential and Simultaneous Games"
+author: "Dante Yasui"
+date: last-modified
+date-format: "YYYY"
+format:
+    revealjs:
+        theme: [default, styles.scss]
+        slide-number: true
+        footer: "EC327 | Lecture 5 | Combining Games"
+        preview-links: auto
+        code-fold: true
+        logo: UOSignature-356.png
+title-slide-attributes:
+  data-background-position: left
+output:
+  beamer_presentation:
+    keep_tex: yes
+---
+
+::: {.vertical-center}
+
+[Outline]{.hi .big}
+
+
+
+:::
+
+## Combining Sequential and Simultaneous
+
+::: {.incremental}
+
+  * So far, we have only seen games that were either made up of 
+  *only sequential* or *only simultaneous* moves.
+
+  * But realistically, 
+  many strategic interactions will contain both types of moves.
+
+  * Learning to move between extensive and strategic form 
+  will help us examine more complicated games,
+  as well as introduce us to the roll of *information* and beliefs
+  which will become useful to later topics.
+
+:::
+
+---
+
+
+## Original Kidnap Game
+
+![](figures/kidnap_tree1.png)
+
+---
+
+
+## Modifying the game
+
+:::: {.columns}
+::: {.column}
+![](figures/kidnap_tree2.png)
+:::
+::: {.column}
+
+  * When we first saw this game,
+  Vivica could observe whether Guy had killed Orlando before she paid the ransom. 
+
+  * Now we will consider a variation of this game 
+  where Orlando's fate is decided by Guy 
+  *without Vivica knowing the result*.
+
+:::
+::::
+
+---
+
+
+## Kidnap Game with a simultaneous subgame
+
+:::: {.incremental}
+
+  * The dotted box around Vivica's nodes $N_3$ and $N_4$
+  indicate that she can't tell them apart.
+
+  * They are part of the same [information set]{.hi}; 
+  to Vivica, they are indistinguishable from each other.
+
+::: {.callout-note}
+### Information set 
+is the set of information available to a player when making a decision. 
+In the extensive form, 
+every decision node belongs to one and only one info set,
+but multiple nodes may be in the same info set 
+if the player at that node cannot tell them apart.
+:::
+
+::::
+
+---
+
+## Using Strategic Form in Extensive Games
+
+Consider the situation when Guy has already kidnapped Orlando.
+
+List the remaining strategies for each player:
+
+::: {.incremental}
+
+  * Vivica can decide to **Pay** or **Don't** pay the ransom
+
+  * Guy can either **Kill** or **Release** Orlando
+  
+:::
+
+---
+
+## Using Strategic Form in Extensive Games
+
+With these strategy profiles,
+we can write this subgame out in its strategic form:
+
+| Guy, Vivica | Pay  | Don't |
+|-------------+------+-------|
+| **Kill**    | 4, 1 | 2, 2  |
+| **Release** | 5, 3 | 1, 4  |
+
+---
+
+
+## Going from Strategic to Extensive
+  
+For every strategic form game, 
+there are multiple extensive form game trees
+which can be drawn.
+
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![](figures/kidnapgame_sg1.png)
+
+:::
+::: {.column width="50%"}
+
+![](figures/kidnapgame_sg2.png)
+
+:::
+::::
+
+---
+
+
+## Another way to represent the entire Kidnap Game
+
+![](figures/kidnapgametreetable.png)
+
+---
+
+
+## A Strategic Form representation
+
+Here is the game matrix for the entire kidnapping game:
+
+| Vivica, Guy | $dnk,k$ | $dnk,r$ | $kid,k$ | $kid,r$ |
+|-------------+---------+---------+---------+---------|
+| $pay$       | $5,3$   | $5,3$   | $1,4$   | $3,5$   |
+| $no~pay$    | $5,3$   | $5,3$   | $2,2$   | $4,1$   |
+
+::: {.incremental}
+  * Notice that the left half of the table represent the single *don't kidnap* branch in the original tree
+  * What are the NE?
+    + ($pay$, $kid,k$) is one
+    + ($no~pay$, $dnk,k$) and ($no~pay$, $dnk,r$) are also NE for this game table
+:::
+
+---
+
+## NE vs SPNE
+
+::::: {.columns}
+:::: {.column}
+![](figures/kidnap_tree1.png)
+::::
+:::: {.column}
+| Vivica, Guy | $dnk,k$ | $dnk,r$ | $kid,k$ | $kid,r$ |
+|-------------+---------+---------+---------+---------|
+| $pay$       | $5,3$   | $5,3$   | $1,4$   | $3,5$   |
+| $no~pay$    | $5,3$   | $5,3$   | $2,2$   | $4,1$   |
+
+::: {.incremental .small}
+  * What is different about the NE we found in the table
+    and the NE we found through *rollback*?
+  
+  * The NE where Vivica plays $no~pay$ are not Subgame Perfect
+    because those actions are not [credible threats]{.hi}
+:::
+::::
+:::::
+
+{{< include 0501-combinedgames.qmd >}}
+
+{{< include 0503-changemethod.qmd >}}
+
+{{< include 0505-SPNE.qmd >}}

@@ -1,0 +1,114 @@
+# Change in the Method of Analysis
+
+## Illustrating Sim. Games using Trees
+
+### Martina Navratilova v. Chris Evert
+
+| Evert, Navratilova |   DL   |   CC   |
+|:------------------:+:------:+:------:|
+|       **DL**       | 50, 50 | 80, 20 |
+|       **CC**       | 90, 10 | 20, 80 |
+
+Navratilova has volleyed the ball to Evert
+
+  * Evert can send the ball down the line, **DL**, 
+    or crosscourt **CC** (a softer diagonal shot)
+
+  * Navratilova has to simultaneously choose to set up to receive either type of shot
+
+## Illustrating Sim. Games using Trees
+
+The simultaneous tennis game can also be represented as a tree
+
+![](figures/Dixit_fig6.7.png)
+
+The [information set]{.hi} indicates that Navratilova doesn't know which shot before she has to choose how to receive
+
+## Adding Nature as a player
+
+Even in cases which aren't actually *strategic*, 
+we can still use some of these tools
+
+![](figures/Dixit_fig6.8.png)
+
+## Changing the order of Moves
+
+We found the NE will be (**Deficit**, **High Rates**)
+when this game is played simultaneously
+
+| Congress, Federal Reserve | Low rates | High Rates |
+|:-------------------------:+:---------:+:----------:|
+|        **Balance**        |    3, 4   |    1, 3    |
+|        **Deficit**        |    4, 1   |    2, 2    |
+
+## Changing the order of Moves
+
+What about when the Fed moves first?
+
+![](figures/Dixit_fig6.6b.png)
+
+::: {.incremental}
+
+  * We get the same NE
+
+:::
+---
+
+## Changing the order of Moves
+
+What about when Congress moves first?
+
+![](figures/Dixit_fig6.6c.png)
+
+::: {.incremental}
+
+  * now we get a different NE with congress playing their strictly dominated strategy
+
+  * this is because when the Fed acts second, they can make a *credible threat*
+
+:::
+
+---
+
+## Showing Seq. Games in Strategic Form
+
+In the game where Congress moves first,
+they have two strategies, but the Fed has 4
+
+| Congress, Fed | L if B, H if D | H if B, L if D | always Low | always H |
+|---------------+----------------+----------------+------------+----------|
+| **Balance**   | 3,4            | 1,3            | 3,4        | 1,3      |
+| **Deficit**   | 2,2            | 4,1            | 4,1        | 2,2      |
+
+---
+
+## Showing Seq. Games in Strategic Form
+
+When we implemented *rollback* on the extensive form version,
+there was only one NE,
+
+  * but here there are two: 
+
+    + \{**Deficit**, always **High** \}
+    
+    + \{ **Balance**, (**L** if B, **H** if D) \}
+
+Both are NE of this game, but the second is a special type of NE
+
+A [subgame-perfect Nash equilibrium]{.hi} because it involves the Fed making their rational choice in every subgame.
+
+## Showing Seq. Games in Strategic Form
+
+![](figures/Dixit_fig6.6c.png)
+
+It's not *subgame-rational* for the Fed to play **High always**
+because if the case where Congress already spent in deficit were to happen,
+the Fed's only rational action would be to set low interest rates.
+
+  * We can say that the Fed's **High always** strategy is not a [credible]{.hi} promise
+
+## SPNE
+
+The rollback method finds the [subgame-perfect Nash equilibria]{.hi} of sequential games
+
+  * A complete plan of action such that at every node *including off-equilibrium* paths, it is still rational to stick to that original plan of action.
