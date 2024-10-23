@@ -94,23 +94,33 @@ So why do we care about subgames?
 ::: {.incremental}
 
   * [subgame-perfect Nash equilibrium]{.hi} (*aka SPNE*), that does not produce the questionable equilibria we saw earlier.
+
   * All SPNE are also regular Nash equilibria.
+
   * But unique to SPNE, they have to also produce a Nash equilibrium **in every subgame**
+
 :::
+
 ---
 
 ## SPNE in the Entry Game
 
 :::: {.columns}
 
-::: {.columns width="50%"}
+::: {.column width="50%"}
+
 ![](figures/08InferiorEntrant.png)
+
 :::
 
 ::: {.columns width="50%"}
+
 * There is only a single proper subgame in the Entry Game.
+
 * A SPNE of this game must have a NE in that subgame.
+
 * The only NE of the subgame is for the Incumbent to Accommodate.
+
 ::: 
 
 ::::
@@ -125,13 +135,14 @@ So why do we care about subgames?
 ![](figures/08InferiorEntrant.png)
 ::::
 
-:::: {.columns width="50%"}
+:::: {.column width="50%"}
 ::: {.incremental}
 * Given that the Incumbent Accommodates, the Entrant now faces a choice between staying Out, or Entering and being Accommodated.
 * The Entrant's best response is to Enter, and the SPNE is (Enter, Accommodate)
 :::
+::::
 
-:::: 
+:::::
 
 ---
 

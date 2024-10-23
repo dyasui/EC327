@@ -84,20 +84,6 @@ Some games may have multiple Nash equilibria, while others may have none in pure
 
 ---
 
-## Example Application: Price Competition
-
-In the example of two firms setting prices:
-- Label strategies as $P_X$ and $P_Y$.
-- Profits $\pi_X$ and $\pi_Y$ depend on both prices.
-- Maximize each firm’s profit to find their best-response functions.
-
-Solve for the Nash equilibrium:
-$$
-P_X = 20, \quad P_Y = 20
-$$
-
----
-
 ## Recap: General Steps for Nash Equilibrium
 
 1. Label each player’s strategies and payoffs.
@@ -105,12 +91,3 @@ $$
 3. Solve the system of best-response functions.
 4. Check for multiple equilibria and the possibility of mixed strategies.
 
----
-
-## Interactive Exercise
-
-Now, let’s apply this method to a different game:
-- Consider a bidding competition between contractors.
-- Use the general method to find the Nash equilibrium for their bids.
-
----

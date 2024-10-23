@@ -202,3 +202,7 @@ Here is the game matrix for the entire kidnapping game:
 {{< include 0503-changemethod.qmd >}}
 
 {{< include 0505-SPNE.qmd >}}
+
+{{< include 0404-generalnash.qmd >}}
+
+{{< include 0405-nashcritique.qmd >}}

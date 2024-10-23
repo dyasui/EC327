@@ -65,9 +65,15 @@ There are two fishing boats in a small coastal town
 The profits of each boat are:
 
 $$
-\pi_R = [(60 - R - S) - 30] \cdot R = (30 - S)R - R^2
-\pi_S = [(60 - R - S) - 36] \cdot S = (24 - R)S - S^2
+\begin{align}
+\pi_R = & [(60 - R - S) - 30] \cdot R = (30 - S)R - R^2\\
+\pi_S = & [(60 - R - S) - 36] \cdot S = (24 - R)S - S^2
+\end{align}
 $$
+
+---
+
+## Applying Rationalizability to Continuous Games
 
 > what are the best-response rules?
 
@@ -86,6 +92,8 @@ $$
 \Rightarrow S^* = 12 - \frac{R}{2}
 \end{align}
 $$  
+
+:::
 
 ---
 
@@ -146,4 +154,3 @@ will converge on the unique NE:
 :::
 ::::
 
----

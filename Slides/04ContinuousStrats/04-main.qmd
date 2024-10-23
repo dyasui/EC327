@@ -35,6 +35,4 @@ filters:
 
 {{< include 0403-campaining.qmd >}}
 
-{{< include 0404-generalnash.qmd >}}
-
-{{< include 0405-nashcritique.qmd >}}
+{{< include 0405-rationalize.qmd >}}

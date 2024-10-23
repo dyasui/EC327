@@ -6,8 +6,10 @@ Now that you've learned what it means and seen it applied to several different g
 *what do you think about the concept of [Nash Equilbrium]{.hi}?*
 
 ::: {.incremental}
+
 - Does it make intuitive sense? Do you think people really reason through their **best response** to any possible situation?
 - Is there anything relevant to strategic interactions you can think of that is left out of our models so far?
+
 :::
   
 ---
@@ -16,9 +18,10 @@ Now that you've learned what it means and seen it applied to several different g
 
 The Nash equilibrium is based on the idea that every player's strategy should be the best response to the strategies of others.
 
-::: {.incremental}
 
 ### Benefits of using NE:
+
+::: {.incremental}
 
   * In non-cooperative games, it makes sense that each player is making their best response to their opponent
 
