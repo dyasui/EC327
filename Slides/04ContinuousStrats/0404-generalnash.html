@@ -301,14 +301,6 @@ x = f(y, z), \quad y = g(x, z), \quad z = h(x, y)
 <hr>
 </section>
 </section>
-<section id="example-application-price-competition" class="level2">
-<h2 class="anchored" data-anchor-id="example-application-price-competition">Example Application: Price Competition</h2>
-<p>In the example of two firms setting prices: - Label strategies as <span class="math inline">\(P_X\)</span> and <span class="math inline">\(P_Y\)</span>. - Profits <span class="math inline">\(\pi_X\)</span> and <span class="math inline">\(\pi_Y\)</span> depend on both prices. - Maximize each firm’s profit to find their best-response functions.</p>
-<p>Solve for the Nash equilibrium: <span class="math display">\[
-P_X = 20, \quad P_Y = 20
-\]</span></p>
-<hr>
-</section>
 <section id="recap-general-steps-for-nash-equilibrium" class="level2">
 <h2 class="anchored" data-anchor-id="recap-general-steps-for-nash-equilibrium">Recap: General Steps for Nash Equilibrium</h2>
 <ol type="1">
@@ -317,12 +309,6 @@ P_X = 20, \quad P_Y = 20
 <li>Solve the system of best-response functions.</li>
 <li>Check for multiple equilibria and the possibility of mixed strategies.</li>
 </ol>
-<hr>
-</section>
-<section id="interactive-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-exercise">Interactive Exercise</h2>
-<p>Now, let’s apply this method to a different game: - Consider a bidding competition between contractors. - Use the general method to find the Nash equilibrium for their bids.</p>
-<hr>
 
 
 </section>
@@ -421,7 +407,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/dyasui\.github\.io\/EC327\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

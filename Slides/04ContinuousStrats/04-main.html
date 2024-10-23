@@ -875,564 +875,173 @@ x = 10 \sqrt{10 \sqrt{x} - x} - (10 \sqrt{x} - x)
 
 </section></section>
 <section>
-<section id="general-method-for-finding-nash-equilibria" class="title-slide slide level1 center">
-<h1>General Method for Finding Nash Equilibria</h1>
+<section id="applying-rationalizability" class="title-slide slide level1 center">
+<h1>Applying Rationalizability</h1>
 
 </section>
-<section id="introduction" class="slide level2">
-<h2>Introduction</h2>
-<p>The method for finding the Nash equilibrium in a game with continuous strategies is general and applies to many types of games.</p>
-<h3 id="key-steps">Key steps:</h3>
-<ol type="1">
-<li>Label each player’s strategy (e.g., <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, etc.).</li>
-<li>Define each player’s payoff as a function of all players’ strategies.</li>
-<li>Maximize each player’s payoff by choosing their own strategy, holding the others constant.</li>
-</ol>
-<p><strong>Question:</strong> How does this method apply to real-world competition scenarios?</p>
+<section id="rationalizability" class="slide level2">
+<h2>Rationalizability</h2>
+<p>Recall the concept of <span class="hi">never a best response</span> strategies.</p>
+<p>All strategies which survive the eliminations of <strong>NBR</strong>’s are said to be <span class="hi">rationalizable</span>.</p>
 </section>
-<section id="step-1-labeling-strategies-and-payoffs" class="slide level2">
-<h2>Step 1: Labeling Strategies and Payoffs</h2>
-<p>Suppose we have players 1, 2, and 3, with strategies labeled <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, and <span class="math inline">\(z\)</span>, and their payoffs <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, and <span class="math inline">\(Z\)</span>.</p>
-<p>For each player: <span class="math display">\[
-X = F(x, y, z), \quad Y = G(x, y, z), \quad Z = H(x, y, z)
-\]</span></p>
-<h3 id="example-price-competition">Example: Price Competition</h3>
-<ul>
-<li><span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> could represent the prices set by two firms, and the functions <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span> represent their profits.</li>
-</ul>
-<p><strong>Question:</strong> Why is labeling strategies and payoffs essential for structuring a game?</p>
-</section>
-<section id="step-2-maximizing-payoff-functions" class="slide level2">
-<h2>Step 2: Maximizing Payoff Functions</h2>
-<p>Each player chooses their strategy to maximize their own payoff, considering the strategies of the others as fixed.</p>
-<p>To do this, we take the <strong>partial derivative</strong> of each player’s payoff with respect to their own strategy and set it to zero.</p>
-<h3 id="example">Example:</h3>
-<p>For firm 1: <span class="math display">\[
-\frac{\partial F(x, y, z)}{\partial x} = 0
-\]</span></p>
-<p><strong>Question:</strong> What does this partial derivative represent in terms of strategy adjustment?</p>
-</section>
-<section id="step-3-solving-for-best-response-functions" class="slide level2">
-<h2>Step 3: Solving for Best-Response Functions</h2>
-<p>Solve each equation to find the <strong>best-response functions</strong>. These tell each player the best strategy given what the other players are doing.</p>
-<p>For firm 1, the best-response function could look like: <span class="math display">\[
-x = f(y, z)
-\]</span></p>
-<p>This gives the optimal <span class="math inline">\(x\)</span> for any given values of <span class="math inline">\(y\)</span> and <span class="math inline">\(z\)</span>.</p>
-</section>
-<section id="step-4-nash-equilibrium" class="slide level2">
-<h2>Step 4: Nash Equilibrium</h2>
-<p>The Nash equilibrium occurs where all players’ best-response functions intersect. Solve the system of equations: <span class="math display">\[
-x = f(y, z), \quad y = g(x, z), \quad z = h(x, y)
-\]</span></p>
-<p>At this point, no player has an incentive to change their strategy.</p>
-<h3 id="example-1">Example:</h3>
-<p>In price competition, the Nash equilibrium is where both firms set prices that maximize their respective profits.</p>
-<p><strong>Interactive Question:</strong> Why is it important that no player has an incentive to deviate at Nash equilibrium?</p>
-</section>
-<section id="step-5-handling-multiple-solutions" class="slide level2">
-<h2>Step 5: Handling Multiple Solutions</h2>
-<p>Some games may have multiple Nash equilibria, while others may have none in pure strategies.</p>
-<h3 id="discussion-1">Discussion:</h3>
-<ul>
-<li>Multiple equilibria can occur in coordination games.</li>
-<li>Games without equilibria in pure strategies might require us to consider <strong>mixed strategies</strong> (covered in a later chapter).</li>
-</ul>
-</section>
-<section id="example-application-price-competition" class="slide level2">
-<h2>Example Application: Price Competition</h2>
-<p>In the example of two firms setting prices: - Label strategies as <span class="math inline">\(P_X\)</span> and <span class="math inline">\(P_Y\)</span>. - Profits <span class="math inline">\(\pi_X\)</span> and <span class="math inline">\(\pi_Y\)</span> depend on both prices. - Maximize each firm’s profit to find their best-response functions.</p>
-<p>Solve for the Nash equilibrium: <span class="math display">\[
-P_X = 20, \quad P_Y = 20
-\]</span></p>
-</section>
-<section id="recap-general-steps-for-nash-equilibrium" class="slide level2">
-<h2>Recap: General Steps for Nash Equilibrium</h2>
-<ol type="1">
-<li>Label each player’s strategies and payoffs.</li>
-<li>Maximize each player’s payoff with respect to their own strategy.</li>
-<li>Solve the system of best-response functions.</li>
-<li>Check for multiple equilibria and the possibility of mixed strategies.</li>
-</ol>
-</section>
-<section id="interactive-exercise-1" class="slide level2">
-<h2>Interactive Exercise</h2>
-<p>Now, let’s apply this method to a different game: - Consider a bidding competition between contractors. - Use the general method to find the Nash equilibrium for their bids.</p>
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="critical-discussion-of-the-nash-equilibrium-concept" class="title-slide slide level1 center">
-<h1>Critical Discussion of the Nash Equilibrium Concept</h1>
-
-</section>
-<section id="discussion-of-nash-equilibrium" class="slide level2">
-<h2>Discussion of Nash Equilibrium</h2>
-<p>Now that you’ve learned what it means and seen it applied to several different games, <em>what do you think about the concept of <span class="hi">Nash Equilbrium</span>?</em></p>
-<div>
-<ul>
-<li class="fragment">Does it make intuitive sense? Do you think people really reason through their <strong>best response</strong> to any possible situation?</li>
-<li class="fragment">Is there anything relevant to strategic interactions you can think of that is left out of our models so far?</li>
-</ul>
-</div>
-</section>
-<section id="the-appeal-of-nash-equilibrium" class="slide level2">
-<h2>The Appeal of Nash Equilibrium</h2>
-<p>The Nash equilibrium is based on the idea that every player’s strategy should be the best response to the strategies of others.</p>
-<section id="benefits-of-using-ne" class="incremental">
-<h3>Benefits of using NE:</h3>
-<ul>
-<li><p>In non-cooperative games, it makes sense that each player is making their best response to their opponent</p>
-<ul>
-<li><p>If you can’t enforce any strategy onto your opponent, you should stick with whatever doesn’t make you worse off, given what your opponent chose.</p></li>
-<li><p>In any situation which is not a Nash, there is some player who could have done better:</p>
-<ul>
-<li>I.E., an NE leaves no-one with any <em>regrets</em></li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="some-potential-critiques-of-ne-predictions" class="slide level2">
-<h2>Some Potential Critiques of NE predictions</h2>
-<div>
-<ul>
-<li class="fragment"><p>IESDS, Best-response functions may not be how players actually think</p>
-<ul>
-<li class="fragment">But NE only describe the <em>stable</em> combinations of strategies, there are many ways of getting there: learning from experience, repeated play, intuition, etc.</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="some-potential-critiques-of-ne-predictions-1" class="slide level2">
-<h2>Some Potential Critiques of NE predictions</h2>
-<div>
-<ul>
-<li class="fragment"><p>IESDS, Best-response functions may not be how players actually think</p></li>
-<li class="fragment"><p>Nash doesn’t explicitly take risk into account</p>
-<ul>
-<li class="fragment"><p>with <em>ordinal</em> payoffs, we might leave out the incentive to play it safe to avoid very bad outcomes</p></li>
-<li class="fragment"><p>but if we instead use <em>cardinal</em> payoffs, or expected utilities, we can still extend our models to those situations</p></li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="some-potential-critiques-of-ne-predictions-2" class="slide level2">
-<h2>Some Potential Critiques of NE predictions</h2>
-<div>
-<ul>
-<li class="fragment"><p>IESDS, Best-response functions may not be how players actually think</p></li>
-<li class="fragment"><p>Nash doesn’t explicitly take risk into account</p></li>
-<li class="fragment"><p>NE don’t have to be <em>unique</em></p>
-<ul>
-<li class="fragment">If we care <em>predictions</em>, NE doesn’t always tell us what will happen, sometimes there can be multiple possible strategy profiles which are equally stable which means any one could happen depending how the game plays out</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="criticism-1-treatment-of-risk" class="slide level2">
-<h2>Criticism 1: Treatment of Risk</h2>
-<p>We’ve mentioned before how sometimes the strategies played in NE don’t line up with what might intuitively feel like the ‘safe’ strategies.</p>
-</section>
-<section id="criticism-1-treatment-of-risk-1" class="slide level2">
-<h2>Criticism 1: Treatment of Risk</h2>
-<p>Let’s look an an example:</p>
+<section id="applying-rationalizability-1" class="slide level2">
+<h2>Applying Rationalizability</h2>
+<p>Remember this game from before?</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th>Row, Column</th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
+<th>C1</th>
+<th>C2</th>
+<th>C3</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>A</strong></td>
-<td>2,2</td>
-<td>3,1</td>
-<td>0,2</td>
+<td><strong>R1</strong></td>
+<td>0,7</td>
+<td>2,5</td>
+<td>7,0</td>
 </tr>
 <tr class="even">
-<td><strong>B</strong></td>
-<td>1,3</td>
-<td>2,2</td>
-<td>3,2</td>
+<td><strong>R2</strong></td>
+<td>5,2</td>
+<td>3,3</td>
+<td>5,2</td>
 </tr>
 <tr class="odd">
-<td><strong>C</strong></td>
-<td>2,0</td>
-<td>2,3</td>
-<td>2,2</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>What’s the NE?</p>
-</blockquote>
-</section>
-<section id="criticism-1-treatment-of-risk-2" class="slide level2">
-<h2>Criticism 1: Treatment of Risk</h2>
-<p>Let’s look an an example:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Row, Column</th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>A</strong></td>
-<td><u>2</u>,<u>2</u></td>
-<td><u>3</u>,1</td>
-<td>0,<u>2</u></td>
-</tr>
-<tr class="even">
-<td><strong>B</strong></td>
-<td>1,<u>3</u></td>
-<td>2,2</td>
-<td><u>3</u>,2</td>
-</tr>
-<tr class="odd">
-<td><strong>C</strong></td>
-<td><u>2</u>,0</td>
-<td>2,<u>3</u></td>
-<td>2,2</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>What’s the NE?</p>
-</blockquote>
-<ul>
-<li>(<strong>A</strong>, <strong>A</strong>)</li>
-</ul>
-</section>
-<section id="criticism-1-treatment-of-risk-3" class="slide level2">
-<h2>Criticism 1: Treatment of Risk</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Row, Column</th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>A</strong></td>
-<td>2,2</td>
-<td>3,1</td>
-<td>0,2</td>
-</tr>
-<tr class="even">
-<td><strong>B</strong></td>
-<td>1,3</td>
-<td>2,2</td>
-<td>3,2</td>
-</tr>
-<tr class="odd">
-<td><strong>C</strong></td>
-<td>2,0</td>
-<td>2,3</td>
-<td>2,2</td>
+<td><strong>R3</strong></td>
+<td>7,0</td>
+<td>2,5</td>
+<td>0,7</td>
 </tr>
 </tbody>
 </table>
 <div>
 <ul>
-<li class="fragment"><p>But what happens if the other player mistakenly plays <strong>C</strong>?</p></li>
-<li class="fragment"><p>Then it might make sense to choose the safe option of <strong>C</strong></p></li>
-<li class="fragment"><p>You could get the same payoff of 2, but ensure that you wouldn’t have a chance to get 0</p>
-<ul>
-<li class="fragment">The idea of <span class="hi">trembling-hand perfection</span> takes this into account by allowing probabilistic errors in strategies.</li>
-</ul></li>
+<li class="fragment">We said that there is a unique NE (R2, C2) which could be justified with one set of beliefs</li>
+<li class="fragment">But also there was another chain of beliefs which could justify R1</li>
+<li class="fragment">That’s because R1 is <em>rationalizable</em></li>
 </ul>
 </div>
 </section>
-<section id="criticism-1-treatment-of-risk-4" class="slide level2">
-<h2>Criticism 1: Treatment of Risk</h2>
-<p>What about this game?</p>
+<section id="applying-rationalizability-2" class="slide level2">
+<h2>Applying Rationalizability</h2>
+<p>If we took away R2 and C2 from this game;</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>A, B</th>
-<th>Left</th>
-<th>Right</th>
+<th>Row, Column</th>
+<th>C1</th>
+<th>C3</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Up</strong></td>
-<td>9, 10</td>
-<td>8, 9.9</td>
+<td><strong>R1</strong></td>
+<td>0,7</td>
+<td>7,0</td>
 </tr>
 <tr class="even">
-<td><strong>Down</strong></td>
-<td>10, 10</td>
-<td>-1000, 9.9</td>
+<td><strong>R3</strong></td>
+<td>7,0</td>
+<td>0,7</td>
 </tr>
 </tbody>
 </table>
-<div>
-<p>Let’s suppose that there is a small probability <span class="math inline">\(p\)</span> that Player B will accidentally play Right &gt; What is Player A’s expected utility of playing Up?</p>
-<p><span class="math display">\[ EU_A(Up) = 9(1-p) + 8p \]</span></p>
-<blockquote>
-<p>What is Player A’s expected utility of playing Down?</p>
-</blockquote>
-<p><span class="math display">\[ EU_B(Down) = 10(1-p) - 1000p \]</span></p>
-<p>So Player A should only play Down if:</p>
+<p>then you can see that there is no NE in pure strategies,</p>
+<ul>
+<li><p>but all four strategy profiles are <em>rationalizable</em></p></li>
+<li><p>So <em>rationalizability</em> can still be useful even when NE cannot be found</p></li>
+</ul>
+</section>
+<section id="applying-rationalizability-to-continuous-games" class="slide level2">
+<h2>Applying Rationalizability to Continuous Games</h2>
+<p>There are two fishing boats in a small coastal town</p>
+<ul>
+<li>they can catch as many fish as they want, but too many will flood the local market</li>
+<li>the price of fish in the market is a function of how much each boat catches:</li>
+</ul>
+<p><span class="math display">\[ P = 60 - (R + S) \]</span></p>
+<pre><code>+ where $R$ and $S$ are barrels caught for each boat</code></pre>
+<ul>
+<li>Unit cost for each barrel is <strong>30</strong> ducats for boat <span class="math inline">\(R\)</span> and <strong>36</strong> ducats for boat <span class="math inline">\(S\)</span></li>
+</ul>
+</section>
+<section id="applying-rationalizability-to-continuous-games-1" class="slide level2">
+<h2>Applying Rationalizability to Continuous Games</h2>
+<p>The profits of each boat are:</p>
 <p><span class="math display">\[
 \begin{align}
-10(1-p) - 1000p &gt; &amp; 9(1-p) + 8p \\
-              p &gt; &amp; \frac{1}{1009}
+\pi_R = &amp; [(60 - R - S) - 30] \cdot R = (30 - S)R - R^2\\
+\pi_S = &amp; [(60 - R - S) - 36] \cdot S = (24 - R)S - S^2
+\end{align}
+\]</span></p>
+</section>
+<section id="applying-rationalizability-to-continuous-games-2" class="slide level2">
+<h2>Applying Rationalizability to Continuous Games</h2>
+<blockquote>
+<p>what are the best-response rules?</p>
+</blockquote>
+<div>
+<p><span class="math display">\[
+\begin{align}
+\frac{\delta \pi_R}{\delta R} &amp; = (30 - S) - 2R \\
+\Rightarrow R^* = 15 - \frac{S}{2}
+\end{align}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+\frac{\delta \pi_S}{\delta S} &amp; = (24 - S) - 2S \\
+\Rightarrow S^* = 12 - \frac{R}{2}
 \end{align}
 \]</span></p>
 </div>
 </section>
-<section id="criticism-2-multiple-equilibria" class="slide level2">
-<h2>Criticism 2: Multiple Equilibria</h2>
-<p>In some games, multiple Nash equilibria exist. This can create problems because: - It’s unclear which equilibrium the players will choose. - Some equilibria may not make sense in real-life situations.</p>
-<h3 id="example-2">Example:</h3>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Dante, Jose</th>
-<th>T4</th>
-<th>Metropol</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>T4</strong></td>
-<td>2, 1</td>
-<td>0, 0</td>
-</tr>
-<tr class="even">
-<td><strong>Metropol</strong></td>
-<td>0, 0</td>
-<td>1, 2</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>In coordination games like <strong>Battle of the Sexes</strong>, there are multiple stable outcomes.</li>
-</ul>
-</section>
-<section id="criticism-2-multiple-equilibria-1" class="slide level2">
-<h2>Criticism 2: Multiple Equilibria</h2>
-<h3 id="another-example">Another Example</h3>
-<p>Pick one player to be <span class="h">Boston</span>, one player as <span class="h">San Francisco</span></p>
-<div>
-<p>Here are 9 cities which must be evenly divided between the two players:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li class="fragment">Atlanta</li>
-<li class="fragment">Chicago</li>
-<li class="fragment">Dallas</li>
-<li class="fragment">Denver</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li class="fragment">Los Angeles</li>
-<li class="fragment">New York</li>
-<li class="fragment">Philidelphia</li>
-<li class="fragment">Seattle</li>
-</ul>
-</div></div>
-</div>
-<p>You win if you evenly split this list between you without communicating, and without overlaps or missed cities</p>
-</section>
-<section id="criticism-2-multiple-equilibria-2" class="slide level2">
-<h2>Criticism 2: Multiple Equilibria</h2>
-<h3 id="arriving-at-specific-ne">Arriving at Specific NE</h3>
-<p>This last example shows the importance of shared background and culture in forming strategic beliefs for cases with multiple NE</p>
-<div>
-<ul>
-<li class="fragment"><p>So far, our theory have given us sets of NE which are stable given <em>any</em> set of realized beliefs</p></li>
-<li class="fragment"><p>But it doesn’t help us exaplain how those beliefs might be formed</p></li>
-<li class="fragment"><p><span class="hi">Evolutionary Game Theory</span> adds tools to our basic toolkit to try to answer some of these limitations</p></li>
-</ul>
-</div>
-</section>
-<section id="criticism-2-multiple-equilibria-3" class="slide level2">
-<h2>Criticism 2: Multiple Equilibria</h2>
-<p>In the later chapters we will develop ideas to help narrow down the more general concept of NE</p>
-<h3 id="refinements-to-ne">Refinements to NE</h3>
-<p>A <span class="hi">refinement</span> is a restriction on the more general assumptions needed for Nash Equilibria</p>
-<p><strong>Examples:</strong></p>
-<ul>
-<li><span class="hi">mixed-strategy Nash equilibrium</span> allows for probabalistic plays</li>
-<li><span class="hi">subgame-perfect Nash equilibria</span> aka <em>rollback equilibria</em> are refinements in <em>sequential games</em></li>
-<li><span class="hi">perfect Bayesian equilibrium</span> has to deal with informations asymmetries</li>
-</ul>
-</section>
-<section id="criticism-3-requirements-of-rationality" class="slide level2">
-<h2>Criticism 3: Requirements of Rationality</h2>
-<p>One major criticism is that Nash equilibrium assumes:</p>
-<ul>
-<li><p>Players have perfect knowledge of others’ strategies.</p></li>
-<li><p>Players have rational preferences <em>and know that their opponent is rational</em></p></li>
-</ul>
-<h3 id="counter-argument">Counter-Argument:</h3>
-<ul>
-<li>What are some situations you can think of where these assumptions might break down?</li>
-</ul>
-<div>
-<ul>
-<li class="fragment"><p>Players might not know <em>who</em> they are playing against and what preferences they might have</p></li>
-<li class="fragment"><p>Players might make <em>mistakes</em> and occasionally choose actions that don’t fulfill their rational best response</p></li>
-</ul>
-</div>
-</section>
-<section id="criticism-3-requirements-of-rationality-1" class="slide level2">
-<h2>Criticism 3: Requirements of Rationality</h2>
-<p>Consider this game:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Row, Column</th>
-<th>C1</th>
-<th>C2</th>
-<th>C3</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>R1</strong></td>
-<td>0, 7</td>
-<td>2, 5</td>
-<td>7, 0</td>
-</tr>
-<tr class="even">
-<td><strong>R2</strong></td>
-<td>5, 2</td>
-<td>3, 3</td>
-<td>5, 2</td>
-</tr>
-<tr class="odd">
-<td><strong>R3</strong></td>
-<td>7, 0</td>
-<td>2, 5</td>
-<td>0, 7</td>
-</tr>
-</tbody>
-</table>
+<section id="applying-rationalizability-to-continuous-games-3" class="slide level2">
+<h2>Applying Rationalizability to Continuous Games</h2>
+<p>If you are the captian of boat <span class="math inline">\(R\)</span>,</p>
+<p>and you know that boat <span class="math inline">\(S\)</span>’s best response rule is $S^* = 12 - ,</p>
 <blockquote>
-<p>What is the NE?</p>
-</blockquote>
-</section>
-<section id="criticism-3-requirements-of-rationality-2" class="slide level2">
-<h2>Criticism 3: Requirements of Rationality</h2>
-<p>Consider this game:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Row, Column</th>
-<th>C1</th>
-<th>C2</th>
-<th>C3</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>R1</strong></td>
-<td>0, <u>7</u></td>
-<td>2, 5</td>
-<td><u>7</u>, 0</td>
-</tr>
-<tr class="even">
-<td><strong>R2</strong></td>
-<td>5, 2</td>
-<td><u>3</u>, <u>3</u></td>
-<td>5, 2</td>
-</tr>
-<tr class="odd">
-<td><strong>R3</strong></td>
-<td><u>7</u>, 0</td>
-<td>2, 5</td>
-<td>0, <u>7</u></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>What is the NE?</p>
+<p>what values of <span class="math inline">\(S\)</span> should you plausibly expect them to ever pick?</p>
 </blockquote>
 <div>
 <ul>
-<li class="fragment"><p>(R2, C2) is the only NE in this game</p></li>
-<li class="fragment"><p>For this strategy profile, both players’ beliefs about the other player’s strategy are correct.</p>
+<li class="fragment"><p>would they ever choose <span class="math inline">\(S&lt;0\)</span>?</p></li>
+<li class="fragment"><p>what about <span class="math inline">\(S&gt;12\)</span>?</p></li>
+<li class="fragment"><p>we can then say that only values <span class="math inline">\(S \in [0,12]\)</span> are <em>rationalizable</em></p></li>
+<li class="fragment"><p>What is <span class="math inline">\(R\)</span>’s range of possible best-responses if <span class="math inline">\(S \in [0,12]\)</span>?</p>
 <ul>
-<li class="fragment"><p>Column believes that Row will choose R2, so she chooses her best response of C2</p></li>
-<li class="fragment"><p>Row believes that Column will choose C2, so he chooses his best response of R2</p></li>
-<li class="fragment"><p>So in NE, each player’s belief matches their opponent’s best response</p></li>
+<li class="fragment"><span class="math inline">\(R^*(S = 0) = 15\)</span>, <span class="math inline">\(R^*(S = 12) =  15 - 6 = 9\)</span></li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="criticism-3-requirements-of-rationality-3" class="slide level2">
-<h2>Criticism 3: Requirements of Rationality</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Row, Column</th>
-<th>C1</th>
-<th>C2</th>
-<th>C3</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>R1</strong></td>
-<td>0, <u>7</u></td>
-<td>2, 5</td>
-<td><u>7</u>, 0</td>
-</tr>
-<tr class="even">
-<td><strong>R2</strong></td>
-<td>5, 2</td>
-<td><u>3</u>, <u>3</u></td>
-<td>5, 2</td>
-</tr>
-<tr class="odd">
-<td><strong>R3</strong></td>
-<td><u>7</u>, 0</td>
-<td>2, 5</td>
-<td>0, <u>7</u></td>
-</tr>
-</tbody>
-</table>
-<p>But we could use similar logic for this game even when beliefs are <em>incorrect</em></p>
+<section id="applying-rationalizability-to-continuous-games-4" class="slide level2">
+<h2>Applying Rationalizability to Continuous Games</h2>
+<p>Now if you are the captian of boat <span class="math inline">\(S\)</span>,</p>
+<p>and you know that <span class="math inline">\(R\)</span> knows that you will only choose <span class="math inline">\(S \in [0,12]\)</span>,</p>
 <div>
 <ul>
-<li class="fragment"><p>We can justify Row playing <strong>R1</strong> if she believes that Column will play <strong>C3</strong></p></li>
-<li class="fragment"><p>Row could beleive this if she believes that <em>Column believes she is playing</em> <strong>R3</strong></p></li>
-<li class="fragment"><p>And if she also thinks that Column believes that she is playing <strong>R3</strong> because Column believes that <em>Row believes that Column is playing</em> <strong>C1</strong></p></li>
+<li class="fragment"><p>What is <span class="math inline">\(S\)</span>’s range of possible best-responses if <span class="math inline">\(R \in [9,15]\)</span>?</p>
+<ul>
+<li class="fragment"><span class="math inline">\(S^*(R = 9) = 12 - \frac{9}{2} = \frac{15}{2}\)</span>, <span class="math inline">\(R^*(S = 15) =  12 - \frac{15}{2}  = \frac{9}{2}\)</span></li>
+</ul></li>
 </ul>
 </div>
 </section>
-<section id="rebuttal-to-critics-why-not-nash-equilibrium" class="slide level2">
-<h2>Rebuttal to Critics: Why Not Nash Equilibrium?</h2>
-<p>Game theorist Roger Myerson suggests: - “Why not Nash equilibrium?” If someone proposes an alternative strategy profile, that profile must be evaluated. - If it isn’t a Nash equilibrium, one of the players can improve by changing their strategy, disproving the alternative.</p>
-<p><strong>Interactive Question:</strong> How does this defense of Nash equilibrium answer critics’ concerns?</p>
-</section>
-<section id="alternative-concepts" class="slide level2">
-<h2>Alternative Concepts</h2>
-<p>Criticism has led to the development of alternative solution concepts, such as: - <strong>Evolutionary Stable Strategies (ESS)</strong>: Strategies that persist over time through evolutionary pressure. - <strong>Correlated Equilibrium</strong>: Players coordinate their strategies based on signals they receive from a common source.</p>
-<h3 id="discussion-prompt-do-you-think-alternatives-like-ess-or-correlated-equilibrium-offer-improvements-over-nash-equilibrium"><strong>Discussion Prompt:</strong> Do you think alternatives like ESS or correlated equilibrium offer improvements over Nash equilibrium?</h3>
-</section>
-<section id="conclusion" class="slide level2">
-<h2>Conclusion</h2>
-<p>While Nash equilibrium has clear limitations, it remains a central concept in game theory. Alternative solution concepts may provide better insights into certain situations, but Nash equilibrium is still the starting point for analyzing many strategic games.</p>
-</section>
-<section class="slide level2">
-
+<section id="applying-rationalizability-to-continuous-games-5" class="slide level2">
+<h2>Applying Rationalizability to Continuous Games</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="figures/Dixit_fig5.7.png"></p>
+</div><div class="column">
+<p>Iteratively applying this logic of eliminating ranges of non-rationalizable strategies will converge on the unique NE:</p>
+<ul>
+<li><p>(<span class="math inline">\(R = 12\)</span>, <span class="math inline">\(S = 6\)</span>)</p></li>
+<li><p>this is also where the best-response rules intersect</p></li>
+</ul>
+</div></div>
 
 <div class="quarto-auto-generated-content">
 <p><img src="UOSignature-356.png" class="slide-logo"></p>
