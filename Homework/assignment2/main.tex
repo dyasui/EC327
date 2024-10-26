@@ -1,7 +1,8 @@
 \documentclass[addpoints ]{exam}
 
-% \printanswers
+\printanswers
 
+\CorrectChoiceEmphasis{\color{red}\bfseries}
 \usepackage{amssymb, amsmath, amsfonts}
 \usepackage{geometry}
 \usepackage{graphicx}
@@ -208,6 +209,14 @@
     \CorrectChoice Both B and C are continuous strategies
     \choice None of the above are continous strategies
   \end{choices}
+
+  \begin{solution}
+    \textbf{Note:}
+    Give full credit on this question if only B is chosen or only C is chosen or both.
+    I meant for the amount of time Owen waits in line to be a continuous strategy,
+    but some people argued that his decision to wait or not could be discrete.
+  \end{solution}
+
 \end{parts}
   
 \newpage
@@ -287,7 +296,7 @@ The game is below.
     There are two strategy profiles where each player's best responses intersect:
 
     \begin{itemize}
-      \item $N_1 = \left( b, x \right)$ 
+      \item $N_1 = \left( b, x \right)$ results in payoffs (2,3)
 
       Jack's strategy is to choose $b$, 
       Diane's strategy is to choose $x$.
@@ -297,7 +306,7 @@ The game is below.
       The resulting outcome is that Jack gets $2$, 
       Diane gets $3$.
 
-      \item $N_2 = \left( a, y \right)$
+      \item $N_2 = \left( a, y \right)$ results in payoffs (2,1)
 
       Jack's strategy is $a$, Diane's is $y$. 
       When Jack plays $a$, Dianne is indifferent between $x$ and $y$, but
@@ -323,20 +332,23 @@ The game is below.
     $S_{\text{Jack}} = \{ a, b, c \}$
     because Jack still has only one decision node.
 
-    $S_{\text{Diane}}$ =  any combination $ \{ s_1 s_2 s_3 \}; \ \forall s \in \{x,y,z\}$; where $s$ can be either $x$, $y$, or $z$ at each of her information sets (labelled 1,2,3 on the game tree below). 
+    $S_{\text{Diane}}$ =  any combination $ \{ s_1 s_2 s_3 \}; \ \forall s \in
+    \{x,y,z\}$; where $s$ can be either $x$, $y$, or $z$ at each of her
+    information sets (labelled 1,2,3 on the game tree below). 
 
-    I represented each of Diane's strategies as a triple where the first letter represents her choice at node 1, second letter at node 2, and third letter at node 3.
-    So for example, $xyz$ would be the strategy where she chooses $x$ in node $1$, $y$ in node $2$, and $z$ in node $3$. 
+    I represented each of Diane's strategies as a triple where the first letter
+    represents her choice at node 1, second letter at node 2, and third letter
+    at node 3. So for example, $xyz$ would be the strategy where she chooses
+    $x$ in node $1$, $y$ in node $2$, and $z$ in node $3$. 
 
     \begin{itemize}
 
       \item 
-      $\mathbf{N_1} = \left( \mathbf{a}, \ \mathbf{y} s_2 s_3 \right)$ 
+      $\mathbf{N_1} = \left( \mathbf{a}, \ \mathbf{y_1} x_2 s_3 \right)$ 
       
       where:
       \begin{itemize}
-          \item $s_2$ is $\mathbf{x}$, $\mathbf{y}$, or $\mathbf{z}$; 
-          \item $s_3$ is $\mathbf{x}$ or $\mathbf{y}$ 
+          \item $s_3$ is $\mathbf{x}$ or $\mathbf{y}$ or $\mathbf{z}$ 
       \end{itemize}
 
       Any set of strategies in which Jack chooses $a$
@@ -347,19 +359,20 @@ The game is below.
       where Jack cannot deviate to a higher payoff than $2$,
       and Diane also has no regrets with choosing $y$.
 
+      The payoffs obtained in this equilibrium are $({\color{red} 2}, {\color{blue} 1})$
+
       \item 
-      $\mathbf{N_2} = \left( \mathbf{b}, \ \mathbf{x} s_2 s_3 \right) $
+        $\mathbf{N_2} = \left( \mathbf{b}, \ s_1 \mathbf{x_2} s_3 \right) $
       
       where:
       \begin{itemize}
-          \item $s_2$ could be $\mathbf{x}$, $\mathbf{y}$, or $\mathbf{z}$; 
-          \item $s_3$ could be either $\mathbf{x}$ or $\mathbf{y}$.
+          \item $s_1$ could be $\mathbf{x}$, $\mathbf{y}$; 
+          \item $s_3$ could be either $\mathbf{x}$, $\mathbf{y}$, or $\mathbf{z}$.
       \end{itemize}
 
-      Any set of strategies in which Jack chooses $b$ 
-      and Diane doesn't choose $z$ at node $3$ 
-      would result in Jack choosing $b$ 
-      and Diane choosing $x$ given that jack chooses $b$. 
+      Any set of strategies in which Jack chooses $b$,
+      Diane is indifferent between $x$ and $y$ at node 1 which is not on the equilibrium path of play,
+      and Diane chooses $x_2$ given that jack chooses $b$. 
 
       The equilibrium outcome of any of these Nash strategy profiles
       would be $({\color{red} 2}, {\color{blue} 3})$
@@ -376,7 +389,7 @@ The game is below.
 
 \newpage
 
-\input{Homework/assignment2/msne}
+\input{msne}
 
 \question[10] 
 The countries of Oceania and Eurasia are at war.
@@ -443,6 +456,67 @@ Find all Nash equilibria.
 \footnote{Harrington \textit{Games, Strategies, and Decision Making}}
 
 %\vspace{-5cm}
+
+\begin{solution}
+  Tim's best response rule:
+  $$ 
+  BR_t(j) = \begin{cases}
+    20 - j & \text{ if } j < 20 \\
+    [0,20] & \text{ if } j = 20
+    \end{cases}
+  $$
+  Jane's best response rule:
+  $$ 
+  BR_j(t) = \begin{cases}
+    20 - t & \text{ if } t < 20 \\
+    [0,20] & \text{ if } t = 20
+    \end{cases}
+  $$
+
+  \begin{tikzpicture}
+    \begin{axis}[
+      width=.8\textwidth,
+      xlabel={$j$},
+      ylabel={$t$},
+      xmin=-0.1, xmax=20.1,
+      ymin=-0.1, ymax=20.1,
+      xtick={0,20},
+      ytick={0,20},
+      ]
+      \addplot+ [
+      dashed,
+      line width=3pt,
+      color=blue,
+      ] 
+      coordinates
+      {
+      (0, 20)
+      (20, 0)
+      (20, 20)
+      };
+      \addlegendentry{\(BR_t(j)\)}
+      \addplot [
+      dashed,
+      line width=3pt,
+      color=red,
+      ] 
+      coordinates
+      {
+        (20,0)
+        (0, 20)
+        (20,20)
+      };
+      \addlegendentry{\(BR_j(t)\)}
+    \end{axis}
+  \end{tikzpicture}
+
+  The NE are any points on the graph where the $BR_j(t) = t$ and $BR_t(j) = t$.
+  This includes the diagonal line which is the set of all pairs,
+  $j$ and $t$ such that $j + t = 20$ where $j,t<20$.
+  When $j=20$, there is one NE when $t=0$ and another when $t=20$.
+  When $t=20$, there is one NE when $j=0$ (and $j=20$ is still NE).
+
+\end{solution}
 
 \newpage
 
