@@ -53,12 +53,108 @@ output:
 
 ---
 
+## Rollback in the Kidnap Game
+
+::::: {.columns}
+
+:::: {.column}
+![](figures/kidnapgame.png)
+::::
+
+:::: {.column}
+::: {.incremental}
+  * What should [Guy]{.red} do if Vivica pays?
+    + $Release$ (5 > 4)
+  * What should [Guy]{.red} do if Vivica doesn't pay?
+    + $Kill$ (2 > 1)
+:::
+::::
+
+:::::
+
+---
+
+## Rollback in the Kidnap Game
+
+::::: {.columns}
+
+:::: {.column}
+![](figures/kidnapgame.png)
+::::
+
+:::: {.column}
+::: {.incremental}
+  * What should [Vivica]{.blue} do knowing that Guy will $Release$ if she pays,
+  and $Kill$ if she doesn't?
+    * [Pay]{.blue} the ransom (3 > 2)
+:::
+::::
+
+:::::
+
+---
+
+## Rollback in the Kidnap Game
+
+::::: {.columns}
+
+:::: {.column}
+![](figures/kidnapgame.png)
+::::
+
+:::: {.column}
+::: {.incremental}
+  * What should [Guy]{.red} do
+  knowing that [Vivica]{.blue} will [$Pay$]{.blue},
+  knowing that he will [($Kill$, $Release$)]{.red}?
+    + [Kidnap]{.red} (5 > 3)
+:::
+::::
+
+:::::
+
+---
+
+## Rollback in the Kidnap Game
+
+So the rollback solution in this version of the game where both players
+have [perfect information]{.hi} about all previous actions is:
+
+  * \{ ([$Kidnap, Kill_3, Release_4$]{.red}), [$Pay$]{.blue} \}
+
+. . .
+
+  * In other words:
+    
+    + Guy [$kidnaps$]{.red} because he believes Vivica will pay the ransom.
+    He threatens to [$kill$]{.red} if Vivica doesn't pay,
+    but promises to [$release$]{.red} if she does pay
+
+    + Vivica [$pays$]{.blue} because she believes Guy's threat/promise
+
+---
+
+## Rollback in the Kidnap Game
+
+\{ ([$Kidnap, Kill_3, Release_4$]{.red}), [$Pay$]{.blue} \}
+
+On top of being a regular NE, this strategy profile is also called [subgame-perfect]{.hi}
+because both players' actions are *credible*:
+
+::: {.incremental}
+  + Guy's threat of killing Orlando if the ransom goes unpaid aligns with his preference
+  + His promise to release Orlando if the ransom *is* paid is also credible because he would rather not kill if he gets the money
+  + Vivica has every reason to pay the ransom when she believes guy will make good on his threat
+    because she doesn't want Orlando to die
+:::
+
+---
 
 ## Modifying the game
 
 :::: {.columns}
 ::: {.column}
-![](figures/kidnap_tree2.png)
+![](figures/kidnapgame_infoset.png)
 :::
 ::: {.column}
 
@@ -79,11 +175,11 @@ output:
 
 :::: {.incremental}
 
-  * The dotted box around Vivica's nodes $N_3$ and $N_4$
-  indicate that she can't tell them apart.
+  * The dotted box around Guy's nodes $N_3$ and $N_4$
+  indicate that he can't tell them apart.
 
   * They are part of the same [information set]{.hi}; 
-  to Vivica, they are indistinguishable from each other.
+  to Guy, they are indistinguishable from each other.
 
 ::: {.callout-note}
 ### Information set 
@@ -152,19 +248,79 @@ which can be drawn.
 
 ## Another way to represent the entire Kidnap Game
 
-![](figures/kidnapgametreetable.png)
+![](figures/kidnapgame_combined.png)
 
 ---
 
-## Back to the original tree
+## Solving the Kidnap Game w/ Simultaneous Sugame
 
-![](figures/kidnapgame.png)
+What will a complete strategy profile look like for each player?
 
+::: {.incremental}
+  * Guy's strategy:
+    + element 1: [$Kidnap$]{.red} or [$Don't~Kidnap$]{.red}
+    + element 2: [$Kill$]{.red} or [$Release$]{.red}
+  * Vivica's strategy:
+    + element 1: [$Pay$]{.blue} or [$Don't$]{.blue}
+:::
+
+---
+
+## Solving the Kidnap Game w/ Simultaneous Sugame
+
+What is/are the NE of the subgame?
+
+|                   | [$Pay$]{.blue} | [$Don't$]{.blue} |
+|-------------------+----------------+------------------|
+| [$Kill$]{.red}    | 4,1            | 2,2              |
+| [$Release$]{.red} | 5,3            | 1,4              |
+
+
+::: {.incremental}
+  * ([$Release$]{.red}, [$Pay$]{.blue}) is no longer *stable* 
+  because Vivica wouldn't pay the ransom if Guy releases
+
+  * ([$Kill$]{.red}, [$Don't$]{.blue}) is the only NE in this table
+:::
+
+---
+
+## Solving the Kidnap Game w/ Simultaneous Sugame
+
+Knowing this, what is the NE in the full game?
+
+![](figures/kidnapgame_combined.png)
+
+. . .
+
+  * \{ ([$Don't~Kidnap$, $Kill$]{.red}), [$Don't~pay$]{.blue} \}
+
+---
+
+## Comparing NE in the different Kidnapping Games
+
+In the version where Vivica's action was *observable*,
+we found the NE:
+
+  * \{ ([$Kidnap, Kill_3, Release_4$]{.red}), [$Pay$]{.blue} \}
+
+But in the version where Guy couldn't see whether Vivica paid the ransom,
+it was:
+
+  * \{ ([$Don't~Kidnap$, $Kill$]{.red}), [$Don't~pay$]{.blue} \}
+
+
+::: {.incremental}
+  * If you were Guy, which version would you prefer?
+  * Guy's advantage is in making a conditional promise/threat to Vivica
+  which is taken away if he can only pick one action
+:::
 ---
 
 ## A Strategic Form representation
 
 Here is the game matrix for the entire kidnapping game:
+(when Guy can see Vivica's action)
 
 | [Guy]{.red}, [Vivica]{.blue}   |          Pay          |       Don't Pay       |
 |--------------------------------+:---------------------:+:---------------------:|
@@ -233,6 +389,9 @@ Here is the game matrix for the entire kidnapping game:
   
   * The NE where Vivica plays $no~pay$ are not Subgame Perfect
     because those actions are not [credible threats]{.hi}
+
+    + She can only credibly threaten not paying the ransom
+    if she knows Guy can't observe her action
 :::
 
 
