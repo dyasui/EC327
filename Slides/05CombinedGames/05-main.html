@@ -359,16 +359,96 @@ Dante Yasui
 <section id="original-kidnap-game" class="slide level2">
 <h2>Original Kidnap Game</h2>
 
-<img data-src="figures/kidnap_tree1.png" class="r-stretch"></section>
+<img data-src="figures/kidnapgame.png" class="r-stretch"></section>
+<section id="rollback-in-the-kidnap-game" class="slide level2">
+<h2>Rollback in the Kidnap Game</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="figures/kidnapgame.png"></p>
+</div><div class="column">
+<div>
+<ul>
+<li class="fragment">What should <span class="red">Guy</span> do if Vivica pays?
+<ul>
+<li class="fragment"><span class="math inline">\(Release\)</span> (5 &gt; 4)</li>
+</ul></li>
+<li class="fragment">What should <span class="red">Guy</span> do if Vivica doesn’t pay?
+<ul>
+<li class="fragment"><span class="math inline">\(Kill\)</span> (2 &gt; 1)</li>
+</ul></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="rollback-in-the-kidnap-game-1" class="slide level2">
+<h2>Rollback in the Kidnap Game</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="figures/kidnapgame.png"></p>
+</div><div class="column">
+<div>
+<ul>
+<li class="fragment">What should <span class="blue">Vivica</span> do knowing that Guy will <span class="math inline">\(Release\)</span> if she pays, and <span class="math inline">\(Kill\)</span> if she doesn’t?
+<ul>
+<li class="fragment"><span class="blue">Pay</span> the ransom (3 &gt; 2)</li>
+</ul></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="rollback-in-the-kidnap-game-2" class="slide level2">
+<h2>Rollback in the Kidnap Game</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="figures/kidnapgame.png"></p>
+</div><div class="column">
+<div>
+<ul>
+<li class="fragment">What should <span class="red">Guy</span> do knowing that <span class="blue">Vivica</span> will <span class="blue"><span class="math inline">\(Pay\)</span></span>, knowing that he will <span class="red">(<span class="math inline">\(Kill\)</span>, <span class="math inline">\(Release\)</span>)</span>?
+<ul>
+<li class="fragment"><span class="red">Kidnap</span> (5 &gt; 3)</li>
+</ul></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="rollback-in-the-kidnap-game-3" class="slide level2">
+<h2>Rollback in the Kidnap Game</h2>
+<p>So the rollback solution in this version of the game where both players have <span class="hi">perfect information</span> about all previous actions is:</p>
+<ul>
+<li>{ (<span class="red"><span class="math inline">\(Kidnap, Kill_3, Release_4\)</span></span>), <span class="blue"><span class="math inline">\(Pay\)</span></span> }</li>
+</ul>
+<div class="fragment">
+<ul>
+<li><p>In other words:</p>
+<ul>
+<li><p>Guy <span class="red"><span class="math inline">\(kidnaps\)</span></span> because he believes Vivica will pay the ransom. He threatens to <span class="red"><span class="math inline">\(kill\)</span></span> if Vivica doesn’t pay, but promises to <span class="red"><span class="math inline">\(release\)</span></span> if she does pay</p></li>
+<li><p>Vivica <span class="blue"><span class="math inline">\(pays\)</span></span> because she believes Guy’s threat/promise</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="rollback-in-the-kidnap-game-4" class="slide level2">
+<h2>Rollback in the Kidnap Game</h2>
+<p>{ (<span class="red"><span class="math inline">\(Kidnap, Kill_3, Release_4\)</span></span>), <span class="blue"><span class="math inline">\(Pay\)</span></span> }</p>
+<p>On top of being a regular NE, this strategy profile is also called <span class="hi">subgame-perfect</span> because both players’ actions are <em>credible</em>:</p>
+<div>
+<ul>
+<li class="fragment">Guy’s threat of killing Orlando if the ransom goes unpaid aligns with his preference</li>
+<li class="fragment">His promise to release Orlando if the ransom <em>is</em> paid is also credible because he would rather not kill if he gets the money</li>
+<li class="fragment">Vivica has every reason to pay the ransom when she believes guy will make good on his threat because she doesn’t want Orlando to die</li>
+</ul>
+</div>
+</section>
 <section id="modifying-the-game" class="slide level2">
 <h2>Modifying the game</h2>
 <div class="columns">
 <div class="column">
-<p><img data-src="figures/kidnap_tree2.png"></p>
+<p><img data-src="figures/kidnapgame_infoset.png"></p>
 </div><div class="column">
 <ul>
-<li><p>When we first saw this game, Vivica could observe whether Guy had killed Orlando before she paid the ransom.</p></li>
-<li><p>Now we will consider a variation of this game where Orlando’s fate is decided by Guy <em>without Vivica knowing the result</em>.</p></li>
+<li><p>When we first saw this game, Guy could observe whether Vivica had paid the ransom before he made the decision to <span class="math inline">\(Kill\)</span> or <span class="math inline">\(Release\)</span> Orlando</p></li>
+<li><p>Now we will consider a variation of this game where Guy doesnt know whether Vivica has paid when he chooses to Kill or Release</p></li>
 </ul>
 </div></div>
 </section>
@@ -376,8 +456,8 @@ Dante Yasui
 <h2>Kidnap Game with a simultaneous subgame</h2>
 <div>
 <ul>
-<li class="fragment"><p>The dotted box around Vivica’s nodes <span class="math inline">\(N_3\)</span> and <span class="math inline">\(N_4\)</span> indicate that she can’t tell them apart.</p></li>
-<li class="fragment"><p>They are part of the same <span class="hi">information set</span>; to Vivica, they are indistinguishable from each other.</p></li>
+<li class="fragment"><p>The dotted box around Guy’s nodes <span class="math inline">\(N_3\)</span> and <span class="math inline">\(N_4\)</span> indicate that he can’t tell them apart.</p></li>
+<li class="fragment"><p>They are part of the same <span class="hi">information set</span>; to Guy, they are indistinguishable from each other.</p></li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -443,88 +523,285 @@ Dante Yasui
 <section id="another-way-to-represent-the-entire-kidnap-game" class="slide level2">
 <h2>Another way to represent the entire Kidnap Game</h2>
 
-<img data-src="figures/kidnapgametreetable.png" class="r-stretch"></section>
-<section id="a-strategic-form-representation" class="slide level2">
-<h2>A Strategic Form representation</h2>
-<p>Here is the game matrix for the entire kidnapping game:</p>
+<img data-src="figures/kidnapgame_combined.png" class="r-stretch"></section>
+<section id="solving-the-kidnap-game-w-simultaneous-sugame" class="slide level2">
+<h2>Solving the Kidnap Game w/ Simultaneous Sugame</h2>
+<p>What will a complete strategy profile look like for each player?</p>
+<div>
+<ul>
+<li class="fragment">Guy’s strategy:
+<ul>
+<li class="fragment">element 1: <span class="red"><span class="math inline">\(Kidnap\)</span></span> or <span class="red"><span class="math inline">\(Don't~Kidnap\)</span></span></li>
+<li class="fragment">element 2: <span class="red"><span class="math inline">\(Kill\)</span></span> or <span class="red"><span class="math inline">\(Release\)</span></span></li>
+</ul></li>
+<li class="fragment">Vivica’s strategy:
+<ul>
+<li class="fragment">element 1: <span class="blue"><span class="math inline">\(Pay\)</span></span> or <span class="blue"><span class="math inline">\(Don't\)</span></span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="solving-the-kidnap-game-w-simultaneous-sugame-1" class="slide level2">
+<h2>Solving the Kidnap Game w/ Simultaneous Sugame</h2>
+<p>What is/are the NE of the subgame?</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Vivica, Guy</th>
-<th><span class="math inline">\(dnk,k\)</span></th>
-<th><span class="math inline">\(dnk,r\)</span></th>
-<th><span class="math inline">\(kid,k\)</span></th>
-<th><span class="math inline">\(kid,r\)</span></th>
+<th></th>
+<th><span class="blue"><span class="math inline">\(Pay\)</span></span></th>
+<th><span class="blue"><span class="math inline">\(Don't\)</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(pay\)</span></td>
-<td><span class="math inline">\(5,3\)</span></td>
-<td><span class="math inline">\(5,3\)</span></td>
-<td><span class="math inline">\(1,4\)</span></td>
-<td><span class="math inline">\(3,5\)</span></td>
+<td><span class="red"><span class="math inline">\(Kill\)</span></span></td>
+<td>4,1</td>
+<td>2,2</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(no~pay\)</span></td>
-<td><span class="math inline">\(5,3\)</span></td>
-<td><span class="math inline">\(5,3\)</span></td>
-<td><span class="math inline">\(2,2\)</span></td>
-<td><span class="math inline">\(4,1\)</span></td>
+<td><span class="red"><span class="math inline">\(Release\)</span></span></td>
+<td>5,3</td>
+<td>1,4</td>
 </tr>
 </tbody>
 </table>
 <div>
 <ul>
-<li class="fragment">Notice that the left half of the table represent the single <em>don’t kidnap</em> branch in the original tree</li>
-<li class="fragment">What are the NE?
-<ul>
-<li class="fragment">(<span class="math inline">\(pay\)</span>, <span class="math inline">\(kid,k\)</span>) is one</li>
-<li class="fragment">(<span class="math inline">\(no~pay\)</span>, <span class="math inline">\(dnk,k\)</span>) and (<span class="math inline">\(no~pay\)</span>, <span class="math inline">\(dnk,r\)</span>) are also NE for this game table</li>
-</ul></li>
+<li class="fragment"><p>(<span class="red"><span class="math inline">\(Release\)</span></span>, <span class="blue"><span class="math inline">\(Pay\)</span></span>) is no longer <em>stable</em> because Vivica wouldn’t pay the ransom if Guy releases</p></li>
+<li class="fragment"><p>(<span class="red"><span class="math inline">\(Kill\)</span></span>, <span class="blue"><span class="math inline">\(Don't\)</span></span>) is the only NE in this table</p></li>
 </ul>
 </div>
 </section>
-<section id="ne-vs-spne" class="slide level2">
-<h2>NE vs SPNE</h2>
-<div class="columns">
-<div class="column">
-<p><img data-src="figures/kidnap_tree1.png"></p>
-</div><div class="column">
+<section id="solving-the-kidnap-game-w-simultaneous-sugame-2" class="slide level2">
+<h2>Solving the Kidnap Game w/ Simultaneous Sugame</h2>
+<p>Knowing this, what is the NE in the full game?</p>
+
+<img data-src="figures/kidnapgame_combined.png" class="r-stretch"><div class="fragment">
+<ul>
+<li>{ (<span class="red"><span class="math inline">\(Don't~Kidnap\)</span>, <span class="math inline">\(Kill\)</span></span>), <span class="blue"><span class="math inline">\(Don't~pay\)</span></span> }</li>
+</ul>
+</div>
+</section>
+<section id="comparing-ne-in-the-different-kidnapping-games" class="slide level2">
+<h2>Comparing NE in the different Kidnapping Games</h2>
+<p>In the version where Vivica’s action was <em>observable</em>, we found the NE:</p>
+<ul>
+<li>{ (<span class="red"><span class="math inline">\(Kidnap, Kill_3, Release_4\)</span></span>), <span class="blue"><span class="math inline">\(Pay\)</span></span> }</li>
+</ul>
+<p>But in the version where Guy couldn’t see whether Vivica paid the ransom, it was:</p>
+<ul>
+<li>{ (<span class="red"><span class="math inline">\(Don't~Kidnap\)</span>, <span class="math inline">\(Kill\)</span></span>), <span class="blue"><span class="math inline">\(Don't~pay\)</span></span> }</li>
+</ul>
+<div>
+<ul>
+<li class="fragment">If you were Guy, which version would you prefer?</li>
+<li class="fragment">Guy’s advantage is in making a conditional promise/threat to Vivica which is taken away if he can only pick one action</li>
+</ul>
+</div>
+</section>
+<section id="a-strategic-form-representation" class="slide level2">
+<h2>A Strategic Form representation</h2>
+<p>Here is the game matrix for the entire kidnapping game: (when Guy can see Vivica’s action)</p>
 <table class="caption-top">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 29%">
+<col style="width: 29%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Vivica, Guy</th>
-<th><span class="math inline">\(dnk,k\)</span></th>
-<th><span class="math inline">\(dnk,r\)</span></th>
-<th><span class="math inline">\(kid,k\)</span></th>
-<th><span class="math inline">\(kid,r\)</span></th>
+<th><span class="red">Guy</span>, <span class="blue">Vivica</span></th>
+<th style="text-align: center;">Pay</th>
+<th style="text-align: center;">Don’t Pay</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(pay\)</span></td>
-<td><span class="math inline">\(5,3\)</span></td>
-<td><span class="math inline">\(5,3\)</span></td>
-<td><span class="math inline">\(1,4\)</span></td>
-<td><span class="math inline">\(3,5\)</span></td>
+<td><span class="h">DNK, Kill, Kill</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(no~pay\)</span></td>
-<td><span class="math inline">\(5,3\)</span></td>
-<td><span class="math inline">\(5,3\)</span></td>
-<td><span class="math inline">\(2,2\)</span></td>
-<td><span class="math inline">\(4,1\)</span></td>
+<td><span class="h">DNK, Kill, Release</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+</tr>
+<tr class="odd">
+<td><span class="h">DNK, Release, Kill</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">DNK, Release, Release</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, Kill, Kill</span></td>
+<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
+<td style="text-align: center;"><span class="red">2</span>, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, Kill, Release</span></td>
+<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
+<td style="text-align: center;"><span class="red">1</span>, <span class="blue">4</span></td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, Release, Kill</span></td>
+<td style="text-align: center;"><span class="red">5</span>, <span class="blue">3</span></td>
+<td style="text-align: center;"><span class="red">2</span>, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, Release, Release</span></td>
+<td style="text-align: center;"><span class="red">5</span>, <span class="blue">3</span></td>
+<td style="text-align: center;"><span class="red">1</span>, <span class="blue">4</span></td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="a-strategic-form-representation-1" class="slide level2">
+<h2>A Strategic Form representation</h2>
+<div>
+<ul>
+<li class="fragment">Notice that the top half of the table represent the single <em>don’t kidnap</em> branch in the original tree</li>
+<li class="fragment">What are the NE?</li>
+</ul>
+</div>
+</section>
+<section id="a-strategic-form-representation-2" class="slide level2">
+<h2>A Strategic Form representation</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="red">Guy</span>, <span class="blue">Vivica</span></th>
+<th style="text-align: center;">Pay</th>
+<th style="text-align: center;">Don’t Pay</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="h">DNK, K, K</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
+</tr>
+<tr class="even">
+<td><span class="h">DNK, K, R</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
+</tr>
+<tr class="odd">
+<td><span class="h">DNK, R, K</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
+</tr>
+<tr class="even">
+<td><span class="h">DNK, R, R</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, K, K</span></td>
+<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
+<td style="text-align: center;"><span class="red">2</span>, <u><span class="blue">2</span></u></td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, K, R</span></td>
+<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
+<td style="text-align: center;"><span class="red">1</span>, <u><span class="blue">4</span></u></td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, R, K</span></td>
+<td style="text-align: center;"><u><span class="red">5</span></u>, <u><span class="blue">3</span></u></td>
+<td style="text-align: center;"><span class="red">2</span>, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, R, R</span></td>
+<td style="text-align: center;"><u><span class="red">5</span></u>, <span class="blue">3</span></td>
+<td style="text-align: center;"><span class="red">1</span>, <span class="blue">4</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ne-vs-spne" class="slide level2">
+<h2>NE vs SPNE</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="figures/kidnapgame.png"></p>
+</div><div class="column small" style="width:60%;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 30%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="red">Guy</span>, <span class="blue">Vivica</span></th>
+<th style="text-align: center;">Pay</th>
+<th style="text-align: center;">Don’t Pay</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="h">DNK, K, K</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
+</tr>
+<tr class="even">
+<td><span class="h">DNK, K, R</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
+</tr>
+<tr class="odd">
+<td><span class="h">DNK, R, K</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
+</tr>
+<tr class="even">
+<td><span class="h">DNK, R, R</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, K, K</span></td>
+<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
+<td style="text-align: center;"><span class="red">2</span>, <u><span class="blue">2</span></u></td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, K, R</span></td>
+<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
+<td style="text-align: center;"><span class="red">1</span>, <u><span class="blue">4</span></u></td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, R, K</span></td>
+<td style="text-align: center;"><u><span class="red">5</span></u>, <u><span class="blue">3</span></u></td>
+<td style="text-align: center;"><span class="red">2</span>, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, R, R</span></td>
+<td style="text-align: center;"><u><span class="red">5</span></u>, <span class="blue">3</span></td>
+<td style="text-align: center;"><span class="red">1</span>, <span class="blue">4</span></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</section>
+<section id="ne-vs-spne-1" class="slide level2">
+<h2>NE vs SPNE</h2>
 <div class="small">
 <ul>
 <li class="fragment"><p>What is different about the NE we found in the table and the NE we found through <em>rollback</em>?</p></li>
-<li class="fragment"><p>The NE where Vivica plays <span class="math inline">\(no~pay\)</span> are not Subgame Perfect because those actions are not <span class="hi">credible threats</span></p></li>
+<li class="fragment"><p>The NE where Vivica plays <span class="math inline">\(no~pay\)</span> are not Subgame Perfect because those actions are not <span class="hi">credible threats</span></p>
+<ul>
+<li class="fragment">She can only credibly threaten not paying the ransom if she knows Guy can’t observe her action</li>
+</ul></li>
 </ul>
 </div>
-</div></div>
 </section>
 <section>
 <section id="games-with-both-simultaneous-and-sequential-moves" class="title-slide slide level1 center">

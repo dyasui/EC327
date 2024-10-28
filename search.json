@@ -1628,11 +1628,66 @@
     ]
   },
   {
+    "objectID": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game",
+    "href": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game",
+    "title": "Introduction to Game Theory",
+    "section": "Rollback in the Kidnap Game",
+    "text": "Rollback in the Kidnap Game\n\n\n\n\n\n\nWhat should Guy do if Vivica pays?\n\n\\(Release\\) (5 &gt; 4)\n\nWhat should Guy do if Vivica doesn’t pay?\n\n\\(Kill\\) (2 &gt; 1)",
+    "crumbs": [
+      "Slides",
+      "Combining Sequential and Simultaneous"
+    ]
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-1",
+    "href": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-1",
+    "title": "Introduction to Game Theory",
+    "section": "Rollback in the Kidnap Game",
+    "text": "Rollback in the Kidnap Game\n\n\n\n\n\n\nWhat should Vivica do knowing that Guy will \\(Release\\) if she pays, and \\(Kill\\) if she doesn’t?\n\nPay the ransom (3 &gt; 2)",
+    "crumbs": [
+      "Slides",
+      "Combining Sequential and Simultaneous"
+    ]
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-2",
+    "href": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-2",
+    "title": "Introduction to Game Theory",
+    "section": "Rollback in the Kidnap Game",
+    "text": "Rollback in the Kidnap Game\n\n\n\n\n\n\nWhat should Guy do knowing that Vivica will \\(Pay\\), knowing that he will (\\(Kill\\), \\(Release\\))?\n\nKidnap (5 &gt; 3)",
+    "crumbs": [
+      "Slides",
+      "Combining Sequential and Simultaneous"
+    ]
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-3",
+    "href": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-3",
+    "title": "Introduction to Game Theory",
+    "section": "Rollback in the Kidnap Game",
+    "text": "Rollback in the Kidnap Game\nSo the rollback solution in this version of the game where both players have perfect information about all previous actions is:\n\n{ (\\(Kidnap, Kill_3, Release_4\\)), \\(Pay\\) }\n\n\n\nIn other words:\n\nGuy \\(kidnaps\\) because he believes Vivica will pay the ransom. He threatens to \\(kill\\) if Vivica doesn’t pay, but promises to \\(release\\) if she does pay\nVivica \\(pays\\) because she believes Guy’s threat/promise",
+    "crumbs": [
+      "Slides",
+      "Combining Sequential and Simultaneous"
+    ]
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-4",
+    "href": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-4",
+    "title": "Introduction to Game Theory",
+    "section": "Rollback in the Kidnap Game",
+    "text": "Rollback in the Kidnap Game\n{ (\\(Kidnap, Kill_3, Release_4\\)), \\(Pay\\) }\nOn top of being a regular NE, this strategy profile is also called subgame-perfect because both players’ actions are credible:\n\n\nGuy’s threat of killing Orlando if the ransom goes unpaid aligns with his preference\nHis promise to release Orlando if the ransom is paid is also credible because he would rather not kill if he gets the money\nVivica has every reason to pay the ransom when she believes guy will make good on his threat because she doesn’t want Orlando to die",
+    "crumbs": [
+      "Slides",
+      "Combining Sequential and Simultaneous"
+    ]
+  },
+  {
     "objectID": "Slides/05CombinedGames/05-main.html#modifying-the-game",
     "href": "Slides/05CombinedGames/05-main.html#modifying-the-game",
     "title": "Introduction to Game Theory",
     "section": "Modifying the game",
-    "text": "Modifying the game\n\n\n\n\n\nWhen we first saw this game, Vivica could observe whether Guy had killed Orlando before she paid the ransom.\nNow we will consider a variation of this game where Orlando’s fate is decided by Guy without Vivica knowing the result.",
+    "text": "Modifying the game\n\n\n\n\n\nWhen we first saw this game, Guy could observe whether Vivica had paid the ransom before he made the decision to \\(Kill\\) or \\(Release\\) Orlando\nNow we will consider a variation of this game where Guy doesnt know whether Vivica has paid when he chooses to Kill or Release",
     "crumbs": [
       "Slides",
       "Combining Sequential and Simultaneous"
@@ -1643,7 +1698,7 @@
     "href": "Slides/05CombinedGames/05-main.html#kidnap-game-with-a-simultaneous-subgame",
     "title": "Introduction to Game Theory",
     "section": "Kidnap Game with a simultaneous subgame",
-    "text": "Kidnap Game with a simultaneous subgame\n\n\nThe dotted box around Vivica’s nodes \\(N_3\\) and \\(N_4\\) indicate that she can’t tell them apart.\nThey are part of the same information set; to Vivica, they are indistinguishable from each other.\n\n\n\n\n\n\n\nInformation set\n\n\nis the set of information available to a player when making a decision. In the extensive form, every decision node belongs to one and only one info set, but multiple nodes may be in the same info set if the player at that node cannot tell them apart.",
+    "text": "Kidnap Game with a simultaneous subgame\n\n\nThe dotted box around Guy’s nodes \\(N_3\\) and \\(N_4\\) indicate that he can’t tell them apart.\nThey are part of the same information set; to Guy, they are indistinguishable from each other.\n\n\n\n\n\n\n\nInformation set\n\n\nis the set of information available to a player when making a decision. In the extensive form, every decision node belongs to one and only one info set, but multiple nodes may be in the same info set if the player at that node cannot tell them apart.",
     "crumbs": [
       "Slides",
       "Combining Sequential and Simultaneous"
@@ -1694,11 +1749,77 @@
     ]
   },
   {
+    "objectID": "Slides/05CombinedGames/05-main.html#solving-the-kidnap-game-w-simultaneous-sugame",
+    "href": "Slides/05CombinedGames/05-main.html#solving-the-kidnap-game-w-simultaneous-sugame",
+    "title": "Introduction to Game Theory",
+    "section": "Solving the Kidnap Game w/ Simultaneous Sugame",
+    "text": "Solving the Kidnap Game w/ Simultaneous Sugame\nWhat will a complete strategy profile look like for each player?\n\n\nGuy’s strategy:\n\nelement 1: \\(Kidnap\\) or \\(Don't~Kidnap\\)\nelement 2: \\(Kill\\) or \\(Release\\)\n\nVivica’s strategy:\n\nelement 1: \\(Pay\\) or \\(Don't\\)",
+    "crumbs": [
+      "Slides",
+      "Combining Sequential and Simultaneous"
+    ]
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#solving-the-kidnap-game-w-simultaneous-sugame-1",
+    "href": "Slides/05CombinedGames/05-main.html#solving-the-kidnap-game-w-simultaneous-sugame-1",
+    "title": "Introduction to Game Theory",
+    "section": "Solving the Kidnap Game w/ Simultaneous Sugame",
+    "text": "Solving the Kidnap Game w/ Simultaneous Sugame\nWhat is/are the NE of the subgame?\n\n\n\n\n\\(Pay\\)\n\\(Don't\\)\n\n\n\n\n\\(Kill\\)\n4,1\n2,2\n\n\n\\(Release\\)\n5,3\n1,4\n\n\n\n\n\n(\\(Release\\), \\(Pay\\)) is no longer stable because Vivica wouldn’t pay the ransom if Guy releases\n(\\(Kill\\), \\(Don't\\)) is the only NE in this table",
+    "crumbs": [
+      "Slides",
+      "Combining Sequential and Simultaneous"
+    ]
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#solving-the-kidnap-game-w-simultaneous-sugame-2",
+    "href": "Slides/05CombinedGames/05-main.html#solving-the-kidnap-game-w-simultaneous-sugame-2",
+    "title": "Introduction to Game Theory",
+    "section": "Solving the Kidnap Game w/ Simultaneous Sugame",
+    "text": "Solving the Kidnap Game w/ Simultaneous Sugame\nKnowing this, what is the NE in the full game?\n\n\n\n{ (\\(Don't~Kidnap\\), \\(Kill\\)), \\(Don't~pay\\) }",
+    "crumbs": [
+      "Slides",
+      "Combining Sequential and Simultaneous"
+    ]
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#comparing-ne-in-the-different-kidnapping-games",
+    "href": "Slides/05CombinedGames/05-main.html#comparing-ne-in-the-different-kidnapping-games",
+    "title": "Introduction to Game Theory",
+    "section": "Comparing NE in the different Kidnapping Games",
+    "text": "Comparing NE in the different Kidnapping Games\nIn the version where Vivica’s action was observable, we found the NE:\n\n{ (\\(Kidnap, Kill_3, Release_4\\)), \\(Pay\\) }\n\nBut in the version where Guy couldn’t see whether Vivica paid the ransom, it was:\n\n{ (\\(Don't~Kidnap\\), \\(Kill\\)), \\(Don't~pay\\) }\n\n\n\nIf you were Guy, which version would you prefer?\nGuy’s advantage is in making a conditional promise/threat to Vivica which is taken away if he can only pick one action",
+    "crumbs": [
+      "Slides",
+      "Combining Sequential and Simultaneous"
+    ]
+  },
+  {
     "objectID": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation",
     "href": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation",
     "title": "Introduction to Game Theory",
     "section": "A Strategic Form representation",
-    "text": "A Strategic Form representation\nHere is the game matrix for the entire kidnapping game:\n\n\n\nVivica, Guy\n\\(dnk,k\\)\n\\(dnk,r\\)\n\\(kid,k\\)\n\\(kid,r\\)\n\n\n\n\n\\(pay\\)\n\\(5,3\\)\n\\(5,3\\)\n\\(1,4\\)\n\\(3,5\\)\n\n\n\\(no~pay\\)\n\\(5,3\\)\n\\(5,3\\)\n\\(2,2\\)\n\\(4,1\\)\n\n\n\n\n\nNotice that the left half of the table represent the single don’t kidnap branch in the original tree\nWhat are the NE?\n\n(\\(pay\\), \\(kid,k\\)) is one\n(\\(no~pay\\), \\(dnk,k\\)) and (\\(no~pay\\), \\(dnk,r\\)) are also NE for this game table",
+    "text": "A Strategic Form representation\nHere is the game matrix for the entire kidnapping game: (when Guy can see Vivica’s action)\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, Kill, Kill\n3, 5\n3, 5\n\n\nDNK, Kill, Release\n3, 5\n3, 5\n\n\nDNK, Release, Kill\n3, 5\n3, 5\n\n\nDNK, Release, Release\n3, 5\n3, 5\n\n\nKidnap, Kill, Kill\n4, 1\n2, 2\n\n\nKidnap, Kill, Release\n4, 1\n1, 4\n\n\nKidnap, Release, Kill\n5, 3\n2, 2\n\n\nKidnap, Release, Release\n5, 3\n1, 4",
+    "crumbs": [
+      "Slides",
+      "Combining Sequential and Simultaneous"
+    ]
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation-1",
+    "href": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation-1",
+    "title": "Introduction to Game Theory",
+    "section": "A Strategic Form representation",
+    "text": "A Strategic Form representation\n\n\nNotice that the top half of the table represent the single don’t kidnap branch in the original tree\nWhat are the NE?",
+    "crumbs": [
+      "Slides",
+      "Combining Sequential and Simultaneous"
+    ]
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation-2",
+    "href": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation-2",
+    "title": "Introduction to Game Theory",
+    "section": "A Strategic Form representation",
+    "text": "A Strategic Form representation\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, K, K\n3, 5\n3, 5\n\n\nDNK, K, R\n3, 5\n3, 5\n\n\nDNK, R, K\n3, 5\n3, 5\n\n\nDNK, R, R\n3, 5\n3, 5\n\n\nKidnap, K, K\n4, 1\n2, 2\n\n\nKidnap, K, R\n4, 1\n1, 4\n\n\nKidnap, R, K\n5, 3\n2, 2\n\n\nKidnap, R, R\n5, 3\n1, 4",
     "crumbs": [
       "Slides",
       "Combining Sequential and Simultaneous"
@@ -1709,7 +1830,18 @@
     "href": "Slides/05CombinedGames/05-main.html#ne-vs-spne",
     "title": "Introduction to Game Theory",
     "section": "NE vs SPNE",
-    "text": "NE vs SPNE\n\n\n\n\n\n\n\nVivica, Guy\n\\(dnk,k\\)\n\\(dnk,r\\)\n\\(kid,k\\)\n\\(kid,r\\)\n\n\n\n\n\\(pay\\)\n\\(5,3\\)\n\\(5,3\\)\n\\(1,4\\)\n\\(3,5\\)\n\n\n\\(no~pay\\)\n\\(5,3\\)\n\\(5,3\\)\n\\(2,2\\)\n\\(4,1\\)\n\n\n\n\n\nWhat is different about the NE we found in the table and the NE we found through rollback?\nThe NE where Vivica plays \\(no~pay\\) are not Subgame Perfect because those actions are not credible threats",
+    "text": "NE vs SPNE\n\n\n\n\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, K, K\n3, 5\n3, 5\n\n\nDNK, K, R\n3, 5\n3, 5\n\n\nDNK, R, K\n3, 5\n3, 5\n\n\nDNK, R, R\n3, 5\n3, 5\n\n\nKidnap, K, K\n4, 1\n2, 2\n\n\nKidnap, K, R\n4, 1\n1, 4\n\n\nKidnap, R, K\n5, 3\n2, 2\n\n\nKidnap, R, R\n5, 3\n1, 4",
+    "crumbs": [
+      "Slides",
+      "Combining Sequential and Simultaneous"
+    ]
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#ne-vs-spne-1",
+    "href": "Slides/05CombinedGames/05-main.html#ne-vs-spne-1",
+    "title": "Introduction to Game Theory",
+    "section": "NE vs SPNE",
+    "text": "NE vs SPNE\n\n\nWhat is different about the NE we found in the table and the NE we found through rollback?\nThe NE where Vivica plays \\(no~pay\\) are not Subgame Perfect because those actions are not credible threats\n\nShe can only credibly threaten not paying the ransom if she knows Guy can’t observe her action",
     "crumbs": [
       "Slides",
       "Combining Sequential and Simultaneous"
