@@ -32,6 +32,8 @@ website:
             href: activities/03PirateTreasure/PirateTreasure.qmd
           - text: "Election Blotto"
             href: activities/04BlottoElection/BlottoElection.qmd
+          - text: "Social Media Adspace"
+            href: activities/05CournotComp/cournotcomp.qmd
 
 page-footer:
   right: "This page is built with [Quarto](https://quarto.org/)."

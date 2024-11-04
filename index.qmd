@@ -1,6 +1,8 @@
 ---
 title: "EC327 Introductory Game Theory"
 subtitle: "Economics Course at the University of Oregon"
+filters:
+  - shinylive
 ---
 
 # Welcome to Intro to Game Theory! 
@@ -30,6 +32,8 @@ subtitle: "Economics Course at the University of Oregon"
 [Activity 3 - Pirate Treasure](/activities/03PirateTreasure/PirateTreasure.qmd)
 
 [Activity 4 - Blotto Election](/activities/04BlottoElection/BlottoElection.qmd)
+
+[Activity 5 - Social Media Ads](/activities/05CournotComp/cournotcomp.qmd)
 
 ## Assignments 
 
