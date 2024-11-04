@@ -7,43 +7,6 @@ filters:
 
 # Welcome to Intro to Game Theory! 
 
----
-
-## Lectures
-
-[01 - Introduction](/Slides/01Intro/01-main.html)
-
-[02 - Sequential Games](/Slides/02SequentialGames/02-main.html)
-
-[03 - Simultaneous Games](/Slides/03SimultaneousGames/03-main.html)
-
-[04 - Continuous Strategies](/Slides/04ContinuousStrats/04-main.html)
-
-[05 - Combining Sequential and Simultaneous Games](/Slides/05CombinedGames/05-main.html)
-
-[06 - Mixed Strategies and Strategic Uncertainty](/Slides/06MixedStrategies/06-main.html)
----
-
-## Activities
-
-[Activity 1 - Guessing Two Thirds of the Average](https://dyasui.github.io/EC327/activities/01GuessTwoThirds/GuessTwoThirds.html)
-
-[Activity 2 - Survivor Flags](https://dyasui.github.io/EC327/activities/02SurvivorFlags/SurvivorFlags.html)
-
-[Activity 3 - Pirate Treasure](/activities/03PirateTreasure/PirateTreasure.qmd)
-
-[Activity 4 - Blotto Election](/activities/04BlottoElection/BlottoElection.qmd)
-
-[Activity 5 - Social Media Ads](/activities/05CournotComp/cournotcomp.qmd)
-
-## Assignments 
-
-<a href="Homework/assignment1/main.pdf" target="_blank">Homework 1</a>
-
-[Homework 2](https://dyasui.github.io/EC327/Homework/assignment2/main.pdf)
-
----
-
 This elective game theory class EC327 is taught by [Dante Yasui](https://cas.uoregon.edu/directory/economics/all/dyasui)
 at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
@@ -67,6 +30,44 @@ Office Hours : Monday 10-11 am \& Wednesday 1-2 pm
 
  - Dixit, Skeath, and McAdams. Games of Strategy, 5th edition, by Dixit, Skeath, and Reiley.
 
+---
+
+## Lectures
+
+[01 - Introduction](/Slides/01Intro/01-main.html)
+
+[02 - Sequential Games](/Slides/02SequentialGames/02-main.html)
+
+[03 - Simultaneous Games](/Slides/03SimultaneousGames/03-main.html)
+
+[04 - Continuous Strategies](/Slides/04ContinuousStrats/04-main.html)
+
+[05 - Combining Sequential and Simultaneous Games](/Slides/05CombinedGames/05-main.html)
+
+[06 - Mixed Strategies and Strategic Uncertainty](/Slides/06MixedStrategies/06-main.html)
+
+---
+
+## Activities
+
+[Activity 1 - Guessing Two Thirds of the Average](https://dyasui.github.io/EC327/activities/01GuessTwoThirds/GuessTwoThirds.html)
+
+[Activity 2 - Survivor Flags](https://dyasui.github.io/EC327/activities/02SurvivorFlags/SurvivorFlags.html)
+
+[Activity 3 - Pirate Treasure](/activities/03PirateTreasure/PirateTreasure.qmd)
+
+[Activity 4 - Blotto Election](/activities/04BlottoElection/BlottoElection.qmd)
+
+[Activity 5 - Social Media Ads](/activities/05CournotComp/cournotcomp.qmd)
+
+## Assignments 
+
+<a href="Homework/assignment1/main.pdf" target="_blank">Homework 1</a>
+
+[Homework 2](https://dyasui.github.io/EC327/Homework/assignment2/main.pdf)
+
+---
+
 ## Tentative Schedule
 
 | **Week** | **Chapter(s)** | **Topic**                                                           |
@@ -78,8 +79,8 @@ Office Hours : Monday 10-11 am \& Wednesday 1-2 pm
 | 5        | 6              | Review & **Midterm**                                                |
 | 6        | 5              | Simultaneous Games: Continuous Strategies, Discussion, and Evidence |
 | 7        | 7              | Mixed Strategies                                                    |
-| 8        | 8              | Strategic Moves                                                     |
-| 9        | 9              | Uncertainty and Information                                         |
+| 8        | 9              | Uncertainty and Information                                         |
+| 9        | 8              | Strategic Moves                                                     |
 | 10       | 10             | Repeated Games                                                      |
 | *Finals* | *TBA*          | *Exam*                                                              |
 
