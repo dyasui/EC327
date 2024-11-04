@@ -8,11 +8,11 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.57">
+  <meta name="generator" content="quarto-1.4.553">
 
   <meta name="author" content="Dante Yasui">
   <meta name="dcterms.date" content="2024-01-01">
-  <title>EC327 Game Theory – Introduction to Game Theory</title>
+  <title>EC327 Game Theory - Introduction to Game Theory</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -600,7 +600,8 @@ Q = 44 - 2($24) + 24 = 20
 <p>which is more than the $28,000 they earned in NE</p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="figures/Dixit_fig5.1.png"></p>
-</div></div>
+</div>
+</div>
 </section>
 <section id="introduction-to-oligopoly" class="slide level2">
 <h2>Introduction to Oligopoly</h2>
@@ -727,7 +728,7 @@ q_1 &amp;= \frac{-(90 - q_2)}{2(-1)} &amp; q_2 &amp;= \frac{-(90 - q_1)}{2(-1)}\
 &amp;= \frac{90 - q_2}{2} &amp; &amp;= \frac{90 - q_1}{2}\\
 &amp;= 45 - \frac{q_2}{2} &amp; &amp;= 45 - \frac{q_1}{2}
 \end{align}
-\]</span></p>
+\]</span> —</p>
 </section>
 <section id="cournot-oligopoly-finding-nash-equilibrium" class="slide level2">
 <h2>Cournot Oligopoly: Finding Nash Equilibrium</h2>
@@ -887,7 +888,7 @@ x = 10 \sqrt{10 \sqrt{x} - x} - (10 \sqrt{x} - x)
 <section id="applying-rationalizability-1" class="slide level2">
 <h2>Applying Rationalizability</h2>
 <p>Remember this game from before?</p>
-<table class="caption-top">
+<table>
 <thead>
 <tr class="header">
 <th>Row, Column</th>
@@ -928,7 +929,7 @@ x = 10 \sqrt{10 \sqrt{x} - x} - (10 \sqrt{x} - x)
 <section id="applying-rationalizability-2" class="slide level2">
 <h2>Applying Rationalizability</h2>
 <p>If we took away R2 and C2 from this game;</p>
-<table class="caption-top">
+<table>
 <thead>
 <tr class="header">
 <th>Row, Column</th>
@@ -1041,7 +1042,8 @@ x = 10 \sqrt{10 \sqrt{x} - x} - (10 \sqrt{x} - x)
 <li><p>(<span class="math inline">\(R = 12\)</span>, <span class="math inline">\(S = 6\)</span>)</p></li>
 <li><p>this is also where the best-response rules intersect</p></li>
 </ul>
-</div></div>
+</div>
+</div>
 
 <div class="quarto-auto-generated-content">
 <p><img src="UOSignature-356.png" class="slide-logo"></p>
@@ -1292,7 +1294,18 @@ x = 10 \sqrt{10 \sqrt{x} - x} - (10 \sqrt{x} - x)
         }
         return false;
       }
-      const onCopySuccess = function(e) {
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1324,29 +1337,7 @@ x = 10 \sqrt{10 \sqrt{x} - x} - (10 \sqrt{x} - x)
         }, 1000);
         // clear code selection
         e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
       });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/dyasui\.github\.io\/EC327\/");
@@ -1354,7 +1345,7 @@ x = 10 \sqrt{10 \sqrt{x} - x} - (10 \sqrt{x} - x)
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
