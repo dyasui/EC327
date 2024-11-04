@@ -1,0 +1,228 @@
+---
+title: "Social Media Adspace"
+filters:
+  - shinylive
+---
+
+**<u>Objective:</u>**
+In this activity, you will take on the role of a social media platform
+competing with others to attract advertising dollars. Your goal is to determine
+how many ad slots to release on your platform, **maximizing your firm’s profit** in
+a market where each platform’s choices affect overall ad prices.
+
+Each social media platform (firm) sells digital ad space to companies looking
+to reach their audience. The total number of ad slots released by all firms in
+the market determines the price advertisers are willing to pay per slot. The
+more ad space is available, the less valuable each slot becomes.
+
+## Group Assignments
+
+```{r makegroups}
+#| echo: false
+#| message: false
+library(tidyverse)
+
+canvas_export <- list.files(path='.', pattern="Grades-EC_327.csv$")
+
+names <- read_csv(canvas_export) |> 
+  filter(!(Student %in% c(NA, "Points Possible", "Student, Test"))) |>
+  select(name = Student) |>
+  mutate(name = sub("(\\w+),\\s(\\w+)","\\2 \\1", name)) 
+
+n = nrow(names)
+group_size = 4
+num_groups = round(n/group_size)
+
+# set seed to make group selection consistent across sessions
+set.seed(2024)
+# assign groups and make a table
+names %>%
+  mutate(
+         row_number = row_number(),
+         Group = sample(rep_len(1:num_groups, n), n, replace = FALSE)
+         ) %>%
+  arrange(Group, row_number) %>%  # Sort by group and then row number
+  select(-row_number) %>%  # Remove temporary row_number column
+  group_by(Group) %>%
+  mutate(row = row_number()) %>%
+  pivot_wider(names_from = Group, values_from = name, names_prefix = "Group") %>%
+  ungroup() %>%
+  select(-row) %>%
+  knitr::kable()
+```
+
+## Game Rules:
+
+### 1. Divide into teams:
+
+  Come up with a name for your new social media startup and assign yourselves roles
+  (CEO, CFO, Public Relations, Market Analyst, etc.).
+
+### 2. Analyze Ad Market:
+  
+  You will be shown the market demand curve which represents the willingness to pay 
+  of advertising companies on your platforms. 
+  Values of $a$ and $b$ will be randomly generated.
+
+  1. Common Demand Curve: 
+  $$ P = a - b \times Q $$
+
+  * $P$ is the price per ad slot.
+  * $Q$ is the total ad space supplied by all firms (sum of each platform’s ad slots).
+  * $a$ and $b$ are constants representing market conditions.
+
+  2. Marginal Cost: 
+
+  * Since digital ad space has virtually no additional cost per slot, assume marginal cost is zero.
+
+### 3. Strategize: (5 minutes)
+
+  Discuss amongst your team as to how many ads you will allow for on your platform.
+  Your strategy will be an integer quantity of ads slots to produce which will be bought by adverstisers at the going market rate.
+
+### 4. Market Opens:
+
+  After each team has decided on their quantity of ads to produce, I will ask your CEO to report them to me.
+  All firms quantities will be totaled and entered into the market demand curve to determine the price you will receive per ad.
+
+### 5. Calculate Profits & Discuss:
+
+  Have your CFO write down the profit you earn this round after all other groups quantities have been entered.
+  Also record the demand function's $a$ and $b$ of the round.
+  Discuss your firm's annual performance and make adjustments as necessary.
+  After class you will submit your total profit after all rounds as well as discussion bullet points
+  about how your team came up with a strategy, and how this activity relates to class material.
+
+# Market Simulation
+
+```{shinylive-r}
+#| standalone: true
+#| code-fold: false
+#| label: demand-curve
+#| viewerHeight: 1000
+
+library(shiny)
+library(ggplot2)
+
+# Demand curve parameters
+a_range <- 50:200
+b_range <- 0.5:5
+
+# User interface with sliders for `a` and `b` and numeric inputs for each group
+ui <- fluidPage(
+    titlePanel("Digital Advertising Production Dashboard"),
+    
+    sidebarLayout(
+        sidebarPanel(
+            # Randomize demand curve parameters
+            sliderInput("a", "Demand Curve Intercept (a):", min = min(a_range), max = max(a_range), value = sample(a_range, 1)),
+            sliderInput("b", "Demand Curve Slope (b):", min = min(b_range), max = max(b_range), value = sample(b_range, 1)),
+            
+            # Input production quantities for each group (up to 12)
+            numericInput("group1", "Group 1 Ad Quantity:", value = 0, min = 0),
+            numericInput("group2", "Group 2 Ad Quantity:", value = 0, min = 0),
+            numericInput("group3", "Group 3 Ad Quantity:", value = 0, min = 0),
+            numericInput("group4", "Group 4 Ad Quantity:", value = 0, min = 0),
+            numericInput("group5", "Group 5 Ad Quantity:", value = 0, min = 0),
+            numericInput("group6", "Group 6 Ad Quantity:", value = 0, min = 0),
+            numericInput("group7", "Group 7 Ad Quantity:", value = 0, min = 0),
+            numericInput("group8", "Group 8 Ad Quantity:", value = 0, min = 0),
+            numericInput("group9", "Group 9 Ad Quantity:", value = 0, min = 0),
+            numericInput("group10", "Group 10 Ad Quantity:", value = 0, min = 0),
+            numericInput("group11", "Group 11 Ad Quantity:", value = 0, min = 0),
+            numericInput("group12", "Group 12 Ad Quantity:", value = 0, min = 0)
+        ),
+        
+        mainPanel(
+            plotOutput("demandPlot"),
+            textOutput("marketPriceText"),
+            tableOutput("profitTable")
+        )
+    )
+)
+
+# Server logic for calculating total quantity and plotting demand curve
+server <- function(input, output) {
+    # Reactive calculation of total quantity from all groups
+    totalQuantity <- reactive({
+        sum(input$group1, input$group2, input$group3, input$group4, input$group5,
+            input$group6, input$group7, input$group8, input$group9, input$group10,
+            input$group11, input$group12)
+    })
+    
+    # Reactive calculation of market price based on total quantity and demand curve
+    marketPrice <- reactive({
+        input$a - input$b * totalQuantity()
+    })
+    
+    # Plotting the demand curve with the intersection point for market price
+    output$demandPlot <- renderPlot({
+        ggplot(data = data.frame(Q = 0:(input$a/input$b)), aes(x = Q)) +
+            geom_line(aes(y = input$a - input$b * Q), color = "blue") +
+            geom_point(aes(x = totalQuantity(), y = marketPrice()), color = "red", size = 3) +
+            labs(
+                title = "Social Media Advertising Demand",
+                x = "Total Quantity of Ad Space",
+                y = "Price per Ad Slot"
+            ) +
+            theme_minimal()
+    })
+    
+    # Displaying the market price as text
+    output$marketPriceText <- renderText({
+        paste("Market Price per Ad Slot: $", round(marketPrice(), 2))
+    })
+
+    # Table of profits for each group
+    output$profitTable <- renderTable({
+        group_quantities <- c(input$group1, input$group2, input$group3, input$group4, input$group5,
+                              input$group6, input$group7, input$group8, input$group9, input$group10,
+                              input$group11, input$group12)
+        group_profits <- group_quantities * marketPrice()
+        
+        # Create a data frame for group profits
+        data.frame(
+            Group = paste("Group", 1:12),
+            Quantity = group_quantities,
+            Profit = round(group_profits, 2)
+        )
+    })
+}
+
+# Run the app
+shinyApp(ui, server)
+
+```
+
+# Round Outline:
+
+### Rounds 1-3:
+
+Repeat game among your original groups, varying the demand curve parameters after each round.
+
+### Round 4-: Fewer groups each round
+
+The tech bubble has burst and with it has disappeared the endless venture capital funding.
+Now only the strongest will survive!
+
+The bottom half of firms with the lowest profits in round 3 go out of business.
+Their employees will join the remaining firms and play in the next round.
+
+---
+
+# Discussion
+
+In your submission, include your groups' responses to the following points:
+
+  * What type of game did this activity resemble? 
+  What ideas from this class did you and your team use to play this game?
+
+  * How did this game relate to the concept of oligopoly?
+  
+    + During each of the rounds, were the final quantities produced by firms consistent with 
+    what they would be in perfect competition or did they resemble collusion?
+    
+    + Did any groups try to collude with others?
+    If so, were they able to effectively enforce their agreements?
+
+    + Did collusion get easier as the number of firms in the market was reduced?
