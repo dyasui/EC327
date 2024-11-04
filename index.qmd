@@ -21,6 +21,7 @@ filters:
 
 [05 - Combining Sequential and Simultaneous Games](/Slides/05CombinedGames/05-main.html)
 
+[06 - Mixed Strategies and Strategic Uncertainty](/Slides/06MixedStrategies/06-main.html)
 ---
 
 ## Activities

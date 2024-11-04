@@ -22,6 +22,8 @@ website:
             href: Slides/04ContinuousStrats/04-main.qmd
           - text: "Combining Sequential and Simultaneous"
             href: Slides/05CombinedGames/05-main.qmd
+          - text: "Mixed Strategies and Strategic Uncertainty"
+            href: Slides/06MixedStrategies/06-main.qmd
       - section: "Activities"
         contents: 
           - text: "Guessing Two Thirds of the Average"

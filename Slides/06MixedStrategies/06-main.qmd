@@ -1,0 +1,30 @@
+---
+title: "Introduction to Game Theory"
+subtitle: "Mixed Strategies and Strategic Uncertainty"
+author: "Dante Yasui"
+date: last-modified
+date-format: "YYYY"
+format:
+    revealjs:
+        theme: [default, styles.scss]
+        slide-number: true
+        footer: "EC327 | Lecture 6 | Mixed Strategies"
+        preview-links: auto
+        code-fold: true
+        logo: UOSignature-356.png
+title-slide-attributes:
+  data-background-position: left
+output:
+  beamer_presentation:
+    keep_tex: yes
+---
+
+::: {.vertical-center}
+
+[Outline]{.hi .big}
+
+:::
+
+
+{{< include 0601-uncertainty.qmd >}}
+
