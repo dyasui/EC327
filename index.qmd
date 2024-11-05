@@ -64,7 +64,11 @@ Office Hours : Monday 10-11 am \& Wednesday 1-2 pm
 
 <a href="Homework/assignment1/main.pdf" target="_blank">Homework 1</a>
 
-[Homework 2](https://dyasui.github.io/EC327/Homework/assignment2/main.pdf)
+<a href="Homework/assignment2/main.pdf" target="_blank">Homework 2</a>
+
+<a href="Homework/assignment3/main.pdf" target="_blank">Homework 3</a>
+
+<a href="Homework/assignment4/main.pdf" target="_blank">Homework 4</a>
 
 ---
 

@@ -24,15 +24,15 @@
 \pagestyle{headandfoot}
 \lhead{EC327 Game Theory}
 \chead{Homework 4}
-\rhead{Winter 2024}
+\rhead{Fall 2024}
 \runningheadrule
 
 \title{
     \textbf{Econ 327: Game Theory} \\ 
-    Homework $\#3$
+    Homework $\#4$
     }
 \author{University of Oregon}
-\date{Due: Mar. 15$^{th}$}
+\date{Due: Dec. 6$^{th}$}
 
 % exam-type question formatting
 \renewcommand{\thequestion}{\textbf{Question \arabic{question}}}
@@ -59,8 +59,8 @@
 %  If you want to, you can include your student ID instead.
 
   \item Complete \textit{all} questions and parts.
-  I will select one question at random to be graded
-  according to the rubric on Canvas.
+  % I will select one question at random to be graded
+  % according to the rubric on Canvas.
 
   \item You may choose to work with others,
   but everyone must submit to Canvas individually.
@@ -81,32 +81,38 @@
 
 %------------------------------------------------------------------%
 
-\question[10]
+\question[20]
 \textbf{Multiple Choice}
 
 \begin{parts}
 
   \part 
-  Consider the strategic form game below:
+  Jack is a talented investor, 
+  but his earnings vary considerably from year to year.
+  In the coming year he expects to earn either $\$ 250,000$ with good luck
+  or $ \$ 90,000 $ with bad luck.
+  Somewhat oddly, given his chosen profession, Jack is risk averse, 
+  so that his utility is equal to the square root of his income.
+  The probability of Jack's having good luck is 0.5.
 
-  \begin{table}[h!]
-    \begin{center}
-      \begin{tabular}{*{4}{c|}}
-        \multicolumn{2}{c}{} & \multicolumn{2}{c}{Column} \\ \cline{3-4}
-        \multicolumn{1}{c}{} &    & Left & Right \\ \cline{2-4}
-        \multirow{2}*{Row} & Up   & 0,1 & 2,2 \\ \cline{2-4}
-                           & Down & 1,1 & 1,0 \\ \cline{2-4}
-      \end{tabular}
-    \end{center}
-  \end{table}
+  What is Jack's expected utility for the coming year?
+  \begin{choices}
+    \choice 170
+    \CorrectChoice 400
+    \choice 412 
+    \choice 583
+  \end{choices}
 
-  How many Nash Equilibria are there \textit{including mixed strategies}?
+
+  \part 
+  What amount of certain income would yield the same level of utility 
+  for Jack as the expected utility in part (d)?
 
   \begin{choices}
-    \choice one equilibrium
-    \CorrectChoice two equilbria
-    \choice three equilibria
-    \choice an infinite number of equilibria
+    \choice \$28,900 
+    \CorrectChoice \$160,000
+    \choice \$169,744 
+    \choice \$339,889
   \end{choices}
 
   \part 
@@ -130,33 +136,6 @@
     \CorrectChoice $v = 32$
     \choice $v = 64$
   \end{choices}
-
-  \part 
-  For this simplified version of the Cold War:
-
-  \begin{table}[h!]
-    \begin{center}
-      \begin{tabular}{*{4}{c|}}
-        \multicolumn{2}{c}{} & \multicolumn{2}{c}{Soviet Union} \\ \cline{3-4}
-        \multicolumn{1}{c}{} &                   & Restrained & Aggressive \\ \cline{2-4}
-        \multirow{2}*{United States} & Restrained & 4,3        & 1,4        \\ \cline{2-4}
-                                    & Aggressive & 3,1        & 2,2        \\ \cline{2-4}
-      \end{tabular}
-    \end{center}
-  \end{table}
-
-  If one player could make a \textit{strategic move} in a first stage of this game,
-  what would be an example which they could \textit{credibly commit} to 
-  and which would improve their equilibrium payoff?
-
-  \begin{choices}
-    \choice The Soviet Union commits to only playing Aggressive
-    \choice The Soviet Union promises to play Restrained if the US does too
-    \choice The United States develops a reputation of always playing restrained 
-    \CorrectChoice The United States threatens to play Aggressive unless the Soviet Union plays Restrained
-  \end{choices}
-  
-  \newpage
 
   \part 
   If the prisoners' dilemma is repeated 100 times between the same two players 
@@ -185,6 +164,25 @@
     \choice When $\delta \geq 2/3$
   \end{choices}
 
+  \newpage
+  \part 
+  You are the Dean of the Faculty at St. Anford University. You hire Assistant Professors for a probationary period of 7 years, after which they come up for tenure and are either promoted and gain a job for life or turned down, in which case they must find another job elsewhere.
+Your Assistant Professors come in two types, Good and Brilliant. Any types worse than Good have already been weeded out in the hiring process, but you cannot directly distinguish between Good and Brilliant types. Each individual Assistant Professor knows whether he or she is Brilliant or merely Good. You would like to tenure only the Brilliant types.
+The payoff from a tenured career at St. Anford is \$2 million; think of this as the expected discounted present value of salaries, consulting fees, and book royalties, plus the monetary equivalent of the pride and joy that the faculty member and his or her family would get from being tenured at St. Anford. Anyone denied tenure at St. Anford will get a fac- ulty position at Boondocks College, and the present value of that career is \$0.5 million.
+Your faculty can do research and publish the findings. But each publication requires effort and time and causes strain on the family; all these are costly to the faculty member. The monetary equivalent of this cost is \$30,000 per publication for a Brilliant Assistant Professor and \$60,000 per publication for a Good one. You can set a minimum number, $N$, of publications that an Assistant Professor must produce in order to achieve tenure.
+  
+  What will happen in a \textit{separating equilibrium}?
+  \begin{choices}
+    \choice St. Anford requires $N=0$ publications, \\
+    both Good and Brilliant professors are tenured.
+    \CorrectChoice St. Anford requires $25 < N \leq 50$ publications, \\
+    Brilliant professors are tenured, Good ones are not.
+    \choice St. Anford requires $25 < N \leq 50$ publications, \\
+    Good professors are tenured, Brilliant ones are not.
+    \choice St. Anford requires $N>50$ publications, \\
+    neither Good nor Brilliant professors are tenured.
+  \end{choices}
+  
 \end{parts}
   
 \newpage
@@ -192,63 +190,113 @@
 %------------------------------------------------------------------%
 
 \question
-Consider a game between a union and the company that employs the union membership. The union can threaten to strike (or not) to get the company to meet its wage and benefits demands. When faced with a threatened strike, the company can choose to concede to the demands of the union or to defy its threat of a strike. The union, however, does not know the company’s profit position when it decides whether to make its threat; it does not know whether the company is sufficiently profitable to meet its demands—and the company’s assertions in this matter cannot be believed. Nature determines whether the company is profitable; the probability that the firm is unprofitable is $p$.
+A local charity has been given a grant to serve free meals to the homeless in its community, but it is worried that its program might be exploited by nearby college students, who are always on the lookout for a free meal.
+Both a homeless person and a college student receive a payoff of 10 for a free meal.
+The cost of standing in line for the meal is 
+$t^2 / 320$ for a homeless person and 
+$t^2 / 160$ for a college student,
+where t is the amount of time in line measured in minutes.
+Assume that the staff of the charity cannot observe the true type of those coming for free meals.
 
-The payoff structure is as follows: (i) When the union makes no threat, the union gets a payoff of 0 (regardless of the profitability of the company). The company gets a payoff of 100 if it is profitable but a payoff of 10 if it is unprofitable. A passive union leaves more profit for the company if there is any profit to be made. (ii) When the union threatens to strike and the company concedes, the union gets 50 (regardless of the profitability of the company) and the company gets 50 if it is profitable but -40 if it is not. (iii) When the union threatens to strike and the company defies the union’s threat, the union must strike and gets -100 (regardless of the profitability of the company). The company gets -100 if it is profitable and -10 if it is not. Defiance is very costly for a profitable company but not so costly for an unprofitable one.
+\begin{parts}
+  \part[10] What is the minimum wait time that will achieve separation of types?
+
+  \part[10] 
+  After a while, the charity finds that it can successfully identify 
+  and turn away college students half of the time.
+  College students who are turned away receive no free meal and,
+  further, incur a cost of 5 for their time and embarrassment.
+  Will the partial identification of college students 
+  reduce or increase the answer in part (a)? 
+  Explain.
+
+\end{parts}
+
+%------------------------------------------------------------------%
+
+\newpage
+
+\question
+Consider a game between a union and the company that employs the union
+membership. The union can threaten to strike (or not) to get the company to
+meet its wage and benefits demands. When faced with a threatened strike, the
+company can choose to concede to the demands of the union or to defy its threat
+of a strike. The union, however, does not know the company’s profit position
+when it decides whether to make its threat; it does not know whether the
+company is sufficiently profitable to meet its demands—and the company’s
+assertions in this matter cannot be believed. Nature determines whether the
+company is profitable; the probability that the firm is unprofitable is $p$.
+
+The payoff structure is as follows: (i) When the union makes no threat, the
+union gets a payoff of 0 (regardless of the profitability of the company). The
+company gets a payoff of 100 if it is profitable but a payoff of 10 if it is
+unprofitable. A passive union leaves more profit for the company if there is
+any profit to be made. (ii) When the union threatens to strike and the company
+concedes, the union gets 50 (regardless of the profitability of the company)
+and the company gets 50 if it is profitable but -40 if it is not. (iii) When
+the union threatens to strike and the company defies the union’s threat, the
+union must strike and gets -100 (regardless of the profitability of the
+company). The company gets -100 if it is profitable and -10 if it is not.
+Defiance is very costly for a profitable company but not so costly for an
+unprofitable one.
 \footnote{Dixit, Skeath, and Riley, pg 584}
 
 \begin{parts}
-  \part[2] What happens when the union uses the pure threat to strike unless the company concedes to the union’s demands?
+  \part[10] What happens when the union uses the pure threat to strike unless
+  the company concedes to the union’s demands?
 
-  \part[4] Suppose that the union sets up a situation in which there is some risk, with probability $q < 1$, that it will strike after the company defies its threat.
-  This risk may arise from the union leadership’s imperfect ability to keep the membership in line.
+  \part[8] Suppose that the union sets up a situation in which there is some
+  risk, with probability $q < 1$, that it will strike after the company defies
+  its threat.
+  This risk may arise from the union leadership’s imperfect ability to keep the
+  membership in line.
   Draw an extensive form game tree.
 
-  \part[4] What happens when the union uses brinkmanship, threatening to strike with some probability $q$ unless the company accedes to its demands?
+  \part[12] What happens when the union uses brinkmanship, threatening to
+  strike with some probability $q$ unless the company accedes to its demands?
 
 \end{parts}
+
+%------------------------------------------------------------------%
 
 \newpage
 
 \question 
-Choose one of the following in-class activities to discuss for this question:
-\begin{itemize}
-  \item Activity 3: Pirate Treasure
-  \item Activity 5: Market for Lemons 
-  \item Activity 7: Brinksmanship
-\end{itemize}
  
+Take a look at the data collected in class from one of the activities from the second half of the class
+(not including penalty shootout).
+ 
+\begin{itemize}
+  \item Election Blotto
+  \item Market for Lemons
+  \item Brinksmanship
+\end{itemize}
+
 \begin{parts}
-  \part[4] 
-  Model a single part of this game as a one-shot simultaneous game. 
-  Your answer should include a \textbf{strategic form payoff table}
-  as well as some explanation of what part of the activity this corresponds to.
+  \part[6]
+  Generate a testable hypothesis using the relevant theoretical concept(s) from lectures
+  to compare against the data from our in-class activity.
+  Your hypothesis should include a specific numerical value or values.
+  For example, you could find the probability of a goal being scored in equilibrium,
+  or the overall distribution of strategies by kickers and goalies playing equilibrium strategy profiles.
 
-  Find at least one \textbf{Nash Equilibrium} of this one-shot game 
-  that you think is relevant to the lesson of this activity.
+  \part[6]
+  Now compare your theoretical prediction to some statistic or set of values from class.
+  Do you \textit{reject} or \textit{fail to reject} the null hypothesis that the class data
+  were significantly different from the theoretical distribution?
 
-  \vspace{60mm}
+  \part[6]
+  Evaluate the predictions generated by the theory. 
 
-  \part[3] 
-  Now consider the entire extensive form game. 
+  If students' behavior in class resembled equilibrium behavior, 
+  under what circumstances might you expect the predictions to break down?
 
-  Without formally solving for the equilibrium (this will be too complicated),
-  I want you to use the intuition you have learned in this class for solving games 
-  to \textbf{discuss the relevant factors, tools, and ideas} to this specific game.
-
-  \vspace{30mm}
-
-  \part[3]
-  Look at the data collected in the corresponding Results.csv folder of the 
-  \texttt{Activities} files folder on Canvas
-  (We didn't collect data for Activity 7, but you can use your own observations to discuss).
+  If students' behavior didn't fit with the predictions, 
+  what assumptions in the theory do you think failed to hold up in real life?
 
   Does your intuition for what the theoretical equilibrium would be match what actually happened? 
   
-  \vspace{30mm}
-
-  \part
-  \textbf{Optional:}
+  \part[2]
   Out of all the activities we played in class, which were some of your 
   favorites and least-favorites?
   What would you recommend to make this aspect of the class better 

@@ -24,7 +24,7 @@
 \pagestyle{headandfoot}
 \lhead{EC327 Game Theory}
 \chead{Homework 3}
-\rhead{Winter 2024}
+\rhead{Fall 2024}
 \runningheadrule
 
 \title{
@@ -32,7 +32,7 @@
     Homework $\#3$
     }
 \author{University of Oregon}
-\date{Due: Mar. 1$^{st}$}
+\date{Due: Nov. 15$^{th}$}
 
 % exam-type question formatting
 \renewcommand{\thequestion}{\textbf{Question \arabic{question}}}
@@ -59,8 +59,8 @@
 %  If you want to, you can include your student ID instead.
 
   \item Complete \textit{all} questions and parts.
-  I will select one question at random to be graded
-  according to the rubric on Canvas.
+  % I will select one question at random to be graded
+  % according to the rubric on Canvas.
 
   \item You may choose to work with others,
   but everyone must submit to Canvas individually.
@@ -90,7 +90,7 @@
 
 %------------------------------------------------------------------%
 
-\question[10]
+\question[20]
 \textbf{Multiple Choice}
 
 \begin{parts}
@@ -133,7 +133,30 @@
   \end{center}
   \end{table}
 
-  How many Nash Equilibria exist in the simultaneous game?
+  How many Nash Equilibria are there \textit{including mixed strategies}?
+  \begin{choices}
+    \choice one equilibrium
+    \choice two equilbria
+    \CorrectChoice three equilibria
+    \choice an infinite number of equilibria
+  \end{choices}
+
+  \part 
+  Consider the strategic form game below:
+
+  \begin{table}[h!]
+    \begin{center}
+      \begin{tabular}{*{4}{c|}}
+        \multicolumn{2}{c}{} & \multicolumn{2}{c}{Column} \\ \cline{3-4}
+        \multicolumn{1}{c}{} &    & Left & Right \\ \cline{2-4}
+        \multirow{2}*{Row} & Up   & 4,1 & 2,2 \\ \cline{2-4}
+                           & Down & 1,1 & 3,0 \\ \cline{2-4}
+      \end{tabular}
+    \end{center}
+  \end{table}
+
+  How many Nash Equilibria are there \textit{including mixed strategies}?
+
   \begin{choices}
     \CorrectChoice one equilibrium
     \choice two equilbria
@@ -141,128 +164,169 @@
     \choice an infinite number of equilibria
   \end{choices}
 
-  \part 
-  Jack is a talented investor, 
-  but his earnings vary considerably from year to year.
-  In the coming year he expects to earn either $\$ 250,000$ with good luck
-  or $ \$ 90,000 $ with bad luck.
-  Somewhat oddly, given his chosen profession, Jack is risk averse, 
-  so that his utility is equal to the square root of his income.
-  The probability of Jack's having good luck is 0.5.
-
-  What is Jack's expected utility for the coming year?
-  \begin{choices}
-    \choice 170
-    \CorrectChoice 400
-    \choice 412 
-    \choice 583
-  \end{choices}
-
-
-  \part 
-  What amount of certain income would yield the same level of utility 
-  for Jack as the expected utility in part (c)?
-
-  \begin{choices}
-    \choice \$28,900 
-    \CorrectChoice \$160,000
-    \choice \$169,744 
-    \choice \$339,889
-  \end{choices}
-
   \newpage
-  \part 
-  You are the Dean of the Faculty at St. Anford University. You hire Assistant Professors for a probationary period of 7 years, after which they come up for tenure and are either promoted and gain a job for life or turned down, in which case they must find another job elsewhere.
-Your Assistant Professors come in two types, Good and Brilliant. Any types worse than Good have already been weeded out in the hiring process, but you cannot directly distinguish between Good and Brilliant types. Each individual Assistant Professor knows whether he or she is Brilliant or merely Good. You would like to tenure only the Brilliant types.
-The payoff from a tenured career at St. Anford is \$2 million; think of this as the expected discounted present value of salaries, consulting fees, and book royalties, plus the monetary equivalent of the pride and joy that the faculty member and his or her family would get from being tenured at St. Anford. Anyone denied tenure at St. Anford will get a fac- ulty position at Boondocks College, and the present value of that career is \$0.5 million.
-Your faculty can do research and publish the findings. But each publication requires effort and time and causes strain on the family; all these are costly to the faculty member. The monetary equivalent of this cost is \$30,000 per publication for a Brilliant Assistant Professor and \$60,000 per publication for a Good one. You can set a minimum number, $N$, of publications that an Assistant Professor must produce in order to achieve tenure.
-  
-  What will happen in a \textit{separating equilibrium}?
+
+  \part
+  Find the mixed-strategy Nash equilibrium for the simultaneous game below:
+
+  \begin{table}[h!]
+    \begin{center}
+      \begin{tabular}{*{4}{c|}}
+        \multicolumn{2}{c}{}  & \multicolumn{2}{c}{Pitcher} \\ \cline{3-4}
+        \multicolumn{1}{c}{}  &                              & Throw fastball & Throw curve \\ \cline{2-4}
+        \multirow{2}*{Batter} & Anticipate fastball          & 0.30, 0.70     & 0.20, 0.80   \\ \cline{2-4}
+                              & Anticipate curve             & 0.15, 0.85     & 0.35, 0.65\\ \cline{2-4}
+      \end{tabular}
+    \end{center}
+  \end{table}
+
+  where $a$ represents the probability of Batter playing Anticipate fastball
+  and $t$ represents the probability of Pitcher playing Throw fastball.
+
   \begin{choices}
-    \choice St. Anford requires $N=0$ publications, \\
-    both Good and Brilliant professors are tenured.
-    \CorrectChoice St. Anford requires $25 < N \leq 50$ publications, \\
-    Brilliant professors are tenured, Good ones are not.
-    \choice St. Anford requires $25 < N \leq 50$ publications, \\
-    Good professors are tenured, Brilliant ones are not.
-    \choice St. Anford requires $N>50$ publications, \\
-    neither Good nor Brilliant professors are tenured.
+    \choice ($t = 1/3$, $a = 2/3$)
+    \choice ($t = 1/4$, $a = 1/4$)
+    \CorrectChoice ($t = 1/2$, $a = 2/3$)
+    \choice ($t = 1/6$, $a = 3/4$)
   \end{choices}
-\end{parts}
+
+  \part 
+  For this simplified version of the Cold War:
+
+  \begin{table}[h!]
+    \begin{center}
+      \begin{tabular}{*{4}{c|}}
+        \multicolumn{2}{c}{} & \multicolumn{2}{c}{Soviet Union} \\ \cline{3-4}
+        \multicolumn{1}{c}{} &                   & Restrained & Aggressive \\ \cline{2-4}
+        \multirow{2}*{United States} & Restrained & 4,3        & 1,4        \\ \cline{2-4}
+                                    & Aggressive & 3,1        & 2,2        \\ \cline{2-4}
+      \end{tabular}
+    \end{center}
+  \end{table}
+
+  If one player could make a \textit{strategic move} in a first stage of this game,
+  which of the following would be a strategic move which would be \textit{credible}
+  and would improve the payoff of the player who made the strategic move?
+
+  \begin{choices}
+    \choice The Soviet Union commits to only playing Aggressive
+    \choice The Soviet Union promises to play Restrained if the US does too
+    \choice The United States develops a reputation of always playing restrained 
+    \CorrectChoice The United States threatens to play Aggressive unless the Soviet Union plays Restrained
+  \end{choices}
   
-\newpage
+\end{parts}
 
 %------------------------------------------------------------------%
 
+\newpage
+
 \question
-A local charity has been given a grant to serve free meals to the homeless in its community, but it is worried that its program might be exploited by nearby college students, who are always on the lookout for a free meal.
-Both a homeless person and a college student receive a payoff of 10 for a free meal.
-The cost of standing in line for the meal is 
-$t^2 / 320$ for a homeless person and 
-$t^2 / 160$ for a college student,
-where t is the amount of time in line measured in minutes.
-Assume that the staff of the charity cannot observe the true type of those coming for free meals.
+Consider the following game:
+\footnote{Dixit, Skeath, and McAdams, pg 250}
+
+\begin{table}[h!]
+  \begin{center}
+    \begin{tabular}{*{4}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{Colin} \\ \cline{3-4}
+      \multicolumn{1}{c}{} &      & Yes   & No  \\ \cline{2-4}
+      \multirow{2}*{Rowena} & Yes & $x,x$ & $0,1$ \\ \cline{2-4}
+                            & No  & $1,0$ & $1,1$ \\ \cline{2-4}
+    \end{tabular}
+  \end{center}
+\end{table}
 
 \begin{parts}
-  \part[5] What is the minimum wait time that will achieve separation of types?
 
-  \part[5] 
-  After a while, the charity finds that it can successfully identify 
-  and turn away college students half of the time.
-  College students who are turned away receive no free meal and,
-  further, incur a cost of 5 for their time and embarrassment.
-  Will the partial identification of college students 
-  reduce or increase the answer in part (a)? 
+  \part[10]
+  Let $x=1$. 
+  Graph the best-response curves of Rowena and Colin on a $p-q$ coordinate plain.
+  Label all Nash equilibria in \textit{pure} and \textit{mixed} strategies.
+
+  \part[10]
+  Let $x=3$. 
+  Graph the best-response curves of Rowena and Colin on a $p-q$ coordinate plain.
+  Label all Nash equilibria in \textit{pure} and \textit{mixed} strategies.
+
+  \part[4] 
+  For what values of $x$ does this game have a unique Nash equilibrium?
+  What is that equilibrium?
+
+  \part[10]
+  For what values of $x$ does this game have a mixed-strategy Nash equilibrium?
+  With what probabiltity, expressed in terms of $x$, 
+  does each player play Yes in this mixed-strategy equilibrium?
+
+  \part[6]
+  For the values of $x$ you found in part $(d)$,
+  is the game an example of an \textit{assurance} game,
+  a \textit{game of chicken}, or a game similar to \textit{tennis}?
   Explain.
 
 \end{parts}
+
+%------------------------------------------------------------------%
 
 \newpage
 
 \question 
 
-The table below contains the counts and frequencies of each combination of
-kicker and goalie strategies across 410 match-ups (so 820 plays) 
-from Activity 4 - Penalty Shootout Tournament.
-
-\begin{table}[!h]
-\centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-Kick & Intercept & count & proportion\\
-\hline
-L & L & 37 & 0.095\\
-\hline
-L & M & 51 & 0.131\\
-\hline
-L & R & 37 & 0.095\\
-\hline
-M & L & 44 & 0.113\\
-\hline
-M & M & 53 & 0.136\\
-\hline
-M & R & 51 & 0.131\\
-\hline
-R & L & 39 & 0.100\\
-\hline
-R & M & 33 & 0.085\\
-\hline
-R & R & 45 & 0.115\\
-\hline
-\end{tabular}
-\end{table}
-
-Recall that the payout matrix for this rule set was different 
-than the payout matrix from the worksheet 
-(the probability of scoring when the kicker chose a different side than the goalie was 1 in our class activity).
+Take a look at the data collected in class from 
+\textbf{Activity 5 - Social Media Adspace}.
  
 \begin{parts}
-  \part[5]
-  Calculate the \textbf{Mixed Strategy Nash Equilibrium} of this version of the game 
-  \part[5]
-  Use a \href{https://en.wikipedia.org/wiki/Chi-squared_test}{Chi-squared test}
-  to test the null hypothesis that our class data 
-  are the same as the theoretical equilibrium.
+
+  \part[6]
+
+  Find the Nash equilibrium quantity strategies for firms in terms of $a$ and $b$.
+
+  \part[8]
+
+  Compare your firms actual quantities produced to the equilibrium strategy function 
+  in part $(a)$. Also compare the theoretical profit in equilibrium to the profits which you earned during the activity.
+  Did the production behavior of firms in class match the theoretical equilibrium?
+  Why or why not?
+
+  \part[6]
+
+  What would a monopolist firm do in this market if it didn't any competitors?
+  Compare the monopolist's profit to the profits earned by firms in the activity.
+  What obstacles prevented the firms from behaving like monopolists?
+
+\end{parts}
+
+%------------------------------------------------------------------%
+
+\newpage
+
+\question 
+
+Take a look at the data collected in class from 
+\textbf{Activity 6 - Penalty Shootout}.
+ 
+\begin{parts}
+  \part[6]
+  Generate a testable hypothesis using mixed-strategy Nash equilibria 
+  to compare against the data from our in-class activity.
+  Your hypothesis should include a specific numerical value or values.
+  For example, you could find the probability of a goal being scored in equilibrium,
+  or the overall distribution of strategies by kickers and goalies playing equilibrium strategy profiles.
+
+  \part[8]
+  Now compare your theoretical prediction to some statistic or set of values from class.
+  Do you \textit{reject} or \textit{fail to reject} the null hypothesis that the class data
+  were significantly different from the theoretical distribution?
+  Feel free to use any graphical, statistical, or computational tools to help your analysis.
+
+  \part[6]
+  Evaluate the predictions generated by the theory. 
+
+  If students' behavior in class resembled equilibrium behavior, 
+  under what circumstances might you expect the predictions to break down?
+
+  If students' behavior didn't fit with the predictions, 
+  what assumptions in the theory do you think failed to hold up in real life?
+
 \end{parts}
 \end{questions}
 
