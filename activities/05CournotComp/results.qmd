@@ -14,7 +14,7 @@ library(tidyverse)
 library(ggthemes)
 
 # load in the results recorded in class from csv file
-data <- read_csv(file = "EC327-activity5_results.csv")
+data <- read_csv(file = "EC327F24-activity5_results.csv")
 
 # modify data for plotting
 data <- data %>%
