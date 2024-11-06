@@ -1,0 +1,45 @@
+---
+title: Activity 5 Results
+format:
+  html:
+    code-fold: true
+    code-summary: "See the code"
+---
+
+```{r}
+#| message: false
+#| warning: false
+# load tidyverse packages
+library(tidyverse)
+library(ggthemes)
+
+# load in the results recorded in class from csv file
+data <- read_csv(file = "EC327-activity5_results.csv")
+
+# modify data for plotting
+data <- data %>%
+  # change `group` and `round` to be categorical
+  mutate(across(c(group, round), as_factor)) %>%
+  # standardize quantity by `a` and `b` of each round
+  mutate(
+    Q_mp = a/(2*b), # monopolist's quantity
+    # ratio of individual firm's to monopolist's quantity
+    q_adj = quantity/Q_mp 
+  ) 
+
+# plot adjusted quantities produced for all groups across rounds
+data %>%
+  ggplot( aes( x = round, y = q_adj,
+      group = group, color = group )) +
+  geom_line(alpha = 0.5) +
+  geom_point() +
+  ylim(0,2) +
+  theme_pander() +
+  theme(plot.caption = element_text(hjust = 0)) +
+  labs(
+    title = "Activity 5 - Social Media Ads",
+    subtitle = "Adjusted production quantities across 9 rounds",
+    caption = "We started with 10 groups competing to sell ads in a market with a randomly generated demand curve. \nEach round firms were shown the demand curve and asked to choose a quantity of ads to produce. \nBecause the total quantity produced ranged from round to round depending on the demand curve,\n the quantities shown here are adjusted by taking the ratio of how many ads each firm produced each round \ndivided by the quantity that a theoretical monopolist firm would set given the same demand curve."
+  ) 
+
+```
