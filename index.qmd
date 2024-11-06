@@ -60,6 +60,8 @@ Office Hours : Monday 10-11 am \& Wednesday 1-2 pm
 
 [Activity 5 - Social Media Ads](/activities/05CournotComp/cournotcomp.qmd)
 
+[Activity 6 - Penalty Kick Shootout](/activities/06PenaltyKicks/penaltykicks.qmd)
+
 ## Assignments 
 
 <a href="Homework/assignment1/main.pdf" target="_blank">Homework 1</a>

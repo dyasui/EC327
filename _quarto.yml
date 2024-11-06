@@ -36,6 +36,8 @@ website:
             href: activities/04BlottoElection/BlottoElection.qmd
           - text: "Social Media Adspace"
             href: activities/05CournotComp/cournotcomp.qmd
+          - text: "Penalty Kick Shootout"
+            href: activities/06PenaltyKicks/penaltykicks.qmd
 
 page-footer:
   right: "This page is built with [Quarto](https://quarto.org/)."
