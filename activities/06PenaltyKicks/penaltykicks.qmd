@@ -1,0 +1,178 @@
+---
+title: "Penalty Kick Shootout"
+filters:
+  - shinylive
+---
+
+Watch the clip from the 2022 FIFA world cup final game between Argentina and France:
+
+{{< video https://youtu.be/MCWJNOfJoSM?t=293 >}}
+
+**<u>Objective:</u>**
+In this activity you will play a game which demonstrates the idea of mixed strategies in simultaneous games.
+You will pair up with another classmate to simulate a soccer [penalty shootout](https://en.wikipedia.org/wiki/Penalty_shoot-out_(association_football))
+where each of you will represent different soccer teams.
+Your goal is to score more goals than your opponent after taking turns as both the kicker and the goalie.
+
+## Game Rules:
+
+### 1. Pair up and flip to kick first
+
+  Find your opponent and flip a coin to determine who will kick first.
+  The other person will be be the goalie and attempt to block the kicker's shots on goal.
+
+### 2. Shoot for best out of 5
+
+A strategy for each player is one of three parts of the goal: 
+  * Left
+  * Center
+  * or Right ^[from the kicker's perspective]
+On the count of three, you and your opponent will simultaneously point to a direction which will determine the probability of a goal being scored.
+
+For each combination of strategies, the probability of a goal being scored is given by the table below:
+
+| [Kicker]{.red}, [Goalie]{.blue} | [L]{.blue} | [C]{.blue} | [R]{.blue} |
+|---------------------------------+------------+------------+------------|
+| [L]{.red}                       | .3         | .9         | .9         |
+| [C]{.red}                       | .6         | 0          | .6         |
+| [R]{.red}                       | .9         | .9         | .3         |
+
+### 3. Record every kick
+
+After each kick, make sure to **record both players' strategies** as well **whether a goal was scored**.
+
+<u>Google Sheet for Recording:</u>
+<https://docs.google.com/spreadsheets/d/1soh4vh9bWGs3yhY0A8mQfTR7tYmRYLN-OoSdAxfyOc4/edit?usp=sharing>
+
+  * Alternate between you and your opponent being the kicker and goalie until you have both attempted 5 shots each.
+
+  * If there is a tie after 5 kicks each, 
+  you will enter *sudden death* where you keep alternating kicks until one player scores and the other misses.
+
+### 4. Repeat with a new opponent
+
+Find your next opponent in the bracket.
+If you are knocked out of the bracket, find someone else to play against for fun, 
+or observe the competitions of others.
+
+```{shinylive-r}
+#| standalone: true
+#| code-fold: false
+#| label: soccer-penalty-shootout
+#| viewerHeight: 1000
+
+library(shiny)
+
+# Define the goal probabilities matrix
+goal_probabilities <- matrix(
+  c(0.3, 0.9, 0.9,
+    0.6, 0.0, 0.6,
+    0.9, 0.9, 0.3),
+  nrow = 3, byrow = TRUE,
+  dimnames = list(Kicker = c("Left", "Center", "Right"), Goalie = c("Left", "Center", "Right"))
+)
+
+# User interface
+ui <- fluidPage(
+    titlePanel("Soccer Penalty Shootout Simulation"),
+    
+    sidebarLayout(
+        sidebarPanel(
+            # Coin flip button and display
+            actionButton("coin_flip", "Flip Coin to Decide Kicker"),
+            textOutput("coin_result"),
+            
+            # Strategy selection
+            selectInput("kicker_choice", "Kicker's Strategy:", choices = c("Left", "Center", "Right")),
+            selectInput("goalie_choice", "Goalie's Strategy:", choices = c("Left", "Center", "Right")),
+            
+            # Button to simulate outcome and display result
+            actionButton("shoot", "Take Shot"),
+            textOutput("outcome_result")
+        ),
+        
+        mainPanel(
+            # Display probability table for reference
+            h4("Goal Probability Table"),
+            tableOutput("probability_table")
+        )
+    )
+)
+
+# Server logic
+server <- function(input, output) {
+    # Display probability table in the UI
+    output$probability_table <- renderTable({
+        as.data.frame(goal_probabilities)
+    }, rownames = TRUE)
+    
+    # Coin flip logic
+    output$coin_result <- renderText({
+        input$coin_flip
+        isolate({
+            if (input$coin_flip > 0) {
+                result <- sample(c("Kicker goes first!", "Goalie goes first!"), 1)
+                paste("Coin Flip Result:", result)
+            }
+        })
+    })
+    
+    # Shoot outcome logic
+    output$outcome_result <- renderText({
+        input$shoot
+        isolate({
+            if (input$shoot > 0) {
+                kicker <- input$kicker_choice
+                goalie <- input$goalie_choice
+                prob_goal <- goal_probabilities[kicker, goalie]
+                
+                # Randomize outcome based on the goal probability
+                outcome <- ifelse(runif(1) < prob_goal, "Goal!", "Missed!")
+                paste("Kicker's choice:", kicker, "| Goalie's choice:", goalie, "| Result:", outcome)
+            }
+        })
+    })
+}
+
+# Run the app
+shinyApp(ui, server)
+```
+
+# Discussion
+
+<u>Are penalty kicks played in a *mixed strategy equilibrium?*</u>
+
+This is the question asked by [Ignacio Palacios-Huerta](http://www.palacios-huerta.com/docs/professionals.pdf).
+^[Palacios-Huerta, Ignacio. "Professionals Play Minimax," *Review of Economic Studies*, 70 (2003), 395-415]
+The data come from 1417 penalty kicks during professional games in England, Italy, and Spain between 1995-2000 .
+The choices of the kickers are recorded as either *left* (L), *center* (C), or *right* (R), corresponding to the area of the goal they kick the ball towards.
+The goalies choices, L, C, or R, correspond to which area of the goal the goalie dives towards. 
+
+The table below shows the observed probability of a goal being scored for each combination of kicker and goalie choices
+simplifying the choice of a kicker down to $Dominant$ representing a right-footed kicker kicking to the left or a left-footed kicker kicking to the left,
+and $Non-dominant$ represents kicking to the opposite side.
+
+<u>Scoring Probabilities (payoffs)</u>
+| Kicker, Goalie   | $Dominant_g$ | $Non-dominant_g$ |
+|------------------+--------------+------------------|
+| $Dominant_k$     | 58.30        | 94.97            |
+| $Non-dominant_k$ | 92.91        | 69.92            |
+
+The next table shows the frequency with which each combination of these strategies were actually observed during play:
+
+<u>Strategy Frequencies Observed</u>
+| Strategy         | frequency (%) |
+|------------------+---------------|
+| $Dominant_k$     | 42.31         |
+| $Non-dominant_k$ | 57.69         |
+| $Dominant_g$     | 39.98         |
+| $Non-dominant_g$ | 60.02         |
+
+## Assignment:
+
+Calculate the theoretical mixed-strategy Nash equilibrium according to the payoff table
+and compare with the observed frequencies.
+
+Is the evidence consistent with the hypothesis that penalty kicks are played in an MSNE?
+
+Submit your work and your discussion to Canvas.
