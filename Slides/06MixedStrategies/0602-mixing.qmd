@@ -1,0 +1,518 @@
+## Internal Uncertainty
+::: {.incremental}
+  
+  * Now that we discussed *external uncertainty* over *states of nature*,
+  let's talk about [internal uncertainty]{.hi.
+
+	* Internal uncertainty occurs when one or more players pick their strategies randomly.
+
+	* Picking a strategy at random is really just a different kind of strategy, called a [mixed strategy]{.hi}.
+:::
+---
+
+## Mixed Strategies
+
+When a player always does the same thing, it's called a [pure strategy]{.hi}
+  
+A [mixed strategy]{.hi} assigns a probability to each of a player's pure strategies. 
+
+::: {.incremental}
+  * Like a lottery, the probabilities in a mixed strategy must all be between 0 and 1,
+  * and must sum to exactly 1.
+:::
+---
+
+## Mixed Strategies
+
+::: {.incremental}
+  * A mixed strategy can assign 0 probability to a pure strategy.
+  * It can even assign probability 1 to a single pure strategy, and probability 0 to all others
+    + this is still, technically, a mixed strategy, but it is a trivial one.
+	* When a player uses a mixed strategy, it turns the **other** player's payoffs into lotteries.
+:::
+---
+
+## Mixed Strategies in the Deer Hunt
+
+Consider the Deer Hunt:
+
+| Igg, Ogg | Deer | Rabbit |
+|----------+--------+----------|
+| Deer     | $2, 2$ | $0, 1$   |
+| Rabbit   | $1, 0$ | $1, 1$   |
+
+Suppose that Igg hunts Deer 3/4 of the time, and Rabbit 1/4 of the time.
+
+::: {.incremental}
+  * If Ogg *always hunts deer*; 
+  what is Ogg's *expected payoff*?
+	* Ogg's expected payoff from playing Deer will be $0.75(2) + 0.25(0) = 1.5$.
+:::
+---
+
+## Mixed Strategies in the Deer Hunt: Generalizing
+
+We can generalize this approach to calculate Ogg's expected payoffs from any strategy that Igg chooses to play:
+
+::: {.incremental}
+  * Suppose that Igg plays Deer with probability p, and Rabbit with probability 1 - p.
+  * Then Ogg's expected payoff from Deer is:
+    + $2(p) + 0(1 - p) = 2p$, and from Rabbit, it is $1(p) + 1(1 - p) = 1$.
+  * Note that Ogg's expected payoff from Deer gets larger with p: the more
+  likely Igg is to hunt Deer, the more attractive an option it becomes for Ogg.
+:::
+---
+
+## When to Play a Mixed Strategy?
+
+It's possible for a mixed strategy to be a best response to the other player's strategy:
+
+  * if and only if all of the mixed strategy's [components]{.hi} (pure strategies that are assigned positive probability) are best responses too.
+  * Some intuition: If a strategy is not a best response, you should not play it---even as part of a mixed strategy.
+
+---
+
+## When to play a Mixed Strategy?
+
+If a player only has **two pure strategies**, it becomes simple to tell when a mixed strategy is a best response: the mixed strategy must be a mixture of those two pure strategies, and the only way that both of them are best responses is if they have equal expected payoffs.
+
+::: {.incremental}
+  * Taking the Deer Hunt as an example, the only way that it can be a best
+  response for Ogg to play a mixed strategy is if Deer and Rabbit provide Ogg
+  with equal expected payoffs: we must have $2p = 1$, or $p = \frac{1}{2}$.
+:::
+---
+
+## What Mixed Strategy to Play
+::: {.incremental}
+  * However, if any mixed strategy is a best response, then **all** mixed
+  strategies (with the same components) are also best responses.
+  * Intuitively, if the pure strategies going into a mixed strategy are just as
+  good as each other, then it doesn't matter what proportions you mix them in.
+  * This means that, while it's easy to solve for **when** it's rational for a
+  player to use a mixed strategy, there's no way to solve for a particular
+  mixed strategy that the player **should** play.
+:::
+---
+
+## Mixed-Strategy Nash Equilibrium
+
+To solve for the Nash equilibria where players are allowed to use mixed strategies:
+we need to look for the conditions under which a player would be willing to use a mixed strategy.
+
+::: {.incremental}
+  * This means that we're going to use one player's expected payoffs to solve for the **other** player's mixed strategy
+:::
+---
+
+## MSNE in the Deer Hunt
+Let's say that Igg plays Deer with probability $p$ and Rabbit with probability $1 - p$
+
+While Ogg plays Deer with probability $q$ and Rabbit with probability $1 - q$.
+
+::: {.incremental}
+ * This is simply a framework for describing each player's mixed strategies:
+   we're using placeholder variables for the players' mixed strategy probabilities
+:::
+---
+
+## MSNE in the Deer Hunt
+We already saw that Ogg's expected payoffs from Deer and Rabbit are $2p$ and $1$, respectively, 
+
+so Ogg would only play a mixed strategy if $p = \frac{1}{2}$.
+
+::: {.incremental}
+  * Likewise, Igg's expected payoffs are $2q$ and $1$, and Igg will play a mixed strategy if $q = \frac{1}{2}$.
+  * The MSNE in this game can be written as:
+  $$ \{(1/2~Deer, 1/2~Rabbit)_{Ogg}, \ (1/2~Deer, 1/2~Rabbit)_{Igg}\}$$.
+:::
+---
+
+## Error-Checking
+
+Make sure that you're setting up the equations used to solve for a player's strategy correctly:
+
+::: {.incremental}
+  * Describe when a player is *indifferent* between their pure strategies: 
+    + if you're trying to figure out when **Player 1** is indifferent, you need to use **Player 1's** payoffs.
+  * However, the probabilities will be based on the **other** player's mixed strategy: 
+    + in a game with mixed strategies, the randomness a player deals with is created by the **other** player---not themselves.
+:::
+
+---
+
+## Another Example: Police Patrol and Drug Trade
+
+| Police, Dealer | Streets (d) | Park (1 - d) |
+|----------------+-------------+--------------|
+| Streets (p)    | 80, 20      | 0,100        |
+| Park (1 - p)   | 10, 90      | 60,40        |
+
+^[Harrington, pg. 226]
+
+::::: {.columns}
+:::: {.column}
+::: {.incremental}
+  * Police Officer's expected utility:
+    + $U_P(Streets) = 80d + 0(1-d)$
+      - $= 80d$ 
+    + $U_P(Park) = 10d + 60(1-d)$
+      - $= 60 - 50d$.
+:::
+::::
+:::: {.column}
+::: {.incremental}
+  * Drug Dealer's expected utility:
+    + $U_D(Streets) = 20p + 90(1-p)$
+      - $= 90 - 70p$ 
+    + $U_D(Park) = 100p + 40(1-p)$
+      - $= 40 + 60p$.
+:::
+::::
+:::::
+---
+
+## MSNE in Patrol and Trade game:
+* When is the Police Officer indifferent between going to the Park and going to the Streets?
+
+* When is the Drug Dealer indifferent between going to the Park and going to the Streets?
+
+  * What is the [Mixed Strategies Nash equilibrium?]{.hi}
+---
+
+## Graph Police Officer's expected utilities
+
+```{r}
+#| echo: false
+# Load necessary libraries
+library(ggplot2)
+
+# Define the expected utility functions for Streets and Park
+U_Streets <- function(d) {
+  80 * d
+}
+
+U_Park <- function(d) {
+  60 - 50 * d
+}
+
+# Generate a sequence of values for d from 0 to 1
+d_values <- seq(0, 1, length.out = 100)
+
+# Compute the expected utilities for each value of d
+streets_utilities <- U_Streets(d_values)
+park_utilities <- U_Park(d_values)
+
+# Create a data frame for plotting
+data <- data.frame(d = d_values, Streets = streets_utilities, Park = park_utilities)
+
+# Plot the expected utilities and indicate the best response threshold
+ggplot(data, aes(x = d)) +
+  geom_line(aes(y = Streets, color = "Streets (80d)")) +
+  geom_line(aes(y = Park, color = "Park (60 - 50d)")) +
+  geom_vline(xintercept = 6/13, linetype = "dashed", color = "grey50") +
+  annotate("text", x = 6/13, y = 40, label = "d = 6/13", hjust = -0.1, color = "grey50") +
+  labs(title = "Expected Utility Functions for Streets and Park",
+       x = "Probability (d)",
+       y = "Expected Utility",
+       color = "Choice") +
+  theme_minimal()
+```
+
+---
+
+## Graph Drug Dealer's expected utilities
+ 
+```{r}
+#| echo: false
+
+# Define the updated expected utility functions for the Drug Dealer
+U_Streets_D <- function(p) {
+  90 - 70 * p
+}
+
+U_Park_D <- function(p) {
+  40 + 60 * p
+}
+
+# Generate a sequence of values for p from 0 to 1
+p_values <- seq(0, 1, length.out = 100)
+
+# Compute the expected utilities for each value of p
+streets_utilities_D <- U_Streets_D(p_values)
+park_utilities_D <- U_Park_D(p_values)
+
+# Create a data frame for plotting
+data_D <- data.frame(p = p_values, Streets = streets_utilities_D, Park = park_utilities_D)
+
+# Plot the expected utilities and indicate the best response threshold
+ggplot(data_D, aes(x = p)) +
+  geom_line(aes(y = Streets, color = "Streets (90 - 70p)")) +
+  geom_line(aes(y = Park, color = "Park (40 + 60p)")) +
+  geom_vline(xintercept = 5/13, linetype = "dashed", color = "grey50") +
+  annotate("text", x = 5/13, y = 60, label = "p = 5/13", hjust = -0.1, color = "grey50") +
+  labs(title = "Expected Utility Functions for Streets and Park (Drug Dealer)",
+       x = "Probability (p)",
+       y = "Expected Utility",
+       color = "Choice") +
+  theme_minimal()
+```
+
+---
+
+## Graph Best Response functions
+ 
+```{r}
+#| code-fold: true
+# Define the best response function for the Police Officer
+Police_Best_Response <- function(d) {
+  ifelse(d >= 6/13, 1, 0)
+}
+
+# Define the best response function for the Drug Dealer
+Drug_Best_Response <- function(p) {
+  ifelse(p < 5/13, 1, 0)
+}
+
+# Generate a sequence of values for d and p from 0 to 1
+d_values <- seq(0, 1, by = 1/13)
+p_values <- seq(0, 1, by = 1/13)
+
+# Compute the best responses for each value of d and p
+police_responses <- sapply(d_values, Police_Best_Response)
+drug_responses <- sapply(p_values, Drug_Best_Response)
+
+# Create a data frame for plotting
+data <- data.frame(
+  d = d_values,
+  Drug_Best_Response = drug_responses,
+  p = p_values,
+  Police_Best_Response = police_responses
+)
+
+# Plot the best response functions
+ggplot(data) +
+  geom_step(aes(x = Drug_Best_Response, y = p, color = "Drug Dealer's Best Response"), direction = "vh") +
+  geom_step(aes(x = d, y = Police_Best_Response, color = "Police Officer's Best Response"), direction = "hv") +
+  geom_hline(yintercept = 5/13, linetype = "dashed", color = "grey50") +
+  geom_vline(xintercept = 6/13, linetype = "dashed", color = "grey50") +
+  labs(title = "Best Response Functions for Mixed Strategy Nash Equilibrium",
+       x = "Drug Dealer's Probability (d)",
+       y = "Police Officer's Probability (p)",
+       color = "Best Response") +
+  theme_minimal()
+```
+---
+
+## MSNE in Patrol and Trade game:
+
+* Note that the players' asymmetric preferences result in an interior solution.
+
+* Notice that it isn't a 50:50, it is more likely that both meet in the Park 
+  than it is likely that they both meet in the Streets
+---
+
+## Practice your understanding
+Consider the following game table. What are Player 1's expected payoffs, given Player 2's mixed strategy?
+
+| $P_1$, $P_2$   | $Up (q)$ | $Down (1 - q)$ |
+|----------------+----------+----------------|
+| $Up (p)$       | 2, -2    | -3, 3          |
+| $Down (1 - p)$ | -5, 5    | 1, -1          |
+
+::: {.incremental}
+  * $U_1(Up) = 2q -3(1-q) = 5q - 3$,
+  * $U_1(Down) = -5q + 1(1-q) = -6q +1$
+:::
+
+---
+
+## Practice your understanding
+Consider the following game table. What are **Player 2's** expected payoffs, given Player 1's mixed strategy?
+
+| $P_1$, $P_2$   | $Up (q)$ | $Down (1 - q)$ |
+|----------------+----------+----------------|
+| $Up (p)$       | 2, -2    | -3, 3          |
+| $Down (1 - p)$ | -5, 5    | 1, -1          |
+
+::: {.incremental}
+* $U_2(Up) = -2p + 5(1-p) = -7p + 5$,
+* $U_2(Down) = 3p - 1(1-p) = 4p -1$
+:::
+---
+
+## Practice your understanding
+The correct answers to the previous two questions were:
+  * $U_1(Up) = 5q - 3, U_1(Down) = 1 - 6q$.
+  * $U_2(Up) = 5 - 7p, U_2(Down) = 4p - 1$.
+
+Based on this, what are $p$ and $q$ in the MSNE of this game?
+
+::: {.incremental}
+  * $p^* = 6/11$
+  * $q^* = 4/11$
+:::
+---
+
+## An MSNE With Only One Mixed Strategy
+Consider the following game table:
+
+| $P_1$, $P_2$ | $X~(q)$ | $Y~(1 - q)$ |
+|--------------+---------+-------------|
+| $A~(p)$      | 2, 2    | 3, 2        |
+| $B~(1 - p)$  | 4, 3    | 0, 0        |
+
+The players' expected payoffs are:
+
+::: {.incremental}
+  * $U_1(A) = 2q + 3(1 - q) = 2q + 3 - 3q = 3 - q$.
+  * $U_1(B) = 4q + 0(1 - q) = 4q$.
+  * $U_2(X) = 2p + 3(1 - p) = 2p + 3 - 3p = 3 - p$.
+  * $U_2(Y) = 2p + 0(1 - p) = 2p$.
+:::
+---
+
+## An MSNE With Only One Mixed Strategy
+
+Based on this, the conditions under which each player will use a mixed strategy are:
+
+$$
+\begin{align*}
+Player~1: && Player~2:&\\
+3 - q &= 4q & 3 - p &= 2p\\
+3 &= 5q & 3 &= 3p\\
+q &= 3/5 & p &= 1
+\end{align*}
+$$
+
+::: {.incremental}
+  * We've never seen anything like $p = 1$ in this context before...
+  * $p = 1$ tells us that Player 2 will only play a mixed strategy
+    if Player 1 only play A, which isn't really a mixed strategy at all.
+  * This usually occurs when one strategy **weakly** dominates another.
+:::
+---
+
+## An MSNE With Only One Mixed Strategy
+We can still approach this the same way that we have in the past:
+
+::: {.incremental}
+  * Suppose that in the MSNE, Player 1 plays a (non-trivial) mixed strategy.
+  * Then Player 2 must also play a mixed strategy, in which q = 3/5.
+    + But Player 2 will mix if Player 1 plays  p = 1, which is a trivial mixed strategy. 
+    + This is a contradiction, **there is no MSNE where Player 1 plays a non-trivial mixed strategy**
+:::
+---
+
+## An MSNE With Only One Mixed Strategy
+Approach it the other way next: Suppose Player 2 plays a non-trivial mixed strategy.
+Then Player 1 must play A as a pure strategy.
+
+::: {.incremental}
+  * Player 2 will play A if $3 - q \geq 4q$, i.e. if $3/5 \geq q$.
+  * This lets Player 2 play a non-trivial mixed strategy! There is no contradiction here.
+:::
+---
+
+## An MSNE with only one mixed strategy
+::: {.incremental}
+  * There are a range of MSNEs here: all strategy profiles $(1, 0), (q, 1 - q)$, in which $q \in (0, 3/5]$
+  * There are also two trivial MSNEs, $(1, 0), (0, 1)$ and $(0, 1), (1, 0)$, 
+    which are really just the pure-strategy Nash equilibria (A, Y) and (B, X) expressed in the form of an MSNE.
+  * It will help to understand what's going on with the Best Responses graph:
+:::
+---
+
+## Graph Best Responses
+ 
+```{r}
+#| code-fold: true
+# Define the best response function for the Police Officer
+BR1 <- function(q) {
+  ifelse(q <= 3/5, 1, 0)
+}
+
+# Define the best response function for the Drug Dealer
+BR2 <- function(p) {
+  ifelse(p == 1, 1, 0)
+}
+
+# Generate a sequence of values for d and p from 0 to 1
+q_values <- seq(0, 1, by = 1/5)
+p_values <- seq(0, 1, by = 1/5)
+
+# Compute the best responses for each value of d and p
+responses1 <- sapply(q_values, BR1)
+responses2 <- sapply(p_values, BR2)
+
+# Create a data frame for plotting
+data <- data.frame(
+  q = q_values,
+  BR1 = responses1,
+  p = p_values,
+  BR2 = responses2
+)
+
+# Plot the best response functions
+ggplot(data) +
+  geom_step(aes(x = BR2, y = p, color = "BR_2"), direction = "vh") +
+  geom_step(aes(x = q, y = BR1, color = "BR_1"), direction = "hv") +
+  geom_segment(aes(x = 0, xend = 0.6, y = 1, yend = 1), color = "green", linetype = "dashed") +
+  labs(title = "Best Response Functions for Mixed Strategy Nash Equilibrium",
+       x = "p",
+       y = "q",
+       color = "Best Response") +
+  theme_minimal()
+```
+
+---
+
+## Absence of MSNEs
+Let us return to the Prisoner's Dilemma and check for MSNEs:
+
+| Guido, Luca        | $Testify~(q)$ | $Keep~Quiet~(1-q)$ |
+|--------------------+---------------+--------------------|
+| $Testify~(p)$      | $-10,-10$     | $0,-20$            |
+| $Keep~Quiet~(1-p)$ | $-20,0$       | $-1,-1$            |
+
+Guido and Luca's expected payoffs are:
+
+::: {.incremental}
+  * $U_G(Testify) = -10q + 0(1 - q) = -10q$.
+  * $U_G(Keep Quiet) = -20q + (-1)(1 - q) = -1 - 19q$.
+  * $U_L(Testify) = -10p + 0(1 - p) = -10p$.
+  * $U_L(Keep Quiet) = -20p + (-1)(1 - p) = -1 - 19p$.
+:::
+---
+
+## Absence of MSNEs
+Guido will play a mixed strategy if:
+
+$$
+\begin{align*}
+-10q &= -1 - 19q\\
+9q &= -1\\
+q &= -1/9
+\end{align*}
+$$
+
+::: {.incremental}
+  * But **-1/9 is not a valid probability!**
+  * We could also note that if $q\in [0, 1]$:
+    + $-10q$ is always greater than $-1 - 19q$.
+  * In other words, as we saw weeks ago, $Testify$ strictly dominates $Keep~Quiet$...so why would Guido mix between the two of them?
+:::
+---
+
+## Getting Bad Probabilities
+If you've solved for a player's mixed strategy and you find that the probability is 
+**less than 0**, or **more than 1**:
+
+::: {.incremental}
+  * **It means something is wrong.** Probability can only be between 0 and 1 (inclusive).
+  * Double-check your math---it could be an algebra error.
+  * But if you're confident in your math, this means that there is **no way
+  that the player would ever play a mixed strategy**: 
+    + in fact, they have a strictly dominated strategy.
+:::
+---
