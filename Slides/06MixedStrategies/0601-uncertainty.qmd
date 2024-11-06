@@ -205,16 +205,13 @@ Suppose that the probability Doc has the better hand is $p$.
 
   * How large does $p$ have to be before there is a Nash equilibrium where Wyatt Quits?
   
+We can find the expected payoffs in terms of p:
 ::: {.incremental}
-  * We can find the expected payoffs in terms of p:
   * (Stay, Match):
     + Doc's Expected Payoff:
-
-    $1p - 1(1-p) = 2p - 1$
-
+      - $1p - 1(1-p) = 2p - 1$
     + Wyatt's Expected Payoff:
-
-    $-1p + 1(1-p) = -2p + 1$
+      - $-1p + 1(1-p) = -2p + 1$
 :::
 ---
 
@@ -226,29 +223,23 @@ Suppose that the probability Doc has the better hand is $p$.
 
 :::: {.column}
 (Raise, Match):
-
 ::: {.incremental}
   * Doc's Expected Payoff:
-
-  $2p - 2(1-p) = 4p -2$
+    - $2p - 2(1-p) = 4p -2$
 
   * Wyatt's Expected Payoff:
-
-  $-2p + 2(1-p) = -4p + 2$
+    - $-2p + 2(1-p) = -4p + 2$
 :::
 ::::
 
 :::: {.column}
 (Stay, Quit) and (Raise, Quit):
-
 ::: {.incremental}
   * Doc's Expected Payoff:
-
-  $1p + 1(1-p) = 1$
+    - $1p + 1(1-p) = 1$
 
   * Wyatt's Expected Payoff:
-
-  $-1p -1(1-p) = -1$
+  - $-1p -1(1-p) = -1$
 :::
 ::::
 :::::
@@ -273,72 +264,4 @@ To have a NE where Wyatt Quits, we just need Wyatt to be happy with Quitting.
 * ($Raise,~Quit$) is a NE if $-1 \geq -4p + 2$, i.e. if $p \geq \frac{3}{4}$.
 * One interpretation of this is that it is only rational for Wyatt to Quit if he is very confident that Doc has the better hand.
 :::
----
-
-
-
-## Variation: Sequential Moves
-
-* It's not realistic to have Doc and Wyatt move at the same time: 
-in actual card games, Doc would decide whether to raise, and Wyatt would then see that move and decide whether to match or quit.
-* So let's model this as an extensive-form game and make a game tree:
----
-
-## Sequential Card Game Tree
-% \includegraphics[width=\textwidth]{Images/08SequentialCards.png}
----
-
-## Information Sets in the Sequential Card Game
-::: {.incremental}
-* The dashed lines in this game tree denote information sets, showing that neither player knows the state of nature---however, Wyatt does know whether Doc chose to Stay or Raise.
-* When Doc and Wyatt reach one of their information sets, they don't know which of its nodes they're actually at, but in this case, because the node is determined by the state of nature, they know the probabilities of each node.
-* Once again, we can find the expected payoffs associated with each strategy profile. In fact, they're the same payoffs that we had in the strategic-form game---we just need to fit them into a game tree.
-:::
----
-
-## Expected Payoff Game Tree
-% \begin{figure}
-% \centering
-% \includegraphics[width=\textwidth]{Images/08SequentialCardsVNM.png}
-% \end{figure}
----
-
-## SPNE in the Sequential-Move Card Game
-Let's look for SPNEs in this game---they will depend on what p is.
-
-  * A good place to start is with [indifference points]{.hi}; values of p that make the players indifferent between their choices. 
-
-Let's look at Wyatt's decisions:
-
-::: {.incremental}
-  * In the left-hand subgame (after Doc Stays), Wyatt has the choice between $1 - 2p$ and $-1$. Indifference implies that $1 - 2p = -1$, or $p = 1$. Wyatt is only indifferent here if Doc is guaranteed to have the better hand; if $p < 1$, Wyatt will simply prefer to Match.
-  * In the right-hand subgame (after Doc Raises), $2 - 4p = -1$ implies $p = \frac{3}{4}$. If $p < \frac{3}{4}$, Wyatt will prefer to Match; if $p > \frac{3}{4}$, Wyatt will prefer to Quit.
-  * It may help to plot this on a number line...
-:::
----
-
-## SPNE in the Sequential-Move Card Game
-Now let's consider Doc's decisions:
-
-::: {.incremental}
-  * If Wyatt plays (Match, Match), implying that $p \leq \frac{3}{4}$, Doc's choice is between $2p-1$ and $4p-2$. Doc is indifferent when $p = \frac{1}{2}$; when p is smaller, he prefers to Stay, and when p is larger, he prefers to Raise.
-  * If Wyatt plays (Match, Quit), implying that $\frac{3}{4} \leq p \leq 1$, Doc's choice is between $2p - 1$ and $1$. Doc is indifferent if $p = 1$; for $\frac{3}{4} \leq p < 1$, Doc prefers to Raise.
-  * If Wyatt plays (Quit, Quit), which he would only do if $p = 1$ exactly, Doc's choice is between $-1$ and $-1$: not really a choice at all. Doc is completely indifferent here.
-:::
----
-
-## Plotting SPNEs
-
----
-
-## Summary of SPNE in Sequential-Move Card Game
-We can summarize all of the possible SPNEs as follows:
-
-::: {.incremental}
-* \{Stay, (Match, Match)\} is an SPNE if $0 \leq p \leq \frac{1}{2}$.
-* \{Raise, (Match, Match)\} is an SPNE if $\frac{1}{2} \leq p \leq \frac{3}{4}$.
-* \{Raise, (Match, Quit)\} is an SPNE if $\frac{3}{4} \leq p \leq 1$.
-* \{Stay, (Match, Quit)\}, \{Stay, (Quit, Quit)\}, and \{Raise, (Quit, Quit)\} are all SPNEs if $p = 1$.
-:::
----
 

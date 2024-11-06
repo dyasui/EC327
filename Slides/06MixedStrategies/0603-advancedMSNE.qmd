@@ -1,0 +1,342 @@
+## MSNE in a Larger Game
+Suppose that we have this 3$\times$2 game:
+
+| $P_1$, $P_2$  | X (r) | Y (1 - r) |
+|---------------+-------+-----------|
+| A (p)         | 2, 1  | 0, 1      |
+| B (q)         | 1, 2  | 2, 0      |
+| C (1 - p - q) | 0, 0  | 3, 2      |
+
+::: {.incremental}
+  * Player 1's mixed strategy uses probabilities p, q, and 1 - p - q, since they have three pure strategies.
+  * As a rule of thumb, a player's mixed strategy will need one variable less than their number of strategies.
+:::
+---
+
+## MSNE in a Larger Game
+
+| $P_1$, $P_2$  | X (r) | Y (1 - r) |
+|---------------+-------+-----------|
+| A (p)         | 2, 1  | 0, 1      |
+| B (q)         | 1, 2  | 2, 0      |
+| C (1 - p - q) | 0, 0  | 3, 2      |
+
+To begin with, let's put together Player 1's expected payoffs, of which there will be three:
+::: {.incremental}
+  * $U_1(A) = 2r + 0 = 2r$.
+  * $U_1(B) = 1r + 2(1 - r) = 2 - r$.
+  * $U_1(C) = 0 + 3(1 - r) = 3 - 3r$.
+:::
+---
+
+## MSNE in a Larger Game
+
+| $P_1$, $P_2$  | X (r) | Y (1 - r) |
+|---------------+-------+-----------|
+| A (p)         | 2, 1  | 0, 1      |
+| B (q)         | 1, 2  | 2, 0      |
+| C (1 - p - q) | 0, 0  | 3, 2      |
+
+Next, let's see what it would take to get Player 1 to mix different pairs of strategies:
+::: {.incremental}
+  * A and B: $2r = 2 - r \implies r = \frac{2}{3}$.
+  * A and C: $2r = 3 - 3r \implies r = \frac{3}{5}$.
+  * B and C: $2 - r = 3 - 3r \implies r = \frac{1}{2}$.
+:::
+
+Note that each pair of strategies requires a different value of $r$: there is no mixed strategy for Player 2 that would make Player 1 willing to mix all three of their pure strategies.
+
+---
+
+## MSNE in a Larger Game
+
+| $P_1$, $P_2$  | X (r) | Y (1 - r) |
+|---------------+-------+-----------|
+| A (p)         | 2, 1  | 0, 1      |
+| B (q)         | 1, 2  | 2, 0      |
+| C (1 - p - q) | 0, 0  | 3, 2      |
+
+Let's check Player 2's expected payoffs next:
+::: {.incremental}
+  * $U_2(X) = 1p + 2q + 0$.
+  * $U_2(Y) = 1p + 0 + 2(1 - p - q)$.
+  * So Player 2 will play a mixed strategy if $p + 2q = p + 2(1 - p - q) \implies q = 1 - p - q$.
+  * There are two ways that this can be true: Either Player 1 plays B and C
+  with equal probability (and we know from earlier that they would **only** be
+  playing these two, not A), or Player 1 plays A only, and B and C not at all. 
+:::
+---
+
+## MSNE in a Larger Game
+So, one type of MSNE is where Player 1 only plays A: 
+
+this requires $2r \geq 2 - r$ and $2r \geq 3 - 3r$, which imply that $r \geq \frac{2}{3}$ and $r \geq \frac{3}{5}$.
+::: {.incremental}
+  * MSNE: $(1, 0, 0), (r, 1 - r)$, where $r \geq \frac{2}{3}$.
+  * And the other type of MSNE is where Player 1 plays B and C with equal (1/2)
+    probability, and Player 2 plays X and Y with equal (1/2) probability.
+  * MSNE: $(0, 1/2, 1/2), (1/2, 1/2)$
+:::
+---
+
+## Graph Player 1's expected utilities
+
+```{.tikz embed_mode="link" format="svg"}
+\begin{axis}[
+  width=0.8\textwidth,
+  grid,
+  xlabel={prob. Player 2 plays $X$ ($r$) },
+  ylabel={Exp. Utility of Player 1 ($EU(r)$)},
+  xmin=0, xmax=1.0,
+  ymin=-2, ymax=3,
+  xtick={0,.1,...,1.0},
+  ytick={-2, -1, 0, 1, 2, 3},
+  grid style=dashed,
+  ]
+  \addplot[draw=none] coordinates {(1,1)};
+\end{axis}
+```
+
+---
+
+## When will Player 1 mix?
+What it would take to get Player 1 to mix different pairs of strategies:
+::: {.incremental}
+  * A and B: $2r = 2 - r \implies r = \frac{2}{3}$.
+  * A and C: $2r = 3 - 3r \implies r = \frac{3}{5}$.
+  * B and C: $2 - r = 3 - 3r \implies r = \frac{1}{2}$.
+    * Note that there is no intersection between all three lines simultaneously
+    * This means that Player 1 will never mix between all three strategies
+:::
+---
+
+##MSNE in a Larger Game
+Let's check Player 2's expected payoffs next:
+::: {.incremental}
+  * $U_2(X) = 1p + 2q + 0$.
+  * $U_2(Y) = 1p + 0 + 2(1 - p - q)$.
+  * So Player 2 will play a mixed strategy if
+  $$p + 2q = p + 2(1 - p - q)$$ 
+  $$\implies q = 1 - p - q$$.
+
+  * Recall that $q$ was the probability we put on Player 2 playing $B$,
+  * and $1-p-q$ was the probability they play $C$. 
+:::
+
+---
+
+## visualizing Player 2's Best Responses
+```{.tikz embed_mode="link" format="svg"}
+\begin{tikzpicture}
+  \draw (0,0) coordinate[label=below:$A$] (a) --
+  (5,0) coordinate[label=below:$C$] (c) --
+  (2.5, 4.3) coordinate[label=above:$B$] (b) -- cycle ;
+\end{tikzpicture}
+```
+---
+
+## When will Player 2 mix?
+We found they are indifferent between $X$ and $Y$ when 
+$$ q = 1 - p - d $$.
+
+There are two ways that this can be true: 
+::: {.incremental}
+  * Either Player 1 plays B and C with equal probability
+  (and we know from earlier that they would **only** be playing these two, not A),
+  * or Player 1 plays A only, and B and C not at all. 
+:::
+
+---
+
+## MSNE in a Larger Game
+<u>Case 1</u>: Player 1 only plays A:
+
+::: {.incremental}
+  * this requires $2r \geq 2 - r$ and $2r \geq 3 - 3r$,
+  * which imply that $r \geq \frac{2}{3}$ and $r \geq \frac{3}{5}$.
+  * **MSNE 1:** $(1, 0, 0), (r, 1 - r)$ where $r \geq \frac{2}{3}$.
+:::
+---
+
+## MSNE in a Larger Game
+<u>Case 2</u>: Player 1 plays $B$ and $C$ with equal probability 
+
+::: {.incremental}
+  * then Player 2 plays X and Y with equal (1/2) probability.
+  * **MSNE**: $(0, 1/2, 1/2), (1/2, 1/2)$
+::: 
+---
+
+## What about a 3x3 game?
+
+| $P_1$, $P_2$  | Rock ($r_2$) | Paper ($p_2$) | Scissors ($1-r_2-p_2$) |
+| Rock ($r_1$)  | 0, 0         | -1, 1         | 1, -1                  |
+| Paper ($p_1$) | 1, -1        | 0,0           | -1, 1                  |
+| Scissors      | -1, 1        | 1, -1         | 0, 0                   |
+
+---
+
+
+## What about a 3x3 game?
+
+::: {.incremental}
+  * Rock, Paper, Scissors is a *symmetric} game, so let's just pay attention to Player 1's utility 
+
+  * $EU_1(Rock | r_2, p_2) = $
+
+  * $EU_1(Paper | r_2, p_2) = $
+
+  * $EU_1(Scissors | r_2, p_2) = $
+:::
+  
+---
+
+## visualizing Player 1's Best Responses
+
+```{.tikz embed_mode="link" format="svg"}
+\begin{tikzpicture}
+  \draw (0,0) coordinate[label=below:$Rock$] (r) --
+  (8,0) coordinate[label=below:$Paper$] (p) --
+  (4, 7) coordinate[label=above:$Scissors$] (s) -- cycle ;
+\end{tikzpicture}
+```
+---
+
+## Finding MSNE in 3x3 game
+:::: {.columns}
+::: {.column}
+```{.tikz embed_mode="link" format="svg"}
+\begin{tikzpicture}
+  \draw (0,0) coordinate[label=below:$Rock$] (r) --
+  (4,0) coordinate[label=below:$Paper$] (p) --
+  (2, 3.5) coordinate[label=above:$Scissors$] (s) -- cycle ;
+\end{tikzpicture}
+:::
+::: {.column}
+```{.tikz embed_mode="link" format="svg"}
+\begin{tikzpicture}
+  \draw (0,0) coordinate[label=below:$Rock$] (r) --
+  (4,0) coordinate[label=below:$Paper$] (p) --
+  (2, 3.5) coordinate[label=above:$Scissors$] (s) -- cycle ;
+\end{tikzpicture}
+:::
+::::
+---
+
+## Finding MSNE in 3x3 game
+
+So the results from our math confirm our intuition that the stable strategies in equilibrium are:
+
+::: {.incremental}
+  * Player 1 plays Rock with $r=1/3$, Paper with $p=1/3$, and Scissors with
+  $1-p-r=1/3$
+  * Player 1 plays Rock with $r=1/3$, Paper with $p=1/3$, and Scissors with
+  $1-p-r=1/3$
+:::
+---
+
+## Another 3x3 game
+
+| $P_1$, $P_2$ | Left  | Center | Right |
+|--------------+-------+--------+-------|
+| Top          | 2,  1 | 3,  0  | 3,  0 |
+| Middle       | 3,  0 | 0,  1  | 3,  0 |
+| Bottom       | 3,  0 | 3,  0  | 2,  1 |
+
+---
+
+## Solving for 3-strategy MSNE
+
+**Step 1:** Define Mixed Strategies
+::: {.incremental}
+  * <u>Player 1's mixed strategy:</u> 
+  Let $\sigma_1 = (t, m, b)$  
+
+  * <u>Player 2's mixed strategy:</u> 
+  Let $\sigma_2 = (\ell, c, r)$  
+:::
+  
+Note that the lowercase letters represent the probabilities played
+on the uppercase pure strategies.
+---
+
+## Solving for 3-strategy MSNE
+**Step 2:** Solve for Expected Utilities
+
+:::: {.columns}
+::: {.column}
+  * <u>Player 1:</u>
+    + $EU_1(T, \sigma_2) = $
+    + $EU_1(M, \sigma_2) = $
+    + $EU_1(B, \sigma_2) = $
+:::
+::: {.column}
+  * <u>Player 2:</u>
+    * $EU_2(L, \sigma_1) = $
+    * $EU_2(C, \sigma_1) = $
+    * $EU_2(R, \sigma_1) = $
+:::
+::::
+
+---
+
+## Solving for 3-strategy MSNE
+
+**Step 3:** Find Indifference Conditions
+
+<u>When will Player 1 mix between 2 pure strategies?</u> 
+  * When does $EU_1(Top, \sigma_2) = EU_1(Middle, \sigma_2)$:
+  * When does $EU_1(Top, \sigma_2) = EU_1(Bottom, \sigma_2)$:
+  * When does $EU_1(Middle, \sigma_2) = EU_1(Bottom, \sigma_2)$:
+    
+---
+
+## Solving for 3-strategy MSNE
+
+**Step 3:** Find Indifference Conditions
+
+<u>When will Player 2 mix between 2 pure strategies?</u> 
+  * When does $EU_2(Left, \sigma_1) = EU_2(Center, \sigma_1)$:
+  * When does $EU_2(Left, \sigma_1) = EU_2(Right, \sigma_1)$:
+  * When does $EU_2(Center, \sigma_1) = EU_2(Right, \sigma_1)$:
+  
+---
+
+## Solving for 3-strategy MSNE
+**Step 4.a:** Graph Indifference Points on Number Lines for Player 1
+
+---
+
+## Solving for 3-strategy MSNE
+
+**Step 4.b:** Combine Number Lines into Player 1's BR Triangle
+```{.tikz embed_mode="link" format="svg"}
+\begin{tikzpicture}
+  \draw (0,0) coordinate[label=below:Left] (r) --
+  (6,0) coordinate[label=below:Right] (p) --
+  (3, 5) coordinate[label=above:Center] (s) -- cycle ;
+\end{tikzpicture}
+```
+---
+
+## Solving for 3-strategy MSNE
+  **Step 4.c:** Graph Indifference Points on Number Lines for Player 2
+
+---
+
+## Solving for 3-strategy MSNE
+**Step 4.d:** Combine Number Lines into Player 2's BR Triangle
+```{.tikz embed_mode="link" format="svg"}
+\begin{tikzpicture}
+  \draw (0,0) coordinate[label=below:Top] (r) --
+  (6,0) coordinate[label=below:Bottom] (p) --
+  (3, 5) coordinate[label=above:Middle] (s) -- cycle ;
+\end{tikzpicture}
+```
+---
+
+## Solving for 3-strategy MSNE
+  **Step 5:** Check Cases for possible Nash Equilibria:
+
+---
+

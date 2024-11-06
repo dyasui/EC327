@@ -28,3 +28,7 @@ output:
 
 {{< include 0601-uncertainty.qmd >}}
 
+{{< include 0602-mixing.qmd >}}
+
+{{< include 0603-advancedMSNE.qmd >}}
+
