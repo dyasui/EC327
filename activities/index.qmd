@@ -1,0 +1,17 @@
+---
+title: "In-class Activities"
+---
+
+[Activity 1 - Guessing Two Thirds of the Average](01GuessTwoThirds/GuessTwoThirds.html)
+
+[Activity 2 - Survivor Flags](02SurvivorFlags/SurvivorFlags.html)
+
+[Activity 3 - Pirate Treasure](03PirateTreasure/PirateTreasure.qmd)
+
+[Activity 4 - Blotto Election](04BlottoElection/BlottoElection.qmd)
+
+[Activity 5 - Social Media Ads](05CournotComp/cournotcomp.qmd)
+
+[Activity 6 - Penalty Kick Shootout](06PenaltyKicks/penaltykicks.qmd)
+
+---

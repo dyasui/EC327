@@ -4,41 +4,81 @@ project:
     - "*.qmd"
     - "*.md"
 
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+
 website: 
   title: "EC327 Game Theory"
+  repo-url: https://gituhub.com/dyasui/EC327
+  repo-actions: [edit, source, issue]
+  navbar:
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Slides"
+        href: Slides/index.qmd
+      - text: "Activities"
+        href: activities/index.qmd
+      - text: "Assignments"
+        href: Homework/index.qmd
   sidebar: 
     style: "docked"
     search: true
+    collapse-level: 1
     contents: 
-      - section: "Slides"
+      - section: "Introduction"
         contents:
-          - text: "Introduction"
+          - text: "Syllabus"
+            href: Syllabus/main.pdf
+          - text: "[Slides]{.text-info}: General Principles"
             href: Slides/01Intro/01-main.qmd
-          - text: "Sequential Games"
-            href: Slides/02SequentialGames/02-main.qmd
-          - text: "Simultaneous Games"
-            href: Slides/03SimultaneousGames/03-main.qmd
-          - text: "Continuous Strategies"
-            href: Slides/04ContinuousStrats/04-main.qmd
-          - text: "Combining Sequential and Simultaneous"
-            href: Slides/05CombinedGames/05-main.qmd
-          - text: "Mixed Strategies and Strategic Uncertainty"
-            href: Slides/06MixedStrategies/06-main.qmd
-      - section: "Activities"
-        contents: 
-          - text: "Guessing Two Thirds of the Average"
+          - text: "[Activity]{.text-success}: Guessing Two Thirds"
             href: activities/01GuessTwoThirds/GuessTwoThirds.qmd
-          - text: "Survivor Flags"
+      - section: "Sequential Games"
+        contents:
+          - text: "[Slides]{.text-info}: Sequential Games"
+            href: Slides/02SequentialGames/02-main.qmd
+          - text: "[Activity]{.text-success}: Survivor Flags"
             href: activities/02SurvivorFlags/SurvivorFlags.qmd
-          - text: "Pirate Treasure"
+          - text: "[Activity]{.text-success}: Pirate Treasure"
             href: activities/03PirateTreasure/PirateTreasure.qmd
-          - text: "Election Blotto"
+      - section: "Simultaneous Games"
+        contents:
+          - text: "[Slides]{.text-info}: Simultaneous Games"
+            href: Slides/03SimultaneousGames/03-main.qmd
+          - text: "[Activity]{.text-success}: Election Blotto"
             href: activities/04BlottoElection/BlottoElection.qmd
-          - text: "Social Media Adspace"
+          - text: "[Slides]{.text-info}: Continuous Strategies"
+            href: Slides/04ContinuousStrats/04-main.qmd
+          - text: "[Activity]{.text-success}: Social Media Adspace"
             href: activities/05CournotComp/cournotcomp.qmd
-          - text: "Penalty Kick Shootout"
+      - section: "Combining Sequential and Simultaneous Forms"
+        contents:
+          - text: "[Slides]{.text-info}"
+            href: Slides/05CombinedGames/05-main.qmd
+      - section: "Mixed Strategies"
+        contents: 
+          - text: "[Slides]{.text-info}"
+            href: Slides/06MixedStrategies/06-main.qmd
+          - text: "[Activity]{.text-success}: Penalty Kick Shootout"
             href: activities/06PenaltyKicks/penaltykicks.qmd
-
-page-footer:
-  right: "This page is built with [Quarto](https://quarto.org/)."
-  
+      - section: "Uncertainty and Information"
+        contents:
+          - text: "**Slides**: Asymmetric Information"
+            href: Slides/07AsymmetricInfo/07-main.qmd
+          - text: "**Activity**: Market for Lemons"
+            href: activities/LemonsMarket/main.qmd
+      - section: "Strategic Moves"
+        contents:
+          - text: "**Slides**"
+            href: Slides/08StrategicMoves/08-main.qmd
+          - text: "**Activity**: Brinksmanship"
+            href: activities/Brinksmanship/main.qmd
+      - section: "Repeated Games"
+        contents:
+          - text: "**Slides**"
+            href: Slides/09RepeatedGames/09-main.qmd

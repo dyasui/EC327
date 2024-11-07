@@ -1,0 +1,14 @@
+---
+title: "Homework Assignments"
+---
+
+# Assignments 
+
+<a href="assignment1/main.pdf" target="_blank">Homework 1</a>
+
+<a href="assignment2/main.pdf" target="_blank">Homework 2</a>
+
+<a href="assignment3/main.pdf" target="_blank">Homework 3</a>
+
+<a href="assignment4/main.pdf" target="_blank">Homework 4</a>
+
