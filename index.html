@@ -35,16 +35,18 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -70,18 +72,52 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar docked fullcontent">
+<body class="nav-sidebar docked nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">EC327 Game Theory</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Slides/index.html"> 
+<span class="menu-text">Slides</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./activities/index.html"> 
+<span class="menu-text">Activities</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Homework/index.html"> 
+<span class="menu-text">Assignments</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      EC327 Game Theory
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">EC327 Introductory Game Theory</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -91,14 +127,9 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">EC327 Game Theory</a> 
-    </div>
-      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -108,94 +139,196 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Slides</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Syllabus/main.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Slides/01Intro/01-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text"><span class="text-info">Slides</span>: General Principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Slides/02SequentialGames/02-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sequential Games</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Slides/03SimultaneousGames/03-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Simultaneous Games</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Slides/04ContinuousStrats/04-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Continuous Strategies</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Slides/05CombinedGames/05-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Combining Sequential and Simultaneous</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Slides/06MixedStrategies/06-main.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Mixed Strategies and Strategic Uncertainty</span></a>
+  <a href="./activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="text-success">Activity</span>: Guessing Two Thirds</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Activities</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sequential Games</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Guessing Two Thirds of the Average</span></a>
+  <a href="./Slides/02SequentialGames/02-main.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="text-info">Slides</span>: Sequential Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Survivor Flags</span></a>
+ <span class="menu-text"><span class="text-success">Activity</span>: Survivor Flags</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./activities/03PirateTreasure/PirateTreasure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pirate Treasure</span></a>
+ <span class="menu-text"><span class="text-success">Activity</span>: Pirate Treasure</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Simultaneous Games</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Slides/03SimultaneousGames/03-main.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="text-info">Slides</span>: Simultaneous Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./activities/04BlottoElection/BlottoElection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Election Blotto</span></a>
+ <span class="menu-text"><span class="text-success">Activity</span>: Election Blotto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Slides/04ContinuousStrats/04-main.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="text-info">Slides</span>: Continuous Strategies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./activities/05CournotComp/cournotcomp.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Social Media Adspace</span></a>
+ <span class="menu-text"><span class="text-success">Activity</span>: Social Media Adspace</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Combining Sequential and Simultaneous Forms</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Slides/05CombinedGames/05-main.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="text-info">Slides</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Mixed Strategies</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Slides/06MixedStrategies/06-main.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="text-info">Slides</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./activities/06PenaltyKicks/penaltykicks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Penalty Kick Shootout</span></a>
+ <span class="menu-text"><span class="text-success">Activity</span>: Penalty Kick Shootout</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Uncertainty and Information</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Slides/07AsymmetricInfo/07-main.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Slides</strong>: Asymmetric Information</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./activities/LemonsMarket/main.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Activity</strong>: Market for Lemons</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Strategic Moves</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Slides/08StrategicMoves/08-main.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Slides</strong></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./activities/Brinksmanship/main.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Activity</strong>: Brinksmanship</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Repeated Games</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Slides/09RepeatedGames/09-main.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Slides</strong></span></a>
   </div>
 </li>
       </ul>
@@ -229,136 +362,111 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="welcome-to-intro-to-game-theory" class="level1">
-<h1>Welcome to Intro to Game Theory!</h1>
 <p>This elective game theory class EC327 is taught by <a href="https://cas.uoregon.edu/directory/economics/all/dyasui">Dante Yasui</a> at the <a href="https://socialsciences.uoregon.edu/economics">University of Oregon</a>.</p>
-<section id="fall-2024-schedule" class="level2">
-<h2 class="anchored" data-anchor-id="fall-2024-schedule">Fall 2024 Schedule</h2>
-<p>Class Time : Monday and Wednesday 8:30-9:50 am</p>
-<p>Classroom : Gerlinger 302</p>
-<p>Office Hours : Monday 10-11 am &amp; Wednesday 1-2 pm</p>
-<hr>
-</section>
-<section id="syllabus" class="level2">
-<h2 class="anchored" data-anchor-id="syllabus">Syllabus</h2>
-<p><a href="Syllabus/main.pdf" target="_blank">PDF.</a></p>
-<hr>
-</section>
-<section id="textbook" class="level2">
-<h2 class="anchored" data-anchor-id="textbook">Textbook</h2>
-<ul>
-<li>Dixit, Skeath, and McAdams. Games of Strategy, 5th edition, by Dixit, Skeath, and Reiley.</li>
-</ul>
-<hr>
-</section>
-<section id="lectures" class="level2">
-<h2 class="anchored" data-anchor-id="lectures">Lectures</h2>
-<p><a href="./Slides/01Intro/01-main.html">01 - Introduction</a></p>
-<p><a href="./Slides/02SequentialGames/02-main.html">02 - Sequential Games</a></p>
-<p><a href="./Slides/03SimultaneousGames/03-main.html">03 - Simultaneous Games</a></p>
-<p><a href="./Slides/04ContinuousStrats/04-main.html">04 - Continuous Strategies</a></p>
-<p><a href="./Slides/05CombinedGames/05-main.html">05 - Combining Sequential and Simultaneous Games</a></p>
-<p><a href="./Slides/06MixedStrategies/06-main.html">06 - Mixed Strategies and Strategic Uncertainty</a></p>
-<hr>
-</section>
-<section id="activities" class="level2">
-<h2 class="anchored" data-anchor-id="activities">Activities</h2>
-<p><a href="https://dyasui.github.io/EC327/activities/01GuessTwoThirds/GuessTwoThirds.html">Activity 1 - Guessing Two Thirds of the Average</a></p>
-<p><a href="https://dyasui.github.io/EC327/activities/02SurvivorFlags/SurvivorFlags.html">Activity 2 - Survivor Flags</a></p>
-<p><a href="./activities/03PirateTreasure/PirateTreasure.html">Activity 3 - Pirate Treasure</a></p>
-<p><a href="./activities/04BlottoElection/BlottoElection.html">Activity 4 - Blotto Election</a></p>
-<p><a href="./activities/05CournotComp/cournotcomp.html">Activity 5 - Social Media Ads</a></p>
-<p><a href="./activities/06PenaltyKicks/penaltykicks.html">Activity 6 - Penalty Kick Shootout</a></p>
-</section>
-<section id="assignments" class="level2">
-<h2 class="anchored" data-anchor-id="assignments">Assignments</h2>
-<p><a href="Homework/assignment1/main.pdf" target="_blank">Homework 1</a></p>
-<p><a href="Homework/assignment2/main.pdf" target="_blank">Homework 2</a></p>
-<p><a href="Homework/assignment3/main.pdf" target="_blank">Homework 3</a></p>
-<p><a href="Homework/assignment4/main.pdf" target="_blank">Homework 4</a></p>
-<hr>
-</section>
-<section id="tentative-schedule" class="level2">
+<section id="fall-2024-class-details" class="level2">
+<h2 class="anchored" data-anchor-id="fall-2024-class-details">Fall 2024 Class Details</h2>
+<div class="columns">
+<div class="column">
+<p><strong>Class Time:</strong> Monday and Wednesday 8:30-9:50 am</p>
+<p><strong>Classroom:</strong> Gerlinger 302</p>
+<p><strong>Office Hours:</strong> Monday 10-11 am &amp; Wednesday 1-2 pm</p>
+</div><div class="column">
+<p><a href="Syllabus/main.pdf" target="_blank">Syllabus</a></p>
+<p><strong>Textbook:</strong> Dixit, Skeath, and McAdams. Games of Strategy, 5th edition.</p>
+</div><hr><section id="tentative-schedule" class="level2">
 <h2 class="anchored" data-anchor-id="tentative-schedule">Tentative Schedule</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 10%">
-<col style="width: 16%">
-<col style="width: 72%">
-</colgroup>
 <thead>
 <tr class="header">
-<th><strong>Week</strong></th>
-<th><strong>Chapter(s)</strong></th>
+<th style="text-align: center;"><strong>Week</strong></th>
+<th style="text-align: center;"><strong>Chapter</strong></th>
 <th><strong>Topic</strong></th>
+<th>Assignments</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td>1, 2</td>
-<td>Intro &amp; General Principles</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1, 2</td>
+<td><a href="./Slides/01Intro/01-main.html" target="_blank">Intro &amp; General Principles</a></td>
+<td><a href="./activities/01GuessTwoThirds/GuessTwoThirds.html">Activity 1</a></td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td>3</td>
-<td>Sequential Move Games</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td><a href="./Slides/02SequentialGames/02-main.html" target="_blank">Sequential Move Games</a></td>
+<td><a href="Homework/assignment1/main.pdf">Homework 1</a>, <a href="./activities/02SurvivorFlags/SurvivorFlags.html">Activity 2</a></td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>4</td>
-<td>Simultaneous Move Games</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td><a href="./Slides/03SimultaneousGames/03-main.html" target="_blank">Simultaneous Move Games</a></td>
+<td><a href="./activities/04BlottoElection/BlottoElection.html">Activity 4</a></td>
 </tr>
 <tr class="even">
-<td>4</td>
-<td>6</td>
-<td>Combining Sequential and Simultaneous Moves</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td><a href="./Slides/04ContinuousStrats/04-main.html" target="_blank">Continuous Strategies</a></td>
+<td><a href="Homework/assignment2/main.pdf">Homework 2</a></td>
 </tr>
 <tr class="odd">
-<td>5</td>
-<td>6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">6</td>
+<td><a href="./Slides/05CombinedGames/05-main.html" target="_blank">Combining Forms</a></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
 <td>Review &amp; <strong>Midterm</strong></td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>5</td>
-<td>Simultaneous Games: Continuous Strategies, Discussion, and Evidence</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>7</td>
-<td>7</td>
-<td>Mixed Strategies</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+<td><a href="./Slides/06MixedStrategies/06-main.html" target="_blank">Mixed Strategies</a></td>
+<td><a href="./activities/05CournotComp/cournotcomp.html">Activity 5</a>, <a href="./activities/06PenaltyKicks/penaltykicks.html">Activity 6</a></td>
 </tr>
 <tr class="even">
-<td>8</td>
-<td>9</td>
-<td>Uncertainty and Information</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">9</td>
+<td><a href="./Slides/06MixedStrategies/06-main.html" target="_blank">Mixed Strategies</a>, <a href="Slides/07AsymmetricInfo/07-main.qmd" target="_blank">Uncertainty and Information</a></td>
+<td><a href="Homework/assignment3/main.pdf">Homework 3</a></td>
 </tr>
 <tr class="odd">
-<td>9</td>
-<td>8</td>
-<td>Strategic Moves</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">9</td>
+<td><a href="Slides/07AsymmetricInfo/07-main.qmd" target="_blank">Uncertainty and Information</a></td>
+<td><a href="activities/LemonsMarket/main.qmd">Activity 6</a></td>
 </tr>
 <tr class="even">
-<td>10</td>
-<td>10</td>
-<td>Repeated Games</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">8</td>
+<td><a href="Slides/08StrategicMoves/08-main.qmd" target="_blank">Strategic Moves</a></td>
+<td><a href="activities/Brinksmanship/main.qmd">Activity 7</a></td>
 </tr>
 <tr class="odd">
-<td><em>Finals</em></td>
-<td><em>TBA</em></td>
-<td><em>Exam</em></td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td><a href="Slides/09RepeatedGames/09-main.qmd" target="_blank">Repeated Games</a></td>
+<td><a href="Homework/assignment4/main.pdf">Homework 4</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><em>Finals</em></td>
+<td style="text-align: center;">Cumulative</td>
+<td><strong>Exam</strong>: Friday, Dec.&nbsp;13 - 10:15am</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <hr>
-</section>
-</section>
-<section id="acknowledgements" class="level1">
+</section><section id="acknowledgements" class="level1">
 <h1>Acknowledgements</h1>
 <p>I have used materials passed on to me from previous graduate student instructors at the University of Oregon such as slides, activities, and homework questions to create this class. Thank you to Evan Hart, <a href="https://ethanholdahl.com/">Ethan Holdahl</a>, <a href="https://sites.google.com/view/hanyuanhuang/">Hanyuan Huang</a>, <a href="https://ctwie.me/">Connor Wiegand</a>, and <a href="https://zkiefer10.github.io/">Zachary Kiefer</a> for creating some of the materials in this class, and for advice on teaching Game Theory.</p>
 
 
+</section>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -382,6 +490,150 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -787,4 +1039,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://gituhub.com/dyasui/EC327/edit/main/index.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://gituhub.com/dyasui/EC327/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://gituhub.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
