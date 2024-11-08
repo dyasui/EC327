@@ -2,13 +2,62 @@
 title: "Homework Assignments"
 ---
 
-# Assignments 
+# Assignment 1 
+**Due:** Friday, October 11th
+[**Submit to Canvas**](https://canvas.uoregon.edu/courses/251353/assignments/1721122){target="_blank"}
+```{=html}
+<details>
+  <summary>PDF</summary>
+  <a class="btn btn-primary btn-lg cv-download" href="assignment1/main.pdf" target="_blank">
+    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download
+  </a>
+  <div class="embed-container">
+    <iframe src="assignment1/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+  </div>
+</details>
+```
 
-<a href="assignment1/main.pdf" target="_blank">Homework 1</a>
+# Assignment 2
+**Due:** Friday, October 25th
+[**Submit to Canvas**](https://canvas.uoregon.edu/courses/251353/assignments/1721123){target="_blank"}
+```{=html}
+<details>
+  <summary>PDF</summary>
+  <a class="btn btn-primary btn-lg cv-download" href="assignment2/main.pdf" target="_blank">
+    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download
+  </a>
+  <div class="embed-container">
+    <iframe src="assignment2/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+  </div>
+</details
+```
 
-<a href="assignment2/main.pdf" target="_blank">Homework 2</a>
+# Assignment 3
+**Due:** Friday, November 15th
+[**Submit to Canvas**](https://canvas.uoregon.edu/courses/251353/assignments/1721124){target="_blank"}
+```{=html}
+<details>
+  <summary>PDF</summary>
+  <a class="btn btn-primary btn-lg cv-download" href="assignment3/main.pdf" target="_blank">
+    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download
+  </a>
+  <div class="embed-container">
+    <iframe src="assignment3/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+  </div>
+</details>
+```
 
-<a href="assignment3/main.pdf" target="_blank">Homework 3</a>
-
-<a href="assignment4/main.pdf" target="_blank">Homework 4</a>
-
+# Assignment 4
+**Due:** Friday, December 6th
+[**Submit to Canvas**](https://canvas.uoregon.edu/courses/251353/assignments/1721125){target="_blank"}
+```{=html}
+<details>
+  <summary>PDF</summary>
+  <a class="btn btn-primary btn-lg cv-download" href="assignment4/main.pdf" target="_blank">
+    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download
+  </a>
+  <div class="embed-container">
+    <iframe src="assignment4/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+  </div>
+</details>
+```

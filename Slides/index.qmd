@@ -2,15 +2,64 @@
 title: "Lecture Slides"
 ---
 
-[01 - Introduction](01Intro/01-main.html){target="_blank"}
+## Intro and Syllabus Day
+```{=html}
+<div>
+  <iframe class="slide deck" src="01Intro/01-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="01Intro/01-main.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
 
-[02 - Sequential Games](02SequentialGames/02-main.html){target="_blank"}
+## Basic Concepts and Methods
+### Sequential Games
+```{=html}
+<div>
+  <iframe class="slide deck" src="02SequentialGames/02-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="02SequentialGames/02-main.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
 
-[03 - Simultaneous Games](03SimultaneousGames/03-main.html){target="_blank"}
+### Simultaneous Games
+```{=html}
+<div>
+  <iframe class="slide deck" src="03SimultaneousGames/03-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="03SimultaneousGames/03-main.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
 
-[04 - Continuous Strategies](04ContinuousStrats/04-main.html){target="_blank"}
+```{=html}
+<div>
+  <iframe class="slide deck" src="04ContinuousStrats/04-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="04ContinuousStrats/04-main.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
 
-[05 - Combining Sequential and Simultaneous Games](05CombinedGames/05-main.html){target="_blank"}
+### Combining Simultaneous and Sequential
 
-[06 - Mixed Strategies and Strategic Uncertainty](06MixedStrategies/06-main.html){target="_blank"}
+```{=html}
+<div>
+  <iframe class="slide deck" src="05CombinedGames/05-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="01Intro/01-main.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
+### Mixed Strategies
+
+```{=html}
+<div>
+  <iframe class="slide deck" src="06MixedStrategies/06-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+</div>
+<a class="btn btn-primary btn-md" href="01Intro/01-main.qmd" target="_blank">
+  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
+</a>
+```
 
