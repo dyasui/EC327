@@ -48,7 +48,7 @@ title: "Lecture Slides"
 <div>
   <iframe class="slide deck" src="05CombinedGames/05-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="01Intro/01-main.qmd" target="_blank">
+<a class="btn btn-primary btn-md" href="05CombinedGames/05-main.qmd" target="_blank">
   <i class="fa-solid fa-window-restore"></i>&ensp;Expand
 </a>
 ```
@@ -58,7 +58,7 @@ title: "Lecture Slides"
 <div>
   <iframe class="slide deck" src="06MixedStrategies/06-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="01Intro/01-main.qmd" target="_blank">
+<a class="btn btn-primary btn-md" href="06MixedStrategies/06-main.qmd" target="_blank">
   <i class="fa-solid fa-window-restore"></i>&ensp;Expand
 </a>
 ```
