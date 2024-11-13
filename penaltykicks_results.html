@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lecture Slides – EC327 Game Theory</title>
+<title>Activity 5 Results – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">EC327 Game Theory</span>
     </a>
   </div>
@@ -90,19 +124,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../Slides/index.html" aria-current="page"> 
+    <a class="nav-link" href="./Slides/index.html"> 
 <span class="menu-text">Slides</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../activities/index.html"> 
+    <a class="nav-link" href="./activities/index.html"> 
 <span class="menu-text">Activities</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../Homework/index.html"> 
+    <a class="nav-link" href="./Homework/index.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
 </ul>
@@ -117,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lecture Slides</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Activity 5 Results</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -148,19 +182,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Syllabus/main.pdf" class="sidebar-item-text sidebar-link">
+  <a href="./Syllabus/main.pdf" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/#intro-and-syllabus-day" class="sidebar-item-text sidebar-link">
+  <a href="./Slides/#intro-and-syllabus-day" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: General Principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
+  <a href="./activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Guessing Two Thirds</span></a>
   </div>
 </li>
@@ -177,19 +211,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/#sequential-games" class="sidebar-item-text sidebar-link">
+  <a href="./Slides/#sequential-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Sequential Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
+  <a href="./activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Survivor Flags</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/03PirateTreasure/PirateTreasure.html" class="sidebar-item-text sidebar-link">
+  <a href="./activities/03PirateTreasure/PirateTreasure.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Pirate Treasure</span></a>
   </div>
 </li>
@@ -206,25 +240,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
+  <a href="./Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Simultaneous Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/04BlottoElection/BlottoElection.html" class="sidebar-item-text sidebar-link">
+  <a href="./activities/04BlottoElection/BlottoElection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Election Blotto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
+  <a href="./Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Continuous Strategies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/05CournotComp/cournotcomp.html" class="sidebar-item-text sidebar-link">
+  <a href="./activities/05CournotComp/cournotcomp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Social Media Adspace</span></a>
   </div>
 </li>
@@ -241,7 +275,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/#combining-simultaneous-and-sequential" class="sidebar-item-text sidebar-link">
+  <a href="./Slides/#combining-simultaneous-and-sequential" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span></span></a>
   </div>
 </li>
@@ -258,13 +292,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/#mixed-strategies" class="sidebar-item-text sidebar-link">
+  <a href="./Slides/#mixed-strategies" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/06PenaltyKicks/penaltykicks.html" class="sidebar-item-text sidebar-link">
+  <a href="./activities/06PenaltyKicks/penaltykicks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Penalty Kick Shootout</span></a>
   </div>
 </li>
@@ -272,22 +306,22 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Uncertainty and Information</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/" class="sidebar-item-text sidebar-link active">
+  <a href="./Slides/" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Slides</strong>: Asymmetric Information</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/LemonsMarket/main.qmd" class="sidebar-item-text sidebar-link">
+  <a href="./activities/LemonsMarket/main.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Activity</strong>: Market for Lemons</span></a>
   </div>
 </li>
@@ -304,13 +338,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/" class="sidebar-item-text sidebar-link">
+  <a href="./Slides/" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Slides</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/Brinksmanship/main.qmd" class="sidebar-item-text sidebar-link">
+  <a href="./activities/Brinksmanship/main.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Activity</strong>: Brinksmanship</span></a>
   </div>
 </li>
@@ -327,7 +361,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/" class="sidebar-item-text sidebar-link">
+  <a href="./Slides/" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Slides</strong></span></a>
   </div>
 </li>
@@ -344,7 +378,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lecture Slides</h1>
+<h1 class="title">Activity 5 Results</h1>
 </div>
 
 
@@ -361,58 +395,166 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="intro-and-syllabus-day" class="level2">
-<h2 class="anchored" data-anchor-id="intro-and-syllabus-day">Intro and Syllabus Day</h2>
-<div>
-  <iframe class="slide deck" src="01Intro/01-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+<section id="class-data-summary" class="level1">
+<h1>Class Data Summary</h1>
+<div class="cell">
+<details class="code-fold">
+<summary>See the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load tidyverse packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"activities/06PenaltyKicks/EC327F24-activity6_results.csv"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(s_k), <span class="sc">!</span><span class="fu">is.na</span>(s_g)) <span class="co"># filter out missing data</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="fu">nrow</span>(data)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># summarize by type of strategy profile</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>sum_stats <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(s_k, s_g) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(), <span class="co"># get counts of each profile</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">p =</span> n <span class="sc">/</span> N, <span class="co"># calculate proportions</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">num_goals =</span> <span class="fu">sum</span>(goal), <span class="co"># count numbers of goals scored</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">prob_goal =</span> num_goals <span class="sc">/</span> N <span class="co"># probability of goal scored</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unite</span>(profile, <span class="fu">c</span>(s_k, s_g), <span class="at">sep =</span> <span class="st">":"</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>) </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>sum_stats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9 × 7
+# Groups:   s_k [3]
+  profile       s_k    s_g        n      p num_goals prob_goal
+  &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt;  &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+1 Center:Center Center Center    29 0.0895         0    0     
+2 Center:Left   Center Left      25 0.0772        18    0.0556
+3 Center:Right  Center Right     35 0.108         23    0.0710
+4 Left:Center   Left   Center    37 0.114         30    0.0926
+5 Left:Left     Left   Left      38 0.117          8    0.0247
+6 Left:Right    Left   Right     45 0.139         36    0.111 
+7 Right:Center  Right  Center    36 0.111         34    0.105 
+8 Right:Left    Right  Left      41 0.127         34    0.105 
+9 Right:Right   Right  Right     38 0.117         11    0.0340</code></pre>
 </div>
-<a class="btn btn-primary btn-md" href="../Slides/01Intro/01-main.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="basic-concepts-and-methods" class="level2">
-<h2 class="anchored" data-anchor-id="basic-concepts-and-methods">Basic Concepts and Methods</h2>
-<section id="sequential-games" class="level3">
-<h3 class="anchored" data-anchor-id="sequential-games">Sequential Games</h3>
-<div>
-  <iframe class="slide deck" src="02SequentialGames/02-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="../Slides/02SequentialGames/02-main.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="simultaneous-games" class="level3">
-<h3 class="anchored" data-anchor-id="simultaneous-games">Simultaneous Games</h3>
+<section id="plotting-frequency-of-each-strategy-profile" class="level2">
+<h2 class="anchored" data-anchor-id="plotting-frequency-of-each-strategy-profile">Plotting frequency of each strategy profile</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>See the code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(sum_stats, <span class="fu">aes</span>(<span class="at">x =</span> s_g, <span class="at">y =</span> n, <span class="at">fill =</span> s_k)) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(s_k))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
 <div>
-  <iframe class="slide deck" src="03SimultaneousGames/03-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+<figure class="figure">
+<p><img src="penaltykicks_results_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
-<a class="btn btn-primary btn-md" href="../Slides/03SimultaneousGames/03-main.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-<div>
-  <iframe class="slide deck" src="04ContinuousStrats/04-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="../Slides/04ContinuousStrats/04-main.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="combining-simultaneous-and-sequential" class="level3">
-<h3 class="anchored" data-anchor-id="combining-simultaneous-and-sequential">Combining Simultaneous and Sequential</h3>
-<div>
-  <iframe class="slide deck" src="05CombinedGames/05-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="../Slides/05CombinedGames/05-main.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="mixed-strategies" class="level3">
-<h3 class="anchored" data-anchor-id="mixed-strategies">Mixed Strategies</h3>
-<div>
-  <iframe class="slide deck" src="06MixedStrategies/06-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+<div class="cell">
+<details class="code-fold">
+<summary>See the code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># summarise win probabiltiy by kicker's strategy</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>kicker_strats <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(s_k) <span class="sc">%&gt;%</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">num_goals =</span> <span class="fu">sum</span>(goal),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">prob_goal =</span> <span class="fu">sum</span>(goal) <span class="sc">/</span> N</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>kicker_strats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  s_k    num_goals prob_goal
+  &lt;chr&gt;      &lt;int&gt;     &lt;dbl&gt;
+1 Center        41     0.127
+2 Left          74     0.228
+3 Right         79     0.244</code></pre>
 </div>
-<a class="btn btn-primary btn-md" href="../Slides/06MixedStrategies/06-main.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>See the code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># summarise win probabiltiy by goalie's strategy</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>goalie_strats <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(s_k) <span class="sc">%&gt;%</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">num_blocks =</span> <span class="fu">sum</span>(goal <span class="sc">==</span> <span class="cn">FALSE</span>),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">prob_block =</span> <span class="fu">sum</span>(goal <span class="sc">==</span> <span class="cn">FALSE</span>) <span class="sc">/</span> N</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>goalie_strats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  s_k    num_blocks prob_block
+  &lt;chr&gt;       &lt;int&gt;      &lt;dbl&gt;
+1 Center         48      0.148
+2 Left           46      0.142
+3 Right          36      0.111</code></pre>
+</div>
+<details class="code-fold">
+<summary>See the code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(goalie_strats<span class="sc">$</span>num_blocks)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Chi-squared test for given probabilities
+
+data:  goalie_strats$num_blocks
+X-squared = 1.9077, df = 2, p-value = 0.3853</code></pre>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>See the code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># restrict to only Left and Right</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>data_LR <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(s_k <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Left"</span>, <span class="st">"Right"</span>) <span class="sc">&amp;</span> s_g <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Left"</span>, <span class="st">"Right"</span>))</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>N_LR <span class="ot">&lt;-</span> <span class="fu">nrow</span>(data_LR)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>sum_stats_LR <span class="ot">&lt;-</span> data_LR <span class="sc">%&gt;%</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(s_k, s_g) <span class="sc">%&gt;%</span> <span class="co"># get counts of each profile</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">p =</span> n <span class="sc">/</span> N,</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">num_goals =</span> <span class="fu">sum</span>(goal),</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">prob_goal =</span> num_goals <span class="sc">/</span> N</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 's_k'. You can override using the `.groups`
+argument.</code></pre>
+</div>
+<details class="code-fold">
+<summary>See the code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>sum_stats_LR</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 6
+# Groups:   s_k [2]
+  s_k   s_g       n     p num_goals prob_goal
+  &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+1 Left  Left     38 0.117         8    0.0247
+2 Left  Right    45 0.139        36    0.111 
+3 Right Left     41 0.127        34    0.105 
+4 Right Right    38 0.117        11    0.0340</code></pre>
+</div>
+<details class="code-fold">
+<summary>See the code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Are data consistent w/ msne?</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(sum_stats_LR<span class="sc">$</span>n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Chi-squared test for given probabilities
+
+data:  sum_stats_LR$n
+X-squared = 0.81481, df = 3, p-value = 0.8459</code></pre>
+</div>
+</div>
 
 
 </section>
@@ -988,4 +1130,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://gituhub.com/dyasui/EC327/edit/main/Slides/index.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://gituhub.com/dyasui/EC327/blob/main/Slides/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://gituhub.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://gituhub.com/dyasui/EC327/edit/main/penaltykicks_results.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://gituhub.com/dyasui/EC327/blob/main/penaltykicks_results.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://gituhub.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

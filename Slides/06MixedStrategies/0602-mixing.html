@@ -412,7 +412,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="internal-uncertainty">Internal Uncertainty</h2>
 <div class="incremental">
 <ul class="incremental">
-<li><p>Now that we discussed <em>external uncertainty</em> over <em>states of nature</em>, let’s talk about <a href="#internal-uncertainty">internal uncertainty</a>{.hi.</p>
+<li><p>Now that we discussed <em>external uncertainty</em> over <em>states of nature</em>, let’s talk about <span class="hi">internal uncertainty</span></p>
 <ul class="incremental">
 <li><p>Internal uncertainty occurs when one or more players pick their strategies randomly.</p></li>
 <li><p>Picking a strategy at random is really just a different kind of strategy, called a <span class="hi">mixed strategy</span>.</p></li>
@@ -577,8 +577,8 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="another-example-police-patrol-and-drug-trade" class="level2">
-<h2 class="anchored" data-anchor-id="another-example-police-patrol-and-drug-trade">Another Example: Police Patrol and Drug Trade</h2>
+<section id="another-example-police-patrol-and-drug-trade" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="another-example-police-patrol-and-drug-trade">Another Example: Police Patrol and Drug Trade</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -680,43 +680,30 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the best response function for the Police Officer</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Police_Best_Response <span class="ot">&lt;-</span> <span class="cf">function</span>(d) {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(d <span class="sc">&gt;=</span> <span class="dv">6</span><span class="sc">/</span><span class="dv">13</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the best response function for the Drug Dealer</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>Drug_Best_Response <span class="ot">&lt;-</span> <span class="cf">function</span>(p) {</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(p <span class="sc">&lt;</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">13</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(latex2exp)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">d =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">6</span><span class="sc">/</span><span class="dv">13</span>, <span class="dv">6</span><span class="sc">/</span><span class="dv">13</span>, <span class="dv">1</span>),</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">PR =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>),</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">p =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span><span class="sc">/</span><span class="dv">13</span>, <span class="dv">5</span><span class="sc">/</span><span class="dv">13</span>, <span class="dv">0</span>),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">DR =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a sequence of values for d and p from 0 to 1</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>d_values <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">13</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>p_values <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">13</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the best responses for each value of d and p</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>police_responses <span class="ot">&lt;-</span> <span class="fu">sapply</span>(d_values, Police_Best_Response)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>drug_responses <span class="ot">&lt;-</span> <span class="fu">sapply</span>(p_values, Drug_Best_Response)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame for plotting</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">d =</span> d_values,</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">Drug_Best_Response =</span> drug_responses,</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">p =</span> p_values,</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">Police_Best_Response =</span> police_responses</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the best response functions</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data) <span class="sc">+</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="fu">aes</span>(<span class="at">x =</span> Drug_Best_Response, <span class="at">y =</span> p, <span class="at">color =</span> <span class="st">"Drug Dealer's Best Response"</span>), <span class="at">direction =</span> <span class="st">"vh"</span>) <span class="sc">+</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="fu">aes</span>(<span class="at">x =</span> d, <span class="at">y =</span> Police_Best_Response, <span class="at">color =</span> <span class="st">"Police Officer's Best Response"</span>), <span class="at">direction =</span> <span class="st">"hv"</span>) <span class="sc">+</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">13</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">6</span><span class="sc">/</span><span class="dv">13</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Best Response Functions for Mixed Strategy Nash Equilibrium"</span>,</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Drug Dealer's Probability (d)"</span>,</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Police Officer's Probability (p)"</span>,</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Best Response"</span>) <span class="sc">+</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the best response functions</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data) <span class="sc">+</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">13</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">6</span><span class="sc">/</span><span class="dv">13</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="fu">aes</span>(<span class="at">x =</span> d, <span class="at">y =</span> PR, <span class="at">color =</span> <span class="st">"Police Officer's Best Response"</span>), <span class="at">direction =</span> <span class="st">"hv"</span>, <span class="at">linewidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="fu">aes</span>(<span class="at">x =</span> DR, <span class="at">y =</span> p, <span class="at">color =</span> <span class="st">"Drug Dealer's Best Response"</span>), <span class="at">direction =</span> <span class="st">"hv"</span>, <span class="at">linewidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> <span class="fu">tibble</span>(<span class="at">d =</span> <span class="dv">6</span><span class="sc">/</span><span class="dv">13</span>, <span class="at">p =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">13</span>), <span class="fu">aes</span>(<span class="at">x=</span>d, <span class="at">y=</span>p, <span class="at">color =</span> <span class="st">"MSNE"</span>), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">y =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">13</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="fu">TeX</span>(<span class="st">"$p^* = 5/13$"</span>), <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">6</span><span class="sc">/</span><span class="dv">13</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="fu">TeX</span>(<span class="st">"$d^* = 6/13$"</span>), <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Best Response Functions for Mixed Strategy Nash Equilibrium"</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Drug Dealer's Probability (d)"</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Police Officer's Probability (p)"</span>,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Best Response"</span>) <span class="sc">+</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -736,27 +723,27 @@ window.Quarto = {
 </ul>
 <hr>
 </section>
-<section id="practice-your-understanding" class="level2">
-<h2 class="anchored" data-anchor-id="practice-your-understanding">Practice your understanding</h2>
+<section id="practice-your-understanding" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="practice-your-understanding">Practice your understanding</h2>
 <p>Consider the following game table. What are Player 1’s expected payoffs, given Player 2’s mixed strategy?</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th><span class="math inline">\(Up (q)\)</span></th>
-<th><span class="math inline">\(Down (1 - q)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;">Up <span class="math inline">\((q)\)</span></th>
+<th style="text-align: center;">Down <span class="math inline">\((1 - q)\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(Up (p)\)</span></td>
-<td>2, -2</td>
-<td>-3, 3</td>
+<td style="text-align: right;">Up <span class="math inline">\((p)\)</span></td>
+<td style="text-align: center;">2, -2</td>
+<td style="text-align: center;">-3, 3</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(Down (1 - p)\)</span></td>
-<td>-5, 5</td>
-<td>1, -1</td>
+<td style="text-align: right;">Down <span class="math inline">\((1 - p)\)</span></td>
+<td style="text-align: center;">-5, 5</td>
+<td style="text-align: center;">1, -1</td>
 </tr>
 </tbody>
 </table>
@@ -768,27 +755,27 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="practice-your-understanding-1" class="level2">
-<h2 class="anchored" data-anchor-id="practice-your-understanding-1">Practice your understanding</h2>
+<section id="practice-your-understanding-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="practice-your-understanding-1">Practice your understanding</h2>
 <p>Consider the following game table. What are <strong>Player 2’s</strong> expected payoffs, given Player 1’s mixed strategy?</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th><span class="math inline">\(Up (q)\)</span></th>
-<th><span class="math inline">\(Down (1 - q)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;">Up <span class="math inline">\((q)\)</span></th>
+<th style="text-align: center;">Down <span class="math inline">\((1 - q)\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(Up (p)\)</span></td>
-<td>2, -2</td>
-<td>-3, 3</td>
+<td style="text-align: right;">Up <span class="math inline">\((p)\)</span></td>
+<td style="text-align: center;">2, -2</td>
+<td style="text-align: center;">-3, 3</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(Down (1 - p)\)</span></td>
-<td>-5, 5</td>
-<td>1, -1</td>
+<td style="text-align: right;">Down <span class="math inline">\((1 - p)\)</span></td>
+<td style="text-align: center;">-5, 5</td>
+<td style="text-align: center;">1, -1</td>
 </tr>
 </tbody>
 </table>
@@ -800,9 +787,13 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="practice-your-understanding-2" class="level2">
-<h2 class="anchored" data-anchor-id="practice-your-understanding-2">Practice your understanding</h2>
-<p>The correct answers to the previous two questions were: * <span class="math inline">\(U_1(Up) = 5q - 3, U_1(Down) = 1 - 6q\)</span>. * <span class="math inline">\(U_2(Up) = 5 - 7p, U_2(Down) = 4p - 1\)</span>.</p>
+<section id="practice-your-understanding-2" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="practice-your-understanding-2">Practice your understanding</h2>
+<p>The correct answers to the previous two questions were:</p>
+<ul>
+<li><span class="math inline">\(U_1(Up) = 5q - 3, U_1(Down) = 1 - 6q\)</span>.</li>
+<li><span class="math inline">\(U_2(Up) = 5 - 7p, U_2(Down) = 4p - 1\)</span>.</li>
+</ul>
 <p>Based on this, what are <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> in the MSNE of this game?</p>
 <div class="incremental">
 <ul class="incremental">
@@ -812,43 +803,56 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="an-msne-with-only-one-mixed-strategy" class="level2">
-<h2 class="anchored" data-anchor-id="an-msne-with-only-one-mixed-strategy">An MSNE With Only One Mixed Strategy</h2>
+<section id="multiple-msne-in-one-game" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="multiple-msne-in-one-game">Multiple MSNE in one game</h2>
 <p>Consider the following game table:</p>
+<div class="columns">
+<div class="column">
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th><span class="math inline">\(X~(q)\)</span></th>
-<th><span class="math inline">\(Y~(1 - q)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(X~(q)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Y~(1 - q)\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(A~(p)\)</span></td>
-<td>2, 2</td>
-<td>3, 2</td>
+<td style="text-align: right;"><span class="math inline">\(A~(p)\)</span></td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">3, 2</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(B~(1 - p)\)</span></td>
-<td>4, 3</td>
-<td>0, 0</td>
+<td style="text-align: right;"><span class="math inline">\(B~(1 - p)\)</span></td>
+<td style="text-align: center;">4, 3</td>
+<td style="text-align: center;">0, 0</td>
 </tr>
 </tbody>
 </table>
+</div><div class="column">
 <p>The players’ expected payoffs are:</p>
 <div class="incremental">
-<ul class="incremental">
-<li><span class="math inline">\(U_1(A) = 2q + 3(1 - q) = 2q + 3 - 3q = 3 - q\)</span>.</li>
-<li><span class="math inline">\(U_1(B) = 4q + 0(1 - q) = 4q\)</span>.</li>
-<li><span class="math inline">\(U_2(X) = 2p + 3(1 - p) = 2p + 3 - 3p = 3 - p\)</span>.</li>
-<li><span class="math inline">\(U_2(Y) = 2p + 0(1 - p) = 2p\)</span>.</li>
-</ul>
+<p><span class="math display">\[
+\begin{align*}
+U_1(A) &amp; = 2q + 3(1 - q) \\
+       &amp; = 2q + 3 - 3q \\
+       &amp; = 3 - q \\
+U_1(B) &amp; = 4q + 0(1 - q) \\
+       &amp; = 4q \\
+U_2(X) &amp; = 2p + 3(1 - p) \\
+       &amp; = 2p + 3 - 3p \\
+       &amp; = 3 - p \\
+U_2(Y) &amp; = 2p + 0(1 - p) \\
+       &amp; = 2p
+\end{align*}
+\]</span></p>
+</div>
+</div>
 </div>
 <hr>
 </section>
-<section id="an-msne-with-only-one-mixed-strategy-1" class="level2">
-<h2 class="anchored" data-anchor-id="an-msne-with-only-one-mixed-strategy-1">An MSNE With Only One Mixed Strategy</h2>
+<section id="multiple-msne-in-one-game-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="multiple-msne-in-one-game-1">Multiple MSNE in one game</h2>
 <p>Based on this, the conditions under which each player will use a mixed strategy are:</p>
 <p><span class="math display">\[
 \begin{align*}
@@ -861,40 +865,120 @@ q &amp;= 3/5 &amp; p &amp;= 1
 <div class="incremental">
 <ul class="incremental">
 <li>We’ve never seen anything like <span class="math inline">\(p = 1\)</span> in this context before…</li>
-<li><span class="math inline">\(p = 1\)</span> tells us that Player 2 will only play a mixed strategy if Player 1 only play A, which isn’t really a mixed strategy at all.</li>
+<li><strong>Player 2 will only mix</strong> if <strong>Player 1 only plays A</strong></li>
 <li>This usually occurs when one strategy <strong>weakly</strong> dominates another.</li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="an-msne-with-only-one-mixed-strategy-2" class="level2">
-<h2 class="anchored" data-anchor-id="an-msne-with-only-one-mixed-strategy-2">An MSNE With Only One Mixed Strategy</h2>
+<section id="multiple-msne-in-one-game-2" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-msne-in-one-game-2">Multiple MSNE in one game</h2>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="0602-mixing_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="0602-mixing_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="multiple-msne-in-one-game-3" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="multiple-msne-in-one-game-3">Multiple MSNE in one game</h2>
 <p>We can still approach this the same way that we have in the past:</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(X~(q)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Y~(1 - q)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(A~(p)\)</span></td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">3, 2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(B~(1 - p)\)</span></td>
+<td style="text-align: center;">4, 3</td>
+<td style="text-align: center;">0, 0</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column">
 <div class="incremental">
 <ul class="incremental">
-<li>Suppose that in the MSNE, Player 1 plays a (non-trivial) mixed strategy.</li>
+<li>Suppose in MSNE that Player 1 plays a (non-trivial) mixed strategy.</li>
 <li>Then Player 2 must also play a mixed strategy, in which q = 3/5.
 <ul class="incremental">
-<li>But Player 2 will mix if Player 1 plays p = 1, which is a trivial mixed strategy.</li>
+<li>But Player 2 will only mix if Player 1 plays p = 1, which is a trivial mixed strategy.</li>
 <li>This is a contradiction, <strong>there is no MSNE where Player 1 plays a non-trivial mixed strategy</strong></li>
 </ul></li>
 </ul>
 </div>
+</div>
+</div>
 <hr>
 </section>
-<section id="an-msne-with-only-one-mixed-strategy-3" class="level2">
-<h2 class="anchored" data-anchor-id="an-msne-with-only-one-mixed-strategy-3">An MSNE With Only One Mixed Strategy</h2>
-<p>Approach it the other way next: Suppose Player 2 plays a non-trivial mixed strategy. Then Player 1 must play A as a pure strategy.</p>
+<section id="multiple-msne-in-one-game-4" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="multiple-msne-in-one-game-4">Multiple MSNE in one game</h2>
+<p>Approach it the other way next:</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(X~(q)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Y~(1 - q)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(A~(p)\)</span></td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">3, 2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(B~(1 - p)\)</span></td>
+<td style="text-align: center;">4, 3</td>
+<td style="text-align: center;">0, 0</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column">
+<p>Suppose Player 2 plays a non-trivial mixed strategy.</p>
 <div class="incremental">
 <ul class="incremental">
+<li>Then Player 1 must play A as a pure strategy.</li>
 <li>Player 2 will play A if <span class="math inline">\(3 - q \geq 4q\)</span>, i.e.&nbsp;if <span class="math inline">\(3/5 \geq q\)</span>.</li>
 <li>This lets Player 2 play a non-trivial mixed strategy! There is no contradiction here.</li>
 </ul>
 </div>
+</div>
+</div>
 <hr>
 </section>
-<section id="an-msne-with-only-one-mixed-strategy-4" class="level2">
-<h2 class="anchored" data-anchor-id="an-msne-with-only-one-mixed-strategy-4">An MSNE with only one mixed strategy</h2>
+<section id="multiple-msne-in-one-game-5" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="multiple-msne-in-one-game-5">Multiple MSNE in one game</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>There are a range of MSNEs here: all strategy profiles <span class="math inline">\((1, 0), (q, 1 - q)\)</span>, in which <span class="math inline">\(q \in (0, 3/5]\)</span></li>
@@ -904,65 +988,44 @@ q &amp;= 3/5 &amp; p &amp;= 1
 </div>
 <hr>
 </section>
-<section id="graph-best-responses" class="level2">
-<h2 class="anchored" data-anchor-id="graph-best-responses">Graph Best Responses</h2>
+<section id="multiple-msne-in-one-game-6" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-msne-in-one-game-6">Multiple MSNE in one game</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the best response function for the Police Officer</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>BR1 <span class="ot">&lt;-</span> <span class="cf">function</span>(q) {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(q <span class="sc">&lt;=</span> <span class="dv">3</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the best response function for the Drug Dealer</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>BR2 <span class="ot">&lt;-</span> <span class="cf">function</span>(p) {</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(p <span class="sc">==</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a sequence of values for d and p from 0 to 1</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>q_values <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>p_values <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the best responses for each value of d and p</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>responses1 <span class="ot">&lt;-</span> <span class="fu">sapply</span>(q_values, BR1)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>responses2 <span class="ot">&lt;-</span> <span class="fu">sapply</span>(p_values, BR2)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame for plotting</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">q =</span> q_values,</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">BR1 =</span> responses1,</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">p =</span> p_values,</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">BR2 =</span> responses2</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the best response functions</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data) <span class="sc">+</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="fu">aes</span>(<span class="at">x =</span> BR2, <span class="at">y =</span> p, <span class="at">color =</span> <span class="st">"BR_2"</span>), <span class="at">direction =</span> <span class="st">"vh"</span>) <span class="sc">+</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="fu">aes</span>(<span class="at">x =</span> q, <span class="at">y =</span> BR1, <span class="at">color =</span> <span class="st">"BR_1"</span>), <span class="at">direction =</span> <span class="st">"hv"</span>) <span class="sc">+</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="fl">0.6</span>, <span class="at">y =</span> <span class="dv">1</span>, <span class="at">yend =</span> <span class="dv">1</span>), <span class="at">color =</span> <span class="st">"green"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Best Response Functions for Mixed Strategy Nash Equilibrium"</span>,</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"p"</span>,</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"q"</span>,</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Best Response"</span>) <span class="sc">+</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame for plotting</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">q =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">3</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">3</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">1</span>),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">BR1 =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">p =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">BR2 =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the best response functions</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data) <span class="sc">+</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="fu">aes</span>(<span class="at">x =</span> q, <span class="at">y =</span> BR1, <span class="at">color =</span> <span class="st">"BR_1"</span>), <span class="at">direction =</span> <span class="st">"hv"</span>, <span class="at">linewidth =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="fu">aes</span>(<span class="at">x =</span> BR2, <span class="at">y =</span> p, <span class="at">color =</span> <span class="st">"BR_2"</span>), <span class="at">direction =</span> <span class="st">"vh"</span>, <span class="at">linewidth =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">3</span><span class="sc">/</span><span class="dv">5</span>, <span class="at">xend =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"MSNE"</span>), <span class="at">linewidth =</span> <span class="fl">1.5</span>, <span class="at">linetype =</span> <span class="st">"dotted"</span>) <span class="sc">+</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">0</span>, <span class="at">y=</span><span class="dv">1</span>, <span class="at">color =</span> <span class="st">"PSNE"</span>), <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span>, <span class="at">y=</span><span class="dv">0</span>, <span class="at">color =</span> <span class="st">"PSNE"</span>), <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Best Response Functions for Mixed Strategy Nash Equilibrium"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"q"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"p"</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Best Response"</span>) <span class="sc">+</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in geom_segment(aes(x = 0, xend = 0.6, y = 1, yend = 1), color = "green", : All aesthetics have length 1, but the data has 6 rows.
-ℹ Please consider using `annotate()` or provide this layer with data containing
-  a single row.</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="0602-mixing_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="0602-mixing_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <hr>
 </section>
-<section id="absence-of-msnes" class="level2">
-<h2 class="anchored" data-anchor-id="absence-of-msnes">Absence of MSNEs</h2>
+<section id="absence-of-msnes" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="absence-of-msnes">Absence of MSNEs</h2>
 <p>Let us return to the Prisoner’s Dilemma and check for MSNEs:</p>
 <table class="caption-top table">
 <thead>
@@ -996,8 +1059,8 @@ q &amp;= 3/5 &amp; p &amp;= 1
 </div>
 <hr>
 </section>
-<section id="absence-of-msnes-1" class="level2">
-<h2 class="anchored" data-anchor-id="absence-of-msnes-1">Absence of MSNEs</h2>
+<section id="absence-of-msnes-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="absence-of-msnes-1">Absence of MSNEs</h2>
 <p>Guido will play a mixed strategy if:</p>
 <p><span class="math display">\[
 \begin{align*}
@@ -1018,8 +1081,8 @@ q &amp;= -1/9
 </div>
 <hr>
 </section>
-<section id="getting-bad-probabilities" class="level2">
-<h2 class="anchored" data-anchor-id="getting-bad-probabilities">Getting Bad Probabilities</h2>
+<section id="getting-bad-probabilities" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="getting-bad-probabilities">Getting Bad Probabilities</h2>
 <p>If you’ve solved for a player’s mixed strategy and you find that the probability is <strong>less than 0</strong>, or <strong>more than 1</strong>:</p>
 <div class="incremental">
 <ul class="incremental">

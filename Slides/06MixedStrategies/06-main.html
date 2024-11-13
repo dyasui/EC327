@@ -30,71 +30,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -411,6 +346,315 @@ Dante Yasui
 <p><span class="hi big">Outline</span></p>
 </div>
 </section>
+<section id="mixed-strategies-in-penalty-kicks" class="slide level2">
+<h2>Mixed Strategies in Penalty Kicks</h2>
+<p>Why might mixed strategies be useful in analyzing behavior of kickers and goalies in penalty shootouts?</p>
+<div>
+<ul>
+<li class="fragment">reaction times <span class="math inline">\(\rightarrow\)</span> essentially <span class="hi">simultaneous game</span></li>
+<li class="fragment"><span class="hi">zero-sum</span> game with incentive to <em>keep the other player guessing</em></li>
+<li class="fragment">modelling observed strategies chosen as <span class="h">random variables</span>
+<ul>
+<li class="fragment">specific empirical statistics can be compared to their theoretical values</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="x2-penalty-kick-game" class="slide level2 smaller">
+<h2>2x2 Penalty Kick Game</h2>
+<h3 id="simplest-form-of-this-game">Simplest form of this game,</h3>
+<p>(prob of making goal is either 0% or 100%)</p>
+<div class="columns">
+<div class="column smaller" style="width:35%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Kicker, Goalie</th>
+<th style="text-align: center;"><span class="math inline">\(Left_g\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Right_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(Left_k\)</span></td>
+<td style="text-align: center;">0.3, <u>0.7</u></td>
+<td style="text-align: center;"><u>0.9</u>, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(Right_k\)</span></td>
+<td style="text-align: center;"><u>0.9</u>, 0.1</td>
+<td style="text-align: center;">0.3, <u>0.7</u></td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:65%;">
+<p>What should the Kicker do?</p>
+<div>
+<ul>
+<li class="fragment"><em>Purely</em> <strong>Left</strong> means goalie could block by always going <strong>Left</strong> <sup>1</sup></li>
+<li class="fragment"><em>Purely</em> <strong>Right</strong> means goalie could block by always going <strong>Right</strong></li>
+<li class="fragment">So a rational strategy must be a <strong>random mix</strong> between both <em>pure</em> strategies</li>
+</ul>
+</div>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Recall that we are defining the direction according to the kicker’s perspective</p></li></ol></aside></section>
+<section id="x2-penalty-kick-game-1" class="slide level2 smaller">
+<h2>2x2 Penalty Kick Game</h2>
+<p>If the Kicker is going to mix, a good place to strat might be <span class="h">50% Left, 50% Right</span></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Kicker, Goalie</th>
+<th style="text-align: center;"><span class="math inline">\(Left_g\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Right_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(Left_k\)</span></td>
+<td style="text-align: center;">0.3, 0.7</td>
+<td style="text-align: center;">0.9, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(Right_k\)</span></td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.3, 0.7</td>
+</tr>
+</tbody>
+</table>
+<p>Does this work?</p>
+<div class="columns">
+<div class="column smaller" style="width:50%;">
+<p><strong>Goalie’s</strong> expected utility of <span class="math inline">\(Left_g\)</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(= 0.7(0.5) + 0.1(0.5)\)</span></li>
+<li class="fragment"><span class="math inline">\(= 0.35 + 0.05\)</span></li>
+<li class="fragment"><span class="math inline">\(= 0.4\)</span></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<p><strong>Goalie’s</strong> expected utility of <span class="math inline">\(Right_g\)</span></p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(= 0.1(0.5) + 0.7(0.5)\)</span></li>
+<li class="fragment"><span class="math inline">\(= 0.05 + 0.35\)</span></li>
+<li class="fragment"><span class="math inline">\(= 0.4\)</span></li>
+</ul>
+</div>
+</div></div>
+<div class="fragment">
+<ul>
+<li>So the 50:50 mix makes the goalie <strong><em>indifferent</em></strong> between <span class="math inline">\(Left_g\)</span> and <span class="math inline">\(Right_g\)</span></li>
+</ul>
+</div>
+</section>
+<section id="x2-penalty-kick-game-2" class="slide level2 smaller">
+<h2>2x2 Penalty Kick Game</h2>
+<h3 id="opponent-indifference-property">Opponent Indifference Property</h3>
+<p><strong>Goalie’s</strong> expected utility of each strategy depends on the degree to which Kicker plays <span class="math inline">\(Left_k\)</span> vs <span class="math inline">\(Right_k\)</span>:</p>
+<div class="columns">
+<div class="column smaller" style="width:35%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Kicker, Goalie</th>
+<th style="text-align: center;"><span class="math inline">\(Left_g\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Right_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(Left_k\)</span></td>
+<td style="text-align: center;">0.3, 0.7</td>
+<td style="text-align: center;">0.9, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(Right_k\)</span></td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.3, 0.7</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:55%;">
+<p>When should the <strong>Goalie</strong> choose <span class="math inline">\(Left_g\)</span>?</p>
+<div>
+<ul>
+<li class="fragment">When <span class="math inline">\(EU_g(Left_g) \geq EU_g(Right_g)\)</span></li>
+<li class="fragment"><span class="math inline">\(\Rightarrow 0.1 + 0.6p \geq 0.7 - 0.6p\)</span></li>
+<li class="fragment"><span class="math inline">\(\Rightarrow 1.2p \geq 0.6\)</span></li>
+<li class="fragment"><span class="math inline">\(\Rightarrow p \geq \frac{1}{2}\)</span></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="x2-penalty-kick-game-3" class="slide level2 smaller">
+<h2>2x2 Penalty Kick Game</h2>
+<h3 id="opponent-indifference-property-1">Opponent Indifference Property</h3>
+<div class="columns">
+<div class="column smaller" style="width:35%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Kicker, Goalie</th>
+<th style="text-align: center;"><span class="math inline">\(Left_g\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Right_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(Left_k~(p)\)</span></td>
+<td style="text-align: center;">0.3, 0.7</td>
+<td style="text-align: center;">0.9, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(Right_k~(1-p)\)</span></td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.3, 0.7</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:55%;">
+<p>When should the <strong>Goalie</strong> choose <span class="math inline">\(Left_g\)</span>?</p>
+<div>
+<ul>
+<li class="fragment">If <span class="math inline">\(p&gt;\frac{1}{2}\)</span>, then it’s always better to <span class="math inline">\(Left_g\)</span></li>
+<li class="fragment">If <span class="math inline">\(p&lt;\frac{1}{2}\)</span>, then it’s always better to <span class="math inline">\(Right_g\)</span>
+<ul>
+<li class="fragment">In either case, the <strong>Goalie</strong> could <em>exploit</em> knowledge<sup>1</sup> of <span class="math inline">\(p\)</span></li>
+</ul></li>
+<li class="fragment">If <span class="math inline">\(p=\frac{1}{2}\)</span>, then either one is rational</li>
+</ul>
+</div>
+</div><p>The <strong>Goalie’s</strong> <em>indifference</em> means there’s no opportunity to expliot</p>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p><em>or beliefs</em></p></li></ol></aside></section>
+<section id="x2-penalty-kick-game-4" class="slide level2 smaller">
+<h2>2x2 Penalty Kick Game</h2>
+<div class="columns">
+<div class="column smaller" style="width:35%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Kicker, Goalie</th>
+<th style="text-align: center;"><span class="math inline">\(Left_g\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Right_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(Left_k\)</span></td>
+<td style="text-align: center;">0.3, 0.7</td>
+<td style="text-align: center;">0.9, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(Right_k\)</span></td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.3, 0.7</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:60%;">
+<p>So what should the <strong>Kicker</strong> do?</p>
+<div>
+<ul>
+<li class="fragment">Set <span class="math inline">\(p\)</span> equal to exactly 1/2</li>
+<li class="fragment">Anything else would result in a lower payoff:</li>
+<li class="fragment"><span class="math inline">\(EU_k(p &lt; \frac{1}{2} | Left_g) = 0.3p + 0.9(1-p) = 0.9 - 0.6p\)</span></li>
+<li class="fragment"><span class="math inline">\(EU_k(p &gt; \frac{1}{2} | Right_g) = 0.9p + 0.3(1-p) = 0.3 + 0.6p\)</span></li>
+<li class="fragment"><span class="math inline">\(EU_k(p = \frac{1}{2}) = 0.6\)</span></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="x2-penalty-kick-game-5" class="slide level2 smaller">
+<h2>2x2 Penalty Kick Game</h2>
+<div class="columns">
+<div class="column smaller" style="width:35%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Kicker, Goalie</th>
+<th style="text-align: center;"><span class="math inline">\(Left_g\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Right_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(Left_k\)</span></td>
+<td style="text-align: center;">0.3, 0.7</td>
+<td style="text-align: center;">0.9, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(Right_k\)</span></td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.3, 0.7</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:60%;">
+<ul>
+<li>So the <strong>Kicker</strong> should play <span class="math inline">\(Left_k\)</span> 50% of the time, <span class="math inline">\(Right_k\)</span> 50%</li>
+<li>the <strong>Goalie</strong> should play <span class="math inline">\(Left_g\)</span> 50% of the time, <span class="math inline">\(Right_g\)</span> 50%</li>
+<li>In this mixed-strategy Nash equilibrium, both players are <em>indifferent</em> between either of their pure strategies</li>
+<li>The kicker’s probability of scoring is 0.6 <em>no matter what direction they choose</em></li>
+</ul>
+</div></div>
+<!--## Mixed Strategies in 3x3 Penalty Shootout {.smaller}-->
+<!---->
+<!--| Kicker, Goalie |     L    |     C    |     R    |-->
+<!--|:--------------:+:--------:+:--------:+:--------:|-->
+<!--|        L       | 0.3, 0.7 | 0.9, 0.1 | 0.9, 0.1 |-->
+<!--|        C       | 0.6, 0.4 |   0, 1   | 0.6, 0.4 |-->
+<!--|        R       | 0.9, 0.1 | 0.9, 0.1 | 0.3, 0.7 |-->
+<!---->
+<!--Let's define:-->
+<!---->
+<!--:::: {.columns}-->
+<!--::: {.column}-->
+<!--  * $\ell_k$ the **Kicker's** probabilty of kicking Left-->
+<!--  * $c_k$ the **Kicker's** probabilty of kicking Center-->
+<!--  * $r_k$ the **Kicker's** probabilty of kicking Right-->
+<!--:::-->
+<!--::: {.column}-->
+<!--  * $\ell_g$ the **Goalie's** probabilty of kicking Left-->
+<!--  * $c_g$ the **Goalie's** probabilty of kicking Center-->
+<!--  * $r_g$ the **Goalie's** probabilty of kicking Right-->
+<!--:::-->
+<!--::::-->
+<!---->
+<!------->
+<!---->
+<!--## Mixed Strategies in 3x3 Penalty Shootout {.smaller}-->
+<!---->
+<!--| Kicker, Goalie |     L    |     C    |     R    |-->
+<!--|:--------------:+:--------:+:--------:+:--------:|-->
+<!--|        L       | 0.3, 0.7 | 0.9, 0.1 | 0.9, 0.1 |-->
+<!--|        C       | 0.6, 0.4 |   0, 1   | 0.6, 0.4 |-->
+<!--|        R       | 0.9, 0.1 | 0.9, 0.1 | 0.3, 0.7 |-->
+<!---->
+<!--::::: {.columns}-->
+<!--:::: {.incremental}-->
+<!---->
+<!--::: {.column}-->
+<!--The Kicker's expected utility depends on $\sigma_g$:-->
+<!---->
+<!--  * $EU_k(L_k, \sigma_g) = 0.3\ell_g + 0.9c_g + 0.9r_g$-->
+<!--  * $EU_k(C_k, \sigma_g) = 0.6\ell_g + 0c_g + 0.6r_g$-->
+<!--  * $EU_k(R_k, \sigma_g) = 0.9\ell_g + 0.9c_g + 0.3r_g$-->
+<!--:::-->
+<!--::: {.column}-->
+<!---->
+<!--The Goalie's expected utility depends on $sigma_k$:-->
+<!---->
+<!--  * $EU_g(L_g, \sigma_k) = 0.7\ell_k + 0.4c_g + 0.1r_g$-->
+<!--  * $EU_g(C_g, \sigma_k) = 0.1\ell_g + 1c_g + 0.1r_g$-->
+<!--  * $EU_g(R_g, \sigma_k) = 0.1\ell_g + 0.4c_g + 0.7r_g$-->
+<!--:::-->
+<!--::::-->
+<!--:::::-->
+<!------->
+</section>
 <section id="thinking-about-randomness" class="slide level2">
 <h2>Thinking about Randomness</h2>
 <blockquote>
@@ -419,7 +663,7 @@ Dante Yasui
 <ul>
 <li>Albert Einstein <sup>1</sup></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>1926, Letter to Max Born, published in 1971, Irene Born (translator), The Born-Einstein Letters, Walker and Company, New York</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>1926, Letter to Max Born, published in 1971, Irene Born (translator), The Born-Einstein Letters, Walker and Company, New York</p></li></ol></aside></section>
 <section id="thinking-about-randomness-1" class="slide level2">
 <h2>Thinking about Randomness</h2>
 <blockquote>
@@ -428,7 +672,7 @@ Dante Yasui
 <ul>
 <li>Ariel Rubenstein <sup>1</sup></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>“John Nash: The Master of Economic Modeling.” The Scandinavian Journal of Economics 97, no. 1 (1995): 9–13. https://doi.org/10.2307/3440824.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>“John Nash: The Master of Economic Modeling.” The Scandinavian Journal of Economics 97, no. 1 (1995): 9–13. https://doi.org/10.2307/3440824.</p></li></ol></aside></section>
 <section id="thinking-about-randomness-2" class="slide level2">
 <h2>Thinking about Randomness</h2>
 <p>Why should we use mixed strategies?!</p>
@@ -698,7 +942,7 @@ Dante Yasui
 <h2>Internal Uncertainty</h2>
 <div>
 <ul>
-<li class="fragment"><p>Now that we discussed <em>external uncertainty</em> over <em>states of nature</em>, let’s talk about <a href="#/internal-uncertainty">internal uncertainty</a>{.hi.</p>
+<li class="fragment"><p>Now that we discussed <em>external uncertainty</em> over <em>states of nature</em>, let’s talk about <span class="hi">internal uncertainty</span></p>
 <ul>
 <li class="fragment"><p>Internal uncertainty occurs when one or more players pick their strategies randomly.</p></li>
 <li class="fragment"><p>Picking a strategy at random is really just a different kind of strategy, called a <span class="hi">mixed strategy</span>.</p></li>
@@ -851,7 +1095,7 @@ Dante Yasui
 </ul>
 </div>
 </section>
-<section id="another-example-police-patrol-and-drug-trade" class="slide level2">
+<section id="another-example-police-patrol-and-drug-trade" class="slide level2 smaller">
 <h2>Another Example: Police Patrol and Drug Trade</h2>
 <table class="caption-top">
 <thead>
@@ -909,7 +1153,7 @@ Dante Yasui
 </ul>
 </div>
 </div></div>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>Harrington, pg. 226</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn5"><p>Harrington, pg. 226</p></li></ol></aside></section>
 <section id="msne-in-patrol-and-trade-game" class="slide level2">
 <h2>MSNE in Patrol and Trade game:</h2>
 <ul>
@@ -939,27 +1183,27 @@ Dante Yasui
 <li><p>Notice that it isn’t a 50:50, it is more likely that both meet in the Park than it is likely that they both meet in the Streets</p></li>
 </ul>
 </section>
-<section id="practice-your-understanding" class="slide level2">
+<section id="practice-your-understanding" class="slide level2 smaller">
 <h2>Practice your understanding</h2>
 <p>Consider the following game table. What are Player 1’s expected payoffs, given Player 2’s mixed strategy?</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th><span class="math inline">\(Up (q)\)</span></th>
-<th><span class="math inline">\(Down (1 - q)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;">Up <span class="math inline">\((q)\)</span></th>
+<th style="text-align: center;">Down <span class="math inline">\((1 - q)\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(Up (p)\)</span></td>
-<td>2, -2</td>
-<td>-3, 3</td>
+<td style="text-align: right;">Up <span class="math inline">\((p)\)</span></td>
+<td style="text-align: center;">2, -2</td>
+<td style="text-align: center;">-3, 3</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(Down (1 - p)\)</span></td>
-<td>-5, 5</td>
-<td>1, -1</td>
+<td style="text-align: right;">Down <span class="math inline">\((1 - p)\)</span></td>
+<td style="text-align: center;">-5, 5</td>
+<td style="text-align: center;">1, -1</td>
 </tr>
 </tbody>
 </table>
@@ -970,27 +1214,27 @@ Dante Yasui
 </ul>
 </div>
 </section>
-<section id="practice-your-understanding-1" class="slide level2">
+<section id="practice-your-understanding-1" class="slide level2 smaller">
 <h2>Practice your understanding</h2>
 <p>Consider the following game table. What are <strong>Player 2’s</strong> expected payoffs, given Player 1’s mixed strategy?</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th><span class="math inline">\(Up (q)\)</span></th>
-<th><span class="math inline">\(Down (1 - q)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;">Up <span class="math inline">\((q)\)</span></th>
+<th style="text-align: center;">Down <span class="math inline">\((1 - q)\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(Up (p)\)</span></td>
-<td>2, -2</td>
-<td>-3, 3</td>
+<td style="text-align: right;">Up <span class="math inline">\((p)\)</span></td>
+<td style="text-align: center;">2, -2</td>
+<td style="text-align: center;">-3, 3</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(Down (1 - p)\)</span></td>
-<td>-5, 5</td>
-<td>1, -1</td>
+<td style="text-align: right;">Down <span class="math inline">\((1 - p)\)</span></td>
+<td style="text-align: center;">-5, 5</td>
+<td style="text-align: center;">1, -1</td>
 </tr>
 </tbody>
 </table>
@@ -1001,9 +1245,13 @@ Dante Yasui
 </ul>
 </div>
 </section>
-<section id="practice-your-understanding-2" class="slide level2">
+<section id="practice-your-understanding-2" class="slide level2 smaller">
 <h2>Practice your understanding</h2>
-<p>The correct answers to the previous two questions were: * <span class="math inline">\(U_1(Up) = 5q - 3, U_1(Down) = 1 - 6q\)</span>. * <span class="math inline">\(U_2(Up) = 5 - 7p, U_2(Down) = 4p - 1\)</span>.</p>
+<p>The correct answers to the previous two questions were:</p>
+<ul>
+<li><span class="math inline">\(U_1(Up) = 5q - 3, U_1(Down) = 1 - 6q\)</span>.</li>
+<li><span class="math inline">\(U_2(Up) = 5 - 7p, U_2(Down) = 4p - 1\)</span>.</li>
+</ul>
 <p>Based on this, what are <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> in the MSNE of this game?</p>
 <div>
 <ul>
@@ -1012,42 +1260,54 @@ Dante Yasui
 </ul>
 </div>
 </section>
-<section id="an-msne-with-only-one-mixed-strategy" class="slide level2">
-<h2>An MSNE With Only One Mixed Strategy</h2>
+<section id="multiple-msne-in-one-game" class="slide level2 smaller">
+<h2>Multiple MSNE in one game</h2>
 <p>Consider the following game table:</p>
+<div class="columns">
+<div class="column">
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th><span class="math inline">\(X~(q)\)</span></th>
-<th><span class="math inline">\(Y~(1 - q)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(X~(q)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Y~(1 - q)\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(A~(p)\)</span></td>
-<td>2, 2</td>
-<td>3, 2</td>
+<td style="text-align: right;"><span class="math inline">\(A~(p)\)</span></td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">3, 2</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(B~(1 - p)\)</span></td>
-<td>4, 3</td>
-<td>0, 0</td>
+<td style="text-align: right;"><span class="math inline">\(B~(1 - p)\)</span></td>
+<td style="text-align: center;">4, 3</td>
+<td style="text-align: center;">0, 0</td>
 </tr>
 </tbody>
 </table>
+</div><div class="column">
 <p>The players’ expected payoffs are:</p>
 <div>
-<ul>
-<li class="fragment"><span class="math inline">\(U_1(A) = 2q + 3(1 - q) = 2q + 3 - 3q = 3 - q\)</span>.</li>
-<li class="fragment"><span class="math inline">\(U_1(B) = 4q + 0(1 - q) = 4q\)</span>.</li>
-<li class="fragment"><span class="math inline">\(U_2(X) = 2p + 3(1 - p) = 2p + 3 - 3p = 3 - p\)</span>.</li>
-<li class="fragment"><span class="math inline">\(U_2(Y) = 2p + 0(1 - p) = 2p\)</span>.</li>
-</ul>
+<p><span class="math display">\[
+\begin{align*}
+U_1(A) &amp; = 2q + 3(1 - q) \\
+       &amp; = 2q + 3 - 3q \\
+       &amp; = 3 - q \\
+U_1(B) &amp; = 4q + 0(1 - q) \\
+       &amp; = 4q \\
+U_2(X) &amp; = 2p + 3(1 - p) \\
+       &amp; = 2p + 3 - 3p \\
+       &amp; = 3 - p \\
+U_2(Y) &amp; = 2p + 0(1 - p) \\
+       &amp; = 2p
+\end{align*}
+\]</span></p>
 </div>
+</div></div>
 </section>
-<section id="an-msne-with-only-one-mixed-strategy-1" class="slide level2">
-<h2>An MSNE With Only One Mixed Strategy</h2>
+<section id="multiple-msne-in-one-game-1" class="slide level2 smaller">
+<h2>Multiple MSNE in one game</h2>
 <p>Based on this, the conditions under which each player will use a mixed strategy are:</p>
 <p><span class="math display">\[
 \begin{align*}
@@ -1060,37 +1320,114 @@ q &amp;= 3/5 &amp; p &amp;= 1
 <div>
 <ul>
 <li class="fragment">We’ve never seen anything like <span class="math inline">\(p = 1\)</span> in this context before…</li>
-<li class="fragment"><span class="math inline">\(p = 1\)</span> tells us that Player 2 will only play a mixed strategy if Player 1 only play A, which isn’t really a mixed strategy at all.</li>
+<li class="fragment"><strong>Player 2 will only mix</strong> if <strong>Player 1 only plays A</strong></li>
 <li class="fragment">This usually occurs when one strategy <strong>weakly</strong> dominates another.</li>
 </ul>
 </div>
 </section>
-<section id="an-msne-with-only-one-mixed-strategy-2" class="slide level2">
-<h2>An MSNE With Only One Mixed Strategy</h2>
+<section id="multiple-msne-in-one-game-2" class="slide level2">
+<h2>Multiple MSNE in one game</h2>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="06-main_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="06-main_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="multiple-msne-in-one-game-3" class="slide level2 smaller">
+<h2>Multiple MSNE in one game</h2>
 <p>We can still approach this the same way that we have in the past:</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(X~(q)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Y~(1 - q)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(A~(p)\)</span></td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">3, 2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(B~(1 - p)\)</span></td>
+<td style="text-align: center;">4, 3</td>
+<td style="text-align: center;">0, 0</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column">
 <div>
 <ul>
-<li class="fragment">Suppose that in the MSNE, Player 1 plays a (non-trivial) mixed strategy.</li>
+<li class="fragment">Suppose in MSNE that Player 1 plays a (non-trivial) mixed strategy.</li>
 <li class="fragment">Then Player 2 must also play a mixed strategy, in which q = 3/5.
 <ul>
-<li class="fragment">But Player 2 will mix if Player 1 plays p = 1, which is a trivial mixed strategy.</li>
+<li class="fragment">But Player 2 will only mix if Player 1 plays p = 1, which is a trivial mixed strategy.</li>
 <li class="fragment">This is a contradiction, <strong>there is no MSNE where Player 1 plays a non-trivial mixed strategy</strong></li>
 </ul></li>
 </ul>
 </div>
+</div></div>
 </section>
-<section id="an-msne-with-only-one-mixed-strategy-3" class="slide level2">
-<h2>An MSNE With Only One Mixed Strategy</h2>
-<p>Approach it the other way next: Suppose Player 2 plays a non-trivial mixed strategy. Then Player 1 must play A as a pure strategy.</p>
+<section id="multiple-msne-in-one-game-4" class="slide level2 smaller">
+<h2>Multiple MSNE in one game</h2>
+<p>Approach it the other way next:</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(X~(q)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Y~(1 - q)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(A~(p)\)</span></td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">3, 2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(B~(1 - p)\)</span></td>
+<td style="text-align: center;">4, 3</td>
+<td style="text-align: center;">0, 0</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column">
+<p>Suppose Player 2 plays a non-trivial mixed strategy.</p>
 <div>
 <ul>
+<li class="fragment">Then Player 1 must play A as a pure strategy.</li>
 <li class="fragment">Player 2 will play A if <span class="math inline">\(3 - q \geq 4q\)</span>, i.e.&nbsp;if <span class="math inline">\(3/5 \geq q\)</span>.</li>
 <li class="fragment">This lets Player 2 play a non-trivial mixed strategy! There is no contradiction here.</li>
 </ul>
 </div>
+</div></div>
 </section>
-<section id="an-msne-with-only-one-mixed-strategy-4" class="slide level2">
-<h2>An MSNE with only one mixed strategy</h2>
+<section id="multiple-msne-in-one-game-5" class="slide level2 smaller">
+<h2>Multiple MSNE in one game</h2>
 <div>
 <ul>
 <li class="fragment">There are a range of MSNEs here: all strategy profiles <span class="math inline">\((1, 0), (q, 1 - q)\)</span>, in which <span class="math inline">\(q \in (0, 3/5]\)</span></li>
@@ -1099,11 +1436,11 @@ q &amp;= 3/5 &amp; p &amp;= 1
 </ul>
 </div>
 </section>
-<section id="graph-best-responses" class="slide level2">
-<h2>Graph Best Responses</h2>
+<section id="multiple-msne-in-one-game-6" class="slide level2">
+<h2>Multiple MSNE in one game</h2>
 
-<img data-src="06-main_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
-<section id="absence-of-msnes" class="slide level2">
+<img data-src="06-main_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="absence-of-msnes" class="slide level2 smaller">
 <h2>Absence of MSNEs</h2>
 <p>Let us return to the Prisoner’s Dilemma and check for MSNEs:</p>
 <table class="caption-top">
@@ -1137,7 +1474,7 @@ q &amp;= 3/5 &amp; p &amp;= 1
 </ul>
 </div>
 </section>
-<section id="absence-of-msnes-1" class="slide level2">
+<section id="absence-of-msnes-1" class="slide level2 smaller">
 <h2>Absence of MSNEs</h2>
 <p>Guido will play a mixed strategy if:</p>
 <p><span class="math display">\[
@@ -1158,7 +1495,7 @@ q &amp;= -1/9
 </ul>
 </div>
 </section>
-<section id="getting-bad-probabilities" class="slide level2">
+<section id="getting-bad-probabilities" class="slide level2 smaller">
 <h2>Getting Bad Probabilities</h2>
 <p>If you’ve solved for a player’s mixed strategy and you find that the probability is <strong>less than 0</strong>, or <strong>more than 1</strong>:</p>
 <div>
@@ -1174,28 +1511,28 @@ q &amp;= -1/9
 </section>
 <section id="msne-in-a-larger-game" class="slide level2">
 <h2>MSNE in a Larger Game</h2>
-<p>Suppose that we have this 3$$2 game:</p>
+<p>Suppose that we have this 3x2 game:</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
 <th>X (r)</th>
 <th>Y (1 - r)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>A (p)</td>
+<td style="text-align: right;">A (p)</td>
 <td>2, 1</td>
 <td>0, 1</td>
 </tr>
 <tr class="even">
-<td>B (q)</td>
+<td style="text-align: right;">B (q)</td>
 <td>1, 2</td>
 <td>2, 0</td>
 </tr>
 <tr class="odd">
-<td>C (1 - p - q)</td>
+<td style="text-align: right;">C (z)</td>
 <td>0, 0</td>
 <td>3, 2</td>
 </tr>
@@ -1203,74 +1540,97 @@ q &amp;= -1/9
 </table>
 <div>
 <ul>
-<li class="fragment">Player 1’s mixed strategy uses probabilities p, q, and 1 - p - q, since they have three pure strategies.</li>
-<li class="fragment">As a rule of thumb, a player’s mixed strategy will need one variable less than their number of strategies.</li>
+<li class="fragment">Player 1’s mixed strategy uses probabilities p, q, and z, since they have three pure strategies.</li>
 </ul>
 </div>
 </section>
-<section id="msne-in-a-larger-game-1" class="slide level2">
+<section id="msne-in-a-larger-game-1" class="slide level2 smaller">
 <h2>MSNE in a Larger Game</h2>
+<div class="columns">
+<div class="column smaller" style="width:30%;">
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th>X (r)</th>
-<th>Y (1 - r)</th>
+<th style="text-align: center;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;">X (r)</th>
+<th style="text-align: center;">Y (1 - r)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>A (p)</td>
-<td>2, 1</td>
-<td>0, 1</td>
+<td style="text-align: center;">A (p)</td>
+<td style="text-align: center;">2, 1</td>
+<td style="text-align: center;">0, 1</td>
 </tr>
 <tr class="even">
-<td>B (q)</td>
-<td>1, 2</td>
-<td>2, 0</td>
+<td style="text-align: center;">B (q)</td>
+<td style="text-align: center;">1, 2</td>
+<td style="text-align: center;">2, 0</td>
 </tr>
 <tr class="odd">
-<td>C (1 - p - q)</td>
-<td>0, 0</td>
-<td>3, 2</td>
+<td style="text-align: center;">C (z)</td>
+<td style="text-align: center;">0, 0</td>
+<td style="text-align: center;">3, 2</td>
 </tr>
 </tbody>
 </table>
-<p>To begin with, let’s put together Player 1’s expected payoffs, of which there will be three: ::: {.incremental} * <span class="math inline">\(U_1(A) = 2r + 0 = 2r\)</span>. * <span class="math inline">\(U_1(B) = 1r + 2(1 - r) = 2 - r\)</span>. * <span class="math inline">\(U_1(C) = 0 + 3(1 - r) = 3 - 3r\)</span>. :::</p>
+</div><div class="column">
+<p>Let’s put together Player 1’s expected payoffs:</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(U_1(A) = 2r + 0 = 2r\)</span>.</li>
+<li class="fragment"><span class="math inline">\(U_1(B) = 1r + 2(1 - r) = 2 - r\)</span>.</li>
+<li class="fragment"><span class="math inline">\(U_1(C) = 0 + 3(1 - r) = 3 - 3r\)</span>.</li>
+</ul>
+</div>
+</div></div>
 </section>
-<section id="msne-in-a-larger-game-2" class="slide level2">
+<section id="msne-in-a-larger-game-2" class="slide level2 smaller">
 <h2>MSNE in a Larger Game</h2>
+<div class="columns">
+<div class="column smaller" style="width:30%;">
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th>X (r)</th>
-<th>Y (1 - r)</th>
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;">X (r)</th>
+<th style="text-align: center;">Y (1 - r)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>A (p)</td>
-<td>2, 1</td>
-<td>0, 1</td>
+<td style="text-align: right;">A (p)</td>
+<td style="text-align: center;">2, 1</td>
+<td style="text-align: center;">0, 1</td>
 </tr>
 <tr class="even">
-<td>B (q)</td>
-<td>1, 2</td>
-<td>2, 0</td>
+<td style="text-align: right;">B (q)</td>
+<td style="text-align: center;">1, 2</td>
+<td style="text-align: center;">2, 0</td>
 </tr>
 <tr class="odd">
-<td>C (1 - p - q)</td>
-<td>0, 0</td>
-<td>3, 2</td>
+<td style="text-align: right;">C (z)</td>
+<td style="text-align: center;">0, 0</td>
+<td style="text-align: center;">3, 2</td>
 </tr>
 </tbody>
 </table>
-<p>Next, let’s see what it would take to get Player 1 to mix different pairs of strategies: ::: {.incremental} * A and B: <span class="math inline">\(2r = 2 - r \implies r = \frac{2}{3}\)</span>. * A and C: <span class="math inline">\(2r = 3 - 3r \implies r = \frac{3}{5}\)</span>. * B and C: <span class="math inline">\(2 - r = 3 - 3r \implies r = \frac{1}{2}\)</span>. :::</p>
+</div><div class="column smaller">
+<p>Next, let’s see what it would take to get Player 1 to mix different pairs of strategies:</p>
+<div>
+<ul>
+<li class="fragment">A and B: <span class="math inline">\(2r = 2 - r \implies r = \frac{2}{3}\)</span>.</li>
+<li class="fragment">A and C: <span class="math inline">\(2r = 3 - 3r \implies r = \frac{3}{5}\)</span>.</li>
+<li class="fragment">B and C: <span class="math inline">\(2 - r = 3 - 3r \implies r = \frac{1}{2}\)</span>.</li>
+</ul>
+</div>
+</div></div>
 <p>Note that each pair of strategies requires a different value of <span class="math inline">\(r\)</span>: there is no mixed strategy for Player 2 that would make Player 1 willing to mix all three of their pure strategies.</p>
 </section>
-<section id="msne-in-a-larger-game-3" class="slide level2">
+<section id="msne-in-a-larger-game-3" class="slide level2 smaller">
 <h2>MSNE in a Larger Game</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1291,241 +1651,377 @@ q &amp;= -1/9
 <td>2, 0</td>
 </tr>
 <tr class="odd">
-<td>C (1 - p - q)</td>
+<td>C (z)</td>
 <td>0, 0</td>
 <td>3, 2</td>
 </tr>
 </tbody>
 </table>
-<p>Let’s check Player 2’s expected payoffs next: ::: {.incremental} * <span class="math inline">\(U_2(X) = 1p + 2q + 0\)</span>. * <span class="math inline">\(U_2(Y) = 1p + 0 + 2(1 - p - q)\)</span>. * So Player 2 will play a mixed strategy if <span class="math inline">\(p + 2q = p + 2(1 - p - q) \implies q = 1 - p - q\)</span>. * There are two ways that this can be true: Either Player 1 plays B and C with equal probability (and we know from earlier that they would <strong>only</strong> be playing these two, not A), or Player 1 plays A only, and B and C not at all. :::</p>
+</div><div class="column">
+<p>Let’s check Player 2’s expected payoffs next:</p>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(U_2(X) = 1p + 2q + 0\)</span>.</li>
+<li class="fragment"><span class="math inline">\(U_2(Y) = 1p + 0 + 2(z)\)</span>.</li>
+<li class="fragment">So Player 2 will play a mixed strategy if <span class="math inline">\(p + 2q = p + 2(z) \implies q = z\)</span>.</li>
+<li class="fragment">There are two ways that this can be true: Either Player 1 plays B and C with equal probability (and we know from earlier that they would <strong>only</strong> be playing these two, not A), or Player 1 plays A only, and B and C not at all.</li>
+</ul>
+</div>
+</div></div>
 </section>
-<section id="msne-in-a-larger-game-4" class="slide level2">
+<section id="msne-in-a-larger-game-4" class="slide level2 smaller">
 <h2>MSNE in a Larger Game</h2>
 <p>So, one type of MSNE is where Player 1 only plays A:</p>
-<p>this requires <span class="math inline">\(2r \geq 2 - r\)</span> and <span class="math inline">\(2r \geq 3 - 3r\)</span>, which imply that <span class="math inline">\(r \geq \frac{2}{3}\)</span> and <span class="math inline">\(r \geq \frac{3}{5}\)</span>. ::: {.incremental} * MSNE: <span class="math inline">\((1, 0, 0), (r, 1 - r)\)</span>, where <span class="math inline">\(r \geq \frac{2}{3}\)</span>. * And the other type of MSNE is where Player 1 plays B and C with equal (1/2) probability, and Player 2 plays X and Y with equal (1/2) probability. * MSNE: <span class="math inline">\((0, 1/2, 1/2), (1/2, 1/2)\)</span> :::</p>
+<p>this requires <span class="math inline">\(2r \geq 2 - r\)</span> and <span class="math inline">\(2r \geq 3 - 3r \Rightarrow r \geq \frac{2}{3}\)</span> and <span class="math inline">\(r \geq \frac{3}{5}\)</span>.</p>
+<div>
+<ul>
+<li class="fragment">MSNE: <span class="math inline">\((1, 0, 0), (r, 1 - r)\)</span>, where <span class="math inline">\(r \geq \frac{2}{3}\)</span>.</li>
+<li class="fragment">And the other type of MSNE is where Player 1 plays B and C with equal (1/2) probability, and Player 2 plays X and Y with equal (1/2) probability.</li>
+<li class="fragment">MSNE: <span class="math inline">\((0, 1/2, 1/2), (1/2, 1/2)\)</span></li>
+</ul>
+</div>
 </section>
 <section id="graph-player-1s-expected-utilities" class="slide level2">
 <h2>Graph Player 1’s expected utilities</h2>
-<div class="sourceCode" id="cb1" data-embed_mode="link" data-format="svg"><pre class="sourceCode numberSource tikz number-lines code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a></a><span class="kw">\begin</span>{<span class="ex">axis</span>}[</span>
-<span id="cb1-2"><a></a>  width=0.8<span class="fu">\textwidth</span>,</span>
-<span id="cb1-3"><a></a>  grid,</span>
-<span id="cb1-4"><a></a>  xlabel={prob. Player 2 plays <span class="ss">$X$</span> (<span class="ss">$r$</span>) },</span>
-<span id="cb1-5"><a></a>  ylabel={Exp. Utility of Player 1 (<span class="ss">$EU(r)$</span>)},</span>
-<span id="cb1-6"><a></a>  xmin=0, xmax=1.0,</span>
-<span id="cb1-7"><a></a>  ymin=-2, ymax=3,</span>
-<span id="cb1-8"><a></a>  xtick={0,.1,...,1.0},</span>
-<span id="cb1-9"><a></a>  ytick={-2, -1, 0, 1, 2, 3},</span>
-<span id="cb1-10"><a></a>  grid style=dashed,</span>
-<span id="cb1-11"><a></a>  ]</span>
-<span id="cb1-12"><a></a>  <span class="fu">\addplot</span>[draw=none] coordinates {(1,1)};</span>
-<span id="cb1-13"><a></a><span class="kw">\end</span>{<span class="ex">axis</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="when-will-player-1-mix" class="slide level2">
-<h2>When will Player 1 mix?</h2>
-<p>What it would take to get Player 1 to mix different pairs of strategies: ::: {.incremental} * A and B: <span class="math inline">\(2r = 2 - r \implies r = \frac{2}{3}\)</span>. * A and C: <span class="math inline">\(2r = 3 - 3r \implies r = \frac{3}{5}\)</span>. * B and C: <span class="math inline">\(2 - r = 3 - 3r \implies r = \frac{1}{2}\)</span>. * Note that there is no intersection between all three lines simultaneously * This means that Player 1 will never mix between all three strategies :::</p>
-</section>
-<section class="slide level2">
 
-<p>##MSNE in a Larger Game Let’s check Player 2’s expected payoffs next: ::: {.incremental} * <span class="math inline">\(U_2(X) = 1p + 2q + 0\)</span>. * <span class="math inline">\(U_2(Y) = 1p + 0 + 2(1 - p - q)\)</span>. * So Player 2 will play a mixed strategy if <span class="math display">\[p + 2q = p + 2(1 - p - q)\]</span> <span class="math display">\[\implies q = 1 - p - q\]</span>.</p>
-<ul>
-<li>Recall that <span class="math inline">\(q\)</span> was the probability we put on Player 2 playing <span class="math inline">\(B\)</span>,</li>
-<li>and <span class="math inline">\(1-p-q\)</span> was the probability they play <span class="math inline">\(C\)</span>. :::</li>
+<img data-src="06-main_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"><ul>
+<li>If <span class="math inline">\(q&lt;z\)</span> then <span class="math inline">\(BR_2 = \{X\}\)</span></li>
+<li>If <span class="math inline">\(q&gt;z\)</span> then <span class="math inline">\(BR_2 = \{Y\}\)</span></li>
+<li>If <span class="math inline">\(q=z\)</span> then <span class="math inline">\(BR_2 = \{X,Y,(r)\}\)</span></li>
 </ul>
 </section>
-<section id="visualizing-player-2s-best-responses" class="slide level2">
-<h2>visualizing Player 2’s Best Responses</h2>
-<div class="sourceCode" id="cb2" data-embed_mode="link" data-format="svg"><pre class="sourceCode numberSource tikz number-lines code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}</span>
-<span id="cb2-2"><a></a>  <span class="fu">\draw</span> (0,0) coordinate[label=below:<span class="ss">$A$</span>] (a) --</span>
-<span id="cb2-3"><a></a>  (5,0) coordinate[label=below:<span class="ss">$C$</span>] (c) --</span>
-<span id="cb2-4"><a></a>  (2.5, 4.3) coordinate[label=above:<span class="ss">$B$</span>] (b) -- cycle ;</span>
-<span id="cb2-5"><a></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="when-will-player-2-mix" class="slide level2">
-<h2>When will Player 2 mix?</h2>
-<p>We found they are indifferent between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> when <span class="math display">\[ q = 1 - p - d \]</span>.</p>
-<p>There are two ways that this can be true: ::: {.incremental} * Either Player 1 plays B and C with equal probability (and we know from earlier that they would <strong>only</strong> be playing these two, not A), * or Player 1 plays A only, and B and C not at all. :::</p>
+<section id="when-will-player-1-mix" class="slide level2 smaller">
+<h2>When will Player 1 mix?</h2>
+<p>What it would take to get Player 1 to mix different pairs of strategies:</p>
+<div>
+<ul>
+<li class="fragment">A and B: <span class="math inline">\(2r = 2 - r \implies r = \frac{2}{3}\)</span>.</li>
+<li class="fragment">A and C: <span class="math inline">\(2r = 3 - 3r \implies r = \frac{3}{5}\)</span>.</li>
+<li class="fragment">B and C: <span class="math inline">\(2 - r = 3 - 3r \implies r = \frac{1}{2}\)</span>.
+<ul>
+<li class="fragment">Note that there is no intersection between all three lines simultaneously</li>
+<li class="fragment">This means that Player 1 will never mix between all three strategies</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="msne-in-a-larger-game-5" class="slide level2">
 <h2>MSNE in a Larger Game</h2>
+<p>Let’s check Player 2’s expected payoffs next:</p>
+<div>
+<ul>
+<li class="fragment"><p><span class="math inline">\(U_2(X) = 1p + 2q + 0\)</span>.</p></li>
+<li class="fragment"><p><span class="math inline">\(U_2(Y) = 1p + 0 + 2(z)\)</span>.</p></li>
+<li class="fragment"><p>So Player 2 will play a mixed strategy if <span class="math display">\[p + 2q = p + 2(z)\]</span> <span class="math display">\[\implies q = z\]</span>.</p></li>
+<li class="fragment"><p>Recall that <span class="math inline">\(q\)</span> was the probability we put on Player 2 playing <span class="math inline">\(B\)</span>,</p></li>
+<li class="fragment"><p>and <span class="math inline">\(z\)</span> was the probability they play <span class="math inline">\(C\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="visualizing-player-2s-best-responses" class="slide level2">
+<h2>visualizing Player 2’s Best Responses</h2>
+
+<img data-src="06-main_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="when-will-player-2-mix" class="slide level2 smaller">
+<h2>When will Player 2 mix?</h2>
+<p>We found they are indifferent between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> when <span class="math display">\[ q = 1 - p - d \]</span>.</p>
+<p>There are two ways that this can be true:</p>
+<div>
+<ul>
+<li class="fragment">Either Player 1 plays B and C with equal probability (and we know from earlier that they would <strong>only</strong> be playing these two, not A),</li>
+<li class="fragment">or Player 1 plays A only, and B and C not at all.</li>
+</ul>
+</div>
+</section>
+<section id="msne-in-a-larger-game-6" class="slide level2 smaller">
+<h2>MSNE in a Larger Game</h2>
 <p><u>Case 1</u>: Player 1 only plays A:</p>
+<div class="columns">
+<div class="column">
 <div>
 <ul>
 <li class="fragment">this requires <span class="math inline">\(2r \geq 2 - r\)</span> and <span class="math inline">\(2r \geq 3 - 3r\)</span>,</li>
 <li class="fragment">which imply that <span class="math inline">\(r \geq \frac{2}{3}\)</span> and <span class="math inline">\(r \geq \frac{3}{5}\)</span>.</li>
-<li class="fragment"><strong>MSNE 1:</strong> <span class="math inline">\((1, 0, 0), (r, 1 - r)\)</span> where <span class="math inline">\(r \geq \frac{2}{3}\)</span>.</li>
+<li class="fragment"><strong>MSNE 1:</strong>
+<ul>
+<li class="fragment"><span class="math inline">\(\sigma_1 = (p = 1, q = 0, z = 0),\)</span></li>
+<li class="fragment"><span class="math inline">\(\sigma_2 = (r, 1 - r)\)</span> where <span class="math inline">\(r \geq \frac{2}{3}\)</span>.</li>
+</ul></li>
 </ul>
 </div>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="06-main_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
 </section>
-<section id="msne-in-a-larger-game-6" class="slide level2">
+<section id="msne-in-a-larger-game-7" class="slide level2 smaller">
 <h2>MSNE in a Larger Game</h2>
 <p><u>Case 2</u>: Player 1 plays <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> with equal probability</p>
+<div class="columns">
+<div class="column">
 <div>
 <ul>
 <li class="fragment">then Player 2 plays X and Y with equal (1/2) probability.</li>
-<li class="fragment"><strong>MSNE</strong>: <span class="math inline">\((0, 1/2, 1/2), (1/2, 1/2)\)</span></li>
+<li class="fragment"><strong>MSNE</strong>: <span class="math inline">\(\sigma_1 = (p = 0, q = 1/2, z = 1/2), \sigma_2 = (1/2, 1/2)\)</span></li>
 </ul>
 </div>
-</section>
-<section id="what-about-a-3x3-game" class="slide level2">
-<h2>What about a 3x3 game?</h2>
-<div class="line-block"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span> | Rock (<span class="math inline">\(r_2\)</span>) | Paper (<span class="math inline">\(p_2\)</span>) | Scissors (<span class="math inline">\(1-r_2-p_2\)</span>) |<br>
-Rock (<span class="math inline">\(r_1\)</span>) | 0, 0 | -1, 1 | 1, -1 |<br>
-Paper (<span class="math inline">\(p_1\)</span>) | 1, -1 | 0,0 | -1, 1 |<br>
-Scissors | -1, 1 | 1, -1 | 0, 0 |</div>
-</section>
-<section id="what-about-a-3x3-game-1" class="slide level2">
-<h2>What about a 3x3 game?</h2>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
 <div>
-<ul>
-<li class="fragment"><p>Rock, Paper, Scissors is a *symmetric} game, so let’s just pay attention to Player 1’s utility</p></li>
-<li class="fragment"><p>$EU_1(Rock | r_2, p_2) = $</p></li>
-<li class="fragment"><p>$EU_1(Paper | r_2, p_2) = $</p></li>
-<li class="fragment"><p>$EU_1(Scissors | r_2, p_2) = $</p></li>
-</ul>
+<figure>
+<p><img data-src="06-main_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+</figure>
 </div>
+</div>
+</div>
+</div></div>
 </section>
-<section id="visualizing-player-1s-best-responses" class="slide level2">
-<h2>visualizing Player 1’s Best Responses</h2>
-<div class="sourceCode" id="cb3" data-embed_mode="link" data-format="svg"><pre class="sourceCode numberSource tikz number-lines code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}</span>
-<span id="cb3-2"><a></a>  <span class="fu">\draw</span> (0,0) coordinate[label=below:<span class="ss">$Rock$</span>] (r) --</span>
-<span id="cb3-3"><a></a>  (8,0) coordinate[label=below:<span class="ss">$Paper$</span>] (p) --</span>
-<span id="cb3-4"><a></a>  (4, 7) coordinate[label=above:<span class="ss">$Scissors$</span>] (s) -- cycle ;</span>
-<span id="cb3-5"><a></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="solving-msne-in-a-3x3-game" class="slide level2">
+<h2>Solving MSNE in a 3x3 Game</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;">Left</th>
+<th style="text-align: center;">Center</th>
+<th style="text-align: center;">Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Top</td>
+<td style="text-align: center;">2, 1</td>
+<td style="text-align: center;">3, 0</td>
+<td style="text-align: center;">3, 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Middle</td>
+<td style="text-align: center;">3, 0</td>
+<td style="text-align: center;">0, 1</td>
+<td style="text-align: center;">3, 0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Bottom</td>
+<td style="text-align: center;">3, 0</td>
+<td style="text-align: center;">3, 0</td>
+<td style="text-align: center;">2, 1</td>
+</tr>
+</tbody>
+</table>
+<p>Any <em>pure</em> strategy NE?</p>
 </section>
-<section id="finding-msne-in-3x3-game" class="slide level2">
-<h2>Finding MSNE in 3x3 game</h2>
-<div class="columns">
-<div class="column">
-<div class="sourceCode" id="cb4" data-embed_mode="link" data-format="svg"><pre class="sourceCode numberSource tikz number-lines code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><a></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}</span>
-<span id="cb4-2"><a></a>  <span class="fu">\draw</span> (0,0) coordinate[label=below:<span class="ss">$Rock$</span>] (r) --</span>
-<span id="cb4-3"><a></a>  (4,0) coordinate[label=below:<span class="ss">$Paper$</span>] (p) --</span>
-<span id="cb4-4"><a></a>  (2, 3.5) coordinate[label=above:<span class="ss">$Scissors$</span>] (s) -- cycle ;</span>
-<span id="cb4-5"><a></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
-<span id="cb4-6"><a></a>:::</span>
-<span id="cb4-7"><a></a>::: {.column}</span>
-<span id="cb4-8"><a></a>```{.tikz embed_mode="link" format="svg"}</span>
-<span id="cb4-9"><a></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}</span>
-<span id="cb4-10"><a></a>  <span class="fu">\draw</span> (0,0) coordinate[label=below:<span class="ss">$Rock$</span>] (r) --</span>
-<span id="cb4-11"><a></a>  (4,0) coordinate[label=below:<span class="ss">$Paper$</span>] (p) --</span>
-<span id="cb4-12"><a></a>  (2, 3.5) coordinate[label=above:<span class="ss">$Scissors$</span>] (s) -- cycle ;</span>
-<span id="cb4-13"><a></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span>
-<span id="cb4-14"><a></a>:::</span>
-<span id="cb4-15"><a></a>::::</span>
-<span id="cb4-16"><a></a>---</span>
-<span id="cb4-17"><a></a></span>
-<span id="cb4-18"><a></a>## Finding MSNE in 3x3 game</span>
-<span id="cb4-19"><a></a></span>
-<span id="cb4-20"><a></a>So the results from our math confirm our intuition that the stable strategies in equilibrium are:</span>
-<span id="cb4-21"><a></a></span>
-<span id="cb4-22"><a></a>::: {.incremental}</span>
-<span id="cb4-23"><a></a>  * Player 1 plays Rock with <span class="ss">$r=1/3$</span>, Paper with <span class="ss">$p=1/3$</span>, and Scissors with</span>
-<span id="cb4-24"><a></a>  <span class="ss">$1-p-r=1/3$</span></span>
-<span id="cb4-25"><a></a>  * Player 1 plays Rock with <span class="ss">$r=1/3$</span>, Paper with <span class="ss">$p=1/3$</span>, and Scissors with</span>
-<span id="cb4-26"><a></a>  <span class="ss">$1-p-r=1/3$</span></span>
-<span id="cb4-27"><a></a>:::</span>
-<span id="cb4-28"><a></a>---</span>
-<span id="cb4-29"><a></a></span>
-<span id="cb4-30"><a></a>## Another 3x3 game</span>
-<span id="cb4-31"><a></a></span>
-<span id="cb4-32"><a></a>| <span class="ss">$P_1$</span>, <span class="ss">$P_2$</span> | Left  | Center | Right |</span>
-<span id="cb4-33"><a></a>|--------------+-------+--------+-------|</span>
-<span id="cb4-34"><a></a>| Top          | 2,  1 | 3,  0  | 3,  0 |</span>
-<span id="cb4-35"><a></a>| Middle       | 3,  0 | 0,  1  | 3,  0 |</span>
-<span id="cb4-36"><a></a>| Bottom       | 3,  0 | 3,  0  | 2,  1 |</span>
-<span id="cb4-37"><a></a></span>
-<span id="cb4-38"><a></a>---</span>
-<span id="cb4-39"><a></a></span>
-<span id="cb4-40"><a></a>## Solving for 3-strategy MSNE</span>
-<span id="cb4-41"><a></a></span>
-<span id="cb4-42"><a></a>**Step 1:** Define Mixed Strategies</span>
-<span id="cb4-43"><a></a>::: {.incremental}</span>
-<span id="cb4-44"><a></a>  * &lt;u&gt;Player 1's mixed strategy:&lt;/u&gt; </span>
-<span id="cb4-45"><a></a>  Let <span class="ss">$</span><span class="sc">\sigma</span><span class="ss">_1 = (t, m, b)$</span>  </span>
-<span id="cb4-46"><a></a></span>
-<span id="cb4-47"><a></a>  * &lt;u&gt;Player 2's mixed strategy:&lt;/u&gt; </span>
-<span id="cb4-48"><a></a>  Let <span class="ss">$</span><span class="sc">\sigma</span><span class="ss">_2 = (</span><span class="sc">\ell</span><span class="ss">, c, r)$</span>  </span>
-<span id="cb4-49"><a></a>:::</span>
-<span id="cb4-50"><a></a>  </span>
-<span id="cb4-51"><a></a>Note that the lowercase letters represent the probabilities played</span>
-<span id="cb4-52"><a></a>on the uppercase pure strategies.</span>
-<span id="cb4-53"><a></a>---</span>
-<span id="cb4-54"><a></a></span>
-<span id="cb4-55"><a></a>## Solving for 3-strategy MSNE</span>
-<span id="cb4-56"><a></a>**Step 2:** Solve for Expected Utilities</span>
-<span id="cb4-57"><a></a></span>
-<span id="cb4-58"><a></a>:::: {.columns}</span>
-<span id="cb4-59"><a></a>::: {.column}</span>
-<span id="cb4-60"><a></a>  * &lt;u&gt;Player 1:&lt;/u&gt;</span>
-<span id="cb4-61"><a></a>    + <span class="ss">$EU_1(T, </span><span class="sc">\sigma</span><span class="ss">_2) = $</span></span>
-<span id="cb4-62"><a></a>    + <span class="ss">$EU_1(M, </span><span class="sc">\sigma</span><span class="ss">_2) = $</span></span>
-<span id="cb4-63"><a></a>    + <span class="ss">$EU_1(B, </span><span class="sc">\sigma</span><span class="ss">_2) = $</span></span>
-<span id="cb4-64"><a></a>:::</span>
-<span id="cb4-65"><a></a>::: {.column}</span>
-<span id="cb4-66"><a></a>  * &lt;u&gt;Player 2:&lt;/u&gt;</span>
-<span id="cb4-67"><a></a>    * <span class="ss">$EU_2(L, </span><span class="sc">\sigma</span><span class="ss">_1) = $</span></span>
-<span id="cb4-68"><a></a>    * <span class="ss">$EU_2(C, </span><span class="sc">\sigma</span><span class="ss">_1) = $</span></span>
-<span id="cb4-69"><a></a>    * <span class="ss">$EU_2(R, </span><span class="sc">\sigma</span><span class="ss">_1) = $</span></span>
-<span id="cb4-70"><a></a>:::</span>
-<span id="cb4-71"><a></a>::::</span>
-<span id="cb4-72"><a></a></span>
-<span id="cb4-73"><a></a>---</span>
-<span id="cb4-74"><a></a></span>
-<span id="cb4-75"><a></a>## Solving for 3-strategy MSNE</span>
-<span id="cb4-76"><a></a></span>
-<span id="cb4-77"><a></a>**Step 3:** Find Indifference Conditions</span>
-<span id="cb4-78"><a></a></span>
-<span id="cb4-79"><a></a>&lt;u&gt;When will Player 1 mix between 2 pure strategies?&lt;/u&gt; </span>
-<span id="cb4-80"><a></a>  * When does <span class="ss">$EU_1(Top, </span><span class="sc">\sigma</span><span class="ss">_2) = EU_1(Middle, </span><span class="sc">\sigma</span><span class="ss">_2)$</span>:</span>
-<span id="cb4-81"><a></a>  * When does <span class="ss">$EU_1(Top, </span><span class="sc">\sigma</span><span class="ss">_2) = EU_1(Bottom, </span><span class="sc">\sigma</span><span class="ss">_2)$</span>:</span>
-<span id="cb4-82"><a></a>  * When does <span class="ss">$EU_1(Middle, </span><span class="sc">\sigma</span><span class="ss">_2) = EU_1(Bottom, </span><span class="sc">\sigma</span><span class="ss">_2)$</span>:</span>
-<span id="cb4-83"><a></a>    </span>
-<span id="cb4-84"><a></a>---</span>
-<span id="cb4-85"><a></a></span>
-<span id="cb4-86"><a></a>## Solving for 3-strategy MSNE</span>
-<span id="cb4-87"><a></a></span>
-<span id="cb4-88"><a></a>**Step 3:** Find Indifference Conditions</span>
-<span id="cb4-89"><a></a></span>
-<span id="cb4-90"><a></a>&lt;u&gt;When will Player 2 mix between 2 pure strategies?&lt;/u&gt; </span>
-<span id="cb4-91"><a></a>  * When does <span class="ss">$EU_2(Left, </span><span class="sc">\sigma</span><span class="ss">_1) = EU_2(Center, </span><span class="sc">\sigma</span><span class="ss">_1)$</span>:</span>
-<span id="cb4-92"><a></a>  * When does <span class="ss">$EU_2(Left, </span><span class="sc">\sigma</span><span class="ss">_1) = EU_2(Right, </span><span class="sc">\sigma</span><span class="ss">_1)$</span>:</span>
-<span id="cb4-93"><a></a>  * When does <span class="ss">$EU_2(Center, </span><span class="sc">\sigma</span><span class="ss">_1) = EU_2(Right, </span><span class="sc">\sigma</span><span class="ss">_1)$</span>:</span>
-<span id="cb4-94"><a></a>  </span>
-<span id="cb4-95"><a></a>---</span>
-<span id="cb4-96"><a></a></span>
-<span id="cb4-97"><a></a>## Solving for 3-strategy MSNE</span>
-<span id="cb4-98"><a></a>**Step 4.a:** Graph Indifference Points on Number Lines for Player 1</span>
-<span id="cb4-99"><a></a></span>
-<span id="cb4-100"><a></a>---</span>
-<span id="cb4-101"><a></a></span>
-<span id="cb4-102"><a></a>## Solving for 3-strategy MSNE</span>
-<span id="cb4-103"><a></a></span>
-<span id="cb4-104"><a></a>**Step 4.b:** Combine Number Lines into Player 1's BR Triangle</span>
-<span id="cb4-105"><a></a>```{.tikz embed_mode="link" format="svg"}</span>
-<span id="cb4-106"><a></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}</span>
-<span id="cb4-107"><a></a>  <span class="fu">\draw</span> (0,0) coordinate[label=below:Left] (r) --</span>
-<span id="cb4-108"><a></a>  (6,0) coordinate[label=below:Right] (p) --</span>
-<span id="cb4-109"><a></a>  (3, 5) coordinate[label=above:Center] (s) -- cycle ;</span>
-<span id="cb4-110"><a></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
 <section id="solving-for-3-strategy-msne" class="slide level2">
 <h2>Solving for 3-strategy MSNE</h2>
-<p><strong>Step 4.c:</strong> Graph Indifference Points on Number Lines for Player 2</p>
-<hr>
+<p><strong>Step 1:</strong> Define Mixed Strategies</p>
+<div>
+<ul>
+<li class="fragment"><p><u>Player 1’s mixed strategy:</u> Let <span class="math inline">\(\sigma_1 = (t, m, b)\)</span></p></li>
+<li class="fragment"><p><u>Player 2’s mixed strategy:</u> Let <span class="math inline">\(\sigma_2 = (\ell, c, r)\)</span><br>
+</p></li>
+</ul>
+</div>
+<p>Note that the lowercase letters represent the probabilities played on the uppercase pure strategies.</p>
 </section>
-<section id="solving-for-3-strategy-msne-1" class="slide level2">
+<section id="solving-for-3-strategy-msne-1" class="slide level2 smaller">
 <h2>Solving for 3-strategy MSNE</h2>
-<p><strong>Step 4.d:</strong> Combine Number Lines into Player 2’s BR Triangle</p>
-<div class="sourceCode" id="cb5" data-embed_mode="link" data-format="svg"><pre class="sourceCode numberSource tikz number-lines code-with-copy"><code class="sourceCode latex"><span id="cb5-1"><a></a><span class="kw">\begin</span>{<span class="ex">tikzpicture</span>}</span>
-<span id="cb5-2"><a></a>  <span class="fu">\draw</span> (0,0) coordinate[label=below:Top] (r) --</span>
-<span id="cb5-3"><a></a>  (6,0) coordinate[label=below:Bottom] (p) --</span>
-<span id="cb5-4"><a></a>  (3, 5) coordinate[label=above:Middle] (s) -- cycle ;</span>
-<span id="cb5-5"><a></a><span class="kw">\end</span>{<span class="ex">tikzpicture</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
+<p><strong>Step 2:</strong> Solve for Expected Utilities</p>
+<div class="columns">
+<div class="column">
+<ul>
+<li><u>Player 1:</u>
+<ul>
+<li><span class="math inline">\(EU_1(T, \sigma_2) = 2\ell + 3c + 3r\)</span></li>
+<li><span class="math inline">\(EU_1(M, \sigma_2) =  3\ell + 3r\)</span></li>
+<li><span class="math inline">\(EU_1(B, \sigma_2) = 3\ell + 3c + 2r\)</span></li>
+</ul></li>
+</ul>
+</div><div class="column">
+<ul>
+<li><u>Player 2:</u>
+<ul>
+<li><span class="math inline">\(EU_2(L, \sigma_1) = t\)</span></li>
+<li><span class="math inline">\(EU_2(C, \sigma_1) = m\)</span></li>
+<li><span class="math inline">\(EU_2(R, \sigma_1) = b\)</span></li>
+</ul></li>
+</ul>
+</div></div>
 </section>
-<section id="solving-for-3-strategy-msne-2" class="slide level2">
+<section id="solving-for-3-strategy-msne-2" class="slide level2 smaller">
 <h2>Solving for 3-strategy MSNE</h2>
-<p><strong>Step 5:</strong> Check Cases for possible Nash Equilibria:</p>
-<hr>
+<p><strong>Step 3:</strong> Find Indifference Conditions</p>
+<p><u>When will Player 1 mix between 2 pure strategies?</u></p>
+<ul>
+<li><p>When does <span class="math inline">\(EU_1(Top, \sigma_2) \geq EU_1(Middle, \sigma_2)\)</span>:</p>
+<p><span class="math display">\[
+\begin{align}
+2\ell + 3c + 3r &amp; \geq 3\ell + 3r \\
+\Rightarrow 3c &amp; \geq \ell
+\end{align}
+\]</span></p></li>
+<li><p>When does <span class="math inline">\(EU_1(Top, \sigma_2) \geq EU_1(Bottom, \sigma_2)\)</span>:</p>
+<p><span class="math display">\[
+\begin{align}
+2\ell + 3c + 3r &amp; \geq 3\ell + 3c + 2r \\
+\Rightarrow r &amp; \geq \ell
+\end{align}
+\]</span></p></li>
+<li><p>When does <span class="math inline">\(EU_1(Middle, \sigma_2) \geq EU_1(Bottom, \sigma_2)\)</span>:</p>
+<p><span class="math display">\[
+\begin{align}
+3\ell + 3r &amp; \geq 3\ell + 3c + 2r \\
+\Rightarrow r &amp; \geq 3c
+\end{align}
+\]</span></p></li>
+</ul>
+</section>
+<section id="solving-for-3-strategy-msne-3" class="slide level2">
+<h2>Solving for 3-strategy MSNE</h2>
+<p><strong>Step 3:</strong> Find Indifference Conditions</p>
+<p><u>When will Player 2 mix between 2 pure strategies?</u></p>
+<ul>
+<li>When does <span class="math inline">\(EU_2(Left, \sigma_1) \geq EU_2(Center, \sigma_1)\)</span>: <span class="math display">\[ t \geq m \]</span></li>
+<li>When does <span class="math inline">\(EU_2(Left, \sigma_1) = EU_2(Right, \sigma_1)\)</span>: <span class="math display">\[ t \geq b \]</span></li>
+<li>When does <span class="math inline">\(EU_2(Center, \sigma_1) = EU_2(Right, \sigma_1)\)</span>: <span class="math display">\[ m \geq b \]</span></li>
+</ul>
+</section>
+<section id="solving-for-3-strategy-msne-4" class="slide level2">
+<h2>Solving for 3-strategy MSNE</h2>
+<p><strong>Step 4:</strong> Check Cases for possible Nash Equilibria:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;">Left</th>
+<th style="text-align: center;">Center</th>
+<th style="text-align: center;">Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">Top</td>
+<td style="text-align: center;">2, 1</td>
+<td style="text-align: center;">3, 0</td>
+<td style="text-align: center;">3, 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">Middle</td>
+<td style="text-align: center;">3, 0</td>
+<td style="text-align: center;">0, 1</td>
+<td style="text-align: center;">3, 0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">Bottom</td>
+<td style="text-align: center;">3, 0</td>
+<td style="text-align: center;">3, 0</td>
+<td style="text-align: center;">2, 1</td>
+</tr>
+</tbody>
+</table>
+<p>Any cases where either player plays only <em>one</em> pure strategy?</p>
+<div>
+<ul>
+<li class="fragment">No! We already checked for PSNE in the table</li>
+</ul>
+</div>
+</section>
+<section id="solving-for-3-strategy-msne-5" class="slide level2 smaller">
+<h2>Solving for 3-strategy MSNE</h2>
+<p><strong>Step 4:</strong> Check Cases for possible Nash Equilibria:</p>
+<p><u>Case 1: Player 2 mixes between <strong>Left</strong> and <strong>Center</strong></u></p>
+<p>Then we know that <span class="math inline">\(EU_2(\text{Left}) = EU_2(\text{Center}) &gt; EU_2(R)\)</span></p>
+<div>
+<p><span class="math display">\[ \Rightarrow t = m &gt; b\]</span></p>
+<ul>
+<li class="fragment">If <span class="math inline">\(\ell &gt; 3/4\)</span> then <span class="math inline">\(BR_1 = \{\text{Middle}\} \Rightarrow m = 1\)</span>
+<ul>
+<li class="fragment"><strong>contradiction:</strong> <span class="math inline">\(m\)</span> can’t be equal to <span class="math inline">\(t\)</span> and also sum to 1</li>
+</ul></li>
+<li class="fragment">If <span class="math inline">\(\ell &lt; 3/4\)</span> then <span class="math inline">\(BR_1 = \{\text{Top}\} \Rightarrow t = 1\)</span>
+<ul>
+<li class="fragment"><strong>contradiction:</strong> <span class="math inline">\(t\)</span> can’t be equal to <span class="math inline">\(m\)</span> and also sum to 1</li>
+</ul></li>
+<li class="fragment">If <span class="math inline">\(\ell = 3/4\)</span> then <span class="math inline">\(BR_1 = (t, m, 0)\)</span>
+<ul>
+<li class="fragment">No contradiction!</li>
+</ul></li>
+<li class="fragment">So <span class="math inline">\(\{ \sigma_1 = (t = 1/2, m = 1/2, b = 0)\)</span>, <span class="math inline">\(\sigma_2 = (\ell = 3/4, c = 1/4, r = 0) \}\)</span> is an MSNE</li>
+</ul>
+</div>
+</section>
+<section id="solving-for-3-strategy-msne-6" class="slide level2 smaller">
+<h2>Solving for 3-strategy MSNE</h2>
+<p><strong>Step 4:</strong> Check Cases for possible Nash Equilibria:</p>
+<p><u>Case 2: Player 2 mixes between <strong>Left</strong> and <strong>Right</strong></u></p>
+<p>Then we know that <span class="math inline">\(EU_2(\text{Left}) = EU_2(\text{Right}) &gt; EU_2(Center)\)</span></p>
+<div>
+<p><span class="math display">\[ \Rightarrow t = b &gt; m\]</span></p>
+<ul>
+<li class="fragment">If <span class="math inline">\(\ell &gt; 1/2\)</span> then <span class="math inline">\(BR_1 = \{\text{Bottom}\} \Rightarrow b = 1\)</span>
+<ul>
+<li class="fragment"><strong>contradiction:</strong> <span class="math inline">\(b\)</span> can’t be equal to <span class="math inline">\(t\)</span> and also sum to 1</li>
+</ul></li>
+<li class="fragment">If <span class="math inline">\(\ell &lt; 1/2\)</span> then <span class="math inline">\(BR_1 = \{\text{Top}\} \Rightarrow t = 1\)</span>
+<ul>
+<li class="fragment"><strong>contradiction:</strong> <span class="math inline">\(t\)</span> can’t be equal to <span class="math inline">\(b\)</span> and also sum to 1</li>
+</ul></li>
+<li class="fragment">If <span class="math inline">\(\ell = 1/2\)</span> then <span class="math inline">\(BR_1 = (t, 0, b)\)</span>
+<ul>
+<li class="fragment">No contradiction!</li>
+</ul></li>
+<li class="fragment">So <span class="math inline">\(\{ \sigma_1 = (t = 1/2, m = 0, b = 1/2)\)</span>, <span class="math inline">\(\sigma_2 = (\ell = 1/2, c = 0, r = 1/2) \}\)</span> is an MSNE</li>
+</ul>
+</div>
+</section>
+<section id="solving-for-3-strategy-msne-7" class="slide level2 smaller">
+<h2>Solving for 3-strategy MSNE</h2>
+<p><strong>Step 4:</strong> Check Cases for possible Nash Equilibria:</p>
+<p><u>Case 3: Player 2 mixes between <strong>Center</strong> and <strong>Right</strong></u></p>
+<p>Then we know that <span class="math inline">\(EU_2(\text{Center}) = EU_2(\text{Right}) &gt; EU_2(Left)\)</span></p>
+<div>
+<p><span class="math display">\[ \Rightarrow m = b &gt; t\]</span></p>
+<ul>
+<li class="fragment">If <span class="math inline">\(r &gt; 3/4\)</span> then <span class="math inline">\(BR_1 = \{\text{Middle}\} \Rightarrow m = 1\)</span>
+<ul>
+<li class="fragment"><strong>contradiction:</strong> <span class="math inline">\(m\)</span> can’t be equal to <span class="math inline">\(b\)</span> and also sum to 1</li>
+</ul></li>
+<li class="fragment">If <span class="math inline">\(r &lt; 3/4\)</span> then <span class="math inline">\(BR_1 = \{\text{Bottom}\} \Rightarrow b = 1\)</span>
+<ul>
+<li class="fragment"><strong>contradiction:</strong> <span class="math inline">\(b\)</span> can’t be equal to <span class="math inline">\(m\)</span> and also sum to 1</li>
+</ul></li>
+<li class="fragment">If <span class="math inline">\(r = 3/4\)</span> then <span class="math inline">\(BR_1 = (0, m, b)\)</span>
+<ul>
+<li class="fragment">No contradiction!</li>
+</ul></li>
+<li class="fragment">So <span class="math inline">\(\{ \sigma_1 = (t = 0, m = 1/2, b = 1/2)\)</span>, <span class="math inline">\(\sigma_2 = (\ell = 0, c = 1/4, r = 3/4) \}\)</span> is an MSNE</li>
+</ul>
+</div>
+</section>
+<section id="solving-for-3-strategy-msne-8" class="slide level2 smaller">
+<h2>Solving for 3-strategy MSNE</h2>
+<p><strong>Step 4:</strong> Check Cases for possible Nash Equilibria:</p>
+<p><u>Case 4: Player 2 mixes between <strong>Left</strong>, <strong>Center</strong>, and <strong>Right</strong></u></p>
+<p>Then we know that <span class="math inline">\(EU_2(\text{Center}) = EU_2(\text{Right}) = EU_2(Left)\)</span></p>
+<div>
+<p><span class="math display">\[ \Rightarrow t = m = b\]</span></p>
+<p><span class="math display">\[ \Rightarrow \ell = 3c = r\]</span></p>
+<p>And because probabilities must sum to one:</p>
+<p><span class="math display">\[
+\begin{align}
+3c + c + 3c &amp; = 1 \\
+\Rightarrow 7c &amp; = 1 \\
+c &amp; = 1/7
+\end{align}
+\]</span></p>
+<p><span class="math inline">\(\{ \sigma_1 = (t = 1/3, m = 1/3, b = 1/3),\)</span> <span class="math inline">\(\sigma_2 = (\ell = 3/7, c = 1/7, r = 3/7) \}\)</span> is an MSNE</p>
+</div>
 
 <div class="quarto-auto-generated-content">
 <p><img src="UOSignature-356.png" class="slide-logo"></p>
@@ -1533,8 +2029,6 @@ Scissors | -1, 1 | 1, -1 | 0, 0 |</div>
 <p>EC327 | Lecture 6 | Mixed Strategies</p>
 </div>
 </div>
-</section>
-</div></div>
 </section>
 
     </div>

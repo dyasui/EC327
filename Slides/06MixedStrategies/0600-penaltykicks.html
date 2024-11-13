@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lecture Slides – EC327 Game Theory</title>
+<title>penaltykicks – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -79,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EC327 Game Theory</span>
     </a>
   </div>
@@ -90,19 +119,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../Slides/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../Slides/index.html"> 
 <span class="menu-text">Slides</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../activities/index.html"> 
+    <a class="nav-link" href="../../activities/index.html"> 
 <span class="menu-text">Activities</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../Homework/index.html"> 
+    <a class="nav-link" href="../../Homework/index.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
 </ul>
@@ -117,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lecture Slides</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -148,19 +177,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Syllabus/main.pdf" class="sidebar-item-text sidebar-link">
+  <a href="../../Syllabus/main.pdf" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/#intro-and-syllabus-day" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#intro-and-syllabus-day" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: General Principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Guessing Two Thirds</span></a>
   </div>
 </li>
@@ -177,19 +206,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/#sequential-games" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#sequential-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Sequential Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Survivor Flags</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/03PirateTreasure/PirateTreasure.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/03PirateTreasure/PirateTreasure.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Pirate Treasure</span></a>
   </div>
 </li>
@@ -206,25 +235,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Simultaneous Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/04BlottoElection/BlottoElection.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/04BlottoElection/BlottoElection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Election Blotto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Continuous Strategies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/05CournotComp/cournotcomp.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/05CournotComp/cournotcomp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Social Media Adspace</span></a>
   </div>
 </li>
@@ -241,7 +270,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/#combining-simultaneous-and-sequential" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#combining-simultaneous-and-sequential" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span></span></a>
   </div>
 </li>
@@ -258,13 +287,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/#mixed-strategies" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#mixed-strategies" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/06PenaltyKicks/penaltykicks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/06PenaltyKicks/penaltykicks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Penalty Kick Shootout</span></a>
   </div>
 </li>
@@ -272,22 +301,22 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Uncertainty and Information</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/" class="sidebar-item-text sidebar-link active">
+  <a href="../../Slides/" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Slides</strong>: Asymmetric Information</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/LemonsMarket/main.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/LemonsMarket/main.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Activity</strong>: Market for Lemons</span></a>
   </div>
 </li>
@@ -304,13 +333,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Slides</strong></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../activities/Brinksmanship/main.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/Brinksmanship/main.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Activity</strong>: Brinksmanship</span></a>
   </div>
 </li>
@@ -327,7 +356,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Slides/" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Slides</strong></span></a>
   </div>
 </li>
@@ -342,83 +371,344 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Lecture Slides</h1>
+
+
+
+<section id="mixed-strategies-in-penalty-kicks" class="level2">
+<h2 class="anchored" data-anchor-id="mixed-strategies-in-penalty-kicks">Mixed Strategies in Penalty Kicks</h2>
+<p>Why might mixed strategies be useful in analyzing behavior of kickers and goalies in penalty shootouts?</p>
+<div class="incremental">
+<ul class="incremental">
+<li>reaction times <span class="math inline">\(\rightarrow\)</span> essentially <span class="hi">simultaneous game</span></li>
+<li><span class="hi">zero-sum</span> game with incentive to <em>keep the other player guessing</em></li>
+<li>modelling observed strategies chosen as <span class="h">random variables</span>
+<ul class="incremental">
+<li>specific empirical statistics can be compared to their theoretical values</li>
+</ul></li>
+</ul>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="intro-and-syllabus-day" class="level2">
-<h2 class="anchored" data-anchor-id="intro-and-syllabus-day">Intro and Syllabus Day</h2>
-<div>
-  <iframe class="slide deck" src="01Intro/01-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../Slides/01Intro/01-main.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
+<hr>
 </section>
-<section id="basic-concepts-and-methods" class="level2">
-<h2 class="anchored" data-anchor-id="basic-concepts-and-methods">Basic Concepts and Methods</h2>
-<section id="sequential-games" class="level3">
-<h3 class="anchored" data-anchor-id="sequential-games">Sequential Games</h3>
-<div>
-  <iframe class="slide deck" src="02SequentialGames/02-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+<section id="x2-penalty-kick-game" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="x2-penalty-kick-game">2x2 Penalty Kick Game</h2>
+<section id="simplest-form-of-this-game" class="level3">
+<h3 class="anchored" data-anchor-id="simplest-form-of-this-game">Simplest form of this game,</h3>
+<p>(prob of making goal is either 0% or 100%)</p>
+<div class="columns">
+<div class="column smaller" style="width:35%;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Kicker, Goalie</th>
+<th style="text-align: center;"><span class="math inline">\(Left_g\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Right_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(Left_k\)</span></td>
+<td style="text-align: center;">0.3, <u>0.7</u></td>
+<td style="text-align: center;"><u>0.9</u>, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(Right_k\)</span></td>
+<td style="text-align: center;"><u>0.9</u>, 0.1</td>
+<td style="text-align: center;">0.3, <u>0.7</u></td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:65%;">
+<p>What should the Kicker do?</p>
+<div class="incremental">
+<ul class="incremental">
+<li><em>Purely</em> <strong>Left</strong> means goalie could block by always going <strong>Left</strong> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li><em>Purely</em> <strong>Right</strong> means goalie could block by always going <strong>Right</strong></li>
+<li>So a rational strategy must be a <strong>random mix</strong> between both <em>pure</em> strategies</li>
+</ul>
 </div>
-<a class="btn btn-primary btn-md" href="../Slides/02SequentialGames/02-main.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="simultaneous-games" class="level3">
-<h3 class="anchored" data-anchor-id="simultaneous-games">Simultaneous Games</h3>
-<div>
-  <iframe class="slide deck" src="03SimultaneousGames/03-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="../Slides/03SimultaneousGames/03-main.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-<div>
-  <iframe class="slide deck" src="04ContinuousStrats/04-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="../Slides/04ContinuousStrats/04-main.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="combining-simultaneous-and-sequential" class="level3">
-<h3 class="anchored" data-anchor-id="combining-simultaneous-and-sequential">Combining Simultaneous and Sequential</h3>
-<div>
-  <iframe class="slide deck" src="05CombinedGames/05-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../Slides/05CombinedGames/05-main.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-</section>
-<section id="mixed-strategies" class="level3">
-<h3 class="anchored" data-anchor-id="mixed-strategies">Mixed Strategies</h3>
-<div>
-  <iframe class="slide deck" src="06MixedStrategies/06-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
-</div>
-<a class="btn btn-primary btn-md" href="../Slides/06MixedStrategies/06-main.html" target="_blank">
-  <i class="fa-solid fa-window-restore"></i> Expand
-</a>
-
-
+<hr>
 </section>
 </section>
+<section id="x2-penalty-kick-game-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="x2-penalty-kick-game-1">2x2 Penalty Kick Game</h2>
+<p>If the Kicker is going to mix, a good place to strat might be <span class="h">50% Left, 50% Right</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Kicker, Goalie</th>
+<th style="text-align: center;"><span class="math inline">\(Left_g\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Right_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(Left_k\)</span></td>
+<td style="text-align: center;">0.3, 0.7</td>
+<td style="text-align: center;">0.9, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(Right_k\)</span></td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.3, 0.7</td>
+</tr>
+</tbody>
+</table>
+<p>Does this work?</p>
+<div class="columns">
+<div class="column smaller" style="width:50%;">
+<p><strong>Goalie’s</strong> expected utility of <span class="math inline">\(Left_g\)</span></p>
+<div class="incremental">
+<ul class="incremental">
+<li><span class="math inline">\(= 0.7(0.5) + 0.1(0.5)\)</span></li>
+<li><span class="math inline">\(= 0.35 + 0.05\)</span></li>
+<li><span class="math inline">\(= 0.4\)</span></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<p><strong>Goalie’s</strong> expected utility of <span class="math inline">\(Right_g\)</span></p>
+<div class="incremental">
+<ul class="incremental">
+<li><span class="math inline">\(= 0.1(0.5) + 0.7(0.5)\)</span></li>
+<li><span class="math inline">\(= 0.05 + 0.35\)</span></li>
+<li><span class="math inline">\(= 0.4\)</span></li>
+</ul>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<ul>
+<li>So the 50:50 mix makes the goalie <strong><em>indifferent</em></strong> between <span class="math inline">\(Left_g\)</span> and <span class="math inline">\(Right_g\)</span></li>
+</ul>
+<hr>
+</section>
+<section id="x2-penalty-kick-game-2" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="x2-penalty-kick-game-2">2x2 Penalty Kick Game</h2>
+<section id="opponent-indifference-property" class="level3">
+<h3 class="anchored" data-anchor-id="opponent-indifference-property">Opponent Indifference Property</h3>
+<p><strong>Goalie’s</strong> expected utility of each strategy depends on the degree to which Kicker plays <span class="math inline">\(Left_k\)</span> vs <span class="math inline">\(Right_k\)</span>:</p>
+<div class="columns">
+<div class="column smaller" style="width:35%;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Kicker, Goalie</th>
+<th style="text-align: center;"><span class="math inline">\(Left_g\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Right_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(Left_k\)</span></td>
+<td style="text-align: center;">0.3, 0.7</td>
+<td style="text-align: center;">0.9, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(Right_k\)</span></td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.3, 0.7</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:55%;">
+<p>When should the <strong>Goalie</strong> choose <span class="math inline">\(Left_g\)</span>?</p>
+<div class="incremental">
+<ul class="incremental">
+<li>When <span class="math inline">\(EU_g(Left_g) \geq EU_g(Right_g)\)</span></li>
+<li><span class="math inline">\(\Rightarrow 0.1 + 0.6p \geq 0.7 - 0.6p\)</span></li>
+<li><span class="math inline">\(\Rightarrow 1.2p \geq 0.6\)</span></li>
+<li><span class="math inline">\(\Rightarrow p \geq \frac{1}{2}\)</span></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="x2-penalty-kick-game-3" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="x2-penalty-kick-game-3">2x2 Penalty Kick Game</h2>
+<section id="opponent-indifference-property-1" class="level3">
+<h3 class="anchored" data-anchor-id="opponent-indifference-property-1">Opponent Indifference Property</h3>
+<div class="columns">
+<div class="column smaller" style="width:35%;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Kicker, Goalie</th>
+<th style="text-align: center;"><span class="math inline">\(Left_g\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Right_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(Left_k~(p)\)</span></td>
+<td style="text-align: center;">0.3, 0.7</td>
+<td style="text-align: center;">0.9, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(Right_k~(1-p)\)</span></td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.3, 0.7</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:55%;">
+<p>When should the <strong>Goalie</strong> choose <span class="math inline">\(Left_g\)</span>?</p>
+<div class="incremental">
+<ul class="incremental">
+<li>If <span class="math inline">\(p&gt;\frac{1}{2}\)</span>, then it’s always better to <span class="math inline">\(Left_g\)</span></li>
+<li>If <span class="math inline">\(p&lt;\frac{1}{2}\)</span>, then it’s always better to <span class="math inline">\(Right_g\)</span>
+<ul class="incremental">
+<li>In either case, the <strong>Goalie</strong> could <em>exploit</em> knowledge<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> of <span class="math inline">\(p\)</span></li>
+</ul></li>
+<li>If <span class="math inline">\(p=\frac{1}{2}\)</span>, then either one is rational</li>
+</ul>
+</div>
+</div><p>The <strong>Goalie’s</strong> <em>indifference</em> means there’s no opportunity to expliot</p>
+</div>
+<hr>
+</section>
+</section>
+<section id="x2-penalty-kick-game-4" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="x2-penalty-kick-game-4">2x2 Penalty Kick Game</h2>
+<div class="columns">
+<div class="column smaller" style="width:35%;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Kicker, Goalie</th>
+<th style="text-align: center;"><span class="math inline">\(Left_g\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Right_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(Left_k\)</span></td>
+<td style="text-align: center;">0.3, 0.7</td>
+<td style="text-align: center;">0.9, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(Right_k\)</span></td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.3, 0.7</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:60%;">
+<p>So what should the <strong>Kicker</strong> do?</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Set <span class="math inline">\(p\)</span> equal to exactly 1/2</li>
+<li>Anything else would result in a lower payoff:</li>
+<li><span class="math inline">\(EU_k(p &lt; \frac{1}{2} | Left_g) = 0.3p + 0.9(1-p) = 0.9 - 0.6p\)</span></li>
+<li><span class="math inline">\(EU_k(p &gt; \frac{1}{2} | Right_g) = 0.9p + 0.3(1-p) = 0.3 + 0.6p\)</span></li>
+<li><span class="math inline">\(EU_k(p = \frac{1}{2}) = 0.6\)</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="x2-penalty-kick-game-5" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="x2-penalty-kick-game-5">2x2 Penalty Kick Game</h2>
+<div class="columns">
+<div class="column smaller" style="width:35%;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Kicker, Goalie</th>
+<th style="text-align: center;"><span class="math inline">\(Left_g\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Right_g\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(Left_k\)</span></td>
+<td style="text-align: center;">0.3, 0.7</td>
+<td style="text-align: center;">0.9, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(Right_k\)</span></td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.3, 0.7</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:60%;">
+<ul>
+<li>So the <strong>Kicker</strong> should play <span class="math inline">\(Left_k\)</span> 50% of the time, <span class="math inline">\(Right_k\)</span> 50%</li>
+<li>the <strong>Goalie</strong> should play <span class="math inline">\(Left_g\)</span> 50% of the time, <span class="math inline">\(Right_g\)</span> 50%</li>
+<li>In this mixed-strategy Nash equilibrium, both players are <em>indifferent</em> between either of their pure strategies</li>
+<li>The kicker’s probability of scoring is 0.6 <em>no matter what direction they choose</em></li>
+</ul>
+</div>
+</div>
+<!--## Mixed Strategies in 3x3 Penalty Shootout {.smaller}-->
+<!---->
+<!--| Kicker, Goalie |     L    |     C    |     R    |-->
+<!--|:--------------:+:--------:+:--------:+:--------:|-->
+<!--|        L       | 0.3, 0.7 | 0.9, 0.1 | 0.9, 0.1 |-->
+<!--|        C       | 0.6, 0.4 |   0, 1   | 0.6, 0.4 |-->
+<!--|        R       | 0.9, 0.1 | 0.9, 0.1 | 0.3, 0.7 |-->
+<!---->
+<!--Let's define:-->
+<!---->
+<!--:::: {.columns}-->
+<!--::: {.column}-->
+<!--  * $\ell_k$ the **Kicker's** probabilty of kicking Left-->
+<!--  * $c_k$ the **Kicker's** probabilty of kicking Center-->
+<!--  * $r_k$ the **Kicker's** probabilty of kicking Right-->
+<!--:::-->
+<!--::: {.column}-->
+<!--  * $\ell_g$ the **Goalie's** probabilty of kicking Left-->
+<!--  * $c_g$ the **Goalie's** probabilty of kicking Center-->
+<!--  * $r_g$ the **Goalie's** probabilty of kicking Right-->
+<!--:::-->
+<!--::::-->
+<!---->
+<!------->
+<!---->
+<!--## Mixed Strategies in 3x3 Penalty Shootout {.smaller}-->
+<!---->
+<!--| Kicker, Goalie |     L    |     C    |     R    |-->
+<!--|:--------------:+:--------:+:--------:+:--------:|-->
+<!--|        L       | 0.3, 0.7 | 0.9, 0.1 | 0.9, 0.1 |-->
+<!--|        C       | 0.6, 0.4 |   0, 1   | 0.6, 0.4 |-->
+<!--|        R       | 0.9, 0.1 | 0.9, 0.1 | 0.3, 0.7 |-->
+<!---->
+<!--::::: {.columns}-->
+<!--:::: {.incremental}-->
+<!---->
+<!--::: {.column}-->
+<!--The Kicker's expected utility depends on $\sigma_g$:-->
+<!---->
+<!--  * $EU_k(L_k, \sigma_g) = 0.3\ell_g + 0.9c_g + 0.9r_g$-->
+<!--  * $EU_k(C_k, \sigma_g) = 0.6\ell_g + 0c_g + 0.6r_g$-->
+<!--  * $EU_k(R_k, \sigma_g) = 0.9\ell_g + 0.9c_g + 0.3r_g$-->
+<!--:::-->
+<!--::: {.column}-->
+<!---->
+<!--The Goalie's expected utility depends on $sigma_k$:-->
+<!---->
+<!--  * $EU_g(L_g, \sigma_k) = 0.7\ell_k + 0.4c_g + 0.1r_g$-->
+<!--  * $EU_g(C_g, \sigma_k) = 0.1\ell_g + 1c_g + 0.1r_g$-->
+<!--  * $EU_g(R_g, \sigma_k) = 0.1\ell_g + 0.4c_g + 0.7r_g$-->
+<!--:::-->
+<!--::::-->
+<!--:::::-->
+<!------->
 
-</main> <!-- /main -->
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Recall that we are defining the direction according to the kicker’s perspective<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><em>or beliefs</em><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -988,4 +1278,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://gituhub.com/dyasui/EC327/edit/main/Slides/index.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://gituhub.com/dyasui/EC327/blob/main/Slides/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://gituhub.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://gituhub.com/dyasui/EC327/edit/main/Slides/06MixedStrategies/0600-penaltykicks.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://gituhub.com/dyasui/EC327/blob/main/Slides/06MixedStrategies/0600-penaltykicks.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://gituhub.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
