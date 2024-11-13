@@ -1,0 +1,223 @@
+## Mixed Strategies in Penalty Kicks
+Why might mixed strategies be useful in analyzing behavior of kickers and goalies in penalty shootouts?
+
+::: {.incremental}
+  * reaction times $\rightarrow$ essentially [simultaneous game]{.hi}
+  * [zero-sum]{.hi} game with incentive to *keep the other player guessing*
+  * modelling observed strategies chosen as [random variables]{.h}
+    + specific empirical statistics can be compared to their theoretical values
+:::
+
+---
+
+## 2x2 Penalty Kick Game {.smaller}
+
+### Simplest form of this game, 
+(prob of making goal is either 0% or 100%)
+
+::::: {.columns}
+:::: {.column .smaller width="35%"}
+| Kicker, Goalie |     $Left_g$    |    $Right_g$    |
+|---------------:+:---------------:+:---------------:|
+|       $Left_k$ | 0.3, <u>0.7</u> | <u>0.9</u>, 0.1 |
+|      $Right_k$ | <u>0.9</u>, 0.1 | 0.3, <u>0.7</u> |
+::::
+:::: {.column width="65%"}
+What should the Kicker do?
+
+::: {.incremental}
+  * *Purely* **Left** means goalie could block by always going **Left**
+  ^[Recall that we are defining the direction according to the kicker's perspective]
+  * *Purely* **Right** means goalie could block by always going **Right**
+  * So a rational strategy must be a **random mix** between both *pure* strategies
+:::
+::::
+:::::
+---
+
+## 2x2 Penalty Kick Game {.smaller}
+
+If the Kicker is going to mix, a good place to strat might be [50% Left, 50% Right]{.h}
+
+| Kicker, Goalie | $Left_g$ | $Right_g$ |
+|---------------:+:--------:+:---------:|
+|       $Left_k$ | 0.3, 0.7 |  0.9, 0.1 |
+|      $Right_k$ | 0.9, 0.1 |  0.3, 0.7 |
+
+Does this work?
+
+::::: {.columns}
+:::: {.column .smaller width="50%"}
+**Goalie's** expected utility of $Left_g$
+
+::: {.incremental}
+  * $= 0.7(0.5) + 0.1(0.5)$
+  * $= 0.35 + 0.05$
+  * $= 0.4$ 
+:::
+::::
+:::: {.column width="50%"}
+**Goalie's** expected utility of $Right_g$
+
+::: {.incremental}
+  * $= 0.1(0.5) + 0.7(0.5)$
+  * $= 0.05 + 0.35$
+  * $= 0.4$ 
+:::
+::::
+:::::
+
+. . .
+
+  * So the 50:50 mix makes the goalie ***indifferent*** between $Left_g$ and $Right_g$
+
+---
+
+## 2x2 Penalty Kick Game {.smaller}
+
+### Opponent Indifference Property
+
+**Goalie's** expected utility of each strategy depends on the degree to which Kicker plays $Left_k$ vs $Right_k$:
+
+::::: {.columns}
+:::: {.column .smaller width="35%"}
+|    Kicker, Goalie | $Left_g$ | $Right_g$ |
+|------------------:+:--------:+:---------:|
+|          $Left_k$ | 0.3, 0.7 |  0.9, 0.1 |
+|         $Right_k$ | 0.9, 0.1 |  0.3, 0.7 |
+::::
+:::: {.column width="55%"}
+
+When should the **Goalie** choose $Left_g$?
+
+::: {.incremental}
+  * When $EU_g(Left_g) \geq EU_g(Right_g)$
+  * $\Rightarrow 0.1 + 0.6p \geq 0.7 - 0.6p$
+  * $\Rightarrow 1.2p \geq 0.6$
+  * $\Rightarrow p \geq \frac{1}{2}$
+:::
+::::
+:::::
+
+---
+
+## 2x2 Penalty Kick Game {.smaller}
+
+### Opponent Indifference Property
+
+::::: {.columns}
+:::: {.column .smaller width="35%"}
+|  Kicker, Goalie | $Left_g$ | $Right_g$ |
+|----------------:+:--------:+:---------:|
+|    $Left_k~(p)$ | 0.3, 0.7 |  0.9, 0.1 |
+| $Right_k~(1-p)$ | 0.9, 0.1 |  0.3, 0.7 |
+::::
+:::: {.column width="55%"}
+
+When should the **Goalie** choose $Left_g$?
+
+::: {.incremental}
+  * If $p>\frac{1}{2}$, then it's always better to $Left_g$
+  * If $p<\frac{1}{2}$, then it's always better to $Right_g$
+    + In either case, the **Goalie** could *exploit* knowledge^[*or beliefs*] of $p$ 
+  * If $p=\frac{1}{2}$, then either one is rational
+:::
+::::
+The **Goalie's** *indifference* means there's no opportunity to expliot
+:::::
+
+---
+
+## 2x2 Penalty Kick Game {.smaller}
+
+::::: {.columns}
+:::: {.column .smaller width="35%"}
+|    Kicker, Goalie | $Left_g$ | $Right_g$ |
+|------------------:+:--------:+:---------:|
+|          $Left_k$ | 0.3, 0.7 |  0.9, 0.1 |
+|         $Right_k$ | 0.9, 0.1 |  0.3, 0.7 |
+::::
+:::: {.column width="60%"}
+So what should the **Kicker** do?
+
+::: {.incremental}
+  * Set $p$ equal to exactly 1/2
+  * Anything else would result in a lower payoff:
+  * $EU_k(p < \frac{1}{2} | Left_g) = 0.3p + 0.9(1-p) = 0.9 - 0.6p$
+  * $EU_k(p > \frac{1}{2} | Right_g) = 0.9p + 0.3(1-p) = 0.3 + 0.6p$
+  * $EU_k(p = \frac{1}{2}) = 0.6$
+:::
+::::
+:::::
+
+## 2x2 Penalty Kick Game {.smaller}
+
+::::: {.columns}
+:::: {.column .smaller width="35%"}
+|    Kicker, Goalie | $Left_g$ | $Right_g$ |
+|------------------:+:--------:+:---------:|
+|          $Left_k$ | 0.3, 0.7 |  0.9, 0.1 |
+|         $Right_k$ | 0.9, 0.1 |  0.3, 0.7 |
+::::
+:::: {.column width="60%"}
+  * So the **Kicker** should play $Left_k$ 50% of the time, $Right_k$ 50%
+  * the **Goalie** should play $Left_g$ 50% of the time, $Right_g$ 50%
+  * In this mixed-strategy Nash equilibrium, both players are *indifferent* between either of their pure strategies
+  * The kicker's probability of scoring is 0.6 *no matter what direction they choose*
+::::
+:::::
+
+<!--## Mixed Strategies in 3x3 Penalty Shootout {.smaller}-->
+<!---->
+<!--| Kicker, Goalie |     L    |     C    |     R    |-->
+<!--|:--------------:+:--------:+:--------:+:--------:|-->
+<!--|        L       | 0.3, 0.7 | 0.9, 0.1 | 0.9, 0.1 |-->
+<!--|        C       | 0.6, 0.4 |   0, 1   | 0.6, 0.4 |-->
+<!--|        R       | 0.9, 0.1 | 0.9, 0.1 | 0.3, 0.7 |-->
+<!---->
+<!--Let's define:-->
+<!---->
+<!--:::: {.columns}-->
+<!--::: {.column}-->
+<!--  * $\ell_k$ the **Kicker's** probabilty of kicking Left-->
+<!--  * $c_k$ the **Kicker's** probabilty of kicking Center-->
+<!--  * $r_k$ the **Kicker's** probabilty of kicking Right-->
+<!--:::-->
+<!--::: {.column}-->
+<!--  * $\ell_g$ the **Goalie's** probabilty of kicking Left-->
+<!--  * $c_g$ the **Goalie's** probabilty of kicking Center-->
+<!--  * $r_g$ the **Goalie's** probabilty of kicking Right-->
+<!--:::-->
+<!--::::-->
+<!---->
+<!------->
+<!---->
+<!--## Mixed Strategies in 3x3 Penalty Shootout {.smaller}-->
+<!---->
+<!--| Kicker, Goalie |     L    |     C    |     R    |-->
+<!--|:--------------:+:--------:+:--------:+:--------:|-->
+<!--|        L       | 0.3, 0.7 | 0.9, 0.1 | 0.9, 0.1 |-->
+<!--|        C       | 0.6, 0.4 |   0, 1   | 0.6, 0.4 |-->
+<!--|        R       | 0.9, 0.1 | 0.9, 0.1 | 0.3, 0.7 |-->
+<!---->
+<!--::::: {.columns}-->
+<!--:::: {.incremental}-->
+<!---->
+<!--::: {.column}-->
+<!--The Kicker's expected utility depends on $\sigma_g$:-->
+<!---->
+<!--  * $EU_k(L_k, \sigma_g) = 0.3\ell_g + 0.9c_g + 0.9r_g$-->
+<!--  * $EU_k(C_k, \sigma_g) = 0.6\ell_g + 0c_g + 0.6r_g$-->
+<!--  * $EU_k(R_k, \sigma_g) = 0.9\ell_g + 0.9c_g + 0.3r_g$-->
+<!--:::-->
+<!--::: {.column}-->
+<!---->
+<!--The Goalie's expected utility depends on $sigma_k$:-->
+<!---->
+<!--  * $EU_g(L_g, \sigma_k) = 0.7\ell_k + 0.4c_g + 0.1r_g$-->
+<!--  * $EU_g(C_g, \sigma_k) = 0.1\ell_g + 1c_g + 0.1r_g$-->
+<!--  * $EU_g(R_g, \sigma_k) = 0.1\ell_g + 0.4c_g + 0.7r_g$-->
+<!--:::-->
+<!--::::-->
+<!--:::::-->
+<!------->

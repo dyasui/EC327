@@ -19,12 +19,18 @@ output:
     keep_tex: yes
 ---
 
+```{r setup}
+#| echo:false
+library(tidyverse)
+```
+
 ::: {.vertical-center}
 
 [Outline]{.hi .big}
 
 :::
 
+{{< include 0600-penaltykicks.qmd >}} 
 
 {{< include 0601-uncertainty.qmd >}}
 

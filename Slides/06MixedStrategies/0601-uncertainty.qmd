@@ -215,8 +215,6 @@ We can find the expected payoffs in terms of p:
 :::
 ---
 
-
-
 ## Variation: Unknown Probabilities
 
 ::::: {.columns}
@@ -245,8 +243,6 @@ We can find the expected payoffs in terms of p:
 :::::
 
 ---
-
-
 
 ## Variation: Unknown Probabilities
 

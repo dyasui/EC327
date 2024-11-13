@@ -1,8 +1,8 @@
 ## Internal Uncertainty
+
 ::: {.incremental}
-  
   * Now that we discussed *external uncertainty* over *states of nature*,
-  let's talk about [internal uncertainty]{.hi.
+  let's talk about [internal uncertainty]{.hi}
 
 	* Internal uncertainty occurs when one or more players pick their strategies randomly.
 
@@ -141,7 +141,7 @@ Make sure that you're setting up the equations used to solve for a player's stra
 
 ---
 
-## Another Example: Police Patrol and Drug Trade
+## Another Example: Police Patrol and Drug Trade {.smaller}
 
 | Police, Dealer | Streets (d) | Park (1 - d) |
 |----------------+-------------+--------------|
@@ -208,10 +208,10 @@ data <- data.frame(d = d_values, Streets = streets_utilities, Park = park_utilit
 
 # Plot the expected utilities and indicate the best response threshold
 ggplot(data, aes(x = d)) +
-  geom_line(aes(y = Streets, color = "Streets (80d)")) +
-  geom_line(aes(y = Park, color = "Park (60 - 50d)")) +
+  geom_line(aes(y = Streets, color = "Streets (80d)"), linewidth = 2) +
+  geom_line(aes(y = Park, color = "Park (60 - 50d)"), linewidth = 2) +
   geom_vline(xintercept = 6/13, linetype = "dashed", color = "grey50") +
-  annotate("text", x = 6/13, y = 40, label = "d = 6/13", hjust = -0.1, color = "grey50") +
+  annotate("text", x = 6/13, y = 0, label = "d = 6/13", hjust = -0.1, color = "grey50") +
   labs(title = "Expected Utility Functions for Streets and Park",
        x = "Probability (d)",
        y = "Expected Utility",
@@ -247,10 +247,10 @@ data_D <- data.frame(p = p_values, Streets = streets_utilities_D, Park = park_ut
 
 # Plot the expected utilities and indicate the best response threshold
 ggplot(data_D, aes(x = p)) +
-  geom_line(aes(y = Streets, color = "Streets (90 - 70p)")) +
-  geom_line(aes(y = Park, color = "Park (40 + 60p)")) +
+  geom_line(aes(y = Streets, color = "Streets (90 - 70p)"), linewidth = 2) +
+  geom_line(aes(y = Park, color = "Park (40 + 60p)"), linewidth = 2) +
   geom_vline(xintercept = 5/13, linetype = "dashed", color = "grey50") +
-  annotate("text", x = 5/13, y = 60, label = "p = 5/13", hjust = -0.1, color = "grey50") +
+  annotate("text", x = 5/13, y = 0, label = "p = 5/13", hjust = -0.1, color = "grey50") +
   labs(title = "Expected Utility Functions for Streets and Park (Drug Dealer)",
        x = "Probability (p)",
        y = "Expected Utility",
@@ -264,38 +264,28 @@ ggplot(data_D, aes(x = p)) +
  
 ```{r}
 #| code-fold: true
-# Define the best response function for the Police Officer
-Police_Best_Response <- function(d) {
-  ifelse(d >= 6/13, 1, 0)
-}
+#| message: false
+#| warning: false
 
-# Define the best response function for the Drug Dealer
-Drug_Best_Response <- function(p) {
-  ifelse(p < 5/13, 1, 0)
-}
+library(tidyverse)
+library(latex2exp)
 
-# Generate a sequence of values for d and p from 0 to 1
-d_values <- seq(0, 1, by = 1/13)
-p_values <- seq(0, 1, by = 1/13)
-
-# Compute the best responses for each value of d and p
-police_responses <- sapply(d_values, Police_Best_Response)
-drug_responses <- sapply(p_values, Drug_Best_Response)
-
-# Create a data frame for plotting
-data <- data.frame(
-  d = d_values,
-  Drug_Best_Response = drug_responses,
-  p = p_values,
-  Police_Best_Response = police_responses
+data <- tibble(
+  d = c(0, 6/13, 6/13, 1),
+  PR = c(0, 0, 1, 1),
+  p = c(1, 5/13, 5/13, 0),
+  DR = c(0, 0, 1, 1),
 )
 
 # Plot the best response functions
 ggplot(data) +
-  geom_step(aes(x = Drug_Best_Response, y = p, color = "Drug Dealer's Best Response"), direction = "vh") +
-  geom_step(aes(x = d, y = Police_Best_Response, color = "Police Officer's Best Response"), direction = "hv") +
   geom_hline(yintercept = 5/13, linetype = "dashed", color = "grey50") +
   geom_vline(xintercept = 6/13, linetype = "dashed", color = "grey50") +
+  geom_step(aes(x = d, y = PR, color = "Police Officer's Best Response"), direction = "hv", linewidth = 2) +
+  geom_step(aes(x = DR, y = p, color = "Drug Dealer's Best Response"), direction = "hv", linewidth = 2) +
+  geom_point(data = tibble(d = 6/13, p = 5/13), aes(x=d, y=p, color = "MSNE"), size = 3) +
+  annotate("text", y = 5/13, x = 0, label = TeX("$p^* = 5/13$"), hjust = -0.1, vjust = 2, color = "grey50") +
+  annotate("text", x = 6/13, y = 0, label = TeX("$d^* = 6/13$"), hjust = -0.2, vjust = 1, color = "grey50") +
   labs(title = "Best Response Functions for Mixed Strategy Nash Equilibrium",
        x = "Drug Dealer's Probability (d)",
        y = "Police Officer's Probability (p)",
@@ -312,13 +302,13 @@ ggplot(data) +
   than it is likely that they both meet in the Streets
 ---
 
-## Practice your understanding
+## Practice your understanding {.smaller}
 Consider the following game table. What are Player 1's expected payoffs, given Player 2's mixed strategy?
 
-| $P_1$, $P_2$   | $Up (q)$ | $Down (1 - q)$ |
-|----------------+----------+----------------|
-| $Up (p)$       | 2, -2    | -3, 3          |
-| $Down (1 - p)$ | -5, 5    | 1, -1          |
+| $P_1$, $P_2$   | Up $(q)$ | Down $(1 - q)$ |
+|---------------:+:--------:+:--------------:|
+| Up $(p)$       | 2, -2    | -3, 3          |
+| Down $(1 - p)$ | -5, 5    | 1, -1          |
 
 ::: {.incremental}
   * $U_1(Up) = 2q -3(1-q) = 5q - 3$,
@@ -327,22 +317,25 @@ Consider the following game table. What are Player 1's expected payoffs, given P
 
 ---
 
-## Practice your understanding
+## Practice your understanding {.smaller}
 Consider the following game table. What are **Player 2's** expected payoffs, given Player 1's mixed strategy?
 
-| $P_1$, $P_2$   | $Up (q)$ | $Down (1 - q)$ |
-|----------------+----------+----------------|
-| $Up (p)$       | 2, -2    | -3, 3          |
-| $Down (1 - p)$ | -5, 5    | 1, -1          |
+| $P_1$, $P_2$   | Up $(q)$ | Down $(1 - q)$ |
+|---------------:+:--------:+:--------------:|
+| Up $(p)$       | 2, -2    | -3, 3          |
+| Down $(1 - p)$ | -5, 5    | 1, -1          |
 
 ::: {.incremental}
 * $U_2(Up) = -2p + 5(1-p) = -7p + 5$,
 * $U_2(Down) = 3p - 1(1-p) = 4p -1$
 :::
+
 ---
 
-## Practice your understanding
+## Practice your understanding {.smaller}
+
 The correct answers to the previous two questions were:
+
   * $U_1(Up) = 5q - 3, U_1(Down) = 1 - 6q$.
   * $U_2(Up) = 5 - 7p, U_2(Down) = 4p - 1$.
 
@@ -352,27 +345,45 @@ Based on this, what are $p$ and $q$ in the MSNE of this game?
   * $p^* = 6/11$
   * $q^* = 4/11$
 :::
+
 ---
 
-## An MSNE With Only One Mixed Strategy
+## Multiple MSNE in one game {.smaller}
+
 Consider the following game table:
 
+::::: {.columns}
+:::: {.column}
 | $P_1$, $P_2$ | $X~(q)$ | $Y~(1 - q)$ |
-|--------------+---------+-------------|
+|-------------:+:-------:+:-----------:|
 | $A~(p)$      | 2, 2    | 3, 2        |
 | $B~(1 - p)$  | 4, 3    | 0, 0        |
+::::
 
+:::: {.column}
 The players' expected payoffs are:
 
 ::: {.incremental}
-  * $U_1(A) = 2q + 3(1 - q) = 2q + 3 - 3q = 3 - q$.
-  * $U_1(B) = 4q + 0(1 - q) = 4q$.
-  * $U_2(X) = 2p + 3(1 - p) = 2p + 3 - 3p = 3 - p$.
-  * $U_2(Y) = 2p + 0(1 - p) = 2p$.
+$$
+\begin{align*}
+U_1(A) & = 2q + 3(1 - q) \\
+       & = 2q + 3 - 3q \\
+       & = 3 - q \\
+U_1(B) & = 4q + 0(1 - q) \\
+       & = 4q \\
+U_2(X) & = 2p + 3(1 - p) \\
+       & = 2p + 3 - 3p \\
+       & = 3 - p \\
+U_2(Y) & = 2p + 0(1 - p) \\
+       & = 2p
+\end{align*}
+$$
 :::
+::::
+:::::
 ---
 
-## An MSNE With Only One Mixed Strategy
+## Multiple MSNE in one game {.smaller}
 
 Based on this, the conditions under which each player will use a mixed strategy are:
 
@@ -387,34 +398,118 @@ $$
 
 ::: {.incremental}
   * We've never seen anything like $p = 1$ in this context before...
-  * $p = 1$ tells us that Player 2 will only play a mixed strategy
-    if Player 1 only play A, which isn't really a mixed strategy at all.
+  * **Player 2 will only mix** if **Player 1 only plays A**
   * This usually occurs when one strategy **weakly** dominates another.
 :::
 ---
 
-## An MSNE With Only One Mixed Strategy
+## Multiple MSNE in one game
+:::: {.columns}
+::: {.column}
+```{r}
+#| echo: false
+U1_A <- function(q) {
+  2*q + 3*(1-q)
+}
+U1_B <- function(q) {
+  4*q + 0*(1-q)
+}
+# Generate a sequence of values for p from 0 to 1
+p_values <- seq(0, 1, length.out = 100)
+# Compute the expected utilities for each value of p
+utilities1_A <- U1_A(p_values)
+utilities1_B <- U1_B(p_values)
+# Create a data frame for plotting
+data_1 <- data.frame(p = p_values, A = utilities1_A, B = utilities1_B)
+# Plot the expected utilities and indicate the best response threshold
+ggplot(data_1, aes(x = p)) +
+  geom_line(aes(y = A, color = "Exp. Util. of A (3 - q)"), linewidth = 2) +
+  geom_line(aes(y = B, color = "Exp. Util. of B (4q)"), linewidth = 2) +
+  geom_vline(xintercept = 3/5, linetype = "dashed", color = "grey50") +
+  annotate("text", x = 3/5, y = 0, label = "q = 3/5", hjust = -0.1, color = "grey50") +
+  labs(title = "Player 1's Expected Utilities",
+       x = "Probability of X (q)",
+       y = "Expected Utility",
+       color = "Choice") +
+  theme_minimal()
+```
+:::
+::: {.column}
+```{r}
+#| echo: false
+U2_X <- function(p) {
+  2*p + 3*(1-p)
+}
+U2_Y <- function(p) {
+  2*p + 0*(1-p)
+}
+# Generate a sequence of values for p from 0 to 1
+q_values <- seq(0, 1, length.out = 100)
+# Compute the expected utilities for each value of p
+utilities2_X <- U2_X(q_values)
+utilities2_Y <- U2_Y(q_values)
+# Create a data frame for plotting
+data_2 <- data.frame(q = q_values, X = utilities2_X, Y = utilities2_Y)
+# Plot the expected utilities and indicate the best response threshold
+ggplot(data_2, aes(x = q)) +
+  geom_line(aes(y = X, color = "Exp. Util. of X (3 - p)"), linewidth = 2) +
+  geom_line(aes(y = Y, color = "Exp. Util. of Y (2q)"), linewidth = 2) +
+  geom_vline(xintercept = 1, linetype = "dashed", color = "grey50") +
+  labs(title = "Player 2's Expected Utilities",
+       x = "Probability of A (p)",
+       y = "Expected Utility",
+       color = "Choice") +
+  theme_minimal()
+```
+:::
+::::
+
+## Multiple MSNE in one game {.smaller}
 We can still approach this the same way that we have in the past:
 
+::::: {.columns}
+:::: {.column width="30%"}
+| $P_1$, $P_2$ | $X~(q)$ | $Y~(1 - q)$ |
+|-------------:+:-------:+:-----------:|
+| $A~(p)$      | 2, 2    | 3, 2        |
+| $B~(1 - p)$  | 4, 3    | 0, 0        |
+::::
+
+:::: {.column}
 ::: {.incremental}
-  * Suppose that in the MSNE, Player 1 plays a (non-trivial) mixed strategy.
+  * Suppose in MSNE that Player 1 plays a (non-trivial) mixed strategy.
   * Then Player 2 must also play a mixed strategy, in which q = 3/5.
-    + But Player 2 will mix if Player 1 plays  p = 1, which is a trivial mixed strategy. 
+    + But Player 2 will only mix if Player 1 plays  p = 1, which is a trivial mixed strategy. 
     + This is a contradiction, **there is no MSNE where Player 1 plays a non-trivial mixed strategy**
 :::
+::::
+:::::
 ---
 
-## An MSNE With Only One Mixed Strategy
-Approach it the other way next: Suppose Player 2 plays a non-trivial mixed strategy.
-Then Player 1 must play A as a pure strategy.
+## Multiple MSNE in one game {.smaller}
+Approach it the other way next:
+
+::::: {.columns}
+:::: {.column width="30%"}
+| $P_1$, $P_2$ | $X~(q)$ | $Y~(1 - q)$ |
+|-------------:+:-------:+:-----------:|
+| $A~(p)$      | 2, 2    | 3, 2        |
+| $B~(1 - p)$  | 4, 3    | 0, 0        |
+::::
+
+:::: {.column}
+Suppose Player 2 plays a non-trivial mixed strategy.
 
 ::: {.incremental}
+  * Then Player 1 must play A as a pure strategy.
   * Player 2 will play A if $3 - q \geq 4q$, i.e. if $3/5 \geq q$.
   * This lets Player 2 play a non-trivial mixed strategy! There is no contradiction here.
 :::
+::::
+:::::
 ---
 
-## An MSNE with only one mixed strategy
+## Multiple MSNE in one game {.smaller}
 ::: {.incremental}
   * There are a range of MSNEs here: all strategy profiles $(1, 0), (q, 1 - q)$, in which $q \in (0, 3/5]$
   * There are also two trivial MSNEs, $(1, 0), (0, 1)$ and $(0, 1), (1, 0)$, 
@@ -423,51 +518,38 @@ Then Player 1 must play A as a pure strategy.
 :::
 ---
 
-## Graph Best Responses
+## Multiple MSNE in one game
  
 ```{r}
 #| code-fold: true
-# Define the best response function for the Police Officer
-BR1 <- function(q) {
-  ifelse(q <= 3/5, 1, 0)
-}
-
-# Define the best response function for the Drug Dealer
-BR2 <- function(p) {
-  ifelse(p == 1, 1, 0)
-}
-
-# Generate a sequence of values for d and p from 0 to 1
-q_values <- seq(0, 1, by = 1/5)
-p_values <- seq(0, 1, by = 1/5)
-
-# Compute the best responses for each value of d and p
-responses1 <- sapply(q_values, BR1)
-responses2 <- sapply(p_values, BR2)
+#| warning: false
 
 # Create a data frame for plotting
 data <- data.frame(
-  q = q_values,
-  BR1 = responses1,
-  p = p_values,
-  BR2 = responses2
+  q = c(0, 3/5, 3/5, 1),
+  BR1 = c(1, 1, 0, 0),
+  p = c(1, 0, 0, 0),
+  BR2 = c(0, 1, 1, 1)
 )
 
 # Plot the best response functions
 ggplot(data) +
-  geom_step(aes(x = BR2, y = p, color = "BR_2"), direction = "vh") +
-  geom_step(aes(x = q, y = BR1, color = "BR_1"), direction = "hv") +
-  geom_segment(aes(x = 0, xend = 0.6, y = 1, yend = 1), color = "green", linetype = "dashed") +
+  geom_step(aes(x = q, y = BR1, color = "BR_1"), direction = "hv", linewidth = 2, alpha = 0.9) +
+  geom_step(aes(x = BR2, y = p, color = "BR_2"), direction = "vh", linewidth = 2, alpha = 0.9) +
+  geom_segment(aes(x = 3/5, xend = 1, y = 0, yend = 0, color = "MSNE"), linewidth = 1.5, linetype = "dotted") +
+  geom_point(aes(x=0, y=1, color = "PSNE"), size = 2) +
+  geom_point(aes(x=1, y=0, color = "PSNE"), size = 2) +
   labs(title = "Best Response Functions for Mixed Strategy Nash Equilibrium",
-       x = "p",
-       y = "q",
+       x = "q",
+       y = "p",
        color = "Best Response") +
   theme_minimal()
 ```
 
 ---
 
-## Absence of MSNEs
+## Absence of MSNEs {.smaller}
+
 Let us return to the Prisoner's Dilemma and check for MSNEs:
 
 | Guido, Luca        | $Testify~(q)$ | $Keep~Quiet~(1-q)$ |
@@ -485,7 +567,7 @@ Guido and Luca's expected payoffs are:
 :::
 ---
 
-## Absence of MSNEs
+## Absence of MSNEs {.smaller}
 Guido will play a mixed strategy if:
 
 $$
@@ -504,7 +586,7 @@ $$
 :::
 ---
 
-## Getting Bad Probabilities
+## Getting Bad Probabilities {.smaller}
 If you've solved for a player's mixed strategy and you find that the probability is 
 **less than 0**, or **more than 1**:
 
