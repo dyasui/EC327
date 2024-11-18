@@ -2,16 +2,35 @@
 title: "In-class Activities"
 ---
 
-[Activity 1 - Guessing Two Thirds of the Average](01GuessTwoThirds/GuessTwoThirds.html)
+## Guess 2/3rds of the Average
 
-[Activity 2 - Survivor Flags](02SurvivorFlags/SurvivorFlags.html)
+[Activity Sheet](01GuessTwoThirds/GuessTwoThirds.html)
 
-[Activity 3 - Pirate Treasure](03PirateTreasure/PirateTreasure.qmd)
+## Survivor Flags
 
-[Activity 4 - Blotto Election](04BlottoElection/BlottoElection.qmd)
+[Activity Sheet](02SurvivorFlags/SurvivorFlags.html)
 
-[Activity 5 - Social Media Ads](05CournotComp/cournotcomp.qmd)
+[results](02SurvivorFlags/results.qmd)
 
-[Activity 6 - Penalty Kick Shootout](06PenaltyKicks/penaltykicks.qmd)
+## Pirate Treasure
 
----
+[Activity Sheet](03PirateTreasure/PirateTreasure.qmd)
+
+[results](03PirateTreasure/W2024-Results.csv)
+
+## Blotto Election
+
+[Activity Sheet](04BlottoElection/BlottoElection.qmd)
+
+## Social Media Adspace
+
+[Activity Sheet](05CournotComp/cournotcomp.qmd)
+
+[results](05CournotComp/EC327F24-activity5_results.csv)
+
+## Penalty Kicks Shootout
+
+[Activity Sheet](06PenaltyKicks/penaltykicks.qmd)
+
+[Winter 2024 results](06PenaltyKicks/EC327W24-activity6_results.csv)
+[Fall 2024 results](06PenaltyKicks/EC327F24-activity6_results.csv)

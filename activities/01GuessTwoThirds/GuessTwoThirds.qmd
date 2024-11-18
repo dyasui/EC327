@@ -13,13 +13,13 @@ name: GuessTwoThirds
 
 ## Results
 
-![](01GuessTwoThirds/histogram_1.png)
+![](histogram_1.png)
 
 ---
 
 ## Results from Winter 2024
 
-![](01GuessTwoThirds/histogram.png)
+![](histogram.png)
 
 ---
 

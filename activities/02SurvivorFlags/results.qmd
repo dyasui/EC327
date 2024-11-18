@@ -1,7 +1,9 @@
-################################################################################
-###                  Survivor Flags Game Results                             ###
-################################################################################
-#
+---
+title: "Survivor Flags Results"
+---
+
+```{r}
+#| eval: false
 # load packages
 library(tidyverse)
 
@@ -133,8 +135,6 @@ sim_randflags <- function() {
     select(team)
 }
 
-
-
 # Plot actual results against simulated results
 results_df %>% filter(game==1) %>%
   ggplot() +
@@ -143,6 +143,9 @@ results_df %>% filter(game==1) %>%
             linetype = "dotdash") +
   geom_line(data = simresults_df, 
             aes(x=round, y=flagsleft))
+```
 
+![Winter 2024 Results](W2024-Results.png)
 
-  
+![Fall 2024 Results](F2024-Results.png)
+
