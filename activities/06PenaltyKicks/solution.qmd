@@ -1,0 +1,107 @@
+---
+title: "Palacios-Huerta (2003) msne in penalty kicks"
+---
+
+| Kicker, Goalie  | $Dominant_g$ | $NonDominant_g$ |
+|-----------------+--------------+-----------------|
+| $Dominant_k$    | 58.30        | 94.97           |
+| $NonDominant_k$ | 92.91        | 69.92           |
+
+Let $p$ be the probability of the kicker choosing $Dominant_k$
+and $q$ be the probability of the goalie choosing $Dominant_g$.
+
+## The kicker will mix when:
+
+$$
+\begin{align}
+58.3\cdot q + 94.97\cdot (1-q) & = 92.91\cdot q + 69.92\cdot (1-q) \\
+\Rightarrow 25.05 & = 59.66 \cdot q \\
+\Rightarrow q^* & = 0.42
+\end{align}
+$$
+
+```{r}
+#| echo: false
+# Load necessary libraries
+library(ggplot2)
+
+# Define the expected utility functions for Streets and Park
+U_Dominant <- function(q) {
+  58.3*q + 94.97*(1-q)
+}
+
+U_NonDominant <- function(q) {
+  92.91*q + 69.92*(1-q)
+}
+
+# Generate a sequence of values for d from 0 to 1
+q_values <- seq(0, 1, length.out = 100)
+
+# Compute the expected utilities for each value of d
+dominant_utilities <- U_Dominant(q_values)
+nondominant_utilities <- U_NonDominant(q_values)
+
+# Create a data frame for plotting
+data <- data.frame(q = q_values, Dominant = dominant_utilities, NonDominant = nondominant_utilities)
+
+# Plot the expected utilities and indicate the best response threshold
+ggplot(data, aes(x = q)) +
+  geom_line(aes(y = Dominant, color = "Dominant"), linewidth = 2) +
+  geom_line(aes(y = NonDominant, color = "NonDominant"), linewidth = 2) +
+  geom_vline(xintercept = 0.4198, linetype = "dashed", color = "grey50") +
+  annotate("text", x =  0.4198, y = 0, label = "q = 42%", hjust = -0.1, color = "grey50") +
+  labs(title = "Expected Utility of Kicker",
+       x = "Probability of goalie going NonDominant (q)",
+       y = "Expected Utility",
+       color = "Choice") +
+  theme_minimal()
+```
+
+## The goalie will mix when:
+
+$$
+\begin{align}
+41.7\cdot p + 7.09\cdot (1-p) & = 5.03\cdot p + 30.08\cdot (1-p) \\
+59.66\cdot p & = 22.99 \\
+p^* & = 0.39
+\end{align}
+$$
+
+```{r}
+#| echo: false
+
+U_Dominant <- function(p) {
+  41.7*p + 7.09*(1-p)
+}
+
+U_NonDominant <- function(p) {
+  5.03*p + 30.08*(1-p)
+}
+# Generate a sequence of values for d from 0 to 1
+p_values <- seq(0, 1, length.out = 100)
+
+# Compute the expected utilities for each value of d
+dominant_utilities <- U_Dominant(p_values)
+nondominant_utilities <- U_NonDominant(p_values)
+
+# Create a data frame for plotting
+data <- data.frame(p = p_values, Dominant = dominant_utilities, NonDominant = nondominant_utilities)
+
+# Plot the expected utilities and indicate the best response threshold
+ggplot(data, aes(x = p)) +
+  geom_line(aes(y = Dominant, color = "Dominant"), linewidth = 2) +
+  geom_line(aes(y = NonDominant, color = "NonDominant"), linewidth = 2) +
+  geom_vline(xintercept = 0.3853, linetype = "dashed", color = "grey50") +
+  annotate("text", x = 0.3853, y = 0, label = "p = 39%", hjust = -0.1, color = "grey50") +
+  labs(title = "Expected Utility of Goalie",
+       x = "Probability of kicker going NonDominant (p)",
+       y = "Expected Utility",
+       color = "Choice") +
+  theme_minimal()
+```
+
+## Mixed-Strategy Nash Equilibrium
+
+If the kickers and goalies were playing mixed strategies consistent with a Nash equilibrium of the strategic form game above,
+we would predict to see the kickers kicking with their dominant foot about 42% of the time
+and goalies blocking to the kicker's non-dominant side about 39% of the time.
