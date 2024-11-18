@@ -2,39 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dyasui.github.io/EC327/Slides/06MixedStrategies/0602-mixing.html</loc>
-    <lastmod>2024-11-13T06:18:00.104Z</lastmod>
+    <lastmod>2024-11-18T06:24:36.969Z</lastmod>
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/Slides/02SequentialGames/02-main.html</loc>
     <lastmod>2024-10-09T10:27:49.620Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/Slides/06MixedStrategies/06-main.html</loc>
-    <lastmod>2024-11-13T07:05:31.884Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/Slides/06MixedStrategies/0603-advancedMSNE.html</loc>
+    <lastmod>2024-11-18T07:07:30.127Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/0306-weakdominance.html</loc>
-    <lastmod>2024-10-21T09:37:24.701Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/Slides/05CombinedGames/05-main.html</loc>
+    <lastmod>2024-10-28T07:37:19.173Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/Slides/index.html</loc>
-    <lastmod>2024-11-13T07:14:36.220Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/penaltykicks_results.html</loc>
+    <lastmod>2024-11-13T08:21:38.761Z</lastmod>
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/Slides/01Intro/01-main.html</loc>
     <lastmod>2024-10-04T20:19:04.994Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/activities/02SurvivorFlags/SurvivorFlags.html</loc>
-    <lastmod>2024-10-11T23:21:04.851Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/Homework/index.html</loc>
+    <lastmod>2024-11-08T19:22:51.689Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/0307-rationalize.html</loc>
-    <lastmod>2024-10-21T09:37:24.701Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/Slides/06MixedStrategies/0601-uncertainty.html</loc>
+    <lastmod>2024-11-18T06:17:45.962Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/activities/05CournotComp/results.html</loc>
-    <lastmod>2024-11-06T19:30:07.365Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/0305-bestresponses.html</loc>
+    <lastmod>2024-10-18T02:19:53.061Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/activities/05CournotComp/cournotcomp.html</loc>
+    <lastmod>2024-11-04T18:02:44.423Z</lastmod>
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/0304-elimination.html</loc>
@@ -46,7 +50,7 @@
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/activities/01GuessTwoThirds/GuessTwoThirds.html</loc>
-    <lastmod>2024-10-07T07:31:23.918Z</lastmod>
+    <lastmod>2024-11-18T05:29:20.647Z</lastmod>
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/Slides/01Intro/0100-syllabus.html</loc>
@@ -54,7 +58,7 @@
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/index.html</loc>
-    <lastmod>2024-11-09T00:02:25.043Z</lastmod>
+    <lastmod>2024-11-18T05:14:47.589Z</lastmod>
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/Slides/06MixedStrategies/0600-penaltykicks.html</loc>
@@ -150,7 +154,7 @@
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/activities/index.html</loc>
-    <lastmod>2024-11-07T21:14:01.592Z</lastmod>
+    <lastmod>2024-11-18T06:50:50.439Z</lastmod>
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/Slides/05CombinedGames/0505-SPNE.html</loc>
@@ -169,36 +173,40 @@
     <lastmod>2024-10-13T04:37:58.497Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/activities/05CournotComp/cournotcomp.html</loc>
-    <lastmod>2024-11-04T18:02:44.423Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/activities/02SurvivorFlags/results.html</loc>
+    <lastmod>2024-11-18T05:44:33.595Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/0305-bestresponses.html</loc>
-    <lastmod>2024-10-18T02:19:53.061Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/activities/05CournotComp/results.html</loc>
+    <lastmod>2024-11-06T19:30:07.365Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/Slides/06MixedStrategies/0601-uncertainty.html</loc>
-    <lastmod>2024-11-13T06:28:24.194Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/0307-rationalize.html</loc>
+    <lastmod>2024-10-21T09:37:24.701Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/Homework/index.html</loc>
-    <lastmod>2024-11-08T19:22:51.689Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/activities/02SurvivorFlags/SurvivorFlags.html</loc>
+    <lastmod>2024-10-11T23:21:04.851Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dyasui.github.io/EC327/activities/06PenaltyKicks/solution.html</loc>
+    <lastmod>2024-11-18T04:29:40.246Z</lastmod>
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/Slides/04ContinuousStrats/04-main.html</loc>
     <lastmod>2024-10-23T05:45:20.074Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/penaltykicks_results.html</loc>
-    <lastmod>2024-11-13T08:21:38.761Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/0306-weakdominance.html</loc>
+    <lastmod>2024-10-21T09:37:24.701Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/Slides/05CombinedGames/05-main.html</loc>
-    <lastmod>2024-10-28T07:37:19.173Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/Slides/06MixedStrategies/06-main.html</loc>
+    <lastmod>2024-11-13T07:05:31.884Z</lastmod>
   </url>
   <url>
-    <loc>https://dyasui.github.io/EC327/Slides/06MixedStrategies/0603-advancedMSNE.html</loc>
-    <lastmod>2024-11-13T06:26:18.637Z</lastmod>
+    <loc>https://dyasui.github.io/EC327/Slides/index.html</loc>
+    <lastmod>2024-11-18T05:13:32.762Z</lastmod>
   </url>
   <url>
     <loc>https://dyasui.github.io/EC327/Slides/03SimultaneousGames/03-main.html</loc>
