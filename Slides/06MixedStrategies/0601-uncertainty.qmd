@@ -206,6 +206,7 @@ Suppose that the probability Doc has the better hand is $p$.
   * How large does $p$ have to be before there is a Nash equilibrium where Wyatt Quits?
   
 We can find the expected payoffs in terms of p:
+
 ::: {.incremental}
   * (Stay, Match):
     + Doc's Expected Payoff:
@@ -221,6 +222,7 @@ We can find the expected payoffs in terms of p:
 
 :::: {.column}
 (Raise, Match):
+
 ::: {.incremental}
   * Doc's Expected Payoff:
     - $2p - 2(1-p) = 4p -2$
@@ -232,6 +234,7 @@ We can find the expected payoffs in terms of p:
 
 :::: {.column}
 (Stay, Quit) and (Raise, Quit):
+
 ::: {.incremental}
   * Doc's Expected Payoff:
     - $1p + 1(1-p) = 1$

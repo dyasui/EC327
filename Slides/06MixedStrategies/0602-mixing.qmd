@@ -302,8 +302,8 @@ ggplot(data) +
   than it is likely that they both meet in the Streets
 ---
 
-## Practice your understanding {.smaller}
-Consider the following game table. What are Player 1's expected payoffs, given Player 2's mixed strategy?
+## Practice your understanding 
+Consider the following game table. What are **Player 1's** expected payoffs, given Player 2's mixed strategy?
 
 | $P_1$, $P_2$   | Up $(q)$ | Down $(1 - q)$ |
 |---------------:+:--------:+:--------------:|
@@ -317,7 +317,7 @@ Consider the following game table. What are Player 1's expected payoffs, given P
 
 ---
 
-## Practice your understanding {.smaller}
+## Practice your understanding 
 Consider the following game table. What are **Player 2's** expected payoffs, given Player 1's mixed strategy?
 
 | $P_1$, $P_2$   | Up $(q)$ | Down $(1 - q)$ |
@@ -332,12 +332,14 @@ Consider the following game table. What are **Player 2's** expected payoffs, giv
 
 ---
 
-## Practice your understanding {.smaller}
+## Practice your understanding
 
 The correct answers to the previous two questions were:
 
-  * $U_1(Up) = 5q - 3, U_1(Down) = 1 - 6q$.
-  * $U_2(Up) = 5 - 7p, U_2(Down) = 4p - 1$.
+  * $U_1(Up) = 5q - 3$
+  * $U_1(Down) = -6q + 1 $.
+  * $U_2(Up) = -7p + 5$
+  * $U_2(Down) = 4p - 1$.
 
 Based on this, what are $p$ and $q$ in the MSNE of this game?
 
@@ -348,7 +350,7 @@ Based on this, what are $p$ and $q$ in the MSNE of this game?
 
 ---
 
-## Multiple MSNE in one game {.smaller}
+## Multiple MSNE in one game 
 
 Consider the following game table:
 
