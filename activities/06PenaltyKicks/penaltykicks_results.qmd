@@ -1,0 +1,171 @@
+---
+title: Activity 6 Results
+format:
+  html:
+    code-fold: true
+    code-summary: "See the code"
+---
+
+On homework 3, I ask you use some statistics about the class data from activity 6 to relate
+to theoretical predictions.
+I realised not everyone has taken a stats or metrics class yet, 
+so I wanted to post some pieces of `R` code as examples of starting places to help you answer this question.
+
+Feel free to use as much (or to ignore) of the code provided as you want,
+but keep in mind that just copying these statistics without applying them to specific theoretical 
+predictions will not be enough to earn you credit for this assignment.
+
+Click on any heading with `> See the code` to reveal hidden code chunks:
+```{r}
+# comments look like this
+print("This is R code")
+```
+
+## Dataset Structure
+
+I collected the results from the in-class penalty kicks activity as a csv file
+where each row represents an different attempted shot.
+
+The columns `round`, `match`, and `shot` contain the id representing which 
+round in the bracket, which match of that specific round, 
+and whether that shot was the first, second, third, fourth, or fifth shot of that match,
+respectively.
+
+To make these data easier to visualize and calculate statistics, 
+you can import them to an object in `R` using the `read_csv` function
+from the `tidyverse` package.
+
+```{r}
+#| code-fold: false
+#| message: false
+#| warning: false
+# load tidyverse packages
+library(tidyverse)
+
+# read in the class results from csv file
+data <- read_csv("EC327F24-activity6_results.csv") %>%
+  filter(!is.na(s_k), !is.na(s_g)) # filter out missing data
+
+# print the first 10 observations
+head(data, n = 10)
+```
+
+The important variables are the choices of the kicker and goalie
+for each kick attempt as well as whether a goal was scored or not: 
+
+  * `s_k` represents the direction the kicker chose to kick
+  * `s_g` represents the direction the goalie chose to attempt to block
+  * `goal` is an indicator which is `TRUE` if a goal was scored,
+  and `FALSE` if a kick was blocked or missed.
+
+```{r}
+#| code-fold: false
+N <- nrow(data)
+```
+
+Across all rounds and matches played in class this quarter,
+we had `r N` different shots attempted, which are each a row in this dataset.
+
+## Group Results by Srategy Profile
+
+I might want to compare how often we see a kicker choosing $Right$
+at the same time a goalie blocked $Right$,
+vs a kicker chosing $Right$ when a goalie blocked $Left$, etc, 
+for all 9 different possible pure strategy combinations.
+
+```{r}
+#| message: false
+# summarize by type of strategy profile
+profiles_tbl <- data %>%
+  group_by(s_k, s_g) %>% # group by each strategy combo to summarise each group
+  summarise(
+    n = n(), # get counts of each profile
+    p = n / N, # calculate proportions of total observations
+    num_goals = sum(goal), # count numbers of goals scored
+    prob_goal = num_goals / N # probability of goal scored
+  ) %>%
+  ungroup() # get rid of groups structure to make later manipulations easier
+# print the profiles table
+profiles_tbl
+```
+
+This table shows that the Kicker choosing $Left$ when the goalie chose $Right$
+was the most common type of outcome, which happened in 14% of the `r N` total shots.
+
+### Plotting frequency of each strategy profile
+If you want a more visual representation of the information in this table,
+you could use a bar graph where each bar represents a row of the table:
+
+```{r}
+ggplot(profiles_tbl, aes(x = s_g, y = n, fill = s_k)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(vars(s_k))
+```
+
+### Testing strategy profiles against theory
+
+If you wanted to compare the frequency of each type of choice matchup in this table 
+with what you would expect in an MSNE, you could use the `chisq.test` function
+to test the goodness of fit of the `n` column in our table to some
+theoretical distribution of `p` which we would expect for each pure strategy combination.
+
+For example, suppose that a mixed strategy Nash equilibrium of this game 
+would result in each profile being observed with equal probability of 1/9.
+
+```{r}
+# use observed num of each choice combo from profiles table
+n_observed <- profiles_tbl %>% select(n)
+# theoretical predictions of each profile being observed
+# make sure they're in the same order as in the profiles table
+p_predicted <- c(1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9)
+# test whether n is drawn from p_predicted distribution
+chisq.test(
+  x = n_observed,
+  p = p_predicted
+)
+```
+
+Compare the resulting $\chi^2$- statistic against the critical value of
+`r round(qchisq(p = 0.95, df = 8), 2)`
+from the $\chi^2$ distribution with 8 degrees of freedom at the 95% confidence level.
+
+## Comparing Kicker's Strategies
+
+Instead of comparing to a specific distribution of observed strategy combinations,
+you might be interested in seeing the actual average payoff to either player 
+for each of their strategies played in the data.
+
+```{r}
+# summarise win probabiltiy by kicker's strategy
+kicker_strats <- data %>%
+  group_by(s_k) %>% # group all kickers strategies together
+  summarise(
+    num_goals = sum(goal), # count how many times kicker scored
+    prob_goal = sum(goal) / N # calculate success rate
+  )
+# print kicker strategies table
+kicker_strats
+```
+
+### Testing for equal success rates for each kick
+
+```{r}
+# use observed num of each choice combo from kicker strategies table
+n_observed <- kicker_strats %>% select(num_goals)
+# equal probobility of success for each strategy
+p_predicted <- c(1/3, 1/3, 1/3)
+# test whether num_goals are equal across strategy choice
+chisq.test(
+  x = n_observed,
+  p = p_predicted
+)
+```
+
+```{r}
+# chi-square critical value with 2 degrees of freedom
+chisq.crit <- qchisq(p = 0.95, df = 2)
+```
+
+Compare $\chi^2$-statistic to a critical value of `r round(chisq.crit, 2)`.
+If the statistic is greater than the critical value, 
+reject the null hypothesis that the success rates are equal with 95% confidence.

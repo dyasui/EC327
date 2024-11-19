@@ -6,40 +6,108 @@ format:
     code-summary: "See the code"
 ---
 
+For homework, you will analyze the class data from Activity 5 to relate the results to theoretical predictions about market behavior. Below, I've provided some guidance and code examples to help you structure your analysis.
+
+Feel free to use as much or as little of the code provided as you like. However, your goal should be to connect these results to the predictions of economic theory. Simply summarizing the data without interpretation will not be sufficient.
+
+
+Click on any heading with `> See the code` to reveal hidden code chunks:
+```{r}
+# comments look like this
+print("This is R code")
+```
+
+## Dataset Structure
+
+The results from our in-class activity are stored in a CSV file where each row
+represents the decisions made by a group in a specific round.
+
+Key columns in the dataset include:
+
+  * `group`: The group ID.
+  * `round`: The round number of the activity.
+  * `quantity`: The quantity of social media ads produced by the group in that round.
+  * `a`, `b`: Parameters of the demand curve in each round.
+
+To analyze the data, you can load them into an object in R with the `tidyverse` package:
+
 ```{r}
 #| message: false
 #| warning: false
 # load tidyverse packages
 library(tidyverse)
-library(ggthemes)
 
 # load in the results recorded in class from csv file
-data <- read_csv(file = "EC327F24-activity5_results.csv")
+data <- read_csv(file = "EC327F24-activity5_results.csv") %>%
+  # change `group` and `round` to be categorical
+  mutate(across(c(group, round), as_factor)) 
 
+# Print the first 10 observations
+head(data, n = 10)
+```
+## Adjusting Production Quantities
+
+To compare the results across rounds, we could standardize each group’s production
+quantity by the theoretical monopolist's quantity $Q_{mp} = \frac{a}{2b}$.
+This adjustment allows us to evaluate whether groups overproduced or
+underproduced relative to what they could collectively achieve through collusion.
+
+If instead of a monopoly, several firms were acting competing in an *oligopoly*,
+thier individual best-response functions would be:
+
+$$
+quantity_i = \frac{a}{2b} - \frac{\sum_{j\neq i}^N quantity_j}{2}
+$$
+
+where
+
+  * $quantity_i$ is the quantity produced by the single firm $i$
+  * $quantity_j$ are the individual quantities produced by firms besides $i$
+  * $N$ is the total number of firms in the market
+
+One example of an oligopolistic equilibrium would be 
+all competing firms set the same price, in which 
+each firm chooses the individual quantity $quantity_i^{oligopoly} = \frac{a}{b(N+1)}$.
+
+If firms could cooperate and decide to split the Monopolist's quantity amongst each other,
+where $quantity_i^{collusion} = \frac{Q_{mp}}{N}$,
+they would produce fewer ads than in the equilibrium above, and jointly earn higher profit.
+
+```{r}
+#| message: false
+#| warning: false
 # modify data for plotting
 data <- data %>%
-  # change `group` and `round` to be categorical
-  mutate(across(c(group, round), as_factor)) %>%
+  group_by(round) %>%
+  mutate(num_firms = sum(!is.na(quantity))) %>%
+  ungroup() %>%
   # standardize quantity by `a` and `b` of each round
   mutate(
     Q_mp = a/(2*b), # monopolist's quantity
-    # ratio of individual firm's to monopolist's quantity
-    q_adj = quantity/Q_mp 
+    # equal split of monopoly quantity across all firms
+    q_mp = Q_mp / num_firms,
+    # divide actual quantities by cooperative quantities
+    q_adj = quantity / q_mp
   ) 
+data
+```
 
+## Plot the adjusted data across rounds
+```{r}
 # plot adjusted quantities produced for all groups across rounds
 data %>%
   ggplot( aes( x = round, y = q_adj,
       group = group, color = group )) +
   geom_line(alpha = 0.5) +
   geom_point() +
-  ylim(0,2) +
-  theme_pander() +
+  ylim(0,20) +
+  geom_hline(yintercept = 1) +
+  ggthemes::theme_pander() +
   theme(plot.caption = element_text(hjust = 0)) +
   labs(
     title = "Activity 5 - Social Media Ads",
     subtitle = "Adjusted production quantities across 9 rounds",
-    caption = "We started with 10 groups competing to sell ads in a market with a randomly generated demand curve. \nEach round firms were shown the demand curve and asked to choose a quantity of ads to produce. \nBecause the total quantity produced ranged from round to round depending on the demand curve,\n the quantities shown here are adjusted by taking the ratio of how many ads each firm produced each round \ndivided by the quantity that a theoretical monopolist firm would set given the same demand curve."
+    caption = "We started with 10 groups competing to sell ads in a market with a randomly generated demand curve. \nEach round firms were shown the demand curve and asked to choose a quantity of ads to produce. \nBecause the total quantity produced ranged from round to round depending on the demand curve,\n the quantities shown here are adjusted by taking the ratio of the quantity that a theoretical monopolist firm would set given the same demand curve \ndivided by how many ads each firm produced each round ."
   ) 
 
 ```
