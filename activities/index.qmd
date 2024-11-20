@@ -36,3 +36,7 @@ title: "In-class Activities"
   * [Example R code](06PenaltyKicks/penaltykicks_results.qmd)
   * [Winter 2024 results (csv file)](06PenaltyKicks/EC327W24-activity6_results.csv)
   * [Fall 2024 results (csv file)](06PenaltyKicks/EC327F24-activity6_results.csv)
+
+## Brinksmanship
+
+[Activity Sheet](07Brinksmanship/brinksmanship.qmd)
