@@ -131,14 +131,9 @@
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 \begin{frame}{Adverse Selection - Market for Lemons}
-   Suppose that a fraction $f$  of cars are lemons \\ 
+   Suppose that a fraction $f$ of cars are 'oranges' \\ 
+   and the remaining $(1-f)$ fraction are 'lemons' \\
    Draw the extensive form game tree
-\end{frame}
-
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-\begin{frame}[plain]{}
-  
 \end{frame}
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -146,6 +141,13 @@
 \begin{frame}{Market for Lemons - Buyer's Perspective}
   For the buyer: \\ 
   write out the expected utility of buying a car at price $p$:
+  \pause
+  $$16000\cdot f + 6000 \cdot (1-f)$$
+  \begin{itemize}
+    \item For what price will a buyer be willing to buy a car of unknown quality?
+    \pause
+    $$p \leq 16000 + 10000\cdot f$$
+  \end{itemize}
 \end{frame}
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -153,9 +155,16 @@
 \begin{frame}{Market for Lemons - Seller's Perspective}
   For the seller: \\ 
   \begin{itemize}
-    \item the expected utility of selling a lemon is:
-    \vspace{15mm}
-    \item the expected utility of selling a good car is:
+    \item What price $p$ would make the owner of a lemon willing to sell?
+      \pause
+      \begin{itemize}
+        \item \$3000
+      \end{itemize}
+    \item What price would make the owner of an organge willing to sell?
+      \pause
+      \begin{itemize}
+        \item \$12500
+      \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -163,18 +172,33 @@
 
 \begin{frame}{Market for Lemons - Market Clearing}
   When will all buyers and sellers want to trade?
-  \vspace{30mm}
+  \pause
+  $$12500 \leq p \leq 6000 + 10000f$$
+\end{frame}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\begin{frame}{Market for Lemons - Market Unraveling}
+  When will there be a \textit{separating equilibrium}
+  where only one type of car is sold?
+  \pause
+  $$f < 0.65$$
+  \pause
+  What type of car is sold in this equilibrium?
+  \begin{itemize}
+    \item Only \textbf{lemons}!
+  \end{itemize}
 \end{frame}
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 \begin{frame}{Market for Lemons - Market Unraveling}
   When will there be a \textit{pooling equilibrium}
-  where only one type of car is sold?
-  \vspace{30mm} \\
-  What type of car is sold in this equilibrium?
+  where \textit{all} types of car are sold?
+  \pause
+  $$f > 0.65$$
+  \pause
 \end{frame}
-
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

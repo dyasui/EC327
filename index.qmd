@@ -40,7 +40,7 @@ Dixit, Skeath, and McAdams. Games of Strategy, 5th edition.
 |     5    |      6      | Review & **Midterm**                                             |                                                                                                                  |
 |     6    |      7      | [Mixed Strategies](Slides/#mixed-strategies)                     | [Activity 5](activities/05CournotComp/cournotcomp.qmd), [Activity 6](activities/06PenaltyKicks/penaltykicks.qmd) |
 |     7    |      7      | [Mixed Strategies](Slides/#mixed-strategies)                     | [Homework 3](Homework/assignment3/main.pdf)                                                                      |
-|     8    |      9      | [Uncertainty and Information](Slides/#asymmetric-info)           | [Activity 7](activities/LemonsMarket/main.qmd)                                                                   |
+|     8    |      9      | [Uncertainty and Information](Slides/#asymmetric-info)           | [Activity 7](activities/07Brinksmanship/brinksmanship.qmd)                                                                   |
 |     9    |      8      | [Strategic Moves](Slides/#strategic-moves)                       | [Activity 8](activities/Brinksmanship/main.qmd)                                                                  |
 |    10    |      10     | [Repeated Games](Slides/#repeated-games)                         | [Homework 4](Homework/assignment4/main.pdf)                                                                      |
 | *Finals* |  Cumulative | **Exam**: Friday, Dec. 13 - 10:15am                              |                                                                                                                  |

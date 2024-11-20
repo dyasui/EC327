@@ -68,17 +68,17 @@ website:
             href: activities/06PenaltyKicks/penaltykicks.qmd
       - section: "Uncertainty and Information"
         contents:
-          - text: "**Slides**: Asymmetric Information"
-            href: Slides/
+          - text: "[Slides]{.text-info}: Asymmetric Information"
+            href: Slides/#asymmetric-information
           - text: "**Activity**: Market for Lemons"
             href: activities/LemonsMarket/main.qmd
       - section: "Strategic Moves"
         contents:
-          - text: "**Slides**"
-            href: Slides/
+          - text: "[Slides]{.text-info}: Strategic Moves"
+            href: Slides/#strategic-moves
           - text: "**Activity**: Brinksmanship"
             href: activities/Brinksmanship/main.qmd
       - section: "Repeated Games"
         contents:
-          - text: "**Slides**"
-            href: Slides/
+          - text: "[Slides]{.text-info}"
+            href: Slides/#repeated-games
