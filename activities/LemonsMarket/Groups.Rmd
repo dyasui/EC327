@@ -1,7 +1,7 @@
 ```{r}
 library(tidyverse)
 setwd("~/Desktop/ec327gametheory/activities/05LemonsMarket/")
-Groups <- read_csv("Groups.csv")  %>% 
+Groups <- read_csv("Groups.csv")  %>%
   mutate(team = parse_number(group_name)) 
 Groups <- Groups %>% 
   # switch order of names from (last, first) -> (first last)

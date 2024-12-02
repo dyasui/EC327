@@ -1,0 +1,91 @@
+---
+title: "Market for Lemons"
+---
+
+**<u>Objective:</u>**
+This activity simulates a used car market where buyers and sellers interact
+under conditions of asymmetric information. The goal is to demonstrate how
+private information, adverse selection, and outside options influence market
+outcomes.
+
+## Game Rules:
+
+### Setup
+
+ * **Starting Resources:**
+   Each buyer starts with a budget of £800.
+   Each seller starts with one car card.
+   Sellers should not reveal the quality of their car to anyone.
+
+* **Car Values:**
+  Good Cars: Resale value of £600. Scrap value of £400 (if unsold).
+  Lemons: Resale value of £200. Scrap value of £150 (if unsold).
+
+### Gameplay
+
+The game consists of 3 rounds. Each round follows this sequence:
+
+  * **Sellers List Cars:**
+    Each seller announces a starting price for their car. This price is public.
+    Sellers can choose not to sell their car if they believe the offered price would not result in a profit.
+
+  * **Buyers Bid:**
+    Buyers negotiate with sellers to purchase cars.
+    Each buyer may purchase only one car per round.
+    Buyers may also choose not to buy a car if they believe the prices are too high.
+
+  * **Transactions:**
+    Once a buyer and seller agree on a price:
+
+      + The buyer pays the agreed price, which is deducted from their budget.
+
+      + The seller reveals the car’s true quality.
+
+    Sellers record the profit from the transaction (sale price minus car's scrap value).
+    Buyers record their remaining budget and the car’s resale value.
+
+#### Outside Options:
+Buyers who do not purchase a car keep their remaining budget as their final payoff for the round.
+Sellers who do not sell their car receive the scrap value instead:
+
+  * £400 for a good car.
+  * £150 for a lemon.
+
+#### End of Round:
+All participants record their earnings:
+
+  * Buyers: Remaining budget + resale value of purchased car (if any).
+
+  * Sellers: Sale profit or scrap value (if unsold).
+
+The roles rotate so that each participant experiences being both a buyer and a seller.
+
+## End of the Activity
+
+At the end of all rounds:
+
+  * Reveal the type of car you purchased.
+  * Calculate the total profits for each participant across rounds.
+  * Discuss how market behavior evolved.
+
+### Record Results:
+
+Buyers and sellers should track their results each round:
+
+  * If seller: type of car you started with, whether you sold, and what price it sold for.
+  * If buyer: whether you bought a car, how much you paid, and what type of car it ended up being.
+  * Also keep track of how many of each type of car were sold in the class as a whole.
+
+## Discussion Questions
+
+  * As a buyer, what techniques did you use to decide whether to buy a car or not?
+
+  * As a seller, how did you try to convince potential buyers to buy your car?
+
+  * Did the overall market for used cars in class experience *adverse selction*? 
+  Why or why not?
+
+  * What are some other examples of markets in the real world
+  which you think could potentially be affected by adverse selection in the same way as the market for lemons?
+  What is special about those markets that you think would make them susceptible?
+

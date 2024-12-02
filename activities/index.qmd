@@ -40,3 +40,7 @@ title: "In-class Activities"
 ## Brinksmanship
 
 [Activity Sheet](07Brinksmanship/brinksmanship.qmd)
+
+## Market for Lemons
+
+[Activity Sheet](LemonsMarket/activitysheet.qmd)
