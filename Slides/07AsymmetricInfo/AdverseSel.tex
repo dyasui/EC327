@@ -134,6 +134,20 @@
    Suppose that a fraction $f$ of cars are 'oranges' \\ 
    and the remaining $(1-f)$ fraction are 'lemons' \\
    Draw the extensive form game tree
+   \begin{itemize}
+     \item \textbf{seller} gets: 
+     \begin{itemize}
+       \item $p - 3000$ from selling a \textit{lemon} at price $p$
+       \item $p - 12500$ from selling an \textit{orange}
+       \item $0$ if they don't buy any car
+     \end{itemize}
+     \item \textbf{buyer} gets:
+     \begin{itemize}
+       \item $6000 - p$ from buying a \textit{lemon}
+       \item $16000 - p$ from buying an \textit{orange}
+       \item $0$ if they don't sell any car
+     \end{itemize}
+   \end{itemize}
 \end{frame}
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -142,7 +156,7 @@
   For the buyer: \\ 
   write out the expected utility of buying a car at price $p$:
   \pause
-  $$16000\cdot f + 6000 \cdot (1-f)$$
+  $$(16000 - p) \cdot f + (6000 - p) \cdot (1-f)$$
   \begin{itemize}
     \item For what price will a buyer be willing to buy a car of unknown quality?
     \pause
@@ -158,12 +172,12 @@
     \item What price $p$ would make the owner of a lemon willing to sell?
       \pause
       \begin{itemize}
-        \item \$3000
+        \item $p \geq \$3000$
       \end{itemize}
-    \item What price would make the owner of an organge willing to sell?
+    \item What price would make the owner of an orange willing to sell?
       \pause
       \begin{itemize}
-        \item \$12500
+        \item $p \geq \$12500$
       \end{itemize}
   \end{itemize}
 \end{frame}
