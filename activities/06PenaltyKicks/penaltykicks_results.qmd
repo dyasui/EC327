@@ -42,6 +42,8 @@ from the `tidyverse` package.
 # load tidyverse packages
 library(tidyverse)
 
+# setwd("activities/06PenaltyKicks")
+
 # read in the class results from csv file
 data <- read_csv("EC327F24-activity6_results.csv") %>%
   filter(!is.na(s_k), !is.na(s_g)) # filter out missing data
@@ -169,3 +171,23 @@ chisq.crit <- qchisq(p = 0.95, df = 2)
 Compare $\chi^2$-statistic to a critical value of `r round(chisq.crit, 2)`.
 If the statistic is greater than the critical value, 
 reject the null hypothesis that the success rates are equal with 95% confidence.
+
+```{r}
+data %>%
+  mutate(
+    s_k = case_when(
+      s_k %in% c("Right", "Left") ~ "Side",
+      s_k == "Center" ~ "Center"
+    ),
+    s_g = case_when(
+      s_g %in% c("Right", "Left") ~ "Side",
+      s_g == "Center" ~ "Center"
+    )
+  ) %>%
+  group_by(s_k, s_g) %>%
+  summarise(
+    n_obs = n(),
+    num_goals = sum(goal==TRUE),
+    prob_goal = sum(goal) / n()
+  )
+```
