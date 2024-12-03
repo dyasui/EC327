@@ -19,6 +19,9 @@
     \item $H > C > D > L$ 
     \item $C > H > L > D$
   \end{enumerate}
+  \pause 
+
+  Answer: \textbf{(c)}!
 \end{frame}
 
 \begin{frame}{General Prisoners' Dilemma}
@@ -62,7 +65,7 @@
   A \textbf{two-stage} prisoners' dilemma in mixed extensive form:
   \usetikzlibrary{calc} 
   \begin{center}
-    \begin{tikzpicture}[scale=1,font=\footnotesize]
+    \begin{tikzpicture}[scale=0.9,font=\footnotesize]
     \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
     \tikzstyle{level 1}=[level distance=15mm,sibling distance=6cm]
     \tikzstyle{level 2}=[level distance=15mm,sibling distance=3cm]
@@ -134,16 +137,16 @@
   Recall that $\delta$ is the subjective discount rate from stage to stage 
 \end{frame}
 
-\begin{frame}{Test Your Understanding}
-  What should you do in the two-stage Prisoners' Dilemma 
-  if your opponent plays \textit{Coop} in stage 1 and \textit{Coop} in stage 2?
-  \begin{enumerate}[label=\textbf{\alph*)}]
-    \item \textit{Coop} in stage 1, \textit{Coop} in stage 2
-    \item \textit{Coop} in stage 1, \textit{Defect} in stage 2
-    \item \textit{Defect} in stage 1, \textit{Coop} in stage 2
-    \item \textit{Defect} in stage 1, \textit{Defect} in stage 2
-  \end{enumerate}
-\end{frame}
+% \begin{frame}{Test Your Understanding}
+%   What should you do in the two-stage Prisoners' Dilemma 
+%   if your opponent plays \textit{Coop} in stage 1 and \textit{Coop} in stage 2?
+%   \begin{enumerate}[label=\textbf{\alph*)}]
+%     \item \textit{Coop} in stage 1, \textit{Coop} in stage 2
+%     \item \textit{Coop} in stage 1, \textit{Defect} in stage 2
+%     \item \textit{Defect} in stage 1, \textit{Coop} in stage 2
+%     \item \textit{Defect} in stage 1, \textit{Defect} in stage 2
+%   \end{enumerate}
+% \end{frame}
 
 \begin{frame}{$\mathbb{T}$-stage repeated Prisoners' Dilemma}
   A complete strategy in a $\mathbb{T}$-stage repeated game will look like:
@@ -234,8 +237,10 @@
 
   \begin{itemize}
     \item What is your \textbf{expected utility} of playing \textit{Kill}, \textit{Kill}?
+    \pause
+    \item 8 in the first stage, 4 in the second stage,
+    \item so $EU(Kill,~Kill) = 8 + 4p$
   \end{itemize}
-  \vspace{10mm}
 \end{frame}
 
 \begin{frame}{Repeated Prisoners' Dilemma with Uncertain Second Stage}
@@ -251,9 +256,15 @@
   \end{center}
 
   What is your \textbf{expected utility} of playing \textit{Miss, Kill}? \\
-  \vspace{10mm}
+  \pause
+  \begin{itemize}
+      \item $4 + 8p$
+  \end{itemize}
   What about from playing \textit{Kill, Miss?} \\
-  \vspace{10mm}
+  \pause
+  \begin{itemize}
+      \item $8 + 2p$
+  \end{itemize}
   Would you rather defect earlier or later?
 \end{frame}
 
@@ -270,7 +281,9 @@
   \end{center}
 
   What is your \textbf{expected utility} of playing \textit{Miss, Miss}?
-  \vspace{10mm}
+  \begin{itemize}
+      \item $6 + 6p$
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Repeated Prisoners' Dilemma with Uncertain Second Stage}
@@ -282,13 +295,25 @@
      xlabel={p},
      ylabel={Exp. Utility},
      xmin=0, xmax=1.0,
-     ymin=0, ymax=10,
+     ymin=4, ymax=14,
      xtick={0,.1,...,1.0},
-     ytick={0, 2, 4, 6, 8},
+     ytick={2, 4, 6, 8, 10, 12},
      grid style=dashed,
+     legend style={tiny},
      ]
  
-     \addplot[draw=none] coordinates {(1,1)};
+     \addplot[domain=0:1, samples=100, thick, red] {6 + 6*x};
+     \addlegendentry{$EU(Miss, Miss)$}
+
+     \addplot[domain=0:1, samples=100, thick, blue] {8 + 2*x};
+     \addlegendentry{$EU(Kill, Miss)$}
+
+     \addplot[domain=0:1, samples=100, thick, green] {4 + 8*x};
+     \addlegendentry{$EU(Miss, Kill)$}
+     
+     \addplot[domain=0:1, samples=100, thick, orange] {8 + 4*x};
+     \addlegendentry{$EU(Kill, Kill)$}
+
    \end{axis}
  \end{tikzpicture}
 \end{frame}
@@ -347,7 +372,7 @@
 \begin{frame}{Grim Trigger SPNE in Repeated PD}
   Is both players playing \textit{Grim Trigger} stable?
   \begin{itemize}
-    \item Does a player have an incentive to \textit{Defect} against \texit{Grim Trigger}:
+    \item Does a player have an incentive to \textit{Defect} against \textit{Grim Trigger}:
     \vspace{-5mm}
     \begin{align*}
       pv(Always~Coop) & \geq pv(Defect~once) \\

@@ -27,7 +27,6 @@
 \begin{frame}{Unexpected Truces Emerge}
   \begin{quote}
     \footnotesize 
-    In one section [of the camp] the hour of 8 to 9 A.M. was regarded as consecrated to “private business,” and certain places indicated by a flag were regarded as out of bounds by snipers on both sides.
 
     So regular were [the Germans] in their choice of targets, times of shooting, and number of rounds fired, that, after being in the line one or two days, Colonel Jones had discovered their system, and knew to a minute where the next shell would fall. His calculations were very accurate, and he was able to take what seemed to uninitiated Staff Officers big risks, knowing that the shelling would stop before he reached the place being shelled.
 
@@ -55,32 +54,33 @@
   \end{itemize}
 \end{frame}
 
+% \begin{frame}{Constructing a Repeated Game}
+%   To represent this as an extensive form tree, lets suppose that $T=2$:
+%   \begin{itemize}
+%     \item If neither side sees what their opponent's strategy was yesterday, each player has 3 info sets
+%     \item So each side has eight possible strategies:
+%     \begin{itemize}
+%       \item (\textit{Kill$_1$}, \textit{Kill$_2$} if \textit{Kill$_1$} or \textit{Miss$_1$})
+%       \item (\textit{Kill$_1$}, \textit{Kill$_2$} if \textit{Kill$_1$} else \textit{Miss$_2$} if \textit{Miss$_1$})
+%       \item (\textit{Kill$_1$}, \textit{Miss$_2$} if \textit{Kill$_1$} else \textit{Kill$_2$} if \textit{Miss$_1$})
+%       \item (\textit{Kill$_1$}, \textit{Miss$_2$} if \textit{Kill$_1$} or \textit{Miss$_1$})
+%       \item ...
+%     \end{itemize}
+%   \end{itemize}
+% \end{frame}
+
+% \begin{frame}{Constructing a Repeated Game}
+%   \begin{center}
+%     \includegraphics[width=1\textwidth]{figures/fig132.png} 
+%   \end{center} 
+% \end{frame}
+
 \begin{frame}{Constructing a Repeated Game}
   To represent this as an extensive form tree, lets suppose that $T=2$:
+  and suppose that the history of all past plays are \textbf{common knowledge} 
   \begin{itemize}
-    \item If neither side sees what their opponent's strategy was yesterday, each player has 3 info sets
-    \item So each side has eight possible strategies:
-    \begin{itemize}
-      \item (\textit{Kill$_1$}, \textit{Kill$_2$} if \textit{Kill$_1$} or \textit{Miss$_1$})
-      \item (\textit{Kill$_1$}, \textit{Kill$_2$} if \textit{Kill$_1$} else \textit{Miss$_2$} if \textit{Miss$_1$})
-      \item (\textit{Kill$_1$}, \textit{Miss$_2$} if \textit{Kill$_1$} else \textit{Kill$_2$} if \textit{Miss$_1$})
-      \item (\textit{Kill$_1$}, \textit{Miss$_2$} if \textit{Kill$_1$} or \textit{Miss$_1$})
-      \item ...
-    \end{itemize}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Constructing a Repeated Game}
-  \begin{center}
-    \includegraphics[width=1\textwidth]{figures/fig132.png} 
-  \end{center} 
-\end{frame}
-
-\begin{frame}{Constructing a Repeated Game}
-  Now suppose that the history of all past plays are \textbf{common knowledge} 
-  \begin{itemize}
-    \item Now each player will have five info sets; one for day 1, and four in day 2 
-    \item How many strategies does each player have now?
+    \item each player will have five info sets; one for day 1, and four in day 2 
+    \item What does the extensive form game look like?
   \end{itemize}
 \end{frame}
 
@@ -144,6 +144,9 @@
 
   \vspace{5mm}
   Which has the \textbf{highest present value} when $\delta =0.8$?
+  \pause
+  
+  Stream A: 44.28, \textbf{Stream B: 45.9}, Stream C: 41.16
 \end{frame}
 
 \begin{frame}{Going back to the trenches}
@@ -168,6 +171,12 @@
     \includegraphics[width=.7\textwidth]{figures/tab137.png} 
   \end{center}
   What will happen?
+  \pause
+
+  \begin{itemize}
+      \item Allies will Shoot to \textbf{Kill},
+      Germans will Shoot to \textbf{Kill}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Going back to the trenches}
@@ -176,6 +185,10 @@
     \includegraphics[width=.7\textwidth]{figures/fig138.png}
   \end{center}
   What will happen?
+  \pause
+  \begin{itemize}
+      \item Both will shoot to \textbf{Kill} in $T-1$, knowing they will both shoot to kill in $T$
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Trench Game with Finite stages}
@@ -210,13 +223,11 @@
 \end{frame}
 
 \begin{frame}{SPNE in Repeated Games}
-  \begin{block}{Subgame Perfect Nash Equilibrium for a Repeated Game}
-    A strategy profile is SPNE iff in each period and for each history, the prescribed action is optimal given:
-    \begin{enumerate}
-      \item the other players act according to their strategies in the current period
-      \item all players act according to their strategies in all future periods
-    \end{enumerate}
-  \end{block} 
+  A strategy profile is SPNE if and only if in each period and for each history, the prescribed action is optimal given:
+  \begin{itemize}
+    \item the other players act according to their strategies in the current period
+    \item all players act according to their strategies in all future periods
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Grim Trigger in the Trench Game}
