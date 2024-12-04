@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>pareto – EC327 Game Theory</title>
+<title>Market for Lemons – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -146,7 +117,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Slides/#asymmetric-information">Uncertainty and Information</a></li><li class="breadcrumb-item"><a href="../../activities/LemonsMarket/activitysheet.html"><strong>Activity</strong>: Market for Lemons</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -301,13 +272,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Uncertainty and Information</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/#asymmetric-information" class="sidebar-item-text sidebar-link">
@@ -316,7 +287,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/LemonsMarket/activitysheet.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/LemonsMarket/activitysheet.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><strong>Activity</strong>: Market for Lemons</span></a>
   </div>
 </li>
@@ -371,84 +342,95 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
-
-
-<section id="welfare-and-efficiency" class="level1">
-<h1>Welfare and Efficiency</h1>
-<div class="incremental">
-<p>What are the <strong>good</strong> outcomes in the planting game?</p>
-<p>Can we rank outcomes by collective welfare?</p>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Slides/#asymmetric-information">Uncertainty and Information</a></li><li class="breadcrumb-item"><a href="../../activities/LemonsMarket/activitysheet.html"><strong>Activity</strong>: Market for Lemons</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Market for Lemons</h1>
 </div>
-<hr>
-<section id="pareto-dominance" class="level2">
-<h2 class="anchored" data-anchor-id="pareto-dominance">Pareto Dominance</h2>
-<p>Pareto optimality (or efficiency) is econonomists’ best shot at coming up with a ranking of which outcomes are objectively ‘better’</p>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong><u>Objective:</u></strong> This activity simulates a used car market where buyers and sellers interact under conditions of asymmetric information. The goal is to demonstrate how private information, adverse selection, and outside options influence market outcomes.</p>
+<section id="game-rules" class="level2">
+<h2 class="anchored" data-anchor-id="game-rules">Game Rules:</h2>
+<section id="setup" class="level3">
+<h3 class="anchored" data-anchor-id="setup">Setup</h3>
 <ul>
-<li><p>For any two outcomes (🎉, 🎊), 🎉 is <span class="hi">Pareto dominated</span> by 🎊 if both:</p>
-<ol type="1">
-<li><p>No one strictly prefers 🎉 to 🎊 - U<sub>👤</sub>(🎊) <span class="math inline">\(\geq\)</span> U<sub>👤</sub>(🎉) <span class="math inline">\(\forall 👤 \in \{ 🙍, 🧑, 💆, 🧖, 🧑, 😺, ...\}\)</span></p></li>
-<li><p>At least one person strictly<sub>🎉</sub> prefers 🎉 to 🎊 - <span class="math inline">\(\exists 👤\)</span> such that U<sub>👤</sub>(🎊) <span class="math inline">\(&gt;\)</span> U<sub>👤</sub>(🎉)</p></li>
-</ol></li>
+<li><p><strong>Starting Resources:</strong> Each buyer starts with a budget of £800. Each seller starts with one car card. Sellers should not reveal the quality of their car to anyone.</p></li>
+<li><p><strong>Car Values:</strong> Good Cars: Resale value of £600. Scrap value of £400 (if unsold). Lemons: Resale value of £200. Scrap value of £150 (if unsold).</p></li>
 </ul>
-<hr>
 </section>
-<section id="pareto-improvement" class="level2">
-<h2 class="anchored" data-anchor-id="pareto-improvement">Pareto Improvement</h2>
-<p>The move from a policy y to an alternative policy x is a <span class="hi">Pareto improvement</span> if x Pareto dominates y.</p>
+<section id="gameplay" class="level3">
+<h3 class="anchored" data-anchor-id="gameplay">Gameplay</h3>
+<p>The game consists of 3 rounds. Each round follows this sequence:</p>
 <ul>
-<li><p>Such a policy change should reasonably be seen as unambiguously good</p></li>
-<li><p>Another perspective is that <em>no-one would veto</em> a pareto improvement</p></li>
-</ul>
-<hr>
-</section>
-<section id="pareto-efficiency" class="level2">
-<h2 class="anchored" data-anchor-id="pareto-efficiency">Pareto Efficiency</h2>
-<p>An outcome is <span class="h">Pareto Efficient</span> (Optimal) if no other outcome Pareto dominates it.</p>
-<p>An outcome is <span class="hi">Pareto Infficient</span> if at least one other outcome Pareto dominates it.</p>
-<hr>
-</section>
-<section id="ranking-the-planting-payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="ranking-the-planting-payoffs">Ranking the Planting Payoffs</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img src="figures/fig3.6.png" class="img-fluid"></p>
-</div><div class="column" style="width:50%;">
-<p>Compare (4,3,3) to (1,2,2)</p>
+<li><p><strong>Sellers List Cars:</strong> Each seller announces a starting price for their car. This price is public. Sellers can choose not to sell their car if they believe the offered price would not result in a profit.</p></li>
+<li><p><strong>Buyers Bid:</strong> Buyers negotiate with sellers to purchase cars. Each buyer may purchase only one car per round. Buyers may also choose not to buy a car if they believe the prices are too high.</p></li>
+<li><p><strong>Transactions:</strong> Once a buyer and seller agree on a price:</p>
 <ul>
-<li>Which one is Pareto dominating?</li>
+<li><p>The buyer pays the agreed price, which is deducted from their budget.</p></li>
+<li><p>The seller reveals the car’s true quality.</p></li>
 </ul>
-</div>
-</div>
-<hr>
-</section>
-<section id="ranking-the-planting-payoffs-1" class="level2">
-<h2 class="anchored" data-anchor-id="ranking-the-planting-payoffs-1">Ranking the Planting Payoffs</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img src="figures/fig3.6.png" class="img-fluid"></p>
-</div><div class="column" style="width:50%;">
-<p>Now compare (4,3,3) to (3,4,3) or (3,3,4)</p>
+<p>Sellers record the profit from the transaction (sale price minus car’s scrap value). Buyers record their remaining budget and the car’s resale value.</p></li>
+</ul>
+<section id="outside-options" class="level4">
+<h4 class="anchored" data-anchor-id="outside-options">Outside Options:</h4>
+<p>Buyers who do not purchase a car keep their remaining budget as their final payoff for the round. Sellers who do not sell their car receive the scrap value instead:</p>
 <ul>
-<li>Which one is Pareto dominating?</li>
+<li>£400 for a good car.</li>
+<li>£150 for a lemon.</li>
 </ul>
-</div>
-</div>
-<p>Is the rollback equilibrium outcome a <em>Pareto efficient</em> one?</p>
-<hr>
 </section>
-<section id="discussion-efficiency-vs-other-social-comparisons" class="level2">
-<h2 class="anchored" data-anchor-id="discussion-efficiency-vs-other-social-comparisons">Discussion: Efficiency vs other social comparisons</h2>
-<div class="incremental">
-<ul class="incremental">
-<li><p>How useful is Pareto Efficiency in the real world?</p></li>
-<li><p>How else could we group outcomes?</p></li>
-<li><p>We might address this later in the class with what is known as <em>Cooperative Game Theory</em></p></li>
+<section id="end-of-round" class="level4">
+<h4 class="anchored" data-anchor-id="end-of-round">End of Round:</h4>
+<p>All participants record their earnings:</p>
+<ul>
+<li><p>Buyers: Remaining budget + resale value of purchased car (if any).</p></li>
+<li><p>Sellers: Sale profit or scrap value (if unsold).</p></li>
 </ul>
-</div>
+<p>The roles rotate so that each participant experiences being both a buyer and a seller.</p>
+</section>
+</section>
+</section>
+<section id="end-of-the-activity" class="level2">
+<h2 class="anchored" data-anchor-id="end-of-the-activity">End of the Activity</h2>
+<p>At the end of all rounds:</p>
+<ul>
+<li>Reveal the type of car you purchased.</li>
+<li>Calculate the total profits for each participant across rounds.</li>
+<li>Discuss how market behavior evolved.</li>
+</ul>
+<section id="record-results" class="level3">
+<h3 class="anchored" data-anchor-id="record-results">Record Results:</h3>
+<p>Buyers and sellers should track their results each round:</p>
+<ul>
+<li>If seller: type of car you started with, whether you sold, and what price it sold for.</li>
+<li>If buyer: whether you bought a car, how much you paid, and what type of car it ended up being.</li>
+<li>Also keep track of how many of each type of car were sold in the class as a whole.</li>
+</ul>
+</section>
+</section>
+<section id="discussion-questions" class="level2">
+<h2 class="anchored" data-anchor-id="discussion-questions">Discussion Questions</h2>
+<ul>
+<li><p>As a buyer, what techniques did you use to decide whether to buy a car or not?</p></li>
+<li><p>As a seller, how did you try to convince potential buyers to buy your car?</p></li>
+<li><p>Did the overall market for used cars in class experience <em>adverse selction</em>? Why or why not?</p></li>
+<li><p>What are some other examples of markets in the real world which you think could potentially be affected by adverse selection in the same way as the market for lemons? What is special about those markets that you think would make them susceptible?</p></li>
+</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1021,4 +1003,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://gituhub.com/dyasui/EC327/edit/main/Slides/02SequentialGames/0203-pareto.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://gituhub.com/dyasui/EC327/blob/main/Slides/02SequentialGames/0203-pareto.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://gituhub.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://gituhub.com/dyasui/EC327/edit/main/activities/LemonsMarket/activitysheet.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://gituhub.com/dyasui/EC327/blob/main/activities/LemonsMarket/activitysheet.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://gituhub.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

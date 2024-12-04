@@ -350,7 +350,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/LemonsMarket/main.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/LemonsMarket/activitysheet.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Activity</strong>: Market for Lemons</span></a>
   </div>
 </li>
@@ -373,7 +373,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/Brinksmanship/main.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/07Brinksmanship/brinksmanship.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Activity</strong>: Brinksmanship</span></a>
   </div>
 </li>
@@ -446,12 +446,14 @@ window.Quarto = {
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load tidyverse packages</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># read in the class results from csv file</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"EC327F24-activity6_results.csv"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(s_k), <span class="sc">!</span><span class="fu">is.na</span>(s_g)) <span class="co"># filter out missing data</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># print the first 10 observations</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data, <span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># setwd("activities/06PenaltyKicks")</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># read in the class results from csv file</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"EC327F24-activity6_results.csv"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(s_k), <span class="sc">!</span><span class="fu">is.na</span>(s_g)) <span class="co"># filter out missing data</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># print the first 10 observations</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data, <span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 6
    round match  shot s_k    s_g    goal 
@@ -618,6 +620,42 @@ X-squared = 13.186, df = 2, p-value = 0.00137</code></pre>
 </details>
 </div>
 <p>Compare <span class="math inline">\(\chi^2\)</span>-statistic to a critical value of 5.99. If the statistic is greater than the critical value, reject the null hypothesis that the success rates are equal with 95% confidence.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>See the code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">s_k =</span> <span class="fu">case_when</span>(</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>      s_k <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Right"</span>, <span class="st">"Left"</span>) <span class="sc">~</span> <span class="st">"Side"</span>,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>      s_k <span class="sc">==</span> <span class="st">"Center"</span> <span class="sc">~</span> <span class="st">"Center"</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">s_g =</span> <span class="fu">case_when</span>(</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>      s_g <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Right"</span>, <span class="st">"Left"</span>) <span class="sc">~</span> <span class="st">"Side"</span>,</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>      s_g <span class="sc">==</span> <span class="st">"Center"</span> <span class="sc">~</span> <span class="st">"Center"</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(s_k, s_g) <span class="sc">%&gt;%</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_obs =</span> <span class="fu">n</span>(),</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">num_goals =</span> <span class="fu">sum</span>(goal<span class="sc">==</span><span class="cn">TRUE</span>),</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">prob_goal =</span> <span class="fu">sum</span>(goal) <span class="sc">/</span> <span class="fu">n</span>()</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 's_k'. You can override using the `.groups`
+argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+# Groups:   s_k [2]
+  s_k    s_g    n_obs num_goals prob_goal
+  &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt;     &lt;int&gt;     &lt;dbl&gt;
+1 Center Center    29         0     0    
+2 Center Side      60        41     0.683
+3 Side   Center    73        64     0.877
+4 Side   Side     162        89     0.549</code></pre>
+</div>
+</div>
 
 
 </section>
