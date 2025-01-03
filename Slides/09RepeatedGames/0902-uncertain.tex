@@ -1,0 +1,141 @@
+
+
+\begin{frame}{Back to the General Form Prisoners' Dilemma}
+  \begin{table}[!h]
+    \centering
+    \begin{tabular}{*{4}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{Column} \\ \cline{3-4}
+      \multicolumn{1}{c}{} &         & Defect  & Cooperate \\ \cline{2-4}
+      \multirow{2}*{Row} &    Defect & $D$,$D$ & $H$,$L$   \\ \cline{2-4}
+                         & Cooperate & $L$,$H$ & $C$,$C$   \\ \cline{2-4} 
+    \end{tabular} 
+  \end{table} 
+  Now let's suppose that this game is repeated for an \textbf{infinite number of stages}.
+\end{frame}
+
+\begin{frame}{Extending Plays to Infinity}
+  Suppose the game is in the `good' equilibrium where all players always play \textit{Cooperate}.
+  \begin{itemize}
+    \item What is \textbf{present value} from this equilibrium? 
+    \begin{align*}
+      pv\left(\{ C \}_{t=1}^{\infty}\right) & = C + \delta C + \delta^2 C + \delta^3 C + ... \\ 
+         & = C \sum_{t=1}^{\infty} \delta^{t-1} \\
+         & = C \frac{1}{1-\delta}
+    \end{align*}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Extending Plays to Infinity}
+   Let's extend the \textit{Punisher} strategy we had from the two-stage game 
+   into the \textit{Grim Trigger strategy} of the general infinite horizon game:
+  \begin{align*}
+    \begin{cases}
+      \text{In stage } 1 & : \textit{Cooperate} \\ 
+      \text{In stage } t \geq 2 & : 
+      \begin{cases}
+        \textit{Cooperate} \text{  if only cooperation has happened so far} \\ 
+        \textit{Defect} \text{  if anyone has \textit{ever} Defected in the past}
+      \end{cases}
+    \end{cases}
+  \end{align*}
+\end{frame}
+
+\begin{frame}{Grim Trigger SPNE in Repeated PD}
+  Is both players playing \textit{Grim Trigger} stable?
+  \begin{itemize}
+    \item Does a player have an incentive to \textit{Defect} against \textit{Grim Trigger}:
+    \vspace{-5mm}
+    \begin{align*}
+      pv(Always~Coop) & \geq pv(Defect~once) \\
+      C + \delta C + \delta^2 C + ...      & \geq H + \delta D + \delta^2 D + ...\\
+      C + C \sum_{t=2}^{\infty} \delta^{t} & \geq H + D \sum_{t=2}^{\infty} \delta^{t} \\ 
+      C + C \delta \sum_{t=2}^{\infty} \delta^{t-1} & \geq H + D \delta \sum_{t=2}^{\infty} \delta^{t-1} \\ 
+      C + \frac{\delta C}{1 - \delta} & \geq H + \frac{\delta D}{1 - \delta} \\
+      \delta & \geq \frac{H - C}{H - D}
+    \end{align*}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Grim Trigger SPNE in Repeated PD}
+  How do we interpret this statement:
+  $$\text{Cooperation is stable when } \delta \geq \frac{H - C}{H - D}  $$ 
+  \begin{itemize}
+    \item Recall that the definition of the Prisoners' Dilemma was that $H > C > D > L$
+    \item So this means $\frac{H - C}{H - D}$ is positive and less than 1 
+    \item As the $H - C$, the relative benefit of defecting increases,
+    it gets harder to sustain cooperation
+    \item It also gets harder to sustain cooperation as the relative penalty of defecting, $H - D$, shrinks 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Other Strategies in Repeated Games}
+  So far we've only looked at one example of a type of strategy in repeated game, 
+  \textit{Grim Trigger}. 
+  \begin{itemize}
+    \item \underline{Can you think of some others?}
+    \begin{itemize}
+      \item Recall that a complete strategy for a repeated game needs: 
+      \begin{itemize}
+        \item An initial move at $t=1$
+        \item A plan of action for \textit{every} possible history in \textit{every} later stage $t\geq2$
+      \end{itemize}
+      \item Ideally you would be able to tell a computer how to implement your strategy
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Other Strategies in Repeated Games}
+  Telling a computer how to implement strategies is exactly what Robert Axelrod did in a famous tournament in 1980.
+  \begin{itemize}
+    \item He invited people to submit their programs which would play 200 rounds of the prisoners' dilemma against each other 
+    \item The winning program was the one which had the highest total score after playing 200 rounds against all other programs
+    \item What types of strategies do you think would succeed?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{An Unexpected Winner}
+  The winning program was named \texttt{TIT FOR TAT} \\ 
+  Surprisingly, it was fairly simple:
+  \begin{align*}
+    \begin{cases}
+      \text{In stage } 1 & : \textit{Cooperate} \\ 
+      \text{In stage } t \geq 2 & : 
+      \begin{cases}
+        \text{repeat what the other player did in } t-1 \\
+      \end{cases}
+    \end{cases}
+  \end{align*}
+\end{frame}
+
+\begin{frame}{Tit-for-Tat}
+  Like \textit{Grim Trigger}, \textit{Tit-for-Tat} can punish other players for defecting. 
+  \begin{itemize}
+    \item If a player plays \textit{Defect}, it will copy them with \textit{Defect} next round 
+  \end{itemize}
+  But unlike \textit{Grim Trigger} it has a short memory; or is very forgiving
+  \begin{itemize}
+    \item If the player who defected goes back to playing cooperatively, 
+    \textit{Tit-for-Tat} will go back to cooperating too
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Axelrod's Tournament}
+  If you want to learn more: 
+  \begin{itemize}
+    \item Read the original paper: 
+
+    {
+    \footnotesize
+    Axelrod, Robert; Hamilton, William D. (27 March 1981), "The Evolution of Cooperation" (PDF), \textit{Science}, 211 (4489): 1390–96
+    }
+
+    \item The 1984 Book \textit{The Evolution of Cooperation}, Basic Books
+
+    \item Run the tournament yourself in python!
+    \url{https://github.com/Axelrod-Python/Axelrod}
+    
+    \item Play this fun and short web game! 
+    \url{https://ncase.me/trust/}
+
+  \end{itemize}
+\end{frame}
