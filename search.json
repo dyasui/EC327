@@ -3907,6 +3907,13 @@
     "text": "Examples of strategic games:\nWhat do these examples have in common?\n\n\nask class for ideas\npoint out the methods of thinking through these questions\nall can be answered with ‘it depends’\n\nspecifically it depends on the actions (and thoughts) of others"
   },
   {
+    "objectID": "midterm_reweight.html",
+    "href": "midterm_reweight.html",
+    "title": "EC327 Game Theory",
+    "section": "",
+    "text": "These students requested to shift weight to final:\nEbissa Chako Avaani Kataria Brian Truong Hunter Thompson"
+  },
+  {
     "objectID": "Exams/PracticeExam/Final/FinalExamReviewSheet.html",
     "href": "Exams/PracticeExam/Final/FinalExamReviewSheet.html",
     "title": "Topics:",
@@ -3933,6 +3940,20 @@
     "title": "Topics:",
     "section": "Section 2: Long Answer",
     "text": "Section 2: Long Answer\n\nMixed Strategy in 3x3 game\n\nIdentify any PSNE\n\nCheck whether a mixed strategy profile is MSNE\nCheck a different mixed strategy profile\n\nStrategic move extensive form\n\nFind SPNE for some extensive form construction\nFind SPNE for another extensive form\nIdentify credible threat/promise\nIdentify credible commitment\n\nRepeated prisoners’ dilemma\n\nIdentify one-stage NE\nDiscuss ways to achieve cooperation\nCheck whether grim trigger works for some \\(\\delta\\)"
+  },
+  {
+    "objectID": "Exams/Final/notes.html",
+    "href": "Exams/Final/notes.html",
+    "title": "Q11",
+    "section": "",
+    "text": "Q11\n\n-0 if opposite inequality sign in setup, but still find correct minimum -1 for minor algebra after correct setup -2 for wrong setup # Q12\n-1 for only payoffs, not strats -1 for each missed NE -1 for extra NE -1 for missing work, even on table\n-1 if get correct indifference conditions but say no msne without justification -1 for each incorrect indifference condition setup -1 for incorrect reasoning -2 for missing explanation # Q13\n-0 if say (Aggr., Aggr.) but clear what they mean -2 for missing strat for one player\n-1 if incomplete strategy for US as second player -1 if incomplete backwards-induction logic -2 if no backwards induction logic\n-2 if no discussion of obstacles -1 if explanation doesn’t make sense # Q14\n-2 if they say coop is impossible but have some justification -1 if they say coop can be achieved in some form explanation doesn’t make sense\n-2 if missing one condition -1 if wrong condition -1 if right period payoffs but missing discount factors\n-2 for wrong setup -1 for wrong answer based on setup\n\n\nBonus:\n\nPenalty Kicks: 18\nBrinksmanship: 2\nMarket Lemons: 7\nSurvivor Flag: 3\nPirate Treasure: 1\nSocial Media Ads: 6\nGuess two-thirds: 1"
+  },
+  {
+    "objectID": "MidtermNotes.html",
+    "href": "MidtermNotes.html",
+    "title": "MIDTERM EXAM",
+    "section": "",
+    "text": "MIDTERM EXAM\n8:30-9:50\n\n\nQ11:\n\nbullet point 2: “If one puts Low effort and the other Moderate, they earn a D which is valued at 1 util”.\n\n\n\nFor Long Answer:\n\nIf you don’t understand the question is asking for, feel free to ask me for clarification\nIf it still doesn’t make sense, clearly state in\nyour answer what you think the question is asking for and make your best attempt at explaining how you would solve it\nCalculation problems: work through in fractions if you don’t have calculator round final answer to one decimal point\nPlease write clearly and legibly, explain all work"
   },
   {
     "objectID": "Slides/01Intro/0101-prologue.html",
