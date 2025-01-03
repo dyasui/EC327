@@ -19,6 +19,8 @@ grades <- read_csv(export) %>%
          hw0 = practicesubmission,
          hw1 = homework1,
          hw2 = homework2,
+         hw3 = homework3,
+         hw4 = homework4,
          ec,
          ac1 = `guess2/3rds`,
          ac2 = `activity2:survivorflags`,
@@ -26,9 +28,12 @@ grades <- read_csv(export) %>%
          ac4 = `activity4:electionblotto`,
          ac5 = `activity5:socialmediaadspace`,
          ac6 = `activity6:penaltyshootout`,
+         ac7 = `activity7-brinksmanship`,
+         ac8 = `activity8:marketforlemons`,
          homework = homeworkunpostedcurrentscore,
          activity = classactivitiescurrentscore,
          midterm,
+         finalexam,
          score = unpostedcurrentscore) %>%
   mutate(across(hw0:score, as.numeric)) %>%
   mutate(ec = ifelse(is.na(ec), 0, as.numeric(ec)))
@@ -42,9 +47,22 @@ midterm_plot <- grades %>%
   xlim(25, max(grades$midterm) + 1) +
   scale_x_continuous(breaks = seq(25, 100, by = 5), limits=c(25, 105)) +
   labs(x = "Midterm Score (out of 100)",
-    title = "Midterm Exam Score Distribution"
+    title = "EC327 Fall 2024 Midterm Exam Performance"
   ) 
 ggsave(midterm_plot, file = "EC327F24-mt-score-distribution.png")
+
+# plot final exam dist
+library(ggplot2)
+finalexam_plot <- grades %>%
+  ggplot() +
+  geom_histogram(aes(x = finalexam), fill = "purple", binwidth = 2.5) +
+  geom_vline(xintercept = mean(grades$finalexam, na.rm = TRUE)) +
+  xlim(25, max(grades$finalexam) + 1) +
+  scale_x_continuous(breaks = seq(25, 100, by = 5), limits=c(25, 105)) +
+  labs(x = "Final Exam Score (out of 100, including bonus points)",
+    title = "EC327 Fall 2024 Final Exam Performance"
+  ) 
+ggsave(finalexam_plot, file = "EC327F24-finalexam-score-distribution.png")
 
 # plot class grade distribution
 grade_plot <- grades %>%
@@ -53,10 +71,11 @@ grade_plot <- grades %>%
   geom_vline(xintercept = mean(grades$score, na.rm = TRUE)) +
   xlim(25, max(grades$score) + 1) +
   scale_x_continuous(breaks = seq(25, 100, by = 5), limits=c(25, 105)) +
-  labs(x = "Class Grade so far",
-       title = "Current Grade Distribution")
-ggsave(grade_plot, file = "EC327F24-mt-grade-distribution.png")
+  labs(x = "Percent Grade",
+       title = "EC327 Fall 2024 Course Grades")
+ggsave(grade_plot, file = "EC327F24-final-grade-distribution.png")
 
+#### #### ####
 final_grades <- grades %>%
   # simulate final grades
   mutate(
