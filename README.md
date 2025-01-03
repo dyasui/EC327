@@ -19,63 +19,12 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 ## Textbook
  - Dixit, Skeath, and McAdams. Games of Strategy, 5th edition, by Dixit, Skeath, and Reiley.
 
-## Tentative Schedule
+## Course Website
 
-| **Week** | **Chapter(s)** | **Topic**                                                           |
-|----------|----------------|---------------------------------------------------------------------|
-| 1        | 1, 2           | Intro & General Principles                                          |
-| 2        | 3              | Sequential Move Games                                               |
-| 3        | 4              | Simultaneous Move Games                                             |
-| 4        | 6              | Combining Sequential and Simultaneous Moves                         |
-| 5        | 6              | Review & **Midterm**                                                |
-| 6        | 5              | Simultaneous Games: Continuous Strategies, Discussion, and Evidence |
-| 7        | 7              | Mixed Strategies                                                    |
-| 8        | 8              | Strategic Moves                                                     |
-| 9        | 9              | Uncertainty and Information                                         |
-| 10       | 10             | Repeated Games                                                      |
-| *Finals* | *TBA*          | *Exam*                                                              |
+You can find the most recent versions of lecture slides, homework assignements,
+and in-class activities on the course website:
 
----
-
-## Lectures
-
-[01 - Introduction](https://dyasui.github.io/EC327/Slides/01Intro/01-main.html)
-
-[02 - Sequential Games](https://dyasui.github.io/EC327/Slides/02SequentialGames/02-main.html)
-
-[03 - Simultaneous Games](https://dyasui.github.io/EC327/Slides/03SimultaneousGames/03-main.html)
-
-[04 - Information Sets](https://dyasui.github.io/EC327/Slides/04InfoSets/main.html)
-
-[05 - Uncertainty]()
-
-[06 - Mixed Strategies]()
-
-[07 - Asymmetric Information]()
-
-[08 - Strategic Moves]()
-
-[09 - Repeated Games]()
-
----
-
-## Activities
-
-[Activity 1 - Guessing Two Thirds of the Average](https://dyasui.github.io/EC327/activities/01GuessTwoThirds/GuessTwoThirds.html)
-
-[Activity 2 - Survivor Flags](https://dyasui.github.io/EC327/activities/02SurvivorFlags/SurvivorFlags.html)
-
-## Assignments 
-
-<a href="Homework/assignment1/main.pdf" target="_blank">Homework 1</a>
-
-[Homework 2](https://dyasui.github.io/EC327/Homework/assignment2/main.pdf)
-
-[Homework 3](https://dyasui.github.io/EC327/Homework/assignment3/main.pdf)
-
-[Homework 4](https://dyasui.github.io/EC327/Homework/assignment4/main.pdf)
-
----
+<https://dyasui.github.io/EC327/>
 
 # Acknowledgements
 
