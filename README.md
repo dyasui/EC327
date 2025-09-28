@@ -1,30 +1,43 @@
-# Welcome to Intro to Game Theory! 
+<h1 align="center">
+    EC327 - Intro to Game Theory
+</h1>
+<h2 align="center">
+    Taught by <a href="danteyasui.org" target="_blank" rel="noreferrer">Dante Yasui</a> at the University of Oregon
+</h2>
+
+Welcome to this course material repository for the Introduction to Game Theory class!
+
+## 🌐 Course Website
+
+You can find the most recent versions of lecture slides, homework assignments,
+and in-class activities on the course website:
+
+<https://danteyasui.org/EC327/>
+
+## 📝 Course Description
+
+This course provides a background to the study of strategic interactions.
+We will learn some of the basic terms and mathematical tools behind the models that social scientists use to understand the world of interdependent choices.
+
+By the end of this course, students will be well-prepared to apply these models in upper-level elective courses, embark on their own research projects, and make informed decisions in the real-world economy.
+Explore the materials to discover how game theory can enhance your understanding and approach to economic challenges!
+
+## 📆 **Fall 2025** Schedule
+
+| **Class Time** | Monday and Wednesday 8:30-9:50 am |
+| **Classroom** | McKenzie 240C |
+| **Office Hours** | Monday 10am, Wednesday 1pm |
+
 ---
-This elective game theory class EC327 is taught by [Dante Yasui](https://cas.uoregon.edu/directory/economics/all/dyasui)
-at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
-## **Fall 2024** Schedule
-**Class Time** Monday and Wednesday 8:30-9:50 am
-**Classroom** Gerlinger 302
-
-**Office Hours** Monday 10-11 am \& Wednesday 1-2 pm
-
----
-
-## Syllabus
+## 📄 Syllabus
 
 <a href="Syllabus/main.pdf" target="_blank">PDF.</a>
 ---
 
-## Textbook
- - Dixit, Skeath, and McAdams. Games of Strategy, 5th edition, by Dixit, Skeath, and Reiley.
+## 📗 Textbook and Learning Materials
 
-## Course Website
-
-You can find the most recent versions of lecture slides, homework assignements,
-and in-class activities on the course website:
-
-<https://dyasui.github.io/EC327/>
+ - Dixit, Skeath, and McAdams. *Games of Strategy*, 5th edition, by Dixit, Skeath, and Reiley.
 
 # Acknowledgements
 

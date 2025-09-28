@@ -12,7 +12,7 @@ format:
 
 website: 
   title: "EC327 Game Theory"
-  repo-url: https://gituhub.com/dyasui/EC327
+  repo-url: https://github.com/dyasui/EC327
   repo-actions: [edit, source, issue]
   navbar:
     search: true

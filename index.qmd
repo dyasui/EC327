@@ -1,20 +1,20 @@
 ---
-title: "EC327 Introductory Game Theory"
+title: "EC327 Intro to Game Theory"
 subtitle: "Economics Course at the University of Oregon"
 filters:
   - shinylive
 ---
 
-This elective game theory class EC327 is taught by [Dante Yasui](https://cas.uoregon.edu/directory/economics/all/dyasui)
+This elective game theory class EC327 is taught by [Dante Yasui](danteyasui.org)
 at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
-## Fall 2024 Class Details
+## Fall 2025 Class Details
 
 :::: {.columns}
 :::{.column}
 **Class Time:** Monday and Wednesday 8:30-9:50 am
 
-**Classroom:** Gerlinger 302
+**Classroom:** McKenzie 240C
 
 **Office Hours:** Monday 10-11 am \& Wednesday 1-2 pm
 :::
@@ -43,7 +43,7 @@ Dixit, Skeath, and McAdams. Games of Strategy, 5th edition.
 |     8    |      9      | [Uncertainty and Information](Slides/#asymmetric-info)           | [Activity 7](activities/07Brinksmanship/brinksmanship.qmd)                                                                   |
 |     9    |      8      | [Strategic Moves](Slides/#strategic-moves)                       | [Activity 8](activities/Brinksmanship/main.qmd)                                                                  |
 |    10    |      10     | [Repeated Games](Slides/#repeated-games)                         | [Homework 4](Homework/assignment4/main.pdf)                                                                      |
-| *Finals* |  Cumulative | **Exam**: Friday, Dec. 13 - 10:15am                              |                                                                                                                  |
+| *Finals* |  Cumulative | **Exam**: Monday, Dec. 8 - 10:15am                              |                                                                                                                  |
 
 ---
 
