@@ -7,7 +7,7 @@ export <- list.files(pattern = "*Student Analysis Report.csv") %>%
 
 # Get results from Canvas csv export
 ClassData_df <- read_csv(export) %>% 
-  rename(guess = "4401461: Choose your integer between 0 and 100") %>% 
+  rename(guess = "4976752: Guess any integer from 0 to 100") %>% 
   select(name, guess)
 
 # Calculate average guess
@@ -42,4 +42,4 @@ ClassData_df %>%
   ggtitle("Distribution of Guessing 2/3rd's Game guesses") + 
   theme_stata()
 
-ggsave("histogram.png")
+ggsave("F25-activity1-results.png")
