@@ -30,20 +30,25 @@ Dixit, Skeath, and McAdams. Games of Strategy, 5th edition.
 
 ## Tentative Schedule
 
-| **Week** | **Chapter** | **Topic**                                                        | Assignments                                                                                                      |
-|:--------:+:-----------:+------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------|
-|     1    |     1, 2    | [Intro & General Principles](Slides/#intro-and-syllabus-day)     | [Activity 1](activities/01GuessTwoThirds/GuessTwoThirds.qmd)                                                     |
-|     2    |      3      | [Sequential Move Games](Slides/#sequential-games)                | [Homework 1](Homework/assignment1/main.pdf), [Activity 2](activities/02SurvivorFlags/SurvivorFlags.qmd)          |
-|     3    |      4      | [Simultaneous Move Games](Slides/#simultaneous-games)            | [Activity 4](activities/04BlottoElection/BlottoElection.qmd)                                                     |
-|     4    |      5      | [Continuous Strategies](Slides/#simultaneous-games)              | [Homework 2](Homework/assignment2/main.pdf)                                                                      |
-|     4    |      6      | [Combining Forms](Slides/#combining-simultaneous-and-sequential) |                                                                                                                  |
-|     5    |      6      | Review & **Midterm**                                             |                                                                                                                  |
-|     6    |      7      | [Mixed Strategies](Slides/#mixed-strategies)                     | [Activity 5](activities/05CournotComp/cournotcomp.qmd), [Activity 6](activities/06PenaltyKicks/penaltykicks.qmd) |
-|     7    |      7      | [Mixed Strategies](Slides/#mixed-strategies)                     | [Homework 3](Homework/assignment3/main.pdf)                                                                      |
-|     8    |      9      | [Uncertainty and Information](Slides/#asymmetric-info)           | [Activity 7](activities/07Brinksmanship/brinksmanship.qmd)                                                                   |
-|     9    |      8      | [Strategic Moves](Slides/#strategic-moves)                       | [Activity 8](activities/Brinksmanship/main.qmd)                                                                  |
-|    10    |      10     | [Repeated Games](Slides/#repeated-games)                         | [Homework 4](Homework/assignment4/main.pdf)                                                                      |
-| *Finals* |  Cumulative | **Exam**: Monday, Dec. 8 - 10:15am                              |                                                                                                                  |
+| **Week** | **Chapters** | **Topic**                                                       | Assignments  |
+|:--------:+:------------:+------------------------------------------------------------------+-----------|
+|     1    |     1, 2    | [Intro & General Principles](Slides/#intro-and-syllabus-day)     | Homework 1, Quiz 1 |
+|     2    |      3      | [Sequential Move Games](Slides/#sequential-games)                | HW2, Q2 |
+|     3    |      4      | [Simultaneous Move Games](Slides/#simultaneous-games)            | HW3, Q3 |
+|     4    |      5,6    | [Combining Forms](Slides/#combining-simultaneous-and-sequential), [Continuous Strategies](Slides/#simultaneous-games) | HW4, Q4 |
+|     5    |      1-6    | Review & **Midterm**                                             |         |
+|     6    |      5,7      | [Continuous Strategies](Slides/#simultaneous-games), [Mixed Strategies](Slides/#mixed-strategies)                     | HW5, Q5 |
+|     7    |      7      | [Mixed Strategies](Slides/#mixed-strategies)                     | HW6, Q6 |
+|     8    |      9      | [Uncertainty and Information](Slides/#asymmetric-info)           | HW7, Q7 |
+|     9    |      8      | [Strategic Moves](Slides/#strategic-moves)                       | HW8, Q8 |
+|    10    |      10     | [Repeated Games](Slides/#repeated-games)                         | HW9, Q9 |
+| *Finals* |  Cumulative | **Exam**: Monday, Dec. 8 - 10:15am                               |    |
+
+## Homework
+
+Homework assignments will be posted on this website, but you will upload them to Canvas.
+
+[Assignments page](Homework/index.qmd)
 
 ---
 
