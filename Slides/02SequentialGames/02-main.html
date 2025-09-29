@@ -6,12 +6,11 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.57">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.34">
 
   <meta name="author" content="Dante Yasui">
-  <meta name="dcterms.date" content="2024-01-01">
+  <meta name="dcterms.date" content="2025-01-01">
   <title>EC327 Game Theory – Introduction to Game Theory</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -31,209 +30,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-6350c96ffbaca6210afc547ac98470cc.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
-
-  .callout {
-    margin-top: 1em;
-    margin-bottom: 1em;  
-    border-radius: .25rem;
-  }
-
-  .callout.callout-style-simple { 
-    padding: 0em 0.5em;
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-    display: flex;
-  }
-
-  .callout.callout-style-default {
-    border-left: solid #acacac .3rem;
-    border-right: solid 1px silver;
-    border-top: solid 1px silver;
-    border-bottom: solid 1px silver;
-  }
-
-  .callout .callout-body-container {
-    flex-grow: 1;
-  }
-
-  .callout.callout-style-simple .callout-body {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-style-default .callout-body {
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-
-  .callout.callout-titled.callout-style-simple .callout-body {
-    margin-top: 0.2em;
-  }
-
-  .callout:not(.callout-titled) .callout-body {
-      display: flex;
-  }
-
-  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
-    padding-left: 1.6em;
-  }
-
-  .callout.callout-titled .callout-header {
-    padding-top: 0.2em;
-    margin-bottom: -0.2em;
-  }
-
-  .callout.callout-titled .callout-title  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-    
-  .callout.callout-titled.callout-style-simple .callout-content  p {
-    margin-top: 0;
-  }
-
-  .callout.callout-titled.callout-style-default .callout-content  p {
-    margin-top: 0.7em;
-  }
-
-  .callout.callout-style-simple div.callout-title {
-    border-bottom: none;
-    font-size: .9rem;
-    font-weight: 600;
-    opacity: 75%;
-  }
-
-  .callout.callout-style-default  div.callout-title {
-    border-bottom: none;
-    font-weight: 600;
-    opacity: 85%;
-    font-size: 0.9rem;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-default div.callout-content {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-
-  .callout.callout-style-simple .callout-icon::before {
-    height: 1rem;
-    width: 1rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 1rem 1rem;
-  }
-
-  .callout.callout-style-default .callout-icon::before {
-    height: 0.9rem;
-    width: 0.9rem;
-    display: inline-block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: 0.9rem 0.9rem;
-  }
-
-  .callout-title {
-    display: flex
-  }
-    
-  .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  .callout.no-icon::before {
-    display: none !important;
-  }
-
-  .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .callout.callout-titled .callout-icon::before {
-    margin-top: .5rem;
-    padding-right: .5rem;
-  }
-
-  .callout:not(.callout-titled) .callout-icon::before {
-    margin-top: 1rem;
-    padding-right: .5rem;
-  }
-
-  /* Callout Types */
-
-  div.callout-note {
-    border-left-color: #4582ec !important;
-  }
-
-  div.callout-note .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
-  }
-
-  div.callout-note.callout-style-default .callout-title {
-    background-color: #dae6fb
-  }
-
-  div.callout-important {
-    border-left-color: #d9534f !important;
-  }
-
-  div.callout-important .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-important.callout-style-default .callout-title {
-    background-color: #f7dddc
-  }
-
-  div.callout-warning {
-    border-left-color: #f0ad4e !important;
-  }
-
-  div.callout-warning .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-warning.callout-style-default .callout-title {
-    background-color: #fcefdc
-  }
-
-  div.callout-tip {
-    border-left-color: #02b875 !important;
-  }
-
-  div.callout-tip .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
-  }
-
-  div.callout-tip.callout-style-default .callout-title {
-    background-color: #ccf1e3
-  }
-
-  div.callout-caution {
-    border-left-color: #fd7e14 !important;
-  }
-
-  div.callout-caution .callout-icon::before {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
-  }
-
-  div.callout-caution.callout-style-default .callout-title {
-    background-color: #ffe5d0
-  }
-
-  </style>
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -338,7 +139,7 @@ Dante Yasui
 </div>
 </div>
 
-  <p class="date">2024</p>
+  <p class="date">2025</p>
 </section>
 <section class="slide level2">
 
@@ -388,14 +189,12 @@ Dante Yasui
 </section>
 <section id="extensive-form-definition" class="slide level2">
 <h2>Extensive Form Definition</h2>
-<div>
 <p>A <span class="h">Tree Graph</span> consists of:</p>
 <ul>
 <li class="fragment"><p>Multiple <span class="hi">nodes</span> with an ordered hierarchy starting from one <span class="hii">initial node</span></p></li>
 <li class="fragment"><p><span class="hi">Branches</span> coming from each node which connect it to later nodes</p></li>
 <li class="fragment"><p>The tree ends in any of the multiple <span class="hi">terminal nodes</span></p></li>
 </ul>
-</div>
 <div class="fragment">
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
@@ -531,7 +330,6 @@ Dante Yasui
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
-<div>
 <ul>
 <li class="fragment"><p>Who are the players?</p></li>
 <li class="fragment"><p>Where are the decisions?</p></li>
@@ -539,7 +337,6 @@ Dante Yasui
 <li class="fragment"><p>What do the terminal nodes represent?</p></li>
 <li class="fragment"><p>Is this a <em>complete</em> representation of a game? What’s missing?</p></li>
 </ul>
-</div>
 </div></div>
 <aside class="notes">
 <ul>
@@ -733,14 +530,12 @@ Dante Yasui
 </section>
 <section id="a-definition-of-an-extensive-form-game" class="slide level2">
 <h2>a Definition of an Extensive Form Game: <sup>1</sup></h2>
-<div>
 <ul>
 <li class="fragment"><p>A collection of decision-makers, called <span class="hi">players</span> or <em>agents</em></p></li>
 <li class="fragment"><p>A set of <span class="hi">decision nodes</span>, each represents the information available to the player of that node</p></li>
 <li class="fragment"><p>Strategies for each player which list the <span class="hi">branches</span> from <em>each</em> node that represetn the actions a player would take if faced with that choice</p></li>
 <li class="fragment"><p>A <span class="h">tree diagram</span> which maps the intersections of players’ strategy profiles to the outcomes represented at each <span class="hi">terminal nodes</span></p></li>
 </ul>
-</div>
 <aside class="notes">
 <ul>
 <li>connect this definition to the more general defition of a game from lecture 1
@@ -765,7 +560,6 @@ Dante Yasui
 <aside><ol class="aside-footnotes"><li id="fn2"><p>for finite, perfect information games</p></li></ol></aside></section>
 <section id="strategies-in-extensive-form-games" class="slide level2">
 <h2>Strategies in Extensive Form Games</h2>
-<div>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -793,7 +587,6 @@ Dante Yasui
 </div>
 </div>
 <p>What’s the difference?</p>
-</div>
 <aside class="notes">
 <ul>
 <li>The difference between a complete <em>strategy</em> and a single <em>action</em> is that a strategy contains a list of multiple actions and the conditions for when that action will be taken</li>
@@ -820,7 +613,6 @@ Dante Yasui
 </figure>
 </div>
 </div><div class="column" style="width:60%;">
-<div>
 <ul>
 <li class="fragment">How many decisions does <span class="red">Guy</span> make?
 <ul>
@@ -831,7 +623,6 @@ Dante Yasui
 <li class="fragment">1</li>
 </ul></li>
 </ul>
-</div>
 </div></div>
 <aside class="notes">
 <ul>
@@ -859,7 +650,6 @@ Dante Yasui
 </figure>
 </div>
 </div><div class="column" style="width:60%;">
-<div>
 <ul>
 <li class="fragment">Write out a complete strategy for <span class="blue">Vivica</span>
 <ul>
@@ -870,7 +660,6 @@ Dante Yasui
 </ul></li>
 </ul></li>
 </ul>
-</div>
 </div></div>
 <aside class="notes">
 <ul>
@@ -898,7 +687,6 @@ Dante Yasui
 </figure>
 </div>
 </div><div class="column" style="width:60%;">
-<div>
 <ul>
 <li class="fragment">Write out at complete strategy for <span class="red">Guy</span>
 <ul>
@@ -911,7 +699,6 @@ Dante Yasui
 </ul></li>
 </ul></li>
 </ul>
-</div>
 </div></div>
 <aside class="notes">
 <ul>
@@ -980,7 +767,6 @@ Dante Yasui
 <section id="the-smoking-decision" class="slide level2">
 <h2>The smoking decision</h2>
 <p>Do I want to try smoking today?</p>
-<div>
 <blockquote>
 <p>Suppose today I can either <span class="h">Try</span> smoking for the first time, or <span class="h">Not</span> try</p>
 </blockquote>
@@ -988,7 +774,6 @@ Dante Yasui
 <blockquote>
 <p><span class="h">Continue</span> smoking, or <span class="h">Quit</span></p>
 </blockquote>
-</div>
 </section>
 <section id="the-smoking-decision-1" class="slide level2">
 <h2>The smoking decision</h2>
@@ -1013,19 +798,16 @@ Dante Yasui
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
-<div>
 <ul>
 <li class="fragment"><p>What would a <em>rational</em> version of myself choose?</p></li>
 <li class="fragment"><p>Is this realistic?</p></li>
 <li class="fragment"><p>Why might Trying and then Quitting be a bad idea?</p></li>
 </ul>
-</div>
 </div></div>
 </section>
 <section id="the-smoking-game" class="slide level2">
 <h2>The smoking <em>game</em></h2>
 <p>We can apply the tools of game theory to this decision:</p>
-<div>
 <ul>
 <li class="fragment"><p>Let’s add <em>future Dante</em> as another player who acts at the second decision node</p></li>
 <li class="fragment"><p>Future Dante is different from <em>Present Dante</em> because he has different preferences:</p>
@@ -1034,7 +816,6 @@ Dante Yasui
 <li class="fragment"><p><span class="math inline">\(U_{FD}(\text{Quit}) = -1\)</span> because withdrawl is painful</p></li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="the-smoking-game-1" class="slide level2">
 <h2>The smoking <em>game</em></h2>
@@ -1050,23 +831,19 @@ Dante Yasui
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
-<div>
 <ul>
 <li class="fragment"><p>What will Future Carmen choose?</p></li>
 <li class="fragment"><p>Should Carmen choose to Try smoking <em>if she knows what her future self would choose?</em></p></li>
 </ul>
-</div>
 </div></div>
 </section>
 <section id="pruning-branches" class="slide level2">
 <h2>‘Pruning’ branches</h2>
 <p>If Carmen is <em>forward looking</em>, knows her <em>future self’s preferences</em>, and knows that her future self is <em>rational</em>,</p>
 <p>Then she can eliminate the possibility that her future self would quit.</p>
-<div>
 <ul>
 <li class="fragment"><span class="hi">Pruning</span> is this type of logic applied to eliminating certain branches in a game tree.</li>
 </ul>
-</div>
 </section>
 <section id="pruning-branches-1" class="slide level2">
 <h2>‘Pruning’ branches</h2>
@@ -1074,23 +851,19 @@ Dante Yasui
 <blockquote>
 <p>what choices is <strong>Today’s Carmen</strong> left with?</p>
 </blockquote>
-<div>
 <ul>
 <li class="fragment"><p><span class="h">Try</span> knowing that she will continue in the future and get -1 payoff</p></li>
 <li class="fragment"><p>or <span class="h">Not</span> try smoking today and earn 0 payoff</p></li>
 </ul>
-</div>
 </section>
 <section id="backwards-induction-intuitively" class="slide level2">
 <h2>Backwards Induction (intuitively)</h2>
 <p>Let’s outline the logical steps we used to solve this game:</p>
-<div>
 <ul>
 <li class="fragment"><p>We were uncertain about what would happen in this game, because <strong>Today’s Carmen</strong>’s optimal strategy depended on what <strong>Future Carmen</strong> woud do</p></li>
 <li class="fragment"><p>But <strong>Future Carmen</strong> is the last player in this game, so her choice only depends on her <em>own preferences</em></p></li>
 <li class="fragment"><p>Knowing what <strong>Future Carmen</strong> would choose allowed us to find <strong>Today’s Carmen</strong>’s best strategy</p></li>
 </ul>
-</div>
 </section>
 <section id="smoking-game-solution" class="slide level2">
 <h2>Smoking Game Solution</h2>
@@ -1174,13 +947,11 @@ Dante Yasui
 <ul>
 <li><strong>{</strong> (<span class="red">Kidnap</span>, <span class="red">Release</span>, <span class="red">Kill</span>), (<span class="blue">Pay</span>) <strong>}</strong></li>
 </ul>
-<div>
 <p>You should read this as:</p>
 <ul>
 <li class="fragment"><p>Guy <span class="red">Kidnaps</span> and will <span class="red">Release</span> if Vivica <span class="blue">Pays</span>, but will <span class="red">Kill</span> if Vivica <span class="blue">Doesn’t Pay</span></p></li>
 <li class="fragment"><p>Vivica <span class="blue">Pays</span> the ransom</p></li>
 </ul>
-</div>
 </section></section>
 <section>
 <section id="adding-more-players" class="title-slide slide level1 center">
@@ -1189,13 +960,11 @@ Dante Yasui
 </section>
 <section id="player-planting-game" class="slide level2">
 <h2>3-player planting game</h2>
-<div>
 <ul>
 <li class="fragment"><p><span class="hi">Emily</span>, <span class="hi">Nina</span>, and <span class="hi">Talia</span> are roommates who want to get a start on their communal garden.</p></li>
 <li class="fragment"><p>They like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.</p></li>
 <li class="fragment"><p><strong>2 or 3 people</strong> working is enough to keep the garden healthy, but if <strong>1 or 0</strong> work, then the garden will die.</p></li>
 </ul>
-</div>
 </section>
 <section id="planting-game-payoffs" class="slide level2">
 <h2>Planting Game payoffs</h2>
@@ -1236,12 +1005,10 @@ Dante Yasui
 <div class="column" style="width:50%;">
 <p><img data-src="figures/plantinggame.png"></p>
 </div><div class="column" style="width:50%;">
-<div>
 <p>Who should we start with to solve this game?</p>
 <ul>
 <li class="fragment">Talia, because she is the last one to move, her choices don’t depend on other players</li>
 </ul>
-</div>
 </div></div>
 </section>
 <section id="rollback-in-the-planting-game-1" class="slide level2">
@@ -1250,13 +1017,11 @@ Dante Yasui
 <div class="column" style="width:50%;">
 <p><img data-src="figures/plantinggame.png"></p>
 </div><div class="column" style="width:50%;">
-<div>
 <p>How many strategies does Talia have?</p>
 <ul>
 <li class="fragment"><p>16 total complete strategies</p></li>
 <li class="fragment"><p>CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD</p></li>
 </ul>
-</div>
 </div></div>
 </section>
 <section id="rollback-in-the-planting-game-2" class="slide level2">
@@ -1265,12 +1030,10 @@ Dante Yasui
 <div class="column" style="width:50%;">
 <p><img data-src="figures/plantinggame.png"></p>
 </div><div class="column" style="width:50%;">
-<div>
 <p>Which of Talia’s strategies can be eliminated as <em>irrational</em>?</p>
 <ul>
 <li class="fragment">Any which include an action which would lead to a lower payoff than another possible action at the same node</li>
 </ul>
-</div>
 </div></div>
 </section>
 <section id="rollback-in-the-planting-game-3" class="slide level2">
@@ -1302,11 +1065,9 @@ Dante Yasui
 <img data-src="figures/fig3.6.png" class="r-stretch"></section>
 <section id="equilibrium-path-of-play" class="slide level2">
 <h2>Equilibrium Path of Play</h2>
-<div>
 <p>Note that there is one continuous path we traced from the initial node to a final equilibrium outcome.</p>
 <p>However, we couldn’t have gotten their without the other arrows paths <strong>even though they are never reached</strong> in equilibrium.</p>
 <p>Recall that a <span class="hi">strategy</span> is a collection of choices at <strong>every</strong> decision node.</p>
-</div>
 </section>
 <section id="equilibrium-strategies" class="slide level2">
 <h2>Equilibrium Strategies</h2>
@@ -1339,10 +1100,8 @@ Dante Yasui
 <section>
 <section id="welfare-and-efficiency" class="title-slide slide level1 center">
 <h1>Welfare and Efficiency</h1>
-<div>
 <p>What are the <strong>good</strong> outcomes in the planting game?</p>
 <p>Can we rank outcomes by collective welfare?</p>
-</div>
 </section>
 <section id="pareto-dominance" class="slide level2">
 <h2>Pareto Dominance</h2>
@@ -1395,13 +1154,11 @@ Dante Yasui
 </section>
 <section id="discussion-efficiency-vs-other-social-comparisons" class="slide level2">
 <h2>Discussion: Efficiency vs other social comparisons</h2>
-<div>
 <ul>
 <li class="fragment"><p>How useful is Pareto Efficiency in the real world?</p></li>
 <li class="fragment"><p>How else could we group outcomes?</p></li>
 <li class="fragment"><p>We might address this later in the class with what is known as <em>Cooperative Game Theory</em></p></li>
 </ul>
-</div>
 </section></section>
 <section>
 <section id="order-advantages" class="title-slide slide level1 center">
@@ -1423,22 +1180,18 @@ Dante Yasui
 <section id="first-mover-advantage" class="slide level2">
 <h2>First-mover advantage</h2>
 <p>Emily received her best outcome of 4 because she can take advantage of acting first.</p>
-<div>
 <ul>
 <li class="fragment"><p>When a game favors those who act first, we say there is a <span class="hi">first-mover advantage</span></p></li>
 <li class="fragment"><p>But it’s not always helpful to act first!</p></li>
 </ul>
-</div>
 </section>
 <section id="second-mover-advantage" class="slide level2">
 <h2>Second-mover advantage</h2>
 <p>Sometimes you want to see the actions of others before you know your best response</p>
-<div>
 <ul>
 <li class="fragment"><p>When a game favors those who decide after another player, there is a <span class="hi">second-mover advantage</span></p></li>
 <li class="fragment"><p>For example, <a href="https://youtu.be/Kyjms3DLXAE">Squid Game bridge</a> game</p></li>
 </ul>
-</div>
 </section>
 <section class="slide level2">
 
@@ -1483,7 +1236,6 @@ Dante Yasui
 <ul>
 <li>Most people probably figure out the rollback equilibrium after playing it enough</li>
 </ul>
-<div>
 <ul>
 <li class="fragment"><p>The second player can always get at least a tie:</p>
 <ul>
@@ -1492,33 +1244,27 @@ Dante Yasui
 <li class="fragment"><p>After the first stages, block any attempt by player 1 to get 3 in a row</p></li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="more-complicated-games" class="slide level2">
 <h2>More complicated games</h2>
 <p>Do all games have theoretical solutions?</p>
-<div>
 <ul>
 <li class="fragment"><p>Checkers?</p></li>
 <li class="fragment"><p>Chess?</p></li>
 <li class="fragment"><p>Go?</p></li>
 </ul>
-</div>
 </section>
 <section id="chess" class="slide level2">
 <h2>Chess</h2>
-<div>
 <ul>
 <li class="fragment"><p>Technically rollback solvable, but with <span class="math inline">\(10^{120}\)</span> possible moves, it hasn’t been solved by either human or machine</p></li>
 <li class="fragment"><p>Human experts and computer programs instead rely on <em>experience</em> of past game possibilities</p></li>
 <li class="fragment"><p>and on some partial rollback, or an <span class="hi">intermediate valuation function</span>, where you look at all possibilities in the next few moves and assign probabilistic payoffs</p></li>
 </ul>
-</div>
 </section>
 <section id="theory-in-complicated-situations" class="slide level2">
 <h2>Theory in complicated situations</h2>
 <p>Is rollback still useful for complicated games where the theoretical solutions are infeasible to solve?</p>
-<div>
 <blockquote>
 <p>Yes!</p>
 </blockquote>
@@ -1526,7 +1272,6 @@ Dante Yasui
 <li class="fragment"><p>Understanding simpler games can help you develop intuition for solving more complicated ones</p></li>
 <li class="fragment"><p>Complicated games can be decomposed into smaller parts where solving is easier</p></li>
 </ul>
-</div>
 </section></section>
 <section>
 <section id="examples" class="title-slide slide level1 center">
@@ -1621,11 +1366,9 @@ Dante Yasui
 <li><p>players’ payoff increase when they act before others</p></li>
 <li><p>but their payoffs are also higher when they act later in time</p></li>
 </ol>
-<div>
 <ul>
 <li class="fragment">You’ve probably noticed yourself playing a few different preemption games in different settings, even if you didn’t have a name for it</li>
 </ul>
-</div>
 </section>
 <section id="preemption-2" class="slide level2">
 <h2>Preemption</h2>
@@ -1666,22 +1409,18 @@ Dante Yasui
 <section id="preemption-5" class="slide level2">
 <h2>Preemption</h2>
 <p>A general lesson of all preemption games is that <strong>players act too soon</strong> from a social efficiency perspective.</p>
-<div>
 <ul>
 <li class="fragment">Everyone would be better off in the outcome where we all wait, but because there is an incentive to try to jump the line, rational agents cannot be expected to wait instead of getting ahead</li>
 </ul>
-</div>
 </section>
 <section id="war-of-attrition" class="slide level2">
 <h2>War of Attrition</h2>
 <p>Not all games that involve waiting are <em>preemption games</em>, though.</p>
-<div>
 <p>A <span class="hi">war of attrition</span> is a type of game where:</p>
 <ol type="1">
 <li class="fragment"><p>Players’ payoffs are higher when they act <em>after</em> other players</p></li>
 <li class="fragment"><p>and higher the <em>sooner</em> in time they act</p></li>
 </ol>
-</div>
 </section>
 <section id="war-of-attrition-1" class="slide level2">
 <h2>War of Attrition</h2>
@@ -1704,7 +1443,6 @@ Dante Yasui
 <div class="column" style="width:40%;">
 <p><img data-src="figures/Harrington-fig8.18.png"></p>
 </div><div class="column" style="width:60%;">
-<div>
 <ul>
 <li class="fragment"><p>What if the players flipped a coin to decide who would act and then that player would immediately act?</p></li>
 <li class="fragment"><p>What would be their <em>expected payoffs</em></p></li>
@@ -1713,7 +1451,6 @@ Dante Yasui
 <li class="fragment">Once the coin flip has been observed, there’s nothing to stop the player who would be directed to act first to ignore the flip and wait.</li>
 </ul></li>
 </ul>
-</div>
 </div></div>
 </section>
 <section id="why-dont-nba-stars-pass-more" class="slide level2">
@@ -1722,13 +1459,11 @@ Dante Yasui
 <div class="column" style="width:40%;">
 <p><img data-src="figures/Harrington-fig8.19.png"></p>
 </div><div class="column" style="width:60%;">
-<div>
 <ul>
 <li class="fragment"><p>What is the rollback equilibrium?</p></li>
 <li class="fragment"><p>This is a variation of a game called Centipede which comes up a lot in lab experiments</p></li>
 <li class="fragment"><p>We’ll use come back to the centipede game in our discussion of how well our theoretical predictions actually match peoples’ behavior</p></li>
 </ul>
-</div>
 </div></div>
 </section></section>
 <section>
@@ -1754,34 +1489,28 @@ Dante Yasui
 <img data-src="figures/W2024-results.png" class="r-stretch"></section>
 <section id="why-didnt-all-teams-find-the-rollback-equilibrium" class="slide level2">
 <h2>Why didn’t all teams find the rollback equilibrium?</h2>
-<div>
 <ul>
 <li class="fragment"><p>Did everyone have perfect information about the rules?</p></li>
 <li class="fragment"><p>Were people thinking ahead?</p></li>
 <li class="fragment"><p>Were there disagreements within any teams as to the optimal strategy?</p></li>
 </ul>
-</div>
 </section>
 <section id="why-didnt-all-teams-find-the-rollback-equilibrium-1" class="slide level2">
 <h2>Why didn’t all teams find the rollback equilibrium?</h2>
 <p>What about common knowledge of rationality?</p>
-<div>
 <ul>
 <li class="fragment"><p>If you were on the second team to choose, and you see the first team doesn’t take one flag, what should you think?</p></li>
 <li class="fragment"><p>Should you still stick to the optimal strategy?</p></li>
 </ul>
-</div>
 </section>
 <section id="survivor-flag-results-discussion" class="slide level2">
 <h2>Survivor Flag Results Discussion</h2>
 <p>This game was relatively simple because it only relied on <em>one team</em> to come up with the optimal strategy</p>
-<div>
 <ul>
 <li class="fragment"><p>As long as the first team always took the right number of flags, the second team didn’t have any impact on the game</p></li>
 <li class="fragment"><p>This is also a <em>zero-sum</em> game, so there were no opportunities for teams to benefit by cooperating</p></li>
 <li class="fragment"><p>Let’s look at a similar game, but with non-zero-sum payoffs</p></li>
 </ul>
-</div>
 </section>
 <section id="centipede-game" class="slide level2">
 <h2>Centipede Game</h2>
@@ -1806,7 +1535,6 @@ Dante Yasui
 <section id="centipede-game-3" class="slide level2">
 <h2>Centipede Game</h2>
 <p>Out of 100 pairs of your peers, how many times do you think that player 1 would grab in the first node?</p>
-<div>
 <ul>
 <li class="fragment">In a lab experiment, only 2 times out of 281 did the first player take the first 40 cents (~1%)</li>
 </ul>
@@ -1818,12 +1546,10 @@ Dante Yasui
 <ul>
 <li class="fragment">15%!</li>
 </ul>
-</div>
 </section>
 <section id="centipede-game-evidence-discussion" class="slide level2">
 <h2>Centipede Game Evidence Discussion</h2>
 <p>What explains the drastic departure in lab experiments from the preditiction of backwards induction?</p>
-<div>
 <ul>
 <li class="fragment"><p>Are players’ not looking ahead to the end of the game?</p>
 <ul>
@@ -1835,7 +1561,6 @@ Dante Yasui
 <li class="fragment"><p>What about how much they care about how much their opponent gets?</p></li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="ultimatum-game" class="slide level2">
 <h2>Ultimatum Game</h2>
@@ -1844,22 +1569,18 @@ Dante Yasui
 <li><p>Player A gets to propose how to split the dollar (i.e., 50:50, 75 to me 25 to you, etc)</p></li>
 <li><p>Player B can either accept the proposed split, or reject so that both players get nothing</p></li>
 </ul>
-<div>
 <blockquote>
 <p>What is the rollback solution if both players payoffs are only determined by how much money they earn?</p>
 </blockquote>
-</div>
 </section>
 <section id="ultimatum-game-evidence" class="slide level2">
 <h2>Ultimatum Game Evidence</h2>
 <p>In spite of the theoretical prediction, the most common proposal in lab experiments is 50:50.</p>
 <p>Most player B’s actually reject any offer of 25% or less.</p>
-<div>
 <ul>
 <li class="fragment"><p>This seems to indicate that most people have some sort of <em>aversion to inequity</em></p></li>
 <li class="fragment"><p>If you’re interested in learning more, <strong>behavioral economics</strong> develops on the basic rational agent model to make sense of some of these experimental findings</p></li>
 </ul>
-</div>
 </section>
 <section id="a-logical-paradox-with-backward-induction" class="slide level2">
 <h2>A logical paradox with Backward induction</h2>
@@ -1867,13 +1588,11 @@ Dante Yasui
 <div class="column" style="width:50%;">
 <p><img data-src="figures/Harrington-fig8.21.png"></p>
 </div><div class="column" style="width:50%;">
-<div>
 <ul>
 <li class="fragment"><p>What should Jane do if Jon chose <span class="math inline">\(b\)</span>?</p></li>
 <li class="fragment"><p>If she knows Jon is rational, then he would choose <span class="math inline">\(d\)</span> if she chose <span class="math inline">\(x\)</span>, and <span class="math inline">\(c\)</span> if she chose <span class="math inline">\(y\)</span></p></li>
 <li class="fragment"><p>So Jane should choose <span class="math inline">\(x\)</span> to get a payoff of <span class="math inline">\(5\)</span> over <span class="math inline">\(3\)</span> if she chose <span class="math inline">\(y\)</span></p></li>
 </ul>
-</div>
 </div></div>
 </section>
 <section id="a-logical-paradox-with-backward-induction-1" class="slide level2">
@@ -1882,28 +1601,26 @@ Dante Yasui
 <div class="column" style="width:50%;">
 <p><img data-src="figures/Harrington-fig8.21.png"></p>
 </div><div class="column" style="width:50%;">
-<div>
 <ul>
 <li class="fragment"><p>But if Jon chose <span class="math inline">\(b\)</span>, doesn’t that mean that he can’t be rational?</p></li>
 <li class="fragment"><p>What should Jane do?</p></li>
 <li class="fragment"><p>Maybe Jon just made a mistake, and Jane should stick to her assumption that he will continue to try to make rational choices</p></li>
 </ul>
-</div>
 </div></div>
 </section>
 <section class="slide level2">
 
 
-<div class="quarto-auto-generated-content">
+
+</section></section>
+
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="UOSignature-356.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>EC327 | Lecture 2 | Sequential Games</p>
 </div>
-</div>
-</section></section>
-
-    </div>
-  </div>
+</div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
   <script src="../../site_libs/revealjs/dist/reveal.js"></script>
@@ -1932,7 +1649,8 @@ Dante Yasui
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -2086,7 +1804,7 @@ Dante Yasui
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -2151,192 +1869,172 @@ Dante Yasui
     </script>
 
     <script id="quarto-html-after-body" type="application/javascript">
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-      const toggleBodyColorMode = (bsSheetEl) => {
-        const mode = bsSheetEl.getAttribute("data-mode");
-        const bodyEl = window.document.querySelector("body");
-        if (mode === "dark") {
-          bodyEl.classList.add("quarto-dark");
-          bodyEl.classList.remove("quarto-light");
-        } else {
-          bodyEl.classList.add("quarto-light");
-          bodyEl.classList.remove("quarto-dark");
-        }
-      }
-      const toggleBodyColorPrimary = () => {
-        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-        if (bsSheetEl) {
-          toggleBodyColorMode(bsSheetEl);
-        }
-      }
-      toggleBodyColorPrimary();  
-      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-      tabsets.forEach(function(tabset) {
-        const tabby = new Tabby('#' + tabset.id);
-      });
-      const isCodeAnnotation = (el) => {
-        for (const clz of el.classList) {
-          if (clz.startsWith('code-annotation-')) {                     
-            return true;
-          }
-        }
-        return false;
-      }
-      const onCopySuccess = function(e) {
-        // button target
-        const button = e.trigger;
-        // don't keep focus
-        button.blur();
-        // flash "checked"
-        button.classList.add('code-copy-button-checked');
-        var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
-        setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
-          }
-          button.setAttribute("title", currentTitle);
-          button.classList.remove('code-copy-button-checked');
-        }, 1000);
-        // clear code selection
-        e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
             }
           }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
-      });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/dyasui\.github\.io\/EC327\/");
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          return false;
         }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
             }
-          }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
         }
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-        const config = {
-          allowHTML: true,
-          maxWidth: 500,
-          delay: 100,
-          arrow: false,
-          appendTo: function(el) {
-              return el.closest('section.slide') || el.parentElement;
-          },
-          interactive: true,
-          interactiveBorder: 10,
-          theme: 'light-border',
-          placement: 'bottom-start',
-        };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
-          config['offset'] = [0,0];
-          config['maxWidth'] = 700;
-        window.tippy(el, config); 
-      }
-      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-      for (var i=0; i<noterefs.length; i++) {
-        const ref = noterefs[i];
-        tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-          try { href = new URL(href).hash; } catch {}
-          const id = href.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
-        });
-      }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
-          }
-        } else {
-          return undefined;
-        }
-      };
-      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-      for (var i=0; i<bibliorefs.length; i++) {
-        const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
               }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/dyasui\.github\.io\/EC327\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
           });
         }
-      }
-    });
-    </script>
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
     
 
 </body></html>
