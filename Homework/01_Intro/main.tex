@@ -1,0 +1,218 @@
+\documentclass[addpoints]{exam}
+
+% \printanswers
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{multirow,array} % for payoff matrix formatting
+\usepackage[colorlinks,pdfusetitle,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+
+\definecolor{crimson}{RGB}{ 170, 4, 36 }
+\definecolor{darkblue}{RGB}{ 4, 47, 170 }
+\definecolor{brown}{RGB}{ 111, 71, 2 }
+\definecolor{periwinkle}{RGB}{ 90, 177, 204 }
+\definecolor{ducksgreen}{HTML}{007030}
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+\pagestyle{headandfoot}
+\lhead{EC327 Game Theory}
+\chead{Homework 1}
+\rhead{Fall 2025}
+\runningheadrule
+
+\title{
+    \textbf{Econ 327: Game Theory} \\ 
+    Homework $\#1$
+    }
+\author{University of Oregon}
+\date{Due: Oct. 3$^{rd}$}
+
+% exam-type question formatting
+\renewcommand{\thequestion}{\textbf{Question \arabic{question}}}
+\bracketedpoints
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+  \gradetable[h][questions]
+\end{center}
+
+\vspace{0.5in}
+
+\begin{center}
+  \textbf{For homework assignments:}
+\end{center}
+
+\begin{itemize}
+
+%  \item DO NOT write your name:
+%  this assignment will be graded anonymously. 
+%  If you want to, you can include your student ID instead.
+
+  \item Complete \textit{all} questions and parts.
+
+  % I will select one question at random to be graded
+  % according to the rubric on Canvas.
+
+  \item You will be graded on not only the content of your work
+    but on how clearly you present your ideas.
+    Make sure that your handwriting is legible.
+    Please use extra pages if you run out of space 
+    but make sure that all parts of a question 
+    are in the correct order when you submit.
+
+  \item You may choose to work with others,
+  but everyone must submit to Canvas individually.
+
+  Please include the names of everyone who you worked with 
+  below your own name.
+ 
+\end{itemize}
+
+\vspace{1.0in}
+
+\makebox[.6\textwidth]{Name\enspace\hrulefill}
+
+\vspace{0.5in}
+
+% \begin{center}
+%   \fbox{\fbox{\parbox{5.5in}{\centering
+%     Answer the questions in the spaces provided on the
+%     question sheets. If you run out of room for an answer,
+%     continue on the back of the page or another sheet of paper.}}}
+% \end{center}
+
+\begin{questions}
+
+\newpage
+
+
+%------------------------------------------------------------------
+
+\question%[20]
+
+Consider a (heavily) simplified version of the popular board game \textit{Catan}.
+In this version, there are only five map tiles numbered one through five.
+There are two players, Andy and Booth, and each has two settlements placed on a tile.
+Andy's settlements are on tiles 1 and 2 and Booth's settlements are on tiles 3 and 4.
+On a players' turn, they roll a single fairly weighted die and if it lands face up on a number which matches the tile of one of their settlements, they earn one sheep card.
+However, if the die lands on a 6, then the player who rolled it can steal one sheep from their opponent.
+
+Suppose that it is Andy's turn to roll the die.
+
+\begin{parts}
+\part[4] What is Andy's expected payoff (in sheep)?
+\vspace{25mm}
+\part[4] What is Booth's expected payoff?
+\vspace{25mm}
+\end{parts}
+
+\begin{solution}
+  \part
+  Andy's expected payoff is $\frac{1}{3} (1) + \frac{1}{3} (0) + \frac{1}{6} (0) + \frac{1}{6} (1) = \frac{1}{2}$
+
+  \part
+  Booth's expected payoff is $\frac{1}{3} (0) + \frac{1}{3} (1) + \frac{1}{6} (0) + \frac{1}{3} (-1) = \frac{1}{6} $
+
+\end{solution}
+
+\question
+
+Watch the clip from the British Game show Golden Balls.
+\url{https://youtu.be/bOwh9_lAeLA}
+The specific game is called Golden Balls and is played between the two contestents after they have collected a pool of prize money together in other challenges.
+
+Respond to the following questions about the game and briefly justify each answer.
+
+\begin{parts}
+  \part[2] 
+  Do the players take their actions \textit{sequentially} or \textit{simultaneously}?
+  \vspace{10mm}
+
+  \part[2]
+  Is Golden Balls a \textit{zero-sum} or a \textit{constant-sum} game? 
+  \vspace{10mm}
+
+  \part[2]
+  What relevant \textit{information} is available to the players when taking their actions?
+  \vspace{10mm}
+
+  \part[2]
+  How important is the stage where the constestants are told to talk with each other?
+  Can communication be strategic?
+  \vspace{5mm}
+
+\end{parts}
+
+\newpage
+
+\question%[20]
+
+Read the 2022 Policito Opinion article, 
+\textit{How Game Theory Explains Why We Have to Sanction Putin : Even If It’s Costly}.
+
+\url{https://www.politico.com/news/magazine/2022/04/21/russia-sanctions-game-theory-00026566}
+
+\begin{parts}
+
+  \part[4]
+  List the tools from game theory that we've learned about in class
+  which the authors use to argue their point.
+  \vspace{25mm}
+
+  \part[2] 
+  What assumptions do the authors make in their simplified `Repeated Sanctions Game'?
+  \vspace{25mm}
+
+  \part[2]
+  Do you find the authors' arguments convincing? Why or why not?
+  \vspace{25mm}
+
+\end{parts}
+
+\begin{solution}
+
+The authors' main point is that if the US and allies even if sanctions on Russia were costly to enact for those nations,
+they were still important to deter either Russia in the future or other nations from breaking international law.
+If the game in their tree diagram is played only once, the subgame perfect Nash equilibrium has Player 1 choosing to transgress
+because Player 2's only rational strategy is to choose Don't Punish in both of their decision nodes.
+Once Player 1 has already made the transgresssion, the cost of that transgression is already felt by Player 2 
+and Sanctions will just decrease their payoff more.
+
+However, the authors argue that because this game is likely to be repeated in the future, 
+(either against Putin again or another world leader),
+the payoff of deterring future transgressions should mean that Nato countries should apply sanctions on Russia
+even though they will be costly in the short term.
+
+\begin{parts}
+
+  \part
+  Relevant tools/terms which we have discussed include backwards induction,
+  common knowledge of rationality, perfect information, Pareto dominance/efficiency,
+  game tree/extensive form, forward-looking, subgame perfect Nash Equilibrium/rollback equilibrium.
+  A complete answer should relate at least on of these terms to the international sanctions placed on Russia.
+
+  \part
+  Some potential answers are: 
+  rationality of Putin, 
+  the relative rankings of the payoffs in the game (i.e., international community prefers Don't Punish after Putin Transgresses over Sanctioning),
+  the potential future players care about future iterations of the game enough,
+  etc.
+
+  \part
+  For example, consider what happens if the payoff to Player 2 of Don't Punish after a Transgression is 
+  $ -c - f $ where $f$ is the cost in the future to other Players observing that Transgressions will go unpunished.
+  If $f > s$, i.e., if the future cost of additional repeated Transgressions outweighs the cost of sanctions today,
+  then the equilibrium of the game changes to { Transgress, (Sanction if Transgress, Don't Punish if Don't Transgress) } because now Player 2 it is rational for Player 2 to Sanction after a Transgression, 
+  where it wasn't rational in the original one-shot game.
+
+\end{parts}
+\end{solution}
+\end{questions}
+
+\end{document}

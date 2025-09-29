@@ -20,7 +20,7 @@ output:
 ---
 
 ```{r setup}
-#| echo:false
+#| echo: false
 library(tidyverse)
 ```
 

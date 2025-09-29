@@ -10,13 +10,9 @@ title: "In-class Activities"
 
 [Activity Sheet](02SurvivorFlags/SurvivorFlags.html)
 
-[results](02SurvivorFlags/results.qmd)
-
 ## Pirate Treasure
 
 [Activity Sheet](03PirateTreasure/PirateTreasure.qmd)
-
-[results](03PirateTreasure/W2024-Results.csv)
 
 ## Blotto Election
 
@@ -26,16 +22,9 @@ title: "In-class Activities"
 
 [Activity Sheet](05CournotComp/cournotcomp.qmd)
 
-  * [Example R code](05CournotComp/results.qmd)
-  * [results (csv)](05CournotComp/EC327F24-activity5_results.csv)
-
 ## Penalty Kicks Shootout
 
 [Activity Sheet](06PenaltyKicks/penaltykicks.qmd)
-
-  * [Example R code](06PenaltyKicks/penaltykicks_results.qmd)
-  * [Winter 2024 results (csv file)](06PenaltyKicks/EC327W24-activity6_results.csv)
-  * [Fall 2024 results (csv file)](06PenaltyKicks/EC327F24-activity6_results.csv)
 
 ## Brinksmanship
 

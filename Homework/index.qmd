@@ -3,61 +3,19 @@ title: "Homework Assignments"
 ---
 
 # Assignment 1 
-**Due:** Friday, October 11th
-[**Submit to Canvas**](https://canvas.uoregon.edu/courses/251353/assignments/1721122){target="_blank"}
+**Due:** Friday, October 3rd
+[**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1922386){target="_blank"}
 ```{=html}
 <details>
   <summary>PDF</summary>
-  <a class="btn btn-primary btn-lg cv-download" href="assignment1/main.pdf" target="_blank">
+  <a class="btn btn-primary btn-lg cv-download" href="01_Intro/main.pdf" target="_blank">
     <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download
   </a>
   <div class="embed-container">
-    <iframe src="assignment1/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+    <iframe src="01_Intro/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```
 
 # Assignment 2
 **Due:** Friday, October 25th
-[**Submit to Canvas**](https://canvas.uoregon.edu/courses/251353/assignments/1721123){target="_blank"}
-```{=html}
-<details>
-  <summary>PDF</summary>
-  <a class="btn btn-primary btn-lg cv-download" href="assignment2/main.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download
-  </a>
-  <div class="embed-container">
-    <iframe src="assignment2/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
-  </div>
-</details
-```
-
-# Assignment 3
-**Due:** Friday, November 15th
-[**Submit to Canvas**](https://canvas.uoregon.edu/courses/251353/assignments/1721124){target="_blank"}
-```{=html}
-<details>
-  <summary>PDF</summary>
-  <a class="btn btn-primary btn-lg cv-download" href="assignment3/main.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download
-  </a>
-  <div class="embed-container">
-    <iframe src="assignment3/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
-  </div>
-</details>
-```
-
-# Assignment 4
-**Due:** Friday, December 6th
-[**Submit to Canvas**](https://canvas.uoregon.edu/courses/251353/assignments/1721125){target="_blank"}
-```{=html}
-<details>
-  <summary>PDF</summary>
-  <a class="btn btn-primary btn-lg cv-download" href="assignment4/main.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download
-  </a>
-  <div class="embed-container">
-    <iframe src="assignment4/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
-  </div>
-</details>
-```

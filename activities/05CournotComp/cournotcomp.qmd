@@ -19,6 +19,7 @@ more ad space is available, the less valuable each slot becomes.
 
 ```{r makegroups}
 #| echo: false
+#| eval: false
 #| message: false
 library(tidyverse)
 
@@ -98,6 +99,7 @@ names %>%
 ```{shinylive-r}
 #| standalone: true
 #| code-fold: false
+#| eval: false
 #| label: demand-curve
 #| viewerHeight: 1000
 
