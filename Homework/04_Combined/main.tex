@@ -1,0 +1,123 @@
+\documentclass[addpoints]{exam}
+
+\printanswers
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{multirow,array} % for payoff matrix formatting
+\usepackage[colorlinks,pdfusetitle,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+
+\definecolor{crimson}{RGB}{ 170, 4, 36 }
+\definecolor{darkblue}{RGB}{ 4, 47, 170 }
+\definecolor{brown}{RGB}{ 111, 71, 2 }
+\definecolor{periwinkle}{RGB}{ 90, 177, 204 }
+\definecolor{ducksgreen}{HTML}{007030}
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+\pagestyle{headandfoot}
+\lhead{EC327 Game Theory}
+\chead{Homework 4}
+\rhead{Fall 2025}
+\runningheadrule
+
+\title{
+    \textbf{Econ 327: Game Theory} \\ 
+    Homework $\#4$
+    }
+\author{University of Oregon}
+\date{Due: Oct. 24$^{th}$}
+
+% exam-type question formatting
+\renewcommand{\thequestion}{\textbf{Q\arabic{question}}}
+\bracketedpoints
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+  \gradetable[h][questions]
+\end{center}
+
+\vspace{0.5in}
+
+\begin{center}
+  \textbf{For homework assignments:}
+\end{center}
+
+\begin{itemize}
+
+%  \item DO NOT write your name:
+%  this assignment will be graded anonymously. 
+%  If you want to, you can include your student ID instead.
+
+  \item Complete \textit{all} questions and parts.
+
+  % I will select one question at random to be graded
+  % according to the rubric on Canvas.
+
+  \item You will be graded on not only the content of your work
+    but on how clearly you present your ideas.
+    Make sure that your handwriting is legible.
+    Please use extra pages if you run out of space 
+    but make sure that all parts of a question 
+    are in the correct order when you submit.
+
+  \item You may choose to work with others,
+  but everyone must submit to Canvas individually.
+
+  Please include the names of everyone who you worked with 
+  below your own name.
+ 
+\end{itemize}
+
+\vspace{1.0in}
+
+\makebox[.6\textwidth]{Name\enspace\hrulefill}
+
+\vspace{0.5in}
+
+% \begin{center}
+%   \fbox{\fbox{\parbox{5.5in}{\centering
+%     Answer the questions in the spaces provided on the
+%     question sheets. If you run out of room for an answer,
+%     continue on the back of the page or another sheet of paper.}}}
+% \end{center}
+
+\begin{questions}
+
+\newpage
+
+\question
+Recall the gnu and croc river crossing game from Homework 2, Question 3.
+Now, consider what happens if the gnu have bad eyesight and can't see where the crocs are choosing to lie in wait.
+
+\begin{parts}
+  
+\part[8]
+Draw out the new extensive form game.
+
+\begin{solution}
+  Either of the following extensive forms is acceptable:
+
+  \input{figures/gnucrocs1.tex}
+
+  \input{figures/gnucrocs2.tex}
+\end{solution}
+  \part[4]
+  How does your prediction change from homework 2?
+  Would you still expect to always see the gnu safely crossing at the channel?
+
+  \begin{solution}
+    If the Gnu can't see the Crocs, they can't use a strategy where they only selectively cross the Channel if the Crocs are there.
+    If they choose to Cross the Channel in this case, then the Crocs will decide it's worth it to go to the Channel.
+    So the equilibrium from earlier doesn't apply because the information sets of the extensive form game have changed.
+  \end{solution}
+
+\end{parts}
+\end{questions}
+
+\end{document}
