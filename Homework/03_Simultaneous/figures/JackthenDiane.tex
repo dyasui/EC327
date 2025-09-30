@@ -1,0 +1,72 @@
+\begin{tikzpicture}[font=\footnotesize]
+    \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
+    \tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
+    \tikzstyle{level 1}=[level distance=15mm,sibling distance=3cm]
+    \tikzstyle{level 2}=[level distance=15mm,sibling distance=1cm]
+    \tikzstyle{level 3}=[level distance=15mm,sibling distance=.5cm]
+    
+    \node(0)[solid node,label=left:{\color{red} Jack}]{}
+        child{node(1)[solid node,label=left:{\color{blue} Diane },label=right:{$1$}]{}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} 1}  \\
+                     {\color{blue} \boxed{1}} 
+                \end{tabular}
+            }]{} edge from parent[] node[left]{$x$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                  {\color{red} \boxed{2}}  \\
+                     {\color{blue} \boxed{1}} 
+                \end{tabular}
+            }]{} edge from parent node[left]{$y$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} 2}  \\
+                     {\color{blue} 0} 
+                \end{tabular}
+            }]{} edge from parent[ ] node[left]{$z$}}
+            edge from parent node[left,xshift=-5]{$a$}
+        }
+        child{node(2)[solid node,label=right:{$2$}]{}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                  {\color{red} \boxed{2}}  \\
+                     {\color{blue} \boxed{3}} 
+                \end{tabular}
+            }]{} edge from parent[] node[left]{$x$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} 0}  \\
+                     {\color{blue} 2} 
+                \end{tabular}
+            }]{} edge from parent[ ] node[left]{$y$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} 2}  \\
+                     {\color{blue} 1} 
+                \end{tabular}
+            }]{} edge from parent[ ] node[left]{$z$}}
+            edge from parent node[left]{$b$}
+        }
+        child{node(3)[solid node,label=right:{$3$}]{}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                  {\color{red} \boxed{2}}  \\
+                     {\color{blue} 1} 
+                \end{tabular}
+            }]{} edge from parent[ ] node[left]{$x$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} 1}  \\
+                     {\color{blue} \boxed{2}} 
+                \end{tabular}
+            }]{} edge from parent[] node[left]{$y$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                  {\color{red} \boxed{3}}  \\
+                     {\color{blue} 0} 
+                \end{tabular}
+            }]{} edge from parent[ ] node[left]{$z$}}
+            edge from parent node[right]{$c$}
+        };
+\end{tikzpicture}

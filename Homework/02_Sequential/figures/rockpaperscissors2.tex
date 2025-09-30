@@ -1,0 +1,73 @@
+\begin{tikzpicture}[edge from parent/.style={draw, very thick, -latex}]
+    \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
+    \tikzstyle{hollow node}=[circle,draw,inner sep=.25]
+    \tikzstyle{level 1}=[level distance=15mm,sibling distance=2.65cm]
+    \tikzstyle{level 2}=[level distance=15mm,sibling distance=.95cm]
+    \tikzstyle{level 3}=[level distance=15mm,sibling distance=.6cm]
+    \tikzstyle{pruned edge from parent}=[draw, very thick, gray, dashed, -]
+    
+    \node(0)[solid node,label=right:{\color{red} Player 1}]{}
+        child{node(1)[solid node,label=above left:{\color{blue} Player 2 }]{}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} 3}  \\
+                     {\color{blue} 0} 
+                \end{tabular}
+            }]{} edge from parent[draw, very thick, gray, dashed, -] node[left]{$R$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} 2}  \\
+                     {\color{blue} 1} 
+                \end{tabular}
+            }]{} edge from parent node[left]{P}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} 4}  \\
+                     {\color{blue} -1} 
+                \end{tabular}
+            }]{} edge from parent[draw, very thick, gray, dashed, -] node[right]{$S$}}
+            edge from parent node[left,xshift=-5]{Rock}
+        }
+        child{node(2)[solid node,label=above right:{\color{blue} Player 2 }]{}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} 1}  \\
+                     {\color{blue} -1} 
+                \end{tabular}
+            }]{} edge from parent[draw, very thick, gray, dashed, -] node[left]{$R$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} 0}  \\
+                     {\color{blue} 0} 
+                \end{tabular}
+            }]{} edge from parent[draw, very thick, gray, dashed, -] node[left]{$P$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} -1}  \\
+                     {\color{blue} 1} 
+                \end{tabular}
+            }]{} edge from parent node[right]{S}}
+            edge from parent[draw, very thick, gray, dashed, -] node[left]{Paper}
+        }
+        child{node(3)[solid node,label=above right:{\color{blue} Player 2 }]{}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} -1}  \\
+                     {\color{blue} 1} 
+                \end{tabular}
+            }]{} edge from parent node[left]{R}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} 1}  \\
+                     {\color{blue} -1} 
+                \end{tabular}
+            }]{} edge from parent[draw, very thick, gray, dashed, -] node[left]{$P$}}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} 0}  \\
+                     {\color{blue} 0} 
+                \end{tabular}
+            }]{} edge from parent[draw, very thick, gray, dashed, -] node[right]{$S$}}
+            edge from parent[draw, very thick, gray, dashed, -] node[right]{Scissors}
+        };
+\end{tikzpicture}

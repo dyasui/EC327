@@ -1,0 +1,73 @@
+\begin{tikzpicture}[edge from parent/.style={draw, very thick, -latex}]
+    \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
+    \tikzstyle{hollow node}=[circle,draw,inner sep=.25]
+    \tikzstyle{level 1}=[level distance=15mm,sibling distance=5cm]
+    \tikzstyle{level 2}=[level distance=15mm,sibling distance=2.5cm]
+    \tikzstyle{level 3}=[level distance=15mm,sibling distance=1cm]
+    \tikzstyle{pruned edge from parent}=[draw, very thick, darkgray, dashed, -]
+    
+    \node(0)[solid node,label=right:{\color{darkgray} Gnu}]{}
+        child{node[solid node,label=left:{\color{olive} Croc }]{}
+            child{node[solid node,label=left:{\color{darkgray} Gnu}]{}
+                child{node[hollow node,label=below:{
+                    \begin{tabular}{c}
+                         {\color{darkgray} -1}  \\
+                         {\color{olive} 1} 
+                    \end{tabular}
+                }]{} edge from parent[draw, very thick, darkgray, dashed, -] node[left]{Cross}}
+                child{node[hollow node,label=below:{
+                    \begin{tabular}{c}
+                         {\color{darkgray} 0}  \\
+                         {\color{olive} -1} 
+                    \end{tabular}
+                }]{} edge from parent node[right]{Stay}}
+            edge from parent[draw, very thick, darkgray, dashed, -] node[left]{Channel}}
+            child{node[solid node,label=left:{\color{darkgray} Gnu}]{}
+                child{node[hollow node,label=below:{
+                    \begin{tabular}{c}
+                         {\color{darkgray} 1}  \\
+                         {\color{olive} 0} 
+                    \end{tabular}
+                }]{} edge from parent node[left]{Cross}}
+                child{node[hollow node,label=below:{
+                    \begin{tabular}{c}
+                         {\color{darkgray} 0}  \\
+                         {\color{olive} 0} 
+                    \end{tabular}
+                }]{} edge from parent[draw, very thick, darkgray, dashed, -] node[right]{Stay}}
+            edge from parent node[right]{Rapids}}
+            edge from parent node[left,xshift=0,yshift=5]{Channel}
+        }
+        child{node[solid node,label=right:{\color{olive} Croc }]{}
+            child{node[solid node,label=left:{\color{darkgray} Gnu}]{}
+                child{node[hollow node,label=below:{
+                    \begin{tabular}{c}
+                         {\color{darkgray} 1}  \\
+                         {\color{olive} -1} 
+                    \end{tabular}
+                }]{} edge from parent node[left]{Cross}}
+                child{node[hollow node,label=below:{
+                    \begin{tabular}{c}
+                         {\color{darkgray} 0}  \\
+                         {\color{olive} -1} 
+                    \end{tabular}
+                }]{} edge from parent[draw, very thick, darkgray, dashed, -] node[right]{Stay}}
+            edge from parent[draw, very thick, darkgray, dashed, -] node[left]{Channel}}
+            child{node[solid node,label=left:{\color{darkgray} Gnu}]{}
+                child{node[hollow node,label=below:{
+                    \begin{tabular}{c}
+                         {\color{darkgray} -1}  \\
+                         {\color{olive} 2} 
+                    \end{tabular}
+                }]{} edge from parent[draw, very thick, darkgray, dashed, -] node[left]{Cross}}
+                child{node[hollow node,label=below:{
+                    \begin{tabular}{c}
+                         {\color{darkgray} 0}  \\
+                         {\color{olive} 0} 
+                    \end{tabular}
+                }]{} edge from parent node[right]{Stay}}
+            edge from parent node[right]{Rapids}}
+            edge from parent[draw, very thick, darkgray, dashed, -] node[right]{Rapids}
+        }
+        ;
+\end{tikzpicture}

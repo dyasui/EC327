@@ -1,0 +1,343 @@
+\documentclass[addpoints]{exam}
+
+\printanswers
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{multirow,array} % for payoff matrix formatting
+\usepackage[colorlinks,pdfusetitle,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+
+\definecolor{crimson}{RGB}{ 170, 4, 36 }
+\definecolor{darkblue}{RGB}{ 4, 47, 170 }
+\definecolor{brown}{RGB}{ 111, 71, 2 }
+\definecolor{periwinkle}{RGB}{ 90, 177, 204 }
+\definecolor{ducksgreen}{HTML}{007030}
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+\pagestyle{headandfoot}
+\lhead{EC327 Game Theory}
+\chead{Homework 3}
+\rhead{Fall 2025}
+\runningheadrule
+
+\title{
+    \textbf{Econ 327: Game Theory} \\ 
+    Homework $\#3$
+    }
+\author{University of Oregon}
+\date{Due: Oct. 17$^{th}$}
+
+% exam-type question formatting
+\renewcommand{\thequestion}{\textbf{Q\arabic{question}}}
+\bracketedpoints
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+  \gradetable[h][questions]
+\end{center}
+
+\vspace{0.5in}
+
+\begin{center}
+  \textbf{For homework assignments:}
+\end{center}
+
+\begin{itemize}
+
+%  \item DO NOT write your name:
+%  this assignment will be graded anonymously. 
+%  If you want to, you can include your student ID instead.
+
+  \item Complete \textit{all} questions and parts.
+
+  % I will select one question at random to be graded
+  % according to the rubric on Canvas.
+
+  \item You will be graded on not only the content of your work
+    but on how clearly you present your ideas.
+    Make sure that your handwriting is legible.
+    Please use extra pages if you run out of space 
+    but make sure that all parts of a question 
+    are in the correct order when you submit.
+
+  \item You may choose to work with others,
+  but everyone must submit to Canvas individually.
+
+  Please include the names of everyone who you worked with 
+  below your own name.
+ 
+\end{itemize}
+
+\vspace{1.0in}
+
+\makebox[.6\textwidth]{Name\enspace\hrulefill}
+
+\vspace{0.5in}
+
+% \begin{center}
+%   \fbox{\fbox{\parbox{5.5in}{\centering
+%     Answer the questions in the spaces provided on the
+%     question sheets. If you run out of room for an answer,
+%     continue on the back of the page or another sheet of paper.}}}
+% \end{center}
+
+\begin{questions}
+
+\newpage
+
+\question
+
+Consider the strategic form game below:
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{*{6}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{4}{c}{$P_2$} \\ \cline{3-6}
+      \multicolumn{1}{c}{} &  & $A$ & $B$ & $C$ & $D$ \\ \cline{2-6} 
+      \multirow{4}*{$P_1$}
+      & $H$ & 8,  1 & -3,  1 &  0,  1 &  3,  1 \\ \cline{2-6}
+      & $J$ & 10, -2 &  0,  6 &  1, -1 &  4,  0 \\ \cline{2-6} 
+      & $K$ & 9,  1 &  6,  3 &  2,  2 & 7, 4 \\ \cline{2-6} 
+      & $L$ & 11, 10 & -1, 16 &  4, 12 &  5, 5 \\ \cline{2-6} 
+  \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{parts}
+
+  \part[2]
+  Which strategy would Player 1 \textit{never} play if they are rational?
+  \begin{solution}
+    Player 1's strategy of $H$ always gives them a lower payoff compared to the payoffs of $J$.
+    So if they are rational, they would never play $H$.
+  \end{solution}
+ 
+  \part[8] 
+  Use Iterated Deletion of Strictly Dominated Strategies
+  and write out a simplified game table with any remaining cells.
+
+  \begin{solution}
+    
+    \begin{itemize}
+      \item Step 1: $H$ is strictly dominated by $J$, eliminate $H$
+      \item Step 2: $A$ and $C$ are both strictly dominated by $B$, eliminate $A$ and $C$
+      \item Step 3: $J$ and $L$ are both strictly dominated by $K$, eliminate $J$ and $L$
+      \item Step 4: $B$ is now strictly dominated by $D$, eliminate $B$.
+    \end{itemize}
+
+    \begin{center}
+      \begin{tabular}{*{3}{c|}}
+        \multicolumn{2}{c}{} & $P_2$ \\ \cline{3-3}
+        \multicolumn{1}{c}{} & & $D$ \\ \cline{2-3}
+        $P_1$
+        & $K$ & 7, 4 \\ \cline{2-3}
+      \end{tabular}
+    \end{center}
+  \end{solution}
+
+
+  \part[4]
+  Find all Nash equilibria in \textit{pure strategies}.
+
+  \begin{solution}
+      
+    $\mathbf{(K,D)}$ is the only pure strategy Nash equilibrium.
+
+    \par\noindent\rule{\textwidth}{0.4pt}
+
+    Partial credit may be awarded for an answer that is consistent with mistakes made in 
+    eliminating strictly dominated strategies in part $a$.
+
+  \end{solution}
+  
+  \part[4]
+  Explain why you know that the strategy profile(s) you found in part b are Nash equilibria.
+
+  \begin{solution}
+  
+    This is the only pure strategy NE because we eliminated all strategies in part (a)
+    that will never be played in any NE.
+    We also found the intersection of either players best responses in the table from (a)
+    which is the definition of a NE.
+
+  \end{solution}
+
+  \part[2]
+  Is the outcome of the Nash equilibrium of this game Pareto optimal?
+  Why or why not?
+
+  \begin{solution}
+    The Nash equilirium results in a payoff of 7 for Player 1 and a payoff of 4 for Player 2 which is not Pareto optimal.
+    It is possible for both players to earn higher payoffs of (11,10) by playing the strategy profile $\mathbf{(L,A)}$
+    which Pareto dominates the (7,1) payoffs of the Nash outcome.
+  \end{solution}
+\end{parts}
+
+\newpage
+
+\question
+Here's a little ditty, about Jack and Diane,
+two American kids growing up in the heartland.
+\footnote{Cliff Bekar, Lewis and Clark College}
+
+Suppose that Jack and Diane move \textit{simutaneously}.
+
+  \begin{table}[h!]
+    \centering
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabular}{*{5}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{3}{c}{Diane} \\\cline{3-5}
+      \multicolumn{1}{c}{} &     & $x$ & $y$ & $z$ \\\cline{2-5}
+      \multirow{3}*{Jack}  & $a$ & 1,1 & 2,1 & 2,0 \\\cline{2-5}
+                           & $b$ & 2,3 & 0,2 & 2,1 \\\cline{2-5}
+                           & $c$ & 2,1 & 1,2 & 3,0 \\\cline{2-5}
+    \end{tabular}
+  \end{table}
+
+\begin{parts}
+
+  \part[4] 
+  Describe all of Jack's best responses.
+  
+  \begin{solution}
+    For Jack, $b$ and $c$ are best responses to $x$,
+    $a$ is BR to $y$,  
+    and $c$ is BR to $z$.
+  \end{solution}
+    
+  \part[4]
+  Describe all of Diane's best responses.
+
+  \begin{solution}
+    For Diane, $x$ and $y$ are BR to $a$,
+    $x$ is BR to $b$,
+    and $z$ is BR to $c$.
+  \end{solution}
+
+  \part[4]
+  List any strictly dominated strategies, or if there are none, explain why not.
+
+  \begin{solution}
+    There are no strictly dominated strategies for either player because every strategy is a best response to at least one of the opponents' strategies.
+  \end{solution}
+
+  \part[8]
+  Find all strategy profiles which are Nash equilibria.
+  Explain why each strategy profile is a Nash.
+
+  \begin{solution}
+    There are two strategy profiles where each player's best responses intersect:
+
+    \begin{itemize}
+      \item $N_1 = \left( b, x \right)$ results in payoffs (2,3)
+
+      Jack's strategy is to choose $b$, 
+      Diane's strategy is to choose $x$.
+      Neither have regrets about their strategy choice;
+      given that Jack is choosing $b$, Diane can't get a higher payoff by deviating.
+      Given that Diane is playing $x$, Jack is indifferent between playing $b$ and $c$ but he can't get a strictly higher payoff by deviating. 
+      The resulting outcome is that Jack gets $2$, 
+      Diane gets $3$.
+
+      \item $N_2 = \left( a, y \right)$ results in payoffs (2,1)
+
+      Jack's strategy is $a$, Diane's is $y$. 
+      When Jack plays $a$, Dianne is indifferent between $x$ and $y$, but
+      still cannot deviate to a strictly higher payoff.
+      When Diane plays $y$, Jack's best response is $a$ because $2>\{0,1\}$. 
+      The outcome is that Jack gets $2$ and Diane gets $1$.
+
+    \end{itemize}
+
+    These are the only two \textit{pure strategy} Nash equilibria
+    because there are no other intersections of pure strategy best responses.
+    Note that even though $N_1$ Pareto dominates $N_2$ 
+    (Jack is indifferent; $2=2$, and Diane is better off; $3>1$),
+    there is no \textit{unilateral} deviation that would reach $N_1$
+    from $N_2$.
+
+  \end{solution}
+\end{parts}
+
+\newpage
+\question[4]
+Solve for all Nash equilibria in pure strategies.
+
+\begin{table}[h!]
+  \centering
+  \setlength{\extrarowheight}{2pt}
+  \begin{tabular}{*{4}{c|}}
+    \multicolumn{2}{c}{} & \multicolumn{2}{c}{Column} \\\cline{3-4}
+    \multicolumn{1}{c}{} &      & Left & Right \\\cline{2-4}
+    \multirow{2}*{Row}   & Up   & 1,3  & 2,4   \\\cline{2-4}
+                         & Down & 2,5  & 3,2   \\\cline{2-4}
+  \end{tabular}
+\end{table}
+
+\begin{solution}
+  \{Down, Left\}
+\end{solution}
+
+\question[4]
+Solve for all Nash equilibria in pure strategies.
+
+\begin{table}[h!]
+  \centering
+  \setlength{\extrarowheight}{2pt}
+  \begin{tabular}{*{4}{c|}}
+    \multicolumn{2}{c}{} & \multicolumn{2}{c}{Column} \\\cline{3-4}
+    \multicolumn{1}{c}{} &      & Left & Right \\\cline{2-4}
+    \multirow{2}*{Row}   & Up   & 5,3  & 1,1   \\\cline{2-4}
+                         & Down & 0,0  & 2,2   \\\cline{2-4}
+  \end{tabular}
+\end{table}
+
+\begin{solution}
+  \{Up, Left\} and \{Down, Right\}
+\end{solution}
+
+\question[4]
+Solve for all Nash equilibria in pure strategies.
+\begin{table}[h!]
+  \centering
+  \setlength{\extrarowheight}{2pt}
+  \begin{tabular}{*{5}{c|}}
+    \multicolumn{2}{c}{} & \multicolumn{3}{c}{Column} \\\cline{3-5}
+    \multicolumn{1}{c}{} &        & Left & Middle & Right \\\cline{2-5}
+    \multirow{3}*{Row}   & Up     & 3,8 & 6,4 & 7,1 \\\cline{2-5}
+                         & Center & 7,3 & 10,1 & 6,2 \\\cline{2-5}
+                         & Down   & 5,2 & 3,6 & 8,0 \\\cline{2-5}
+  \end{tabular}
+\end{table}
+
+\begin{solution}
+  \{Center, Left\}
+\end{solution}
+
+\question[4]
+Solve for all Nash equilibria in pure strategies.
+\begin{table}[h!]
+  \centering
+  \setlength{\extrarowheight}{2pt}
+  \begin{tabular}{*{5}{c|}}
+    \multicolumn{2}{c}{} & \multicolumn{3}{c}{Column} \\\cline{3-5}
+    \multicolumn{1}{c}{} &        & Left & Middle & Right \\\cline{2-5}
+    \multirow{3}*{Row}   & Up     & 2,2 & 3,1 & 2,0 \\\cline{2-5}
+                         & Center & 1,5 & 2,2 & 7,4 \\\cline{2-5}
+                         & Down   & 0,1 & 4,0 & 6,2 \\\cline{2-5}
+  \end{tabular}
+\end{table}
+
+\begin{solution}
+  \{Up, Left\}
+\end{solution}
+
+\end{questions}
+
+\end{document}
