@@ -33,42 +33,57 @@ Where in the goal should you kick a penaly shot?
 If 100% of your grade in this class is decided by a *curve*, how much should you study?
 
 ::: {.incremental}
-  - If you can all agree to take a chill quarter and not study, you could all get A's
-  - But what if there's at least one try-hard?
-  - Now how much should you study, even if you already promised you wouldn't?
-  - Do you think everyone else will keep their promise?
+  - How many people would still study?
+  - What if you know everyone else won't study?
+  - This is only hypothetical for this class! Don't expect a curve!
+:::
+
+::: {.notes}
+  - Curving the grade makes your payoff depend on everyone else
+  - So people might think strategically about their studying
+  - Is it possible to get everyone to agree to shirk?
+  - What if there's at least one try-hard? 
+  You need to think about what everyone else is thinking!
 :::
 
 ---
 
 ## Examples of *strategic games*:
 
-Should you give an engagement ring to the person you want to marry?
-
-:::{.incremental}
-  - Why buy an expensive trinket when you could save the money for a house, etc?
-  - Does it matter if your recently engaged friends gave (or received) engagement rings?
-  - Does your paycheck vs. how much your fiancee makes matter?
-:::
-
----
-
-## Examples of *strategic games*:
-
-In economics, why do we say there is a ***law of one price***?
+Why is it traditional to give expensive engagement rings when people propose?
 
 ::: {.incremental}
-> Imagine I set up a competing Starbucks franchise in the EMU
+  - The economist's answer is that an expensive gift acts as a *signal* of intent
+  - Unserious suitors won't find it worthwhile to shell out so much money to stay in a long-term relationship
+:::
 
->  - If they sell PSL for \$6.50, what happens if I sell them for \$6.49?
->  - What if I sell for \$6.51?
-
-This has been your EC201 review!
+::: {.notes}
+  - Partners who don't plan on being for life would try to appear like they do unless they are expected to pay a costly signal
+  - It is important that if a partner is serious enough he should take an action to demonstrate that he is
+  - If the action isn't costly enough, anyone could do it 
 :::
 
 ---
 
 ## Examples of *strategic games*:
+
+Other situations:
+
+::: {.incremental}
+  - Buying toilet paper during the pandemic
+  - [How Jane Street's secret billion-dollar trade unraveled](https://www.npr.org/2025/09/24/nx-s1-5551163/jane-street-billion-dollar-options-india)
+  - Safari drivers broadcasting over the radio where to find the lions
+:::
+
+::: {.notes}
+  - There were no supply shortages, but because everyone was doing it, it felt like you had to in a low-information setting
+  - Jane Street is a secretive financial trading firm who recently sued their competitor for stealing their propriatary trading method which turned out to be arbitrage in the Indian derivatives market
+  - I was surprised how cooperative everyone was, until I realized that they probably are all in a repeated game
+:::
+
+---
+
+<!-- ## Examples of *strategic games*:
 
 Should the US try to defeat its rivals through `global thermonuclear war`?
 
@@ -78,19 +93,7 @@ Should the US try to defeat its rivals through `global thermonuclear war`?
   - Are anti-ballistic missiles destabilizing to international relations?
 :::
 
----
-
 ![](figures/WargamesList.png){fig-align="center"}
 
 ---
-
-## Examples of *strategic games*:
-
-What do these examples have in common?
-
-::: notes
-  - ask class for ideas
-  - point out the methods of thinking through these questions
-  - all can be answered with 'it depends'
-    - specifically it depends on the actions (and thoughts) of others
-:::
+--- -->

@@ -33,6 +33,8 @@
   * [Visual tool]{.hi}: *game trees*
   
   * [Solution Method]{.hi}: *backwards induction*
+
+  * [Example]{.hi}: Chess
 :::
 
 ::::
@@ -51,6 +53,8 @@
   * [Visual tool]{.hi}: *payoff tables*
   
   * [Solution Method]{.hi}: *best responses*, deletion of *dominated strats*
+
+  * [Example]{.hi}: Rock, paper, scissors
 :::
 
 ::::
@@ -82,7 +86,7 @@ so they will be our first category of games.
 ## Simultaneous Games
 
 In [simultaneous]{.hii} games, you have to figure out what to do [*now*]{.hi} 
-while also thinking about what your opponent is thinking you will will do [*now*]{.hi}.
+while also thinking about what your opponent is thinking you will do.
 
 . . .
 
@@ -93,7 +97,7 @@ for organizing these games in chapter 4.
 
 ## Conflicting vs. Common Interests?
 
-Many games you are familiar with have distince *winners* and *losers*.
+Many games you are familiar with have distinct *winners* and *losers*.
 
 . . . 
 
@@ -108,13 +112,11 @@ When the *total payoffs of all players sum to 0* ^[or sum to some constant]
 
   * i.e, one player's gain is another player's loss
   
-  * Examples: NCAA Football Championship, Scramble for Africa (technically *constant*-sum)
+  * Example: Soccer, Scramble for Africa
   
-. . .
+  * Not all games are fixed or zero sum; 
 
-Not all games are fixed or zero sum; 
-
-  * Examples: Hiring a tutor (mutual gains), International Trade, etc.
+    - Examples: Hiring a tutor (mutual gains), International Trade, etc.
   
 :::
 
