@@ -559,15 +559,20 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="strategic-choice-vs.-other-types-of-choices"><em>Strategic</em> Choice vs.&nbsp;other types of choices</h2>
 <div class="incremental">
 <ul class="incremental">
-<li><p>Economics is the study of <span class="hi">constrained choice</span>; in EC311, we introduce the <em>utility maximization problem</em> as the workhorse model</p>
-<ul class="incremental">
-<li>These types of problems usually only involve one agent; the consumer, who is only constrained by their budget</li>
-</ul></li>
-<li><p>We use the term <span class="hi"><em>strategic games</em></span> to distinguish from these single-agent optimization problems</p></li>
+<li>Economics is the study of <span class="hi">choice</span> under <span class="hii">constraints</span><br>
+</li>
+<li>We use the term <span class="hi"><em>strategy</em></span> to distinguish socially-dependent choices from simple optimization problems</li>
 </ul>
 <p>A <span class="hi"><em>game</em></span> is a type of problem featuring multiple agents, called <span class="hi">players</span>,</p>
 <ul class="incremental">
-<li>in which their optimal choice <span class="hii">depends on the optimal choices of other players</span>.</li>
+<li>in which their optimal choice <span class="hii">depends on the choices of other players</span>.</li>
+</ul>
+</div>
+<div class="notes">
+<ul>
+<li>In EC311 we look at the consumption choices consumers make when constrained by a budget</li>
+<li>In this class, other players set the constraints as well as physical limitations</li>
+<li>Think of the toilet paper example: would I want to store a whole garage’s worth if I wasn’t worried about everyone else doing the same?</li>
 </ul>
 </div>
 <hr>
@@ -577,11 +582,13 @@ window.Quarto = {
 <p>A <strong>Game</strong> consists of:</p>
 <div class="incremental">
 <ul class="incremental">
-<li><p>a collection of decision-makers, called <span class="hi">players</span>;</p></li>
+<li><p>a collection of decision-makers, called <span class="hi">players</span>;</p>
+<ul class="incremental">
 <li><p>the set of <span class="hi">information</span> available to each player;</p></li>
 <li><p>the <span class="hi">strategies</span> available to each player in each information state;</p></li>
-<li><p>a mapping from the intersection strategies of all players to outcomes;</p></li>
 <li><p><span class="hi">preferences</span> of the individual players over all possible outcomes</p></li>
+</ul></li>
+<li><p>a <span class="hi">mapping</span> that tells us how combinations of strategies lead to different outcomes</p></li>
 </ul>
 </div>
 </section>
@@ -623,15 +630,14 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="preferences">Preferences</h2>
 <p><span class="h">Preferences</span> describe the subjective ranking that we put on different alternatives.</p>
 <p>For example, on the set of Eugene boba stores, my preference ranking goes like this;</p>
-<div class="incremental">
-<ol class="incremental" type="1">
-<li><a href="https://maps.app.goo.gl/zCVTUnaaYLD1Rwaw6">Tea 4</a> - major chain, good quality and selection</li>
-<li><a href="https://www.daynightboba.com/">Day &amp; Night</a> - they have mango sago, cute location</li>
-<li><a href="">Bobahead</a> - no more campus location 😔</li>
+<p>. . .</p>
+<ol type="1">
+<li><a href="https://maps.app.goo.gl/zCVTUnaaYLD1Rwaw6">Tea 4</a></li>
+<li><a href="https://www.daynightboba.com/">Day &amp; Night</a></li>
+<li><a href="">Bobahead</a></li>
 <li>No boba</li>
-<li><a href="http://therabbitholeteabar.com/">Rabbit Hole</a> - no hate, just not for me</li>
+<li><a href="http://therabbitholeteabar.com/">Rabbit Hole</a></li>
 </ol>
-</div>
 <hr>
 </section>
 <section id="rational-preferences" class="level2">
@@ -760,7 +766,8 @@ window.Quarto = {
 </tbody>
 </table>
 <ul class="incremental">
-<li>Is this an example of a <span class="hi">strategic</span> or <span class="hi">non-strategic</span> choice?</li>
+<li><p>Is this an example of a <span class="hi">strategic</span> or <span class="hi">non-strategic</span> choice?</p></li>
+<li><p>Is this a <em>complete</em> game?</p></li>
 </ul>
 </div>
 <hr>
@@ -770,18 +777,15 @@ window.Quarto = {
 <ul>
 <li>We need tools for thinking about how people think about <span class="hi">risk</span></li>
 </ul>
-<hr>
-</section>
-<section id="expected-payoffs-1" class="level3">
-<h3 class="anchored" data-anchor-id="expected-payoffs-1"><em>Expected</em> Payoffs</h3>
+<p>. . .</p>
 <blockquote class="blockquote">
 <p>In math, an <span class="hii">expected value</span> is the average value of a <em>random variable</em>, weighted by the probability of each value occuring</p>
 </blockquote>
 <hr>
 </section>
 </section>
-<section id="expected-payoffs-2" class="level2">
-<h2 class="anchored" data-anchor-id="expected-payoffs-2"><em>Expected</em> Payoffs</h2>
+<section id="expected-payoffs-1" class="level2">
+<h2 class="anchored" data-anchor-id="expected-payoffs-1"><em>Expected</em> Payoffs</h2>
 <p>For example, suppose <span class="math inline">\(X\)</span> is a random variable which is equal to:</p>
 <ul>
 <li><span class="hii">1</span> with <span class="hi">50%</span> probability,</li>
@@ -797,16 +801,16 @@ E(X) &amp; = .5 (1) + .25 (2) + .25 (3) \\
 \end{align}
 \]</span></p>
 <hr>
-<section id="expected-payoffs-3" class="level3">
-<h3 class="anchored" data-anchor-id="expected-payoffs-3"><em>Expected</em> Payoffs</h3>
+<section id="expected-payoffs-2" class="level3">
+<h3 class="anchored" data-anchor-id="expected-payoffs-2"><em>Expected</em> Payoffs</h3>
 <p>An <span class="hi">Expected Payoff</span> is just the <em>expected value</em> of possible payoffs</p>
 <blockquote class="blockquote">
 <p>An average of the payoffs associated with every possible outcome, weighted by the corresponding probability of each outcome happening</p>
 </blockquote>
 <hr>
 </section>
-<section id="expected-payoffs-4" class="level3">
-<h3 class="anchored" data-anchor-id="expected-payoffs-4"><em>Expected</em> Payoffs</h3>
+<section id="expected-payoffs-3" class="level3">
+<h3 class="anchored" data-anchor-id="expected-payoffs-3"><em>Expected</em> Payoffs</h3>
 <p>Consider the following choice:</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -836,8 +840,8 @@ Option B:
 </div>
 <hr>
 </section>
-<section id="expected-payoffs-5" class="level3">
-<h3 class="anchored" data-anchor-id="expected-payoffs-5"><em>Expected Payoffs</em></h3>
+<section id="expected-payoffs-4" class="level3">
+<h3 class="anchored" data-anchor-id="expected-payoffs-4"><em>Expected Payoffs</em></h3>
 <ul>
 <li><p>If you choose <span class="h">Option A</span>, we call you <span class="hii">risk loving</span></p></li>
 <li><p>If you choose <span class="h">Option B</span>, you are <span class="hii">risk averse</span></p></li>
@@ -851,10 +855,7 @@ Option B:
 <h2 class="anchored" data-anchor-id="beliefs">Beliefs</h2>
 <p>Our theories will have to make assumptions about what players <strong>know</strong>.</p>
 <p>All of our games will at least assume that <span class="h">all players know all of the rules</span>.</p>
-<hr>
-</section>
-<section id="beliefs-1" class="level2">
-<h2 class="anchored" data-anchor-id="beliefs-1">Beliefs</h2>
+<p>. . .</p>
 <p>We will assume that all players know<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>:</p>
 <div class="incremental">
 <ul class="incremental">

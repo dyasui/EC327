@@ -3370,7 +3370,7 @@
     "href": "Slides/01Intro/0104-taxonomy.html",
     "title": "Taxonomy of Games",
     "section": "",
-    "text": "Sequential or Simultaneous?\nZero-sum or not\nPerfect or Imperfect information?\n\nis info symmetric or asymmetric?\n\nOne-shot or Repeated?\n‘Noncooperative’ or ‘Cooperative’?\n\n\n\n\n\n\n\nSequential Games\n\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n\n\nSimultaneous Games\n\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats\n\n\n\n\n\n\n\n\nIn sequential games, you have to think about how what you do now will affect what your opponent will do in the future.\n. . .\n\nThis hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.\n\n. . .\n\nWe’ll see that sometimes moving first can be adventageous\n\n. . .\n\nWhile other times it’s best to wait and see what someone else does\n\n\n\n\n\nIn simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will will do now.\n. . .\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4.\n\n\n\n\n\nMany games you are familiar with have distince winners and losers.\n. . .\nBut in other types of games, it’s possible for everyone to come out ahead.\n\n\n\n\n\nWhen the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExamples: NCAA Football Championship, Scramble for Africa (technically constant-sum)\n\n. . .\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc.\n\n\n\n\n\n\nA one-shot game is played only once by the same set of players.\n\n\nIf you’ve never played against someone before, you can’t form any beliefs about them\nSecrecy or surprise are potentially good strategies in these games\n\n\nA game is called repeated if the same players play it with each other many times.\n\n\nIf you know your opponent, then your reputation becomes valuable if you want to cooperate\n\n\n\n\n\n\nHow much does each player know when they decide?\n\n\nPerfect Information: when players know all previous moves and external circumstances\n\nplayers may have imperfect info; uncertainty about the state of the world, previous’ moves, or other player’s ‘type’\n\nAsymmetric Info: when one player has access to information that other players do not\n\nExamples: hand in poker, used car salesmen\nTopics: Signaling, Screening\n\n\n\n\n\n\n\n\nSelf-interest and common good can often conflict.\nIn these situations, players need to form agreements in order to achieve cooperative outcomes.\n\n. . .\n\nBut can people actually be held to those agreements?\n\nFor example:\n\nParis Climate accords; who polices nation-state’s carbon reductions?\nPublic goods; why do we need the Internal Revenue Service?\n\n\n\n\n\nTwo broad categories of the field are cooperative game theory and noncooperative game theory 2\n\nCooperative games are those in which agreements are enforceable\n\n\nIn Noncooperative games, no-one can be forced not to act in their own self-interest\n\n\n\n\n\nIn each of these different categories of games, we will want to make predictions as to how rational agents will behave\n\nOur methods of solving each type of game will be to look for different types of equilibria\n\n\n\n\n\n\n\nEquilibrium\n\n\n\nWhere every player’s strategy is a best-response to the other player(s)\n\n\n\n\n\n\nWhy study equilibria?\n\n\nThey are stable: if nobody has anything better to do than what they’re doing now then why change?\nWe can adapt our models to all types of equilibria\n\nMarket or non-market\nDynamic or static\n\n\n\n\n\n\n\nA few different types of equilibria in this class:\n\nNash equilibrium\n\nSubgame perfect NE\nMixed strategy NE\nBayes-Nash equilibrium"
+    "text": "Sequential or Simultaneous?\nZero-sum or not\nPerfect or Imperfect information?\n\nis info symmetric or asymmetric?\n\nOne-shot or Repeated?\n‘Noncooperative’ or ‘Cooperative’?\n\n\n\n\n\n\n\nSequential Games\n\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\nExample: Chess\n\n\n\nSimultaneous Games\n\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats\nExample: Rock, paper, scissors\n\n\n\n\n\n\n\n\nIn sequential games, you have to think about how what you do now will affect what your opponent will do in the future.\n. . .\n\nThis hierarchy of thinking will make these types of games a little easier for us to think through, so they will be our first category of games.\n\n. . .\n\nWe’ll see that sometimes moving first can be adventageous\n\n. . .\n\nWhile other times it’s best to wait and see what someone else does\n\n\n\n\n\nIn simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will do.\n. . .\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4.\n\n\n\n\n\nMany games you are familiar with have distinct winners and losers.\n. . .\nBut in other types of games, it’s possible for everyone to come out ahead.\n\n\n\n\n\nWhen the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExample: Soccer, Scramble for Africa\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc.\n\n\n\n\n\n\n\nA one-shot game is played only once by the same set of players.\n\n\nIf you’ve never played against someone before, you can’t form any beliefs about them\nSecrecy or surprise are potentially good strategies in these games\n\n\nA game is called repeated if the same players play it with each other many times.\n\n\nIf you know your opponent, then your reputation becomes valuable if you want to cooperate\n\n\n\n\n\n\nHow much does each player know when they decide?\n\n\nPerfect Information: when players know all previous moves and external circumstances\n\nplayers may have imperfect info; uncertainty about the state of the world, previous’ moves, or other player’s ‘type’\n\nAsymmetric Info: when one player has access to information that other players do not\n\nExamples: hand in poker, used car salesmen\nTopics: Signaling, Screening\n\n\n\n\n\n\n\n\nSelf-interest and common good can often conflict.\nIn these situations, players need to form agreements in order to achieve cooperative outcomes.\n\n. . .\n\nBut can people actually be held to those agreements?\n\nFor example:\n\nParis Climate accords; who polices nation-state’s carbon reductions?\nPublic goods; why do we need the Internal Revenue Service?\n\n\n\n\n\nTwo broad categories of the field are cooperative game theory and noncooperative game theory 2\n\nCooperative games are those in which agreements are enforceable\n\n\nIn Noncooperative games, no-one can be forced not to act in their own self-interest\n\n\n\n\n\nIn each of these different categories of games, we will want to make predictions as to how rational agents will behave\n\nOur methods of solving each type of game will be to look for different types of equilibria\n\n\n\n\n\n\n\nEquilibrium\n\n\n\nWhere every player’s strategy is a best-response to the other player(s)\n\n\n\n\n\n\nWhy study equilibria?\n\n\nThey are stable: if nobody has anything better to do than what they’re doing now then why change?\nWe can adapt our models to all types of equilibria\n\nMarket or non-market\nDynamic or static\n\n\n\n\n\n\n\nA few different types of equilibria in this class:\n\nNash equilibrium\n\nSubgame perfect NE\nMixed strategy NE\nBayes-Nash equilibrium"
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html#general-categorical-terms",
@@ -3384,7 +3384,7 @@
     "href": "Slides/01Intro/0104-taxonomy.html#sequential-vs.-simultaneous",
     "title": "Taxonomy of Games",
     "section": "",
-    "text": "Sequential Games\n\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n\n\nSimultaneous Games\n\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats"
+    "text": "Sequential Games\n\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\nExample: Chess\n\n\n\nSimultaneous Games\n\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats\nExample: Rock, paper, scissors"
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html#sequential-games",
@@ -3398,21 +3398,21 @@
     "href": "Slides/01Intro/0104-taxonomy.html#simultaneous-games",
     "title": "Taxonomy of Games",
     "section": "",
-    "text": "In simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will will do now.\n. . .\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4."
+    "text": "In simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will do.\n. . .\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4."
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html#conflicting-vs.-common-interests",
     "href": "Slides/01Intro/0104-taxonomy.html#conflicting-vs.-common-interests",
     "title": "Taxonomy of Games",
     "section": "",
-    "text": "Many games you are familiar with have distince winners and losers.\n. . .\nBut in other types of games, it’s possible for everyone to come out ahead."
+    "text": "Many games you are familiar with have distinct winners and losers.\n. . .\nBut in other types of games, it’s possible for everyone to come out ahead."
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html#zero-sum-or-constant-sum-games",
     "href": "Slides/01Intro/0104-taxonomy.html#zero-sum-or-constant-sum-games",
     "title": "Taxonomy of Games",
     "section": "",
-    "text": "When the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExamples: NCAA Football Championship, Scramble for Africa (technically constant-sum)\n\n. . .\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc."
+    "text": "When the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExample: Soccer, Scramble for Africa\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc."
   },
   {
     "objectID": "Slides/01Intro/0104-taxonomy.html#are-strategic-interactions-repeated",
@@ -3503,35 +3503,21 @@
     "href": "Slides/01Intro/0102-examples.html#examples-of-strategic-games-2",
     "title": "EC327 Game Theory",
     "section": "Examples of strategic games:",
-    "text": "Examples of strategic games:\nIf 100% of your grade in this class is decided by a curve, how much should you study?\n\n\nIf you can all agree to take a chill quarter and not study, you could all get A’s\nBut what if there’s at least one try-hard?\nNow how much should you study, even if you already promised you wouldn’t?\nDo you think everyone else will keep their promise?"
+    "text": "Examples of strategic games:\nIf 100% of your grade in this class is decided by a curve, how much should you study?\n\n\nHow many people would still study?\nWhat if you know everyone else won’t study?\nThis is only hypothetical for this class! Don’t expect a curve!\n\n\n\n\nCurving the grade makes your payoff depend on everyone else\nSo people might think strategically about their studying\nIs it possible to get everyone to agree to shirk?\nWhat if there’s at least one try-hard? You need to think about what everyone else is thinking!"
   },
   {
     "objectID": "Slides/01Intro/0102-examples.html#examples-of-strategic-games-3",
     "href": "Slides/01Intro/0102-examples.html#examples-of-strategic-games-3",
     "title": "EC327 Game Theory",
     "section": "Examples of strategic games:",
-    "text": "Examples of strategic games:\nShould you give an engagement ring to the person you want to marry?\n\n\nWhy buy an expensive trinket when you could save the money for a house, etc?\nDoes it matter if your recently engaged friends gave (or received) engagement rings?\nDoes your paycheck vs. how much your fiancee makes matter?"
+    "text": "Examples of strategic games:\nWhy is it traditional to give expensive engagement rings when people propose?\n\n\nThe economist’s answer is that an expensive gift acts as a signal of intent\nUnserious suitors won’t find it worthwhile to shell out so much money to stay in a long-term relationship\n\n\n\n\nPartners who don’t plan on being for life would try to appear like they do unless they are expected to pay a costly signal\nIt is important that if a partner is serious enough he should take an action to demonstrate that he is\nIf the action isn’t costly enough, anyone could do it"
   },
   {
     "objectID": "Slides/01Intro/0102-examples.html#examples-of-strategic-games-4",
     "href": "Slides/01Intro/0102-examples.html#examples-of-strategic-games-4",
     "title": "EC327 Game Theory",
     "section": "Examples of strategic games:",
-    "text": "Examples of strategic games:\nIn economics, why do we say there is a law of one price?\n\n\nImagine I set up a competing Starbucks franchise in the EMU\n\n\n\nIf they sell PSL for $6.50, what happens if I sell them for $6.49?\nWhat if I sell for $6.51?\n\n\nThis has been your EC201 review!"
-  },
-  {
-    "objectID": "Slides/01Intro/0102-examples.html#examples-of-strategic-games-5",
-    "href": "Slides/01Intro/0102-examples.html#examples-of-strategic-games-5",
-    "title": "EC327 Game Theory",
-    "section": "Examples of strategic games:",
-    "text": "Examples of strategic games:\nShould the US try to defeat its rivals through global thermonuclear war?\n\n\nWhy did the US and USSR amass massive nuclear stockpiles?\nWhy has a nuclear weapon never been used in anger since Nagasaki?\nAre anti-ballistic missiles destabilizing to international relations?"
-  },
-  {
-    "objectID": "Slides/01Intro/0102-examples.html#examples-of-strategic-games-6",
-    "href": "Slides/01Intro/0102-examples.html#examples-of-strategic-games-6",
-    "title": "EC327 Game Theory",
-    "section": "Examples of strategic games:",
-    "text": "Examples of strategic games:\nWhat do these examples have in common?\n\n\nask class for ideas\npoint out the methods of thinking through these questions\nall can be answered with ‘it depends’\n\nspecifically it depends on the actions (and thoughts) of others"
+    "text": "Examples of strategic games:\nOther situations:\n\n\nBuying toilet paper during the pandemic\nHow Jane Street’s secret billion-dollar trade unraveled\nSafari drivers broadcasting over the radio where to find the lions\n\n\n\n\nThere were no supply shortages, but because everyone was doing it, it felt like you had to in a low-information setting\nJane Street is a secretive financial trading firm who recently sued their competitor for stealing their propriatary trading method which turned out to be arbitrage in the Indian derivatives market\nI was surprised how cooperative everyone was, until I realized that they probably are all in a repeated game"
   },
   {
     "objectID": "Slides/01Intro/0100-syllabus.html",
@@ -3755,35 +3741,21 @@
     "href": "Slides/01Intro/01-main.html#examples-of-strategic-games-2",
     "title": "Introduction to Game Theory",
     "section": "Examples of strategic games:",
-    "text": "Examples of strategic games:\nIf 100% of your grade in this class is decided by a curve, how much should you study?\n\nIf you can all agree to take a chill quarter and not study, you could all get A’s\nBut what if there’s at least one try-hard?\nNow how much should you study, even if you already promised you wouldn’t?\nDo you think everyone else will keep their promise?"
+    "text": "Examples of strategic games:\nIf 100% of your grade in this class is decided by a curve, how much should you study?\n\nHow many people would still study?\nWhat if you know everyone else won’t study?\nThis is only hypothetical for this class! Don’t expect a curve!\n\n\n\nCurving the grade makes your payoff depend on everyone else\nSo people might think strategically about their studying\nIs it possible to get everyone to agree to shirk?\nWhat if there’s at least one try-hard? You need to think about what everyone else is thinking!"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#examples-of-strategic-games-3",
     "href": "Slides/01Intro/01-main.html#examples-of-strategic-games-3",
     "title": "Introduction to Game Theory",
     "section": "Examples of strategic games:",
-    "text": "Examples of strategic games:\nShould you give an engagement ring to the person you want to marry?\n\nWhy buy an expensive trinket when you could save the money for a house, etc?\nDoes it matter if your recently engaged friends gave (or received) engagement rings?\nDoes your paycheck vs. how much your fiancee makes matter?"
+    "text": "Examples of strategic games:\nWhy is it traditional to give expensive engagement rings when people propose?\n\nThe economist’s answer is that an expensive gift acts as a signal of intent\nUnserious suitors won’t find it worthwhile to shell out so much money to stay in a long-term relationship\n\n\n\nPartners who don’t plan on being for life would try to appear like they do unless they are expected to pay a costly signal\nIt is important that if a partner is serious enough he should take an action to demonstrate that he is\nIf the action isn’t costly enough, anyone could do it"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#examples-of-strategic-games-4",
     "href": "Slides/01Intro/01-main.html#examples-of-strategic-games-4",
     "title": "Introduction to Game Theory",
     "section": "Examples of strategic games:",
-    "text": "Examples of strategic games:\nIn economics, why do we say there is a law of one price?\n\nImagine I set up a competing Starbucks franchise in the EMU\n\n\n\n\nIf they sell PSL for $6.50, what happens if I sell them for $6.49?\nWhat if I sell for $6.51?\n\n\n\nThis has been your EC201 review!"
-  },
-  {
-    "objectID": "Slides/01Intro/01-main.html#examples-of-strategic-games-5",
-    "href": "Slides/01Intro/01-main.html#examples-of-strategic-games-5",
-    "title": "Introduction to Game Theory",
-    "section": "Examples of strategic games:",
-    "text": "Examples of strategic games:\nShould the US try to defeat its rivals through global thermonuclear war?\n\nWhy did the US and USSR amass massive nuclear stockpiles?\nWhy has a nuclear weapon never been used in anger since Nagasaki?\nAre anti-ballistic missiles destabilizing to international relations?"
-  },
-  {
-    "objectID": "Slides/01Intro/01-main.html#examples-of-strategic-games-6",
-    "href": "Slides/01Intro/01-main.html#examples-of-strategic-games-6",
-    "title": "Introduction to Game Theory",
-    "section": "Examples of strategic games:",
-    "text": "Examples of strategic games:\nWhat do these examples have in common?\n\n\nask class for ideas\npoint out the methods of thinking through these questions\nall can be answered with ‘it depends’\n\nspecifically it depends on the actions (and thoughts) of others"
+    "text": "Examples of strategic games:\nOther situations:\n\nBuying toilet paper during the pandemic\nHow Jane Street’s secret billion-dollar trade unraveled\nSafari drivers broadcasting over the radio where to find the lions\n\n\n\nThere were no supply shortages, but because everyone was doing it, it felt like you had to in a low-information setting\nJane Street is a secretive financial trading firm who recently sued their competitor for stealing their propriatary trading method which turned out to be arbitrage in the Indian derivatives market\nI was surprised how cooperative everyone was, until I realized that they probably are all in a repeated game"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#what-do-all-these-questions-have-in-common",
@@ -3797,14 +3769,14 @@
     "href": "Slides/01Intro/01-main.html#strategic-choice-vs.-other-types-of-choices",
     "title": "Introduction to Game Theory",
     "section": "Strategic Choice vs. other types of choices",
-    "text": "Strategic Choice vs. other types of choices\n\nEconomics is the study of constrained choice; in EC311, we introduce the utility maximization problem as the workhorse model\n\nThese types of problems usually only involve one agent; the consumer, who is only constrained by their budget\n\nWe use the term strategic games to distinguish from these single-agent optimization problems\n\nA game is a type of problem featuring multiple agents, called players,\n\nin which their optimal choice depends on the optimal choices of other players."
+    "text": "Strategic Choice vs. other types of choices\n\nEconomics is the study of choice under constraints\n\nWe use the term strategy to distinguish socially-dependent choices from simple optimization problems\n\nA game is a type of problem featuring multiple agents, called players,\n\nin which their optimal choice depends on the choices of other players.\n\n\n\nIn EC311 we look at the consumption choices consumers make when constrained by a budget\nIn this class, other players set the constraints as well as physical limitations\nThink of the toilet paper example: would I want to store a whole garage’s worth if I wasn’t worried about everyone else doing the same?"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#a-definition-of-a-game",
     "href": "Slides/01Intro/01-main.html#a-definition-of-a-game",
     "title": "Introduction to Game Theory",
     "section": "A definition of a game 1",
-    "text": "A definition of a game 1\nA Game consists of:\n\na collection of decision-makers, called players;\nthe set of information available to each player;\nthe strategies available to each player in each information state;\na mapping from the intersection strategies of all players to outcomes;\npreferences of the individual players over all possible outcomes\n\nadapted from Leigh Tesfatsion’s slides"
+    "text": "A definition of a game 1\nA Game consists of:\n\na collection of decision-makers, called players;\n\nthe set of information available to each player;\nthe strategies available to each player in each information state;\npreferences of the individual players over all possible outcomes\n\na mapping that tells us how combinations of strategies lead to different outcomes\n\nadapted from Leigh Tesfatsion’s slides"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#what-defines-a-player",
@@ -3825,7 +3797,7 @@
     "href": "Slides/01Intro/01-main.html#preferences",
     "title": "Introduction to Game Theory",
     "section": "Preferences",
-    "text": "Preferences\nPreferences describe the subjective ranking that we put on different alternatives.\nFor example, on the set of Eugene boba stores, my preference ranking goes like this;\n\nTea 4 - major chain, good quality and selection\nDay & Night - they have mango sago, cute location\nBobahead - no more campus location 😔\nNo boba\nRabbit Hole - no hate, just not for me"
+    "text": "Preferences\nPreferences describe the subjective ranking that we put on different alternatives.\nFor example, on the set of Eugene boba stores, my preference ranking goes like this;\n\n\nTea 4\nDay & Night\nBobahead\nNo boba\nRabbit Hole"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#rational-preferences",
@@ -3874,11 +3846,11 @@
     "href": "Slides/01Intro/01-main.html#payoffs-2",
     "title": "Introduction to Game Theory",
     "section": "Payoffs",
-    "text": "Payoffs\n\nSometimes my enjoyment of a thing depends on the state of the world\n\n\nsocially-dependent preferences\n\n\nMy choice\nMy friends’ choice\nMy payoff\n\n\n\n\nDuck’s game\nDuck’s game\n3\n\n\nDuck’s game\nStay home\n2\n\n\nStay home\nDuck’s game\n1\n\n\nStay home\nStay home\n2\n\n\n\n\nIs this an example of a strategic or non-strategic choice?"
+    "text": "Payoffs\n\nSometimes my enjoyment of a thing depends on the state of the world\n\n\nsocially-dependent preferences\n\n\nMy choice\nMy friends’ choice\nMy payoff\n\n\n\n\nDuck’s game\nDuck’s game\n3\n\n\nDuck’s game\nStay home\n2\n\n\nStay home\nDuck’s game\n1\n\n\nStay home\nStay home\n2\n\n\n\n\nIs this an example of a strategic or non-strategic choice?\nIs this a complete game?"
   },
   {
-    "objectID": "Slides/01Intro/01-main.html#expected-payoffs-2",
-    "href": "Slides/01Intro/01-main.html#expected-payoffs-2",
+    "objectID": "Slides/01Intro/01-main.html#expected-payoffs-1",
+    "href": "Slides/01Intro/01-main.html#expected-payoffs-1",
     "title": "Introduction to Game Theory",
     "section": "Expected Payoffs",
     "text": "Expected Payoffs\nFor example, suppose \\(X\\) is a random variable which is equal to:\n\n1 with 50% probability,\n2 with 25% probability,\n3 with 25% probability\n\nWhat is the expected value of \\(X\\)? (\\(E(X)\\))\n\n\\[\n\\begin{align}\nE(X) & = .5 (1) + .25 (2) + .25 (3) \\\\\n& = .5 + .5 + .75 = 2.75\n\\end{align}\n\\]"
@@ -3888,14 +3860,7 @@
     "href": "Slides/01Intro/01-main.html#beliefs",
     "title": "Introduction to Game Theory",
     "section": "Beliefs",
-    "text": "Beliefs\nOur theories will have to make assumptions about what players know.\nAll of our games will at least assume that all players know all of the rules."
-  },
-  {
-    "objectID": "Slides/01Intro/01-main.html#beliefs-1",
-    "href": "Slides/01Intro/01-main.html#beliefs-1",
-    "title": "Introduction to Game Theory",
-    "section": "Beliefs",
-    "text": "Beliefs\nWe will assume that all players know1:\n\nWho else is playing,\nall of the strategies each player could potentially choose,\neveryone’s payoffs for all possible combinations of strategies by all players,\nand that everyone else is maximizing their payoffs\n\nand believe"
+    "text": "Beliefs\nOur theories will have to make assumptions about what players know.\nAll of our games will at least assume that all players know all of the rules.\n\nWe will assume that all players know1:\n\nWho else is playing,\nall of the strategies each player could potentially choose,\neveryone’s payoffs for all possible combinations of strategies by all players,\nand that everyone else is maximizing their payoffs\n\n\nand believe"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#general-categorical-terms",
@@ -3909,7 +3874,7 @@
     "href": "Slides/01Intro/01-main.html#sequential-vs.-simultaneous",
     "title": "Introduction to Game Theory",
     "section": "Sequential vs. Simultaneous",
-    "text": "Sequential vs. Simultaneous\n\n\nSequential Games\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\n\n\nSimultaneous Games\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats"
+    "text": "Sequential vs. Simultaneous\n\n\nSequential Games\n\nplayers make their moves one after the other\nChapter 3\nVisual tool: game trees\nSolution Method: backwards induction\nExample: Chess\n\n\nSimultaneous Games\n\nplayers make their moves at the same time\nChapter 4 & 5\nVisual tool: payoff tables\nSolution Method: best responses, deletion of dominated strats\nExample: Rock, paper, scissors"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#sequential-games",
@@ -3923,21 +3888,21 @@
     "href": "Slides/01Intro/01-main.html#simultaneous-games",
     "title": "Introduction to Game Theory",
     "section": "Simultaneous Games",
-    "text": "Simultaneous Games\nIn simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will will do now.\n\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4."
+    "text": "Simultaneous Games\nIn simultaneous games, you have to figure out what to do now while also thinking about what your opponent is thinking you will do.\n\n\nThis circular thinking can get confusing, so we’ll try to develop some new methods for organizing these games in chapter 4."
   },
   {
     "objectID": "Slides/01Intro/01-main.html#conflicting-vs.-common-interests",
     "href": "Slides/01Intro/01-main.html#conflicting-vs.-common-interests",
     "title": "Introduction to Game Theory",
     "section": "Conflicting vs. Common Interests?",
-    "text": "Conflicting vs. Common Interests?\nMany games you are familiar with have distince winners and losers.\n\nBut in other types of games, it’s possible for everyone to come out ahead."
+    "text": "Conflicting vs. Common Interests?\nMany games you are familiar with have distinct winners and losers.\n\nBut in other types of games, it’s possible for everyone to come out ahead."
   },
   {
     "objectID": "Slides/01Intro/01-main.html#zero-sum-or-constant-sum-games",
     "href": "Slides/01Intro/01-main.html#zero-sum-or-constant-sum-games",
     "title": "Introduction to Game Theory",
     "section": "Zero-sum (or constant-sum) Games",
-    "text": "Zero-sum (or constant-sum) Games\nWhen the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExamples: NCAA Football Championship, Scramble for Africa (technically constant-sum)\n\n. . .\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc.\n\nor sum to some constant"
+    "text": "Zero-sum (or constant-sum) Games\nWhen the total payoffs of all players sum to 0 1\n\ni.e, one player’s gain is another player’s loss\nExample: Soccer, Scramble for Africa\nNot all games are fixed or zero sum;\n\nExamples: Hiring a tutor (mutual gains), International Trade, etc.\n\n\nor sum to some constant"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#are-strategic-interactions-repeated",
@@ -4028,7 +3993,7 @@
     "href": "Slides/01Intro/0103-definitions.html",
     "title": "What is a Game? Definitions",
     "section": "",
-    "text": "They all involve people making choices which depend on the choices of others\nIn other words, they are questions of strategy:\n\nStrategic interdependence is present in a social situation when what is best for someone depends on what someone else does. 1\n\n\n\n\n\n\n\n\n\nEconomics is the study of constrained choice; in EC311, we introduce the utility maximization problem as the workhorse model\n\nThese types of problems usually only involve one agent; the consumer, who is only constrained by their budget\n\nWe use the term strategic games to distinguish from these single-agent optimization problems\n\nA game is a type of problem featuring multiple agents, called players,\n\nin which their optimal choice depends on the optimal choices of other players.\n\n\n\n\n\n\nA Game consists of:\n\n\na collection of decision-makers, called players;\nthe set of information available to each player;\nthe strategies available to each player in each information state;\na mapping from the intersection strategies of all players to outcomes;\npreferences of the individual players over all possible outcomes"
+    "text": "They all involve people making choices which depend on the choices of others\nIn other words, they are questions of strategy:\n\nStrategic interdependence is present in a social situation when what is best for someone depends on what someone else does. 1\n\n\n\n\n\n\n\n\n\nEconomics is the study of choice under constraints\n\nWe use the term strategy to distinguish socially-dependent choices from simple optimization problems\n\nA game is a type of problem featuring multiple agents, called players,\n\nin which their optimal choice depends on the choices of other players.\n\n\n\n\nIn EC311 we look at the consumption choices consumers make when constrained by a budget\nIn this class, other players set the constraints as well as physical limitations\nThink of the toilet paper example: would I want to store a whole garage’s worth if I wasn’t worried about everyone else doing the same?\n\n\n\n\n\n\nA Game consists of:\n\n\na collection of decision-makers, called players;\n\nthe set of information available to each player;\nthe strategies available to each player in each information state;\npreferences of the individual players over all possible outcomes\n\na mapping that tells us how combinations of strategies lead to different outcomes"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#what-do-all-these-questions-have-in-common",
@@ -4042,14 +4007,14 @@
     "href": "Slides/01Intro/0103-definitions.html#strategic-choice-vs.-other-types-of-choices",
     "title": "What is a Game? Definitions",
     "section": "",
-    "text": "Economics is the study of constrained choice; in EC311, we introduce the utility maximization problem as the workhorse model\n\nThese types of problems usually only involve one agent; the consumer, who is only constrained by their budget\n\nWe use the term strategic games to distinguish from these single-agent optimization problems\n\nA game is a type of problem featuring multiple agents, called players,\n\nin which their optimal choice depends on the optimal choices of other players."
+    "text": "Economics is the study of choice under constraints\n\nWe use the term strategy to distinguish socially-dependent choices from simple optimization problems\n\nA game is a type of problem featuring multiple agents, called players,\n\nin which their optimal choice depends on the choices of other players.\n\n\n\n\nIn EC311 we look at the consumption choices consumers make when constrained by a budget\nIn this class, other players set the constraints as well as physical limitations\nThink of the toilet paper example: would I want to store a whole garage’s worth if I wasn’t worried about everyone else doing the same?"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#a-definition-of-a-game",
     "href": "Slides/01Intro/0103-definitions.html#a-definition-of-a-game",
     "title": "What is a Game? Definitions",
     "section": "",
-    "text": "A Game consists of:\n\n\na collection of decision-makers, called players;\nthe set of information available to each player;\nthe strategies available to each player in each information state;\na mapping from the intersection strategies of all players to outcomes;\npreferences of the individual players over all possible outcomes"
+    "text": "A Game consists of:\n\n\na collection of decision-makers, called players;\n\nthe set of information available to each player;\nthe strategies available to each player in each information state;\npreferences of the individual players over all possible outcomes\n\na mapping that tells us how combinations of strategies lead to different outcomes"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#what-defines-a-player",
@@ -4070,7 +4035,7 @@
     "href": "Slides/01Intro/0103-definitions.html#preferences",
     "title": "What is a Game? Definitions",
     "section": "Preferences",
-    "text": "Preferences\nPreferences describe the subjective ranking that we put on different alternatives.\nFor example, on the set of Eugene boba stores, my preference ranking goes like this;\n\n\nTea 4 - major chain, good quality and selection\nDay & Night - they have mango sago, cute location\nBobahead - no more campus location 😔\nNo boba\nRabbit Hole - no hate, just not for me"
+    "text": "Preferences\nPreferences describe the subjective ranking that we put on different alternatives.\nFor example, on the set of Eugene boba stores, my preference ranking goes like this;\n. . .\n\nTea 4\nDay & Night\nBobahead\nNo boba\nRabbit Hole"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#rational-preferences",
@@ -4119,11 +4084,11 @@
     "href": "Slides/01Intro/0103-definitions.html#payoffs-2",
     "title": "What is a Game? Definitions",
     "section": "Payoffs",
-    "text": "Payoffs\n\n\nSometimes my enjoyment of a thing depends on the state of the world\n\n\nsocially-dependent preferences\n\n\nMy choice\nMy friends’ choice\nMy payoff\n\n\n\n\nDuck’s game\nDuck’s game\n3\n\n\nDuck’s game\nStay home\n2\n\n\nStay home\nDuck’s game\n1\n\n\nStay home\nStay home\n2\n\n\n\n\nIs this an example of a strategic or non-strategic choice?\n\n\n\n\nExpected Payoffs\nOften games involve some amount of chance; with random probabilities of each outcome happening\n\nWe need tools for thinking about how people think about risk\n\n\n\n\nExpected Payoffs\n\nIn math, an expected value is the average value of a random variable, weighted by the probability of each value occuring"
+    "text": "Payoffs\n\n\nSometimes my enjoyment of a thing depends on the state of the world\n\n\nsocially-dependent preferences\n\n\nMy choice\nMy friends’ choice\nMy payoff\n\n\n\n\nDuck’s game\nDuck’s game\n3\n\n\nDuck’s game\nStay home\n2\n\n\nStay home\nDuck’s game\n1\n\n\nStay home\nStay home\n2\n\n\n\n\nIs this an example of a strategic or non-strategic choice?\nIs this a complete game?\n\n\n\n\nExpected Payoffs\nOften games involve some amount of chance; with random probabilities of each outcome happening\n\nWe need tools for thinking about how people think about risk\n\n. . .\n\nIn math, an expected value is the average value of a random variable, weighted by the probability of each value occuring"
   },
   {
-    "objectID": "Slides/01Intro/0103-definitions.html#expected-payoffs-2",
-    "href": "Slides/01Intro/0103-definitions.html#expected-payoffs-2",
+    "objectID": "Slides/01Intro/0103-definitions.html#expected-payoffs-1",
+    "href": "Slides/01Intro/0103-definitions.html#expected-payoffs-1",
     "title": "What is a Game? Definitions",
     "section": "Expected Payoffs",
     "text": "Expected Payoffs\nFor example, suppose \\(X\\) is a random variable which is equal to:\n\n1 with 50% probability,\n2 with 25% probability,\n3 with 25% probability\n\nWhat is the expected value of \\(X\\)? (\\(E(X)\\))\n. . .\n\\[\n\\begin{align}\nE(X) & = .5 (1) + .25 (2) + .25 (3) \\\\\n& = .5 + .5 + .75 = 2.75\n\\end{align}\n\\]\n\n\nExpected Payoffs\nAn Expected Payoff is just the expected value of possible payoffs\n\nAn average of the payoffs associated with every possible outcome, weighted by the corresponding probability of each outcome happening\n\n\n\n\nExpected Payoffs\nConsider the following choice:\n\n\n\n\n\n\nOption A:\n\n\n\nI flip two coins; - if both land heads, you win $100 - otherwise you get $0\n\n\n\n\n\n\n\n\nOption B:\n\n\n\nYou just get $25 for sure\n\n\n\n\n\nExpected Payoffs\n\nIf you choose Option A, we call you risk loving\nIf you choose Option B, you are risk averse\nIf you are indifferent between the two options, you would be risk neutral\n\nAll of these difference preferences can be incorporated in the rational model with the right utility function"
@@ -4133,14 +4098,7 @@
     "href": "Slides/01Intro/0103-definitions.html#beliefs",
     "title": "What is a Game? Definitions",
     "section": "Beliefs",
-    "text": "Beliefs\nOur theories will have to make assumptions about what players know.\nAll of our games will at least assume that all players know all of the rules."
-  },
-  {
-    "objectID": "Slides/01Intro/0103-definitions.html#beliefs-1",
-    "href": "Slides/01Intro/0103-definitions.html#beliefs-1",
-    "title": "What is a Game? Definitions",
-    "section": "Beliefs",
-    "text": "Beliefs\nWe will assume that all players know4:\n\n\nWho else is playing,\nall of the strategies each player could potentially choose,\neveryone’s payoffs for all possible combinations of strategies by all players,\nand that everyone else is maximizing their payoffs"
+    "text": "Beliefs\nOur theories will have to make assumptions about what players know.\nAll of our games will at least assume that all players know all of the rules.\n. . .\nWe will assume that all players know4:\n\n\nWho else is playing,\nall of the strategies each player could potentially choose,\neveryone’s payoffs for all possible combinations of strategies by all players,\nand that everyone else is maximizing their payoffs"
   },
   {
     "objectID": "Slides/01Intro/0103-definitions.html#footnotes",
