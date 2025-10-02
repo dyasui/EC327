@@ -2,20 +2,50 @@
 title: "Homework Assignments"
 ---
 
-# Assignment 1 
+# Assignment 1 [Download](01_Intro/main.pdf){.btn .btn-outline-primary .btn role="button"}
 **Due:** Friday, October 3rd
 [**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1922386){target="_blank"}
 ```{=html}
 <details>
-  <summary>PDF</summary>
-  <a class="btn btn-primary btn-lg cv-download" href="01_Intro/main.pdf" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download
-  </a>
+  <summary>Expand</summary>
   <div class="embed-container">
     <iframe src="01_Intro/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```
 
-# Assignment 2
-**Due:** Friday, October 25th
+# Assignment 2 [Download](02_Sequential/main.pdf){.btn .btn-outline-primary .btn role="button"} 
+**Due:** Friday, October 10th
+[**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1927365){target="_blank"}
+```{=html}
+<details>
+  <summary>Expand</summary>
+  <div class="embed-container">
+    <iframe src="02_Sequential/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+  </div>
+</details>
+```
+
+# Assignment 3 [Download](03_Simultaneous/main.pdf){.btn .btn-outline-primary .btn role="button"} 
+**Due:** Friday, October 17th
+[**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1927367){target="_blank"}
+```{=html}
+<details>
+  <summary>Expand</summary>
+  <div class="embed-container">
+    <iframe src="03_Simultaneous/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+  </div>
+</details>
+```
+
+# Assignment 4 [Download](04_Combined/main.pdf){.btn .btn-outline-primary .btn role="button"} 
+**Due:** Friday, October 24th
+[**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1927368){target="_blank"}
+```{=html}
+<details>
+  <summary>Expand</summary>
+  <div class="embed-container">
+    <iframe src="04_Combined/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+  </div>
+</details>
+```

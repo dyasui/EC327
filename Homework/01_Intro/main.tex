@@ -1,6 +1,6 @@
 \documentclass[addpoints]{exam}
 
-% \printanswers
+\printanswers
 \CorrectChoiceEmphasis{\color{red}\bfseries}
 \usepackage{amssymb, amsmath, amsfonts}
 \usepackage{geometry}
@@ -106,20 +106,21 @@ However, if the die lands on a 6, then the player who rolled it can steal one sh
 Suppose that it is Andy's turn to roll the die.
 
 \begin{parts}
+
 \part[4] What is Andy's expected payoff (in sheep)?
-\vspace{25mm}
+  \begin{solution}
+    Andy's expected payoff is $\frac{1}{3} (1) + \frac{1}{3} (0) + \frac{1}{6} (0) + \frac{1}{6} (1) = \frac{1}{2}$
+  \end{solution}
+
 \part[4] What is Booth's expected payoff?
-\vspace{25mm}
+  \begin{solution}
+    Booth's expected payoff is $\frac{1}{3} (0) + \frac{1}{3} (1) + \frac{1}{6} (0) + \frac{1}{3} (-1) = \frac{1}{6} $
+
+    \textbf{Note:} I realize I could have been more clear on the rules of Catan.
+    If you said Booth's expected payoff was $-\frac{1}{6}$, I gave you credit.
+  \end{solution}
+
 \end{parts}
-
-\begin{solution}
-  \part
-  Andy's expected payoff is $\frac{1}{3} (1) + \frac{1}{3} (0) + \frac{1}{6} (0) + \frac{1}{6} (1) = \frac{1}{2}$
-
-  \part
-  Booth's expected payoff is $\frac{1}{3} (0) + \frac{1}{3} (1) + \frac{1}{6} (0) + \frac{1}{3} (-1) = \frac{1}{6} $
-
-\end{solution}
 
 \question
 
@@ -132,20 +133,36 @@ Respond to the following questions about the game and briefly justify each answe
 \begin{parts}
   \part[2] 
   Do the players take their actions \textit{sequentially} or \textit{simultaneously}?
-  \vspace{10mm}
+  \begin{solution}
+    Simultaneous
+  \end{solution}
 
   \part[2]
   Is Golden Balls a \textit{zero-sum} or a \textit{constant-sum} game? 
-  \vspace{10mm}
+  \begin{solution}
+    Neither, it is possible for the sum of both players' payoffs to either be zero or \pounds10,000,
+    depending on what strategies they choose.
+  \end{solution}
 
   \part[2]
   What relevant \textit{information} is available to the players when taking their actions?
-  \vspace{10mm}
+  \begin{solution}
+    The rules of the game, payoffs, etc. but not the strategies their opponent will take
+    (or how honest they are).
+  \end{solution}
 
   \part[2]
   How important is the stage where the constestants are told to talk with each other?
   Can communication be strategic?
-  \vspace{5mm}
+  \begin{solution}
+    This is up to interpretation.
+    You might say that because there is an incentive to lie and say you will split,
+    there is no real point in listening to anything your opponent could say
+    (`cheap talk').
+
+    But maybe there are some ways in which you could \textit{credibly} signal your true intent.
+    For example, making a legally binding pledge with enforcable penalties, etc.
+  \end{solution}
 
 \end{parts}
 
@@ -163,56 +180,35 @@ Read the 2022 Policito Opinion article,
   \part[4]
   List the tools from game theory that we've learned about in class
   which the authors use to argue their point.
-  \vspace{25mm}
+  \begin{solution}
+    Relevant tools/terms which we have discussed include backwards induction,
+    common knowledge of rationality, perfect information, Pareto dominance/efficiency,
+    game tree/extensive form, forward-looking, subgame perfect Nash Equilibrium/rollback equilibrium.
+    A complete answer should relate at least on of these terms to the international sanctions placed on Russia.
+  \end{solution}
 
   \part[2] 
   What assumptions do the authors make in their simplified `Repeated Sanctions Game'?
-  \vspace{25mm}
+  \begin{solution}
+    Some potential answers are: 
+    rationality of Putin, 
+    the relative rankings of the payoffs in the game (i.e., international community prefers Don't Punish after Putin Transgresses over Sanctioning),
+    the potential future players care about future iterations of the game enough,
+    etc.
+  \end{solution}
 
   \part[2]
   Do you find the authors' arguments convincing? Why or why not?
-  \vspace{25mm}
+  \begin{solution}
+    For example, consider what happens if the payoff to Player 2 of Don't Punish after a Transgression is 
+    $ -c - f $ where $f$ is the cost in the future to other Players observing that Transgressions will go unpunished.
+    If $f > s$, i.e., if the future cost of additional repeated Transgressions outweighs the cost of sanctions today,
+    then the equilibrium of the game changes to { Transgress, (Sanction if Transgress, Don't Punish if Don't Transgress) } because now Player 2 it is rational for Player 2 to Sanction after a Transgression, 
+    where it wasn't rational in the original one-shot game.
+  \end{solution}
 
 \end{parts}
 
-\begin{solution}
-
-The authors' main point is that if the US and allies even if sanctions on Russia were costly to enact for those nations,
-they were still important to deter either Russia in the future or other nations from breaking international law.
-If the game in their tree diagram is played only once, the subgame perfect Nash equilibrium has Player 1 choosing to transgress
-because Player 2's only rational strategy is to choose Don't Punish in both of their decision nodes.
-Once Player 1 has already made the transgresssion, the cost of that transgression is already felt by Player 2 
-and Sanctions will just decrease their payoff more.
-
-However, the authors argue that because this game is likely to be repeated in the future, 
-(either against Putin again or another world leader),
-the payoff of deterring future transgressions should mean that Nato countries should apply sanctions on Russia
-even though they will be costly in the short term.
-
-\begin{parts}
-
-  \part
-  Relevant tools/terms which we have discussed include backwards induction,
-  common knowledge of rationality, perfect information, Pareto dominance/efficiency,
-  game tree/extensive form, forward-looking, subgame perfect Nash Equilibrium/rollback equilibrium.
-  A complete answer should relate at least on of these terms to the international sanctions placed on Russia.
-
-  \part
-  Some potential answers are: 
-  rationality of Putin, 
-  the relative rankings of the payoffs in the game (i.e., international community prefers Don't Punish after Putin Transgresses over Sanctioning),
-  the potential future players care about future iterations of the game enough,
-  etc.
-
-  \part
-  For example, consider what happens if the payoff to Player 2 of Don't Punish after a Transgression is 
-  $ -c - f $ where $f$ is the cost in the future to other Players observing that Transgressions will go unpunished.
-  If $f > s$, i.e., if the future cost of additional repeated Transgressions outweighs the cost of sanctions today,
-  then the equilibrium of the game changes to { Transgress, (Sanction if Transgress, Don't Punish if Don't Transgress) } because now Player 2 it is rational for Player 2 to Sanction after a Transgression, 
-  where it wasn't rational in the original one-shot game.
-
-\end{parts}
-\end{solution}
 \end{questions}
 
 \end{document}

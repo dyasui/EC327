@@ -8,23 +8,12 @@ filters:
 This elective game theory class EC327 is taught by [Dante Yasui](danteyasui.org)
 at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
-## Fall 2025 Class Details
-
-:::: {.columns}
-:::{.column}
-**Class Time:** Monday and Wednesday 8:30-9:50 am
-
-**Classroom:** McKenzie 240C
-
-**Office Hours:** Monday 10-11 am \& Wednesday 1-2 pm
-:::
-
-::: {.column}
-<a href="Syllabus/main.pdf" target="_blank">Syllabus</a>
-
-**Textbook:**
-Dixit, Skeath, and McAdams. Games of Strategy, 5th edition.
-:::
+| Details: | Fall 2025 |
+|----|:---|
+| **Class Time:**   | Monday and Wednesday 8:30-9:50 am   |
+| **Classroom:**    | McKenzie 240C                       |
+| **Office Hours:** | Monday 10-11 am \& Wednesday 1-2 pm |
+| **Textbook:**     | Dixit, Skeath, and McAdams. Games of Strategy, 5th edition. |
 
 ---
 

@@ -1,6 +1,6 @@
 \documentclass[addpoints]{exam}
 
-\printanswers
+% \printanswers
 \CorrectChoiceEmphasis{\color{red}\bfseries}
 \usepackage{amssymb, amsmath, amsfonts}
 \usepackage{geometry}
@@ -116,7 +116,7 @@ win $\succ$ tie $\succ$ loss.
     Player 2 has \textbf{three} decision nodes because they have to make a plan of action for each of the three different strategies they could observe Player 1 choose.
   \end{solution}
 
-  \part[6]
+  \part[4]
   Draw out the extensive form game.
   Make sure to clearly label all branches, nodes, and choose any payoff values that reflect the preference ranking above.
 
@@ -126,7 +126,7 @@ win $\succ$ tie $\succ$ loss.
     \end{center}
   \end{solution}
 
-  \part[6]
+  \part[4]
   Use \textbf{backwards induction} (rollback) to prune branches which are not sequentially rational.
   Does this game have more than one equilibrium? Why or why not?
   
@@ -154,7 +154,7 @@ win $\succ$ tie $\succ$ loss.
 \newpage
 \question
   Use the same sequential Rock, Paper, Scissors setup,
-  but now imagine player 1's preferences change because they want to be seen as a "tough guy".
+  but now imagine player 1's preferences change because they want to be seen as a `tough guy'.
   Given that what they want to play remains the same,
   they still have the following preferences over the result of the game:
   win $\succ$ tie $\succ$ loss.
@@ -162,7 +162,7 @@ win $\succ$ tie $\succ$ loss.
   than win playing paper or scissors. 
 
 \begin{parts}
-  \part[6]
+  \part[4]
   Please create a new game tree so the payoffs reflect these new preferences.
   \begin{solution}
     
@@ -183,7 +183,7 @@ win $\succ$ tie $\succ$ loss.
   \end{center}
   \end{solution}
 
-  \part[6]
+  \part[4]
   Now apply backwards induction to the modified game tree.
   Clearly show on your game tree which branches survive the pruning process.
   \begin{solution}
@@ -232,7 +232,7 @@ However, if they cross at the opposite crossing from the crocs, they succesfully
 
 The crocs want to eat gnu, but they also prefer to wait in the rapids where they can sun themselves rather than the channel.
 If the crocs wait in the rapids and they catch the gnu crossing there, the crocs get a payoff of 2.
-If the crocs wait in the channel and catch the gnu crossing there, but they only get a payoff of 1.
+If the crocs wait in the channel and catch the gnu crossing there, they only get a payoff of 1.
 If the crocs wait in the rapids but they don't catch any gnu, the crocs earn a payoff of 0.
 If the crocs wait in the channel but they don't catch any gnu, the crocs get a payoff of -1.
 
@@ -240,7 +240,7 @@ After the gnu have scoped out their choice of crossing, they can choose to eithe
 If the gnu decide to stay on the banks, they get a payoff of 0 (and the crocs don't catch them).
 
 \begin{parts}
-  \part[8]
+  \part[4]
   Draw out the extensive form game. Clearly label all nodes and branches.
   \footnote{Hint: there should be eight possible outcomes.}
   
@@ -250,7 +250,7 @@ If the gnu decide to stay on the banks, they get a payoff of 0 (and the crocs do
   \end{center}
   \end{solution}
   
-  \part[8]
+  \part[4]
   Use backwards induction to solve for the equilibrium.
   \begin{solution}
     Dotted lines in the figure above can be pruned.
@@ -261,6 +261,40 @@ If the gnu decide to stay on the banks, they get a payoff of 0 (and the crocs do
   \end{solution}
 
 \end{parts}
+
+\newpage
+
+\question
+Suppose that a kidnapper first makes a decision whether to kidnap a high-value victim.
+The problem is that once the ransom has been paid, the kidnapper has an incentive to kill the victim 
+to prevent them from turning them into the police once released.
+
+Consider the solution proposed by Thomas Schelling whereby the victim reveals his darkest secret 
+to the kidnapper which he would hate to be revealed to the world.
+\footnote{Adapted from Harrington, \textit{Games, Strategies, and Decision Making}, 2015, page 297.}
+
+\begin{center}
+  \input{figures/kidnap}
+\end{center}
+
+\begin{parts}
+
+  \part[4] What values of $a$ and $b$ ensure that the subgame perfect Nash equilibrium 
+  results in the victim being released by the kidnapper?
+  \begin{solution}
+    For the kidnapper to be willing to share the secret, $a > 1$.
+    For the victim to be willing to stay silent when they know the kidnapper will share their secret, $b<2$.
+  \end{solution}
+
+  \part[4] Do you think that the victim revealing an embarassing secret to their kidnapper could be an effective strategy in real life?
+  Why or why not?
+  \begin{solution}
+    A secret needs to be so costly to the victim that the kidnapper can be sure they would rather stay silent than turn them in.
+    Also, the kidnapper needs proof that it would be suitably embarassing because otherwise, the victim could just invent some story to get free.
+  \end{solution}
+
+\end{parts}
+
 \end{questions}
 
 \end{document}

@@ -1,0 +1,72 @@
+\begin{tikzpicture}[edge from parent/.style={draw, very thick}]
+  \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
+  \tikzstyle{hollow node}=[circle,draw,inner sep=.25]
+  \tikzstyle{level 1}=[level distance=15mm,sibling distance=5cm]
+  \tikzstyle{level 2}=[level distance=15mm,sibling distance=5cm]
+  \tikzstyle{level 3}=[level distance=20mm,sibling distance=3cm]
+  \tikzstyle{level 4}=[level distance=20mm,sibling distance=2.5cm]
+  \tikzstyle{level 5}=[level distance=20mm,sibling distance=2cm]
+  
+  \node(0)[solid node,label=right:{\color{darkgray} Kidnapper}]{}
+    child{node[hollow node,label=below:{
+      \begin{tabular}{c}
+        {\color{darkgray} 3}  \\
+        {\color{darkblue} 5} 
+      \end{tabular}
+    }]{} edge from parent node[left,xshift=0,yshift=5]{\begin{tabular}{c}Don't \\ Kidnap\end{tabular}}}
+    child{node[solid node,label=right:{\color{darkblue} Victim }]{}
+        child{node[solid node,label=left:{\color{darkgray} Kidnapper}]{}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{darkgray} 4}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[left]{\begin{tabular}{c}Kill \\ victim \end{tabular}}}
+            child{node[solid node,label=right:{\color{darkblue} Victim}]{}
+              child{node[hollow node,label=below:{
+                  \begin{tabular}{c}
+                       {\color{darkgray} 5}  \\
+                       {\color{darkblue} 2} 
+                  \end{tabular}
+              }]{} edge from parent node[left]{\begin{tabular}{c} Stay \\ silent \end{tabular}}}
+              child{node[hollow node,label=below:{
+                  \begin{tabular}{c}
+                       {\color{darkgray} 1}  \\
+                       {\color{darkblue} 4} 
+                  \end{tabular}
+              }]{} edge from parent node[right]{\begin{tabular}{c} Turn \\ in \end{tabular}}}
+            edge from parent node[right]{\begin{tabular}{c}Release \\ victim \end{tabular}}}
+        edge from parent node[above left]{No secret}}
+        child{node[solid node,label=right:{\color{darkgray} Kidnapper}]{}
+            child{node[hollow node,label=below:{
+                \begin{tabular}{c}
+                     {\color{darkgray} 4}  \\
+                     {\color{darkblue} 0} 
+                \end{tabular}
+            }]{} edge from parent node[left]{\begin{tabular}{c}Kill \\ victim \end{tabular}}}
+            child{node[solid node,label=right:{\color{darkblue} Victim}]{}
+              child{node[hollow node,label=below:{
+                  \begin{tabular}{c}
+                       {\color{darkgray} 5}  \\
+                       {\color{darkblue} 2} 
+                  \end{tabular}
+              }]{} edge from parent node[left]{\begin{tabular}{c} Stay \\ silent \end{tabular}}}
+              child{node[solid node,label=right:{\color{darkgray} Kidnapper}]{}
+                child{node[hollow node,label=below:{
+                  \begin{tabular}{c}
+                       {\color{darkgray} 1}  \\
+                       {\color{darkblue} 3} 
+                  \end{tabular}
+                }]{} edge from parent node[left]{\begin{tabular}{c} Stay \\ silent \end{tabular}}}
+                child{node[hollow node,label=below:{
+                  \begin{tabular}{c}
+                       {\color{darkgray} $a$}  \\
+                       {\color{darkblue} $b$} 
+                  \end{tabular}
+                }]{} edge from parent node[right]{\begin{tabular}{c} Share \\ secret \end{tabular}}}
+              edge from parent node[right]{\begin{tabular}{c}Turn \\ in \end{tabular}}}
+            edge from parent node[right]{\begin{tabular}{c}Release \\ victim \end{tabular}}}
+        edge from parent node[above right]{Tell secret}}
+        edge from parent node[right]{Kidnap}
+    };
+\end{tikzpicture}

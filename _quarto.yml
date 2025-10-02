@@ -19,12 +19,12 @@ website:
     left:
       - text: "Home"
         href: index.qmd
+      - text: "Homework"
+        href: Homework/index.qmd
       - text: "Slides"
         href: Slides/index.qmd
       - text: "Activities"
         href: activities/index.qmd
-      - text: "Assignments"
-        href: Homework/index.qmd
   sidebar: 
     style: "docked"
     search: true

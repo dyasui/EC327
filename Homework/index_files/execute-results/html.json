@@ -1,0 +1,12 @@
+{
+  "hash": "cf8fea9151bd6f95a59094cf3ac7790c",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Homework Assignments\"\n---\n\n# Assignment 1 \n**Due:** Friday, October 3rd\n[**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1922386){target=\"_blank\"}\n```{=html}\n<details>\n  <summary>PDF</summary>\n  <a class=\"btn btn-primary btn-lg cv-download\" href=\"01_Intro/main.pdf\" target=\"_blank\">\n    <i class=\"fa-solid fa-file-arrow-down\"></i>&ensp;Download\n  </a>\n  <div class=\"embed-container\">\n    <iframe src=\"01_Intro/main.pdf\" style=\"border: 0.5px\" height=\"1000\" width=\"800\"></iframe>\n  </div>\n</details>\n```\n\n# Assignment 2\n```{html}\n```\n**Due:** Friday, October 10th\n[**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1922386){target=\"_blank\"}\n```{=html}\n<details>\n  <summary>PDF</summary>\n  <a class=\"btn btn-primary btn-lg cv-download\" href=\"02_Sequential/main.pdf\" target=\"_blank\">\n    <i class=\"fa-solid fa-file-arrow-down\"></i>&ensp;Download\n  </a>\n  <div class=\"embed-container\">\n    <iframe src=\"02_Sequential/main.pdf\" style=\"border: 0.5px\" height=\"1000\" width=\"800\"></iframe>\n  </div>\n</details>\n```\n\n# Assignment 3\n**Due:** Friday, October 17th\n[**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1922386){target=\"_blank\"}\n```{=html}\n<details>\n  <summary>PDF</summary>\n  <a class=\"btn btn-primary btn-lg cv-download\" href=\"03_Simultaneous/main.pdf\" target=\"_blank\">\n    <i class=\"fa-solid fa-file-arrow-down\"></i>&ensp;Download\n  </a>\n  <div class=\"embed-container\">\n    <iframe src=\"03_Simultaneous/main.pdf\" style=\"border: 0.5px\" height=\"1000\" width=\"800\"></iframe>\n  </div>\n</details>\n```\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
