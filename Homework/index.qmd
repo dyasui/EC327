@@ -2,14 +2,14 @@
 title: "Homework Assignments"
 ---
 
-# Assignment 1 [Download](01_Intro/main.pdf){.btn .btn-outline-primary .btn role="button"}
+# Assignment 1 [Download](01_Intro/main_clean.pdf){.btn .btn-outline-primary .btn role="button"}
 **Due:** Friday, October 3rd
 [**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1922386){target="_blank"}
 ```{=html}
 <details>
   <summary>Expand</summary>
   <div class="embed-container">
-    <iframe src="01_Intro/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+    <iframe src="01_Intro/main_clean.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```
@@ -49,3 +49,5 @@ title: "Homework Assignments"
   </div>
 </details>
 ```
+
+# Other Assignments: coming soon
