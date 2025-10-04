@@ -21,8 +21,8 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 | **Week** | **Chapters** | **Topic**                                                       | Assignments  |
 |:--------:+:------------:+------------------------------------------------------------------+-----------|
-|     1    |     1, 2    | [Intro & General Principles](Slides/#intro-and-syllabus-day)     | Homework 1, Quiz 1 |
-|     2    |      3      | [Sequential Move Games](Slides/#sequential-games)                | HW2, Q2 |
+|     1    |     1, 2    | [Intro & General Principles](Slides/#intro-and-syllabus-day)     | [Homework 1](Homework/#assignment-1), [Quiz 1](https://canvas.uoregon.edu/courses/274671/quizzes/415674) |
+|     2    |      3      | [Sequential Move Games](Slides/#sequential-games)                | [HW2](Homework/#assignment-2), [Q2](https://canvas.uoregon.edu/courses/274671/quizzes/416468) |
 |     3    |      4      | [Simultaneous Move Games](Slides/#simultaneous-games)            | HW3, Q3 |
 |     4    |      5,6    | [Combining Forms](Slides/#combining-simultaneous-and-sequential), [Continuous Strategies](Slides/#simultaneous-games) | HW4, Q4 |
 |     5    |      1-6    | Review & **Midterm**                                             |         |
