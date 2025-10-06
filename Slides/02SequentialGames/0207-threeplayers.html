@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>nash – EC327 Game Theory</title>
+<title>threeplayers – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,35 +72,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -540,459 +511,150 @@ window.Quarto = {
 
 
 
-<section id="nash-equilibrium" class="level1">
-<h1>Nash Equilibrium</h1>
-<section id="solving-simultaneous-games" class="level2">
-<h2 class="anchored" data-anchor-id="solving-simultaneous-games">Solving Simultaneous Games</h2>
-<ul>
-<li><p>Before we cover how to solve a game, we first need to discuss what a solution to a game even is.</p></li>
-<li><p>As with many types of problem in economics, we’re interested in finding an <em>equilibrium</em>:</p>
-<ul>
-<li>equilibrium a situation which is “stable,” in that there is no incentive to change.</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="nash-equilibrium-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-1">Nash Equilibrium</h2>
-<p>The most basic form of equilibrium in game theory is the <span class="h">Nash Equilibrium (NE)</span>, which can be described as:</p>
-<ul>
-<li><p>A strategy profile such that no player can obtain a larger payoff by <em>unilaterally deviating</em></p></li>
-<li><p>A strategy profile such that no single player can make themselves better off by changing only their own strategy.</p></li>
-<li><p>A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision</p></li>
-</ul>
-<hr>
-</section>
-<section id="nash-equilibrium-2" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-2">Nash Equilibrium</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Nash Equilibrium
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A list of strategies where each player’s strategy is the best response to the other’s best response strategy</p>
-</div>
-</div>
+<section id="adding-more-players" class="level1">
+<h1>Adding more players</h1>
+<section id="player-planting-game" class="level2">
+<h2 class="anchored" data-anchor-id="player-planting-game">3-player planting game</h2>
+<p>From the textbook:</p>
 <div class="incremental">
 <ul class="incremental">
-<li>In other words, no player has any incentive to <span class="hii">deviate</span> in their strategy away from an equilibrium strategy</li>
-<li>It is central to the analysis of simultaneous-move games.</li>
-<li>Can occur in <strong>pure strategies</strong> (where players choose a single action) or <strong>mixed strategies</strong> (randomized choices).</li>
+<li><p><span class="hi">Emily</span>, <span class="hi">Nina</span>, and <span class="hi">Talia</span> are roommates who want to get a start on their communal garden.</p></li>
+<li><p>They like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.</p></li>
+<li><p><strong>2 or 3 people</strong> working is enough to keep the garden healthy, but if <strong>1 or 0</strong> work, then the garden will die.</p></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="nash-equilibrium-in-tbl-basic4x3game" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
-<p>Let’s look at one specific strategy profile in this game:</p>
+<section id="planting-game-payoffs" class="level2">
+<h2 class="anchored" data-anchor-id="planting-game-payoffs">Planting Game payoffs</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>outcome:</th>
+<th>utlity:</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>I don’t contribute, but garden lives</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>I contribute, and get garden.</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>I don’t contribute, and garden dies</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>I contribute, but garden dies</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="planting-game-tree" class="level2">
+<h2 class="anchored" data-anchor-id="planting-game-tree">Planting Game Tree</h2>
+<p><img src="figures/plantinggame.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="rollback-in-the-planting-game" class="level2">
+<h2 class="anchored" data-anchor-id="rollback-in-the-planting-game">Rollback in the Planting Game</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td><span class="h">(5,4)</span></td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
+<p><img src="figures/plantinggame.png" class="img-fluid"></p>
 </div><div class="column" style="width:50%;">
-<blockquote class="blockquote">
-<p>Row chooses Low and Column chooses Middle</p>
-</blockquote>
-<ul>
-<li>Is this <em>stable</em>?</li>
+<div class="incremental">
+<p>Who should we start with to solve this game?</p>
+<ul class="incremental">
+<li>Talia, because she is the last one to move, her choices don’t depend on other players</li>
 </ul>
+</div>
 </div>
 </div>
 <hr>
 </section>
-<section id="nash-equilibrium-in-tbl-basic4x3game-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game-1">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
-<p>Let’s look at one specific strategy profile in this game:</p>
+<section id="rollback-in-the-planting-game-1" class="level2">
+<h2 class="anchored" data-anchor-id="rollback-in-the-planting-game-1">Rollback in the Planting Game</h2>
 <div class="columns">
-<div class="column smaller" style="width:50%;">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th><span class="hii">Middle</span></th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td><span class="hii">(2,3)</span></td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td><span class="hii">(3,0)</span></td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td><span class="h">(5,4)</span></td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td><span class="hii">(4,5)</span></td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
+<div class="column" style="width:50%;">
+<p><img src="figures/plantinggame.png" class="img-fluid"></p>
 </div><div class="column" style="width:50%;">
-<blockquote class="blockquote">
-<p>Row chooses Low and Column chooses Middle</p>
-</blockquote>
-<ul>
-<li>Given that Column plays Middle, is there any way for Row to get a higher payoff?</li>
+<div class="incremental">
+<p>How many strategies does Talia have?</p>
+<ul class="incremental">
+<li><p>16 total complete strategies</p></li>
+<li><p>CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD</p></li>
 </ul>
+</div>
 </div>
 </div>
 <hr>
 </section>
-<section id="nash-equilibrium-in-tbl-basic4x3game-2" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game-2">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
-<p>Let’s look at one specific strategy profile in this game:</p>
+<section id="rollback-in-the-planting-game-2" class="level2">
+<h2 class="anchored" data-anchor-id="rollback-in-the-planting-game-2">Rollback in the Planting Game</h2>
 <div class="columns">
-<div class="column smaller" style="width:50%;">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td><span class="hii">Low</span></td>
-<td><span class="hii">(2,2)</span></td>
-<td><span class="h">(5,4)</span></td>
-<td><span class="hii">(12,3)</span></td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
+<div class="column" style="width:50%;">
+<p><img src="figures/plantinggame.png" class="img-fluid"></p>
 </div><div class="column" style="width:50%;">
-<blockquote class="blockquote">
-<p>Row chooses Low and Column chooses Middle</p>
-</blockquote>
+<div class="incremental">
+<p>Which of Talia’s strategies can be eliminated as <em>irrational</em>?</p>
+<ul class="incremental">
+<li>Any which include an action which would lead to a lower payoff than another possible action at the same node</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="rollback-in-the-planting-game-3" class="level2">
+<h2 class="anchored" data-anchor-id="rollback-in-the-planting-game-3">Rollback in the Planting Game</h2>
+<p>Let’s simplify the game by pruning Talia’s eliminated branches</p>
+<p><img src="figures/plantinggame.png" class="img-fluid"></p>
+<div class="notes">
 <ul>
-<li>Given that Row plays Low, is there any way for Column to get a higher payoff?</li>
-</ul>
-</div>
-</div>
-<hr>
-</section>
-<section id="nash-equilibrium-in-tbl-basic4x3game-3" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game-3">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
-<p>What is special about the strategy profile (Low, Middle)?</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>It’s <em>stable</em> because neither player would have any incentive to change what they’re doing</p></li>
-<li><p>In other words, neither player has regrets over their choice given what the other player is doing</p></li>
-<li><p>However, notice that this doesn’t mean that this is the best that the players could do jointly</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="other-strategy-profiles-in-tbl-basic4x3game" class="level2">
-<h2 class="anchored" data-anchor-id="other-strategy-profiles-in-tbl-basic4x3game">Other Strategy Profiles in <strong>?@tbl-basic4x3game</strong></h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(5,4)</td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td><span class="h">(9,7)</span></td>
-</tr>
-</tbody>
-</table>
-<p>What about (Bottom, Right)?</p>
-<hr>
-</section>
-<section id="other-strategy-profiles-in-tbl-basic4x3game-1" class="level2">
-<h2 class="anchored" data-anchor-id="other-strategy-profiles-in-tbl-basic4x3game-1">Other Strategy Profiles in <strong>?@tbl-basic4x3game</strong></h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(5,4)</td>
-<td><span class="h">(12,3)</span></td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td><span class="red">(9,7)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Even though (Bottom, Right) is a Pareto improvement on (Low, Middle), it is <em>unstable</em> because it would be rational for Row player to change their strategy to Low to try to get the higher payoff of 12</p>
-<hr>
-</section>
-<section id="other-strategy-profiles-in-tbl-basic4x3game-2" class="level2">
-<h2 class="anchored" data-anchor-id="other-strategy-profiles-in-tbl-basic4x3game-2">Other Strategy Profiles in <strong>?@tbl-basic4x3game</strong></h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td><span class="h">(3,1)</span></td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(5,4)</td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-<p>What about (Top, Left)?</p>
-<hr>
-</section>
-<section id="tbl-basic4x3game-with-a-tie-in-payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="tbl-basic4x3game-with-a-tie-in-payoffs"><strong>?@tbl-basic4x3game</strong> with a tie in payoffs</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(<strong>5</strong>,4)</td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(<strong>5</strong>,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-<p>A Nash equilibrium doesn’t require the equilibrium strategies to be <em>strict</em> improvements.</p>
+<li>Draw new tree on board with only Emily and Nina’s branches,
 <ul>
-<li>(Low, Middle) is still a NE because the payoff of 5 to Row player is <em>weakly</em> (<span class="math inline">\(\geq\)</span>) higher than the payoff of Bottom</li>
-</ul>
-<hr>
-</section>
-<section id="nash-equilibrium-as-a-system-of-beliefs" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-as-a-system-of-beliefs">Nash Equilibrium as a System of Beliefs</h2>
-<p>So a Nash Equilibrium requires players <em>best responding</em> to each other.</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>But if a game is <em>simultaneous</em>, then players can’t observe what the other does</p></li>
-<li><p>So how can someone respond to something that hasn’t happened yet?</p></li>
-</ul>
-</div>
-</section>
-<section id="nash-equilibrium-as-a-system-of-beliefs-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-as-a-system-of-beliefs-1">Nash Equilibrium as a System of Beliefs</h2>
-<p>How to make sense of best-responses in simultaneous games:</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>Players might base their beliefs of the other players’ strategies on <em>experience</em> from playing similar games before</p></li>
-<li><p>You might also <em>put yourself into your opponents’ shoes</em> to think about what they might do</p></li>
-<li><p>You should also expect that <em>they are thinking about what you’re thinking</em></p>
-<ul class="incremental">
-<li>and also that <em>you would be thinking about what they are thinking</em> about what you are thinking</li>
+<li>replace Talia’s decision nodes with new terminal nodes with payoffs corresponding to non-pruned end branches</li>
 </ul></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="the-battle-of-wits" class="level2">
-<h2 class="anchored" data-anchor-id="the-battle-of-wits">The Battle of Wits</h2>
-<p>Let’s see an example of this logic in action:</p>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/pRJ8CrTSSR0" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<section id="rollback-in-the-planting-game-4" class="level2">
+<h2 class="anchored" data-anchor-id="rollback-in-the-planting-game-4">Rollback in the Planting Game</h2>
+<p><img src="figures/fig3.6.png" class="img-fluid"></p>
 <hr>
 </section>
-<section id="nash-equilibrium-as-a-system-of-beliefs-2" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-as-a-system-of-beliefs-2">Nash Equilibrium as a System of Beliefs</h2>
+<section id="equilibrium-path-of-play" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-path-of-play">Equilibrium Path of Play</h2>
+<div class="incremental">
+<p>Note that there is one continuous path we traced from the initial node to a final equilibrium outcome.</p>
+<p>However, we couldn’t have gotten their without the other arrows paths <strong>even though they are never reached</strong> in equilibrium.</p>
+<p>Recall that a <span class="hi">strategy</span> is a collection of choices at <strong>every</strong> decision node.</p>
+</div>
+<hr>
+</section>
+<section id="equilibrium-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-strategies">Equilibrium Strategies</h2>
+<p>Even though the players available actions are all called the same (Contribute or Don’t), this tree provides labels of each decision node so we can say something like:</p>
+<blockquote class="blockquote">
+<p>“Nina’s <strong>strategy</strong> in the rollback equilibrium is { <span class="hii"><em>Don’t Contribute</em></span> at <span class="hi">b</span>, <span class="hii"><em>Contribute</em></span> at <span class="hi">c</span> }”.</p>
+</blockquote>
 <ul>
-<li>Nash equilibrium assumes:
-<ol type="1">
-<li>Players form <span class="hi">beliefs</span> about the strategies of others.</li>
-<li>These beliefs must be <strong>correct</strong>.</li>
-<li>Each player then chooses their <strong>best response</strong> based on these beliefs.</li>
-</ol></li>
+<li>To make it even shorter, let’s call this strategy <span class="hii">DC</span>.</li>
 </ul>
 <hr>
 </section>
-<section id="strategic-uncertainty" class="level2">
-<h2 class="anchored" data-anchor-id="strategic-uncertainty">Strategic Uncertainty</h2>
+<section id="rollback-equilibrium-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="rollback-equilibrium-strategies">Rollback Equilibrium Strategies</h2>
+<p>The equilibrium is:</p>
 <ul>
-<li>Players are uncertain about others’ choices but form subjective <strong>beliefs</strong> about them.</li>
-<li>These beliefs are central to decision-making in Nash equilibrium.</li>
-<li>The equilibrium is found when every player’s belief about others’ actions is correct, and their response to these beliefs is optimal.</li>
+<li>{ <span class="hi">D</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, <span class="hi">DC</span><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, <span class="hi">DCCD</span><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> }</li>
 </ul>
 <hr>
-</section>
-<section id="an-equivalent-definition-of-ne" class="level2">
-<h2 class="anchored" data-anchor-id="an-equivalent-definition-of-ne">An Equivalent Definition of NE <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Nash Equilibrium
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A set of strategies, one for each player, such that:</p>
-<ol type="1">
-<li><p>each player has correct beliefs about the strategies of the others and</p></li>
-<li><p>the strategy of each is the best for herself, given her beliefs about the strategies of the others.</p></li>
-</ol>
-</div>
-</div>
 
 
 </section>
@@ -1002,7 +664,9 @@ Nash Equilibrium
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Dixit, pg. 98<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Emily<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Nina<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Talia<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1422,4 +1086,4 @@ Nash Equilibrium
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/Slides/03SimultaneousGames/0302-nash.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/Slides/03SimultaneousGames/0302-nash.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/Slides/02SequentialGames/0207-threeplayers.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/Slides/02SequentialGames/0207-threeplayers.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

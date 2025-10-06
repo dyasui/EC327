@@ -143,14 +143,12 @@ Dante Yasui
 </section>
 <section class="slide level2">
 
-<div class="vertical-center">
 <p><span class="hi big">Outline</span></p>
 <ul>
 <li><p>Game trees</p></li>
 <li><p>Backwards Induction</p></li>
 <li><p>Efficiency</p></li>
 </ul>
-</div>
 </section>
 <section>
 <section id="extensive-form" class="title-slide slide level1 center">
@@ -505,10 +503,19 @@ Dante Yasui
 </section>
 <section id="predictions" class="slide level2">
 <h2>Predictions?</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/kidnapgame.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
 <p>Based on the extensive form game tree with payoffs,</p>
 <ul>
-<li>Do you have any predictions for what strategies each player will choose?</li>
+<li>Do you have any predictions?</li>
 </ul>
+</div></div>
 <aside class="notes">
 <ul>
 <li>Ask students what they would do in Guy’s position,</li>
@@ -532,9 +539,12 @@ Dante Yasui
 <h2>a Definition of an Extensive Form Game: <sup>1</sup></h2>
 <ul>
 <li class="fragment"><p>A collection of decision-makers, called <span class="hi">players</span> or <em>agents</em></p></li>
-<li class="fragment"><p>A set of <span class="hi">decision nodes</span>, each represents the information available to the player of that node</p></li>
-<li class="fragment"><p>Strategies for each player which list the <span class="hi">branches</span> from <em>each</em> node that represetn the actions a player would take if faced with that choice</p></li>
-<li class="fragment"><p>A <span class="h">tree diagram</span> which maps the intersections of players’ strategy profiles to the outcomes represented at each <span class="hi">terminal nodes</span></p></li>
+<li class="fragment"><p>A set of <span class="hi">decision nodes</span>, each represents the <em>information</em> available to the player of that node</p></li>
+<li class="fragment"><p><span class="hi">Strategies</span> for each player which list the <strong>branches</strong> from <em>each</em> node that represent the actions a player would take if faced with that choice</p>
+<ul>
+<li class="fragment">We will use <strong>actions</strong> to refer to the individual branches.</li>
+</ul></li>
+<li class="fragment"><p>A <span class="h">tree diagram</span> which maps the intersections of players’ strategy profiles to the outcomes represented at each <span class="hi">terminal node</span></p></li>
 </ul>
 <aside class="notes">
 <ul>
@@ -614,19 +624,17 @@ Dante Yasui
 </div>
 </div><div class="column" style="width:60%;">
 <ul>
-<li class="fragment">How many decisions does <span class="red">Guy</span> make?
+<li class="fragment"><p>Is <span class="red"><em>Do not kidnap</em></span> a complete strategy for <span class="red">Guy</span>?</p></li>
+<li class="fragment"><p>No!</p></li>
+<li class="fragment"><p>Why? Because it doesn’t give us any <em>justification</em> for <span class="red">Guy</span>’s action.</p>
 <ul>
-<li class="fragment">3</li>
-</ul></li>
-<li class="fragment">How many decisions does <span class="blue">Vivica</span> make?
-<ul>
-<li class="fragment">1</li>
+<li class="fragment">We don’t know if this is rational (or even strategic)</li>
 </ul></li>
 </ul>
 </div></div>
 <aside class="notes">
 <ul>
-<li>count the nodes labeled with each player’s name</li>
+<li>A complete strategy needs to include an action at every decision node</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -651,49 +659,12 @@ Dante Yasui
 </div>
 </div><div class="column" style="width:60%;">
 <ul>
-<li class="fragment">Write out a complete strategy for <span class="blue">Vivica</span>
-<ul>
-<li class="fragment">Only two strategies:
-<ul>
-<li class="fragment"><span class="blue"><em>Pay</em></span> the ransom,</li>
-<li class="fragment">or <span class="blue"><em>Don’t</em></span> pay</li>
-</ul></li>
-</ul></li>
-</ul>
-</div></div>
-<aside class="notes">
-<ul>
-<li>Vivica only has to make a decision in the branch where Orlando is kidnapped</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="apply-this-definition-to-the-kidnapping-game-2" class="slide level2">
-<h2>Apply this definition to the kidnapping game:</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="figures/kidnapgame_blank.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div><div class="column" style="width:60%;">
-<ul>
 <li class="fragment">Write out at complete strategy for <span class="red">Guy</span>
 <ul>
-<li class="fragment">Let’s give some shorter names for Guy’s actions:
+<li class="fragment">Let’s give some shorter names for Guy’s <em>actions</em>:
 <ul>
 <li class="fragment"><span class="red"><span class="math inline">\(A\)</span></span> <span class="math inline">\(\equiv\)</span> Kidnap Orlando (Abduct)</li>
-<li class="fragment"><span class="red"><span class="math inline">\(I\)</span></span> <span class="math inline">\(\equiv\)</span> Don’t kidnap Orlando (Ignore)</li>
+<li class="fragment"><span class="red"><span class="math inline">\(D\)</span></span> <span class="math inline">\(\equiv\)</span> Don’t kidnap Orlando</li>
 <li class="fragment"><span class="red"><span class="math inline">\(K\)</span></span> <span class="math inline">\(\equiv\)</span> Kill Orlando</li>
 <li class="fragment"><span class="red"><span class="math inline">\(L\)</span></span> <span class="math inline">\(\equiv\)</span> Let Orlando live</li>
 </ul></li>
@@ -716,7 +687,7 @@ Dante Yasui
           display:block!important;
       }</style></aside>
 </section>
-<section id="apply-this-definition-to-the-kidnapping-game-3" class="slide level2">
+<section id="apply-this-definition-to-the-kidnapping-game-2" class="slide level2">
 <h2>Apply this definition to the kidnapping game:</h2>
 <p>Guy has <span class="math inline">\(8\)</span> total complete strategies:</p>
 <table class="caption-top">
@@ -727,151 +698,36 @@ Dante Yasui
 <thead>
 <tr class="header">
 <th>If Guy <span class="math inline">\(A\)</span>bducts</th>
-<th>If Guy <span class="math inline">\(I\)</span>gnores</th>
+<th>If Guy <span class="math inline">\(D\)</span>oesn’t</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>( <span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span> )</td>
-<td>( <span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span> )</td>
+<td>( <span class="red"><span class="math inline">\(D\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span> )</td>
 </tr>
 <tr class="even">
 <td>( <span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span> )</td>
-<td>( <span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
+<td>( <span class="red"><span class="math inline">\(D\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
 </tr>
 <tr class="odd">
 <td>( <span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
-<td>( <span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
+<td>( <span class="red"><span class="math inline">\(D\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
 </tr>
 <tr class="even">
 <td>( <span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
-<td>( <span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
+<td>( <span class="red"><span class="math inline">\(D\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
 </tr>
 </tbody>
 </table>
-</section></section>
-<section>
-<section id="backwards-induction" class="title-slide slide level1 center">
-<h1>Backwards Induction</h1>
-
-</section>
-<section id="solving-sequential-games" class="slide level2">
-<h2>Solving Sequential Games</h2>
-<p>Now that we have defined all the parts of what a sequential game is we can start to <em>solve</em> them.</p>
 <div class="fragment">
 <ul>
-<li>A solution in our case will be a prediction of what rational agents would do in a sequential game</li>
+<li>How do we know if any is more or less valid than the others?</li>
 </ul>
-</div>
-</section>
-<section id="the-smoking-decision" class="slide level2">
-<h2>The smoking decision</h2>
-<p>Do I want to try smoking today?</p>
-<blockquote>
-<p>Suppose today I can either <span class="h">Try</span> smoking for the first time, or <span class="h">Not</span> try</p>
-</blockquote>
-<p>If I choose <span class="h">Try</span> today, then I will have another choice in the <em>future</em>:</p>
-<blockquote>
-<p><span class="h">Continue</span> smoking, or <span class="h">Quit</span></p>
-</blockquote>
-</section>
-<section id="the-smoking-decision-1" class="slide level2">
-<h2>The smoking decision</h2>
-<p>Let’s create some preferences over the three different outcomes:</p>
+<aside class="notes">
 <ul>
-<li><p><span class="math inline">\(U(\text{Not}) = 0\)</span> - I’m no worse off, but don’t get to experience what it’s like</p></li>
-<li><p><span class="math inline">\(U(\text{Try}\rightarrow\textbf{Quit}) = 1\)</span> - I get the experience of smoking without long-term health consequences, etc.</p></li>
-<li><p><span class="math inline">\(U(\text{Try}\rightarrow\textbf{Continue}) = -1\)</span> - I become an addict</p></li>
-</ul>
-</section>
-<section id="the-smoking-decision-2" class="slide level2">
-<h2>The smoking decision</h2>
-<p>Let’s model this as a <em>decision tree</em> <img data-src="figures/fig3.2.png"></p>
-</section>
-<section id="the-smoking-decision-3" class="slide level2">
-<h2>The smoking decision</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="figures/fig3.2.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<ul>
-<li class="fragment"><p>What would a <em>rational</em> version of myself choose?</p></li>
-<li class="fragment"><p>Is this realistic?</p></li>
-<li class="fragment"><p>Why might Trying and then Quitting be a bad idea?</p></li>
-</ul>
-</div></div>
-</section>
-<section id="the-smoking-game" class="slide level2">
-<h2>The smoking <em>game</em></h2>
-<p>We can apply the tools of game theory to this decision:</p>
-<ul>
-<li class="fragment"><p>Let’s add <em>future Dante</em> as another player who acts at the second decision node</p></li>
-<li class="fragment"><p>Future Dante is different from <em>Present Dante</em> because he has different preferences:</p>
-<ul>
-<li class="fragment"><p><span class="math inline">\(U_{FD}(\text{Continue}) = 1\)</span> because he’s already addicted</p></li>
-<li class="fragment"><p><span class="math inline">\(U_{FD}(\text{Quit}) = -1\)</span> because withdrawl is painful</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="the-smoking-game-1" class="slide level2">
-<h2>The smoking <em>game</em></h2>
-
-<img data-src="figures/fig3.3.png" class="r-stretch"></section>
-<section id="the-smoking-game-2" class="slide level2">
-<h2>The smoking <em>game</em></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="figures/fig3.3.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<ul>
-<li class="fragment"><p>What will Future Carmen choose?</p></li>
-<li class="fragment"><p>Should Carmen choose to Try smoking <em>if she knows what her future self would choose?</em></p></li>
-</ul>
-</div></div>
-</section>
-<section id="pruning-branches" class="slide level2">
-<h2>‘Pruning’ branches</h2>
-<p>If Carmen is <em>forward looking</em>, knows her <em>future self’s preferences</em>, and knows that her future self is <em>rational</em>,</p>
-<p>Then she can eliminate the possibility that her future self would quit.</p>
-<ul>
-<li class="fragment"><span class="hi">Pruning</span> is this type of logic applied to eliminating certain branches in a game tree.</li>
-</ul>
-</section>
-<section id="pruning-branches-1" class="slide level2">
-<h2>‘Pruning’ branches</h2>
-<p>If Future Carmen will never choose to Quit smoking once she is already an addict,</p>
-<blockquote>
-<p>what choices is <strong>Today’s Carmen</strong> left with?</p>
-</blockquote>
-<ul>
-<li class="fragment"><p><span class="h">Try</span> knowing that she will continue in the future and get -1 payoff</p></li>
-<li class="fragment"><p>or <span class="h">Not</span> try smoking today and earn 0 payoff</p></li>
-</ul>
-</section>
-<section id="backwards-induction-intuitively" class="slide level2">
-<h2>Backwards Induction (intuitively)</h2>
-<p>Let’s outline the logical steps we used to solve this game:</p>
-<ul>
-<li class="fragment"><p>We were uncertain about what would happen in this game, because <strong>Today’s Carmen</strong>’s optimal strategy depended on what <strong>Future Carmen</strong> woud do</p></li>
-<li class="fragment"><p>But <strong>Future Carmen</strong> is the last player in this game, so her choice only depends on her <em>own preferences</em></p></li>
-<li class="fragment"><p>Knowing what <strong>Future Carmen</strong> would choose allowed us to find <strong>Today’s Carmen</strong>’s best strategy</p></li>
-</ul>
-</section>
-<section id="smoking-game-solution" class="slide level2">
-<h2>Smoking Game Solution</h2>
-
-<img data-src="figures/fig3.5.png" class="r-stretch quarto-figure-center"><p class="caption">figures/fig3.5.png</p><aside class="notes">
-<ul>
-<li>Either crossing off eliminated branches or highlighting chosen branches works</li>
-<li>Just make sure that the order of thinking is clear</li>
+<li>It depends on Guy’s <em>beliefs</em> about Vivica’s behavior!</li>
+<li>We need to think strategically</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -884,6 +740,620 @@ Dante Yasui
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</div>
+</section></section>
+<section>
+<section id="backwards-induction" class="title-slide slide level1 center">
+<h1>Backwards Induction</h1>
+
+</section>
+<section id="solving-sequential-games" class="slide level2">
+<h2>Solving Sequential Games</h2>
+<p>Now that we have defined all the parts of what a sequential game is we can start to <em>solve</em> them.</p>
+<div class="fragment">
+<ul>
+<li>A solution in our case will be a prediction of what <span class="hi">sequentially rational</span> agents would do</li>
+</ul>
+</div>
+</section>
+<section id="solving-the-kidnapping-game" class="slide level2">
+<h2>Solving the Kidnapping Game</h2>
+
+<img data-src="figures/kidnapgame.png" class="r-stretch"><aside class="notes">
+<ul>
+<li>If Vivica paid ransom, Guy would rather Release</li>
+<li>If Vivica didn’t pay, Guy would rather Kill</li>
+<li>Knowing this, Vivica would Pay to avoid Orland being killed</li>
+<li>Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="solving-the-kidnapping-game-step-1" class="slide level2">
+<h2>Solving the Kidnapping Game (step 1)</h2>
+<p>Let’s start at the end (bottom) of the game:</p>
+<div class="fragment">
+<ul>
+<li>If the ransom <strong>has</strong> already been paid, what should <span class="red">Guy</span> do?</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 134.53 138.40" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 134.4)">
+<title>D</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-134.4 130.53,-134.4 130.53,4 -4,4"></polygon>
+<!-- Guy -->
+<g id="node1" class="node">
+<title>Guy</title>
+<ellipse fill="none" stroke="red" cx="63" cy="-112.4" rx="27.84" ry="18"></ellipse>
+<text text-anchor="middle" x="63" y="-108.2" font-family="Times,serif" font-size="14.00">Guy</text>
+</g>
+<!-- O1 -->
+<g id="node2" class="node">
+<title>O1</title>
+<text text-anchor="middle" x="27" y="-25" font-family="Times,serif" font-size="14.00">4</text>
+<text text-anchor="middle" x="27" y="-8.2" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- Guy&#45;&gt;O1 -->
+<g id="edge1" class="edge">
+<title>Guy-&gt;O1</title>
+<path fill="none" stroke="black" d="M56.23,-94.55C50.2,-79.54 41.37,-57.57 35,-41.71"></path>
+<text text-anchor="middle" x="59.89" y="-63.8" font-family="Times,serif" font-size="14.00">Kill</text>
+</g>
+<!-- O2 -->
+<g id="node3" class="node">
+<title>O2</title>
+<text text-anchor="middle" x="99" y="-25" font-family="Times,serif" font-size="14.00">5</text>
+<text text-anchor="middle" x="99" y="-8.2" font-family="Times,serif" font-size="14.00">3</text>
+</g>
+<!-- Guy&#45;&gt;O2 -->
+<g id="edge2" class="edge">
+<title>Guy-&gt;O2</title>
+<path fill="none" stroke="black" d="M69.77,-94.55C75.8,-79.54 84.63,-57.57 91,-41.71"></path>
+<text text-anchor="middle" x="104.77" y="-63.8" font-family="Times,serif" font-size="14.00">Release</text>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="solving-the-kidnapping-game-step-1-1" class="slide level2">
+<h2>Solving the Kidnapping Game (step 1)</h2>
+<p>Let’s start at the end (bottom) of the game:</p>
+<ul>
+<li>If the ransom <strong>has not</strong> been paid, what should <span class="red">Guy</span> do?</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 134.53 138.40" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 134.4)">
+<title>D</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-134.4 130.53,-134.4 130.53,4 -4,4"></polygon>
+<!-- Guy -->
+<g id="node1" class="node">
+<title>Guy</title>
+<ellipse fill="none" stroke="red" cx="63" cy="-112.4" rx="27.84" ry="18"></ellipse>
+<text text-anchor="middle" x="63" y="-108.2" font-family="Times,serif" font-size="14.00">Guy</text>
+</g>
+<!-- O1 -->
+<g id="node2" class="node">
+<title>O1</title>
+<text text-anchor="middle" x="27" y="-25" font-family="Times,serif" font-size="14.00">4</text>
+<text text-anchor="middle" x="27" y="-8.2" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- Guy&#45;&gt;O1 -->
+<g id="edge1" class="edge">
+<title>Guy-&gt;O1</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M56.23,-94.55C50.2,-79.54 41.37,-57.57 35,-41.71"></path>
+<text text-anchor="middle" x="59.89" y="-63.8" font-family="Times,serif" font-size="14.00">Kill</text>
+</g>
+<!-- O2 -->
+<g id="node3" class="node">
+<title>O2</title>
+<text text-anchor="middle" x="99" y="-25" font-family="Times,serif" font-size="14.00">5</text>
+<text text-anchor="middle" x="99" y="-8.2" font-family="Times,serif" font-size="14.00">3</text>
+</g>
+<!-- Guy&#45;&gt;O2 -->
+<g id="edge2" class="edge">
+<title>Guy-&gt;O2</title>
+<path fill="none" stroke="black" d="M69.77,-94.55C74.67,-82.36 81.42,-65.57 87.19,-51.19"></path>
+<polygon fill="black" stroke="black" points="90.52,-52.29 91,-41.71 84.03,-49.68 90.52,-52.29"></polygon>
+<text text-anchor="middle" x="104.77" y="-63.8" font-family="Times,serif" font-size="14.00">Release</text>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="solving-the-kidnapping-game-step-2" class="slide level2">
+<h2>Solving the Kidnapping Game (step 2)</h2>
+<p>Let’s start at the end (bottom) of the game:</p>
+<ul>
+<li>If the ransom <strong>has not</strong> been paid, what should <span class="red">Guy</span> do?</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 134.53 138.40" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 134.4)">
+<title>D</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-134.4 130.53,-134.4 130.53,4 -4,4"></polygon>
+<!-- Guy -->
+<g id="node1" class="node">
+<title>Guy</title>
+<ellipse fill="none" stroke="red" cx="63" cy="-112.4" rx="27.84" ry="18"></ellipse>
+<text text-anchor="middle" x="63" y="-108.2" font-family="Times,serif" font-size="14.00">Guy</text>
+</g>
+<!-- O1 -->
+<g id="node2" class="node">
+<title>O1</title>
+<text text-anchor="middle" x="27" y="-25" font-family="Times,serif" font-size="14.00">2</text>
+<text text-anchor="middle" x="27" y="-8.2" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- Guy&#45;&gt;O1 -->
+<g id="edge1" class="edge">
+<title>Guy-&gt;O1</title>
+<path fill="none" stroke="black" d="M56.23,-94.55C50.2,-79.54 41.37,-57.57 35,-41.71"></path>
+<text text-anchor="middle" x="59.89" y="-63.8" font-family="Times,serif" font-size="14.00">Kill</text>
+</g>
+<!-- O2 -->
+<g id="node3" class="node">
+<title>O2</title>
+<text text-anchor="middle" x="99" y="-25" font-family="Times,serif" font-size="14.00">1</text>
+<text text-anchor="middle" x="99" y="-8.2" font-family="Times,serif" font-size="14.00">4</text>
+</g>
+<!-- Guy&#45;&gt;O2 -->
+<g id="edge2" class="edge">
+<title>Guy-&gt;O2</title>
+<path fill="none" stroke="black" d="M69.77,-94.55C75.8,-79.54 84.63,-57.57 91,-41.71"></path>
+<text text-anchor="middle" x="104.77" y="-63.8" font-family="Times,serif" font-size="14.00">Release</text>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="solving-the-kidnapping-game-step-2-1" class="slide level2">
+<h2>Solving the Kidnapping Game (step 2)</h2>
+<p>Let’s start at the end (bottom) of the game:</p>
+<ul>
+<li>If the ransom <strong>has not</strong> been paid, what should <span class="red">Guy</span> do?</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 134.53 138.40" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 134.4)">
+<title>D</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-134.4 130.53,-134.4 130.53,4 -4,4"></polygon>
+<!-- Guy -->
+<g id="node1" class="node">
+<title>Guy</title>
+<ellipse fill="none" stroke="red" cx="63" cy="-112.4" rx="27.84" ry="18"></ellipse>
+<text text-anchor="middle" x="63" y="-108.2" font-family="Times,serif" font-size="14.00">Guy</text>
+</g>
+<!-- O1 -->
+<g id="node2" class="node">
+<title>O1</title>
+<text text-anchor="middle" x="27" y="-25" font-family="Times,serif" font-size="14.00">2</text>
+<text text-anchor="middle" x="27" y="-8.2" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- Guy&#45;&gt;O1 -->
+<g id="edge1" class="edge">
+<title>Guy-&gt;O1</title>
+<path fill="none" stroke="black" d="M56.23,-94.55C51.33,-82.36 44.58,-65.57 38.81,-51.19"></path>
+<polygon fill="black" stroke="black" points="41.97,-49.68 35,-41.71 35.48,-52.29 41.97,-49.68"></polygon>
+<text text-anchor="middle" x="59.89" y="-63.8" font-family="Times,serif" font-size="14.00">Kill</text>
+</g>
+<!-- O2 -->
+<g id="node3" class="node">
+<title>O2</title>
+<text text-anchor="middle" x="99" y="-25" font-family="Times,serif" font-size="14.00">1</text>
+<text text-anchor="middle" x="99" y="-8.2" font-family="Times,serif" font-size="14.00">4</text>
+</g>
+<!-- Guy&#45;&gt;O2 -->
+<g id="edge2" class="edge">
+<title>Guy-&gt;O2</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M69.77,-94.55C75.8,-79.54 84.63,-57.57 91,-41.71"></path>
+<text text-anchor="middle" x="104.77" y="-63.8" font-family="Times,serif" font-size="14.00">Release</text>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="solving-the-kidnapping-game-step-3" class="slide level2">
+<h2>Solving the Kidnapping Game (step 3)</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>Now, let’s move one level up</p>
+<ul>
+<li><p>What should <span class="blue">Vivica</span> believe about <span class="red">Guy</span>’s actions if she <strong>pays</strong> vs <strong>does not pay</strong> the ransom?</p></li>
+<li><p>Which action should she take?</p></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 278.00 227.20" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 223.2)">
+<title>D</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-223.2 274,-223.2 274,4 -4,4"></polygon>
+<!-- GuyPay -->
+<g id="node1" class="node">
+<title>GuyPay</title>
+<ellipse fill="none" stroke="red" cx="98" cy="-112.4" rx="27.84" ry="18"></ellipse>
+<text text-anchor="middle" x="98" y="-108.2" font-family="Times,serif" font-size="14.00">Guy</text>
+</g>
+<!-- O1 -->
+<g id="node4" class="node">
+<title>O1</title>
+<text text-anchor="middle" x="27" y="-25" font-family="Times,serif" font-size="14.00">4</text>
+<text text-anchor="middle" x="27" y="-8.2" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- GuyPay&#45;&gt;O1 -->
+<g id="edge3" class="edge">
+<title>GuyPay-&gt;O1</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M85.63,-95.79C73.71,-80.75 55.63,-57.93 42.7,-41.62"></path>
+<text text-anchor="middle" x="79.89" y="-63.8" font-family="Times,serif" font-size="14.00">Kill</text>
+</g>
+<!-- O2 -->
+<g id="node5" class="node">
+<title>O2</title>
+<text text-anchor="middle" x="99" y="-25" font-family="Times,serif" font-size="14.00">5</text>
+<text text-anchor="middle" x="99" y="-8.2" font-family="Times,serif" font-size="14.00">3</text>
+</g>
+<!-- GuyPay&#45;&gt;O2 -->
+<g id="edge4" class="edge">
+<title>GuyPay-&gt;O2</title>
+<path fill="none" stroke="black" d="M98.19,-94.12C98.33,-82.13 98.51,-65.84 98.67,-51.75"></path>
+<polygon fill="black" stroke="black" points="102.17,-51.56 98.78,-41.52 95.17,-51.48 102.17,-51.56"></polygon>
+<text text-anchor="middle" x="120.77" y="-63.8" font-family="Times,serif" font-size="14.00">Release</text>
+</g>
+<!-- GuyNo -->
+<g id="node2" class="node">
+<title>GuyNo</title>
+<ellipse fill="none" stroke="red" cx="171" cy="-112.4" rx="27.84" ry="18"></ellipse>
+<text text-anchor="middle" x="171" y="-108.2" font-family="Times,serif" font-size="14.00">Guy</text>
+</g>
+<!-- O3 -->
+<g id="node6" class="node">
+<title>O3</title>
+<text text-anchor="middle" x="171" y="-25" font-family="Times,serif" font-size="14.00">2</text>
+<text text-anchor="middle" x="171" y="-8.2" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- GuyNo&#45;&gt;O3 -->
+<g id="edge5" class="edge">
+<title>GuyNo-&gt;O3</title>
+<path fill="none" stroke="black" d="M171,-94.12C171,-82.13 171,-65.84 171,-51.75"></path>
+<polygon fill="black" stroke="black" points="174.5,-51.52 171,-41.52 167.5,-51.52 174.5,-51.52"></polygon>
+<text text-anchor="middle" x="181.89" y="-63.8" font-family="Times,serif" font-size="14.00">Kill</text>
+</g>
+<!-- O4 -->
+<g id="node7" class="node">
+<title>O4</title>
+<text text-anchor="middle" x="243" y="-25" font-family="Times,serif" font-size="14.00">1</text>
+<text text-anchor="middle" x="243" y="-8.2" font-family="Times,serif" font-size="14.00">4</text>
+</g>
+<!-- GuyNo&#45;&gt;O4 -->
+<g id="edge6" class="edge">
+<title>GuyNo-&gt;O4</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M183.21,-96.2C195.33,-81.12 213.95,-57.95 227.19,-41.47"></path>
+<text text-anchor="middle" x="232.77" y="-63.8" font-family="Times,serif" font-size="14.00">Release</text>
+</g>
+<!-- Vivica -->
+<g id="node3" class="node">
+<title>Vivica</title>
+<ellipse fill="none" stroke="blue" cx="134" cy="-201.2" rx="36.56" ry="18"></ellipse>
+<text text-anchor="middle" x="134" y="-197" font-family="Times,serif" font-size="14.00">Vivica</text>
+</g>
+<!-- Vivica&#45;&gt;GuyPay -->
+<g id="edge1" class="edge">
+<title>Vivica-&gt;GuyPay</title>
+<path fill="none" stroke="black" d="M127.06,-183.46C120.68,-168.09 111.29,-145.44 104.92,-130.08"></path>
+<text text-anchor="middle" x="130.5" y="-152.6" font-family="Times,serif" font-size="14.00">Pay</text>
+</g>
+<!-- Vivica&#45;&gt;GuyNo -->
+<g id="edge2" class="edge">
+<title>Vivica-&gt;GuyNo</title>
+<path fill="none" stroke="black" d="M141.13,-183.46C147.69,-168.09 157.34,-145.44 163.89,-130.08"></path>
+<text text-anchor="middle" x="171.26" y="-152.6" font-family="Times,serif" font-size="14.00">Don't</text>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="solving-the-kidnapping-game-step-3-1" class="slide level2">
+<h2>Solving the Kidnapping Game (step 3)</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>Now, let’s move one level up</p>
+<ul>
+<li><p>What should <span class="blue">Vivica</span> believe about <span class="red">Guy</span>’s actions if she <strong>pays</strong> vs <strong>does not pay</strong> the ransom?</p></li>
+<li><p>Which action should she take?</p></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 278.00 227.20" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 223.2)">
+<title>D</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-223.2 274,-223.2 274,4 -4,4"></polygon>
+<!-- GuyPay -->
+<g id="node1" class="node">
+<title>GuyPay</title>
+<ellipse fill="none" stroke="red" cx="98" cy="-112.4" rx="27.84" ry="18"></ellipse>
+<text text-anchor="middle" x="98" y="-108.2" font-family="Times,serif" font-size="14.00">Guy</text>
+</g>
+<!-- O1 -->
+<g id="node4" class="node">
+<title>O1</title>
+<text text-anchor="middle" x="27" y="-25" font-family="Times,serif" font-size="14.00">4</text>
+<text text-anchor="middle" x="27" y="-8.2" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- GuyPay&#45;&gt;O1 -->
+<g id="edge3" class="edge">
+<title>GuyPay-&gt;O1</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M85.63,-95.79C73.71,-80.75 55.63,-57.93 42.7,-41.62"></path>
+<text text-anchor="middle" x="79.89" y="-63.8" font-family="Times,serif" font-size="14.00">Kill</text>
+</g>
+<!-- O2 -->
+<g id="node5" class="node">
+<title>O2</title>
+<text text-anchor="middle" x="99" y="-25" font-family="Times,serif" font-size="14.00">5</text>
+<text text-anchor="middle" x="99" y="-8.2" font-family="Times,serif" font-size="14.00">3</text>
+</g>
+<!-- GuyPay&#45;&gt;O2 -->
+<g id="edge4" class="edge">
+<title>GuyPay-&gt;O2</title>
+<path fill="none" stroke="black" d="M98.19,-94.12C98.33,-82.13 98.51,-65.84 98.67,-51.75"></path>
+<polygon fill="black" stroke="black" points="102.17,-51.56 98.78,-41.52 95.17,-51.48 102.17,-51.56"></polygon>
+<text text-anchor="middle" x="120.77" y="-63.8" font-family="Times,serif" font-size="14.00">Release</text>
+</g>
+<!-- GuyNo -->
+<g id="node2" class="node">
+<title>GuyNo</title>
+<ellipse fill="none" stroke="red" cx="171" cy="-112.4" rx="27.84" ry="18"></ellipse>
+<text text-anchor="middle" x="171" y="-108.2" font-family="Times,serif" font-size="14.00">Guy</text>
+</g>
+<!-- O3 -->
+<g id="node6" class="node">
+<title>O3</title>
+<text text-anchor="middle" x="171" y="-25" font-family="Times,serif" font-size="14.00">2</text>
+<text text-anchor="middle" x="171" y="-8.2" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- GuyNo&#45;&gt;O3 -->
+<g id="edge5" class="edge">
+<title>GuyNo-&gt;O3</title>
+<path fill="none" stroke="black" d="M171,-94.12C171,-82.13 171,-65.84 171,-51.75"></path>
+<polygon fill="black" stroke="black" points="174.5,-51.52 171,-41.52 167.5,-51.52 174.5,-51.52"></polygon>
+<text text-anchor="middle" x="181.89" y="-63.8" font-family="Times,serif" font-size="14.00">Kill</text>
+</g>
+<!-- O4 -->
+<g id="node7" class="node">
+<title>O4</title>
+<text text-anchor="middle" x="243" y="-25" font-family="Times,serif" font-size="14.00">1</text>
+<text text-anchor="middle" x="243" y="-8.2" font-family="Times,serif" font-size="14.00">4</text>
+</g>
+<!-- GuyNo&#45;&gt;O4 -->
+<g id="edge6" class="edge">
+<title>GuyNo-&gt;O4</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M183.21,-96.2C195.33,-81.12 213.95,-57.95 227.19,-41.47"></path>
+<text text-anchor="middle" x="232.77" y="-63.8" font-family="Times,serif" font-size="14.00">Release</text>
+</g>
+<!-- Vivica -->
+<g id="node3" class="node">
+<title>Vivica</title>
+<ellipse fill="none" stroke="blue" cx="134" cy="-201.2" rx="36.56" ry="18"></ellipse>
+<text text-anchor="middle" x="134" y="-197" font-family="Times,serif" font-size="14.00">Vivica</text>
+</g>
+<!-- Vivica&#45;&gt;GuyPay -->
+<g id="edge1" class="edge">
+<title>Vivica-&gt;GuyPay</title>
+<path fill="none" stroke="black" d="M127.06,-183.46C121.88,-170.98 114.71,-153.68 108.78,-139.4"></path>
+<polygon fill="black" stroke="black" points="111.98,-137.98 104.92,-130.08 105.52,-140.66 111.98,-137.98"></polygon>
+<text text-anchor="middle" x="130.5" y="-152.6" font-family="Times,serif" font-size="14.00">Pay</text>
+</g>
+<!-- Vivica&#45;&gt;GuyNo -->
+<g id="edge2" class="edge">
+<title>Vivica-&gt;GuyNo</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M141.13,-183.46C147.69,-168.09 157.34,-145.44 163.89,-130.08"></path>
+<text text-anchor="middle" x="171.26" y="-152.6" font-family="Times,serif" font-size="14.00">Don't</text>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="solving-the-kidnapping-game-step-4" class="slide level2">
+<h2>Solving the Kidnapping Game (step 4)</h2>
+<p>Now what will happen if:</p>
+<ul>
+<li>Guy is rational</li>
+<li>Vivica <em>believes</em> Guy is rational and is rational herself</li>
+<li><em>Guy believes</em> that Vivica believes that he is rational</li>
+</ul>
+</section>
+<section id="solving-the-kidnapping-game-step-4-1" class="slide level2">
+<h2>Solving the Kidnapping Game (step 4)</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 278.00 321.60" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 317.6)">
+<title>D</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-317.6 274,-317.6 274,4 -4,4"></polygon>
+<!-- GuyPay -->
+<g id="node1" class="node">
+<title>GuyPay</title>
+<ellipse fill="none" stroke="red" cx="98" cy="-112.4" rx="27.84" ry="18"></ellipse>
+<text text-anchor="middle" x="98" y="-108.2" font-family="Times,serif" font-size="14.00">Guy</text>
+</g>
+<!-- O1 -->
+<g id="node5" class="node">
+<title>O1</title>
+<text text-anchor="middle" x="27" y="-25" font-family="Times,serif" font-size="14.00">4</text>
+<text text-anchor="middle" x="27" y="-8.2" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- GuyPay&#45;&gt;O1 -->
+<g id="edge5" class="edge">
+<title>GuyPay-&gt;O1</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M85.63,-95.79C73.71,-80.75 55.63,-57.93 42.7,-41.62"></path>
+<text text-anchor="middle" x="79.89" y="-63.8" font-family="Times,serif" font-size="14.00">Kill</text>
+</g>
+<!-- O2 -->
+<g id="node6" class="node">
+<title>O2</title>
+<text text-anchor="middle" x="99" y="-25" font-family="Times,serif" font-size="14.00">5</text>
+<text text-anchor="middle" x="99" y="-8.2" font-family="Times,serif" font-size="14.00">3</text>
+</g>
+<!-- GuyPay&#45;&gt;O2 -->
+<g id="edge6" class="edge">
+<title>GuyPay-&gt;O2</title>
+<path fill="none" stroke="black" d="M98.19,-94.12C98.33,-82.13 98.51,-65.84 98.67,-51.75"></path>
+<polygon fill="black" stroke="black" points="102.17,-51.56 98.78,-41.52 95.17,-51.48 102.17,-51.56"></polygon>
+<text text-anchor="middle" x="120.77" y="-63.8" font-family="Times,serif" font-size="14.00">Release</text>
+</g>
+<!-- GuyNo -->
+<g id="node2" class="node">
+<title>GuyNo</title>
+<ellipse fill="none" stroke="red" cx="171" cy="-112.4" rx="27.84" ry="18"></ellipse>
+<text text-anchor="middle" x="171" y="-108.2" font-family="Times,serif" font-size="14.00">Guy</text>
+</g>
+<!-- O3 -->
+<g id="node7" class="node">
+<title>O3</title>
+<text text-anchor="middle" x="171" y="-25" font-family="Times,serif" font-size="14.00">2</text>
+<text text-anchor="middle" x="171" y="-8.2" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- GuyNo&#45;&gt;O3 -->
+<g id="edge7" class="edge">
+<title>GuyNo-&gt;O3</title>
+<path fill="none" stroke="black" d="M171,-94.12C171,-82.13 171,-65.84 171,-51.75"></path>
+<polygon fill="black" stroke="black" points="174.5,-51.52 171,-41.52 167.5,-51.52 174.5,-51.52"></polygon>
+<text text-anchor="middle" x="181.89" y="-63.8" font-family="Times,serif" font-size="14.00">Kill</text>
+</g>
+<!-- O4 -->
+<g id="node8" class="node">
+<title>O4</title>
+<text text-anchor="middle" x="243" y="-25" font-family="Times,serif" font-size="14.00">1</text>
+<text text-anchor="middle" x="243" y="-8.2" font-family="Times,serif" font-size="14.00">4</text>
+</g>
+<!-- GuyNo&#45;&gt;O4 -->
+<g id="edge8" class="edge">
+<title>GuyNo-&gt;O4</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M183.21,-96.2C195.33,-81.12 213.95,-57.95 227.19,-41.47"></path>
+<text text-anchor="middle" x="232.77" y="-63.8" font-family="Times,serif" font-size="14.00">Release</text>
+</g>
+<!-- Guy -->
+<g id="node3" class="node">
+<title>Guy</title>
+<ellipse fill="none" stroke="red" cx="175" cy="-295.6" rx="27.84" ry="18"></ellipse>
+<text text-anchor="middle" x="175" y="-291.4" font-family="Times,serif" font-size="14.00">Guy</text>
+</g>
+<!-- Vivica -->
+<g id="node4" class="node">
+<title>Vivica</title>
+<ellipse fill="none" stroke="blue" cx="134" cy="-204" rx="36.56" ry="18"></ellipse>
+<text text-anchor="middle" x="134" y="-199.8" font-family="Times,serif" font-size="14.00">Vivica</text>
+</g>
+<!-- Guy&#45;&gt;Vivica -->
+<g id="edge1" class="edge">
+<title>Guy-&gt;Vivica</title>
+<path fill="none" stroke="black" d="M164.01,-279.02C160.14,-273.11 155.97,-266.21 152.79,-259.6 148.55,-250.81 144.82,-240.8 141.83,-231.78"></path>
+<polygon fill="black" stroke="black" points="145.13,-230.61 138.76,-222.13 138.45,-232.72 145.13,-230.61"></polygon>
+<text text-anchor="middle" x="172.61" y="-247" font-family="Times,serif" font-size="14.00">Kidnap</text>
+</g>
+<!-- O5 -->
+<g id="node9" class="node">
+<title>O5</title>
+<text text-anchor="middle" x="216" y="-208.2" font-family="Times,serif" font-size="14.00">3</text>
+<text text-anchor="middle" x="216" y="-191.4" font-family="Times,serif" font-size="14.00">5</text>
+</g>
+<!-- Guy&#45;&gt;O5 -->
+<g id="edge2" class="edge">
+<title>Guy-&gt;O5</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M184.29,-278.42C187.51,-272.56 191.05,-265.85 194,-259.6 199.36,-248.23 204.64,-235.18 208.69,-224.69"></path>
+<text text-anchor="middle" x="216.26" y="-247" font-family="Times,serif" font-size="14.00">Don't</text>
+</g>
+<!-- Vivica&#45;&gt;GuyPay -->
+<g id="edge3" class="edge">
+<title>Vivica-&gt;GuyPay</title>
+<path fill="none" stroke="black" d="M127.23,-186.15C121.95,-173.01 114.52,-154.52 108.48,-139.48"></path>
+<polygon fill="black" stroke="black" points="111.72,-138.15 104.74,-130.18 105.22,-140.76 111.72,-138.15"></polygon>
+<text text-anchor="middle" x="129.5" y="-152.6" font-family="Times,serif" font-size="14.00">Pay</text>
+</g>
+<!-- Vivica&#45;&gt;GuyNo -->
+<g id="edge4" class="edge">
+<title>Vivica-&gt;GuyNo</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M140.96,-186.15C147.62,-170.03 157.59,-145.87 164.2,-129.87"></path>
+<text text-anchor="middle" x="170.26" y="-152.6" font-family="Times,serif" font-size="14.00">Don't</text>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="backwards-induction-intuitively" class="slide level2">
+<h2>Backwards Induction (intuitively)</h2>
+<p>Let’s outline the logical steps we used to solve this game:</p>
+<ul>
+<li class="fragment"><p>We were uncertain about what would happen in this game, because <span class="red">Vivica</span>’s optimal strategy depended on what <span class="blue">Guy</span> woud do</p></li>
+<li class="fragment"><p>But after Vivica has chosen, <span class="red">Guy</span> is the only player left and his action depends only on <em>his own preferences</em></p></li>
+<li class="fragment"><p>Knowing what <span class="red">Guy</span> would choose allowed us to find <span class="blue">Vivica</span>’s best response</p></li>
+<li class="fragment"><p>Knowing what <span class="blue">Vivica</span> would choose allowed us to find <span class="red">Guy</span>’s best response</p></li>
+</ul>
 </section>
 <section id="backwards-induction-defined" class="slide level2">
 <h2>Backwards Induction defined</h2>
@@ -919,28 +1389,6 @@ Dante Yasui
 </div>
 </div>
 <aside><ol class="aside-footnotes"><li id="fn4"><p>Dixit et al, pg 56</p></li><li id="fn5"><p>aka subgame perfect equilibrium</p></li></ol></aside></section>
-<section id="solving-the-kidnapping-game" class="slide level2">
-<h2>Solving the Kidnapping Game</h2>
-
-<img data-src="figures/kidnapgame.png" class="r-stretch"><aside class="notes">
-<ul>
-<li>If Vivica paid ransom, Guy would rather Release</li>
-<li>If Vivica didn’t pay, Guy would rather Kill</li>
-<li>Knowing this, Vivica would Pay to avoid Orland being killed</li>
-<li>Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
 <section id="kidnapping-game-solution" class="slide level2">
 <h2>Kidnapping Game Solution</h2>
 <p>The <span class="h">Rollback Equilibrium</span> is:</p>
@@ -952,7 +1400,628 @@ Dante Yasui
 <li class="fragment"><p>Guy <span class="red">Kidnaps</span> and will <span class="red">Release</span> if Vivica <span class="blue">Pays</span>, but will <span class="red">Kill</span> if Vivica <span class="blue">Doesn’t Pay</span></p></li>
 <li class="fragment"><p>Vivica <span class="blue">Pays</span> the ransom</p></li>
 </ul>
-</section></section>
+</section>
+<section id="subgame-perfect-nash-equilibrium" class="slide level2">
+<h2>Subgame perfect Nash equilibrium</h2>
+<p>Another term for the <span class="hi">rollback solution</span> is <span class="hi">subgame perfect Nash equilibrium</span></p>
+<ul>
+<li><p>Don’t worry too much about the Nash part (we will revisit)</p></li>
+<li><p>A <span class="hi">subgame</span> refers to the way we broke up the larger game into smaller ones</p></li>
+</ul>
+</section>
+<section id="extensive-form-survivor-flags" class="slide level2">
+<h2>Extensive Form Survivor Flags</h2>
+<p>Let’s consider a simplified version of the <a href="../../activities/02SurvivorFlags/SurvivorFlags.html">Survivor Flags game</a>:</p>
+<ul>
+<li><p>Instead of 21 total flags, suppose there are only 5.</p></li>
+<li><p>Instead of picking 1, 2, or 3, teams can only take 1 or 2 flags at a time.</p></li>
+</ul>
+<div class="fragment">
+<p>How would we represent the <span class="hi">game tree</span>?</p>
+</div>
+</section>
+<section id="extensive-form-survivor-flags-1" class="slide level2">
+<h2>Extensive Form Survivor Flags</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 484.00 416.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 412)">
+<title>D</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-412 480,-412 480,4 -4,4"></polygon>
+<!-- A1 -->
+<g id="node1" class="node">
+<title>A1</title>
+<ellipse fill="none" stroke="red" cx="305" cy="-390" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="305" y="-385.8" font-family="Times,serif" font-size="14.00">Team 1</text>
+</g>
+<!-- B1 -->
+<g id="node5" class="node">
+<title>B1</title>
+<ellipse fill="none" stroke="blue" cx="256" cy="-301.2" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="256" y="-297" font-family="Times,serif" font-size="14.00">Team 2</text>
+</g>
+<!-- A1&#45;&gt;B1 -->
+<g id="edge1" class="edge">
+<title>A1-&gt;B1</title>
+<path fill="none" stroke="black" d="M295.55,-372.26C286.88,-356.89 274.09,-334.24 265.42,-318.88"></path>
+<text text-anchor="middle" x="288.5" y="-341.4" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- B2 -->
+<g id="node6" class="node">
+<title>B2</title>
+<ellipse fill="none" stroke="blue" cx="364" cy="-301.2" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="364" y="-297" font-family="Times,serif" font-size="14.00">Team 2</text>
+</g>
+<!-- A1&#45;&gt;B2 -->
+<g id="edge10" class="edge">
+<title>A1-&gt;B2</title>
+<path fill="none" stroke="black" d="M316.1,-372.67C326.58,-357.25 342.22,-334.24 352.75,-318.75"></path>
+<text text-anchor="middle" x="343.5" y="-341.4" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- A2 -->
+<g id="node2" class="node">
+<title>A2</title>
+<ellipse fill="none" stroke="red" cx="148" cy="-209.6" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="148" y="-205.4" font-family="Times,serif" font-size="14.00">Team 1</text>
+</g>
+<!-- B3 -->
+<g id="node7" class="node">
+<title>B3</title>
+<ellipse fill="none" stroke="blue" cx="63" cy="-115.2" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="63" y="-111" font-family="Times,serif" font-size="14.00">Team 2</text>
+</g>
+<!-- A2&#45;&gt;B3 -->
+<g id="edge3" class="edge">
+<title>A2-&gt;B3</title>
+<path fill="none" stroke="black" d="M133.19,-192.51C117.59,-175.55 93.17,-149 77.64,-132.11"></path>
+<text text-anchor="middle" x="117.5" y="-158.2" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- O3 -->
+<g id="node13" class="node">
+<title>O3</title>
+<text text-anchor="middle" x="148" y="-119.4" font-family="Times,serif" font-size="14.00">0 </text>
+<text text-anchor="middle" x="148" y="-102.6" font-family="Times,serif" font-size="14.00"> 1</text>
+</g>
+<!-- A2&#45;&gt;O3 -->
+<g id="edge6" class="edge">
+<title>A2-&gt;O3</title>
+<path fill="none" stroke="black" d="M148,-191.22C148,-175.54 148,-152.48 148,-136.07"></path>
+<text text-anchor="middle" x="151.5" y="-158.2" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- A3 -->
+<g id="node3" class="node">
+<title>A3</title>
+<ellipse fill="none" stroke="red" cx="256" cy="-209.6" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="256" y="-205.4" font-family="Times,serif" font-size="14.00">Team 1</text>
+</g>
+<!-- O5 -->
+<g id="node9" class="node">
+<title>O5</title>
+<text text-anchor="middle" x="220" y="-119.4" font-family="Times,serif" font-size="14.00">1 </text>
+<text text-anchor="middle" x="220" y="-102.6" font-family="Times,serif" font-size="14.00"> 0</text>
+</g>
+<!-- A3&#45;&gt;O5 -->
+<g id="edge9" class="edge">
+<title>A3-&gt;O5</title>
+<path fill="none" stroke="black" d="M249.4,-191.65C243.27,-175.92 234.14,-152.49 227.69,-135.93"></path>
+<text text-anchor="middle" x="245.5" y="-158.2" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- O4 -->
+<g id="node14" class="node">
+<title>O4</title>
+<text text-anchor="middle" x="292" y="-119.4" font-family="Times,serif" font-size="14.00">0 </text>
+<text text-anchor="middle" x="292" y="-102.6" font-family="Times,serif" font-size="14.00"> 1</text>
+</g>
+<!-- A3&#45;&gt;O4 -->
+<g id="edge8" class="edge">
+<title>A3-&gt;O4</title>
+<path fill="none" stroke="black" d="M262.6,-191.65C268.73,-175.92 277.86,-152.49 284.31,-135.93"></path>
+<text text-anchor="middle" x="281.5" y="-158.2" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- A4 -->
+<g id="node4" class="node">
+<title>A4</title>
+<ellipse fill="none" stroke="red" cx="364" cy="-209.6" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="364" y="-205.4" font-family="Times,serif" font-size="14.00">Team 1</text>
+</g>
+<!-- O7 -->
+<g id="node10" class="node">
+<title>O7</title>
+<text text-anchor="middle" x="364" y="-119.4" font-family="Times,serif" font-size="14.00">1 </text>
+<text text-anchor="middle" x="364" y="-102.6" font-family="Times,serif" font-size="14.00"> 0</text>
+</g>
+<!-- A4&#45;&gt;O7 -->
+<g id="edge13" class="edge">
+<title>A4-&gt;O7</title>
+<path fill="none" stroke="black" d="M364,-191.22C364,-175.54 364,-152.48 364,-136.07"></path>
+<text text-anchor="middle" x="367.5" y="-158.2" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- O6 -->
+<g id="node15" class="node">
+<title>O6</title>
+<text text-anchor="middle" x="436" y="-119.4" font-family="Times,serif" font-size="14.00">0 </text>
+<text text-anchor="middle" x="436" y="-102.6" font-family="Times,serif" font-size="14.00"> 1</text>
+</g>
+<!-- A4&#45;&gt;O6 -->
+<g id="edge12" class="edge">
+<title>A4-&gt;O6</title>
+<path fill="none" stroke="black" d="M376.87,-192.08C389.09,-176.4 407.46,-152.82 420.48,-136.11"></path>
+<text text-anchor="middle" x="410.5" y="-158.2" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- B1&#45;&gt;A2 -->
+<g id="edge2" class="edge">
+<title>B1-&gt;A2</title>
+<path fill="none" stroke="black" d="M237.68,-285C217.82,-268.52 186.31,-242.38 166.41,-225.87"></path>
+<text text-anchor="middle" x="215.5" y="-252.6" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- B1&#45;&gt;A3 -->
+<g id="edge7" class="edge">
+<title>B1-&gt;A3</title>
+<path fill="none" stroke="black" d="M256,-282.92C256,-267.06 256,-243.67 256,-227.82"></path>
+<text text-anchor="middle" x="259.5" y="-252.6" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- B2&#45;&gt;A4 -->
+<g id="edge11" class="edge">
+<title>B2-&gt;A4</title>
+<path fill="none" stroke="black" d="M364,-282.92C364,-267.06 364,-243.67 364,-227.82"></path>
+<text text-anchor="middle" x="367.5" y="-252.6" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- O8 -->
+<g id="node11" class="node">
+<title>O8</title>
+<text text-anchor="middle" x="449" y="-213.8" font-family="Times,serif" font-size="14.00">1 </text>
+<text text-anchor="middle" x="449" y="-197" font-family="Times,serif" font-size="14.00"> 0</text>
+</g>
+<!-- B2&#45;&gt;O8 -->
+<g id="edge14" class="edge">
+<title>B2-&gt;O8</title>
+<path fill="none" stroke="black" d="M379.2,-284.18C393.52,-269.08 415.02,-246.41 430.38,-230.23"></path>
+<text text-anchor="middle" x="415.5" y="-252.6" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- O1 -->
+<g id="node8" class="node">
+<title>O1</title>
+<text text-anchor="middle" x="27" y="-25" font-family="Times,serif" font-size="14.00">1 </text>
+<text text-anchor="middle" x="27" y="-8.2" font-family="Times,serif" font-size="14.00"> 0</text>
+</g>
+<!-- B3&#45;&gt;O1 -->
+<g id="edge4" class="edge">
+<title>B3-&gt;O1</title>
+<path fill="none" stroke="black" d="M56.4,-97.25C50.27,-81.52 41.14,-58.09 34.69,-41.53"></path>
+<text text-anchor="middle" x="52.5" y="-63.8" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- O2 -->
+<g id="node12" class="node">
+<title>O2</title>
+<text text-anchor="middle" x="99" y="-25" font-family="Times,serif" font-size="14.00">0 </text>
+<text text-anchor="middle" x="99" y="-8.2" font-family="Times,serif" font-size="14.00"> 1</text>
+</g>
+<!-- B3&#45;&gt;O2 -->
+<g id="edge5" class="edge">
+<title>B3-&gt;O2</title>
+<path fill="none" stroke="black" d="M69.6,-97.25C75.73,-81.52 84.86,-58.09 91.31,-41.53"></path>
+<text text-anchor="middle" x="88.5" y="-63.8" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>Try out our new method of <span class="hi">backwards induction</span></li>
+</ul>
+</div>
+</section>
+<section id="solving-the-simplified-survivor-flags" class="slide level2">
+<h2>Solving the simplified Survivor Flags</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>Let’s take a look at the subgame after <span class="red">Team 1</span> and <span class="blue">Team 2</span> have each taken 1 flag:</p>
+<ul>
+<li>What do you notice?</li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 183.00 410.40" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 406.4)">
+<title>D</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-406.4 179,-406.4 179,4 -4,4"></polygon>
+<!-- A1 -->
+<g id="node1" class="node">
+<title>A1</title>
+<ellipse fill="none" stroke="red" cx="126" cy="-384.4" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="126" y="-380.2" font-family="Times,serif" font-size="14.00">Team 1</text>
+</g>
+<!-- B1 -->
+<g id="node3" class="node">
+<title>B1</title>
+<ellipse fill="none" stroke="blue" cx="126" cy="-295.6" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="126" y="-291.4" font-family="Times,serif" font-size="14.00">Team 2</text>
+</g>
+<!-- A1&#45;&gt;B1 -->
+<g id="edge1" class="edge">
+<title>A1-&gt;B1</title>
+<path fill="none" stroke="black" d="M126,-366.25C126,-351.03 126,-328.92 126,-313.71"></path>
+<text text-anchor="middle" x="129.5" y="-335.8" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- A2 -->
+<g id="node2" class="node">
+<title>A2</title>
+<ellipse fill="none" stroke="red" cx="126" cy="-206.8" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="126" y="-202.6" font-family="Times,serif" font-size="14.00">Team 1</text>
+</g>
+<!-- B3 -->
+<g id="node4" class="node">
+<title>B3</title>
+<ellipse fill="none" stroke="blue" cx="63" cy="-115.2" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="63" y="-111" font-family="Times,serif" font-size="14.00">Team 2</text>
+</g>
+<!-- A2&#45;&gt;B3 -->
+<g id="edge3" class="edge">
+<title>A2-&gt;B3</title>
+<path fill="none" stroke="black" d="M114.44,-189.37C103.08,-173.2 85.82,-148.66 74.48,-132.53"></path>
+<text text-anchor="middle" x="104.5" y="-158.2" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- O3 -->
+<g id="node7" class="node">
+<title>O3</title>
+<text text-anchor="middle" x="148" y="-119.4" font-family="Times,serif" font-size="14.00">0 </text>
+<text text-anchor="middle" x="148" y="-102.6" font-family="Times,serif" font-size="14.00"> 1</text>
+</g>
+<!-- A2&#45;&gt;O3 -->
+<g id="edge6" class="edge">
+<title>A2-&gt;O3</title>
+<path fill="none" stroke="black" d="M130.24,-188.52C133.94,-173.47 139.3,-151.65 143.16,-135.92"></path>
+<text text-anchor="middle" x="141.5" y="-158.2" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- B1&#45;&gt;A2 -->
+<g id="edge2" class="edge">
+<title>B1-&gt;A2</title>
+<path fill="none" stroke="black" d="M126,-277.45C126,-262.23 126,-240.12 126,-224.91"></path>
+<text text-anchor="middle" x="129.5" y="-247" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- O1 -->
+<g id="node5" class="node">
+<title>O1</title>
+<text text-anchor="middle" x="27" y="-25" font-family="Times,serif" font-size="14.00">1 </text>
+<text text-anchor="middle" x="27" y="-8.2" font-family="Times,serif" font-size="14.00"> 0</text>
+</g>
+<!-- B3&#45;&gt;O1 -->
+<g id="edge4" class="edge">
+<title>B3-&gt;O1</title>
+<path fill="none" stroke="black" d="M56.4,-97.25C50.27,-81.52 41.14,-58.09 34.69,-41.53"></path>
+<text text-anchor="middle" x="52.5" y="-63.8" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- O2 -->
+<g id="node6" class="node">
+<title>O2</title>
+<text text-anchor="middle" x="99" y="-25" font-family="Times,serif" font-size="14.00">0 </text>
+<text text-anchor="middle" x="99" y="-8.2" font-family="Times,serif" font-size="14.00"> 1</text>
+</g>
+<!-- B3&#45;&gt;O2 -->
+<g id="edge5" class="edge">
+<title>B3-&gt;O2</title>
+<path fill="none" stroke="black" d="M69.6,-97.25C75.73,-81.52 84.86,-58.09 91.31,-41.53"></path>
+<text text-anchor="middle" x="88.5" y="-63.8" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="solving-the-simplified-survivor-flags-1" class="slide level2">
+<h2>Solving the simplified Survivor Flags</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><span class="red">Team 1</span> is <strong>indifferent</strong> between taking 1 or 2 flags.</p>
+<ul>
+<li>This allows for <span class="hi">multiple equilibria</span></li>
+</ul>
+</div><div class="column" style="width:70%;">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 183.00 232.80" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 228.8)">
+<title>D</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-228.8 179,-228.8 179,4 -4,4"></polygon>
+<!-- A2 -->
+<g id="node1" class="node">
+<title>A2</title>
+<ellipse fill="none" stroke="red" cx="126" cy="-206.8" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="126" y="-202.6" font-family="Times,serif" font-size="14.00">Team 1</text>
+</g>
+<!-- B3 -->
+<g id="node2" class="node">
+<title>B3</title>
+<ellipse fill="none" stroke="blue" cx="63" cy="-115.2" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="63" y="-111" font-family="Times,serif" font-size="14.00">Team 2</text>
+</g>
+<!-- A2&#45;&gt;B3 -->
+<g id="edge1" class="edge">
+<title>A2-&gt;B3</title>
+<path fill="none" stroke="black" d="M114.44,-189.37C104.94,-175.85 91.33,-156.49 80.49,-141.07"></path>
+<polygon fill="black" stroke="black" points="83.1,-138.7 74.48,-132.53 77.37,-142.72 83.1,-138.7"></polygon>
+<text text-anchor="middle" x="104.5" y="-158.2" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- O3 -->
+<g id="node5" class="node">
+<title>O3</title>
+<polygon fill="none" stroke="black" points="175,-135.8 121,-135.8 121,-94.6 175,-94.6 175,-135.8"></polygon>
+<text text-anchor="middle" x="148" y="-119.4" font-family="Times,serif" font-size="14.00">0 </text>
+<text text-anchor="middle" x="148" y="-102.6" font-family="Times,serif" font-size="14.00"> 1</text>
+</g>
+<!-- A2&#45;&gt;O3 -->
+<g id="edge4" class="edge">
+<title>A2-&gt;O3</title>
+<path fill="none" stroke="black" d="M130.24,-188.52C133.22,-176.41 137.27,-159.92 140.75,-145.74"></path>
+<polygon fill="black" stroke="black" points="144.17,-146.46 143.16,-135.92 137.37,-144.8 144.17,-146.46"></polygon>
+<text text-anchor="middle" x="141.5" y="-158.2" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- O1 -->
+<g id="node3" class="node">
+<title>O1</title>
+<text text-anchor="middle" x="27" y="-25" font-family="Times,serif" font-size="14.00">1 </text>
+<text text-anchor="middle" x="27" y="-8.2" font-family="Times,serif" font-size="14.00"> 0</text>
+</g>
+<!-- B3&#45;&gt;O1 -->
+<g id="edge2" class="edge">
+<title>B3-&gt;O1</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M56.4,-97.25C50.27,-81.52 41.14,-58.09 34.69,-41.53"></path>
+<text text-anchor="middle" x="52.5" y="-63.8" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- O2 -->
+<g id="node4" class="node">
+<title>O2</title>
+<polygon fill="none" stroke="black" points="126,-41.4 72,-41.4 72,-0.2 126,-0.2 126,-41.4"></polygon>
+<text text-anchor="middle" x="99" y="-25" font-family="Times,serif" font-size="14.00">0 </text>
+<text text-anchor="middle" x="99" y="-8.2" font-family="Times,serif" font-size="14.00"> 1</text>
+</g>
+<!-- B3&#45;&gt;O2 -->
+<g id="edge3" class="edge">
+<title>B3-&gt;O2</title>
+<path fill="none" stroke="black" d="M69.6,-97.25C74.63,-84.35 81.68,-66.26 87.61,-51.04"></path>
+<polygon fill="black" stroke="black" points="90.95,-52.11 91.31,-41.53 84.42,-49.57 90.95,-52.11"></polygon>
+<text text-anchor="middle" x="88.5" y="-63.8" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="extensive-form-survivor-flags-2" class="slide level2">
+<h2>Extensive Form Survivor Flags</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="480" viewbox="0.00 0.00 484.00 416.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 412)">
+<title>D</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-412 480,-412 480,4 -4,4"></polygon>
+<!-- A1 -->
+<g id="node1" class="node">
+<title>A1</title>
+<ellipse fill="none" stroke="red" cx="305" cy="-390" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="305" y="-385.8" font-family="Times,serif" font-size="14.00">Team 1</text>
+</g>
+<!-- B1 -->
+<g id="node5" class="node">
+<title>B1</title>
+<ellipse fill="none" stroke="blue" cx="256" cy="-301.2" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="256" y="-297" font-family="Times,serif" font-size="14.00">Team 2</text>
+</g>
+<!-- A1&#45;&gt;B1 -->
+<g id="edge1" class="edge">
+<title>A1-&gt;B1</title>
+<path fill="none" stroke="black" d="M295.55,-372.26C288.43,-359.66 278.55,-342.15 270.44,-327.78"></path>
+<polygon fill="black" stroke="black" points="273.38,-325.87 265.42,-318.88 267.29,-329.31 273.38,-325.87"></polygon>
+<text text-anchor="middle" x="288.5" y="-341.4" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- B2 -->
+<g id="node6" class="node">
+<title>B2</title>
+<ellipse fill="none" stroke="blue" cx="364" cy="-301.2" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="364" y="-297" font-family="Times,serif" font-size="14.00">Team 2</text>
+</g>
+<!-- A1&#45;&gt;B2 -->
+<g id="edge10" class="edge">
+<title>A1-&gt;B2</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M316.1,-372.67C326.58,-357.25 342.22,-334.24 352.75,-318.75"></path>
+<text text-anchor="middle" x="343.5" y="-341.4" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- A2 -->
+<g id="node2" class="node">
+<title>A2</title>
+<ellipse fill="none" stroke="red" cx="148" cy="-209.6" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="148" y="-205.4" font-family="Times,serif" font-size="14.00">Team 1</text>
+</g>
+<!-- B3 -->
+<g id="node7" class="node">
+<title>B3</title>
+<ellipse fill="none" stroke="blue" cx="63" cy="-115.2" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="63" y="-111" font-family="Times,serif" font-size="14.00">Team 2</text>
+</g>
+<!-- A2&#45;&gt;B3 -->
+<g id="edge3" class="edge">
+<title>A2-&gt;B3</title>
+<path fill="none" stroke="black" d="M133.19,-192.51C119.79,-177.93 99.87,-156.28 84.67,-139.76"></path>
+<polygon fill="black" stroke="black" points="86.98,-137.1 77.64,-132.11 81.83,-141.84 86.98,-137.1"></polygon>
+<text text-anchor="middle" x="117.5" y="-158.2" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- O3 -->
+<g id="node13" class="node">
+<title>O3</title>
+<text text-anchor="middle" x="148" y="-119.4" font-family="Times,serif" font-size="14.00">0 </text>
+<text text-anchor="middle" x="148" y="-102.6" font-family="Times,serif" font-size="14.00"> 1</text>
+</g>
+<!-- A2&#45;&gt;O3 -->
+<g id="edge6" class="edge">
+<title>A2-&gt;O3</title>
+<path fill="none" stroke="black" d="M148,-191.22C148,-178.6 148,-161.2 148,-146.34"></path>
+<polygon fill="black" stroke="black" points="151.5,-146.07 148,-136.07 144.5,-146.07 151.5,-146.07"></polygon>
+<text text-anchor="middle" x="151.5" y="-158.2" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- A3 -->
+<g id="node3" class="node">
+<title>A3</title>
+<ellipse fill="none" stroke="red" cx="256" cy="-209.6" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="256" y="-205.4" font-family="Times,serif" font-size="14.00">Team 1</text>
+</g>
+<!-- O5 -->
+<g id="node9" class="node">
+<title>O5</title>
+<text text-anchor="middle" x="220" y="-119.4" font-family="Times,serif" font-size="14.00">1 </text>
+<text text-anchor="middle" x="220" y="-102.6" font-family="Times,serif" font-size="14.00"> 0</text>
+</g>
+<!-- A3&#45;&gt;O5 -->
+<g id="edge9" class="edge">
+<title>A3-&gt;O5</title>
+<path fill="none" stroke="black" d="M249.4,-191.65C244.37,-178.75 237.32,-160.66 231.39,-145.44"></path>
+<polygon fill="black" stroke="black" points="234.58,-143.97 227.69,-135.93 228.05,-146.51 234.58,-143.97"></polygon>
+<text text-anchor="middle" x="245.5" y="-158.2" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- O4 -->
+<g id="node14" class="node">
+<title>O4</title>
+<text text-anchor="middle" x="292" y="-119.4" font-family="Times,serif" font-size="14.00">0 </text>
+<text text-anchor="middle" x="292" y="-102.6" font-family="Times,serif" font-size="14.00"> 1</text>
+</g>
+<!-- A3&#45;&gt;O4 -->
+<g id="edge8" class="edge">
+<title>A3-&gt;O4</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M262.6,-191.65C268.73,-175.92 277.86,-152.49 284.31,-135.93"></path>
+<text text-anchor="middle" x="281.5" y="-158.2" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- A4 -->
+<g id="node4" class="node">
+<title>A4</title>
+<ellipse fill="none" stroke="red" cx="364" cy="-209.6" rx="40.03" ry="18"></ellipse>
+<text text-anchor="middle" x="364" y="-205.4" font-family="Times,serif" font-size="14.00">Team 1</text>
+</g>
+<!-- O7 -->
+<g id="node10" class="node">
+<title>O7</title>
+<text text-anchor="middle" x="364" y="-119.4" font-family="Times,serif" font-size="14.00">1 </text>
+<text text-anchor="middle" x="364" y="-102.6" font-family="Times,serif" font-size="14.00"> 0</text>
+</g>
+<!-- A4&#45;&gt;O7 -->
+<g id="edge13" class="edge">
+<title>A4-&gt;O7</title>
+<path fill="none" stroke="black" d="M364,-191.22C364,-178.6 364,-161.2 364,-146.34"></path>
+<polygon fill="black" stroke="black" points="367.5,-146.07 364,-136.07 360.5,-146.07 367.5,-146.07"></polygon>
+<text text-anchor="middle" x="367.5" y="-158.2" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- O6 -->
+<g id="node15" class="node">
+<title>O6</title>
+<text text-anchor="middle" x="436" y="-119.4" font-family="Times,serif" font-size="14.00">0 </text>
+<text text-anchor="middle" x="436" y="-102.6" font-family="Times,serif" font-size="14.00"> 1</text>
+</g>
+<!-- A4&#45;&gt;O6 -->
+<g id="edge12" class="edge">
+<title>A4-&gt;O6</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M376.87,-192.08C389.09,-176.4 407.46,-152.82 420.48,-136.11"></path>
+<text text-anchor="middle" x="410.5" y="-158.2" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- B1&#45;&gt;A2 -->
+<g id="edge2" class="edge">
+<title>B1-&gt;A2</title>
+<path fill="none" stroke="black" d="M237.68,-285C220.22,-270.52 193.77,-248.57 174.11,-232.26"></path>
+<polygon fill="black" stroke="black" points="176.34,-229.57 166.41,-225.87 171.87,-234.95 176.34,-229.57"></polygon>
+<text text-anchor="middle" x="215.5" y="-252.6" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- B1&#45;&gt;A3 -->
+<g id="edge7" class="edge">
+<title>B1-&gt;A3</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M256,-282.92C256,-267.06 256,-243.67 256,-227.82"></path>
+<text text-anchor="middle" x="259.5" y="-252.6" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- B2&#45;&gt;A4 -->
+<g id="edge11" class="edge">
+<title>B2-&gt;A4</title>
+<path fill="none" stroke="black" d="M364,-282.92C364,-270.16 364,-252.52 364,-237.86"></path>
+<polygon fill="black" stroke="black" points="367.5,-237.82 364,-227.82 360.5,-237.82 367.5,-237.82"></polygon>
+<text text-anchor="middle" x="367.5" y="-252.6" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- O8 -->
+<g id="node11" class="node">
+<title>O8</title>
+<text text-anchor="middle" x="449" y="-213.8" font-family="Times,serif" font-size="14.00">1 </text>
+<text text-anchor="middle" x="449" y="-197" font-family="Times,serif" font-size="14.00"> 0</text>
+</g>
+<!-- B2&#45;&gt;O8 -->
+<g id="edge14" class="edge">
+<title>B2-&gt;O8</title>
+<path fill="none" stroke="black" d="M379.2,-284.18C391.4,-271.32 408.8,-252.98 423.18,-237.82"></path>
+<polygon fill="black" stroke="black" points="426.03,-239.9 430.38,-230.23 420.95,-235.08 426.03,-239.9"></polygon>
+<text text-anchor="middle" x="415.5" y="-252.6" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- O1 -->
+<g id="node8" class="node">
+<title>O1</title>
+<text text-anchor="middle" x="27" y="-25" font-family="Times,serif" font-size="14.00">1 </text>
+<text text-anchor="middle" x="27" y="-8.2" font-family="Times,serif" font-size="14.00"> 0</text>
+</g>
+<!-- B3&#45;&gt;O1 -->
+<g id="edge4" class="edge">
+<title>B3-&gt;O1</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M56.4,-97.25C50.27,-81.52 41.14,-58.09 34.69,-41.53"></path>
+<text text-anchor="middle" x="52.5" y="-63.8" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- O2 -->
+<g id="node12" class="node">
+<title>O2</title>
+<text text-anchor="middle" x="99" y="-25" font-family="Times,serif" font-size="14.00">0 </text>
+<text text-anchor="middle" x="99" y="-8.2" font-family="Times,serif" font-size="14.00"> 1</text>
+</g>
+<!-- B3&#45;&gt;O2 -->
+<g id="edge5" class="edge">
+<title>B3-&gt;O2</title>
+<path fill="none" stroke="black" d="M69.6,-97.25C74.63,-84.35 81.68,-66.26 87.61,-51.04"></path>
+<polygon fill="black" stroke="black" points="90.95,-52.11 91.31,-41.53 84.42,-49.57 90.95,-52.11"></polygon>
+<text text-anchor="middle" x="88.5" y="-63.8" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="three-new-concepts" class="slide level2">
+<h2>Three new concepts</h2>
+<ol type="1">
+<li><p>A list of <em>available strategies</em> for each player <sup>1</sup></p></li>
+<li><p>An <em>optimal strategy</em> for each player</p>
+<ul>
+<li>A complete plan of action states a player’s best choice at each node where she <em>could</em> make a decision <sup>2</sup></li>
+</ul></li>
+<li><p>The path of play in <span class="hi">rollback equilibrium</span> which combines optimal strategies for all players</p></li>
+</ol>
+<aside><ol class="aside-footnotes"><li id="fn6"><p>could be very long</p></li><li id="fn7"><p>even if never reached in equilibrium</p></li></ol></aside></section></section>
 <section>
 <section id="adding-more-players" class="title-slide slide level1 center">
 <h1>Adding more players</h1>
@@ -960,6 +2029,7 @@ Dante Yasui
 </section>
 <section id="player-planting-game" class="slide level2">
 <h2>3-player planting game</h2>
+<p>From the textbook:</p>
 <ul>
 <li class="fragment"><p><span class="hi">Emily</span>, <span class="hi">Nina</span>, and <span class="hi">Talia</span> are roommates who want to get a start on their communal garden.</p></li>
 <li class="fragment"><p>They like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.</p></li>
@@ -1085,18 +2155,10 @@ Dante Yasui
 <ul>
 <li>{ <span class="hi">D</span><sup>1</sup>, <span class="hi">DC</span><sup>2</sup>, <span class="hi">DCCD</span><sup>3</sup> }</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn6"><p>Emily</p></li><li id="fn7"><p>Nina</p></li><li id="fn8"><p>Talia</p></li></ol></aside></section>
-<section id="three-new-concepts" class="slide level2">
-<h2>Three new concepts</h2>
-<ol type="1">
-<li><p>A list of <em>available strategies</em> for each player <sup>1</sup></p></li>
-<li><p>An <em>optimal strategy</em> for each player</p>
-<ul>
-<li>A complete plan of action states a player’s best choice at each node where she <em>could</em> make a decision <sup>2</sup></li>
-</ul></li>
-<li><p>The path of play in <span class="hi">rollback equilibrium</span> which combines optimal strategies for all players</p></li>
-</ol>
-<aside><ol class="aside-footnotes"><li id="fn9"><p>could be very long</p></li><li id="fn10"><p>even if never reached in equilibrium</p></li></ol></aside></section></section>
+<aside><ol class="aside-footnotes"><li id="fn8"><p>Emily</p></li><li id="fn9"><p>Nina</p></li><li id="fn10"><p>Talia</p></li></ol></aside></section>
+<section class="slide level2">
+
+</section></section>
 <section>
 <section id="welfare-and-efficiency" class="title-slide slide level1 center">
 <h1>Welfare and Efficiency</h1>
@@ -1272,199 +2334,7 @@ Dante Yasui
 <li class="fragment"><p>Understanding simpler games can help you develop intuition for solving more complicated ones</p></li>
 <li class="fragment"><p>Complicated games can be decomposed into smaller parts where solving is easier</p></li>
 </ul>
-</section></section>
-<section>
-<section id="examples" class="title-slide slide level1 center">
-<h1>Examples</h1>
-
-</section>
-<section id="lawmakers-game" class="slide level2">
-<h2>Lawmakers’ Game <sup>1</sup></h2>
-<blockquote>
-<p>Two distinct proposals, A and B, are being debated in Washington. Congress likes proposal A, and the president likes proposal B.</p>
-</blockquote>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Outcome</th>
-<th>Congress</th>
-<th>President</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>A becomes law</td>
-<td>4</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>B becomes law</td>
-<td>1</td>
-<td>4</td>
-</tr>
-<tr class="odd">
-<td>Both A and B become law</td>
-<td>3</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td>Neither (status quo prevails)</td>
-<td>2</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<aside><ol class="aside-footnotes"><li id="fn11"><p>Dixit Chapter 3: question U4</p></li></ol></aside></section>
-<section id="lawmakers-game-1" class="slide level2">
-<h2>Lawmakers’ Game <sup>1</sup></h2>
-<blockquote>
-<p>The moves in the game are as follows. First, Congress decides whether to pass a bill and whether the bill is to contain A or B or both. Then the president decides whether to sign or veto the bill. Congress does not have enough votes to override a veto. Draw a tree for this game and find the rollback equilibrium.</p>
-</blockquote>
-<aside><ol class="aside-footnotes"><li id="fn12"><p>Dixit Chapter 3: question U4</p></li></ol></aside></section>
-<section id="lawmakers-game-2" class="slide level2">
-<h2>Lawmakers’ Game <sup>1</sup></h2>
-<blockquote>
-<p>Now suppose the rules of the game are changed in only one respect: the president is given the extra power of a line-item veto. Thus, if Congress passes a bill containing both A and B, the president may choose not only to sign or veto the bill as a whole, but also to veto just one of the two items. Show the new tree and find the rollback equilibrium.</p>
-</blockquote>
-<aside><ol class="aside-footnotes"><li id="fn13"><p>Dixit Chapter 3: question U4</p></li></ol></aside></section>
-<section id="optimal-punishment-game" class="slide level2">
-<h2>Optimal Punishment Game <sup>1</sup></h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><img data-src="figures/Harrington-figPR8.4.png"></p>
-</div><div class="column" style="width:40%;">
-<blockquote>
-<p>“Laws too gentle are seldom obeyed; too severe, seldom executed”</p>
-<ul>
-<li>Benjamin Franklin</li>
-</ul>
-</blockquote>
-</div></div>
-<aside><ol class="aside-footnotes"><li id="fn14"><p>Harrington Chapter 8: question 4</p></li></ol></aside></section>
-<section id="optimal-punishment-game-1" class="slide level2">
-<h2>Optimal Punishment Game <sup>1</sup></h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p><img data-src="figures/Harrington-figPR8.4.png"></p>
-</div><div class="column" style="width:40%;">
-<p>What values of <code>a-l</code> make the lawmaker choose a <span class="blue"><em>Moderate</em></span> penalty?</p>
-</div></div>
-<aside><ol class="aside-footnotes"><li id="fn15"><p>Harrington Chapter 8: question 4</p></li></ol></aside></section>
-<section id="preemption" class="slide level2">
-<h2>Preemption</h2>
-<blockquote>
-<p>You’re at the airport waiting to board your flight to go on vacation to Croatia with your carry-on backpack stuffed with everything you’ll need so you don’t have to pay for a checked bag. You look around and notice it seems like a lot of other people have had the same idea.</p>
-<p>A voice comes on the intercom with a familiar announcement:</p>
-<p><em>Due to this being a full flight, we will be asking passengers to check their bags at the gate</em></p>
-<p>Even though boarding hasn’t officially started yet, everyone is starting to stand around the ticket counter.</p>
-</blockquote>
-</section>
-<section id="preemption-1" class="slide level2">
-<h2>Preemption</h2>
-<p>A <span class="hi">preemption game</span> is one in which:</p>
-<ol type="1">
-<li><p>players’ payoff increase when they act before others</p></li>
-<li><p>but their payoffs are also higher when they act later in time</p></li>
-</ol>
-<ul>
-<li class="fragment">You’ve probably noticed yourself playing a few different preemption games in different settings, even if you didn’t have a name for it</li>
-</ul>
-</section>
-<section id="preemption-2" class="slide level2">
-<h2>Preemption</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="figures/Harrington-tbl8.3.png"></p>
-</div><div class="column" style="width:60%;">
-<ul>
-<li><p>Here’s a table to represent the time costs of waiting in that boarding line</p></li>
-<li><p>Also assume that the benefit to being the first to board is <span class="math inline">\(30\)</span> and being second is <span class="math inline">\(20\)</span></p></li>
-</ul>
-</div></div>
-</section>
-<section id="preemption-3" class="slide level2">
-<h2>Preemption</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="figures/Harrington-fig8.17.png"></p>
-</div><div class="column" style="width:60%;">
-<ul>
-<li><p>Here are the net payoffs (benefits - costs) applied to an extensive form representation of the simplified two-player boarding game</p></li>
-<li><p>Let’s find the <span class="hi">rollback equilibrium</span></p></li>
-</ul>
-</div></div>
-</section>
-<section id="preemption-4" class="slide level2">
-<h2>Preemption</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="figures/Harrington-fig8.17.png"></p>
-</div><div class="column" style="width:60%;">
-<ul>
-<li><p>Is the equilibrium outcome of this game a <span class="hi">Pareto efficient</span> one?</p></li>
-<li><p>Why or why not?</p></li>
-</ul>
-</div></div>
-</section>
-<section id="preemption-5" class="slide level2">
-<h2>Preemption</h2>
-<p>A general lesson of all preemption games is that <strong>players act too soon</strong> from a social efficiency perspective.</p>
-<ul>
-<li class="fragment">Everyone would be better off in the outcome where we all wait, but because there is an incentive to try to jump the line, rational agents cannot be expected to wait instead of getting ahead</li>
-</ul>
-</section>
-<section id="war-of-attrition" class="slide level2">
-<h2>War of Attrition</h2>
-<p>Not all games that involve waiting are <em>preemption games</em>, though.</p>
-<p>A <span class="hi">war of attrition</span> is a type of game where:</p>
-<ol type="1">
-<li class="fragment"><p>Players’ payoffs are higher when they act <em>after</em> other players</p></li>
-<li class="fragment"><p>and higher the <em>sooner</em> in time they act</p></li>
-</ol>
-</section>
-<section id="war-of-attrition-1" class="slide level2">
-<h2>War of Attrition</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="figures/Harrington-fig8.18.png"></p>
-</div><div class="column" style="width:60%;">
-<ul>
-<li>What is the rollback equilibrium of this game?</li>
-</ul>
-</div></div>
-</section>
-<section id="war-of-attrition-2" class="slide level2">
-<h2>War of Attrition</h2>
-<p>A general lesson of all premption games is that <strong>players wait too long</strong> than what would be socially efficient if they collectively acted sooner.</p>
-</section>
-<section id="war-of-attrition-3" class="slide level2">
-<h2>War of Attrition</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="figures/Harrington-fig8.18.png"></p>
-</div><div class="column" style="width:60%;">
-<ul>
-<li class="fragment"><p>What if the players flipped a coin to decide who would act and then that player would immediately act?</p></li>
-<li class="fragment"><p>What would be their <em>expected payoffs</em></p></li>
-<li class="fragment"><p>The problem is that such an agreement is <em>not enforcable</em></p>
-<ul>
-<li class="fragment">Once the coin flip has been observed, there’s nothing to stop the player who would be directed to act first to ignore the flip and wait.</li>
-</ul></li>
-</ul>
-</div></div>
-</section>
-<section id="why-dont-nba-stars-pass-more" class="slide level2">
-<h2>Why don’t NBA stars pass more?</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="figures/Harrington-fig8.19.png"></p>
-</div><div class="column" style="width:60%;">
-<ul>
-<li class="fragment"><p>What is the rollback equilibrium?</p></li>
-<li class="fragment"><p>This is a variation of a game called Centipede which comes up a lot in lab experiments</p></li>
-<li class="fragment"><p>We’ll use come back to the centipede game in our discussion of how well our theoretical predictions actually match peoples’ behavior</p></li>
-</ul>
-</div></div>
+<!-- {{< include 0205-examples.qmd >}} -->
 </section></section>
 <section>
 <section id="evidence-concerning-rollback" class="title-slide slide level1 center">

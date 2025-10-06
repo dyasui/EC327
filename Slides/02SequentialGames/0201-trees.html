@@ -284,8 +284,8 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../../Syllabus/index.html"> 
+<span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../Homework/index.html"> 
@@ -824,10 +824,20 @@ Warning
 </section>
 <section id="predictions" class="level2">
 <h2 class="anchored" data-anchor-id="predictions">Predictions?</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/kidnapgame.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
 <p>Based on the extensive form game tree with payoffs,</p>
 <ul>
-<li>Do you have any predictions for what strategies each player will choose?</li>
+<li>Do you have any predictions?</li>
 </ul>
+</div>
+</div>
 <div class="notes">
 <ul>
 <li>Ask students what they would do in Guy’s position,</li>
@@ -843,9 +853,12 @@ Warning
 <div class="incremental">
 <ul class="incremental">
 <li><p>A collection of decision-makers, called <span class="hi">players</span> or <em>agents</em></p></li>
-<li><p>A set of <span class="hi">decision nodes</span>, each represents the information available to the player of that node</p></li>
-<li><p>Strategies for each player which list the <span class="hi">branches</span> from <em>each</em> node that represetn the actions a player would take if faced with that choice</p></li>
-<li><p>A <span class="h">tree diagram</span> which maps the intersections of players’ strategy profiles to the outcomes represented at each <span class="hi">terminal nodes</span></p></li>
+<li><p>A set of <span class="hi">decision nodes</span>, each represents the <em>information</em> available to the player of that node</p></li>
+<li><p><span class="hi">Strategies</span> for each player which list the <strong>branches</strong> from <em>each</em> node that represent the actions a player would take if faced with that choice</p>
+<ul class="incremental">
+<li>We will use <strong>actions</strong> to refer to the individual branches.</li>
+</ul></li>
+<li><p>A <span class="h">tree diagram</span> which maps the intersections of players’ strategy profiles to the outcomes represented at each <span class="hi">terminal node</span></p></li>
 </ul>
 </div>
 <div class="notes">
@@ -911,13 +924,11 @@ Warning
 </div><div class="column" style="width:60%;">
 <div class="incremental">
 <ul class="incremental">
-<li>How many decisions does <span class="red">Guy</span> make?
+<li><p>Is <span class="red"><em>Do not kidnap</em></span> a complete strategy for <span class="red">Guy</span>?</p></li>
+<li><p>No!</p></li>
+<li><p>Why? Because it doesn’t give us any <em>justification</em> for <span class="red">Guy</span>’s action.</p>
 <ul class="incremental">
-<li>3</li>
-</ul></li>
-<li>How many decisions does <span class="blue">Vivica</span> make?
-<ul class="incremental">
-<li>1</li>
+<li>We don’t know if this is rational (or even strategic)</li>
 </ul></li>
 </ul>
 </div>
@@ -925,7 +936,7 @@ Warning
 </div>
 <div class="notes">
 <ul>
-<li>count the nodes labeled with each player’s name</li>
+<li>A complete strategy needs to include an action at every decision node</li>
 </ul>
 </div>
 <hr>
@@ -942,43 +953,12 @@ Warning
 </div><div class="column" style="width:60%;">
 <div class="incremental">
 <ul class="incremental">
-<li>Write out a complete strategy for <span class="blue">Vivica</span>
-<ul class="incremental">
-<li>Only two strategies:
-<ul class="incremental">
-<li><span class="blue"><em>Pay</em></span> the ransom,</li>
-<li>or <span class="blue"><em>Don’t</em></span> pay</li>
-</ul></li>
-</ul></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="notes">
-<ul>
-<li>Vivica only has to make a decision in the branch where Orlando is kidnapped</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="apply-this-definition-to-the-kidnapping-game-2" class="level2">
-<h2 class="anchored" data-anchor-id="apply-this-definition-to-the-kidnapping-game-2">Apply this definition to the kidnapping game:</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/kidnapgame_blank.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div><div class="column" style="width:60%;">
-<div class="incremental">
-<ul class="incremental">
 <li>Write out at complete strategy for <span class="red">Guy</span>
 <ul class="incremental">
-<li>Let’s give some shorter names for Guy’s actions:
+<li>Let’s give some shorter names for Guy’s <em>actions</em>:
 <ul class="incremental">
 <li><span class="red"><span class="math inline">\(A\)</span></span> <span class="math inline">\(\equiv\)</span> Kidnap Orlando (Abduct)</li>
-<li><span class="red"><span class="math inline">\(I\)</span></span> <span class="math inline">\(\equiv\)</span> Don’t kidnap Orlando (Ignore)</li>
+<li><span class="red"><span class="math inline">\(D\)</span></span> <span class="math inline">\(\equiv\)</span> Don’t kidnap Orlando</li>
 <li><span class="red"><span class="math inline">\(K\)</span></span> <span class="math inline">\(\equiv\)</span> Kill Orlando</li>
 <li><span class="red"><span class="math inline">\(L\)</span></span> <span class="math inline">\(\equiv\)</span> Let Orlando live</li>
 </ul></li>
@@ -994,8 +974,8 @@ Warning
 </div>
 <hr>
 </section>
-<section id="apply-this-definition-to-the-kidnapping-game-3" class="level2">
-<h2 class="anchored" data-anchor-id="apply-this-definition-to-the-kidnapping-game-3">Apply this definition to the kidnapping game:</h2>
+<section id="apply-this-definition-to-the-kidnapping-game-2" class="level2">
+<h2 class="anchored" data-anchor-id="apply-this-definition-to-the-kidnapping-game-2">Apply this definition to the kidnapping game:</h2>
 <p>Guy has <span class="math inline">\(8\)</span> total complete strategies:</p>
 <table class="caption-top table">
 <colgroup>
@@ -1005,28 +985,38 @@ Warning
 <thead>
 <tr class="header">
 <th>If Guy <span class="math inline">\(A\)</span>bducts</th>
-<th>If Guy <span class="math inline">\(I\)</span>gnores</th>
+<th>If Guy <span class="math inline">\(D\)</span>oesn’t</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>( <span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span> )</td>
-<td>( <span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span> )</td>
+<td>( <span class="red"><span class="math inline">\(D\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span> )</td>
 </tr>
 <tr class="even">
 <td>( <span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span> )</td>
-<td>( <span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
+<td>( <span class="red"><span class="math inline">\(D\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
 </tr>
 <tr class="odd">
 <td>( <span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
-<td>( <span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
+<td>( <span class="red"><span class="math inline">\(D\)</span></span>, <span class="red"><span class="math inline">\(K\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
 </tr>
 <tr class="even">
 <td>( <span class="red"><span class="math inline">\(A\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
-<td>( <span class="red"><span class="math inline">\(I\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
+<td>( <span class="red"><span class="math inline">\(D\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span>, <span class="red"><span class="math inline">\(L\)</span></span> )</td>
 </tr>
 </tbody>
 </table>
+<p>. . .</p>
+<ul>
+<li>How do we know if any is more or less valid than the others?</li>
+</ul>
+<div class="notes">
+<ul>
+<li>It depends on Guy’s <em>beliefs</em> about Vivica’s behavior!</li>
+<li>We need to think strategically</li>
+</ul>
+</div>
 
 
 </section>

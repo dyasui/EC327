@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>nash – EC327 Game Theory</title>
+<title>Syllabus – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +23,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d20f5cef5e207251eca059be6064b8af.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-8652ff5161e63bdd14abb267f7ee8a78.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-d20f5cef5e207251eca059be6064b8af.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d20f5cef5e207251eca059be6064b8af.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-8652ff5161e63bdd14abb267f7ee8a78.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d20f5cef5e207251eca059be6064b8af.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,35 +72,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -273,7 +244,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">EC327 Game Theory</span>
     </a>
   </div>
@@ -284,19 +255,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../Syllabus/index.html"> 
+    <a class="nav-link active" href="../Syllabus/index.html" aria-current="page"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Homework/index.html"> 
+    <a class="nav-link" href="../Homework/index.html"> 
 <span class="menu-text">Homework</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Slides/index.html"> 
+    <a class="nav-link" href="../Slides/index.html"> 
 <span class="menu-text">Slides</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../activities/index.html"> 
+    <a class="nav-link" href="../activities/index.html"> 
 <span class="menu-text">Activities</span></a>
   </li>  
 </ul>
@@ -311,7 +282,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Syllabus</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -342,19 +313,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Syllabus/main.pdf" class="sidebar-item-text sidebar-link">
+  <a href="../Syllabus/main.pdf" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Slides/#intro-and-syllabus-day" class="sidebar-item-text sidebar-link">
+  <a href="../Slides/#intro-and-syllabus-day" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: General Principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Guessing Two Thirds</span></a>
   </div>
 </li>
@@ -371,19 +342,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Slides/#sequential-games" class="sidebar-item-text sidebar-link">
+  <a href="../Slides/#sequential-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Sequential Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Survivor Flags</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/03PirateTreasure/PirateTreasure.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/03PirateTreasure/PirateTreasure.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Pirate Treasure</span></a>
   </div>
 </li>
@@ -400,25 +371,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
+  <a href="../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Simultaneous Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/04BlottoElection/BlottoElection.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/04BlottoElection/BlottoElection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Election Blotto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
+  <a href="../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Continuous Strategies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/05CournotComp/cournotcomp.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/05CournotComp/cournotcomp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Social Media Adspace</span></a>
   </div>
 </li>
@@ -435,7 +406,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Slides/#combining-simultaneous-and-sequential" class="sidebar-item-text sidebar-link">
+  <a href="../Slides/#combining-simultaneous-and-sequential" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span></span></a>
   </div>
 </li>
@@ -452,13 +423,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Slides/#mixed-strategies" class="sidebar-item-text sidebar-link">
+  <a href="../Slides/#mixed-strategies" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/06PenaltyKicks/penaltykicks.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/06PenaltyKicks/penaltykicks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Penalty Kick Shootout</span></a>
   </div>
 </li>
@@ -475,13 +446,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Slides/#asymmetric-information" class="sidebar-item-text sidebar-link">
+  <a href="../Slides/#asymmetric-information" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Asymmetric Information</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/LemonsMarket/activitysheet.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/LemonsMarket/activitysheet.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Activity</strong>: Market for Lemons</span></a>
   </div>
 </li>
@@ -498,13 +469,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Slides/#strategic-moves" class="sidebar-item-text sidebar-link">
+  <a href="../Slides/#strategic-moves" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Strategic Moves</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/07Brinksmanship/brinksmanship.html" class="sidebar-item-text sidebar-link">
+  <a href="../activities/07Brinksmanship/brinksmanship.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Activity</strong>: Brinksmanship</span></a>
   </div>
 </li>
@@ -521,7 +492,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Slides/#repeated-games" class="sidebar-item-text sidebar-link">
+  <a href="../Slides/#repeated-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span></span></a>
   </div>
 </li>
@@ -534,477 +505,141 @@ window.Quarto = {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Syllabus</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
-<section id="nash-equilibrium" class="level1">
-<h1>Nash Equilibrium</h1>
-<section id="solving-simultaneous-games" class="level2">
-<h2 class="anchored" data-anchor-id="solving-simultaneous-games">Solving Simultaneous Games</h2>
-<ul>
-<li><p>Before we cover how to solve a game, we first need to discuss what a solution to a game even is.</p></li>
-<li><p>As with many types of problem in economics, we’re interested in finding an <em>equilibrium</em>:</p>
-<ul>
-<li>equilibrium a situation which is “stable,” in that there is no incentive to change.</li>
-</ul></li>
-</ul>
-<hr>
+</header>
+
+
+<p><a href="main.pdf" class="btn btn-outline-primary" role="button">Complete Fall 2025 syllabus (pdf)</a></p>
+<section id="course-description" class="level2">
+<h2 class="anchored" data-anchor-id="course-description">Course Description</h2>
+<p>This course introduces the field of game theory, which involves the analysis of strategic situations; where the consequences one person’s choice depend on the actions of others. The examples of settings we may discuss range from simple games like rock, paper, scissors; to more complicated games of incomplete information in the market for used cars.</p>
+<p>We will introduce the general concept of equilibrium and explore the different forms of equilbria in different settings. Students will learn through in-person lectures and discussions, and build their own skills through participation in in-class activities.</p>
+<p>This elective is suitable for economics majors and anyone interested in understanding the strategic dynamics that shape our decisions.</p>
 </section>
-<section id="nash-equilibrium-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-1">Nash Equilibrium</h2>
-<p>The most basic form of equilibrium in game theory is the <span class="h">Nash Equilibrium (NE)</span>, which can be described as:</p>
+<section id="course-details" class="level2">
+<h2 class="anchored" data-anchor-id="course-details">Course Details</h2>
+<section id="course-pages" class="level3">
+<h3 class="anchored" data-anchor-id="course-pages">Course Pages:</h3>
 <ul>
-<li><p>A strategy profile such that no player can obtain a larger payoff by <em>unilaterally deviating</em></p></li>
-<li><p>A strategy profile such that no single player can make themselves better off by changing only their own strategy.</p></li>
-<li><p>A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision</p></li>
+<li><p><a href="https://canvas.uoregon.edu/courses/274671"><strong>Canvas</strong></a>: The class Canvas page will be where you submit graded assignments and where you can check your current grade.</p></li>
+<li><p><a href="https://danteyasui.org/EC327/"><strong>Course Website</strong></a></p></li>
 </ul>
-<hr>
+<p>This website will be kept up to date with the current class schedule, activities, assignments, and slides.</p>
 </section>
-<section id="nash-equilibrium-2" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-2">Nash Equilibrium</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Nash Equilibrium
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A list of strategies where each player’s strategy is the best response to the other’s best response strategy</p>
-</div>
-</div>
-<div class="incremental">
-<ul class="incremental">
-<li>In other words, no player has any incentive to <span class="hii">deviate</span> in their strategy away from an equilibrium strategy</li>
-<li>It is central to the analysis of simultaneous-move games.</li>
-<li>Can occur in <strong>pure strategies</strong> (where players choose a single action) or <strong>mixed strategies</strong> (randomized choices).</li>
+<section id="prerequisites" class="level3">
+<h3 class="anchored" data-anchor-id="prerequisites">Prerequisites:</h3>
+<p>One of EC101 or EC201.</p>
+<p>The most important prerequisite skills you will need for this class are mainly college-level algebra and working with simple systems of equations. If it has been a while since your last math class, it may be helpful to review concepts like linear equations, graphing of equations, and factoring quadratics (for example units 1-5 of the <a href="https://www.khanacademy.org/math/college-algebra">Khan Academy course</a>).</p>
+</section>
+<section id="objectives" class="level3">
+<h3 class="anchored" data-anchor-id="objectives">Objectives:</h3>
+<p>This course aims to help you to understand the fundamental principles of game theory, become familiar with basic classes of games, practice the mathematical skills to solve for the appropriate equilibria, apply game theoretic models to real-world interactions, and recognize limitations and critiques of the theory.</p>
+</section>
+<section id="textbook" class="level3">
+<h3 class="anchored" data-anchor-id="textbook">Textbook:</h3>
+<ul>
+<li><em>Games of Strategy</em> by Avinash Dixit, Susan Skeath, and David McAdams, <strong>5th edition</strong>.</li>
 </ul>
-</div>
-<hr>
+<p>The most recent edition of the E-book is available from the <a href="https://wwnorton.com/books/Games-of-Strategy">publisher</a>. If you have an older or newer edition of this book, please make sure that the chapters align with the topics on the class schedule.</p>
+<p>Any other readings I assign (for example articles, news stories, etc.) will be posted on the course website.</p>
 </section>
-<section id="nash-equilibrium-in-tbl-basic4x3game" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
-<p>Let’s look at one specific strategy profile in this game:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
+<section id="attendance" class="level3">
+<h3 class="anchored" data-anchor-id="attendance">Attendance:</h3>
+<p>This is an in-person class that will meet at the times specified in the UO Class Schedule. Regular attendance and active participation is expected. You will demonstrate your attendence by participating in regular in-class activities and group discussions.</p>
+<p>If you are unable to attend class for any reason, you are responsible for keeping track of whatever activites, discussions, and lecture material we cover in your absence. Please ask your classmates and check the website to see what you may have missed. If you miss more than two or three classes in the term, you should meet with the instructor to see what options are best for you to meet the class expectations.</p>
+</section>
+<section id="office-hours" class="level3">
+<h3 class="anchored" data-anchor-id="office-hours">Office Hours:</h3>
+<p>There will be two in-person office hour sections each week during which you will have the opportunity to meet with the instructor to ask for further clarification on class concepts, homework assignments, etc. These times are most effective if you come prepared with specific questions or topics that you want to discuss. Because my office space is limited, unless otherwise stated, office hours will be held in the <a href="https://map.uoregon.edu/aeddb7eca">Tykeson 352</a>, on the third floor next to the blackboards. As office hour times are subject to change, please check the Canvas page for the most up to date schedule.</p>
+<p>If you are unable to attend the scheduled office hour times, I am also available to meet by appointment.</p>
+</section>
+</section>
+<section id="grading-policies" class="level2">
+<h2 class="anchored" data-anchor-id="grading-policies">Grading Policies:</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
+<th>Category</th>
+<th>Grade</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
+<td>Activities/Discussions</td>
+<td>10%</td>
 </tr>
 <tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
+<td>Quizzes</td>
+<td>10%</td>
 </tr>
 <tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td><span class="h">(5,4)</span></td>
-<td>(12,3)</td>
+<td>Homework</td>
+<td>20%</td>
 </tr>
 <tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td>(9,7)</td>
+<td>Midterm Exam</td>
+<td>30%</td>
+</tr>
+<tr class="odd">
+<td>Final Exam</td>
+<td>30%</td>
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:50%;">
-<blockquote class="blockquote">
-<p>Row chooses Low and Column chooses Middle</p>
-</blockquote>
+<section id="activitiesdiscussions" class="level3">
+<h3 class="anchored" data-anchor-id="activitiesdiscussions">Activities/Discussions</h3>
+<p>This class uses interactive learning in the form of in-class discussion and group activities. Your Activities grade will be determinded by your participation (i.e., were you present, respectful, and engaged) as well as a short written report which you will submit to canvas. Depending on what we do in class, the report will outline the discussion you had with your classmates and/or record the data from the game you played.</p>
+<p>If you are unable to attend class when we have an activity, you may make up for your lost participation by designing an alternative activity which you can complete on your own time in consultation with the instructor. Only up to 2 missed activities may be substituted for per quarter.</p>
+</section>
+<section id="quizzes" class="level3">
+<h3 class="anchored" data-anchor-id="quizzes">Quizzes</h3>
+<p>There will also be a number of quizzes posted on Canvas which are mostly designed to keep you up to date with the reading. There will be one quiz for each assigned chapter and they will be due on the Friday of the week we cover that chapter in class. Your lowest quiz score will be dropped.</p>
+</section>
+<section id="homework" class="level3">
+<h3 class="anchored" data-anchor-id="homework">Homework</h3>
+<p>To help practice your understanding of the material, you will complete a written homework assignment covering the corresponding chapter every week. You will post your submissions as <em>a single pdf file</em> including all work. Answer keys will be automatically posted on the due date in Canvas, so no late submissions will be accepted. However, your lowest grade will be dropped at the end of the term.</p>
+<p>Your submissions will be graded not only on how well they match the rubric, but also on how clearly your submission demonstrates your understanding of the material.</p>
+</section>
+<section id="ai-use-policy" class="level3">
+<h3 class="anchored" data-anchor-id="ai-use-policy">AI use policy</h3>
+<p>For this class, you may find it helpful to use `artificial intelligence’ (AI) software tools like ChatGPT to brainstorm, create outlines, or summarize readings. However, any written content you submit for homework and demonstrate your own understanding of the material.</p>
+<p>If you use any AI generated content to help you write your submission, your submission must also provide the following:</p>
 <ul>
-<li>Is this <em>stable</em>?</li>
+<li><strong>AI Tool Details:</strong> What specific model, version, website provider did you use?</li>
+<li><strong>Prompt:</strong> State the specific prompts you used when generating text, images, etc.</li>
+<li><strong>Alignment:</strong> Describe what steps you took or how you edited the generated content to align with the rubric guidelines. This may include refining prompts, cross-referencing with lecture notes, or seeking clarification for ambiguous responses.</li>
+<li><strong>Demonstrate Comprehension:</strong> Along with your answer, briefly evaluate how useful the AI tool was for your submission by highlighting what it got right and what you needed to correct.</li>
 </ul>
-</div>
-</div>
-<hr>
 </section>
-<section id="nash-equilibrium-in-tbl-basic4x3game-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game-1">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
-<p>Let’s look at one specific strategy profile in this game:</p>
-<div class="columns">
-<div class="column smaller" style="width:50%;">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th><span class="hii">Middle</span></th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td><span class="hii">(2,3)</span></td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td><span class="hii">(3,0)</span></td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td><span class="h">(5,4)</span></td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td><span class="hii">(4,5)</span></td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-</div><div class="column" style="width:50%;">
-<blockquote class="blockquote">
-<p>Row chooses Low and Column chooses Middle</p>
-</blockquote>
-<ul>
-<li>Given that Column plays Middle, is there any way for Row to get a higher payoff?</li>
-</ul>
-</div>
-</div>
-<hr>
-</section>
-<section id="nash-equilibrium-in-tbl-basic4x3game-2" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game-2">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
-<p>Let’s look at one specific strategy profile in this game:</p>
-<div class="columns">
-<div class="column smaller" style="width:50%;">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td><span class="hii">Low</span></td>
-<td><span class="hii">(2,2)</span></td>
-<td><span class="h">(5,4)</span></td>
-<td><span class="hii">(12,3)</span></td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-</div><div class="column" style="width:50%;">
-<blockquote class="blockquote">
-<p>Row chooses Low and Column chooses Middle</p>
-</blockquote>
-<ul>
-<li>Given that Row plays Low, is there any way for Column to get a higher payoff?</li>
-</ul>
-</div>
-</div>
-<hr>
-</section>
-<section id="nash-equilibrium-in-tbl-basic4x3game-3" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game-3">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
-<p>What is special about the strategy profile (Low, Middle)?</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>It’s <em>stable</em> because neither player would have any incentive to change what they’re doing</p></li>
-<li><p>In other words, neither player has regrets over their choice given what the other player is doing</p></li>
-<li><p>However, notice that this doesn’t mean that this is the best that the players could do jointly</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="other-strategy-profiles-in-tbl-basic4x3game" class="level2">
-<h2 class="anchored" data-anchor-id="other-strategy-profiles-in-tbl-basic4x3game">Other Strategy Profiles in <strong>?@tbl-basic4x3game</strong></h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(5,4)</td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td><span class="h">(9,7)</span></td>
-</tr>
-</tbody>
-</table>
-<p>What about (Bottom, Right)?</p>
-<hr>
-</section>
-<section id="other-strategy-profiles-in-tbl-basic4x3game-1" class="level2">
-<h2 class="anchored" data-anchor-id="other-strategy-profiles-in-tbl-basic4x3game-1">Other Strategy Profiles in <strong>?@tbl-basic4x3game</strong></h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(5,4)</td>
-<td><span class="h">(12,3)</span></td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td><span class="red">(9,7)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Even though (Bottom, Right) is a Pareto improvement on (Low, Middle), it is <em>unstable</em> because it would be rational for Row player to change their strategy to Low to try to get the higher payoff of 12</p>
-<hr>
-</section>
-<section id="other-strategy-profiles-in-tbl-basic4x3game-2" class="level2">
-<h2 class="anchored" data-anchor-id="other-strategy-profiles-in-tbl-basic4x3game-2">Other Strategy Profiles in <strong>?@tbl-basic4x3game</strong></h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td><span class="h">(3,1)</span></td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(5,4)</td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-<p>What about (Top, Left)?</p>
-<hr>
-</section>
-<section id="tbl-basic4x3game-with-a-tie-in-payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="tbl-basic4x3game-with-a-tie-in-payoffs"><strong>?@tbl-basic4x3game</strong> with a tie in payoffs</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(<strong>5</strong>,4)</td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(<strong>5</strong>,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-<p>A Nash equilibrium doesn’t require the equilibrium strategies to be <em>strict</em> improvements.</p>
-<ul>
-<li>(Low, Middle) is still a NE because the payoff of 5 to Row player is <em>weakly</em> (<span class="math inline">\(\geq\)</span>) higher than the payoff of Bottom</li>
-</ul>
-<hr>
-</section>
-<section id="nash-equilibrium-as-a-system-of-beliefs" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-as-a-system-of-beliefs">Nash Equilibrium as a System of Beliefs</h2>
-<p>So a Nash Equilibrium requires players <em>best responding</em> to each other.</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>But if a game is <em>simultaneous</em>, then players can’t observe what the other does</p></li>
-<li><p>So how can someone respond to something that hasn’t happened yet?</p></li>
-</ul>
-</div>
-</section>
-<section id="nash-equilibrium-as-a-system-of-beliefs-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-as-a-system-of-beliefs-1">Nash Equilibrium as a System of Beliefs</h2>
-<p>How to make sense of best-responses in simultaneous games:</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>Players might base their beliefs of the other players’ strategies on <em>experience</em> from playing similar games before</p></li>
-<li><p>You might also <em>put yourself into your opponents’ shoes</em> to think about what they might do</p></li>
-<li><p>You should also expect that <em>they are thinking about what you’re thinking</em></p>
-<ul class="incremental">
-<li>and also that <em>you would be thinking about what they are thinking</em> about what you are thinking</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="the-battle-of-wits" class="level2">
-<h2 class="anchored" data-anchor-id="the-battle-of-wits">The Battle of Wits</h2>
-<p>Let’s see an example of this logic in action:</p>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/pRJ8CrTSSR0" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<hr>
-</section>
-<section id="nash-equilibrium-as-a-system-of-beliefs-2" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-as-a-system-of-beliefs-2">Nash Equilibrium as a System of Beliefs</h2>
-<ul>
-<li>Nash equilibrium assumes:
-<ol type="1">
-<li>Players form <span class="hi">beliefs</span> about the strategies of others.</li>
-<li>These beliefs must be <strong>correct</strong>.</li>
-<li>Each player then chooses their <strong>best response</strong> based on these beliefs.</li>
-</ol></li>
-</ul>
-<hr>
-</section>
-<section id="strategic-uncertainty" class="level2">
-<h2 class="anchored" data-anchor-id="strategic-uncertainty">Strategic Uncertainty</h2>
-<ul>
-<li>Players are uncertain about others’ choices but form subjective <strong>beliefs</strong> about them.</li>
-<li>These beliefs are central to decision-making in Nash equilibrium.</li>
-<li>The equilibrium is found when every player’s belief about others’ actions is correct, and their response to these beliefs is optimal.</li>
-</ul>
-<hr>
-</section>
-<section id="an-equivalent-definition-of-ne" class="level2">
-<h2 class="anchored" data-anchor-id="an-equivalent-definition-of-ne">An Equivalent Definition of NE <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Nash Equilibrium
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A set of strategies, one for each player, such that:</p>
-<ol type="1">
-<li><p>each player has correct beliefs about the strategies of the others and</p></li>
-<li><p>the strategy of each is the best for herself, given her beliefs about the strategies of the others.</p></li>
-</ol>
-</div>
-</div>
+<section id="exams" class="level3">
+<h3 class="anchored" data-anchor-id="exams">Exams:</h3>
+<p>Exams will be in-person and closed-note.</p>
+<p>There will be one midterm exam on week 5 and one final exam administered at the time specified in the Registrar’s final exam schedule. Each exam will have a multiple-choice section (based on quiz questions) and some long-answer questions (based on homework). You are allowed to bring a 3x5 inch handwritten notecard (front and back sides).</p>
+<p>If you cannot attend the midterm due to extreme circumstances, you may choose to move the weight that would have been applied to the midterm score to your final exam instead. To qualify for re-weighting, a request must be submitted to the instructor no later than two days after the midterm.</p>
 
 
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Dixit, pg. 98<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1422,4 +1057,4 @@ Nash Equilibrium
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/Slides/03SimultaneousGames/0302-nash.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/Slides/03SimultaneousGames/0302-nash.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/Syllabus/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/Syllabus/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
