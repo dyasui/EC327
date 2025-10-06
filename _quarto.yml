@@ -25,6 +25,8 @@ website:
         href: Slides/index.qmd
       - text: "Activities"
         href: activities/index.qmd
+      - text: "Exams"
+        href: Exams/index.qmd
   sidebar: 
     style: "docked"
     search: true

@@ -2,26 +2,26 @@
 title: "In-class Activities"
 ---
 
-[Guess 2/3rds of the Average](01GuessTwoThirds/GuessTwoThirds.html){.btn .btn-outline-primary .btn role="button"}
+[📊 Guess 2/3rds of the Average](01GuessTwoThirds/GuessTwoThirds.html){.btn .btn-outline-primary .btn role="button"}
 
 ## Sequential Games
 
-[Survivor Flags](02SurvivorFlags/SurvivorFlags.html){.btn .btn-outline-primary .btn role="button"}
+[⛳️ Survivor Flags](02SurvivorFlags/SurvivorFlags.html){.btn .btn-outline-primary .btn role="button"}
 
-[Pirate Treasure](03PirateTreasure/PirateTreasure.qmd){.btn .btn-outline-primary .btn role="button"}
+[🏴‍☠️ Pirate Treasure](03PirateTreasure/PirateTreasure.qmd){.btn .btn-outline-primary .btn role="button"}
 
 ## Simultaneous Games
 
-[Blotto Election](04BlottoElection/BlottoElection.qmd){.btn .btn-outline-primary .btn role="button"}
+[🗳️ Blotto Election](04BlottoElection/BlottoElection.qmd){.btn .btn-outline-primary .btn role="button"}
 
-[Social Media Adspace](05CournotComp/cournotcomp.qmd){.btn .btn-outline-primary .btn role="button"}
+[💵 Social Media Adspace](05CournotComp/cournotcomp.qmd){.btn .btn-outline-primary .btn role="button"}
 
 ## Mixed Strategies
 
-[Penalty Kicks Shootout](06PenaltyKicks/penaltykicks.qmd){.btn .btn-outline-primary .btn role="button"}
+[⚽️ Penalty Kicks Shootout](06PenaltyKicks/penaltykicks.qmd){.btn .btn-outline-primary .btn role="button"}
 
 ## Other Topics
 
-[Brinksmanship](07Brinksmanship/brinksmanship.qmd){.btn .btn-outline-primary .btn role="button"}
+[🚀 Brinksmanship](07Brinksmanship/brinksmanship.qmd){.btn .btn-outline-primary .btn role="button"}
 
-[Market for Lemons](LemonsMarket/activitysheet.qmd){.btn .btn-outline-primary .btn role="button"}
+[🚗 Market for Lemons](LemonsMarket/activitysheet.qmd){.btn .btn-outline-primary .btn role="button"}
