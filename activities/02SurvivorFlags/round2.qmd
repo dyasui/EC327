@@ -1,0 +1,9 @@
+## Round 2: Modified Rules
+
+  * This time, one team will choose the number of starting flags: between 15-25
+  
+  * The other team will choose whether to allow max. of 2-5 flags per round
+  
+  * Play and record! 
+  
+After you finish Round 2, move on to the [Discussion](discuss.qmd){.btn .btn-outline-primary .btn role="button"}

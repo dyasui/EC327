@@ -1,0 +1,131 @@
+---
+format: 
+  html:
+    fig-width: 10
+    fig-height: 24
+---
+
+## Split Into Groups
+
+```{r}
+#| warning: false
+#| echo: false
+# Written with help from  Claude Sonnet 4.5:
+# https://claude.ai/share/41897ac4-c7e6-4a8c-ae8b-0d15fba1ae29
+library(dplyr)
+library(ggplot2)
+library(gridExtra)
+
+# Read your CSV file
+students <- read.csv("EC327names.csv")
+
+# Shuffle students randomly
+set.seed(2025)  # Remove this line if you want the same arrangement each time
+students_shuffled <- students %>% sample_n(nrow(students))
+
+# Create teams of 3
+n_students <- nrow(students_shuffled)
+n_teams <- ceiling(n_students / 3)
+
+# Assign team numbers
+students_shuffled$team <- rep(1:n_teams, each = 3, length.out = n_students)
+
+# Assign to tables (2 teams per table = 10 tables for ~20 teams)
+students_shuffled$table <- ceiling(students_shuffled$team / 2)
+
+# Create position within team (1, 2, or 3)
+students_shuffled <- students_shuffled %>%
+  group_by(team) %>%
+  mutate(seat_position = row_number()) %>%
+  ungroup()
+
+# Print team assignments
+# cat("\n=== TEAM ASSIGNMENTS ===\n\n")
+# for(i in 1:max(students_shuffled$table)) {
+#   table_data <- students_shuffled %>% filter(table == i)
+#   cat(sprintf("TABLE %d\n", i))
+#   cat(paste(rep("=", 50), collapse = ""), "\n")
+  
+#   for(team_num in unique(table_data$team)) {
+#     team_students <- table_data %>% filter(team == team_num)
+#     cat(sprintf("\nTeam %d:\n", team_num))
+#     for(j in 1:nrow(team_students)) {
+#       cat(sprintf("  %s\n", team_students$name[j]))
+#     }
+#   }
+#   cat("\n\n")
+# }
+
+# Create visual seating chart for one table
+create_table_chart <- function(table_num) {
+  table_data <- students_shuffled %>% filter(table == table_num)
+  
+  if(nrow(table_data) == 0) return(NULL)
+  
+  teams_at_table <- unique(table_data$team)
+  
+  positions <- data.frame()
+  for(i in 1:length(teams_at_table)) {
+    team_num <- teams_at_table[i]
+    team_students <- table_data %>% filter(team == team_num)
+    
+    # Position teams side by side
+    x_offset <- (i - 1) * 4
+    
+    # Position students in triangular arrangement
+    for(j in 1:nrow(team_students)) {
+      if(j == 1) {
+        x <- x_offset + 1.5
+        y <- 3
+      } else if(j == 2) {
+        x <- x_offset + 0.5
+        y <- 1
+      } else {
+        x <- x_offset + 2.5
+        y <- 1
+      }
+      
+      positions <- rbind(positions, data.frame(
+        x = x,
+        y = y,
+        name = team_students$name[j],
+        team = team_num
+      ))
+    }
+  }
+  
+  # Create plot
+  p <- ggplot(positions, aes(x = x, y = y)) +
+    geom_point(aes(color = factor(team)), size = 20, alpha = 0.6) +
+    geom_text(aes(label = name), size = 3, fontface = "bold") +
+    scale_color_discrete(name = "Team") +
+    labs(title = paste("Table", table_num), x = NULL, y = NULL) +
+    theme_minimal() +
+    theme(
+      axis.text = element_blank(),
+      axis.ticks = element_blank(),
+      panel.grid = element_blank(),
+      plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+      legend.position = "none",
+      plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm")
+    ) +
+    coord_fixed(ratio = 1, xlim = c(-0.5, max(positions$x) + 0.5), 
+                ylim = c(0, 4))
+  
+  return(p)
+}
+
+# Create charts for all tables
+n_tables <- max(students_shuffled$table)
+plots <- lapply(1:n_tables, create_table_chart)
+plots <- plots[!sapply(plots, is.null)]
+
+# Arrange in grid (2 columns)
+n_plots <- length(plots)
+n_rows <- ceiling(n_plots / 2)
+
+do.call(grid.arrange, c(plots, ncol = 2))
+
+```
+
+[Play Round 1](round1.qmd){.btn .btn-outline-primary .btn role="button"}

@@ -1,0 +1,19 @@
+## Round 1
+
+  * Pick someone to record flags for each round
+
+  * Draw 21 flags on whiteboard
+
+  * Discuss strategy w/ your group for 5 minutes
+
+  * Play the game!
+
+    - Record your data: 
+
+    1. How many flags taken each turn
+    2. Which team took the last flag
+
+After each team has played at least once,
+
+  * Find new opposing teams (losing teams move clockwise)
+  * [Play Round 2](round2.qmd){.btn .btn-outline-primary .btn role="button"}

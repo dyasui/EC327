@@ -2,34 +2,26 @@
 title: "In-class Activities"
 ---
 
-## Guess 2/3rds of the Average
+[Guess 2/3rds of the Average](01GuessTwoThirds/GuessTwoThirds.html){.btn .btn-outline-primary .btn role="button"}
 
-[Activity Sheet](01GuessTwoThirds/GuessTwoThirds.html)
+## Sequential Games
 
-## Survivor Flags
+[Survivor Flags](02SurvivorFlags/SurvivorFlags.html){.btn .btn-outline-primary .btn role="button"}
 
-[Activity Sheet](02SurvivorFlags/SurvivorFlags.html)
+[Pirate Treasure](03PirateTreasure/PirateTreasure.qmd){.btn .btn-outline-primary .btn role="button"}
 
-## Pirate Treasure
+## Simultaneous Games
 
-[Activity Sheet](03PirateTreasure/PirateTreasure.qmd)
+[Blotto Election](04BlottoElection/BlottoElection.qmd){.btn .btn-outline-primary .btn role="button"}
 
-## Blotto Election
+[Social Media Adspace](05CournotComp/cournotcomp.qmd){.btn .btn-outline-primary .btn role="button"}
 
-[Activity Sheet](04BlottoElection/BlottoElection.qmd)
+## Mixed Strategies
 
-## Social Media Adspace
+[Penalty Kicks Shootout](06PenaltyKicks/penaltykicks.qmd){.btn .btn-outline-primary .btn role="button"}
 
-[Activity Sheet](05CournotComp/cournotcomp.qmd)
+## Other Topics
 
-## Penalty Kicks Shootout
+[Brinksmanship](07Brinksmanship/brinksmanship.qmd){.btn .btn-outline-primary .btn role="button"}
 
-[Activity Sheet](06PenaltyKicks/penaltykicks.qmd)
-
-## Brinksmanship
-
-[Activity Sheet](07Brinksmanship/brinksmanship.qmd)
-
-## Market for Lemons
-
-[Activity Sheet](LemonsMarket/activitysheet.qmd)
+[Market for Lemons](LemonsMarket/activitysheet.qmd){.btn .btn-outline-primary .btn role="button"}
