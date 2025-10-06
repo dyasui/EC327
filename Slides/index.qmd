@@ -3,95 +3,72 @@ title: "Lecture Slides"
 ---
 
 ## Intro and Syllabus Day
+[Expand Slides](01Intro/01-main.qmd){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <div>
   <iframe class="slide deck" src="01Intro/01-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="01Intro/01-main.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
-</a>
 ```
 
 ## Basic Concepts and Methods
 ### Sequential Games
+[Expand Slides](02SequentialGames/02-main.qmd){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <div>
   <iframe class="slide deck" src="02SequentialGames/02-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="02SequentialGames/02-main.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
-</a>
 ```
 
 ### Simultaneous Games
+[Simultaneous Games](03SimultaneousGames/03-main.qmd){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <div>
   <iframe class="slide deck" src="03SimultaneousGames/03-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="03SimultaneousGames/03-main.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
-</a>
 ```
 
+[Continuous Strategies](04ContinuousStrats/04-main.qmd){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <div>
   <iframe class="slide deck" src="04ContinuousStrats/04-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="04ContinuousStrats/04-main.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
-</a>
 ```
 
 ### Combining Simultaneous and Sequential
-
+[Expand Slides](05CombinedGames/05-main.qmd){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <div>
   <iframe class="slide deck" src="05CombinedGames/05-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="05CombinedGames/05-main.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
-</a>
 ```
 ### Mixed Strategies
-
+[Expand Slides](06MixedStrategies/06-main.qmd){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <div>
   <iframe class="slide deck" src="06MixedStrategies/06-main.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="06MixedStrategies/06-main.qmd" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
-</a>
 ```
 
 ### Asymmetric Information
-
+[Expand Slides](07AsymmetricInfo/main.pdf){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <div>
   <iframe class="slide deck" src="07AsymmetricInfo/main.pdf" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="07AsymmetricInfo/main.pdf" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
-</a>
 ```
 
 ### Strategic Moves
-
+[Expand Slides](08StrategicMoves/main.pdf){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <div>
   <iframe class="slide deck" src="08StrategicMoves/main.pdf" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="08StrategicMoves/main.pdf" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
-</a>
 ```
 
 ### Repeated Games
-
+[Expand Slides](09RepeatedGames/main.pdf){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <div>
   <iframe class="slide deck" src="09RepeatedGames/main.pdf" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
-<a class="btn btn-primary btn-md" href="09RepeatedGames/main.pdf" target="_blank">
-  <i class="fa-solid fa-window-restore"></i>&ensp;Expand
-</a>
 ```
