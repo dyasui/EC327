@@ -15,6 +15,7 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 | **Office Hours:** | Monday 10-11 am \& Wednesday 1-2 pm |
 | **Textbook:**     | Dixit, Skeath, and McAdams. Games of Strategy, 5th edition. |
 
+[Syllabus](Syllabus/main.pdf){.btn .btn-outline-primary .btn role="button"}
 ---
 
 ## Tentative Schedule

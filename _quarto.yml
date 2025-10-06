@@ -17,8 +17,8 @@ website:
   navbar:
     search: true
     left:
-      - text: "Home"
-        href: index.qmd
+      - text: "Syllabus"
+        href: Syllabus/index.qmd
       - text: "Homework"
         href: Homework/index.qmd
       - text: "Slides"
