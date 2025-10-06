@@ -8,134 +8,204 @@ we can start to *solve* them.
 
 . . .
 
-  - A solution in our case will be a prediction of what rational agents
-  would do in a sequential game
+  - A solution in our case will be a prediction of what [sequentially rational]{.hi} agents would do
 
 ---
 
-## The smoking decision
+## Solving the Kidnapping Game
 
-Do I want to try smoking today? 
+![](figures/kidnapgame.png)
 
-::: {.incremental}
+::: notes
+  - If Vivica paid ransom, Guy would rather Release
+  - If Vivica didn't pay, Guy would rather Kill
+  - Knowing this, Vivica would Pay to avoid Orland being killed
+  - Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando
+:::
 
-> Suppose today I can either [Try]{.h} smoking for the first time, or [Not]{.h} try 
+---
 
-If I choose [Try]{.h} today, then I will have another choice in the *future*:
+## Solving the Kidnapping Game (step 1)
 
-> [Continue]{.h} smoking, or [Quit]{.h}
+Let's start at the end (bottom) of the game:
+
+. . .
+
+  * If the ransom **has** already been paid, what should [Guy]{.red} do?
+
+```{dot}
+digraph D {
+  Guy [color="red"];
+  O1 [shape=plaintext,label="4\n1"];
+  O2 [shape=plaintext,label="5\n3"];
+  Guy->O1[label="Kill",arrowhead=none];
+  Guy->O2[label="Release",arrowhead=none];
+}
+```
+
+## Solving the Kidnapping Game (step 1)
+
+Let's start at the end (bottom) of the game:
+
+  * If the ransom **has not** been paid, what should [Guy]{.red} do?
+
+```{dot}
+digraph D {
+  Guy [color="red"];
+  O1 [shape=plaintext,label="4\n1"];
+  O2 [shape=plaintext,label="5\n3"];
+  Guy->O1[label="Kill",arrowhead=none,style="dashed"];
+  Guy->O2[label="Release"];
+}
+```
+
+---
+
+## Solving the Kidnapping Game (step 2)
+
+Let's start at the end (bottom) of the game:
+
+  * If the ransom **has not** been paid, what should [Guy]{.red} do?
+
+```{dot}
+digraph D {
+  Guy [color="red"];
+  O1 [shape=plaintext,label="2\n2"];
+  O2 [shape=plaintext,label="1\n4"];
+  Guy->O1[label="Kill",arrowhead=none];
+  Guy->O2[label="Release",arrowhead=none];
+}
+```
+
+## Solving the Kidnapping Game (step 2)
+
+Let's start at the end (bottom) of the game:
+
+  * If the ransom **has not** been paid, what should [Guy]{.red} do?
+
+```{dot}
+digraph D {
+  Guy [color="red"];
+  O1 [shape=plaintext,label="2\n2"];
+  O2 [shape=plaintext,label="1\n4"];
+  Guy->O1[label="Kill"];
+  Guy->O2[label="Release",arrowhead=none,style="dashed"];
+}
+```
+
+---
+
+## Solving the Kidnapping Game (step 3)
+
+:::: {.columns}
+
+::: {.column width=30%}
+Now, let's move one level up
+
+  * What should [Vivica]{.blue} believe about [Guy]{.red}'s actions if she **pays** vs **does not pay** the ransom?
+
+  * Which action should she take?
 
 :::
 
-## The smoking decision
+::: {.column width=70%}
+```{dot}
+digraph D {
+  node [label="Guy",color="red"]; GuyPay; GuyNo;
+  Vivica [label="Vivica",color="blue"]; 
+  O1 [shape=plaintext,label="4\n1"];
+  O2 [shape=plaintext,label="5\n3"];
+  O3 [shape=plaintext,label="2\n2"];
+  O4 [shape=plaintext,label="1\n4"];
 
-Let's create some preferences over the three different outcomes:
+  Vivica->GuyPay[label="Pay",arrowhead=none];
+  Vivica->GuyNo[label="Don't",arrowhead=none];
 
-  - $U(\text{Not}) = 0$ - I'm no worse off, but don't get to experience what it's like
+  GuyPay->O1[label="Kill",arrowhead=none,style="dashed"];
+  GuyPay->O2[label="Release"];
 
-  - $U(\text{Try}\rightarrow\textbf{Quit}) = 1$ - I get the experience of smoking without long-term health consequences, etc.
+  GuyNo->O3[label="Kill"];
+  GuyNo->O4[label="Release",arrowhead=none,style="dashed"];
+}
+```
 
-  - $U(\text{Try}\rightarrow\textbf{Continue}) = -1$ - I become an addict
+:::
 
-## The smoking decision
-
-Let's model this as a *decision tree*
-![](figures/fig3.2.png)
-
----
-
-## The smoking decision
-
-::::: {.columns}
-
-:::: {.column width="50%"}
-![](figures/fig3.2.png){fig-align="center"}
 ::::
 
+## Solving the Kidnapping Game (step 3)
 
-:::: {.column width="50%"}
-::: {.incremental}
+:::: {.columns}
 
-  * What would a *rational* version of myself choose?
+::: {.column width=30%}
+Now, let's move one level up
 
-  * Is this realistic?
+  * What should [Vivica]{.blue} believe about [Guy]{.red}'s actions if she **pays** vs **does not pay** the ransom?
 
-  * Why might Trying and then Quitting be a bad idea?
+  * Which action should she take?
 
+:::
+
+::: {.column width=70%}
+```{dot}
+digraph D {
+  node [label="Guy",color="red"]; GuyPay; GuyNo;
+  Vivica [label="Vivica",color="blue"]; 
+  O1 [shape=plaintext,label="4\n1"];
+  O2 [shape=plaintext,label="5\n3"];
+  O3 [shape=plaintext,label="2\n2"];
+  O4 [shape=plaintext,label="1\n4"];
+
+  Vivica->GuyPay[label="Pay"];
+  Vivica->GuyNo[label="Don't",arrowhead=none,style="dashed"];
+
+  GuyPay->O1[label="Kill",arrowhead=none,style="dashed"];
+  GuyPay->O2[label="Release"];
+
+  GuyNo->O3[label="Kill"];
+  GuyNo->O4[label="Release",arrowhead=none,style="dashed"];
+}
+```
 :::
 ::::
 
-:::::
+---
+
+## Solving the Kidnapping Game (step 4)
+
+Now what will happen if:
+
+  * Guy is rational
+  * Vivica *believes* Guy is rational and is rational herself
+  * *Guy believes* that Vivica believes that he is rational
 
 ---
 
-## The smoking *game*
+## Solving the Kidnapping Game (step 4)
 
-We can apply the tools of game theory to this decision:
+```{dot}
+digraph D {
+  node [label="Guy",color="red"]; GuyPay; GuyNo; Guy;
+  Vivica [label="Vivica",color="blue"]; 
+  O1 [shape=plaintext,label="4\n1"];
+  O2 [shape=plaintext,label="5\n3"];
+  O3 [shape=plaintext,label="2\n2"];
+  O4 [shape=plaintext,label="1\n4"];
+  O5 [shape=plaintext,label="3\n5"];
 
-::: {.incremental}
-  * Let's add *future Dante* as another player who acts at the second decision node
+  Guy->Vivica[label="Kidnap"];
+  Guy->O5[label="Don't",arrowhead=none,style="dashed"];
 
-  * Future Dante is different from *Present Dante* because he has different preferences:
+  Vivica->GuyPay[label="Pay"];
+  Vivica->GuyNo[label="Don't",arrowhead=none,style="dashed"];
 
-    - $U_{FD}(\text{Continue}) = 1$ because he's already addicted
+  GuyPay->O1[label="Kill",arrowhead=none,style="dashed"];
+  GuyPay->O2[label="Release"];
 
-    - $U_{FD}(\text{Quit}) = -1$ because withdrawl is painful
-:::
-
-## The smoking *game*
-
-![](figures/fig3.3.png)
-
----
-
-## The smoking *game*
-
-::::: {.columns}
-
-:::: {.column width="50%"}
-![](figures/fig3.3.png){fig-align="center"}
-::::
-
-
-:::: {.column width="50%"}
-::: {.incremental}
-
-  * What will Future Carmen choose?
-
-  * Should Carmen choose to Try smoking *if she knows what her future self would choose?*
-
-:::
-::::
-
-:::::
-
-## 'Pruning' branches
-
-If Carmen is *forward looking*, knows her *future self's preferences*, and knows that her future self is *rational*,
-
-Then she can eliminate the possibility that her future self would quit.
-
-::: {.incremental}
-
-  * [Pruning]{.hi} is this type of logic applied to eliminating certain branches in a game tree.
-:::
-
----
-
-## 'Pruning' branches
-
-If Future Carmen will never choose to Quit smoking once she is already an addict, 
-
-> what choices is **Today's Carmen** left with?
-
-::: {.incremental}
-  
-  * [Try]{.h} knowing that she will continue in the future and get -1 payoff
-
-  * or [Not]{.h} try smoking today and earn 0 payoff
-
-:::
+  GuyNo->O3[label="Kill"];
+  GuyNo->O4[label="Release",arrowhead=none,style="dashed"];
+}
+```
 
 ---
 
@@ -145,24 +215,14 @@ Let's outline the logical steps we used to solve this game:
 
 ::: {.incremental}
 
-  * We were uncertain about what would happen in this game, because **Today's Carmen**'s optimal strategy depended on what **Future Carmen** woud do
+  * We were uncertain about what would happen in this game, because [Vivica]{.red}'s optimal strategy depended on what [Guy]{.blue} woud do
 
-  * But **Future Carmen** is the last player in this game, so her choice only depends on her *own preferences*
+  * But after Vivica has chosen, [Guy]{.red} is the only player left and his action depends only on *his own preferences*
 
-  * Knowing what **Future Carmen** would choose allowed us to find **Today's Carmen**'s best strategy
+  * Knowing what [Guy]{.red} would choose allowed us to find [Vivica]{.blue}'s best response
 
+  * Knowing what [Vivica]{.blue} would choose allowed us to find [Guy]{.red}'s best response
 :::
-
-## Smoking Game Solution
-
-![figures/fig3.5.png](figures/fig3.5.png)
-
-::: notes
-  - Either crossing off eliminated branches or highlighting chosen branches works
-  - Just make sure that the order of thinking is clear
-:::
-
----
 
 ## Backwards Induction defined
 
@@ -186,19 +246,6 @@ When all players do *rollback analysis* to choose their optimal strategies, we c
 
 ---
 
-## Solving the Kidnapping Game
-
-![](figures/kidnapgame.png)
-
-::: notes
-  - If Vivica paid ransom, Guy would rather Release
-  - If Vivica didn't pay, Guy would rather Kill
-  - Knowing this, Vivica would Pay to avoid Orland being killed
-  - Therefore, Guy should kidnap Orlando knowing that Vivica will pay and he can release Orlando
-:::
-
----
-
 ## Kidnapping Game Solution
 
 The [Rollback Equilibrium]{.h} is:
@@ -213,150 +260,152 @@ You should read this as:
   - Vivica [Pays]{.blue} the ransom
 :::
 
+---
 
-# Adding more players
+## Subgame perfect Nash equilibrium
 
-## 3-player planting game
+Another term for the [rollback solution]{.hi} is [subgame perfect Nash equilibrium]{.hi}
 
-::: {.incremental}
-  * [Emily]{.hi}, [Nina]{.hi}, and [Talia]{.hi} are roommates who want to get a start on their communal garden. 
-  
-  * They like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.
-  
-  * **2 or 3 people** working is enough to keep the garden healthy, but if **1 or 0** work, then the garden will die.
-  
+  * Don't worry too much about the Nash part (we will revisit)
+
+  * A [subgame]{.hi} refers to the way we broke up the larger game into smaller ones
+
+---
+
+## Extensive Form Survivor Flags
+
+Let's consider a simplified version of the [Survivor Flags game](../../activities/02SurvivorFlags/SurvivorFlags.qmd):
+
+  * Instead of 21 total flags, suppose there are only 5.
+
+  * Instead of picking 1, 2, or 3, teams can only take 1 or 2 flags at a time.
+
+. . .
+
+How would we represent the [game tree]{.hi}?
+
+---
+
+## Extensive Form Survivor Flags
+
+```{dot}
+digraph D {
+  node [label="Team 1",color="red"]; A1; A2; A3; A4; 
+  node [label="Team 2",color="blue"]; B1; B2; B3;
+  node [shape=plaintext,label="1 \n 0"]; O1; O5; O7; O8;
+  node [shape=plaintext,label="0 \n 1"]; O2; O3; O4; O6;
+  edge [arrowhead=none];
+
+  A1->B1[label="1"];
+  B1->A2[label="1"];
+  A2->B3[label="1"];
+  B3->O1[label="1"];
+  B3->O2[label="2"];
+  A2->O3[label="2"];
+  B1->A3[label="2"];
+  A3->O4[label="1"];
+  A3->O5[label="2"];
+  A1->B2[label="2"];
+  B2->A4[label="1"];
+  A4->O6[label="1"];
+  A4->O7[label="2"];
+  B2->O8[label="2"];
+}
+```
+
+. . .
+
+  * Try out our new method of [backwards induction]{.hi}
+
+---
+
+## Solving the simplified Survivor Flags
+
+:::: {.columns}
+
+::: {.column width=30%}
+Let's take a look at the subgame after [Team 1]{.red} and [Team 2]{.blue} have each taken 1 flag:
+
+  * What do you notice?
 :::
-  
----
 
-## Planting Game payoffs
+::: {.column width=70%}
+```{dot}
+digraph D {
+  node [label="Team 1",color="red"]; A1; A2; 
+  node [label="Team 2",color="blue"]; B1; B3;
+  node [shape=plaintext,label="1 \n 0"]; O1; 
+  node [shape=plaintext,label="0 \n 1"]; O2; O3;
+  edge [arrowhead=none];
 
-| outcome:                             | utlity: |
-|--------------------------------------|---------|
-| I don't contribute, but garden lives | 4       |
-| I contribute, and get garden.        | 3       |
-| I don't contribute, and garden dies  | 2       |
-| I contribute, but garden dies        | 1       |
-
----
-
-## Planting Game Tree
-
-![](figures/plantinggame.png)
-
----
-
-## Rollback in the Planting Game
-
-::::: {.columns}
-
-:::: {.column width="50%"}
-![](figures/plantinggame.png)
-::::
-
-:::: {.column width="50%"}
-::: {.incremental}
-Who should we start with to solve this game?
-
-  * Talia, because she is the last one to move, her choices don't depend on other players
-:::
-::::
-
-:::::
----
-
-## Rollback in the Planting Game
-
-::::: {.columns}
-
-:::: {.column width="50%"}
-![](figures/plantinggame.png)
-::::
-
-:::: {.column width="50%"}
-::: {.incremental}
-How many strategies does Talia have?
-
-  * 16 total complete strategies
-
-  * CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD
-
-:::
-::::
-
-:::::
----
-
-## Rollback in the Planting Game
-
-::::: {.columns}
-
-:::: {.column width="50%"}
-![](figures/plantinggame.png)
-::::
-
-:::: {.column width="50%"}
-::: {.incremental}
-Which of Talia's strategies can be eliminated as *irrational*?
-
-  * Any which include an action which would lead to a lower payoff than another possible action at the same node
-
+  A1->B1[label="1"];
+  B1->A2[label="1"];
+  A2->B3[label="1"];
+  B3->O1[label="1"];
+  B3->O2[label="2"];
+  A2->O3[label="2"];
+}
+```
 :::
 ::::
 
-:::::
 ---
 
-## Rollback in the Planting Game
+## Solving the simplified Survivor Flags
 
-Let's simplify the game by pruning Talia's eliminated branches
+:::: {.columns}
 
-![](figures/plantinggame.png)
+::: {.column width=30%}
+[Team 1]{.red} is **indifferent** between taking 1 or 2 flags.
 
-::: notes
-  - Draw new tree on board with only Emily and Nina's branches, 
-      - replace Talia's decision nodes with new terminal nodes with payoffs corresponding to non-pruned end branches
+  * This allows for [multiple equilibria]{.hi}
 :::
 
----
+::: {.column width=70%}
+```{dot}
+digraph D {
+  node [label="Team 1",color="red"]; A2; 
+  node [label="Team 2",color="blue"]; B3;
+  node [shape=plaintext,label="1 \n 0"]; O1; 
+  node [shape=rectangle,color="black",label="0 \n 1"]; O2; O3;
+  edge [arrowhead=none];
 
-## Rollback in the Planting Game
-
-![](figures/fig3.6.png)
-
----
-
-## Equilibrium Path of Play
-
-::: {.incremental}
-
-Note that there is one continuous path we traced from the initial node to a final equilibrium outcome.
-
-However, we couldn't have gotten their without the other arrows paths **even though they are never reached** in equilibrium.
-
-Recall that a [strategy]{.hi} is a collection of choices at **every** decision node.
-
+  A2->B3[label="1",arrowhead=normal];
+  B3->O1[label="1",style="dashed"];
+  B3->O2[label="2",arrowhead=normal];
+  A2->O3[label="2"arrowhead=normal];
+}
+```
 :::
+::::
 
----
+## Extensive Form Survivor Flags
 
-## Equilibrium Strategies
+```{dot}
+digraph D {
+  node [label="Team 1",color="red"]; A1; A2; A3; A4; 
+  node [label="Team 2",color="blue"]; B1; B2; B3;
+  node [shape=plaintext,label="1 \n 0"]; O1; O5; O7; O8;
+  node [shape=plaintext,label="0 \n 1"]; O2; O3; O4; O6;
+  edge [arrowhead=none];
 
-Even though the players available actions are all called the same (Contribute or Don't), this tree provides labels of each decision node so we can say something like:
+  A1->B1[label="1",arrowhead=normal];
+  B1->A2[label="1",arrowhead=normal];
+  A2->B3[label="1",arrowhead=normal];
+  B3->O1[label="1",style="dashed"];
+  B3->O2[label="2",arrowhead=normal];
+  A2->O3[label="2",arrowhead=normal];
+  B1->A3[label="2",style="dashed"];
+  A3->O4[label="1",style="dashed"];
+  A3->O5[label="2",arrowhead=normal];
+  A1->B2[label="2",style="dashed"];
+  B2->A4[label="1",arrowhead=normal];
+  A4->O6[label="1",style="dashed"];
+  A4->O7[label="2",arrowhead=normal];
+  B2->O8[label="2",arrowhead=normal];
+}
+```
 
-  > "Nina's **strategy** in the rollback equilibrium is \{ [*Don't Contribute*]{.hii} at [b]{.hi}, [*Contribute*]{.hii} at [c]{.hi} \}".
-  
-  * To make it even shorter, let's call this strategy [DC]{.hii}.
-  
----
-
-  
-## Rollback Equilibrium Strategies
-
-The equilibrium is:
-
-  * \{ [D]{.hi}^[Emily], [DC]{.hi}^[Nina], [DCCD]{.hi}^[Talia]  \} 
-  
 ---
 
 ## Three new concepts

@@ -1,0 +1,146 @@
+# Adding more players
+
+## 3-player planting game
+
+From the textbook:
+
+::: {.incremental}
+  * [Emily]{.hi}, [Nina]{.hi}, and [Talia]{.hi} are roommates who want to get a start on their communal garden. 
+  
+  * They like to enjoy the benefits of fresh produce and green space, but it is costly for them to put the work in.
+  
+  * **2 or 3 people** working is enough to keep the garden healthy, but if **1 or 0** work, then the garden will die.
+  
+:::
+  
+---
+
+## Planting Game payoffs
+
+| outcome:                             | utlity: |
+|--------------------------------------|---------|
+| I don't contribute, but garden lives | 4       |
+| I contribute, and get garden.        | 3       |
+| I don't contribute, and garden dies  | 2       |
+| I contribute, but garden dies        | 1       |
+
+---
+
+## Planting Game Tree
+
+![](figures/plantinggame.png)
+
+---
+
+## Rollback in the Planting Game
+
+::::: {.columns}
+
+:::: {.column width="50%"}
+![](figures/plantinggame.png)
+::::
+
+:::: {.column width="50%"}
+::: {.incremental}
+Who should we start with to solve this game?
+
+  * Talia, because she is the last one to move, her choices don't depend on other players
+:::
+::::
+
+:::::
+---
+
+## Rollback in the Planting Game
+
+::::: {.columns}
+
+:::: {.column width="50%"}
+![](figures/plantinggame.png)
+::::
+
+:::: {.column width="50%"}
+::: {.incremental}
+How many strategies does Talia have?
+
+  * 16 total complete strategies
+
+  * CCCC, CCCD, CCDC, CCDD, CDCC, CDCD, CDDC, CDDD, DCCC, DCCD, DCDC, DCDD, DDCC, DDCD, DDDC, DDDD
+
+:::
+::::
+
+:::::
+---
+
+## Rollback in the Planting Game
+
+::::: {.columns}
+
+:::: {.column width="50%"}
+![](figures/plantinggame.png)
+::::
+
+:::: {.column width="50%"}
+::: {.incremental}
+Which of Talia's strategies can be eliminated as *irrational*?
+
+  * Any which include an action which would lead to a lower payoff than another possible action at the same node
+
+:::
+::::
+
+:::::
+---
+
+## Rollback in the Planting Game
+
+Let's simplify the game by pruning Talia's eliminated branches
+
+![](figures/plantinggame.png)
+
+::: notes
+  - Draw new tree on board with only Emily and Nina's branches, 
+      - replace Talia's decision nodes with new terminal nodes with payoffs corresponding to non-pruned end branches
+:::
+
+---
+
+## Rollback in the Planting Game
+
+![](figures/fig3.6.png)
+
+---
+
+## Equilibrium Path of Play
+
+::: {.incremental}
+
+Note that there is one continuous path we traced from the initial node to a final equilibrium outcome.
+
+However, we couldn't have gotten their without the other arrows paths **even though they are never reached** in equilibrium.
+
+Recall that a [strategy]{.hi} is a collection of choices at **every** decision node.
+
+:::
+
+---
+
+## Equilibrium Strategies
+
+Even though the players available actions are all called the same (Contribute or Don't), this tree provides labels of each decision node so we can say something like:
+
+  > "Nina's **strategy** in the rollback equilibrium is \{ [*Don't Contribute*]{.hii} at [b]{.hi}, [*Contribute*]{.hii} at [c]{.hi} \}".
+  
+  * To make it even shorter, let's call this strategy [DC]{.hii}.
+  
+---
+
+  
+## Rollback Equilibrium Strategies
+
+The equilibrium is:
+
+  * \{ [D]{.hi}^[Emily], [DC]{.hi}^[Nina], [DCCD]{.hi}^[Talia]  \} 
+  
+---

@@ -20,8 +20,6 @@ title-slide-attributes:
 library(tidyverse)
 ```
 
-::: {.vertical-center}
-
 [Outline]{.hi .big}
 
   * Game trees
@@ -30,16 +28,16 @@ library(tidyverse)
 
   * Efficiency
 
-:::
-
 {{< include 0201-trees.qmd >}}
 
 {{< include 0202-bwdinduct.qmd >}}
+
+{{< include 0207-threeplayers.qmd >}}
 
 {{< include 0203-pareto.qmd >}}
 
 {{< include 0204-ordermatters.qmd >}}
 
-{{< include 0205-examples.qmd >}}
+<!-- {{< include 0205-examples.qmd >}} -->
 
 {{< include 0206-evidence.qmd >}}

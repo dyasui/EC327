@@ -202,9 +202,19 @@ Let's use the language of the tree graph to visualize this game.
 
 ## Predictions?
 
+:::: {.columns}
+
+::: {.column width="40%"}
+![](figures/kidnapgame.png){fig-align="center"}
+:::
+
+::: {.column width="60%"}
 Based on the extensive form game tree with payoffs,
 
-- Do you have any predictions for what strategies each player will choose?
+- Do you have any predictions?
+:::
+
+::::
 
 ::: notes
   - Ask students what they would do in Guy's position,
@@ -222,14 +232,16 @@ Based on the extensive form game tree with payoffs,
   * A collection of decision-makers, called [players]{.hi} or *agents*
   
   * A set of [decision nodes]{.hi}, 
-  each represents the information available to the player of that node
+  each represents the *information* available to the player of that node
   
-  * Strategies for each player which list the [branches]{.hi} 
-  from *each* node that represetn the actions 
+  * [Strategies]{.hi} for each player which list the **branches**
+  from *each* node that represent the actions 
   a player would take if faced with that choice
+
+    - We will use **actions** to refer to the individual branches.
   
   * A [tree diagram]{.h} which maps the intersections of players' strategy profiles
-  to the outcomes represented at each [terminal nodes]{.hi}
+  to the outcomes represented at each [terminal node]{.hi}
 :::
 
 ::: notes
@@ -280,49 +292,24 @@ What's the difference?
 :::: {.column width="60%"}
 ::: {.incremental}
 
-  * How many decisions does [Guy]{.red} make? 
-    - 3
+  * Is [*Do not kidnap*]{.red} a complete strategy for [Guy]{.red}?
   
-  * How many decisions does [Vivica]{.blue} make?
-    - 1
+  * No!
+
+  * Why? Because it doesn't give us any *justification* for [Guy]{.red}'s action.
+
+    - We don't know if this is rational (or even strategic)
 :::
 ::::
 
 :::::
 
 ::: notes
-  - count the nodes labeled with each player's name
+  - A complete strategy needs to include an action at every decision node
 :::
   
 ---
 
-## Apply this definition to the kidnapping game:
-::::: {.columns}
-
-:::: {.column width="40%"}
-![](figures/kidnapgame_blank.png){fig-align="center"}
-::::
-
-
-:::: {.column width="60%"}
-::: {.incremental}
-
-  * Write out a complete strategy for [Vivica]{.blue}
-    - Only two strategies: 
-      + [*Pay*]{.blue} the ransom,
-      + or [*Don't*]{.blue} pay
-
-:::
-::::
-
-:::::
-
-::: notes
-  - Vivica only has to make a decision in the branch where Orlando is kidnapped
-:::
-
----
-  
 ## Apply this definition to the kidnapping game:
 ::::: {.columns}
 
@@ -335,9 +322,9 @@ What's the difference?
 ::: {.incremental}
 
   * Write out at complete strategy for [Guy]{.red}
-    - Let's give some shorter names for Guy's actions:
+    - Let's give some shorter names for Guy's *actions*:
       + [$A$]{.red} $\equiv$ Kidnap Orlando (Abduct)
-      + [$I$]{.red} $\equiv$ Don't kidnap Orlando (Ignore)
+      + [$D$]{.red} $\equiv$ Don't kidnap Orlando
       + [$K$]{.red} $\equiv$ Kill Orlando 
       + [$L$]{.red} $\equiv$ Let Orlando live
 :::
@@ -356,11 +343,20 @@ What's the difference?
 
 Guy has $8$ total complete strategies:
 
-| If Guy $A$bducts                          | If Guy $I$gnores                              |
+| If Guy $A$bducts                          | If Guy $D$oesn't                              |
 |-------------------------------------------+-----------------------------------------------|
-| ( [$A$]{.red}, [$K$]{.red}, [$K$]{.red} ) | ( [$I$]{.red}, [$K$]{.red}, [$K$]{.red} ) |
-| ( [$A$]{.red}, [$L$]{.red}, [$K$]{.red} ) | ( [$I$]{.red}, [$L$]{.red}, [$L$]{.red} ) |
-| ( [$A$]{.red}, [$K$]{.red}, [$L$]{.red} ) | ( [$I$]{.red}, [$K$]{.red}, [$L$]{.red} ) |
-| ( [$A$]{.red}, [$L$]{.red}, [$L$]{.red} ) | ( [$I$]{.red}, [$L$]{.red}, [$L$]{.red} ) |
+| ( [$A$]{.red}, [$K$]{.red}, [$K$]{.red} ) | ( [$D$]{.red}, [$K$]{.red}, [$K$]{.red} ) |
+| ( [$A$]{.red}, [$L$]{.red}, [$K$]{.red} ) | ( [$D$]{.red}, [$L$]{.red}, [$L$]{.red} ) |
+| ( [$A$]{.red}, [$K$]{.red}, [$L$]{.red} ) | ( [$D$]{.red}, [$K$]{.red}, [$L$]{.red} ) |
+| ( [$A$]{.red}, [$L$]{.red}, [$L$]{.red} ) | ( [$D$]{.red}, [$L$]{.red}, [$L$]{.red} ) |
 
+. . .
 
+  * How do we know if any is more or less valid than the others?
+
+::: {.notes}
+
+  * It depends on Guy's *beliefs* about Vivica's behavior!
+  * We need to think strategically
+
+:::
