@@ -3253,7 +3253,7 @@
     "href": "Homework/index.html",
     "title": "Homework Assignments",
     "section": "",
-    "text": "Assignment 1 Download\nDue: Friday, October 3rd Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 2 Download\nDue: Friday, October 10th Submit to Canvas\n\n  Expand\n  \n    \n  \n\n\n\nAssignment 3 Download\nDue: Friday, October 17th Submit to Canvas\n\n  Expand\n  \n    \n  \n\n\n\nAssignment 4 Download\nDue: Friday, October 24th Submit to Canvas\n\n  Expand\n  \n    \n  \n\n\n\nOther Assignments: coming soon"
+    "text": "Assignment 1 Download\nDue: Friday, October 3rd Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 2 Download\nDue: Friday, October 10th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 3 Download\nDue: Friday, October 17th Submit to Canvas\n\n  Expand\n  \n    \n  \n\n\n\nAssignment 4 Download\nDue: Friday, October 24th Submit to Canvas\n\n  Expand\n  \n    \n  \n\n\n\nOther Assignments: coming soon"
   },
   {
     "objectID": "Exams/index.html",
@@ -4640,6 +4640,97 @@
     "title": "Evidence concerning Rollback",
     "section": "",
     "text": "But if Jon chose \\(b\\), doesn’t that mean that he can’t be rational?\nWhat should Jane do?\nMaybe Jon just made a mistake, and Jane should stick to her assumption that he will continue to try to make rational choices"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#does-rollback-hold-up-in-the-real-world",
+    "href": "Slides/03SimultaneousGames/03-main.html#does-rollback-hold-up-in-the-real-world",
+    "title": "Introduction to Game Theory",
+    "section": "Does rollback hold up in the real world?",
+    "text": "Does rollback hold up in the real world?\nOne of the goals of game theory is to generate testable predictions\n\nYou have all participated in a few such tests of the theory in this class"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#survivor-flags-game-results",
+    "href": "Slides/03SimultaneousGames/03-main.html#survivor-flags-game-results",
+    "title": "Introduction to Game Theory",
+    "section": "Survivor Flags game results",
+    "text": "Survivor Flags game results"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#why-didnt-all-teams-find-the-rollback-equilibrium",
+    "href": "Slides/03SimultaneousGames/03-main.html#why-didnt-all-teams-find-the-rollback-equilibrium",
+    "title": "Introduction to Game Theory",
+    "section": "Why didn’t all teams find the rollback equilibrium?",
+    "text": "Why didn’t all teams find the rollback equilibrium?\n\nDid everyone have perfect information about the rules?\nWere people thinking ahead?\nWere there disagreements within any teams as to the optimal strategy?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#why-didnt-all-teams-find-the-rollback-equilibrium-1",
+    "href": "Slides/03SimultaneousGames/03-main.html#why-didnt-all-teams-find-the-rollback-equilibrium-1",
+    "title": "Introduction to Game Theory",
+    "section": "Why didn’t all teams find the rollback equilibrium?",
+    "text": "Why didn’t all teams find the rollback equilibrium?\nWhat about common knowledge of rationality?\n\nIf you were on the second team to choose, and you see the first team doesn’t take one flag, what should you think?\nShould you still stick to the optimal strategy?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#survivor-flag-results-discussion",
+    "href": "Slides/03SimultaneousGames/03-main.html#survivor-flag-results-discussion",
+    "title": "Introduction to Game Theory",
+    "section": "Survivor Flag Results Discussion",
+    "text": "Survivor Flag Results Discussion\nThis game was relatively simple because it only relied on one team to come up with the optimal strategy\n\nAs long as the first team always took the right number of flags, the second team didn’t have any impact on the game\nThis is also a zero-sum game, so there were no opportunities for teams to benefit by cooperating\nLet’s look at a similar game, but with non-zero-sum payoffs"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#centipede-game",
+    "href": "Slides/03SimultaneousGames/03-main.html#centipede-game",
+    "title": "Introduction to Game Theory",
+    "section": "Centipede Game",
+    "text": "Centipede Game\nTwo participants play this game, taking turns over five rounds.\nThe first is offered a choice between:\n\nsplitting 50 cents where they keep 40 and the other player gets 10\n\nor b) they pass the choice to the next player who gets the same choice but the pot they can choose to split from doubles\nNow what would you do if you were in this situation?\nWhen would you grab?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#centipede-game-1",
+    "href": "Slides/03SimultaneousGames/03-main.html#centipede-game-1",
+    "title": "Introduction to Game Theory",
+    "section": "Centipede Game",
+    "text": "Centipede Game\nWhat is the theoretical solution?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#centipede-game-2",
+    "href": "Slides/03SimultaneousGames/03-main.html#centipede-game-2",
+    "title": "Introduction to Game Theory",
+    "section": "Centipede Game",
+    "text": "Centipede Game\nOut of 100 pairs of your peers, how many times do you think that player 1 would grab in the first node?\n\nIn a lab experiment, only 2 times out of 281 did the first player take the first 40 cents (~1%)\n\nHow many times do you think player 2 grabed in the second node?\n\nOnly 18 out of 279 (~6%) did\n\nHow many pairs do you think got to the end of the tree without anyone grabbing? So the last player giving up $12.80 for only $6.40\n\n15%!"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#centipede-game-evidence-discussion",
+    "href": "Slides/03SimultaneousGames/03-main.html#centipede-game-evidence-discussion",
+    "title": "Introduction to Game Theory",
+    "section": "Centipede Game Evidence Discussion",
+    "text": "Centipede Game Evidence Discussion\nWhat explains the drastic departure in lab experiments from the preditiction of backwards induction?\n\nAre players’ not looking ahead to the end of the game?\n\nMaybe? But in that experiment, the percentage of players grabbing increased over later stages. In the 5th node, 73% of player 1’s grabbed.\n\nAre college students driven by more than money?\n\nProbably. What are some other things which could factor into these participants’ payoffs?\nWhat about how much they care about how much their opponent gets?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#ultimatum-game",
+    "href": "Slides/03SimultaneousGames/03-main.html#ultimatum-game",
+    "title": "Introduction to Game Theory",
+    "section": "Ultimatum Game",
+    "text": "Ultimatum Game\nPlayer A and Player B are offered a dollar to divide amongst them.\n\nPlayer A gets to propose how to split the dollar (i.e., 50:50, 75 to me 25 to you, etc)\nPlayer B can either accept the proposed split, or reject so that both players get nothing\n\n\nWhat is the rollback solution if both players payoffs are only determined by how much money they earn?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#ultimatum-game-evidence",
+    "href": "Slides/03SimultaneousGames/03-main.html#ultimatum-game-evidence",
+    "title": "Introduction to Game Theory",
+    "section": "Ultimatum Game Evidence",
+    "text": "Ultimatum Game Evidence\nIn spite of the theoretical prediction, the most common proposal in lab experiments is 50:50.\nMost player B’s actually reject any offer of 25% or less.\n\nThis seems to indicate that most people have some sort of aversion to inequity\nIf you’re interested in learning more, behavioral economics develops on the basic rational agent model to make sense of some of these experimental findings"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#a-logical-paradox-with-backward-induction",
+    "href": "Slides/03SimultaneousGames/03-main.html#a-logical-paradox-with-backward-induction",
+    "title": "Introduction to Game Theory",
+    "section": "A logical paradox with Backward induction",
+    "text": "A logical paradox with Backward induction\n\n\n\n\n\nWhat should Jane do if Jon chose \\(b\\)?\nIf she knows Jon is rational, then he would choose \\(d\\) if she chose \\(x\\), and \\(c\\) if she chose \\(y\\)\nSo Jane should choose \\(x\\) to get a payoff of \\(5\\) over \\(3\\) if she chose \\(y\\)"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#a-logical-paradox-with-backward-induction-1",
+    "href": "Slides/03SimultaneousGames/03-main.html#a-logical-paradox-with-backward-induction-1",
+    "title": "Introduction to Game Theory",
+    "section": "A logical paradox with Backward induction",
+    "text": "A logical paradox with Backward induction\n\n\n\n\n\nBut if Jon chose \\(b\\), doesn’t that mean that he can’t be rational?\nWhat should Jane do?\nMaybe Jon just made a mistake, and Jane should stick to her assumption that he will continue to try to make rational choices"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#split-or-steal-1",
