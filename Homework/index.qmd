@@ -14,14 +14,14 @@ title: "Homework Assignments"
 </details>
 ```
 
-# Assignment 2 [Download](02_Sequential/main.pdf){.btn .btn-outline-primary .btn role="button"} 
+# Assignment 2 [Download](02_Sequential/HW2_clean.pdf){.btn .btn-outline-primary .btn role="button"} 
 **Due:** Friday, October 10th
 [**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1927365){target="_blank"}
 ```{=html}
 <details>
-  <summary>Expand</summary>
+  <summary>Answer Key</summary>
   <div class="embed-container">
-    <iframe src="02_Sequential/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+    <iframe src="02_Sequential/HW2_key.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```
