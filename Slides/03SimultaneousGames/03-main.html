@@ -146,57 +146,18 @@ Dante Yasui
 <div class="vertical-center">
 <p><span class="hi big">Outline</span></p>
 <ul>
+<li><p>Finish up sequential games</p></li>
 <li><p>Game Tables/Strategic Form</p></li>
-<li><p>Nash Equilibrium</p></li>
 <li><p>Dominant Strategies</p></li>
+<li><p>Nash Equilibrium</p></li>
+<li><p>Best responses</p></li>
 </ul>
 </div>
 </section>
+<section>
 <section id="evidence-for-sequential-rationality" class="title-slide slide level1 center">
 <h1>Evidence for Sequential Rationality</h1>
 
-</section>
-
-<section>
-<section id="evidence-concerning-rollback" class="title-slide slide level1 center">
-<h1>Evidence concerning Rollback</h1>
-
-</section>
-<section id="does-rollback-hold-up-in-the-real-world" class="slide level2">
-<h2>Does rollback hold up in the real world?</h2>
-<p>One of the goals of game theory is to generate <em>testable predictions</em></p>
-<blockquote>
-<p>You have all participated in a few such tests of the theory in this class</p>
-</blockquote>
-</section>
-<section id="survivor-flags-game-results" class="slide level2">
-<h2>Survivor Flags game results</h2>
-
-<img data-src="figures/F2024-Results.png" class="r-stretch"></section>
-<section id="why-didnt-all-teams-find-the-rollback-equilibrium" class="slide level2">
-<h2>Why didn’t all teams find the rollback equilibrium?</h2>
-<ul>
-<li class="fragment"><p>Did everyone have perfect information about the rules?</p></li>
-<li class="fragment"><p>Were people thinking ahead?</p></li>
-<li class="fragment"><p>Were there disagreements within any teams as to the optimal strategy?</p></li>
-</ul>
-</section>
-<section id="why-didnt-all-teams-find-the-rollback-equilibrium-1" class="slide level2">
-<h2>Why didn’t all teams find the rollback equilibrium?</h2>
-<p>What about common knowledge of rationality?</p>
-<ul>
-<li class="fragment"><p>If you were on the second team to choose, and you see the first team doesn’t take one flag, what should you think?</p></li>
-<li class="fragment"><p>Should you still stick to the optimal strategy?</p></li>
-</ul>
-</section>
-<section id="survivor-flag-results-discussion" class="slide level2">
-<h2>Survivor Flag Results Discussion</h2>
-<p>This game was relatively simple because it only relied on <em>one team</em> to come up with the optimal strategy</p>
-<ul>
-<li class="fragment"><p>As long as the first team always took the right number of flags, the second team didn’t have any impact on the game</p></li>
-<li class="fragment"><p>This is also a <em>zero-sum</em> game, so there were no opportunities for teams to benefit by cooperating</p></li>
-<li class="fragment"><p>Let’s look at a similar game, but with non-zero-sum payoffs</p></li>
-</ul>
 </section>
 <section id="centipede-game" class="slide level2">
 <h2>Centipede Game</h2>
@@ -214,36 +175,6 @@ Dante Yasui
 <p>What is the theoretical solution?</p>
 
 <img data-src="figures/Harrington-fig8.20.png" class="r-stretch"></section>
-<section id="centipede-game-2" class="slide level2">
-<h2>Centipede Game</h2>
-<p>Out of 100 pairs of your peers, how many times do you think that player 1 would grab in the first node?</p>
-<ul>
-<li class="fragment">In a lab experiment, only 2 times out of 281 did the first player take the first 40 cents (~1%)</li>
-</ul>
-<p>How many times do you think player 2 grabed in the second node?</p>
-<ul>
-<li class="fragment">Only 18 out of 279 (~6%) did</li>
-</ul>
-<p>How many pairs do you think got to the end of the tree without anyone grabbing? So the last player giving up $12.80 for only $6.40</p>
-<ul>
-<li class="fragment">15%!</li>
-</ul>
-</section>
-<section id="centipede-game-evidence-discussion" class="slide level2">
-<h2>Centipede Game Evidence Discussion</h2>
-<p>What explains the drastic departure in lab experiments from the preditiction of backwards induction?</p>
-<ul>
-<li class="fragment"><p>Are players’ not looking ahead to the end of the game?</p>
-<ul>
-<li class="fragment">Maybe? But in that experiment, the percentage of players grabbing increased over later stages. In the 5th node, 73% of player 1’s grabbed.</li>
-</ul></li>
-<li class="fragment"><p>Are college students driven by more than money?</p>
-<ul>
-<li class="fragment"><p>Probably. What are some other things which could factor into these participants’ payoffs?</p></li>
-<li class="fragment"><p>What about how much they care about how much their opponent gets?</p></li>
-</ul></li>
-</ul>
-</section>
 <section id="ultimatum-game" class="slide level2">
 <h2>Ultimatum Game</h2>
 <p>Player A and Player B are offered a dollar to divide amongst them.</p>
@@ -263,136 +194,6 @@ Dante Yasui
 <li class="fragment"><p>This seems to indicate that most people have some sort of <em>aversion to inequity</em></p></li>
 <li class="fragment"><p>If you’re interested in learning more, <strong>behavioral economics</strong> develops on the basic rational agent model to make sense of some of these experimental findings</p></li>
 </ul>
-</section>
-<section id="a-logical-paradox-with-backward-induction" class="slide level2">
-<h2>A logical paradox with Backward induction</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="figures/Harrington-fig8.21.png"></p>
-</div><div class="column" style="width:50%;">
-<ul>
-<li class="fragment"><p>What should Jane do if Jon chose <span class="math inline">\(b\)</span>?</p></li>
-<li class="fragment"><p>If she knows Jon is rational, then he would choose <span class="math inline">\(d\)</span> if she chose <span class="math inline">\(x\)</span>, and <span class="math inline">\(c\)</span> if she chose <span class="math inline">\(y\)</span></p></li>
-<li class="fragment"><p>So Jane should choose <span class="math inline">\(x\)</span> to get a payoff of <span class="math inline">\(5\)</span> over <span class="math inline">\(3\)</span> if she chose <span class="math inline">\(y\)</span></p></li>
-</ul>
-</div></div>
-</section>
-<section id="a-logical-paradox-with-backward-induction-1" class="slide level2">
-<h2>A logical paradox with Backward induction</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="figures/Harrington-fig8.21.png"></p>
-</div><div class="column" style="width:50%;">
-<ul>
-<li class="fragment"><p>But if Jon chose <span class="math inline">\(b\)</span>, doesn’t that mean that he can’t be rational?</p></li>
-<li class="fragment"><p>What should Jane do?</p></li>
-<li class="fragment"><p>Maybe Jon just made a mistake, and Jane should stick to her assumption that he will continue to try to make rational choices</p></li>
-</ul>
-</div></div>
-</section>
-<section class="slide level2">
-
-</section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="split-or-steal" class="title-slide slide level1 center">
-<h1>Split or Steal</h1>
-<iframe data-external="1" src="https://www.youtube.com/embed/S0qjK3TWZE8" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<p>Pause at 2:20. We’ll come back to Nick and Ibrahim!</p>
-</section>
-<section id="split-or-steal-1" class="slide level2">
-<h2>Split or Steal</h2>
-<p>From the perspective of <span class="brown">Nick</span>, his payoffs depend on what Ibrahim has chosen:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>if Ibrahim Splits</th>
-<th>if Ibrahim Steals</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>if Nick Splits he wins:</td>
-<td><span class="math inline">\(\$6,800\)</span></td>
-<td><span class="math inline">\(\$ 0\)</span></td>
-</tr>
-<tr class="even">
-<td>if Nick Steals he wins:</td>
-<td><span class="math inline">\(\$13,600\)</span></td>
-<td><span class="math inline">\(\$ 0\)</span></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="split-or-steal-2" class="slide level2">
-<h2>Split or Steal</h2>
-<p>From the perspective of <span class="blue">Ibrahim</span>, his payoffs depend on what <em>Nick</em> has chosen:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>if Nick Splits</th>
-<th>if Nick Steals</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>if Ibrahim Splits he wins:</td>
-<td><span class="math inline">\(\$6,800\)</span></td>
-<td><span class="math inline">\(\$ 0\)</span></td>
-</tr>
-<tr class="even">
-<td>if Ibrahim Steals he wins:</td>
-<td><span class="math inline">\(\$13,600\)</span></td>
-<td><span class="math inline">\(\$ 0\)</span></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="intersection-of-payoff-tables" class="slide level2">
-<h2>Intersection of payoff tables</h2>
-<p>In a <em>game</em>, the best choices are interdependent:</p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 43%">
-<col style="width: 30%">
-<col style="width: 26%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>(Nick: <span class="math inline">\(\$x\)</span>, Ibrahim: <span class="math inline">\(\$y\)</span>)</th>
-<th>Ibrahim Splits</th>
-<th>Ibrahim Steals</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Nick Splits</td>
-<td><span class="math inline">\((\$6,800, \$6,800)\)</span></td>
-<td><span class="math inline">\((\$0, 13,600)\)</span></td>
-</tr>
-<tr class="even">
-<td>Nick Steals</td>
-<td><span class="math inline">\((\$13,600, \$0)\)</span></td>
-<td><span class="math inline">\((\$0, \$0)\)</span></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="split-or-steal-predictions" class="slide level2">
-<h2>Split or Steal Predictions</h2>
-<p>What do you think will happen in this game?</p>
-<ul>
-<li class="fragment"><p>Would you choose <span class="hi">Split</span> or <span class="hi">Steal</span></p></li>
-<li class="fragment"><p>What would you say to your opponent?</p></li>
-</ul>
-</section>
-<section id="split-or-steal-nick-and-ibrahim" class="slide level2">
-<h2>Split or Steal: Nick and Ibrahim</h2>
-<iframe data-external="1" src="https://www.youtube.com/embed/S0qjK3TWZE8?t=142" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </section></section>
 <section>
 <section id="simultaneous-move-games" class="title-slide slide level1 center">
@@ -607,707 +408,21 @@ Table&nbsp;2: Big 10 Game
 </ul>
 </section></section>
 <section>
-<section id="nash-equilibrium" class="title-slide slide level1 center">
-<h1>Nash Equilibrium</h1>
-
-</section>
-<section id="solving-simultaneous-games" class="slide level2">
-<h2>Solving Simultaneous Games</h2>
-<ul>
-<li><p>Before we cover how to solve a game, we first need to discuss what a solution to a game even is.</p></li>
-<li><p>As with many types of problem in economics, we’re interested in finding an <em>equilibrium</em>:</p>
-<ul>
-<li>equilibrium a situation which is “stable,” in that there is no incentive to change.</li>
-</ul></li>
-</ul>
-</section>
-<section id="nash-equilibrium-1" class="slide level2">
-<h2>Nash Equilibrium</h2>
-<p>The most basic form of equilibrium in game theory is the <span class="h">Nash Equilibrium (NE)</span>, which can be described as:</p>
-<ul>
-<li><p>A strategy profile such that no player can obtain a larger payoff by <em>unilaterally deviating</em></p></li>
-<li><p>A strategy profile such that no single player can make themselves better off by changing only their own strategy.</p></li>
-<li><p>A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision</p></li>
-</ul>
-</section>
-<section id="nash-equilibrium-2" class="slide level2">
-<h2>Nash Equilibrium</h2>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Nash Equilibrium</strong></p>
-</div>
-<div class="callout-content">
-<p>A list of strategies where each player’s strategy is the best response to the other’s best response strategy</p>
-</div>
-</div>
-</div>
-<ul>
-<li class="fragment">In other words, no player has any incentive to <span class="hii">deviate</span> in their strategy away from an equilibrium strategy</li>
-<li class="fragment">It is central to the analysis of simultaneous-move games.</li>
-<li class="fragment">Can occur in <strong>pure strategies</strong> (where players choose a single action) or <strong>mixed strategies</strong> (randomized choices).</li>
-</ul>
-</section>
-<section id="nash-equilibrium-in-tbl-basic4x3game" class="slide level2">
-<h2>Nash Equilibrium in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
-<p>Let’s look at one specific strategy profile in this game:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td><span class="h">(5,4)</span></td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-</div><div class="column" style="width:50%;">
-<blockquote>
-<p>Row chooses Low and Column chooses Middle</p>
-</blockquote>
-<ul>
-<li>Is this <em>stable</em>?</li>
-</ul>
-</div></div>
-</section>
-<section id="nash-equilibrium-in-tbl-basic4x3game-1" class="slide level2">
-<h2>Nash Equilibrium in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
-<p>Let’s look at one specific strategy profile in this game:</p>
-<div class="columns">
-<div class="column smaller" style="width:50%;">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th><span class="hii">Middle</span></th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td><span class="hii">(2,3)</span></td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td><span class="hii">(3,0)</span></td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td><span class="h">(5,4)</span></td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td><span class="hii">(4,5)</span></td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-</div><div class="column" style="width:50%;">
-<blockquote>
-<p>Row chooses Low and Column chooses Middle</p>
-</blockquote>
-<ul>
-<li>Given that Column plays Middle, is there any way for Row to get a higher payoff?</li>
-</ul>
-</div></div>
-</section>
-<section id="nash-equilibrium-in-tbl-basic4x3game-2" class="slide level2">
-<h2>Nash Equilibrium in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
-<p>Let’s look at one specific strategy profile in this game:</p>
-<div class="columns">
-<div class="column smaller" style="width:50%;">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td><span class="hii">Low</span></td>
-<td><span class="hii">(2,2)</span></td>
-<td><span class="h">(5,4)</span></td>
-<td><span class="hii">(12,3)</span></td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-</div><div class="column" style="width:50%;">
-<blockquote>
-<p>Row chooses Low and Column chooses Middle</p>
-</blockquote>
-<ul>
-<li>Given that Row plays Low, is there any way for Column to get a higher payoff?</li>
-</ul>
-</div></div>
-</section>
-<section id="nash-equilibrium-in-tbl-basic4x3game-3" class="slide level2">
-<h2>Nash Equilibrium in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
-<p>What is special about the strategy profile (Low, Middle)?</p>
-<ul>
-<li class="fragment"><p>It’s <em>stable</em> because neither player would have any incentive to change what they’re doing</p></li>
-<li class="fragment"><p>In other words, neither player has regrets over their choice given what the other player is doing</p></li>
-<li class="fragment"><p>However, notice that this doesn’t mean that this is the best that the players could do jointly</p></li>
-</ul>
-</section>
-<section id="other-strategy-profiles-in-tbl-basic4x3game" class="slide level2">
-<h2>Other Strategy Profiles in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(5,4)</td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td><span class="h">(9,7)</span></td>
-</tr>
-</tbody>
-</table>
-<p>What about (Bottom, Right)?</p>
-</section>
-<section id="other-strategy-profiles-in-tbl-basic4x3game-1" class="slide level2">
-<h2>Other Strategy Profiles in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(5,4)</td>
-<td><span class="h">(12,3)</span></td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td><span class="red">(9,7)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Even though (Bottom, Right) is a Pareto improvement on (Low, Middle), it is <em>unstable</em> because it would be rational for Row player to change their strategy to Low to try to get the higher payoff of 12</p>
-</section>
-<section id="other-strategy-profiles-in-tbl-basic4x3game-2" class="slide level2">
-<h2>Other Strategy Profiles in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td><span class="h">(3,1)</span></td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(5,4)</td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-<p>What about (Top, Left)?</p>
-</section>
-<section id="tbl-basic4x3game-with-a-tie-in-payoffs" class="slide level2">
-<h2><a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a> with a tie in payoffs</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(<strong>5</strong>,4)</td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(<strong>5</strong>,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-<p>A Nash equilibrium doesn’t require the equilibrium strategies to be <em>strict</em> improvements.</p>
-<ul>
-<li>(Low, Middle) is still a NE because the payoff of 5 to Row player is <em>weakly</em> (<span class="math inline">\(\geq\)</span>) higher than the payoff of Bottom</li>
-</ul>
-</section>
-<section id="nash-equilibrium-as-a-system-of-beliefs" class="slide level2">
-<h2>Nash Equilibrium as a System of Beliefs</h2>
-<p>So a Nash Equilibrium requires players <em>best responding</em> to each other.</p>
-<ul>
-<li class="fragment"><p>But if a game is <em>simultaneous</em>, then players can’t observe what the other does</p></li>
-<li class="fragment"><p>So how can someone respond to something that hasn’t happened yet?</p></li>
-</ul>
-</section>
-<section id="nash-equilibrium-as-a-system-of-beliefs-1" class="slide level2">
-<h2>Nash Equilibrium as a System of Beliefs</h2>
-<p>How to make sense of best-responses in simultaneous games:</p>
-<ul>
-<li class="fragment"><p>Players might base their beliefs of the other players’ strategies on <em>experience</em> from playing similar games before</p></li>
-<li class="fragment"><p>You might also <em>put yourself into your opponents’ shoes</em> to think about what they might do</p></li>
-<li class="fragment"><p>You should also expect that <em>they are thinking about what you’re thinking</em></p>
-<ul>
-<li class="fragment">and also that <em>you would be thinking about what they are thinking</em> about what you are thinking</li>
-</ul></li>
-</ul>
-</section>
-<section id="the-battle-of-wits" class="slide level2">
-<h2>The Battle of Wits</h2>
-<p>Let’s see an example of this logic in action:</p>
-<iframe data-external="1" src="https://www.youtube.com/embed/pRJ8CrTSSR0" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-</section>
-<section id="nash-equilibrium-as-a-system-of-beliefs-2" class="slide level2">
-<h2>Nash Equilibrium as a System of Beliefs</h2>
-<ul>
-<li>Nash equilibrium assumes:
-<ol type="1">
-<li>Players form <span class="hi">beliefs</span> about the strategies of others.</li>
-<li>These beliefs must be <strong>correct</strong>.</li>
-<li>Each player then chooses their <strong>best response</strong> based on these beliefs.</li>
-</ol></li>
-</ul>
-</section>
-<section id="strategic-uncertainty" class="slide level2">
-<h2>Strategic Uncertainty</h2>
-<ul>
-<li>Players are uncertain about others’ choices but form subjective <strong>beliefs</strong> about them.</li>
-<li>These beliefs are central to decision-making in Nash equilibrium.</li>
-<li>The equilibrium is found when every player’s belief about others’ actions is correct, and their response to these beliefs is optimal.</li>
-</ul>
-</section>
-<section id="an-equivalent-definition-of-ne" class="slide level2">
-<h2>An Equivalent Definition of NE <sup>1</sup></h2>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Nash Equilibrium</strong></p>
-</div>
-<div class="callout-content">
-<p>A set of strategies, one for each player, such that:</p>
-<ol type="1">
-<li><p>each player has correct beliefs about the strategies of the others and</p></li>
-<li><p>the strategy of each is the best for herself, given her beliefs about the strategies of the others.</p></li>
-</ol>
-</div>
-</div>
-</div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Dixit, pg. 98</p></li></ol></aside></section></section>
-<section>
-<section id="prisoners-dilemma" class="title-slide slide level1 center">
-<h1>Prisoners’ Dilemma</h1>
-
-</section>
-<section id="prisoners-dilemma-1" class="slide level2">
-<h2>Prisoners’ Dilemma</h2>
-<p>To see the concept of Nash Equilibrium in action, we will start with the most famous example.</p>
-</section>
-<section id="prisoners-dilemma-2" class="slide level2">
-<h2>Prisoners’ Dilemma <sup>1</sup></h2>
-<p>There are two criminals, who I like to call Guido and Luca.</p>
-<ul>
-<li class="fragment">Guido and Luca have each committed murder, but the police have no way of proving it.</li>
-<li class="fragment">However, the police can prove that they have lied on their taxes, which is a much lesser offense.</li>
-<li class="fragment">The police get Guido and Luca into separate rooms so that they can’t talk, and offer them a choice: Testify against the other, or stay Quiet.</li>
-<li class="fragment">If they Testify, they will receive lenient sentencing, and the police will be able to convict the other criminal.</li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>as defined by Zachary Kiefer</p></li></ol></aside></section>
-<section id="prisoners-dilemma-3" class="slide level2 smaller">
-<h2>Prisoner’s Dilemma</h2>
-<p>There are four different possibilities of what could happen:</p>
-<ul>
-<li class="fragment">Both <em>Keep Quiet</em>: Police can only convict them of tax fraud, so Guido and Luca only serve 1 year in prison each</li>
-<li class="fragment">Guido <em>Testifies</em>, but Luca <em>Keeps Quiet</em>: Guido gets 0 prison time for cooperating, Guido gets hit with a full 20 year sentence</li>
-<li class="fragment">Luca <em>Testifies</em>, but Guido <em>Keeps Quiet</em>: Luca gets 0 prison time, Luca gets hit with a full 20 year sentence</li>
-<li class="fragment">Both <em>Testify</em>: Both get convicted of murder, but get their prison sentences reduced to 10 years each because they cooperated</li>
-</ul>
-</section>
-<section id="prisoners-dilemma-in-strategic-form" class="slide level2">
-<h2>Prisoner’s Dilemma in Strategic Form</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Guido, Luca</th>
-<th>Testify</th>
-<th>Keep Quiet</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Testify</strong></td>
-<td>-10, -10</td>
-<td>0, -20</td>
-</tr>
-<tr class="even">
-<td><strong>Keep Quiet</strong></td>
-<td>-20, 0</td>
-<td>-1, -1</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="what-would-you-choose" class="slide level2">
-<h2>What would you choose?</h2>
-<ul>
-<li><p>Remember that you cannot communicate with your fellow prisoner</p></li>
-<li><p>How would you have to be that they won’t sell you out for you to choose to keep quiet?</p></li>
-</ul>
-</section>
-<section id="prisoners-dilemma-4" class="slide level2 smaller">
-<h2>Prisoners’ Dilemma</h2>
-<p>Let’s think through this from Guido’s perspective.</p>
-<ul>
-<li class="fragment"><p>Imagine that Luca keeps Quiet. This gives Guido a choice of two options: he can also keep Quiet, and get a short prison sentence, or he can Testify and get released. Obviously, Guido prefers to Testify.</p></li>
-<li class="fragment"><p>Now imagine that Luca Testifies. This again gives Guido a choice of two options: he can also keep Quiet, and get a long prison sentence, or he can Testify and get a medium sentence. Obviously, Guido still prefers to Testify.</p></li>
-<li class="fragment"><p>In other words, Guido prefers to Testify, no matter what Luca does.</p></li>
-<li class="fragment"><p>If we go through this logic from Luca’s perspective, we find that Luca also always prefers to Testify.</p></li>
-</ul>
-</section>
-<section id="nash-equilibrium-in-the-prisoners-dilemma" class="slide level2">
-<h2>Nash Equilibrium in the Prisoners’ Dilemma</h2>
-<p>Although the outcome where both criminals keep quiet <em>Pareto dominates</em> the outcome where they both testify and serve 10 years, would it be stable?</p>
-<ul>
-<li><p>In the {Quiet, Quiet} strategy profile, either player could deviate to Testify and shorten their prison time.</p></li>
-<li><p>{Testify, Testify} is the only <em>stable</em> strategy profile, where no one could unilaterally deviate to decrease their sentence.</p></li>
-</ul>
-</section>
-<section id="paradox-of-the-prisoners-dilemma" class="slide level2 smaller">
-<h2>Paradox of the Prisoner’s Dilemma</h2>
-<ul>
-<li>So, if Guido and Luca each act in their own self-interest, they will wind up each getting a medium prison sentence.</li>
-<li>This is despite the fact that, if they both kept Quiet, they could each get a short prison sentence instead.</li>
-</ul>
-</section>
-<section id="does-this-look-familiar" class="slide level2">
-<h2>Does this look familiar?</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th></th>
-<th>Split</th>
-<th>Steal</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Split</td>
-<td><span class="math inline">\((\$6,800, \$6,800)\)</span></td>
-<td><span class="math inline">\((\$0, 13,600)\)</span></td>
-</tr>
-<tr class="even">
-<td>Steal</td>
-<td><span class="math inline">\((\$13,600, \$0)\)</span></td>
-<td><span class="math inline">\((\$0, \$0)\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Although the numbers are different, the structure is the same.</p>
-<p><em>Split or Steal</em> is a <em>Prisoners’ Dilemma</em></p>
-</section>
-<section id="watch-what-happens" class="slide level2">
-<h2>Watch what happens</h2>
-<iframe data-external="1" src="https://www.youtube.com/embed/S0qjK3TWZE8?t=141" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<p>start from 2:20</p>
-</section>
-<section id="discuss" class="slide level2">
-<h2>Discuss</h2>
-<ul>
-<li>Did Nick change the structure of the game?</li>
-</ul>
-</section>
-<section id="prisoners-dilemma-5" class="slide level2">
-<h2>Prisoner’s Dilemma</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Guido, Luca</th>
-<th>Testify</th>
-<th>Keep Quiet</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Testify</strong></td>
-<td>-10,-10</td>
-<td>0,-20</td>
-</tr>
-<tr class="even">
-<td><strong>Keep Quiet</strong></td>
-<td>-20,0</td>
-<td>-1,-1</td>
-</tr>
-<tr class="odd">
-<td><strong>False Confession</strong></td>
-<td>-20, 0</td>
-<td>-20, -1</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment"><p>What if we change the Prisoner’s Dilemma like this? What would you pick if you were Guido?</p>
-<ol type="1">
-<li class="fragment">Testify</li>
-<li class="fragment">Keep Quiet</li>
-<li class="fragment">False Confession</li>
-</ol></li>
-</ul>
-</section>
-<section id="prisoners-dilemma-6" class="slide level2">
-<h2>Prisoner’s Dilemma</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Guido, Luca</th>
-<th>Testify</th>
-<th>Keep Quiet</th>
-<th>False Confession</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Testify</strong></td>
-<td>-10, -10</td>
-<td>0, -20</td>
-<td>0, -20</td>
-</tr>
-<tr class="even">
-<td><strong>Keep Quiet</strong></td>
-<td>-20, 0</td>
-<td>-1, -1</td>
-<td>-1, -20</td>
-</tr>
-<tr class="odd">
-<td><strong>False Confession</strong></td>
-<td>-20, 0</td>
-<td>-20, -1</td>
-<td>-10, -10</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment"><p>What about this third variation? What would you pick if you were Guido?</p>
-<ol type="1">
-<li class="fragment">Testify</li>
-<li class="fragment">Keep Quiet</li>
-<li class="fragment">False Confession</li>
-</ol></li>
-</ul>
-</section>
-<section id="rock-paper-scissors" class="slide level2">
-<h2>Rock Paper Scissors</h2>
-<iframe data-external="1" src="https://www.youtube.com/embed/b0SoKWLkmLU" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<p>One last question, and this one isn’t based on a Prisoner’s Dilemma…</p>
-</section>
-<section id="rock-paper-scissors-1" class="slide level2">
-<h2>Rock Paper Scissors</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Lisa, Bart</th>
-<th>R</th>
-<th>P</th>
-<th>S</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>R</strong></td>
-<td>0, 0</td>
-<td>-1, 1</td>
-<td>1, -1</td>
-</tr>
-<tr class="even">
-<td><strong>P</strong></td>
-<td>1, -1</td>
-<td>0, 0</td>
-<td>-1, 1</td>
-</tr>
-<tr class="odd">
-<td><strong>S</strong></td>
-<td>-1, 1</td>
-<td>1, -1</td>
-<td>0,0</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment"><p>This game models a game of Rock-Paper-Scissors. If you are Lisa, which strategy will you choose?</p>
-<ol type="1">
-<li class="fragment">R(ock)</li>
-<li class="fragment">P(aper)</li>
-<li class="fragment">S(cissors)</li>
-</ol></li>
-</ul>
-</section>
-<section id="obviously-wrong-strategies" class="slide level2">
-<h2>Obviously-Wrong Strategies</h2>
-<ul>
-<li class="fragment"><p>The first three of those games contained strategies that were <strong>obviously bad choices</strong>.</p></li>
-<li class="fragment"><p>Rock-Paper-Scissors did not.</p></li>
-<li class="fragment"><p>One of the simplest things you can do with a strategic-form game is to start by finding and eliminating (ruling out) the strategies which are obviously bad.</p></li>
-<li class="fragment"><p>In some games, this can even be enough to identify the Nash Equilibrium!</p></li>
-</ul>
-</section></section>
-<section>
 <section id="dominance" class="title-slide slide level1 center">
 <h1>Dominance</h1>
 
 </section>
 <section id="dominance-and-strategy-elimination" class="slide level2">
 <h2>Dominance and Strategy Elimination</h2>
-<ul>
-<li class="fragment">A <strong>dominant strategy</strong> is one that performs best no matter what others do.</li>
-<li class="fragment">A strategy is <span class="hi">dominat<strong>ed</strong></span> if there is another strategy which is better no matter what the other player does.</li>
-</ul>
 <blockquote>
 <p><strong>Elimination of dominated strategies</strong> can simplify finding equilibria by removing strategies</p>
 </blockquote>
 <ul>
+<li class="fragment"><p>A <strong>dominant strategy</strong> is one that performs best no matter what others do.</p></li>
+<li class="fragment"><p>A strategy is <span class="hi">dominat<strong>ed</strong></span> if there is another strategy which is better no matter what the other player does.</p>
+<ul>
 <li class="fragment"><strong>Dominated</strong> strategies will never by played by a rational agent</li>
+</ul></li>
 </ul>
 </section>
 <section id="the-problem-of-finding-nash-equilibria" class="slide level2">
@@ -1356,7 +471,7 @@ Table&nbsp;2: Big 10 Game
 <ul>
 <li><p>Both Guido and Luca prefer to Testify, no matter whether the other player chose:</p>
 <ul>
-<li>this means that Quiet is [strictly dominated]{,hi}, <strong>by Testify</strong> for both players.</li>
+<li>this means that Quiet is <span class="hi">strictly dominated</span>, <strong>by Testify</strong> for both players.</li>
 </ul></li>
 </ul>
 </section>
@@ -1405,11 +520,11 @@ Table&nbsp;2: Big 10 Game
 <tr class="odd">
 <td>Budget balance</td>
 <td>3,4</td>
-<td>4,1</td>
+<td>1,3</td>
 </tr>
 <tr class="even">
 <td>Budget deficit</td>
-<td>1,3</td>
+<td>4,1</td>
 <td>2,2</td>
 </tr>
 </tbody>
@@ -1486,8 +601,8 @@ Table&nbsp;2: Big 10 Game
 <li class="fragment">Even if a player doesn’t have a strictly dominant strategy, we can still sometimes use elimination to find a NE, by using a process called <span class="hi">Iterated Elimination of Strictly Dominated Strategies (IESDS)</span>.</li>
 </ul>
 </section>
-<section id="commonly-known-rationality" class="slide level2">
-<h2>Commonly Known Rationality</h2>
+<section id="common-knowledge-of-rationality" class="slide level2">
+<h2>Common Knowledge of Rationality</h2>
 <ul>
 <li class="fragment">Let’s assume that, not only is every player rational, <span class="hii">they all know that the other players are rational too</span>.</li>
 <li class="fragment">This means that players can deduce which strategies the <strong>other</strong> players would never play.</li>
@@ -2640,6 +1755,7 @@ Table&nbsp;2: Big 10 Game
 </section>
 <section id="iesds-example" class="slide level2">
 <h2>IESDS Example:</h2>
+<p>Try it yourself!</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -2698,13 +1814,93 @@ Table&nbsp;2: Big 10 Game
 </tr>
 <tr class="odd">
 <td><strong>Z</strong></td>
-<td>1,1</td>
-<td>0,2</td>
-<td>1,1</td>
+<td><span class="hi-grey">1,1</span></td>
+<td><span class="hi-grey">0,2</span></td>
+<td><span class="hi-grey">1,1</span></td>
+</tr>
+</tbody>
+</table>
+<p>Which strategy is strictly dominated?</p>
+<ul>
+<li><strong>Z</strong></li>
+</ul>
+</section>
+<section id="iesds-example-2" class="slide level2">
+<h2>IESDS Example:</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th>x</th>
+<th>y</th>
+<th>z</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>X</strong></td>
+<td>1,3</td>
+<td>2,2</td>
+<td>3,2</td>
+</tr>
+<tr class="even">
+<td><strong>Y</strong></td>
+<td>2,2</td>
+<td>2,2</td>
+<td>4,3</td>
+</tr>
+<tr class="odd">
+<td><strong>Z</strong></td>
+<td><span class="hi-grey">1,1</span></td>
+<td><span class="hi-grey">0,2</span></td>
+<td><span class="hi-grey">1,1</span></td>
 </tr>
 </tbody>
 </table>
 <p>What does IESDS tell you about the NE of this game?</p>
+</section>
+<section id="iesds-example-3" class="slide level2">
+<h2>IESDS Example:</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 48%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th>x</th>
+<th>y</th>
+<th>z</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>X</strong></td>
+<td>1,<span class="hi-green">3</span></td>
+<td>2,<span class="hi-green">2</span></td>
+<td>3,<span class="hi-green">2</span></td>
+</tr>
+<tr class="even">
+<td><strong>Y</strong></td>
+<td>2,<span class="hi-green">2</span></td>
+<td>2,<span class="hi-green">2</span></td>
+<td>4,<span class="hi-green">3</span></td>
+</tr>
+<tr class="odd">
+<td><strong>Z</strong></td>
+<td><span class="hi-grey">1,1</span></td>
+<td><span class="hi-grey">0,2</span></td>
+<td><span class="hi-grey">1,1</span></td>
+</tr>
+</tbody>
+</table>
+<p>What does IESDS tell you about the NE of this game?</p>
+<ul>
+<li>Nothing! (beyond that none involve <strong>Z</strong>)</li>
+</ul>
 </section>
 <section id="failures-of-elimination-methods" class="slide level2 smaller">
 <h2>Failures of Elimination Methods</h2>
@@ -2715,7 +1911,435 @@ Table&nbsp;2: Big 10 Game
 <li class="fragment">Even if elimination doesn’t immediately identify a NE, it can still be helpful to simplify the game before trying other methods.</li>
 <li class="fragment">Simplifying by elimination is especially useful when dealing with mixed strategies</li>
 </ul>
-</section></section>
+<!-- # Nash Equilibrium
+
+## Solving Simultaneous Games
+
+  * Before we cover how to solve a game, we first need to discuss what a solution to a game even is.
+  
+  * As with many types of problem in economics, we’re interested in finding an *equilibrium*:
+  
+    + equilibrium a situation which is “stable,” in that there is no incentive to change.
+    
+--- -->
+</section>
+<section id="nash-equilibrium" class="slide level2">
+<h2>Nash Equilibrium</h2>
+<p>The most basic form of equilibrium in game theory is the <span class="h">Nash Equilibrium (NE)</span>, which can be described as:</p>
+<ul>
+<li><p>A strategy profile such that no player can obtain a larger payoff by <em>unilaterally deviating</em></p></li>
+<li><p>A strategy profile such that no single player can make themselves better off by changing only their own strategy.</p></li>
+<li><p>A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision</p></li>
+</ul>
+</section>
+<section id="nash-equilibrium-1" class="slide level2">
+<h2>Nash Equilibrium</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nash Equilibrium</strong></p>
+</div>
+<div class="callout-content">
+<p>A list of strategies where each player’s strategy is the best response to the other’s best response strategy</p>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment">In other words, no player has any incentive to <span class="hii">deviate</span> in their strategy away from an equilibrium strategy</li>
+<li class="fragment">It is central to the analysis of simultaneous-move games.</li>
+<li class="fragment">Can occur in <strong>pure strategies</strong> (where players choose a single action) or <strong>mixed strategies</strong> (randomized choices).</li>
+</ul>
+</section>
+<section id="nash-equilibrium-in-tbl-basic4x3game" class="slide level2">
+<h2>Nash Equilibrium in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
+<p>Let’s look at one specific strategy profile in this game:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top</td>
+<td>(3,1)</td>
+<td>(2,3)</td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>(4,5)</td>
+<td>(3,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td>Low</td>
+<td>(2,2)</td>
+<td><span class="h">(5,4)</span></td>
+<td>(12,3)</td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td>(4,5)</td>
+<td>(9,7)</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<blockquote>
+<p>Row chooses Low and Column chooses Middle</p>
+</blockquote>
+<ul>
+<li>Is this <em>stable</em>?</li>
+</ul>
+</div></div>
+</section>
+<section id="nash-equilibrium-in-tbl-basic4x3game-1" class="slide level2">
+<h2>Nash Equilibrium in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
+<p>Let’s look at one specific strategy profile in this game:</p>
+<div class="columns">
+<div class="column smaller" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Left</th>
+<th><span class="hii">Middle</span></th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top</td>
+<td>(3,1)</td>
+<td>(<span class="hii">2</span>,3)</td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>(4,5)</td>
+<td>(<span class="hii">3</span>,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td>Low</td>
+<td>(2,2)</td>
+<td>(<span class="h">5</span>,4)</td>
+<td>(12,3)</td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td>(<span class="hii">4</span>,5)</td>
+<td>(9,7)</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<blockquote>
+<p>Row chooses Low and Column chooses Middle</p>
+</blockquote>
+<ul>
+<li>Given that Column plays Middle, is there any way for Row to get a higher payoff?</li>
+</ul>
+</div></div>
+</section>
+<section id="nash-equilibrium-in-tbl-basic4x3game-2" class="slide level2">
+<h2>Nash Equilibrium in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
+<p>Let’s look at one specific strategy profile in this game:</p>
+<div class="columns">
+<div class="column smaller" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top</td>
+<td>(3,1)</td>
+<td>(2,3)</td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>(4,5)</td>
+<td>(3,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td><span class="hii">Low</span></td>
+<td>(2,<span class="hii">2</span>)</td>
+<td>(5,<span class="h">4</span>)</td>
+<td>(12,<span class="hii">3</span>)</td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td>(4,5)</td>
+<td>(9,7)</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<blockquote>
+<p>Row chooses Low and Column chooses Middle</p>
+</blockquote>
+<ul>
+<li>Given that Row plays Low, is there any way for Column to get a higher payoff?</li>
+</ul>
+</div></div>
+</section>
+<section id="nash-equilibrium-in-tbl-basic4x3game-3" class="slide level2">
+<h2>Nash Equilibrium in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
+<p>What is special about the strategy profile (Low, Middle)?</p>
+<ul>
+<li class="fragment"><p>It’s <em>stable</em> because neither player would have any incentive to change what they’re doing</p></li>
+<li class="fragment"><p>In other words, neither player has regrets over their choice given what the other player is doing</p></li>
+<li class="fragment"><p>However, notice that this doesn’t mean that this is the best that the players could do jointly</p></li>
+</ul>
+</section>
+<section id="other-strategy-profiles-in-tbl-basic4x3game" class="slide level2">
+<h2>Other Strategy Profiles in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top</td>
+<td>(3,1)</td>
+<td>(2,3)</td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>(4,5)</td>
+<td>(3,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td>Low</td>
+<td>(2,2)</td>
+<td>(5,4)</td>
+<td>(12,3)</td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td>(4,5)</td>
+<td><span class="h">(9,7)</span></td>
+</tr>
+</tbody>
+</table>
+<p>What about (Bottom, Right)?</p>
+</section>
+<section id="other-strategy-profiles-in-tbl-basic4x3game-1" class="slide level2">
+<h2>Other Strategy Profiles in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top</td>
+<td>(3,1)</td>
+<td>(2,3)</td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>(4,5)</td>
+<td>(3,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td>Low</td>
+<td>(2,2)</td>
+<td>(5,4)</td>
+<td><span class="h">(12,3)</span></td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td>(4,5)</td>
+<td><span class="red">(9,7)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Even though (Bottom, Right) is a Pareto improvement on (Low, Middle), it is <em>unstable</em> because it would be rational for Row player to change their strategy to Low to try to get the higher payoff of 12</p>
+</section>
+<section id="other-strategy-profiles-in-tbl-basic4x3game-2" class="slide level2">
+<h2>Other Strategy Profiles in <a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a></h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top</td>
+<td><span class="h">(3,1)</span></td>
+<td>(2,3)</td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>(4,5)</td>
+<td>(3,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td>Low</td>
+<td>(2,2)</td>
+<td>(5,4)</td>
+<td>(12,3)</td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td>(4,5)</td>
+<td>(9,7)</td>
+</tr>
+</tbody>
+</table>
+<p>What about (Top, Left)?</p>
+</section>
+<section id="tbl-basic4x3game-with-a-tie-in-payoffs" class="slide level2">
+<h2><a href="#/tbl-basic4x3game" class="quarto-xref">Table&nbsp;1</a> with a tie in payoffs</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Left</th>
+<th>Middle</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top</td>
+<td>(3,1)</td>
+<td>(2,3)</td>
+<td>(10,2)</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td>(4,5)</td>
+<td>(3,0)</td>
+<td>(6,4)</td>
+</tr>
+<tr class="odd">
+<td>Low</td>
+<td>(2,2)</td>
+<td>(<strong>5</strong>,4)</td>
+<td>(12,3)</td>
+</tr>
+<tr class="even">
+<td>Bottom</td>
+<td>(5,6)</td>
+<td>(<strong>5</strong>,5)</td>
+<td>(9,7)</td>
+</tr>
+</tbody>
+</table>
+<p>A Nash equilibrium doesn’t require the equilibrium strategies to be <em>strict</em> improvements.</p>
+<ul>
+<li>(Low, Middle) is still a NE because the payoff of 5 to Row player is <em>weakly</em> (<span class="math inline">\(\geq\)</span>) higher than the payoff of Bottom</li>
+</ul>
+</section>
+<section id="nash-equilibrium-as-a-system-of-beliefs" class="slide level2">
+<h2>Nash Equilibrium as a System of Beliefs</h2>
+<p>So a Nash Equilibrium requires players <em>best responding</em> to each other.</p>
+<ul>
+<li class="fragment"><p>But if a game is <em>simultaneous</em>, then players can’t observe what the other does</p></li>
+<li class="fragment"><p>So how can someone respond to something that hasn’t happened yet?</p></li>
+</ul>
+</section>
+<section id="nash-equilibrium-as-a-system-of-beliefs-1" class="slide level2">
+<h2>Nash Equilibrium as a System of Beliefs</h2>
+<p>How to make sense of best-responses in simultaneous games:</p>
+<ul>
+<li class="fragment"><p>Players might base their beliefs of the other players’ strategies on <em>experience</em> from playing similar games before</p></li>
+<li class="fragment"><p>You might also <em>put yourself into your opponents’ shoes</em> to think about what they might do</p></li>
+<li class="fragment"><p>You should also expect that <em>they are thinking about what you’re thinking</em></p>
+<ul>
+<li class="fragment">and also that <em>you would be thinking about what they are thinking</em> about what you are thinking</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-battle-of-wits" class="slide level2">
+<h2>The Battle of Wits</h2>
+<p>Let’s see an example of this logic in action:</p>
+<iframe data-external="1" src="https://www.youtube.com/embed/pRJ8CrTSSR0" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</section>
+<section id="nash-equilibrium-as-a-system-of-beliefs-2" class="slide level2">
+<h2>Nash Equilibrium as a System of Beliefs</h2>
+<ul>
+<li>Nash equilibrium assumes:
+<ol type="1">
+<li>Players form <span class="hi">beliefs</span> about the strategies of others.</li>
+<li>These beliefs must be <strong>correct</strong>.</li>
+<li>Each player then chooses their <strong>best response</strong> based on these beliefs.</li>
+</ol></li>
+</ul>
+</section>
+<section id="strategic-uncertainty" class="slide level2">
+<h2>Strategic Uncertainty</h2>
+<ul>
+<li>Players are uncertain about others’ choices but form subjective <strong>beliefs</strong> about them.</li>
+<li>These beliefs are central to decision-making in Nash equilibrium.</li>
+<li>The equilibrium is found when every player’s belief about others’ actions is correct, and their response to these beliefs is optimal.</li>
+</ul>
+</section>
+<section id="an-equivalent-definition-of-ne" class="slide level2">
+<h2>An Equivalent Definition of NE <sup>1</sup></h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nash Equilibrium</strong></p>
+</div>
+<div class="callout-content">
+<p>A set of strategies, one for each player, such that:</p>
+<ol type="1">
+<li><p>each player has correct beliefs about the strategies of the others and</p></li>
+<li><p>the strategy of each is the best for herself, given her beliefs about the strategies of the others.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<!-- {{< include 0303-prisdilemma.qmd >}} -->
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Dixit, pg. 98</p></li></ol></aside></section></section>
 <section>
 <section id="best-response-analysis" class="title-slide slide level1 center">
 <h1>Best-Response Analysis</h1>
@@ -3220,7 +2844,7 @@ Table&nbsp;2: Big 10 Game
 </tr>
 </tbody>
 </table>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>this is a symmetric game, so Nina and Talia will have equivalent rankings</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>this is a symmetric game, so Nina and Talia will have equivalent rankings</p></li></ol></aside></section>
 <section id="simultaneous-planting-game-1" class="slide level2">
 <h2>Simultaneous Planting Game</h2>
 <p><span class="hi-grey">Talia chooses:</span></p>
@@ -3350,16 +2974,12 @@ Table&nbsp;2: Big 10 Game
 </section>
 <section id="nash-equilibrium-from-best-responses" class="slide level2">
 <h2>Nash Equilibrium from Best Responses</h2>
-<p>Recall the various definitions of a Nash Equilibrium: * a strategy profile such that [no player can obtain a larger payoff by <em>unilaterally deviating</em>[{.hi}] (changing only their own strategy). * A strategy profile such that <span class="hi">no single player can make themselves better off by <em>changing only their own strategy</em></span>. * A strategy profile such that, after the game is played, <span class="hi">each player is satisfied that they could not have made a better decision</span>.</p>
+<p>Recall the various definitions of a Nash Equilibrium:</p>
 <ul>
-<li class="fragment">Another definition we can use now is “A strategy profile such that each player’s strategy is a best responses to the other player’s strategy.”</li>
-<li class="fragment">“Playing a best response” is equivalent to “cannot obtain a larger payoff by unilaterally deviating,” or any of the other ways to describe this condition.</li>
-</ul>
-</section>
-<section id="classifying-games-based-on-nes" class="slide level2">
-<h2>Classifying Games Based on NEs</h2>
-<ul>
-<li class="fragment">Now that we’ve talked about several ways to find a game’s NEs, we can start to talk about classifying games using them.</li>
+<li class="fragment"><p>no single player can make themselves better off by <span class="hi"><em>changing only their own strategy</em></span>.</p></li>
+<li class="fragment"><p>After the game is played, each player has <span class="hi"><em>no regrets</em></span> about their strategy.</p></li>
+<li class="fragment"><p>Now we can use: “A strategy profile such that each player’s strategy is a best responses to the other player’s strategy.”</p></li>
+<li class="fragment"><p>“Playing a best response” = “cannot obtain a larger payoff by unilaterally deviating”</p></li>
 </ul>
 </section></section>
 <section>
@@ -3878,786 +3498,8 @@ Table&nbsp;2: Big 10 Game
 </ul></li>
 <li class="fragment">Of the games we’ve just looked at, the Deer Hunt, the 3x3 coordination game, and Chicken are symmetric games. Bach and Stravinsky is not.</li>
 </ul>
-</section></section>
-<section>
-<section id="other-elimination-methods-weakly-dominated-strategies" class="title-slide slide level1 center">
-<h1>Other Elimination Methods: Weakly Dominated Strategies</h1>
-
-</section>
-<section id="weakly-dominated-strategies" class="slide level2">
-<h2>Weakly Dominated Strategies</h2>
-<ul>
-<li><p>It is also possible to find Nash Equilibria by eliminating <span class="hi">weakly dominated</span> strategies</p>
-<ul>
-<li>(strategies for which there is an alternative that is never worse, and sometimes better).</li>
-</ul></li>
-</ul>
-</section>
-<section id="weakly-dominated-strategies-1" class="slide level2">
-<h2>Weakly Dominated Strategies</h2>
-<p>We will not spend a lot of time on this method, because it has two serious flaws:</p>
-<ol type="1">
-<li class="fragment">It is possible for a Nash Equilibrium to involve playing a weakly dominated strategy.</li>
-</ol>
-<ul>
-<li class="fragment">IEWDS may therefore eliminate actual Nash Equilibria.</li>
-</ul>
-<ol start="2" type="1">
-<li class="fragment">Unlike IESDS, the order in which you eliminate weakly dominated strategies matters:</li>
-</ol>
-<ul>
-<li class="fragment">you may get different results from different orders of elimination.</li>
-</ul>
-</section>
-<section id="example-why-weak-dominance-is-not-useful" class="slide level2">
-<h2>Example: Why Weak Dominance is Not Useful</h2>
-<p>In the game below, B is weakly dominated for both players.</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Player 1, Player 2</th>
-<th><span class="math inline">\(A\)</span></th>
-<th><span class="math inline">\(B\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong><span class="math inline">\(A\)</span></strong></td>
-<td><span class="math inline">\(2,2\)</span></td>
-<td><span class="math inline">\(1,1\)</span></td>
-</tr>
-<tr class="even">
-<td><strong><span class="math inline">\(B\)</span></strong></td>
-<td><span class="math inline">\(1,1\)</span></td>
-<td><span class="math inline">\(1,1\)</span></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment"><p>If we eliminate the weakly dominated strategy for both players, then the only remaining strategy profile is (A, A)</p>
-<ul>
-<li class="fragment">this is a Nash equilibrium.</li>
-</ul></li>
-<li class="fragment"><p>However, (B, B) is also a Nash equilibrium:</p>
-<ul>
-<li class="fragment"><p>both players get payoff 1, and neither can improve that payoff by changing their own strategy.</p></li>
-<li class="fragment"><p>We failed to find this equilibrium by eliminating weakly dominated strategies.</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="another-example-why-weak-dominance-is-not-useful" class="slide level2">
-<h2>Another Example: Why Weak Dominance is Not Useful</h2>
-<p>In the game below, M and R are weakly dominated.</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Player 1, Player 2</th>
-<th><span class="math inline">\(L\)</span></th>
-<th><span class="math inline">\(M\)</span></th>
-<th><span class="math inline">\(R\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong><span class="math inline">\(T\)</span></strong></td>
-<td>0, 1</td>
-<td>1, 0</td>
-<td>0, 0</td>
-</tr>
-<tr class="even">
-<td><strong><span class="math inline">\(B\)</span></strong></td>
-<td>0, 0</td>
-<td>0, 0</td>
-<td>1, 0</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment">If we begin by eliminating R, then afterwards, M and B are both weakly dominated, and we would eliminate them, leaving only (T, L).</li>
-</ul>
-</section>
-<section id="another-example-why-weak-dominance-is-not-useful-1" class="slide level2">
-<h2>Another Example: Why Weak Dominance is Not Useful</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Player 1, Player 2</th>
-<th><span class="math inline">\(L\)</span></th>
-<th><span class="math inline">\(M\)</span></th>
-<th><span class="math inline">\(R\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong><span class="math inline">\(T\)</span></strong></td>
-<td>0, 1</td>
-<td>1, 0</td>
-<td>0, 0</td>
-</tr>
-<tr class="even">
-<td><strong><span class="math inline">\(B\)</span></strong></td>
-<td>0, 0</td>
-<td>0, 0</td>
-<td>1, 0</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment"><p>However, if we begin by eliminating M, then T and R are both weakly dominated, and if we eliminate them, we are left with only (B, L).</p></li>
-<li class="fragment"><p>Not only does the outcome of IEWDS depend on what we eliminate first, it still fails to find a <strong>third</strong> Nash equilibrium, which is (B, R).</p></li>
-</ul>
-</section>
-<section id="other-elimination-methods-non-best-responses" class="slide level2">
-<h2>Other Elimination Methods: Non-Best-Responses</h2>
-<ul>
-<li class="fragment">Generally speaking, we can eliminate any strategy which is not rational to play in a NE.</li>
-<li class="fragment">It’s never rational to play strictly dominated strategies, but it’s sometimes rational to play weakly dominated strategies.</li>
-<li class="fragment">There are other categories of non-rational strategies:</li>
-<li class="fragment">A strategy is a <span class="hi">non-best-response</span> or <span class="hi">non-rationalizable strategy</span> if and only if, regardless of what the other players choose, it never provides the best possible payoff.</li>
-<li class="fragment">I like to describe non-rationalizable strategies as strategies that you’d have to be crazy to think were a good idea, i.e.&nbsp;you can’t rationalize playing them.</li>
-</ul>
-</section>
-<section id="strictly-dominated-vs.-non-best-response" class="slide level2">
-<h2>Strictly Dominated vs.&nbsp;Non-Best-Response</h2>
-<ul>
-<li class="fragment">Non-rationalizability is very similar to strict dominance, but here’s the difference:</li>
-<li class="fragment">Strict dominance is pairwise: a strategy <span class="math inline">\(s\)</span> dominates another, <span class="math inline">\(s'\)</span>, if <span class="math inline">\(s\)</span> specifically always gives a better payoff than <span class="math inline">\(s'\)</span>.</li>
-<li class="fragment">Non-rationalizability is a property of a single strategy: for a strategy to be non-rationalizable, it means that there is always <em>some</em> option that gives a better payoff—but the better option doesn’t always have to be the same strategy.</li>
-<li class="fragment">To put it another way: strategy <span class="math inline">\(s\)</span> is not a best response if there is always <strong>some strategy* which is better. To be strictly dominated, there must be </strong>one particular strategy** which is always better.</li>
-</ul>
-</section>
-<section id="example-non-best-responses" class="slide level2">
-<h2>Example: Non-Best-Responses</h2>
-<p>In the game below, there are no strictly dominated strategies, meaning that IESDS will not do anything to simplify it.</p>
-<table class="caption-top">
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td colspan="3" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-5</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
-<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
-<td style="text-align: center;">0, 4</td>
-<td style="text-align: center;">1, 2</td>
-<td style="text-align: center;">3, 3</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
-<td style="text-align: center;">1, 2</td>
-<td style="text-align: center;">0, 3</td>
-<td style="text-align: center;">1, 4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
-<td style="text-align: center;">3, 3</td>
-<td style="text-align: center;">1, 2</td>
-<td style="text-align: center;">0, 1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment"><p>However, we can see that B is non-rationalizable for Player 1: regardless of whether Player 2 chooses a, b, or c, Player 1 is better off playing either A or C.</p></li>
-<li class="fragment"><p>Also, b is non-rationalizable for Player 2.</p></li>
-</ul>
-</section>
-<section id="another-example-non-best-responses" class="slide level2">
-<h2>Another Example: Non-Best-Responses</h2>
-<table class="caption-top">
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td colspan="4" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
-<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
-<td style="text-align: center;">1, 0</td>
-<td style="text-align: center;">2, 1</td>
-<td style="text-align: center;">3, 1</td>
-<td style="text-align: center;">4, 2</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
-<td style="text-align: center;">3, 1</td>
-<td style="text-align: center;">2, 2</td>
-<td style="text-align: center;">2, 0</td>
-<td style="text-align: center;">3, 0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
-<td style="text-align: center;">3, 1</td>
-<td style="text-align: center;">4, 0</td>
-<td style="text-align: center;">1, 0</td>
-<td style="text-align: center;">2, 0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(D\)</span></td>
-<td style="text-align: center;">4, 2</td>
-<td style="text-align: center;">3, 0</td>
-<td style="text-align: center;">2, 1</td>
-<td style="text-align: center;">1, 1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="iterated-elimination-of-non-best-responses" class="slide level2">
-<h2>Iterated Elimination of Non-Best-Responses</h2>
-<ul>
-<li class="fragment">It is not rational to play a non-best-response strategy in a pure-strategy context. (As we’ll see much later, it’s more complicated in a mixed-strategy context).</li>
-<li class="fragment">Any strictly dominated strategy is also not a best response, but not all NBR strategies are strictly dominated.</li>
-<li class="fragment">Because of this, if we eliminate non-best-responses, using the same steps as IESDS, this process will always eliminate the same strategies, and it may eliminate even more!</li>
-<li class="fragment">This process is, naturally, called Iterative Elimination of Non-Best-Responses (IENBR).</li>
-</ul>
-</section>
-<section id="example-ienbr" class="slide level2">
-<h2>Example: IENBR</h2>
-<p>Returning to this same example, we can start by eliminating B.</p>
-<table class="caption-top">
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td colspan="3" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-5</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
-<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
-<td style="text-align: center;">0, 4</td>
-<td style="text-align: center;">1, 2</td>
-<td style="text-align: center;">3, 3</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
-<td style="text-align: center;">1, 2</td>
-<td style="text-align: center;">0, 3</td>
-<td style="text-align: center;">1, 4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
-<td style="text-align: center;">3, 3</td>
-<td style="text-align: center;">1, 2</td>
-<td style="text-align: center;">0, 1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment">Once we do this, we can now see that b and c are non-rationalizable, and eliminate them.</li>
-<li class="fragment">Finally, we can see that B is non-rationalizable and eliminate it, leaving only the strategy profile (C, a), which is the Nash equilibrium of this game.</li>
-</ul>
-</section>
-<section id="another-example-ienbr" class="slide level2">
-<h2>Another Example: IENBR</h2>
-<table class="caption-top">
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td colspan="4" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
-<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
-<td style="text-align: center;">1, 0</td>
-<td style="text-align: center;">2, 1</td>
-<td style="text-align: center;">3, 1</td>
-<td style="text-align: center;">4, 2</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
-<td style="text-align: center;">3, 1</td>
-<td style="text-align: center;">2, 2</td>
-<td style="text-align: center;">2, 0</td>
-<td style="text-align: center;">3, 0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
-<td style="text-align: center;">3, 1</td>
-<td style="text-align: center;">4, 0</td>
-<td style="text-align: center;">1, 0</td>
-<td style="text-align: center;">2, 0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(D\)</span></td>
-<td style="text-align: center;">4, 2</td>
-<td style="text-align: center;">3, 0</td>
-<td style="text-align: center;">2, 1</td>
-<td style="text-align: center;">1, 1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="iclicker-q4" class="slide level2">
-<h2>iClicker Q4</h2>
-<table class="caption-top">
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td colspan="3" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(x\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(y\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(z\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-5</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
-<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1,3\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(2,2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(3,2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"><span class="math inline">\(Y\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(2,2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(2,2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(4,3\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"><span class="math inline">\(Z\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1,1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0,2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1,1\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>After eliminating Z, which is strictly dominated, what strategy is a non-best-response?
-<ol type="1">
-<li>X</li>
-<li>Y</li>
-<li>Z</li>
-<li>y</li>
-<li>z</li>
-</ol></li>
-</ul>
-</section>
-<section id="iclicker-q5" class="slide level2">
-<h2>iClicker Q5</h2>
-<table class="caption-top">
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td colspan="3" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(x\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(y\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(z\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-5</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
-<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1,3\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(2,2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(3,2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"><span class="math inline">\(Y\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(2,2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(2,2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(4,3\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"><span class="math inline">\(Z\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1,1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0,2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(1,1\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>If we complete IENBR on this game table, what strategy profile is left at the end?
-<ol type="1">
-<li>(X, x)</li>
-<li>(X, z)</li>
-<li>(Y, x)</li>
-<li>(Y, z)</li>
-<li>There is more than one strategy profile left.</li>
-</ol></li>
-</ul>
-</section>
-<section id="failures-of-elimination-methods-1" class="slide level2">
-<h2>Failures of Elimination Methods</h2>
-<ul>
-<li class="fragment">There’s no guarantee that any particular game will contain strategies that are either strictly dominated or non-rationalizable.</li>
-<li class="fragment">Even when there are strategies we can eliminate, there may not be enough of them to find a NE just by elimination.</li>
-<li class="fragment">So why bother with this?</li>
-<li class="fragment">Even if elimination doesn’t immediately identify a NE, it can still be helpful to simplify the game before trying other methods.</li>
-<li class="fragment">Simplifying by elimination is <strong>especially</strong> useful when dealing with mixed strategies—which we’ll get to after the midterm.</li>
-</ul>
-</section>
-<section id="another-example-when-elimination-does-nothing-1" class="slide level2">
-<h2>Another Example: When Elimination Does Nothing</h2>
-<ul>
-<li class="fragment"><p>This game has <strong>absolutely no strategies</strong> that can be eliminated: none are strictly dominated or non-rationalizable.</p></li>
-<li class="fragment"><p>We can still find the NEs (of which there are quite a few) using best responses:</p></li>
-</ul>
-<table class="caption-top">
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td colspan="4" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
-<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
-<td style="text-align: center;">1, 1</td>
-<td style="text-align: center;">2, 2</td>
-<td style="text-align: center;">2, 2</td>
-<td style="text-align: center;">2, 1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
-<td style="text-align: center;">1, 3</td>
-<td style="text-align: center;">1, 3</td>
-<td style="text-align: center;">2, 2</td>
-<td style="text-align: center;">2, 3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
-<td style="text-align: center;">1, 2</td>
-<td style="text-align: center;">2, 4</td>
-<td style="text-align: center;">1, 3</td>
-<td style="text-align: center;">2, 3</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(D\)</span></td>
-<td style="text-align: center;">3, 2</td>
-<td style="text-align: center;">2, 3</td>
-<td style="text-align: center;">1, 4</td>
-<td style="text-align: center;">2, 2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="iclicker-q4-1" class="slide level2">
-<h2>iClicker Q4</h2>
-<table class="caption-top">
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td colspan="3" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(X\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(Y\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(Z\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-5</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
-<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
-<td style="text-align: center;">3, 3</td>
-<td style="text-align: center;">2, 2</td>
-<td style="text-align: center;">1, 1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
-<td style="text-align: center;">4, 2</td>
-<td style="text-align: center;">1, 1</td>
-<td style="text-align: center;">2, 2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
-<td style="text-align: center;">1, 1</td>
-<td style="text-align: center;">2, 2</td>
-<td style="text-align: center;">3, 1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-5</span></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment">In the game shown above, which of the following are the Nash Equilibria? (You will need to find best responses for both players.)
-<ol type="1">
-<li class="fragment">(A, X)</li>
-<li class="fragment">(A, Y)</li>
-<li class="fragment">(B, X)</li>
-<li class="fragment">(C, Z)</li>
-<li class="fragment">More than one of the above.</li>
-</ol></li>
-</ul>
-</section>
-<section id="best-responses-and-non-rationalizability" class="slide level2">
-<h2>Best Responses and Non-Rationalizability</h2>
-<ul>
-<li class="fragment">Finding best responses first makes it a lot easier to search for non-rationalizable strategies.</li>
-<li class="fragment">Recall that a non-rationalizable strategy can also be called a non-best response: if none of the payoffs of a strategy are marked to indicate that it is a best-response, it is non-rationalizable. In other words:
-<ul>
-<li class="fragment">Any row in which none of Player 1’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
-<li class="fragment">Any column in which none of Player 2’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
-</ul></li>
-</ul>
-</section>
-<section id="example-non-rationalizability-from-best-responses" class="slide level2">
-<h2>Example: Non-Rationalizability from Best Responses</h2>
-<ul>
-<li class="fragment"><p>Finding best responses first makes it a lot easier to search for non-rationalizable strategies.</p></li>
-<li class="fragment"><p>Recall that a non-rationalizable strategy can also be called a non-best response: if none of the payoffs of a strategy are marked to indicate that it is a best-response, it is non-rationalizable. In other words:</p>
-<ul>
-<li class="fragment"><p>Any row in which none of Player 1’s payoffs are marked to indicate a best response, is non-rationalizable.</p>
-<ul>
-<li class="fragment">Any column in which none of Player 2’s payoffs are marked to indicate a best response, is non-rationalizable.</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="example-non-rationalizability-from-best-responses-1" class="slide level2">
-<h2>Example: Non-Rationalizability from Best Responses</h2>
-<table class="caption-top">
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td colspan="4" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
-<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
-<td style="text-align: center;">1, 0</td>
-<td style="text-align: center;">2, 1</td>
-<td style="text-align: center;"><strong>3</strong>, 1</td>
-<td style="text-align: center;"><strong>4</strong>, <strong>2</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
-<td style="text-align: center;">3, 1</td>
-<td style="text-align: center;">2, <strong>2</strong></td>
-<td style="text-align: center;">2, 0</td>
-<td style="text-align: center;">3, 0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
-<td style="text-align: center;">3, <strong>1</strong></td>
-<td style="text-align: center;"><strong>4</strong>, 0</td>
-<td style="text-align: center;">1, 0</td>
-<td style="text-align: center;">2, 0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(D\)</span></td>
-<td style="text-align: center;"><strong>4</strong>, <strong>2</strong></td>
-<td style="text-align: center;">3, 0</td>
-<td style="text-align: center;">2, 1</td>
-<td style="text-align: center;">1, 1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment"><p>We found these best responses earlier (as well as the NEs of this game): note that in the row for Player 1’s strategy B, none of Player 1’s strategies are marked.</p></li>
-<li class="fragment"><p>Likewise, none of Player 2’s payoffs are marked in column c.&nbsp;B and c are non-rationalizable strategies.</p></li>
-</ul>
-</section>
-<section id="example-non-rationalizability-from-best-responses-2" class="slide level2">
-<h2>Example: Non-Rationalizability from Best Responses</h2>
-<table class="caption-top">
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td colspan="4" style="text-align: center;">P<span class="math inline">\(_2\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"><span class="math inline">\(a\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(d\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span> *<span>P<span class="math inline">\(_1\)</span></span></td>
-<td style="text-align: center;"><span class="math inline">\(A\)</span></td>
-<td style="text-align: center;">1, 0</td>
-<td style="text-align: center;">2, 1</td>
-<td style="text-align: center;"><strong>3</strong>, 1</td>
-<td style="text-align: center;"><strong>4</strong>, <strong>2</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(B\)</span></td>
-<td style="text-align: center;">3, 1</td>
-<td style="text-align: center;">2, <strong>2</strong></td>
-<td style="text-align: center;">2, 0</td>
-<td style="text-align: center;">3, 0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
-<td style="text-align: center;">3, <strong>1</strong></td>
-<td style="text-align: center;"><strong>4</strong>, 0</td>
-<td style="text-align: center;">1, 0</td>
-<td style="text-align: center;">2, 0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"><span class="math inline">\(D\)</span></td>
-<td style="text-align: center;"><strong>4</strong>, <strong>2</strong></td>
-<td style="text-align: center;">3, 0</td>
-<td style="text-align: center;">2, 1</td>
-<td style="text-align: center;">1, 1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span>3-6</span></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment">Performing IENBR reveals additional non-rationalizable strategies:
-<ul>
-<li class="fragment">Once we eliminate B, b becomes non-rationalizable.</li>
-<li class="fragment">Once we eliminate b, C becomes non-rationalizable.</li>
-</ul></li>
-</ul>
+<!-- {{< include 0306-weakdominance.qmd >}} -->
+<!-- {{< include 0307-rationalize.qmd >}} -->
 
 
 </section></section>

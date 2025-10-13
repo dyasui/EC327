@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>nash – EC327 Game Theory</title>
+<title>splitorsteal – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -544,468 +544,114 @@ window.Quarto = {
 
 
 
-<!-- # Nash Equilibrium
-
-## Solving Simultaneous Games
-
-  * Before we cover how to solve a game, we first need to discuss what a solution to a game even is.
-  
-  * As with many types of problem in economics, we’re interested in finding an *equilibrium*:
-  
-    + equilibrium a situation which is “stable,” in that there is no incentive to change.
-    
---- -->
-<section id="nash-equilibrium" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium">Nash Equilibrium</h2>
-<p>The most basic form of equilibrium in game theory is the <span class="h">Nash Equilibrium (NE)</span>, which can be described as:</p>
-<ul>
-<li><p>A strategy profile such that no player can obtain a larger payoff by <em>unilaterally deviating</em></p></li>
-<li><p>A strategy profile such that no single player can make themselves better off by changing only their own strategy.</p></li>
-<li><p>A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision</p></li>
-</ul>
+<section id="split-or-steal" class="level1">
+<h1>Split or Steal</h1>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/S0qjK3TWZE8" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Pause at 2:20. We’ll come back to Nick and Ibrahim!</p>
+<hr>
+<section id="split-or-steal-1" class="level2">
+<h2 class="anchored" data-anchor-id="split-or-steal-1">Split or Steal</h2>
+<p>From the perspective of <span class="brown">Nick</span>, his payoffs depend on what Ibrahim has chosen:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>if Ibrahim Splits</th>
+<th>if Ibrahim Steals</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>if Nick Splits he wins:</td>
+<td><span class="math inline">\(\$6,800\)</span></td>
+<td><span class="math inline">\(\$ 0\)</span></td>
+</tr>
+<tr class="even">
+<td>if Nick Steals he wins:</td>
+<td><span class="math inline">\(\$13,600\)</span></td>
+<td><span class="math inline">\(\$ 0\)</span></td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
-<section id="nash-equilibrium-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-1">Nash Equilibrium</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Nash Equilibrium
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A list of strategies where each player’s strategy is the best response to the other’s best response strategy</p>
-</div>
-</div>
+<section id="split-or-steal-2" class="level2">
+<h2 class="anchored" data-anchor-id="split-or-steal-2">Split or Steal</h2>
+<p>From the perspective of <span class="blue">Ibrahim</span>, his payoffs depend on what <em>Nick</em> has chosen:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>if Nick Splits</th>
+<th>if Nick Steals</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>if Ibrahim Splits he wins:</td>
+<td><span class="math inline">\(\$6,800\)</span></td>
+<td><span class="math inline">\(\$ 0\)</span></td>
+</tr>
+<tr class="even">
+<td>if Ibrahim Steals he wins:</td>
+<td><span class="math inline">\(\$13,600\)</span></td>
+<td><span class="math inline">\(\$ 0\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="intersection-of-payoff-tables" class="level2">
+<h2 class="anchored" data-anchor-id="intersection-of-payoff-tables">Intersection of payoff tables</h2>
+<p>In a <em>game</em>, the best choices are interdependent:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 30%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>(Nick: <span class="math inline">\(\$x\)</span>, Ibrahim: <span class="math inline">\(\$y\)</span>)</th>
+<th>Ibrahim Splits</th>
+<th>Ibrahim Steals</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nick Splits</td>
+<td><span class="math inline">\((\$6,800, \$6,800)\)</span></td>
+<td><span class="math inline">\((\$0, 13,600)\)</span></td>
+</tr>
+<tr class="even">
+<td>Nick Steals</td>
+<td><span class="math inline">\((\$13,600, \$0)\)</span></td>
+<td><span class="math inline">\((\$0, \$0)\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="split-or-steal-predictions" class="level2">
+<h2 class="anchored" data-anchor-id="split-or-steal-predictions">Split or Steal Predictions</h2>
+<p>What do you think will happen in this game?</p>
 <div class="incremental">
 <ul class="incremental">
-<li>In other words, no player has any incentive to <span class="hii">deviate</span> in their strategy away from an equilibrium strategy</li>
-<li>It is central to the analysis of simultaneous-move games.</li>
-<li>Can occur in <strong>pure strategies</strong> (where players choose a single action) or <strong>mixed strategies</strong> (randomized choices).</li>
+<li><p>Would you choose <span class="hi">Split</span> or <span class="hi">Steal</span></p></li>
+<li><p>What would you say to your opponent?</p></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="nash-equilibrium-in-tbl-basic4x3game" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
-<p>Let’s look at one specific strategy profile in this game:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td><span class="h">(5,4)</span></td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-</div><div class="column" style="width:50%;">
-<blockquote class="blockquote">
-<p>Row chooses Low and Column chooses Middle</p>
-</blockquote>
-<ul>
-<li>Is this <em>stable</em>?</li>
-</ul>
-</div>
-</div>
-<hr>
-</section>
-<section id="nash-equilibrium-in-tbl-basic4x3game-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game-1">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
-<p>Let’s look at one specific strategy profile in this game:</p>
-<div class="columns">
-<div class="column smaller" style="width:50%;">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th><span class="hii">Middle</span></th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(<span class="hii">2</span>,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(<span class="hii">3</span>,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(<span class="h">5</span>,4)</td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(<span class="hii">4</span>,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-</div><div class="column" style="width:50%;">
-<blockquote class="blockquote">
-<p>Row chooses Low and Column chooses Middle</p>
-</blockquote>
-<ul>
-<li>Given that Column plays Middle, is there any way for Row to get a higher payoff?</li>
-</ul>
-</div>
-</div>
-<hr>
-</section>
-<section id="nash-equilibrium-in-tbl-basic4x3game-2" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game-2">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
-<p>Let’s look at one specific strategy profile in this game:</p>
-<div class="columns">
-<div class="column smaller" style="width:50%;">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td><span class="hii">Low</span></td>
-<td>(2,<span class="hii">2</span>)</td>
-<td>(5,<span class="h">4</span>)</td>
-<td>(12,<span class="hii">3</span>)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-</div><div class="column" style="width:50%;">
-<blockquote class="blockquote">
-<p>Row chooses Low and Column chooses Middle</p>
-</blockquote>
-<ul>
-<li>Given that Row plays Low, is there any way for Column to get a higher payoff?</li>
-</ul>
-</div>
-</div>
-<hr>
-</section>
-<section id="nash-equilibrium-in-tbl-basic4x3game-3" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-in-tbl-basic4x3game-3">Nash Equilibrium in <strong>?@tbl-basic4x3game</strong></h2>
-<p>What is special about the strategy profile (Low, Middle)?</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>It’s <em>stable</em> because neither player would have any incentive to change what they’re doing</p></li>
-<li><p>In other words, neither player has regrets over their choice given what the other player is doing</p></li>
-<li><p>However, notice that this doesn’t mean that this is the best that the players could do jointly</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="other-strategy-profiles-in-tbl-basic4x3game" class="level2">
-<h2 class="anchored" data-anchor-id="other-strategy-profiles-in-tbl-basic4x3game">Other Strategy Profiles in <strong>?@tbl-basic4x3game</strong></h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(5,4)</td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td><span class="h">(9,7)</span></td>
-</tr>
-</tbody>
-</table>
-<p>What about (Bottom, Right)?</p>
-<hr>
-</section>
-<section id="other-strategy-profiles-in-tbl-basic4x3game-1" class="level2">
-<h2 class="anchored" data-anchor-id="other-strategy-profiles-in-tbl-basic4x3game-1">Other Strategy Profiles in <strong>?@tbl-basic4x3game</strong></h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(5,4)</td>
-<td><span class="h">(12,3)</span></td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td><span class="red">(9,7)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Even though (Bottom, Right) is a Pareto improvement on (Low, Middle), it is <em>unstable</em> because it would be rational for Row player to change their strategy to Low to try to get the higher payoff of 12</p>
-<hr>
-</section>
-<section id="other-strategy-profiles-in-tbl-basic4x3game-2" class="level2">
-<h2 class="anchored" data-anchor-id="other-strategy-profiles-in-tbl-basic4x3game-2">Other Strategy Profiles in <strong>?@tbl-basic4x3game</strong></h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td><span class="h">(3,1)</span></td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(5,4)</td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(4,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-<p>What about (Top, Left)?</p>
-<hr>
-</section>
-<section id="tbl-basic4x3game-with-a-tie-in-payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="tbl-basic4x3game-with-a-tie-in-payoffs"><strong>?@tbl-basic4x3game</strong> with a tie in payoffs</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Left</th>
-<th>Middle</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top</td>
-<td>(3,1)</td>
-<td>(2,3)</td>
-<td>(10,2)</td>
-</tr>
-<tr class="even">
-<td>High</td>
-<td>(4,5)</td>
-<td>(3,0)</td>
-<td>(6,4)</td>
-</tr>
-<tr class="odd">
-<td>Low</td>
-<td>(2,2)</td>
-<td>(<strong>5</strong>,4)</td>
-<td>(12,3)</td>
-</tr>
-<tr class="even">
-<td>Bottom</td>
-<td>(5,6)</td>
-<td>(<strong>5</strong>,5)</td>
-<td>(9,7)</td>
-</tr>
-</tbody>
-</table>
-<p>A Nash equilibrium doesn’t require the equilibrium strategies to be <em>strict</em> improvements.</p>
-<ul>
-<li>(Low, Middle) is still a NE because the payoff of 5 to Row player is <em>weakly</em> (<span class="math inline">\(\geq\)</span>) higher than the payoff of Bottom</li>
-</ul>
-<hr>
-</section>
-<section id="nash-equilibrium-as-a-system-of-beliefs" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-as-a-system-of-beliefs">Nash Equilibrium as a System of Beliefs</h2>
-<p>So a Nash Equilibrium requires players <em>best responding</em> to each other.</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>But if a game is <em>simultaneous</em>, then players can’t observe what the other does</p></li>
-<li><p>So how can someone respond to something that hasn’t happened yet?</p></li>
-</ul>
-</div>
-</section>
-<section id="nash-equilibrium-as-a-system-of-beliefs-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-as-a-system-of-beliefs-1">Nash Equilibrium as a System of Beliefs</h2>
-<p>How to make sense of best-responses in simultaneous games:</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>Players might base their beliefs of the other players’ strategies on <em>experience</em> from playing similar games before</p></li>
-<li><p>You might also <em>put yourself into your opponents’ shoes</em> to think about what they might do</p></li>
-<li><p>You should also expect that <em>they are thinking about what you’re thinking</em></p>
-<ul class="incremental">
-<li>and also that <em>you would be thinking about what they are thinking</em> about what you are thinking</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="the-battle-of-wits" class="level2">
-<h2 class="anchored" data-anchor-id="the-battle-of-wits">The Battle of Wits</h2>
-<p>Let’s see an example of this logic in action:</p>
-<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/pRJ8CrTSSR0" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<hr>
-</section>
-<section id="nash-equilibrium-as-a-system-of-beliefs-2" class="level2">
-<h2 class="anchored" data-anchor-id="nash-equilibrium-as-a-system-of-beliefs-2">Nash Equilibrium as a System of Beliefs</h2>
-<ul>
-<li>Nash equilibrium assumes:
-<ol type="1">
-<li>Players form <span class="hi">beliefs</span> about the strategies of others.</li>
-<li>These beliefs must be <strong>correct</strong>.</li>
-<li>Each player then chooses their <strong>best response</strong> based on these beliefs.</li>
-</ol></li>
-</ul>
-<hr>
-</section>
-<section id="strategic-uncertainty" class="level2">
-<h2 class="anchored" data-anchor-id="strategic-uncertainty">Strategic Uncertainty</h2>
-<ul>
-<li>Players are uncertain about others’ choices but form subjective <strong>beliefs</strong> about them.</li>
-<li>These beliefs are central to decision-making in Nash equilibrium.</li>
-<li>The equilibrium is found when every player’s belief about others’ actions is correct, and their response to these beliefs is optimal.</li>
-</ul>
-<hr>
-</section>
-<section id="an-equivalent-definition-of-ne" class="level2">
-<h2 class="anchored" data-anchor-id="an-equivalent-definition-of-ne">An Equivalent Definition of NE <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Nash Equilibrium
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>A set of strategies, one for each player, such that:</p>
-<ol type="1">
-<li><p>each player has correct beliefs about the strategies of the others and</p></li>
-<li><p>the strategy of each is the best for herself, given her beliefs about the strategies of the others.</p></li>
-</ol>
-</div>
-</div>
+<section id="split-or-steal-nick-and-ibrahim" class="level2">
+<h2 class="anchored" data-anchor-id="split-or-steal-nick-and-ibrahim">Split or Steal: Nick and Ibrahim</h2>
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/S0qjK3TWZE8?t=142" width="800" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
 
 </section>
+</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Dixit, pg. 98<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1423,4 +1069,4 @@ Nash Equilibrium
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/Slides/03SimultaneousGames/0302-nash.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/Slides/03SimultaneousGames/0302-nash.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/Slides/03SimultaneousGames/0300-splitorsteal.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/Slides/03SimultaneousGames/0300-splitorsteal.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
