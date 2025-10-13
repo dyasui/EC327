@@ -2,12 +2,12 @@
 
 ## Dominance and Strategy Elimination
 
+> **Elimination of dominated strategies** can simplify finding equilibria by removing strategies
+
 ::: {.incremental}
 - A **dominant strategy** is one that performs best no matter what others do.
 - A strategy is [dominat**ed**]{.hi} if there is another strategy which is better no matter what the other player does.
 
-> **Elimination of dominated strategies** can simplify finding equilibria by removing strategies
-  
   * **Dominated** strategies will never by played by a rational agent
 :::
 
@@ -50,7 +50,7 @@
 
   * Both Guido and Luca prefer to Testify, no matter whether the other player chose: 
 
-    - this means that Quiet is [strictly dominated]{,hi}, **by Testify** for both players.
+    - this means that Quiet is [strictly dominated]{.hi}, **by Testify** for both players.
 
 ---
 
@@ -74,8 +74,8 @@ which made finding the NE easy.
 
 | CONGRESS, FEDERAL RESERVE | Low interest rates | High interest rates |
 |---------------------------+--------------------+---------------------|
-| Budget balance            | 3,4                | 4,1                 |
-| Budget deficit            | 1,3                | 2,2                 |
+| Budget balance            | 3,4                | 1,3                 |
+| Budget deficit            | 4,1                | 2,2                 |
 
   * What if only one player has a dominant strategy?
 
@@ -116,7 +116,7 @@ which made finding the NE easy.
 :::
 ---
 
-## Commonly Known Rationality
+## Common Knowledge of Rationality
 ::: {.incremental}
   * Let's assume that, not only is every player rational, [they all know that the other players are rational too]{.hii}.
   * This means that players can deduce which strategies the **other** players would never play.
@@ -423,6 +423,8 @@ Once again we're left with the same strategy profile:
 
 ## IESDS Example:
 
+Try it yourself!
+
 | $P_1$, $P_2$ | x   | y   | z   |
 |--------------+-----+-----+-----|
 | **X**        | 1,3 | 2,2 | 3,2 |
@@ -439,9 +441,39 @@ Which strategy is strictly dominated?
 |--------------+-----+-----+-----|
 | **X**        | 1,3 | 2,2 | 3,2 |
 | **Y**        | 2,2 | 2,2 | 4,3 |
-| **Z**        | 1,1 | 0,2 | 1,1 |
+| **Z**        | [1,1]{.hi-grey} | [0,2]{.hi-grey} | [1,1]{.hi-grey} |
+
+Which strategy is strictly dominated?
+
+  * **Z**
+
+---
+
+## IESDS Example:
+
+| $P_1$, $P_2$ | x   | y   | z   |
+|--------------+-----+-----+-----|
+| **X**        | 1,3 | 2,2 | 3,2 |
+| **Y**        | 2,2 | 2,2 | 4,3 |
+| **Z**        | [1,1]{.hi-grey} | [0,2]{.hi-grey} | [1,1]{.hi-grey} |
+
 
 What does IESDS tell you about the NE of this game?
+
+---
+
+## IESDS Example:
+
+| $P_1$, $P_2$ | x   | y   | z   |
+|--------------+-----+-----+-----|
+| **X**        | 1,[3]{.hi-green} | 2,[2]{.hi-green} | 3,[2]{.hi-green} |
+| **Y**        | 2,[2]{.hi-green} | 2,[2]{.hi-green} | 4,[3]{.hi-green} |
+| **Z**        | [1,1]{.hi-grey} | [0,2]{.hi-grey} | [1,1]{.hi-grey} |
+
+
+What does IESDS tell you about the NE of this game?
+
+  * Nothing! (beyond that none involve **Z**)
 
 ---
 

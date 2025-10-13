@@ -270,6 +270,8 @@ Another term for the [rollback solution]{.hi} is [subgame perfect Nash equilibri
 
   * A [subgame]{.hi} refers to the way we broke up the larger game into smaller ones
 
+  * In this equilibrium, [neither player has regrets]{.h} about any actions they take (or would take) as part of their strategy
+
 ---
 
 ## Extensive Form Survivor Flags
@@ -389,7 +391,7 @@ digraph D {
   node [shape=plaintext,label="0 \n 1"]; O2; O3; O4; O6;
   edge [arrowhead=none];
 
-  A1->B1[label="1",arrowhead=normal];
+  A1->B1[label="1",style="dashed"];
   B1->A2[label="1",arrowhead=normal];
   A2->B3[label="1",arrowhead=normal];
   B3->O1[label="1",style="dashed"];
@@ -398,7 +400,7 @@ digraph D {
   B1->A3[label="2",style="dashed"];
   A3->O4[label="1",style="dashed"];
   A3->O5[label="2",arrowhead=normal];
-  A1->B2[label="2",style="dashed"];
+  A1->B2[label="2",arrowhead=normal];
   B2->A4[label="1",arrowhead=normal];
   A4->O6[label="1",style="dashed"];
   A4->O7[label="2",arrowhead=normal];

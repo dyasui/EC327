@@ -22,82 +22,82 @@ filters:
 
 [Outline]{.hi .big}
 
+  * Finish up sequential games
+
   * Game Tables/Strategic Form
   
+  * Dominant Strategies
+
   * Nash Equilibrium
 
-  * Dominant Strategies
+  * Best responses
   
 :::
 
-# Split or Steal
+# Evidence for Sequential Rationality
 
-{{< video https://youtu.be/S0qjK3TWZE8 width="800" height="450" fig-align="center" >}}
+## Centipede Game
 
-Pause at 2:20. We'll come back to Nick and Ibrahim!
+Two participants play this game, taking turns over five rounds.
 
----
+The first is offered a choice between:
 
-## Split or Steal
+  a) splitting 50 cents where they keep 40 and the other player gets 10
 
-From the perspective of [Nick]{.brown}, his payoffs depend on what Ibrahim has chosen:
+  or b) they pass the choice to the next player who gets the same choice but the pot they can choose to split from doubles
 
-|                         | if Ibrahim Splits | if Ibrahim Steals |
-|-------------------------|-------------------|-------------------|
-| if Nick Splits he wins: | $\$6,800$         | $\$ 0$            |
-| if Nick Steals he wins: | $\$13,600$        | $\$ 0$            |
+Now what would you do if you were in this situation?
 
----
-  
-## Split or Steal
-
-From the perspective of [Ibrahim]{.blue}, his payoffs depend on what *Nick* has chosen:
-
-|                            | if Nick Splits    | if Nick Steals    |
-|----------------------------|-------------------|-------------------|
-| if Ibrahim Splits he wins: | $\$6,800$         | $\$ 0$            |
-| if Ibrahim Steals he wins: | $\$13,600$        | $\$ 0$            |
+When would you grab?
 
 ---
 
-## Intersection of payoff tables
+## Centipede Game
 
-In a *game*, the best choices are interdependent:
+What is the theoretical solution?
 
-| (Nick: $\$x$, Ibrahim: $\$y$) | Ibrahim Splits       | Ibrahim Steals    |
-|-------------------------------|----------------------|-------------------|
-| Nick Splits                   | $(\$6,800, \$6,800)$ | $(\$0, 13,600)$   |
-| Nick Steals                   | $(\$13,600, \$0)$    | $(\$0, \$0)$      |
+![](figures/Harrington-fig8.20.png)
 
 ---
 
-## Split or Steal Predictions
+## Ultimatum Game
 
-What do you think will happen in this game?
+Player A and Player B are offered a dollar to divide amongst them.
+
+  * Player A gets to propose how to split the dollar (i.e., 50:50, 75 to me 25 to you, etc)
+
+  * Player B can either accept the proposed split, or reject so that both players get nothing
 
 ::: {.incremental}
-  - Would you choose [Split]{.hi} or [Steal]{.hi}
-  
-  - What would you say to your opponent?
+
+> What is the rollback solution if both players payoffs are only determined by how much money they earn?
+
 :::
 
 ---
 
-## Split or Steal: Nick and Ibrahim
+## Ultimatum Game Evidence
 
-{{< video https://youtu.be/S0qjK3TWZE8?t=142 width="800" height="450" fig-align="center" >}}
+In spite of the theoretical prediction, the most common proposal in lab experiments is 50:50.
 
+Most player B's actually reject any offer of 25% or less.
+
+::: {.incremental}
+  * This seems to indicate that most people have some sort of *aversion to inequity* 
+
+  * If you're interested in learning more, **behavioral economics** develops on the basic rational agent model to make sense of some of these experimental findings
+:::
 
 {{< include 0301-terminology.qmd >}}
 
+{{< include 0304-elimination.qmd >}}
+
 {{< include 0302-nash.qmd >}}
 
-{{< include 0303-prisdilemma.qmd >}}
-
-{{< include 0304-elimination.qmd >}}
+<!-- {{< include 0303-prisdilemma.qmd >}} -->
 
 {{< include 0305-bestresponses.qmd >}}
 
-{{< include 0306-weakdominance.qmd >}}
+<!-- {{< include 0306-weakdominance.qmd >}} -->
 
-{{< include 0307-rationalize.qmd >}}
+<!-- {{< include 0307-rationalize.qmd >}} -->

@@ -1,4 +1,4 @@
-# Nash Equilibrium
+<!-- # Nash Equilibrium
 
 ## Solving Simultaneous Games
 
@@ -8,7 +8,7 @@
   
     + equilibrium a situation which is “stable,” in that there is no incentive to change.
     
----
+--- -->
     
 ## Nash Equilibrium
 
@@ -75,10 +75,10 @@ Let's look at one specific strategy profile in this game:
 
 |         | Left    | [Middle]{.hii} | Right    |
 | ------- | ------- | --------       | -------- |
-| Top     | (3,1)   | [(2,3)]{.hii}  | (10,2)   |
-| High    | (4,5)   | [(3,0)]{.hii}  | (6,4)    |
-| Low     | (2,2)   | [(5,4)]{.h}    | (12,3)   |
-| Bottom  | (5,6)   | [(4,5)]{.hii}  | (9,7)    |
+| Top     | (3,1)   | ([2]{.hii},3)  | (10,2)   |
+| High    | (4,5)   | ([3]{.hii},0)  | (6,4)    |
+| Low     | (2,2)   | ([5]{.h},4)    | (12,3)   |
+| Bottom  | (5,6)   | ([4]{.hii},5)  | (9,7)    |
 
 :::
 
@@ -105,7 +105,7 @@ Let's look at one specific strategy profile in this game:
 | -------     | -------       | --------    | --------       |
 | Top         | (3,1)         | (2,3)       | (10,2)         |
 | High        | (4,5)         | (3,0)       | (6,4)          |
-| [Low]{.hii} | [(2,2)]{.hii} | [(5,4)]{.h} | [(12,3)]{.hii} |
+| [Low]{.hii} | (2,[2]{.hii}) | (5,[4]{.h}) | (12,[3]{.hii}) |
 | Bottom      | (5,6)         | (4,5)       | (9,7)          |
 
 :::

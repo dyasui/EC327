@@ -142,5 +142,9 @@ Even though the players available actions are all called the same (Contribute or
 The equilibrium is:
 
   * \{ [D]{.hi}^[Emily], [DC]{.hi}^[Nina], [DCCD]{.hi}^[Talia]  \} 
+
+  * Or in other words, Emily doesn't contribute, knowing that Nina will only contribute if she doesn't and that Talia will only contribute if one other roomate has contributed before her
+
+  * The equilibrium *outcome* is Nina and Talia contribute to a garden, Emily gets to enjoy without contributing
+  (4,3,3)
   
----

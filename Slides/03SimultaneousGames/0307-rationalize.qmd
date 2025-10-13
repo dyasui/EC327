@@ -13,10 +13,10 @@
 	\begin{tabular}{cc|c|c|c|c|}
 		& \multicolumn{1}{c}{} & \multicolumn{4}{c}{P$_2$}\\
 		& \multicolumn{1}{c}{} & \multicolumn{1}{c}{$a$} & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{$c$} & \multicolumn{1}{c}{$d$}  \\\cline{3-6}
-		\multirow{5}*{P$_1$}  & $A$ & 1, 1 & 2, 2 & 2, 2 & 2, 1 \\\cline{3-6}
-		& $B$ & 1, 3 & 1, 3 & 2, 2 & 2, 3 \\\cline{3-6}
-		& $C$ & 1, 2 & 2, 4 & 1, 3 & 2, 3 \\\cline{3-6}
-		& $D$ & 3, 2 & 2, 3 & 1, 4 & 2, 2 \\\cline{3-6}
+		$A$ & 1, 1 & 2, 2 & 2, 2 & 2, 1 \\\cline{3-6}
+		$B$ & 1, 3 & 1, 3 & 2, 2 & 2, 3 \\\cline{3-6}
+		$C$ & 1, 2 & 2, 4 & 1, 3 & 2, 3 \\\cline{3-6}
+		$D$ & 3, 2 & 2, 3 & 1, 4 & 2, 2 \\\cline{3-6}
 	\end{tabular}
 \end{table}
 ```

@@ -14,14 +14,6 @@ One of the goals of game theory is to generate *testable predictions*
 
 ---
 
-## Survivor Flags game results
-
-The last time I taught this class:
-
-![](figures/W2024-results.png)
-
----
-
 ## Why didn't all teams find the rollback equilibrium?
 
 :::{.incremental}
@@ -69,7 +61,7 @@ This game was relatively simple because it only relied on *one team* to come up 
 
 ## Centipede Game
 
-Two participants play this game, taking turns over several rounds.
+Two participants play this game, taking turns over five rounds.
 
 The first is offered a choice between:
 
@@ -77,21 +69,15 @@ The first is offered a choice between:
 
   or b) they pass the choice to the next player who gets the same choice but the pot they can choose to split from doubles
 
----
-
-## Centipede Game
-
-First, what is the theoretical solution?
-
-![](figures/Harrington-fig8.20.png)
-
----
-
-## Centipede Game
-
 Now what would you do if you were in this situation?
 
 When would you grab?
+
+---
+
+## Centipede Game
+
+What is the theoretical solution?
 
 ![](figures/Harrington-fig8.20.png)
 

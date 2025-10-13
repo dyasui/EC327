@@ -280,23 +280,18 @@ What are Emily's preferences in this modified game? ^[this is a symmetric game, 
 
 ## Nash Equilibrium from Best Responses
 
-::: {.incremental}
 Recall the various definitions of a Nash Equilibrium:
-  * a strategy profile such that [no player can obtain a larger payoff by *unilaterally deviating*[{.hi}] (changing only their own strategy).
-  * A strategy profile such that [no single player can make themselves better off by *changing only their own strategy*]{.hi}.
-  * A strategy profile such that, after the game is played, [each player is satisfied that they could not have made a better decision]{.hi}.
 
-  * Another definition we can use now is "A strategy profile such that each player's strategy is a best responses to the other player's strategy."
-  * "Playing a best response" is equivalent to "cannot obtain a larger payoff by unilaterally deviating," or any of the other ways to describe this condition.
-:::
----
-
-
-## Classifying Games Based on NEs
 ::: {.incremental}
-  * Now that we've talked about several ways to find a game's NEs, we can start to talk about classifying games using them.
-:::
 
+  * no single player can make themselves better off by [*changing only their own strategy*]{.hi}.
+
+  * After the game is played, each player has [*no regrets*]{.hi} about their strategy.
+
+  * Now we can use: "A strategy profile such that each player's strategy is a best responses to the other player's strategy."
+
+  * "Playing a best response" = "cannot obtain a larger payoff by unilaterally deviating" 
+:::
 
 # Multiple Equilibria in Pure Strategies
 
