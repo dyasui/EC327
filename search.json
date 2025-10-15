@@ -2066,6 +2066,48 @@
     "text": "Step 1: Expand the profit function.\nStep 2: Simplify the expanded equation.\nStep 3: Differentiate and solve for best-response.\nStep 4: Repeat for Yvonne.\nStep 5: Solve for Nash equilibrium."
   },
   {
+    "objectID": "Slides/03SimultaneousGames/0309-threeplayer.html",
+    "href": "Slides/03SimultaneousGames/0309-threeplayer.html",
+    "title": "Three-Player Simultaneous Games",
+    "section": "",
+    "text": "Let’s create a modified version of the three-roommate planting game:\n\n\nSuppose that Emily, Nina, and Talia have to choose simultaneously\nInstead of one roomate having a first-mover advantage\n\n\n\n\n\n\nPreferences from each roommate’s perspective 1\n\n\n\nOutcome\nPayoff\n\n\n\n\nMy two roommates contribute, but I don’t\n6\n\n\nEveryone contributes\n5\n\n\nOne roommate contributes, not me\n4\n\n\nOne roommate contributes, and I do too\n3\n\n\nNo-one contributes\n2\n\n\nI am the only one to contribute\n1\n\n\n\n\n\n\n\nTalia chooses:\n\n\nContribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n5, 5, 5\n3, 6, 3\n\n\nDon’t\n6, 3, 3\n4, 4, 1\n\n\n\n\nDon’t Contribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n3, 3, 6\n1, 4, 4\n\n\nDon’t\n4, 1, 4\n2, 2, 2\n\n\n\n\n\n\nCan you find any dominant strategies?\n\n\n\n\n\nTalia chooses:\n\n\nContribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n5, 5, 5\n3, 6, 3\n\n\nDon’t\n6, 3, 3\n4, 4, 1\n\n\n\n\nDon’t Contribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n3, 3, 6\n1, 4, 4\n\n\nDon’t\n4, 1, 4\n2, 2, 2\n\n\n\nThe Nash equilibrium is {Don’t, Don’t, Don’t}"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0309-threeplayer.html#three-player-simultaneous-planting-game",
+    "href": "Slides/03SimultaneousGames/0309-threeplayer.html#three-player-simultaneous-planting-game",
+    "title": "Three-Player Simultaneous Games",
+    "section": "",
+    "text": "Let’s create a modified version of the three-roommate planting game:\n\n\nSuppose that Emily, Nina, and Talia have to choose simultaneously\nInstead of one roomate having a first-mover advantage"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0309-threeplayer.html#simultaneous-planting-game",
+    "href": "Slides/03SimultaneousGames/0309-threeplayer.html#simultaneous-planting-game",
+    "title": "Three-Player Simultaneous Games",
+    "section": "",
+    "text": "Preferences from each roommate’s perspective 1\n\n\n\nOutcome\nPayoff\n\n\n\n\nMy two roommates contribute, but I don’t\n6\n\n\nEveryone contributes\n5\n\n\nOne roommate contributes, not me\n4\n\n\nOne roommate contributes, and I do too\n3\n\n\nNo-one contributes\n2\n\n\nI am the only one to contribute\n1"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0309-threeplayer.html#simultaneous-planting-game-1",
+    "href": "Slides/03SimultaneousGames/0309-threeplayer.html#simultaneous-planting-game-1",
+    "title": "Three-Player Simultaneous Games",
+    "section": "",
+    "text": "Talia chooses:\n\n\nContribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n5, 5, 5\n3, 6, 3\n\n\nDon’t\n6, 3, 3\n4, 4, 1\n\n\n\n\nDon’t Contribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n3, 3, 6\n1, 4, 4\n\n\nDon’t\n4, 1, 4\n2, 2, 2\n\n\n\n\n\n\nCan you find any dominant strategies?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0309-threeplayer.html#simultaneous-planting-game-2",
+    "href": "Slides/03SimultaneousGames/0309-threeplayer.html#simultaneous-planting-game-2",
+    "title": "Three-Player Simultaneous Games",
+    "section": "",
+    "text": "Talia chooses:\n\n\nContribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n5, 5, 5\n3, 6, 3\n\n\nDon’t\n6, 3, 3\n4, 4, 1\n\n\n\n\nDon’t Contribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n3, 3, 6\n1, 4, 4\n\n\nDon’t\n4, 1, 4\n2, 2, 2\n\n\n\nThe Nash equilibrium is {Don’t, Don’t, Don’t}"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0309-threeplayer.html#footnotes",
+    "href": "Slides/03SimultaneousGames/0309-threeplayer.html#footnotes",
+    "title": "Three-Player Simultaneous Games",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nthis is a symmetric game, so Nina and Talia will have equivalent rankings↩︎"
+  },
+  {
     "objectID": "Slides/03SimultaneousGames/0307-rationalize.html",
     "href": "Slides/03SimultaneousGames/0307-rationalize.html",
     "title": "EC327 Game Theory",
@@ -2119,42 +2161,42 @@
     "href": "Slides/03SimultaneousGames/0305-bestresponses.html",
     "title": "Best-Response Analysis",
     "section": "",
-    "text": "Not every simultaneous-move strategy can by only eliminating dominated strategies\nCan we still find NE in those games?\n\n\nYes! We just need to remember the best-responding part of our definition of NE\n\n\n\n\n\n\n\n\nIn finding Nash equilibrium, best-response analysis is key.\nEach player chooses their best action in response to the strategies of others.\nThis iterative process helps in solving games with multiple strategies.\n\n\n\n\n\n\n\n\nIf you know what strategy the other player will choose, then you can easily figure out what your best option (or options) are.\nOf course, you don’t actually know what the other player will do when you choose your strategy in a game like this—but thinking about the game this way makes it easy to find NEs.\nA strategy \\(s_i\\) is a best response to another player’s strategy \\(s_{-i}\\) if and only if it provides the highest payoff possible when the other player chooses \\(s_{-i}\\).\n\n\n\n\n\n\n\n\nThe phrase “to another player’s strategy” in the definition of a best response is important.\nA strategy can only be a best response to some strategy of the other player. There is no such thing as a strategy which is just “a best response.”\nWhen dealing with strategic-form games with game tables, there is always at least one best response to another player’s strategy—and there may be multiple, if there is more than one strategy which provides the best payoff.\n\n\n\n\n\n\n\n\nIt’s easy to depict best responses in a game table: we can go through each strategy in the game, and mark each strategy which is a best response to them.\nWe do this by marking the payoffs—however, it’s important to understand that it’s not the payoff itself which is a best response–we’re just using them as a convenient way to depict where the best responses are.\n\nIn other words: don’t try to describe the best response using the payoff. The best response is always the strategy.\n\n\n\n\n\n\n\nLet’s revisit this game from the beginning of the lecture:\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 4\n\n\nLow\n2, 2\n5, 4\n12, 3\n\n\nBottom\n5, 6\n4, 5\n9, 7\n\n\n\n\nWe’ll break down the best responses one step at a time\n\n\n\n\n\nSuppose you’re the Row player:\n\n\n\nRow\nLeft\n\n\n\n\nTop\n3\n\n\nHigh\n4\n\n\nLow\n2\n\n\nBottom\n5\n\n\n\nWhat would you do if you knew Column will play Left?\n\n\n\n\n\n\n\nRow\nLeft\n\n\n\n\nTop\n3\n\n\nHigh\n4\n\n\nLow\n2\n\n\nBottom\n5\n\n\n\nWe’ll underline this payoff as Bottom is the best response to Left\n\n\n\n\n\n\n\nRow\nLeft\nMiddle\n\n\n\n\nTop\n3\n2\n\n\nHigh\n4\n3\n\n\nLow\n2\n5\n\n\nBottom\n5\n4\n\n\n\nAlso, Low is the best response to Middle\n\n\n\n\n\n\n\nRow\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3\n2\n10\n\n\nHigh\n4\n3\n6\n\n\nLow\n2\n5\n12\n\n\nBottom\n5\n4\n9\n\n\n\nAnd Low is also the best response to Right\n\n\n\n\n\n\n\n\n\n\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4\n3\n6\n\n\nLow\n2\n5\n12\n\n\nBottom\n5\n4\n9\n\n\n\nFor Column, Middle is a best response to Top\n\n\n\n\n\n\n\n\n\n\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 6\n\n\nLow\n2\n5\n12\n\n\nBottom\n5\n4\n9\n\n\n\nLeft is a best response to High\n\n\n\n\n\n\n\n\n\n\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 6\n\n\nLow\n2, 2\n5, 4\n12, 3\n\n\nBottom\n5\n4\n9\n\n\n\nMiddle is a best response to Low\n\n\n\n\n\n\n\n\n\n\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 6\n\n\nLow\n2, 2\n5, 4\n12, 3\n\n\nBottom\n5, 6\n4, 5\n9, 7\n\n\n\nAnd Right is a best response to Bottom\n\n\n\n\n\n\n\n\n\n\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 6\n\n\nLow\n2, 2\n5, 4\n12, 3\n\n\nBottom\n5, 6\n4, 5\n9, 7\n\n\n\nThe NE of this game is where the best responses intersect:\n\n(Low, Middle)\n\n\n\n\n\nLet’s create a modified version of the three-roommate planting game:\n\n\nNow instead of observing who contributed to the garden already in certain order, suppose that Emily, Nina, and Talia have to choose simultaneously\nAlso instead of the garden either dying or surviving, we’ll add more detailed levels of quality depending on who contributed\n\n\n\n\n\n\nWhat are Emily’s preferences in this modified game? 1\n\n\n\nOutcome\nPayoff\n\n\n\n\nNina and Talia contribute, Emily doesn’t\n6\n\n\nEveryone contributes\n5\n\n\nEither Nina or Talia contribute, Emily doesn’t\n4\n\n\nEither Nina or Talia contribute, and Emily does\n3\n\n\nNo-one contributes\n2\n\n\nEmily is the only one to contribute\n1\n\n\n\n\n\n\n\nTalia chooses:\n\n\nContribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n5, 5, 5\n3, 6, 3\n\n\nDon’t\n6, 3, 3\n4, 4, 1\n\n\n\n\nDon’t Contribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n3, 3, 6\n1, 4, 4\n\n\nDon’t\n4, 1, 4\n2, 2, 2\n\n\n\n\n\n\nCan you find any dominant strategies?\n\n\n\n\n\nTalia chooses:\n\n\nContribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n5, 5, 5\n3, 6, 3\n\n\nDon’t\n6, 3, 3\n4, 4, 1\n\n\n\n\nDon’t Contribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n3, 3, 6\n1, 4, 4\n\n\nDon’t\n4, 1, 4\n2, 2, 2\n\n\n\n\n\n\n\n\n\nRecall the various definitions of a Nash Equilibrium:\n\n\nno single player can make themselves better off by changing only their own strategy.\nAfter the game is played, each player has no regrets about their strategy.\nNow we can use: “A strategy profile such that each player’s strategy is a best responses to the other player’s strategy.”\n“Playing a best response” = “cannot obtain a larger payoff by unilaterally deviating”"
+    "text": "Not every game is dominance solvable through IESDS.\nCan we still find NE in those games?\n\n\nYes! We just need to remember the best-responding part of our definition of NE\n\n\n\n\n\n\n\n\nIn finding Nash equilibrium, best-response analysis is key.\nEach player chooses their best action in response to the strategies of others.\nThis iterative process helps in solving games with many possible strategies.\n\n\n\n\n\n\n\n\nIf you know other player’s strategy, then you can respond accordingly\nEven if you don’t know, forming a belief helps you solve the game\n\n\n. . .\n\n\n\n\n\n\nBest Response Definition\n\n\n\nStrategy \\(s_i\\) is a best response to \\(s_{-i}\\) if and only if it provides the highest payoff possible when the other player chooses \\(s_{-i}\\).\n\nThe best response correspondence \\(b_i(s_{-i})\\) is the strategy or set of strategies that give the highest payoff against \\(s_{-i}\\)\n\n\n\n\n\n\n\n\n\n“to another player’s strategy” is important.\nA strategy can only be a best response to some strategy of the other player.\n\nNo such thing as a universally best response (that’s a dominant strategy)\n\nThere is always at least one best response to another player’s strategy\n\nAnd there may be multiple best responses to another players strategy\n\n\n\n\n\n\n\nMarking best responses in normal form:\n\n\nGo through each strategy in the game of one player (row or column)\n\nMark the best option of the responding player\nOkay to mark the payoffs, but keep in mind they are not same as the strategies\n\nDon’t try to describe the best response using the payoff.\n\nA best response is a strategy\n\n\n\n\n\n\n\nLet’s revisit this game from the beginning of the lecture:\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 4\n\n\nLow\n2, 2\n5, 4\n12, 3\n\n\nBottom\n5, 6\n4, 5\n9, 7\n\n\n\n\nWe’ll break down the best responses one step at a time\n\n\n\n\n\nSuppose you’re the Row player:\n\n\n\nRow\nLeft\n\n\n\n\nTop\n3\n\n\nHigh\n4\n\n\nLow\n2\n\n\nBottom\n5\n\n\n\nWhat would you do if you knew Column will play Left?\n\n\n\n\n\n\n\nRow\nLeft\n\n\n\n\nTop\n3\n\n\nHigh\n4\n\n\nLow\n2\n\n\nBottom\n5\n\n\n\nWe’ll underline this payoff as Bottom is the best response to Left\n\n\n\n\n\n\n\nRow\nLeft\nMiddle\n\n\n\n\nTop\n3\n2\n\n\nHigh\n4\n3\n\n\nLow\n2\n5\n\n\nBottom\n5\n4\n\n\n\nAlso, Low is the best response to Middle\n\n\n\n\n\n\n\nRow\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3\n2\n10\n\n\nHigh\n4\n3\n6\n\n\nLow\n2\n5\n12\n\n\nBottom\n5\n4\n9\n\n\n\nAnd Low is also the best response to Right\n\n\n\n\n\n\n\n\n\n\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4\n3\n6\n\n\nLow\n2\n5\n12\n\n\nBottom\n5\n4\n9\n\n\n\nFor Column, Middle is a best response to Top\n\n\n\n\n\n\n\n\n\n\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 6\n\n\nLow\n2\n5\n12\n\n\nBottom\n5\n4\n9\n\n\n\nLeft is a best response to High\n\n\n\n\n\n\n\n\n\n\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 6\n\n\nLow\n2, 2\n5, 4\n12, 3\n\n\nBottom\n5\n4\n9\n\n\n\nMiddle is a best response to Low\n\n\n\n\n\n\n\n\n\n\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 6\n\n\nLow\n2, 2\n5, 4\n12, 3\n\n\nBottom\n5, 6\n4, 5\n9, 7\n\n\n\nAnd Right is a best response to Bottom\n\n\n\n\n\n\n\n\n\n\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 6\n\n\nLow\n2, 2\n5, 4\n12, 3\n\n\nBottom\n5, 6\n4, 5\n9, 7\n\n\n\nThe NE of this game is where the best responses intersect:\n\n(Low, Middle)\n\n. . .\n\nThis results in a payoff of 5 to Row, 4 to Column\n\n\n\n\n\nRecall the various definitions of a Nash Equilibrium:\n\n\nno-one can improve their payoff by changing only their own strategy.\nEach player has no regrets about their strategy.\nEveryone’s strategy is a best responses to everyone else’s"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#limits-of-iesds",
     "href": "Slides/03SimultaneousGames/0305-bestresponses.html#limits-of-iesds",
     "title": "Best-Response Analysis",
     "section": "",
-    "text": "Not every simultaneous-move strategy can by only eliminating dominated strategies\nCan we still find NE in those games?\n\n\nYes! We just need to remember the best-responding part of our definition of NE"
+    "text": "Not every game is dominance solvable through IESDS.\nCan we still find NE in those games?\n\n\nYes! We just need to remember the best-responding part of our definition of NE"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#best-responding",
     "href": "Slides/03SimultaneousGames/0305-bestresponses.html#best-responding",
     "title": "Best-Response Analysis",
     "section": "",
-    "text": "In finding Nash equilibrium, best-response analysis is key.\nEach player chooses their best action in response to the strategies of others.\nThis iterative process helps in solving games with multiple strategies."
+    "text": "In finding Nash equilibrium, best-response analysis is key.\nEach player chooses their best action in response to the strategies of others.\nThis iterative process helps in solving games with many possible strategies."
   },
   {
     "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#best-responses",
     "href": "Slides/03SimultaneousGames/0305-bestresponses.html#best-responses",
     "title": "Best-Response Analysis",
     "section": "",
-    "text": "If you know what strategy the other player will choose, then you can easily figure out what your best option (or options) are.\nOf course, you don’t actually know what the other player will do when you choose your strategy in a game like this—but thinking about the game this way makes it easy to find NEs.\nA strategy \\(s_i\\) is a best response to another player’s strategy \\(s_{-i}\\) if and only if it provides the highest payoff possible when the other player chooses \\(s_{-i}\\)."
+    "text": "If you know other player’s strategy, then you can respond accordingly\nEven if you don’t know, forming a belief helps you solve the game\n\n\n. . .\n\n\n\n\n\n\nBest Response Definition\n\n\n\nStrategy \\(s_i\\) is a best response to \\(s_{-i}\\) if and only if it provides the highest payoff possible when the other player chooses \\(s_{-i}\\).\n\nThe best response correspondence \\(b_i(s_{-i})\\) is the strategy or set of strategies that give the highest payoff against \\(s_{-i}\\)"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#some-notes-on-best-responses",
     "href": "Slides/03SimultaneousGames/0305-bestresponses.html#some-notes-on-best-responses",
     "title": "Best-Response Analysis",
     "section": "",
-    "text": "The phrase “to another player’s strategy” in the definition of a best response is important.\nA strategy can only be a best response to some strategy of the other player. There is no such thing as a strategy which is just “a best response.”\nWhen dealing with strategic-form games with game tables, there is always at least one best response to another player’s strategy—and there may be multiple, if there is more than one strategy which provides the best payoff."
+    "text": "“to another player’s strategy” is important.\nA strategy can only be a best response to some strategy of the other player.\n\nNo such thing as a universally best response (that’s a dominant strategy)\n\nThere is always at least one best response to another player’s strategy\n\nAnd there may be multiple best responses to another players strategy"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#best-responses-in-practice",
     "href": "Slides/03SimultaneousGames/0305-bestresponses.html#best-responses-in-practice",
     "title": "Best-Response Analysis",
     "section": "",
-    "text": "It’s easy to depict best responses in a game table: we can go through each strategy in the game, and mark each strategy which is a best response to them.\nWe do this by marking the payoffs—however, it’s important to understand that it’s not the payoff itself which is a best response–we’re just using them as a convenient way to depict where the best responses are.\n\nIn other words: don’t try to describe the best response using the payoff. The best response is always the strategy."
+    "text": "Marking best responses in normal form:\n\n\nGo through each strategy in the game of one player (row or column)\n\nMark the best option of the responding player\nOkay to mark the payoffs, but keep in mind they are not same as the strategies\n\nDon’t try to describe the best response using the payoff.\n\nA best response is a strategy"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#best-response-analysis-1",
@@ -2224,203 +2266,14 @@
     "href": "Slides/03SimultaneousGames/0305-bestresponses.html#best-response-analysis-10",
     "title": "Best-Response Analysis",
     "section": "",
-    "text": "Row, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 6\n\n\nLow\n2, 2\n5, 4\n12, 3\n\n\nBottom\n5, 6\n4, 5\n9, 7\n\n\n\nThe NE of this game is where the best responses intersect:\n\n(Low, Middle)"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#three-player-simultaneous-games",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#three-player-simultaneous-games",
-    "title": "Best-Response Analysis",
-    "section": "",
-    "text": "Let’s create a modified version of the three-roommate planting game:\n\n\nNow instead of observing who contributed to the garden already in certain order, suppose that Emily, Nina, and Talia have to choose simultaneously\nAlso instead of the garden either dying or surviving, we’ll add more detailed levels of quality depending on who contributed"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#simultaneous-planting-game",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#simultaneous-planting-game",
-    "title": "Best-Response Analysis",
-    "section": "",
-    "text": "What are Emily’s preferences in this modified game? 1\n\n\n\nOutcome\nPayoff\n\n\n\n\nNina and Talia contribute, Emily doesn’t\n6\n\n\nEveryone contributes\n5\n\n\nEither Nina or Talia contribute, Emily doesn’t\n4\n\n\nEither Nina or Talia contribute, and Emily does\n3\n\n\nNo-one contributes\n2\n\n\nEmily is the only one to contribute\n1"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#simultaneous-planting-game-1",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#simultaneous-planting-game-1",
-    "title": "Best-Response Analysis",
-    "section": "",
-    "text": "Talia chooses:\n\n\nContribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n5, 5, 5\n3, 6, 3\n\n\nDon’t\n6, 3, 3\n4, 4, 1\n\n\n\n\nDon’t Contribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n3, 3, 6\n1, 4, 4\n\n\nDon’t\n4, 1, 4\n2, 2, 2\n\n\n\n\n\n\nCan you find any dominant strategies?"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#simultaneous-planting-game-2",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#simultaneous-planting-game-2",
-    "title": "Best-Response Analysis",
-    "section": "",
-    "text": "Talia chooses:\n\n\nContribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n5, 5, 5\n3, 6, 3\n\n\nDon’t\n6, 3, 3\n4, 4, 1\n\n\n\n\nDon’t Contribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n3, 3, 6\n1, 4, 4\n\n\nDon’t\n4, 1, 4\n2, 2, 2"
+    "text": "Row, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 6\n\n\nLow\n2, 2\n5, 4\n12, 3\n\n\nBottom\n5, 6\n4, 5\n9, 7\n\n\n\nThe NE of this game is where the best responses intersect:\n\n(Low, Middle)\n\n. . .\n\nThis results in a payoff of 5 to Row, 4 to Column"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#nash-equilibrium-from-best-responses",
     "href": "Slides/03SimultaneousGames/0305-bestresponses.html#nash-equilibrium-from-best-responses",
     "title": "Best-Response Analysis",
     "section": "",
-    "text": "Recall the various definitions of a Nash Equilibrium:\n\n\nno single player can make themselves better off by changing only their own strategy.\nAfter the game is played, each player has no regrets about their strategy.\nNow we can use: “A strategy profile such that each player’s strategy is a best responses to the other player’s strategy.”\n“Playing a best response” = “cannot obtain a larger payoff by unilaterally deviating”"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#games-with-multiple-equilibria",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#games-with-multiple-equilibria",
-    "title": "Best-Response Analysis",
-    "section": "Games with Multiple Equilibria",
-    "text": "Games with Multiple Equilibria\nSo we’ve seen games with only one unique NE\n\n\nBut this doesn’t have to be the case\nNext we will see games with multiple possible strategy profiles which are stable."
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#coordination-games",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#coordination-games",
-    "title": "Best-Response Analysis",
-    "section": "Coordination Games",
-    "text": "Coordination Games\nI agreed to meet my friend for coffee, but we didn’t decide on which cafe and now my phone is dead:\n\n\n\nDante, Jose\nStarbucks\nPeet’s\n\n\n\n\nStarbucks\n1, 1\n0, 0\n\n\nPeet’s\n0, 0\n1, 1"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#coordination-games-1",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#coordination-games-1",
-    "title": "Best-Response Analysis",
-    "section": "Coordination Games",
-    "text": "Coordination Games\n\n\n\nDante, Jose\nStarbucks\nPeet’s\n\n\n\n\nStarbucks\n1, 1\n0, 0\n\n\nPeet’s\n0, 0\n1, 1\n\n\n\n\n\nThere are two NE’s where we are both happy\nThe problem is getting there\nThis type of game is called a coordination game"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#coordination-games-2",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#coordination-games-2",
-    "title": "Best-Response Analysis",
-    "section": "Coordination Games",
-    "text": "Coordination Games\nEven when there is an obviously preferred NE for both players, it may not be guaranteed that we will get there:\n\n\n\nDante, Jose\nStarbucks\nRoma\n\n\n\n\nStarbucks\n1, 1\n0, 0\n\n\nRoma\n0, 0\n2, 2\n\n\n\n\n\nDepending on the set of beliefs held by the players, both strategy profiles could be theoretically stable\nIf for some reason we started out in a (Starbucks, Starbucks) equilibrium, there would be no incentive for either of us to deviate without communicating our intent to each other"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#coordination-games-3",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#coordination-games-3",
-    "title": "Best-Response Analysis",
-    "section": "Coordination Games",
-    "text": "Coordination Games\nWhat should happen when different players have different preferences over NE?\n\n\n\nDante, Jose\nT4\nMetropol\n\n\n\n\nT4\n2, 1\n0, 0\n\n\nMetropol\n0, 0\n1, 2\n\n\n\n\n\nIf Dante tries to be nice and go to Metropol, what if Jose does the same thing and goes to T4?\nIn chapter 10, with repeated games, there may be opportunities for us to alternate between each of our favorites"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#the-deer-hunt-game",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#the-deer-hunt-game",
-    "title": "Best-Response Analysis",
-    "section": "The Deer Hunt Game",
-    "text": "The Deer Hunt Game\nTwo cavemen, Igg and Ogg, each decide whether to hunt Deer or Rabbit.\n\nIf both hunt Deer, they can work together to bring one down and have enough meat to share with leftovers\n\nEach earn payoffs of 2\n\nIf instead the other goes off chasing a rabbit, the cameman hunting deer won’t be able to catch any meat, but the one hunting rabbit will get just enough to feed themselves\n\nUnsuccessful Deer hunter gets 0, rabbit hunter gets 1\n\nOr both cavemen could just decide to go off and hunt rabbits by themselves, ensuring they get can feed themselves\n\nBoth get 1"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#the-deer-hunt-game-1",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#the-deer-hunt-game-1",
-    "title": "Best-Response Analysis",
-    "section": "The Deer Hunt Game",
-    "text": "The Deer Hunt Game\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n2, 2\n0, 1\n\n\nRabbit\n1, 0\n1, 1\n\n\n\n\n\nAre there any strictly dominated strategies?\nWhat about best responses?"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#the-deer-hunt-game-2",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#the-deer-hunt-game-2",
-    "title": "Best-Response Analysis",
-    "section": "The Deer Hunt Game",
-    "text": "The Deer Hunt Game\nHere are Igg’s best responses…\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n2, 2\n0, 1\n\n\nRabbit\n1, 0\n1, 1"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#the-deer-hunt-game-3",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#the-deer-hunt-game-3",
-    "title": "Best-Response Analysis",
-    "section": "The Deer Hunt Game",
-    "text": "The Deer Hunt Game\nAnd here are Ogg’s best responses…\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n2, 2\n0, 1\n\n\nRabbit\n1, 0\n1, 1"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#the-game-of-chicken",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#the-game-of-chicken",
-    "title": "Best-Response Analysis",
-    "section": "The Game of Chicken",
-    "text": "The Game of Chicken\n\n\n\nJames, Dean\nSwerve (Chicken)\nStraight (Tough)\n\n\n\n\nSwerve\n0, 0\n-1, 1\n\n\nStraight\n1, -1\n-2, -2\n\n\n\nSuppose that James and Dean are driving headlong towards each other, but neither one wants to be the ‘chicken’ by swerving out of the way\n\nWhat are the best respones?"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#the-game-of-chicken-1",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#the-game-of-chicken-1",
-    "title": "Best-Response Analysis",
-    "section": "The Game of Chicken",
-    "text": "The Game of Chicken\n\n\n\nJames, Dean\nSwerve (Chicken)\nStraight (Tough)\n\n\n\n\nSwerve\n0, 0\n-1, 1\n\n\nStraight\n1, -1\n-2, -2\n\n\n\n\n\nThere are two NE of this game\nBut how can we decide which one will happen?\nChapter 9 will look at potential commitment devices either player could use to try to achieve their preferred NE"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#another-example-when-elimination-does-nothing",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#another-example-when-elimination-does-nothing",
-    "title": "Best-Response Analysis",
-    "section": "Another Example: When Elimination Does Nothing",
-    "text": "Another Example: When Elimination Does Nothing\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(a\\)\n\\(b\\)\n\\(c\\)\n\\(d\\)\n\n\n\n\n\\(A\\)\n1, 1\n2, 2\n2, 2\n2, 1\n\n\n\\(B\\)\n1, 3\n1, 3\n2, 2\n2, 3\n\n\n\\(C\\)\n1, 2\n2, 4\n1, 3\n2, 3\n\n\n\\(D\\)\n3, 2\n2, 3\n1, 4\n2, 2\n\n\n\n\n\nCan you find any strictly dominated strategies?\nCan you find any NE?"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#classifying-nes",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#classifying-nes",
-    "title": "Best-Response Analysis",
-    "section": "Classifying NEs",
-    "text": "Classifying NEs\n\n\nNash Equilibria may be either strict or weak.\nA Nash Equilibrium is strict if and only if each player would receive a (strictly) smaller payoff by changing their own strategy.\nIf a Nash Equilibrium is not strict—meaning that at least one player could change their own strategy and receive an equal (but not larger) payoff\n\nit is [weak]{hi}."
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#intuition-on-strict-vs.-weak-equilibria",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#intuition-on-strict-vs.-weak-equilibria",
-    "title": "Best-Response Analysis",
-    "section": "Intuition on Strict vs. Weak Equilibria",
-    "text": "Intuition on Strict vs. Weak Equilibria\n\n\nIn any Nash Equilibrium, no player has a reason to change their own strategy—they cannot get a higher payoff this way.\nStrict Nash Equilibria go a little further: not only does no player have a reason to change their own strategy, they also have a reason not to, because any other strategy would provide them a worse payoff.\nIf a Nash Equilibrium is weak, it means that some player could change their strategy, and get exactly the same payoff they already were. They have no reason to do this, but also no reason not to.\nWe can also say that a strict Nash Equilibrium is one where each player is playing a strategy which is a unique best response to the strategies chosen by other players."
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#deer-hunt-strict-nash-equilibria",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#deer-hunt-strict-nash-equilibria",
-    "title": "Best-Response Analysis",
-    "section": "Deer Hunt: Strict Nash Equilibria",
-    "text": "Deer Hunt: Strict Nash Equilibria\n\n\n\nIgg, Ogg\n\\(Deer\\)\n\\(Rabbit\\)\n\n\n\n\n\\(Deer\\)\n2, 2\n0,1\n\n\n\\(Rabbit\\)\n1,0\n1, 1\n\n\n\n\n\nHere, note that at each Nash Equilibrium, each player has no other strategy providing the same payoff.\nThis is a strict Nash Equilibrium."
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#weak-nash-equilibria-example",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#weak-nash-equilibria-example",
-    "title": "Best-Response Analysis",
-    "section": "Weak Nash Equilibria Example",
-    "text": "Weak Nash Equilibria Example\n\n\n\nEleanor, Michael\n\\(Swerve\\)\n\\(Straight\\)\n\n\n\n\n\\(Swerve\\)\n1, 1\n1, 1\n\n\n\\(Straight\\)\n1, 1\n0, 0\n\n\n\n\n\nHowever, in this game, each Nash Equilibrium features at least one player who could still get the same payoff if they change their strategy."
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#prisoners-dilemmas",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#prisoners-dilemmas",
-    "title": "Best-Response Analysis",
-    "section": "Prisoners’ Dilemmas",
-    "text": "Prisoners’ Dilemmas\n\n\n\nGuido, Luca\n\\(Testify\\)\n\\(Keep~Quiet\\)\n\n\n\n\n\\(Testify\\)\n-10, -10\n0, -20\n\n\n\\(Keep~Quiet\\)\n-20, 0\n-1, -1\n\n\n\nIn general, a Prisoner’s Dilemma is any game in which:\n\nThe players have the same strategies, A and B.\nA strictly dominates B, making (A, A) the only NE.\nBut (B, B) is better for both players than (A, A). ::: —"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#coordination-games-4",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#coordination-games-4",
-    "title": "Best-Response Analysis",
-    "section": "Coordination Games",
-    "text": "Coordination Games\n\n\nA coordination game is a game in which the players all have the same strategy sets, and the NEs are all of the strategy profiles where the players choose the same strategy.\nThe Deer Hunt is a coordination game."
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#other-coordination-games",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#other-coordination-games",
-    "title": "Best-Response Analysis",
-    "section": "Other Coordination Games",
-    "text": "Other Coordination Games\n\n\n\n\\(P_1\\), \\(P_2\\)\nA\nB\nC\n\n\n\n\nA\n1, 1\n1, 0\n3, 0\n\n\nB\n0, 1\n2, 2\n2, 1\n\n\nB\n0, 3\n1, 2\n4, 4"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#anti-coordination-games",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#anti-coordination-games",
-    "title": "Best-Response Analysis",
-    "section": "Anti-Coordination Games",
-    "text": "Anti-Coordination Games\n\n\nAn anti-coordination game is a game in which the players all have the same strategy sets, but the NEs are all of the strategy profiles where the players choose different strategies.\n\n\n\n\n\nJames, Dean\nSwerve (Chicken)\nStraight (Tough)\n\n\n\n\nSwerve\n0, 0\n-1, 1\n\n\nStraight\n1, -1\n-2, -2"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#symmetric-games",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#symmetric-games",
-    "title": "Best-Response Analysis",
-    "section": "Symmetric Games",
-    "text": "Symmetric Games\n\n\nA symmetric game is a game which is indifferent to an exchange of players in other words, a game where the players are interchangeable.\nConsider the Prisoner’s Dilemma: if we swap the players’ names, and their positions in the game table, and the order of their payoffs, we get the same game that we started with."
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#symmetric-games-1",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#symmetric-games-1",
-    "title": "Best-Response Analysis",
-    "section": "Symmetric Games",
-    "text": "Symmetric Games\n\n\nA two-player game with a game table is symmetric if:\n\nThe players have the same strategy sets.\nIn the on-diagonal cells of the game table, the players receive equal payoffs.\nIn the “mirrored” off-diagonal cells of the game table, the players’ payoffs are reversed.\n\nOf the games we’ve just looked at, the Deer Hunt, the 3x3 coordination game, and Chicken are symmetric games. Bach and Stravinsky is not."
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0305-bestresponses.html#footnotes",
-    "href": "Slides/03SimultaneousGames/0305-bestresponses.html#footnotes",
-    "title": "Best-Response Analysis",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nthis is a symmetric game, so Nina and Talia will have equivalent rankings↩︎"
+    "text": "Recall the various definitions of a Nash Equilibrium:\n\n\nno-one can improve their payoff by changing only their own strategy.\nEach player has no regrets about their strategy.\nEveryone’s strategy is a best responses to everyone else’s"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0303-prisdilemma.html",
@@ -2976,15 +2829,15 @@
     "text": "Failures of Elimination Methods\n\nThere’s no guarantee that any particular game will contain strictly dominated strategies\nEven when there are strategies we can eliminate, there may not be enough of them to find a NE just by elimination.\nSo why bother with this?\nEven if elimination doesn’t immediately identify a NE, it can still be helpful to simplify the game before trying other methods.\nSimplifying by elimination is especially useful when dealing with mixed strategies"
   },
   {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#nash-equilibrium",
-    "href": "Slides/03SimultaneousGames/03-main.html#nash-equilibrium",
+    "objectID": "Slides/03SimultaneousGames/03-main.html#nash-equilibrium-1",
+    "href": "Slides/03SimultaneousGames/03-main.html#nash-equilibrium-1",
     "title": "Introduction to Game Theory",
     "section": "Nash Equilibrium",
     "text": "Nash Equilibrium\nThe most basic form of equilibrium in game theory is the Nash Equilibrium (NE), which can be described as:\n\nA strategy profile such that no player can obtain a larger payoff by unilaterally deviating\nA strategy profile such that no single player can make themselves better off by changing only their own strategy.\nA strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision"
   },
   {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#nash-equilibrium-1",
-    "href": "Slides/03SimultaneousGames/03-main.html#nash-equilibrium-1",
+    "objectID": "Slides/03SimultaneousGames/03-main.html#nash-equilibrium-2",
+    "href": "Slides/03SimultaneousGames/03-main.html#nash-equilibrium-2",
     "title": "Introduction to Game Theory",
     "section": "Nash Equilibrium",
     "text": "Nash Equilibrium\n\n\n\n\n\n\nNash Equilibrium\n\n\nA list of strategies where each player’s strategy is the best response to the other’s best response strategy\n\n\n\n\nIn other words, no player has any incentive to deviate in their strategy away from an equilibrium strategy\nIt is central to the analysis of simultaneous-move games.\nCan occur in pure strategies (where players choose a single action) or mixed strategies (randomized choices)."
@@ -3071,7 +2924,7 @@
     "href": "Slides/03SimultaneousGames/03-main.html#nash-equilibrium-as-a-system-of-beliefs-2",
     "title": "Introduction to Game Theory",
     "section": "Nash Equilibrium as a System of Beliefs",
-    "text": "Nash Equilibrium as a System of Beliefs\n\nNash equilibrium assumes:\n\nPlayers form beliefs about the strategies of others.\nThese beliefs must be correct.\nEach player then chooses their best response based on these beliefs."
+    "text": "Nash Equilibrium as a System of Beliefs\n\nNash equilibrium assumes:\n\nPlayers form beliefs about the strategies of others.\nEach player then chooses their best response based on these beliefs.\nIn equilibrium, each player’s beliefs about their opponents strategy is realized."
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#strategic-uncertainty",
@@ -3085,42 +2938,42 @@
     "href": "Slides/03SimultaneousGames/03-main.html#an-equivalent-definition-of-ne",
     "title": "Introduction to Game Theory",
     "section": "An Equivalent Definition of NE 1",
-    "text": "An Equivalent Definition of NE 1\n\n\n\n\n\n\nNash Equilibrium\n\n\nA set of strategies, one for each player, such that:\n\neach player has correct beliefs about the strategies of the others and\nthe strategy of each is the best for herself, given her beliefs about the strategies of the others.\n\n\n\n\n\nDixit, pg. 98"
+    "text": "An Equivalent Definition of NE 1\n\n\n\n\n\n\nNash Equilibrium\n\n\nA set of strategies, one for each player, such that:\n\neach player has correct beliefs about the strategies of the others and\nthe strategy of each is the best for herself, given her beliefs about the strategies of the others.\n\n\n\n\n\nA best response is the optimal strategy holding the other’s strategy constant\n\n\nDixit, pg. 98"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#limits-of-iesds",
     "href": "Slides/03SimultaneousGames/03-main.html#limits-of-iesds",
     "title": "Introduction to Game Theory",
     "section": "Limits of IESDS",
-    "text": "Limits of IESDS\nNot every simultaneous-move strategy can by only eliminating dominated strategies\nCan we still find NE in those games?\n\nYes! We just need to remember the best-responding part of our definition of NE"
+    "text": "Limits of IESDS\nNot every game is dominance solvable through IESDS.\nCan we still find NE in those games?\n\nYes! We just need to remember the best-responding part of our definition of NE"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#best-responding",
     "href": "Slides/03SimultaneousGames/03-main.html#best-responding",
     "title": "Introduction to Game Theory",
     "section": "Best-Responding",
-    "text": "Best-Responding\n\nIn finding Nash equilibrium, best-response analysis is key.\nEach player chooses their best action in response to the strategies of others.\nThis iterative process helps in solving games with multiple strategies."
+    "text": "Best-Responding\n\nIn finding Nash equilibrium, best-response analysis is key.\nEach player chooses their best action in response to the strategies of others.\nThis iterative process helps in solving games with many possible strategies."
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#best-responses",
     "href": "Slides/03SimultaneousGames/03-main.html#best-responses",
     "title": "Introduction to Game Theory",
     "section": "Best Responses",
-    "text": "Best Responses\n\nIf you know what strategy the other player will choose, then you can easily figure out what your best option (or options) are.\nOf course, you don’t actually know what the other player will do when you choose your strategy in a game like this—but thinking about the game this way makes it easy to find NEs.\nA strategy \\(s_i\\) is a best response to another player’s strategy \\(s_{-i}\\) if and only if it provides the highest payoff possible when the other player chooses \\(s_{-i}\\)."
+    "text": "Best Responses\n\nIf you know other player’s strategy, then you can respond accordingly\nEven if you don’t know, forming a belief helps you solve the game\n\n\n\n\n\n\n\n\nBest Response Definition\n\n\nStrategy \\(s_i\\) is a best response to \\(s_{-i}\\) if and only if it provides the highest payoff possible when the other player chooses \\(s_{-i}\\).\n\nThe best response correspondence \\(b_i(s_{-i})\\) is the strategy or set of strategies that give the highest payoff against \\(s_{-i}\\)"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#some-notes-on-best-responses",
     "href": "Slides/03SimultaneousGames/03-main.html#some-notes-on-best-responses",
     "title": "Introduction to Game Theory",
     "section": "Some Notes on Best Responses",
-    "text": "Some Notes on Best Responses\n\nThe phrase “to another player’s strategy” in the definition of a best response is important.\nA strategy can only be a best response to some strategy of the other player. There is no such thing as a strategy which is just “a best response.”\nWhen dealing with strategic-form games with game tables, there is always at least one best response to another player’s strategy—and there may be multiple, if there is more than one strategy which provides the best payoff."
+    "text": "Some Notes on Best Responses\n\n“to another player’s strategy” is important.\nA strategy can only be a best response to some strategy of the other player.\n\nNo such thing as a universally best response (that’s a dominant strategy)\n\nThere is always at least one best response to another player’s strategy\n\nAnd there may be multiple best responses to another players strategy"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#best-responses-in-practice",
     "href": "Slides/03SimultaneousGames/03-main.html#best-responses-in-practice",
     "title": "Introduction to Game Theory",
     "section": "Best Responses in Practice",
-    "text": "Best Responses in Practice\n\nIt’s easy to depict best responses in a game table: we can go through each strategy in the game, and mark each strategy which is a best response to them.\nWe do this by marking the payoffs—however, it’s important to understand that it’s not the payoff itself which is a best response–we’re just using them as a convenient way to depict where the best responses are.\n\nIn other words: don’t try to describe the best response using the payoff. The best response is always the strategy."
+    "text": "Best Responses in Practice\nMarking best responses in normal form:\n\nGo through each strategy in the game of one player (row or column)\n\nMark the best option of the responding player\nOkay to mark the payoffs, but keep in mind they are not same as the strategies\n\nDon’t try to describe the best response using the payoff.\n\nA best response is a strategy"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#best-response-analysis-1",
@@ -3190,42 +3043,14 @@
     "href": "Slides/03SimultaneousGames/03-main.html#best-response-analysis-10",
     "title": "Introduction to Game Theory",
     "section": "Best Response Analysis",
-    "text": "Best Response Analysis\n\n\n\n\n\n\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 6\n\n\nLow\n2, 2\n5, 4\n12, 3\n\n\nBottom\n5, 6\n4, 5\n9, 7\n\n\n\nThe NE of this game is where the best responses intersect:\n\n(Low, Middle)"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#three-player-simultaneous-games",
-    "href": "Slides/03SimultaneousGames/03-main.html#three-player-simultaneous-games",
-    "title": "Introduction to Game Theory",
-    "section": "Three-Player Simultaneous Games",
-    "text": "Three-Player Simultaneous Games\nLet’s create a modified version of the three-roommate planting game:\n\nNow instead of observing who contributed to the garden already in certain order, suppose that Emily, Nina, and Talia have to choose simultaneously\nAlso instead of the garden either dying or surviving, we’ll add more detailed levels of quality depending on who contributed"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#simultaneous-planting-game",
-    "href": "Slides/03SimultaneousGames/03-main.html#simultaneous-planting-game",
-    "title": "Introduction to Game Theory",
-    "section": "Simultaneous Planting Game",
-    "text": "Simultaneous Planting Game\nWhat are Emily’s preferences in this modified game? 1\n\n\n\nOutcome\nPayoff\n\n\n\n\nNina and Talia contribute, Emily doesn’t\n6\n\n\nEveryone contributes\n5\n\n\nEither Nina or Talia contribute, Emily doesn’t\n4\n\n\nEither Nina or Talia contribute, and Emily does\n3\n\n\nNo-one contributes\n2\n\n\nEmily is the only one to contribute\n1\n\n\n\nthis is a symmetric game, so Nina and Talia will have equivalent rankings"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#simultaneous-planting-game-1",
-    "href": "Slides/03SimultaneousGames/03-main.html#simultaneous-planting-game-1",
-    "title": "Introduction to Game Theory",
-    "section": "Simultaneous Planting Game",
-    "text": "Simultaneous Planting Game\nTalia chooses:\n\n\nContribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n5, 5, 5\n3, 6, 3\n\n\nDon’t\n6, 3, 3\n4, 4, 1\n\n\n\n\nDon’t Contribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n3, 3, 6\n1, 4, 4\n\n\nDon’t\n4, 1, 4\n2, 2, 2\n\n\n\n\n\nCan you find any dominant strategies?"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#simultaneous-planting-game-2",
-    "href": "Slides/03SimultaneousGames/03-main.html#simultaneous-planting-game-2",
-    "title": "Introduction to Game Theory",
-    "section": "Simultaneous Planting Game",
-    "text": "Simultaneous Planting Game\nTalia chooses:\n\n\nContribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n5, 5, 5\n3, 6, 3\n\n\nDon’t\n6, 3, 3\n4, 4, 1\n\n\n\n\nDon’t Contribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n3, 3, 6\n1, 4, 4\n\n\nDon’t\n4, 1, 4\n2, 2, 2"
+    "text": "Best Response Analysis\n\n\n\n\n\n\n\n\n\nRow, Column\nLeft\nMiddle\nRight\n\n\n\n\nTop\n3, 1\n2, 3\n10, 2\n\n\nHigh\n4, 5\n3, 0\n6, 6\n\n\nLow\n2, 2\n5, 4\n12, 3\n\n\nBottom\n5, 6\n4, 5\n9, 7\n\n\n\nThe NE of this game is where the best responses intersect:\n\n(Low, Middle)\n\n\n\nThis results in a payoff of 5 to Row, 4 to Column"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#nash-equilibrium-from-best-responses",
     "href": "Slides/03SimultaneousGames/03-main.html#nash-equilibrium-from-best-responses",
     "title": "Introduction to Game Theory",
     "section": "Nash Equilibrium from Best Responses",
-    "text": "Nash Equilibrium from Best Responses\nRecall the various definitions of a Nash Equilibrium:\n\nno single player can make themselves better off by changing only their own strategy.\nAfter the game is played, each player has no regrets about their strategy.\nNow we can use: “A strategy profile such that each player’s strategy is a best responses to the other player’s strategy.”\n“Playing a best response” = “cannot obtain a larger payoff by unilaterally deviating”"
+    "text": "Nash Equilibrium from Best Responses\nRecall the various definitions of a Nash Equilibrium:\n\nno-one can improve their payoff by changing only their own strategy.\nEach player has no regrets about their strategy.\nEveryone’s strategy is a best responses to everyone else’s"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#games-with-multiple-equilibria",
@@ -3253,21 +3078,35 @@
     "href": "Slides/03SimultaneousGames/03-main.html#coordination-games-2",
     "title": "Introduction to Game Theory",
     "section": "Coordination Games",
-    "text": "Coordination Games\nEven when there is an obviously preferred NE for both players, it may not be guaranteed that we will get there:\n\n\n\nDante, Jose\nStarbucks\nRoma\n\n\n\n\nStarbucks\n1, 1\n0, 0\n\n\nRoma\n0, 0\n2, 2\n\n\n\n\nDepending on the set of beliefs held by the players, both strategy profiles could be theoretically stable\nIf for some reason we started out in a (Starbucks, Starbucks) equilibrium, there would be no incentive for either of us to deviate without communicating our intent to each other"
+    "text": "Coordination Games\nEven when there is an obviously preferred NE for both players, it may not be guaranteed that we will get there:\n\n\n\nDante, Jose\nStarbucks\nRoma\n\n\n\n\nStarbucks\n1, 1\n0, 0\n\n\nRoma\n0, 0\n2, 2\n\n\n\n\nFor different sets of beliefs, either strategy profile is stable\nIf we start with (Starbucks, Starbucks) no incentive for either of us to deviate\nCan we change equilibria?\n\nOnly with communication or joint enforcement"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#coordination-games-3",
     "href": "Slides/03SimultaneousGames/03-main.html#coordination-games-3",
     "title": "Introduction to Game Theory",
     "section": "Coordination Games",
-    "text": "Coordination Games\nWhat should happen when different players have different preferences over NE?\n\n\n\nDante, Jose\nT4\nMetropol\n\n\n\n\nT4\n2, 1\n0, 0\n\n\nMetropol\n0, 0\n1, 2\n\n\n\n\nIf Dante tries to be nice and go to Metropol, what if Jose does the same thing and goes to T4?\nIn chapter 10, with repeated games, there may be opportunities for us to alternate between each of our favorites"
+    "text": "Coordination Games\nWhat about when players have different preferences over NE?\n\n\n\nDante, Jose\nT4\nMetropol\n\n\n\n\nT4\n2, 1\n0, 0\n\n\nMetropol\n0, 0\n1, 2\n\n\n\n\nIf Dante tries to be nice and go to Metropol,\n\nwhat if Jose does the same thing and goes to T4?\n\nRepeated games may allow for opportunities to alternate"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#anti-coordination-the-game-of-chicken",
+    "href": "Slides/03SimultaneousGames/03-main.html#anti-coordination-the-game-of-chicken",
+    "title": "Introduction to Game Theory",
+    "section": "Anti-coordination: The Game of Chicken",
+    "text": "Anti-coordination: The Game of Chicken\n\n\n\nJames, Dean\nSwerve (Chicken)\nStraight (Tough)\n\n\n\n\nSwerve\n0, 0\n-1, 1\n\n\nStraight\n1, -1\n-2, -2\n\n\n\nSuppose that James and Dean are driving headlong towards each other, but neither one wants to be the ‘chicken’ by swerving out of the way\n\nWhat are the best respones?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#the-game-of-chicken",
+    "href": "Slides/03SimultaneousGames/03-main.html#the-game-of-chicken",
+    "title": "Introduction to Game Theory",
+    "section": "The Game of Chicken",
+    "text": "The Game of Chicken\n\n\n\nJames, Dean\nSwerve (Chicken)\nStraight (Tough)\n\n\n\n\nSwerve\n0, 0\n-1, 1\n\n\nStraight\n1, -1\n-2, -2\n\n\n\n\nThere are two NE of this game\nBut how can we decide which one will happen?\nChapter 9 will look at potential commitment devices either player could use to try to achieve their preferred NE"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#the-deer-hunt-game",
     "href": "Slides/03SimultaneousGames/03-main.html#the-deer-hunt-game",
     "title": "Introduction to Game Theory",
     "section": "The Deer Hunt Game",
-    "text": "The Deer Hunt Game\nTwo cavemen, Igg and Ogg, each decide whether to hunt Deer or Rabbit.\n\nIf both hunt Deer, they can work together to bring one down and have enough meat to share with leftovers\n\nEach earn payoffs of 2\n\nIf instead the other goes off chasing a rabbit, the cameman hunting deer won’t be able to catch any meat, but the one hunting rabbit will get just enough to feed themselves\n\nUnsuccessful Deer hunter gets 0, rabbit hunter gets 1\n\nOr both cavemen could just decide to go off and hunt rabbits by themselves, ensuring they get can feed themselves\n\nBoth get 1"
+    "text": "The Deer Hunt Game\nTwo cavemen, Igg and Ogg, each decide whether to hunt Deer or Rabbit.\n\nHunting Deer takes two hunters,\n\nboth can eat for two days\n\nHunting Rabbit can be done alone\n\nonly feeds one hunter for one day"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#the-deer-hunt-game-1",
@@ -3281,7 +3120,7 @@
     "href": "Slides/03SimultaneousGames/03-main.html#the-deer-hunt-game-2",
     "title": "Introduction to Game Theory",
     "section": "The Deer Hunt Game",
-    "text": "The Deer Hunt Game\nHere are Igg’s best responses…\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n2, 2\n0, 1\n\n\nRabbit\n1, 0\n1, 1"
+    "text": "The Deer Hunt Game\nHere are Igg’s best responses:\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n2, 2\n0, 1\n\n\nRabbit\n1, 0\n1, 1"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#the-deer-hunt-game-3",
@@ -3291,95 +3130,116 @@
     "text": "The Deer Hunt Game\nAnd here are Ogg’s best responses…\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n2, 2\n0, 1\n\n\nRabbit\n1, 0\n1, 1"
   },
   {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#the-game-of-chicken",
-    "href": "Slides/03SimultaneousGames/03-main.html#the-game-of-chicken",
+    "objectID": "Slides/03SimultaneousGames/03-main.html#deer-hunt-strict-nash-equilibria",
+    "href": "Slides/03SimultaneousGames/03-main.html#deer-hunt-strict-nash-equilibria",
     "title": "Introduction to Game Theory",
-    "section": "The Game of Chicken",
-    "text": "The Game of Chicken\n\n\n\nJames, Dean\nSwerve (Chicken)\nStraight (Tough)\n\n\n\n\nSwerve\n0, 0\n-1, 1\n\n\nStraight\n1, -1\n-2, -2\n\n\n\nSuppose that James and Dean are driving headlong towards each other, but neither one wants to be the ‘chicken’ by swerving out of the way\n\nWhat are the best respones?"
+    "section": "Deer Hunt: Strict Nash Equilibria",
+    "text": "Deer Hunt: Strict Nash Equilibria\n\n\n\nIgg, Ogg\n\\(Deer\\)\n\\(Rabbit\\)\n\n\n\n\n\\(Deer\\)\n2, 2\n0,1\n\n\n\\(Rabbit\\)\n1,0\n1, 1\n\n\n\n\nAt each Nash Equilibrium, each player has no other strategy providing the same payoff.\nThis is a strict Nash Equilibrium."
   },
   {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#the-game-of-chicken-1",
-    "href": "Slides/03SimultaneousGames/03-main.html#the-game-of-chicken-1",
+    "objectID": "Slides/03SimultaneousGames/03-main.html#an-example-of-weak-nash-equilibrium",
+    "href": "Slides/03SimultaneousGames/03-main.html#an-example-of-weak-nash-equilibrium",
     "title": "Introduction to Game Theory",
-    "section": "The Game of Chicken",
-    "text": "The Game of Chicken\n\n\n\nJames, Dean\nSwerve (Chicken)\nStraight (Tough)\n\n\n\n\nSwerve\n0, 0\n-1, 1\n\n\nStraight\n1, -1\n-2, -2\n\n\n\n\nThere are two NE of this game\nBut how can we decide which one will happen?\nChapter 9 will look at potential commitment devices either player could use to try to achieve their preferred NE"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#another-example-when-elimination-does-nothing",
-    "href": "Slides/03SimultaneousGames/03-main.html#another-example-when-elimination-does-nothing",
-    "title": "Introduction to Game Theory",
-    "section": "Another Example: When Elimination Does Nothing",
-    "text": "Another Example: When Elimination Does Nothing\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(a\\)\n\\(b\\)\n\\(c\\)\n\\(d\\)\n\n\n\n\n\\(A\\)\n1, 1\n2, 2\n2, 2\n2, 1\n\n\n\\(B\\)\n1, 3\n1, 3\n2, 2\n2, 3\n\n\n\\(C\\)\n1, 2\n2, 4\n1, 3\n2, 3\n\n\n\\(D\\)\n3, 2\n2, 3\n1, 4\n2, 2\n\n\n\n\nCan you find any strictly dominated strategies?\nCan you find any NE?"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#classifying-nes",
-    "href": "Slides/03SimultaneousGames/03-main.html#classifying-nes",
-    "title": "Introduction to Game Theory",
-    "section": "Classifying NEs",
-    "text": "Classifying NEs\n\nNash Equilibria may be either strict or weak.\nA Nash Equilibrium is strict if and only if each player would receive a (strictly) smaller payoff by changing their own strategy.\nIf a Nash Equilibrium is not strict—meaning that at least one player could change their own strategy and receive an equal (but not larger) payoff\n\nit is [weak]{hi}."
+    "section": "An Example of Weak Nash Equilibrium",
+    "text": "An Example of Weak Nash Equilibrium\n\n\n\nEleanor, Michael\n\\(Swerve\\)\n\\(Straight\\)\n\n\n\n\n\\(Swerve\\)\n1, 1\n1, 1\n\n\n\\(Straight\\)\n1, 1\n0, 0\n\n\n\n\nThese equlibria feature a player who could get the same payoff if they change.\nAll three are weak Nash equilibria"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#intuition-on-strict-vs.-weak-equilibria",
     "href": "Slides/03SimultaneousGames/03-main.html#intuition-on-strict-vs.-weak-equilibria",
     "title": "Introduction to Game Theory",
     "section": "Intuition on Strict vs. Weak Equilibria",
-    "text": "Intuition on Strict vs. Weak Equilibria\n\nIn any Nash Equilibrium, no player has a reason to change their own strategy—they cannot get a higher payoff this way.\nStrict Nash Equilibria go a little further: not only does no player have a reason to change their own strategy, they also have a reason not to, because any other strategy would provide them a worse payoff.\nIf a Nash Equilibrium is weak, it means that some player could change their strategy, and get exactly the same payoff they already were. They have no reason to do this, but also no reason not to.\nWe can also say that a strict Nash Equilibrium is one where each player is playing a strategy which is a unique best response to the strategies chosen by other players."
+    "text": "Intuition on Strict vs. Weak Equilibria\n\nStrict if and only if each player’s payoff is strictly less by changing strategies\n\nPlayers have incentive to avoid deviations, more stable to mistakes\n\nWeak if at least one player could change strategy and receive an equal payoff\n\nIndifferent players don’t have an incentive to deviate, but could be sent away by mistake\n\nIn strict Nash Equilibria, strategies are the unique best responses"
   },
   {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#deer-hunt-strict-nash-equilibria",
-    "href": "Slides/03SimultaneousGames/03-main.html#deer-hunt-strict-nash-equilibria",
+    "objectID": "Slides/03SimultaneousGames/03-main.html#a-more-complicated-example",
+    "href": "Slides/03SimultaneousGames/03-main.html#a-more-complicated-example",
     "title": "Introduction to Game Theory",
-    "section": "Deer Hunt: Strict Nash Equilibria",
-    "text": "Deer Hunt: Strict Nash Equilibria\n\n\n\nIgg, Ogg\n\\(Deer\\)\n\\(Rabbit\\)\n\n\n\n\n\\(Deer\\)\n2, 2\n0,1\n\n\n\\(Rabbit\\)\n1,0\n1, 1\n\n\n\n\nHere, note that at each Nash Equilibrium, each player has no other strategy providing the same payoff.\nThis is a strict Nash Equilibrium."
+    "section": "A more complicated example",
+    "text": "A more complicated example\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(a\\)\n\\(b\\)\n\\(c\\)\n\\(d\\)\n\n\n\n\n\\(A\\)\n1, 1\n2, 2\n2, 2\n2, 1\n\n\n\\(B\\)\n1, 3\n1, 3\n2, 2\n2, 3\n\n\n\\(C\\)\n1, 2\n2, 4\n1, 3\n2, 3\n\n\n\\(D\\)\n3, 2\n2, 3\n1, 4\n2, 2\n\n\n\n\nCan you find any strictly dominated strategies?\nCan you find any NE?\nWhich are weak vs strict equilibria?"
   },
   {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#weak-nash-equilibria-example",
-    "href": "Slides/03SimultaneousGames/03-main.html#weak-nash-equilibria-example",
+    "objectID": "Slides/03SimultaneousGames/03-main.html#a-more-complicated-example-1",
+    "href": "Slides/03SimultaneousGames/03-main.html#a-more-complicated-example-1",
     "title": "Introduction to Game Theory",
-    "section": "Weak Nash Equilibria Example",
-    "text": "Weak Nash Equilibria Example\n\n\n\nEleanor, Michael\n\\(Swerve\\)\n\\(Straight\\)\n\n\n\n\n\\(Swerve\\)\n1, 1\n1, 1\n\n\n\\(Straight\\)\n1, 1\n0, 0\n\n\n\n\nHowever, in this game, each Nash Equilibrium features at least one player who could still get the same payoff if they change their strategy."
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#prisoners-dilemmas",
-    "href": "Slides/03SimultaneousGames/03-main.html#prisoners-dilemmas",
-    "title": "Introduction to Game Theory",
-    "section": "Prisoners’ Dilemmas",
-    "text": "Prisoners’ Dilemmas\n\n\n\nGuido, Luca\n\\(Testify\\)\n\\(Keep~Quiet\\)\n\n\n\n\n\\(Testify\\)\n-10, -10\n0, -20\n\n\n\\(Keep~Quiet\\)\n-20, 0\n-1, -1\n\n\n\nIn general, a Prisoner’s Dilemma is any game in which:\n\nThe players have the same strategies, A and B.\nA strictly dominates B, making (A, A) the only NE.\nBut (B, B) is better for both players than (A, A). ::: —"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#coordination-games-4",
-    "href": "Slides/03SimultaneousGames/03-main.html#coordination-games-4",
-    "title": "Introduction to Game Theory",
-    "section": "Coordination Games",
-    "text": "Coordination Games\n\nA coordination game is a game in which the players all have the same strategy sets, and the NEs are all of the strategy profiles where the players choose the same strategy.\nThe Deer Hunt is a coordination game."
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#other-coordination-games",
-    "href": "Slides/03SimultaneousGames/03-main.html#other-coordination-games",
-    "title": "Introduction to Game Theory",
-    "section": "Other Coordination Games",
-    "text": "Other Coordination Games\n\n\n\n\\(P_1\\), \\(P_2\\)\nA\nB\nC\n\n\n\n\nA\n1, 1\n1, 0\n3, 0\n\n\nB\n0, 1\n2, 2\n2, 1\n\n\nB\n0, 3\n1, 2\n4, 4"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/03-main.html#anti-coordination-games",
-    "href": "Slides/03SimultaneousGames/03-main.html#anti-coordination-games",
-    "title": "Introduction to Game Theory",
-    "section": "Anti-Coordination Games",
-    "text": "Anti-Coordination Games\n\nAn anti-coordination game is a game in which the players all have the same strategy sets, but the NEs are all of the strategy profiles where the players choose different strategies.\n\n\n\n\nJames, Dean\nSwerve (Chicken)\nStraight (Tough)\n\n\n\n\nSwerve\n0, 0\n-1, 1\n\n\nStraight\n1, -1\n-2, -2"
+    "section": "A more complicated example",
+    "text": "A more complicated example\n\n\n\n\n\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(a\\)\n\\(b\\)\n\\(c\\)\n\\(d\\)\n\n\n\n\n\\(A\\)\n1, 1\n2, 2\n2, 2\n2, 1\n\n\n\\(B\\)\n1, 3\n1, 3\n2, 2\n2,3\n\n\n\\(C\\)\n1, 2\n2, 4\n1, 3\n2, 3\n\n\n\\(D\\)\n3, 2\n2, 3\n1, 4\n2, 2\n\n\n\n\nNo strictly dominated strategies because each is a BR to some strategy\nNE: \\((A,b)\\), \\((A,c)\\), \\((B,d)\\), \\((C,b)\\)\n\nall are weak equilibria"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#symmetric-games",
     "href": "Slides/03SimultaneousGames/03-main.html#symmetric-games",
     "title": "Introduction to Game Theory",
     "section": "Symmetric Games",
-    "text": "Symmetric Games\n\nA symmetric game is a game which is indifferent to an exchange of players in other words, a game where the players are interchangeable.\nConsider the Prisoner’s Dilemma: if we swap the players’ names, and their positions in the game table, and the order of their payoffs, we get the same game that we started with."
+    "text": "Symmetric Games\n\nsymmetric games are indifferent to an exchange of players\n\nPlayers are interchangable with each other\n\nExamples: Prisoner’s dilemma, Deer Hunt, Game of Chicken"
   },
   {
     "objectID": "Slides/03SimultaneousGames/03-main.html#symmetric-games-1",
     "href": "Slides/03SimultaneousGames/03-main.html#symmetric-games-1",
     "title": "Introduction to Game Theory",
     "section": "Symmetric Games",
-    "text": "Symmetric Games\n\nA two-player game with a game table is symmetric if:\n\nThe players have the same strategy sets.\nIn the on-diagonal cells of the game table, the players receive equal payoffs.\nIn the “mirrored” off-diagonal cells of the game table, the players’ payoffs are reversed.\n\nOf the games we’ve just looked at, the Deer Hunt, the 3x3 coordination game, and Chicken are symmetric games. Bach and Stravinsky is not."
+    "text": "Symmetric Games\n\n\n\n\\(P_1, P_2\\)\n\\(s_2\\)\n\\(s^{'}_2\\)\n\n\n\n\n\\(s_1\\)\n\\(a, a\\)\n\\(b, c\\)\n\n\n\\(s^{'}_1\\)\n\\(c, b\\)\n\\(d, d\\)\n\n\n\n\nyou could flip the payoffs with players, and the game would be unchanged"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#symmetric-games-2",
+    "href": "Slides/03SimultaneousGames/03-main.html#symmetric-games-2",
+    "title": "Introduction to Game Theory",
+    "section": "Symmetric Games",
+    "text": "Symmetric Games\n\n\n\n\\(P_1, P_2\\)\n\\(s_2\\)\n\\(s^{'}_2\\)\n\n\n\n\n\\(s_1\\)\n\\(a, a\\)\n\\(b, c\\)\n\n\n\\(s^{'}_1\\)\n\\(c, b\\)\n\\(d, d\\)\n\n\n\nA Prisoner’s Dilemma is any game in which:\n\n\\(s\\) strictly dominates \\(s^{'}\\) (\\(a&gt;c\\), \\(b&gt;d\\))\nThe Nash outcome (\\(a,a\\)) is pareto dominated by the outcome (\\(d,d\\))"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#symmetric-games-3",
+    "href": "Slides/03SimultaneousGames/03-main.html#symmetric-games-3",
+    "title": "Introduction to Game Theory",
+    "section": "Symmetric Games",
+    "text": "Symmetric Games\n\n\n\n\\(P_1, P_2\\)\n\\(s_2\\)\n\\(s^{'}_2\\)\n\n\n\n\n\\(s_1\\)\n\\(a, a\\)\n\\(b, c\\)\n\n\n\\(s^{'}_1\\)\n\\(c, b\\)\n\\(d, d\\)\n\n\n\nA coordination game is when:\n\n\\((s_1,s_1)\\) and \\((s^{'}_1, s^{'}_2)\\) are Nash equlibria\nboth players choose the same strategy"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#symmetric-games-4",
+    "href": "Slides/03SimultaneousGames/03-main.html#symmetric-games-4",
+    "title": "Introduction to Game Theory",
+    "section": "Symmetric Games",
+    "text": "Symmetric Games\n\n\n\n\\(P_1, P_2\\)\n\\(s_2\\)\n\\(s^{'}_2\\)\n\n\n\n\n\\(s_1\\)\n\\(a, a\\)\n\\(b, c\\)\n\n\n\\(s^{'}_1\\)\n\\(c, b\\)\n\\(d, d\\)\n\n\n\nA game of Chicken is when:\n\n\\(c&gt;a\\) and \\(b&gt;d\\) (or \\(a&gt;c\\) and \\(d&gt;b\\))\nSo that the Nash equilibria have players choosing opposite strategies"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#which-kind-of-3x3-game",
+    "href": "Slides/03SimultaneousGames/03-main.html#which-kind-of-3x3-game",
+    "title": "Introduction to Game Theory",
+    "section": "Which kind of 3x3 game?",
+    "text": "Which kind of 3x3 game?\nTest your understanding:\n\n\n\n\\(P_1\\), \\(P_2\\)\nA\nB\nC\n\n\n\n\nA\n1, 1\n1, 0\n3, 0\n\n\nB\n0, 1\n2, 2\n2, 1\n\n\nC\n0, 3\n1, 2\n4, 4\n\n\n\nWhich type of game is this?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#which-kind-of-3x3-game-1",
+    "href": "Slides/03SimultaneousGames/03-main.html#which-kind-of-3x3-game-1",
+    "title": "Introduction to Game Theory",
+    "section": "Which kind of 3x3 game?",
+    "text": "Which kind of 3x3 game?\nTest your understanding:\n\n\n\n\\(P_1\\), \\(P_2\\)\nA\nB\nC\n\n\n\n\nA\n1, 1\n1, 0\n3, 0\n\n\nB\n0, 1\n2, 2\n2, 1\n\n\nC\n0, 3\n1, 2\n4, 4\n\n\n\nWhich type of game is this?\n\nA coordination game"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#three-player-simultaneous-planting-game",
+    "href": "Slides/03SimultaneousGames/03-main.html#three-player-simultaneous-planting-game",
+    "title": "Introduction to Game Theory",
+    "section": "Three-player simultaneous planting game",
+    "text": "Three-player simultaneous planting game\nLet’s create a modified version of the three-roommate planting game:\n\nSuppose that Emily, Nina, and Talia have to choose simultaneously\nInstead of one roomate having a first-mover advantage"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#simultaneous-planting-game",
+    "href": "Slides/03SimultaneousGames/03-main.html#simultaneous-planting-game",
+    "title": "Introduction to Game Theory",
+    "section": "Simultaneous Planting Game",
+    "text": "Simultaneous Planting Game\nPreferences from each roommate’s perspective 1\n\n\n\nOutcome\nPayoff\n\n\n\n\nMy two roommates contribute, but I don’t\n6\n\n\nEveryone contributes\n5\n\n\nOne roommate contributes, not me\n4\n\n\nOne roommate contributes, and I do too\n3\n\n\nNo-one contributes\n2\n\n\nI am the only one to contribute\n1\n\n\n\nthis is a symmetric game, so Nina and Talia will have equivalent rankings"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#simultaneous-planting-game-1",
+    "href": "Slides/03SimultaneousGames/03-main.html#simultaneous-planting-game-1",
+    "title": "Introduction to Game Theory",
+    "section": "Simultaneous Planting Game",
+    "text": "Simultaneous Planting Game\nTalia chooses:\n\n\nContribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n5, 5, 5\n3, 6, 3\n\n\nDon’t\n6, 3, 3\n4, 4, 1\n\n\n\n\nDon’t Contribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n3, 3, 6\n1, 4, 4\n\n\nDon’t\n4, 1, 4\n2, 2, 2\n\n\n\n\n\nCan you find any dominant strategies?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/03-main.html#simultaneous-planting-game-2",
+    "href": "Slides/03SimultaneousGames/03-main.html#simultaneous-planting-game-2",
+    "title": "Introduction to Game Theory",
+    "section": "Simultaneous Planting Game",
+    "text": "Simultaneous Planting Game\nTalia chooses:\n\n\nContribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n5, 5, 5\n3, 6, 3\n\n\nDon’t\n6, 3, 3\n4, 4, 1\n\n\n\n\nDon’t Contribute\n\n\n\n\n\n\n\n\nEmily, Nina\nContribute\nDon’t\n\n\n\n\nContribute\n3, 3, 6\n1, 4, 4\n\n\nDon’t\n4, 1, 4\n2, 2, 2\n\n\n\nThe Nash equilibrium is {Don’t, Don’t, Don’t}"
   },
   {
     "objectID": "Slides/02SequentialGames/0206-evidence.html",
@@ -5428,126 +5288,126 @@
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html",
     "href": "Slides/03SimultaneousGames/0302-nash.html",
-    "title": "EC327 Game Theory",
+    "title": "Nash Equilibrium",
     "section": "",
-    "text": "The most basic form of equilibrium in game theory is the Nash Equilibrium (NE), which can be described as:\n\nA strategy profile such that no player can obtain a larger payoff by unilaterally deviating\nA strategy profile such that no single player can make themselves better off by changing only their own strategy.\nA strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision"
-  },
-  {
-    "objectID": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium",
-    "href": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium",
-    "title": "EC327 Game Theory",
-    "section": "",
-    "text": "The most basic form of equilibrium in game theory is the Nash Equilibrium (NE), which can be described as:\n\nA strategy profile such that no player can obtain a larger payoff by unilaterally deviating\nA strategy profile such that no single player can make themselves better off by changing only their own strategy.\nA strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision"
+    "text": "The most basic form of equilibrium in game theory is the Nash Equilibrium (NE), which can be described as:\n\nA strategy profile such that no player can obtain a larger payoff by unilaterally deviating\nA strategy profile such that no single player can make themselves better off by changing only their own strategy.\nA strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision\n\n\n\n\n\n\n\n\n\n\n\nNash Equilibrium\n\n\n\nA list of strategies where each player’s strategy is the best response to the other’s best response strategy\n\n\n\n\nIn other words, no player has any incentive to deviate in their strategy away from an equilibrium strategy\nIt is central to the analysis of simultaneous-move games.\nCan occur in pure strategies (where players choose a single action) or mixed strategies (randomized choices).\n\n\n\n\n\n\nLet’s look at one specific strategy profile in this game:\n\n\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\n\n\nRow chooses Low and Column chooses Middle\n\n\nIs this stable?\n\n\n\n\n\n\n\nLet’s look at one specific strategy profile in this game:\n\n\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\n\n\nRow chooses Low and Column chooses Middle\n\n\nGiven that Column plays Middle, is there any way for Row to get a higher payoff?\n\n\n\n\n\n\n\nLet’s look at one specific strategy profile in this game:\n\n\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\n\n\nRow chooses Low and Column chooses Middle\n\n\nGiven that Row plays Low, is there any way for Column to get a higher payoff?\n\n\n\n\n\n\n\nWhat is special about the strategy profile (Low, Middle)?\n\n\nIt’s stable because neither player would have any incentive to change what they’re doing\nIn other words, neither player has regrets over their choice given what the other player is doing\nHowever, notice that this doesn’t mean that this is the best that the players could do jointly\n\n\n\n\n\n\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\nWhat about (Bottom, Right)?\n\n\n\n\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\nEven though (Bottom, Right) is a Pareto improvement on (Low, Middle), it is unstable because it would be rational for Row player to change their strategy to Low to try to get the higher payoff of 12\n\n\n\n\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\nWhat about (Top, Left)?\n\n\n\n\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(5,5)\n(9,7)\n\n\n\nA Nash equilibrium doesn’t require the equilibrium strategies to be strict improvements.\n\n(Low, Middle) is still a NE because the payoff of 5 to Row player is weakly (\\(\\geq\\)) higher than the payoff of Bottom\n\n\n\n\n\nSo a Nash Equilibrium requires players best responding to each other.\n\n\nBut if a game is simultaneous, then players can’t observe what the other does\nSo how can someone respond to something that hasn’t happened yet?\n\n\n\n\n\nHow to make sense of best-responses in simultaneous games:\n\n\nPlayers might base their beliefs of the other players’ strategies on experience from playing similar games before\nYou might also put yourself into your opponents’ shoes to think about what they might do\nYou should also expect that they are thinking about what you’re thinking\n\nand also that you would be thinking about what they are thinking about what you are thinking\n\n\n\n\n\n\n\nLet’s see an example of this logic in action:\n\n\n\n\n\n\nNash equilibrium assumes:\n\nPlayers form beliefs about the strategies of others.\nEach player then chooses their best response based on these beliefs.\nIn equilibrium, each player’s beliefs about their opponents strategy is realized.\n\n\n\n\n\n\n\nPlayers are uncertain about others’ choices but form subjective beliefs about them.\nThese beliefs are central to decision-making in Nash equilibrium.\nThe equilibrium is found when every player’s belief about others’ actions is correct, and their response to these beliefs is optimal.\n\n\n\n\n\n\n\n\n\n\n\nNash Equilibrium\n\n\n\nA set of strategies, one for each player, such that:\n\neach player has correct beliefs about the strategies of the others and\nthe strategy of each is the best for herself, given her beliefs about the strategies of the others.\n\n\n\n. . .\nA best response is the optimal strategy holding the other’s strategy constant"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-1",
     "href": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-1",
-    "title": "EC327 Game Theory",
-    "section": "Nash Equilibrium",
-    "text": "Nash Equilibrium\n\n\n\n\n\n\nNash Equilibrium\n\n\n\nA list of strategies where each player’s strategy is the best response to the other’s best response strategy\n\n\n\n\nIn other words, no player has any incentive to deviate in their strategy away from an equilibrium strategy\nIt is central to the analysis of simultaneous-move games.\nCan occur in pure strategies (where players choose a single action) or mixed strategies (randomized choices)."
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "The most basic form of equilibrium in game theory is the Nash Equilibrium (NE), which can be described as:\n\nA strategy profile such that no player can obtain a larger payoff by unilaterally deviating\nA strategy profile such that no single player can make themselves better off by changing only their own strategy.\nA strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-2",
+    "href": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-2",
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "Nash Equilibrium\n\n\n\nA list of strategies where each player’s strategy is the best response to the other’s best response strategy\n\n\n\n\nIn other words, no player has any incentive to deviate in their strategy away from an equilibrium strategy\nIt is central to the analysis of simultaneous-move games.\nCan occur in pure strategies (where players choose a single action) or mixed strategies (randomized choices)."
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-in-tbl-basic4x3game",
     "href": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-in-tbl-basic4x3game",
-    "title": "EC327 Game Theory",
-    "section": "Nash Equilibrium in ?@tbl-basic4x3game",
-    "text": "Nash Equilibrium in ?@tbl-basic4x3game\nLet’s look at one specific strategy profile in this game:\n\n\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\n\n\nRow chooses Low and Column chooses Middle\n\n\nIs this stable?"
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "Let’s look at one specific strategy profile in this game:\n\n\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\n\n\nRow chooses Low and Column chooses Middle\n\n\nIs this stable?"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-in-tbl-basic4x3game-1",
     "href": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-in-tbl-basic4x3game-1",
-    "title": "EC327 Game Theory",
-    "section": "Nash Equilibrium in ?@tbl-basic4x3game",
-    "text": "Nash Equilibrium in ?@tbl-basic4x3game\nLet’s look at one specific strategy profile in this game:\n\n\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\n\n\nRow chooses Low and Column chooses Middle\n\n\nGiven that Column plays Middle, is there any way for Row to get a higher payoff?"
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "Let’s look at one specific strategy profile in this game:\n\n\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\n\n\nRow chooses Low and Column chooses Middle\n\n\nGiven that Column plays Middle, is there any way for Row to get a higher payoff?"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-in-tbl-basic4x3game-2",
     "href": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-in-tbl-basic4x3game-2",
-    "title": "EC327 Game Theory",
-    "section": "Nash Equilibrium in ?@tbl-basic4x3game",
-    "text": "Nash Equilibrium in ?@tbl-basic4x3game\nLet’s look at one specific strategy profile in this game:\n\n\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\n\n\nRow chooses Low and Column chooses Middle\n\n\nGiven that Row plays Low, is there any way for Column to get a higher payoff?"
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "Let’s look at one specific strategy profile in this game:\n\n\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\n\n\nRow chooses Low and Column chooses Middle\n\n\nGiven that Row plays Low, is there any way for Column to get a higher payoff?"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-in-tbl-basic4x3game-3",
     "href": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-in-tbl-basic4x3game-3",
-    "title": "EC327 Game Theory",
-    "section": "Nash Equilibrium in ?@tbl-basic4x3game",
-    "text": "Nash Equilibrium in ?@tbl-basic4x3game\nWhat is special about the strategy profile (Low, Middle)?\n\n\nIt’s stable because neither player would have any incentive to change what they’re doing\nIn other words, neither player has regrets over their choice given what the other player is doing\nHowever, notice that this doesn’t mean that this is the best that the players could do jointly"
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "What is special about the strategy profile (Low, Middle)?\n\n\nIt’s stable because neither player would have any incentive to change what they’re doing\nIn other words, neither player has regrets over their choice given what the other player is doing\nHowever, notice that this doesn’t mean that this is the best that the players could do jointly"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#other-strategy-profiles-in-tbl-basic4x3game",
     "href": "Slides/03SimultaneousGames/0302-nash.html#other-strategy-profiles-in-tbl-basic4x3game",
-    "title": "EC327 Game Theory",
-    "section": "Other Strategy Profiles in ?@tbl-basic4x3game",
-    "text": "Other Strategy Profiles in ?@tbl-basic4x3game\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\nWhat about (Bottom, Right)?"
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "Left\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\nWhat about (Bottom, Right)?"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#other-strategy-profiles-in-tbl-basic4x3game-1",
     "href": "Slides/03SimultaneousGames/0302-nash.html#other-strategy-profiles-in-tbl-basic4x3game-1",
-    "title": "EC327 Game Theory",
-    "section": "Other Strategy Profiles in ?@tbl-basic4x3game",
-    "text": "Other Strategy Profiles in ?@tbl-basic4x3game\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\nEven though (Bottom, Right) is a Pareto improvement on (Low, Middle), it is unstable because it would be rational for Row player to change their strategy to Low to try to get the higher payoff of 12"
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "Left\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\nEven though (Bottom, Right) is a Pareto improvement on (Low, Middle), it is unstable because it would be rational for Row player to change their strategy to Low to try to get the higher payoff of 12"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#other-strategy-profiles-in-tbl-basic4x3game-2",
     "href": "Slides/03SimultaneousGames/0302-nash.html#other-strategy-profiles-in-tbl-basic4x3game-2",
-    "title": "EC327 Game Theory",
-    "section": "Other Strategy Profiles in ?@tbl-basic4x3game",
-    "text": "Other Strategy Profiles in ?@tbl-basic4x3game\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\nWhat about (Top, Left)?"
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "Left\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(4,5)\n(9,7)\n\n\n\nWhat about (Top, Left)?"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#tbl-basic4x3game-with-a-tie-in-payoffs",
     "href": "Slides/03SimultaneousGames/0302-nash.html#tbl-basic4x3game-with-a-tie-in-payoffs",
-    "title": "EC327 Game Theory",
-    "section": "?@tbl-basic4x3game with a tie in payoffs",
-    "text": "?@tbl-basic4x3game with a tie in payoffs\n\n\n\n\nLeft\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(5,5)\n(9,7)\n\n\n\nA Nash equilibrium doesn’t require the equilibrium strategies to be strict improvements.\n\n(Low, Middle) is still a NE because the payoff of 5 to Row player is weakly (\\(\\geq\\)) higher than the payoff of Bottom"
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "Left\nMiddle\nRight\n\n\n\n\nTop\n(3,1)\n(2,3)\n(10,2)\n\n\nHigh\n(4,5)\n(3,0)\n(6,4)\n\n\nLow\n(2,2)\n(5,4)\n(12,3)\n\n\nBottom\n(5,6)\n(5,5)\n(9,7)\n\n\n\nA Nash equilibrium doesn’t require the equilibrium strategies to be strict improvements.\n\n(Low, Middle) is still a NE because the payoff of 5 to Row player is weakly (\\(\\geq\\)) higher than the payoff of Bottom"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-as-a-system-of-beliefs",
     "href": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-as-a-system-of-beliefs",
-    "title": "EC327 Game Theory",
-    "section": "Nash Equilibrium as a System of Beliefs",
-    "text": "Nash Equilibrium as a System of Beliefs\nSo a Nash Equilibrium requires players best responding to each other.\n\n\nBut if a game is simultaneous, then players can’t observe what the other does\nSo how can someone respond to something that hasn’t happened yet?"
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "So a Nash Equilibrium requires players best responding to each other.\n\n\nBut if a game is simultaneous, then players can’t observe what the other does\nSo how can someone respond to something that hasn’t happened yet?"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-as-a-system-of-beliefs-1",
     "href": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-as-a-system-of-beliefs-1",
-    "title": "EC327 Game Theory",
-    "section": "Nash Equilibrium as a System of Beliefs",
-    "text": "Nash Equilibrium as a System of Beliefs\nHow to make sense of best-responses in simultaneous games:\n\n\nPlayers might base their beliefs of the other players’ strategies on experience from playing similar games before\nYou might also put yourself into your opponents’ shoes to think about what they might do\nYou should also expect that they are thinking about what you’re thinking\n\nand also that you would be thinking about what they are thinking about what you are thinking"
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "How to make sense of best-responses in simultaneous games:\n\n\nPlayers might base their beliefs of the other players’ strategies on experience from playing similar games before\nYou might also put yourself into your opponents’ shoes to think about what they might do\nYou should also expect that they are thinking about what you’re thinking\n\nand also that you would be thinking about what they are thinking about what you are thinking"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#the-battle-of-wits",
     "href": "Slides/03SimultaneousGames/0302-nash.html#the-battle-of-wits",
-    "title": "EC327 Game Theory",
-    "section": "The Battle of Wits",
-    "text": "The Battle of Wits\nLet’s see an example of this logic in action:"
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "Let’s see an example of this logic in action:"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-as-a-system-of-beliefs-2",
     "href": "Slides/03SimultaneousGames/0302-nash.html#nash-equilibrium-as-a-system-of-beliefs-2",
-    "title": "EC327 Game Theory",
-    "section": "Nash Equilibrium as a System of Beliefs",
-    "text": "Nash Equilibrium as a System of Beliefs\n\nNash equilibrium assumes:\n\nPlayers form beliefs about the strategies of others.\nThese beliefs must be correct.\nEach player then chooses their best response based on these beliefs."
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "Nash equilibrium assumes:\n\nPlayers form beliefs about the strategies of others.\nEach player then chooses their best response based on these beliefs.\nIn equilibrium, each player’s beliefs about their opponents strategy is realized."
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#strategic-uncertainty",
     "href": "Slides/03SimultaneousGames/0302-nash.html#strategic-uncertainty",
-    "title": "EC327 Game Theory",
-    "section": "Strategic Uncertainty",
-    "text": "Strategic Uncertainty\n\nPlayers are uncertain about others’ choices but form subjective beliefs about them.\nThese beliefs are central to decision-making in Nash equilibrium.\nThe equilibrium is found when every player’s belief about others’ actions is correct, and their response to these beliefs is optimal."
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "Players are uncertain about others’ choices but form subjective beliefs about them.\nThese beliefs are central to decision-making in Nash equilibrium.\nThe equilibrium is found when every player’s belief about others’ actions is correct, and their response to these beliefs is optimal."
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#an-equivalent-definition-of-ne",
     "href": "Slides/03SimultaneousGames/0302-nash.html#an-equivalent-definition-of-ne",
-    "title": "EC327 Game Theory",
-    "section": "An Equivalent Definition of NE 1",
-    "text": "An Equivalent Definition of NE 1\n\n\n\n\n\n\nNash Equilibrium\n\n\n\nA set of strategies, one for each player, such that:\n\neach player has correct beliefs about the strategies of the others and\nthe strategy of each is the best for herself, given her beliefs about the strategies of the others."
+    "title": "Nash Equilibrium",
+    "section": "",
+    "text": "Nash Equilibrium\n\n\n\nA set of strategies, one for each player, such that:\n\neach player has correct beliefs about the strategies of the others and\nthe strategy of each is the best for herself, given her beliefs about the strategies of the others.\n\n\n\n. . .\nA best response is the optimal strategy holding the other’s strategy constant"
   },
   {
     "objectID": "Slides/03SimultaneousGames/0302-nash.html#footnotes",
     "href": "Slides/03SimultaneousGames/0302-nash.html#footnotes",
-    "title": "EC327 Game Theory",
+    "title": "Nash Equilibrium",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nDixit, pg. 98↩︎"
   },
@@ -5811,99 +5671,267 @@
     "text": "There’s no guarantee that any particular game will contain strictly dominated strategies\nEven when there are strategies we can eliminate, there may not be enough of them to find a NE just by elimination.\nSo why bother with this?\nEven if elimination doesn’t immediately identify a NE, it can still be helpful to simplify the game before trying other methods.\nSimplifying by elimination is especially useful when dealing with mixed strategies"
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html",
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html",
+    "href": "Slides/03SimultaneousGames/0306-categories.html",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "So we’ve seen games with only one unique NE\n\n\nBut this doesn’t have to be the case\nNext we will see games with multiple possible strategy profiles which are stable.\n\n\n\n\n\n\nI agreed to meet my friend for coffee, but we didn’t decide on which cafe and now my phone is dead:\n\n\n\nDante, Jose\nStarbucks\nPeet’s\n\n\n\n\nStarbucks\n1, 1\n0, 0\n\n\nPeet’s\n0, 0\n1, 1\n\n\n\n\n\n\n\n\n\n\nDante, Jose\nStarbucks\nPeet’s\n\n\n\n\nStarbucks\n1, 1\n0, 0\n\n\nPeet’s\n0, 0\n1, 1\n\n\n\n\n\nThere are two NE’s where we are both happy\nThe problem is getting there\nThis type of game is called a coordination game\n\n\n\n\n\n\nEven when there is an obviously preferred NE for both players, it may not be guaranteed that we will get there:\n\n\n\nDante, Jose\nStarbucks\nRoma\n\n\n\n\nStarbucks\n1, 1\n0, 0\n\n\nRoma\n0, 0\n2, 2\n\n\n\n\n\nFor different sets of beliefs, either strategy profile is stable\nIf we start with (Starbucks, Starbucks) no incentive for either of us to deviate\nCan we change equilibria?\n\nOnly with communication or joint enforcement\n\n\n\n\n\n\n\nWhat about when players have different preferences over NE?\n\n\n\nDante, Jose\nT4\nMetropol\n\n\n\n\nT4\n2, 1\n0, 0\n\n\nMetropol\n0, 0\n1, 2\n\n\n\n\n\nIf Dante tries to be nice and go to Metropol,\n\nwhat if Jose does the same thing and goes to T4?\n\nRepeated games may allow for opportunities to alternate\n\n\n\n\n\n\n\n\n\nJames, Dean\nSwerve (Chicken)\nStraight (Tough)\n\n\n\n\nSwerve\n0, 0\n-1, 1\n\n\nStraight\n1, -1\n-2, -2\n\n\n\nSuppose that James and Dean are driving headlong towards each other, but neither one wants to be the ‘chicken’ by swerving out of the way\n\nWhat are the best respones?\n\n\n\n\n\n\n\n\nJames, Dean\nSwerve (Chicken)\nStraight (Tough)\n\n\n\n\nSwerve\n0, 0\n-1, 1\n\n\nStraight\n1, -1\n-2, -2\n\n\n\n\n\nThere are two NE of this game\nBut how can we decide which one will happen?\nChapter 9 will look at potential commitment devices either player could use to try to achieve their preferred NE\n\n\n\n\n\n\nTwo cavemen, Igg and Ogg, each decide whether to hunt Deer or Rabbit.\n\nHunting Deer takes two hunters,\n\nboth can eat for two days\n\nHunting Rabbit can be done alone\n\nonly feeds one hunter for one day\n\n\n\n\n\n\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n2, 2\n0, 1\n\n\nRabbit\n1, 0\n1, 1\n\n\n\n\n\nAre there any strictly dominated strategies?\nWhat about best responses?\n\n\n\n\n\n\nHere are Igg’s best responses:\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n2, 2\n0, 1\n\n\nRabbit\n1, 0\n1, 1\n\n\n\n\n\n\n\nAnd here are Ogg’s best responses…\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n2, 2\n0, 1\n\n\nRabbit\n1, 0\n1, 1\n\n\n\n\n\n\n\n\n\n\nIgg, Ogg\n\\(Deer\\)\n\\(Rabbit\\)\n\n\n\n\n\\(Deer\\)\n2, 2\n0,1\n\n\n\\(Rabbit\\)\n1,0\n1, 1\n\n\n\n\n\nAt each Nash Equilibrium, each player has no other strategy providing the same payoff.\nThis is a strict Nash Equilibrium.\n\n\n\n\n\n\n\n\n\nEleanor, Michael\n\\(Swerve\\)\n\\(Straight\\)\n\n\n\n\n\\(Swerve\\)\n1, 1\n1, 1\n\n\n\\(Straight\\)\n1, 1\n0, 0\n\n\n\n\n\nThese equlibria feature a player who could get the same payoff if they change.\nAll three are weak Nash equilibria\n\n\n\n\n\n\n\n\nStrict if and only if each player’s payoff is strictly less by changing strategies\n\nPlayers have incentive to avoid deviations, more stable to mistakes\n\nWeak if at least one player could change strategy and receive an equal payoff\n\nIndifferent players don’t have an incentive to deviate, but could be sent away by mistake\n\nIn strict Nash Equilibria, strategies are the unique best responses\n\n\n\n\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(a\\)\n\\(b\\)\n\\(c\\)\n\\(d\\)\n\n\n\n\n\\(A\\)\n1, 1\n2, 2\n2, 2\n2, 1\n\n\n\\(B\\)\n1, 3\n1, 3\n2, 2\n2, 3\n\n\n\\(C\\)\n1, 2\n2, 4\n1, 3\n2, 3\n\n\n\\(D\\)\n3, 2\n2, 3\n1, 4\n2, 2\n\n\n\n\n\nCan you find any strictly dominated strategies?\nCan you find any NE?\nWhich are weak vs strict equilibria?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(a\\)\n\\(b\\)\n\\(c\\)\n\\(d\\)\n\n\n\n\n\\(A\\)\n1, 1\n2, 2\n2, 2\n2, 1\n\n\n\\(B\\)\n1, 3\n1, 3\n2, 2\n2,3\n\n\n\\(C\\)\n1, 2\n2, 4\n1, 3\n2, 3\n\n\n\\(D\\)\n3, 2\n2, 3\n1, 4\n2, 2\n\n\n\n\n\nNo strictly dominated strategies because each is a BR to some strategy\nNE: \\((A,b)\\), \\((A,c)\\), \\((B,d)\\), \\((C,b)\\)\n\nall are weak equilibria\n\n\n\n\n\n\n\n\n\nsymmetric games are indifferent to an exchange of players\n\nPlayers are interchangable with each other\n\nExamples: Prisoner’s dilemma, Deer Hunt, Game of Chicken\n\n\n\n\n\n\n\n\n\n\\(P_1, P_2\\)\n\\(s_2\\)\n\\(s^{'}_2\\)\n\n\n\n\n\\(s_1\\)\n\\(a, a\\)\n\\(b, c\\)\n\n\n\\(s^{'}_1\\)\n\\(c, b\\)\n\\(d, d\\)\n\n\n\n\nyou could flip the payoffs with players, and the game would be unchanged\n\n\n\n\n\n\n\n\n\\(P_1, P_2\\)\n\\(s_2\\)\n\\(s^{'}_2\\)\n\n\n\n\n\\(s_1\\)\n\\(a, a\\)\n\\(b, c\\)\n\n\n\\(s^{'}_1\\)\n\\(c, b\\)\n\\(d, d\\)\n\n\n\nA Prisoner’s Dilemma is any game in which:\n\n\\(s\\) strictly dominates \\(s^{'}\\) (\\(a&gt;c\\), \\(b&gt;d\\))\nThe Nash outcome (\\(a,a\\)) is pareto dominated by the outcome (\\(d,d\\))\n\n\n\n\n\n\n\n\n\\(P_1, P_2\\)\n\\(s_2\\)\n\\(s^{'}_2\\)\n\n\n\n\n\\(s_1\\)\n\\(a, a\\)\n\\(b, c\\)\n\n\n\\(s^{'}_1\\)\n\\(c, b\\)\n\\(d, d\\)\n\n\n\nA coordination game is when:\n\n\\((s_1,s_1)\\) and \\((s^{'}_1, s^{'}_2)\\) are Nash equlibria\nboth players choose the same strategy\n\n\n\n\n\n\n\n\n\\(P_1, P_2\\)\n\\(s_2\\)\n\\(s^{'}_2\\)\n\n\n\n\n\\(s_1\\)\n\\(a, a\\)\n\\(b, c\\)\n\n\n\\(s^{'}_1\\)\n\\(c, b\\)\n\\(d, d\\)\n\n\n\nA game of Chicken is when:\n\n\\(c&gt;a\\) and \\(b&gt;d\\) (or \\(a&gt;c\\) and \\(d&gt;b\\))\nSo that the Nash equilibria have players choosing opposite strategies\n\n\n\n\n\nTest your understanding:\n\n\n\n\\(P_1\\), \\(P_2\\)\nA\nB\nC\n\n\n\n\nA\n1, 1\n1, 0\n3, 0\n\n\nB\n0, 1\n2, 2\n2, 1\n\n\nC\n0, 3\n1, 2\n4, 4\n\n\n\nWhich type of game is this?\n\n\n\n\nTest your understanding:\n\n\n\n\\(P_1\\), \\(P_2\\)\nA\nB\nC\n\n\n\n\nA\n1, 1\n1, 0\n3, 0\n\n\nB\n0, 1\n2, 2\n2, 1\n\n\nC\n0, 3\n1, 2\n4, 4\n\n\n\nWhich type of game is this?\n\nA coordination game"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#games-with-multiple-equilibria",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#games-with-multiple-equilibria",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "So we’ve seen games with only one unique NE\n\n\nBut this doesn’t have to be the case\nNext we will see games with multiple possible strategy profiles which are stable."
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#coordination-games",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#coordination-games",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "I agreed to meet my friend for coffee, but we didn’t decide on which cafe and now my phone is dead:\n\n\n\nDante, Jose\nStarbucks\nPeet’s\n\n\n\n\nStarbucks\n1, 1\n0, 0\n\n\nPeet’s\n0, 0\n1, 1"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#coordination-games-1",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#coordination-games-1",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "Dante, Jose\nStarbucks\nPeet’s\n\n\n\n\nStarbucks\n1, 1\n0, 0\n\n\nPeet’s\n0, 0\n1, 1\n\n\n\n\n\nThere are two NE’s where we are both happy\nThe problem is getting there\nThis type of game is called a coordination game"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#coordination-games-2",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#coordination-games-2",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "Even when there is an obviously preferred NE for both players, it may not be guaranteed that we will get there:\n\n\n\nDante, Jose\nStarbucks\nRoma\n\n\n\n\nStarbucks\n1, 1\n0, 0\n\n\nRoma\n0, 0\n2, 2\n\n\n\n\n\nFor different sets of beliefs, either strategy profile is stable\nIf we start with (Starbucks, Starbucks) no incentive for either of us to deviate\nCan we change equilibria?\n\nOnly with communication or joint enforcement"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#coordination-games-3",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#coordination-games-3",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "What about when players have different preferences over NE?\n\n\n\nDante, Jose\nT4\nMetropol\n\n\n\n\nT4\n2, 1\n0, 0\n\n\nMetropol\n0, 0\n1, 2\n\n\n\n\n\nIf Dante tries to be nice and go to Metropol,\n\nwhat if Jose does the same thing and goes to T4?\n\nRepeated games may allow for opportunities to alternate"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#anti-coordination-the-game-of-chicken",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#anti-coordination-the-game-of-chicken",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "James, Dean\nSwerve (Chicken)\nStraight (Tough)\n\n\n\n\nSwerve\n0, 0\n-1, 1\n\n\nStraight\n1, -1\n-2, -2\n\n\n\nSuppose that James and Dean are driving headlong towards each other, but neither one wants to be the ‘chicken’ by swerving out of the way\n\nWhat are the best respones?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#the-game-of-chicken",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#the-game-of-chicken",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "James, Dean\nSwerve (Chicken)\nStraight (Tough)\n\n\n\n\nSwerve\n0, 0\n-1, 1\n\n\nStraight\n1, -1\n-2, -2\n\n\n\n\n\nThere are two NE of this game\nBut how can we decide which one will happen?\nChapter 9 will look at potential commitment devices either player could use to try to achieve their preferred NE"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#the-deer-hunt-game",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#the-deer-hunt-game",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "Two cavemen, Igg and Ogg, each decide whether to hunt Deer or Rabbit.\n\nHunting Deer takes two hunters,\n\nboth can eat for two days\n\nHunting Rabbit can be done alone\n\nonly feeds one hunter for one day"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#the-deer-hunt-game-1",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#the-deer-hunt-game-1",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "Igg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n2, 2\n0, 1\n\n\nRabbit\n1, 0\n1, 1\n\n\n\n\n\nAre there any strictly dominated strategies?\nWhat about best responses?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#the-deer-hunt-game-2",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#the-deer-hunt-game-2",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "Here are Igg’s best responses:\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n2, 2\n0, 1\n\n\nRabbit\n1, 0\n1, 1"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#the-deer-hunt-game-3",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#the-deer-hunt-game-3",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "And here are Ogg’s best responses…\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n2, 2\n0, 1\n\n\nRabbit\n1, 0\n1, 1"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#deer-hunt-strict-nash-equilibria",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#deer-hunt-strict-nash-equilibria",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "Igg, Ogg\n\\(Deer\\)\n\\(Rabbit\\)\n\n\n\n\n\\(Deer\\)\n2, 2\n0,1\n\n\n\\(Rabbit\\)\n1,0\n1, 1\n\n\n\n\n\nAt each Nash Equilibrium, each player has no other strategy providing the same payoff.\nThis is a strict Nash Equilibrium."
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#an-example-of-weak-nash-equilibrium",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#an-example-of-weak-nash-equilibrium",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "Eleanor, Michael\n\\(Swerve\\)\n\\(Straight\\)\n\n\n\n\n\\(Swerve\\)\n1, 1\n1, 1\n\n\n\\(Straight\\)\n1, 1\n0, 0\n\n\n\n\n\nThese equlibria feature a player who could get the same payoff if they change.\nAll three are weak Nash equilibria"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#intuition-on-strict-vs.-weak-equilibria",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#intuition-on-strict-vs.-weak-equilibria",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "Strict if and only if each player’s payoff is strictly less by changing strategies\n\nPlayers have incentive to avoid deviations, more stable to mistakes\n\nWeak if at least one player could change strategy and receive an equal payoff\n\nIndifferent players don’t have an incentive to deviate, but could be sent away by mistake\n\nIn strict Nash Equilibria, strategies are the unique best responses"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#a-more-complicated-example",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#a-more-complicated-example",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "\\(P_1\\), \\(P_2\\)\n\\(a\\)\n\\(b\\)\n\\(c\\)\n\\(d\\)\n\n\n\n\n\\(A\\)\n1, 1\n2, 2\n2, 2\n2, 1\n\n\n\\(B\\)\n1, 3\n1, 3\n2, 2\n2, 3\n\n\n\\(C\\)\n1, 2\n2, 4\n1, 3\n2, 3\n\n\n\\(D\\)\n3, 2\n2, 3\n1, 4\n2, 2\n\n\n\n\n\nCan you find any strictly dominated strategies?\nCan you find any NE?\nWhich are weak vs strict equilibria?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#a-more-complicated-example-1",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#a-more-complicated-example-1",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "\\(P_1\\), \\(P_2\\)\n\\(a\\)\n\\(b\\)\n\\(c\\)\n\\(d\\)\n\n\n\n\n\\(A\\)\n1, 1\n2, 2\n2, 2\n2, 1\n\n\n\\(B\\)\n1, 3\n1, 3\n2, 2\n2,3\n\n\n\\(C\\)\n1, 2\n2, 4\n1, 3\n2, 3\n\n\n\\(D\\)\n3, 2\n2, 3\n1, 4\n2, 2\n\n\n\n\n\nNo strictly dominated strategies because each is a BR to some strategy\nNE: \\((A,b)\\), \\((A,c)\\), \\((B,d)\\), \\((C,b)\\)\n\nall are weak equilibria"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#symmetric-games",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#symmetric-games",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "symmetric games are indifferent to an exchange of players\n\nPlayers are interchangable with each other\n\nExamples: Prisoner’s dilemma, Deer Hunt, Game of Chicken"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#symmetric-games-1",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#symmetric-games-1",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "\\(P_1, P_2\\)\n\\(s_2\\)\n\\(s^{'}_2\\)\n\n\n\n\n\\(s_1\\)\n\\(a, a\\)\n\\(b, c\\)\n\n\n\\(s^{'}_1\\)\n\\(c, b\\)\n\\(d, d\\)\n\n\n\n\nyou could flip the payoffs with players, and the game would be unchanged"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#symmetric-games-2",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#symmetric-games-2",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "\\(P_1, P_2\\)\n\\(s_2\\)\n\\(s^{'}_2\\)\n\n\n\n\n\\(s_1\\)\n\\(a, a\\)\n\\(b, c\\)\n\n\n\\(s^{'}_1\\)\n\\(c, b\\)\n\\(d, d\\)\n\n\n\nA Prisoner’s Dilemma is any game in which:\n\n\\(s\\) strictly dominates \\(s^{'}\\) (\\(a&gt;c\\), \\(b&gt;d\\))\nThe Nash outcome (\\(a,a\\)) is pareto dominated by the outcome (\\(d,d\\))"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#symmetric-games-3",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#symmetric-games-3",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "\\(P_1, P_2\\)\n\\(s_2\\)\n\\(s^{'}_2\\)\n\n\n\n\n\\(s_1\\)\n\\(a, a\\)\n\\(b, c\\)\n\n\n\\(s^{'}_1\\)\n\\(c, b\\)\n\\(d, d\\)\n\n\n\nA coordination game is when:\n\n\\((s_1,s_1)\\) and \\((s^{'}_1, s^{'}_2)\\) are Nash equlibria\nboth players choose the same strategy"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#symmetric-games-4",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#symmetric-games-4",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "\\(P_1, P_2\\)\n\\(s_2\\)\n\\(s^{'}_2\\)\n\n\n\n\n\\(s_1\\)\n\\(a, a\\)\n\\(b, c\\)\n\n\n\\(s^{'}_1\\)\n\\(c, b\\)\n\\(d, d\\)\n\n\n\nA game of Chicken is when:\n\n\\(c&gt;a\\) and \\(b&gt;d\\) (or \\(a&gt;c\\) and \\(d&gt;b\\))\nSo that the Nash equilibria have players choosing opposite strategies"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#which-kind-of-3x3-game",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#which-kind-of-3x3-game",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "Test your understanding:\n\n\n\n\\(P_1\\), \\(P_2\\)\nA\nB\nC\n\n\n\n\nA\n1, 1\n1, 0\n3, 0\n\n\nB\n0, 1\n2, 2\n2, 1\n\n\nC\n0, 3\n1, 2\n4, 4\n\n\n\nWhich type of game is this?"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0306-categories.html#which-kind-of-3x3-game-1",
+    "href": "Slides/03SimultaneousGames/0306-categories.html#which-kind-of-3x3-game-1",
+    "title": "Categorizing Simultaneous Games",
+    "section": "",
+    "text": "Test your understanding:\n\n\n\n\\(P_1\\), \\(P_2\\)\nA\nB\nC\n\n\n\n\nA\n1, 1\n1, 0\n3, 0\n\n\nB\n0, 1\n2, 2\n2, 1\n\n\nC\n0, 3\n1, 2\n4, 4\n\n\n\nWhich type of game is this?\n\nA coordination game"
+  },
+  {
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "It is also possible to find Nash Equilibria by eliminating weakly dominated strategies\n\n(strategies for which there is an alternative that is never worse, and sometimes better).\n\n\n\n\n\n\nWe will not spend a lot of time on this method, because it has two serious flaws:\n\n\nIt is possible for a Nash Equilibrium to involve playing a weakly dominated strategy.\n\n\nIEWDS may therefore eliminate actual Nash Equilibria.\n\n\nUnlike IESDS, the order in which you eliminate weakly dominated strategies matters:\n\n\nyou may get different results from different orders of elimination.\n\n\n\n\n\n\nIn the game below, B is weakly dominated for both players.\n\n\n\nPlayer 1, Player 2\n\\(A\\)\n\\(B\\)\n\n\n\n\n\\(A\\)\n\\(2,2\\)\n\\(1,1\\)\n\n\n\\(B\\)\n\\(1,1\\)\n\\(1,1\\)\n\n\n\n\n\nIf we eliminate the weakly dominated strategy for both players, then the only remaining strategy profile is (A, A)\n\nthis is a Nash equilibrium.\n\nHowever, (B, B) is also a Nash equilibrium:\n\nboth players get payoff 1, and neither can improve that payoff by changing their own strategy.\nWe failed to find this equilibrium by eliminating weakly dominated strategies.\n\n\n\n\n\n\n\nIn the game below, M and R are weakly dominated.\n\n\n\nPlayer 1, Player 2\n\\(L\\)\n\\(M\\)\n\\(R\\)\n\n\n\n\n\\(T\\)\n0, 1\n1, 0\n0, 0\n\n\n\\(B\\)\n0, 0\n0, 0\n1, 0\n\n\n\n\n\nIf we begin by eliminating R, then afterwards, M and B are both weakly dominated, and we would eliminate them, leaving only (T, L).\n\n\n\n\n\n\n\n\n\nPlayer 1, Player 2\n\\(L\\)\n\\(M\\)\n\\(R\\)\n\n\n\n\n\\(T\\)\n0, 1\n1, 0\n0, 0\n\n\n\\(B\\)\n0, 0\n0, 0\n1, 0\n\n\n\n\n\nHowever, if we begin by eliminating M, then T and R are both weakly dominated, and if we eliminate them, we are left with only (B, L).\nNot only does the outcome of IEWDS depend on what we eliminate first, it still fails to find a third Nash equilibrium, which is (B, R).\n\n\n\n\n\n\n\n\nGenerally speaking, we can eliminate any strategy which is not rational to play in a NE.\nIt’s never rational to play strictly dominated strategies, but it’s sometimes rational to play weakly dominated strategies.\nThere are other categories of non-rational strategies:\nA strategy is a non-best-response or non-rationalizable strategy if and only if, regardless of what the other players choose, it never provides the best possible payoff.\nI like to describe non-rationalizable strategies as strategies that you’d have to be crazy to think were a good idea, i.e. you can’t rationalize playing them.\n\n\n\n\n\n\n\n\nNon-rationalizability is very similar to strict dominance, but here’s the difference:\nStrict dominance is pairwise: a strategy \\(s\\) dominates another, \\(s'\\), if \\(s\\) specifically always gives a better payoff than \\(s'\\).\nNon-rationalizability is a property of a single strategy: for a strategy to be non-rationalizable, it means that there is always some option that gives a better payoff—but the better option doesn’t always have to be the same strategy.\nTo put it another way: strategy \\(s\\) is not a best response if there is always some strategy* which is better. To be strictly dominated, there must be one particular strategy** which is always better.\n\n\n\n\n\n\nIn the game below, there are no strictly dominated strategies, meaning that IESDS will not do anything to simplify it.\n\n\nHowever, we can see that B is non-rationalizable for Player 1: regardless of whether Player 2 chooses a, b, or c, Player 1 is better off playing either A or C.\nAlso, b is non-rationalizable for Player 2.\n\n\n\n\n\n\n\n\n\n\n\n\nIt is not rational to play a non-best-response strategy in a pure-strategy context. (As we’ll see much later, it’s more complicated in a mixed-strategy context).\nAny strictly dominated strategy is also not a best response, but not all NBR strategies are strictly dominated.\nBecause of this, if we eliminate non-best-responses, using the same steps as IESDS, this process will always eliminate the same strategies, and it may eliminate even more!\nThis process is, naturally, called Iterative Elimination of Non-Best-Responses (IENBR).\n\n\n\n\n\n\nReturning to this same example, we can start by eliminating B.\n\n\nOnce we do this, we can now see that b and c are non-rationalizable, and eliminate them.\nFinally, we can see that B is non-rationalizable and eliminate it, leaving only the strategy profile (C, a), which is the Nash equilibrium of this game.\n\n\n\n\n\n\n\n\n\n\n\nAfter eliminating Z, which is strictly dominated, what strategy is a non-best-response?\n\nX\nY\nZ\ny\nz\n\n\n\n\n\n\n\nIf we complete IENBR on this game table, what strategy profile is left at the end?\n\n(X, x)\n(X, z)\n(Y, x)\n(Y, z)\nThere is more than one strategy profile left.\n\n\n\n\n\n\n\n\nThere’s no guarantee that any particular game will contain strategies that are either strictly dominated or non-rationalizable.\nEven when there are strategies we can eliminate, there may not be enough of them to find a NE just by elimination.\nSo why bother with this?\nEven if elimination doesn’t immediately identify a NE, it can still be helpful to simplify the game before trying other methods.\nSimplifying by elimination is especially useful when dealing with mixed strategies—which we’ll get to after the midterm."
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html#weakly-dominated-strategies",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html#weakly-dominated-strategies",
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html#weakly-dominated-strategies",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html#weakly-dominated-strategies",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "It is also possible to find Nash Equilibria by eliminating weakly dominated strategies\n\n(strategies for which there is an alternative that is never worse, and sometimes better)."
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html#weakly-dominated-strategies-1",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html#weakly-dominated-strategies-1",
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html#weakly-dominated-strategies-1",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html#weakly-dominated-strategies-1",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "We will not spend a lot of time on this method, because it has two serious flaws:\n\n\nIt is possible for a Nash Equilibrium to involve playing a weakly dominated strategy.\n\n\nIEWDS may therefore eliminate actual Nash Equilibria.\n\n\nUnlike IESDS, the order in which you eliminate weakly dominated strategies matters:\n\n\nyou may get different results from different orders of elimination."
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html#example-why-weak-dominance-is-not-useful",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html#example-why-weak-dominance-is-not-useful",
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html#example-why-weak-dominance-is-not-useful",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html#example-why-weak-dominance-is-not-useful",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "In the game below, B is weakly dominated for both players.\n\n\n\nPlayer 1, Player 2\n\\(A\\)\n\\(B\\)\n\n\n\n\n\\(A\\)\n\\(2,2\\)\n\\(1,1\\)\n\n\n\\(B\\)\n\\(1,1\\)\n\\(1,1\\)\n\n\n\n\n\nIf we eliminate the weakly dominated strategy for both players, then the only remaining strategy profile is (A, A)\n\nthis is a Nash equilibrium.\n\nHowever, (B, B) is also a Nash equilibrium:\n\nboth players get payoff 1, and neither can improve that payoff by changing their own strategy.\nWe failed to find this equilibrium by eliminating weakly dominated strategies."
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html#another-example-why-weak-dominance-is-not-useful",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html#another-example-why-weak-dominance-is-not-useful",
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html#another-example-why-weak-dominance-is-not-useful",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html#another-example-why-weak-dominance-is-not-useful",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "In the game below, M and R are weakly dominated.\n\n\n\nPlayer 1, Player 2\n\\(L\\)\n\\(M\\)\n\\(R\\)\n\n\n\n\n\\(T\\)\n0, 1\n1, 0\n0, 0\n\n\n\\(B\\)\n0, 0\n0, 0\n1, 0\n\n\n\n\n\nIf we begin by eliminating R, then afterwards, M and B are both weakly dominated, and we would eliminate them, leaving only (T, L)."
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html#another-example-why-weak-dominance-is-not-useful-1",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html#another-example-why-weak-dominance-is-not-useful-1",
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html#another-example-why-weak-dominance-is-not-useful-1",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html#another-example-why-weak-dominance-is-not-useful-1",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "Player 1, Player 2\n\\(L\\)\n\\(M\\)\n\\(R\\)\n\n\n\n\n\\(T\\)\n0, 1\n1, 0\n0, 0\n\n\n\\(B\\)\n0, 0\n0, 0\n1, 0\n\n\n\n\n\nHowever, if we begin by eliminating M, then T and R are both weakly dominated, and if we eliminate them, we are left with only (B, L).\nNot only does the outcome of IEWDS depend on what we eliminate first, it still fails to find a third Nash equilibrium, which is (B, R)."
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html#other-elimination-methods-non-best-responses",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html#other-elimination-methods-non-best-responses",
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html#other-elimination-methods-non-best-responses",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html#other-elimination-methods-non-best-responses",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "Generally speaking, we can eliminate any strategy which is not rational to play in a NE.\nIt’s never rational to play strictly dominated strategies, but it’s sometimes rational to play weakly dominated strategies.\nThere are other categories of non-rational strategies:\nA strategy is a non-best-response or non-rationalizable strategy if and only if, regardless of what the other players choose, it never provides the best possible payoff.\nI like to describe non-rationalizable strategies as strategies that you’d have to be crazy to think were a good idea, i.e. you can’t rationalize playing them."
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html#strictly-dominated-vs.-non-best-response",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html#strictly-dominated-vs.-non-best-response",
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html#strictly-dominated-vs.-non-best-response",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html#strictly-dominated-vs.-non-best-response",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "Non-rationalizability is very similar to strict dominance, but here’s the difference:\nStrict dominance is pairwise: a strategy \\(s\\) dominates another, \\(s'\\), if \\(s\\) specifically always gives a better payoff than \\(s'\\).\nNon-rationalizability is a property of a single strategy: for a strategy to be non-rationalizable, it means that there is always some option that gives a better payoff—but the better option doesn’t always have to be the same strategy.\nTo put it another way: strategy \\(s\\) is not a best response if there is always some strategy* which is better. To be strictly dominated, there must be one particular strategy** which is always better."
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html#example-non-best-responses",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html#example-non-best-responses",
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html#example-non-best-responses",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html#example-non-best-responses",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "In the game below, there are no strictly dominated strategies, meaning that IESDS will not do anything to simplify it.\n\n\nHowever, we can see that B is non-rationalizable for Player 1: regardless of whether Player 2 chooses a, b, or c, Player 1 is better off playing either A or C.\nAlso, b is non-rationalizable for Player 2."
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html#iterated-elimination-of-non-best-responses",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html#iterated-elimination-of-non-best-responses",
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html#iterated-elimination-of-non-best-responses",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html#iterated-elimination-of-non-best-responses",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "It is not rational to play a non-best-response strategy in a pure-strategy context. (As we’ll see much later, it’s more complicated in a mixed-strategy context).\nAny strictly dominated strategy is also not a best response, but not all NBR strategies are strictly dominated.\nBecause of this, if we eliminate non-best-responses, using the same steps as IESDS, this process will always eliminate the same strategies, and it may eliminate even more!\nThis process is, naturally, called Iterative Elimination of Non-Best-Responses (IENBR)."
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html#example-ienbr",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html#example-ienbr",
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html#example-ienbr",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html#example-ienbr",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "Returning to this same example, we can start by eliminating B.\n\n\nOnce we do this, we can now see that b and c are non-rationalizable, and eliminate them.\nFinally, we can see that B is non-rationalizable and eliminate it, leaving only the strategy profile (C, a), which is the Nash equilibrium of this game."
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html#iclicker-q4",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html#iclicker-q4",
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html#iclicker-q4",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html#iclicker-q4",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "After eliminating Z, which is strictly dominated, what strategy is a non-best-response?\n\nX\nY\nZ\ny\nz"
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html#iclicker-q5",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html#iclicker-q5",
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html#iclicker-q5",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html#iclicker-q5",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "If we complete IENBR on this game table, what strategy profile is left at the end?\n\n(X, x)\n(X, z)\n(Y, x)\n(Y, z)\nThere is more than one strategy profile left."
   },
   {
-    "objectID": "Slides/03SimultaneousGames/0306-weakdominance.html#failures-of-elimination-methods",
-    "href": "Slides/03SimultaneousGames/0306-weakdominance.html#failures-of-elimination-methods",
+    "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html#failures-of-elimination-methods",
+    "href": "Slides/03SimultaneousGames/0308-weakdominance.html#failures-of-elimination-methods",
     "title": "Other Elimination Methods: Weakly Dominated Strategies",
     "section": "",
     "text": "There’s no guarantee that any particular game will contain strategies that are either strictly dominated or non-rationalizable.\nEven when there are strategies we can eliminate, there may not be enough of them to find a NE just by elimination.\nSo why bother with this?\nEven if elimination doesn’t immediately identify a NE, it can still be helpful to simplify the game before trying other methods.\nSimplifying by elimination is especially useful when dealing with mixed strategies—which we’ll get to after the midterm."

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EC327 Intro to Game Theory – EC327 Game Theory</title>
+<title>weakdominance – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +23,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d20f5cef5e207251eca059be6064b8af.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-8652ff5161e63bdd14abb267f7ee8a78.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d20f5cef5e207251eca059be6064b8af.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-d20f5cef5e207251eca059be6064b8af.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-8652ff5161e63bdd14abb267f7ee8a78.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-d20f5cef5e207251eca059be6064b8af.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -244,7 +273,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EC327 Game Theory</span>
     </a>
   </div>
@@ -255,23 +284,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./Syllabus/index.html"> 
+    <a class="nav-link" href="../../Syllabus/index.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Homework/index.html"> 
+    <a class="nav-link" href="../../Homework/index.html"> 
 <span class="menu-text">Homework</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Slides/index.html"> 
+    <a class="nav-link" href="../../Slides/index.html"> 
 <span class="menu-text">Slides</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./activities/index.html"> 
+    <a class="nav-link" href="../../activities/index.html"> 
 <span class="menu-text">Activities</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Exams/index.html"> 
+    <a class="nav-link" href="../../Exams/index.html"> 
 <span class="menu-text">Exams</span></a>
   </li>  
 </ul>
@@ -286,7 +315,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">EC327 Intro to Game Theory</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -317,19 +346,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Syllabus/main.pdf" class="sidebar-item-text sidebar-link">
+  <a href="../../Syllabus/main.pdf" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Slides/#intro-and-syllabus-day" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#intro-and-syllabus-day" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: General Principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/01GuessTwoThirds/GuessTwoThirds.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Guessing Two Thirds</span></a>
   </div>
 </li>
@@ -346,19 +375,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Slides/#sequential-games" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#sequential-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Sequential Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/02SurvivorFlags/SurvivorFlags.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Survivor Flags</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./activities/03PirateTreasure/PirateTreasure.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/03PirateTreasure/PirateTreasure.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Pirate Treasure</span></a>
   </div>
 </li>
@@ -375,25 +404,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Simultaneous Games</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./activities/04BlottoElection/BlottoElection.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/04BlottoElection/BlottoElection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Election Blotto</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Continuous Strategies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./activities/05CournotComp/cournotcomp.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/05CournotComp/cournotcomp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Social Media Adspace</span></a>
   </div>
 </li>
@@ -410,7 +439,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Slides/#combining-simultaneous-and-sequential" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#combining-simultaneous-and-sequential" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span></span></a>
   </div>
 </li>
@@ -427,13 +456,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Slides/#mixed-strategies" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#mixed-strategies" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./activities/06PenaltyKicks/penaltykicks.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/06PenaltyKicks/penaltykicks.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Penalty Kick Shootout</span></a>
   </div>
 </li>
@@ -450,13 +479,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Slides/#asymmetric-information" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#asymmetric-information" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Asymmetric Information</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./activities/LemonsMarket/activitysheet.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/LemonsMarket/activitysheet.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Activity</strong>: Market for Lemons</span></a>
   </div>
 </li>
@@ -473,13 +502,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Slides/#strategic-moves" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#strategic-moves" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span>: Strategic Moves</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./activities/07Brinksmanship/brinksmanship.html" class="sidebar-item-text sidebar-link">
+  <a href="../../activities/07Brinksmanship/brinksmanship.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Activity</strong>: Brinksmanship</span></a>
   </div>
 </li>
@@ -496,7 +525,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Slides/#repeated-games" class="sidebar-item-text sidebar-link">
+  <a href="../../Slides/#repeated-games" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-info">Slides</span></span></a>
   </div>
 </li>
@@ -509,155 +538,259 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">EC327 Intro to Game Theory</h1>
-<p class="subtitle lead">Economics Course at the University of Oregon</p>
+
+
+
+<section id="other-elimination-methods-weakly-dominated-strategies" class="level1">
+<h1>Other Elimination Methods: Weakly Dominated Strategies</h1>
+<section id="weakly-dominated-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="weakly-dominated-strategies">Weakly Dominated Strategies</h2>
+<ul>
+<li><p>It is also possible to find Nash Equilibria by eliminating <span class="hi">weakly dominated</span> strategies</p>
+<ul>
+<li>(strategies for which there is an alternative that is never worse, and sometimes better).</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="weakly-dominated-strategies-1" class="level2">
+<h2 class="anchored" data-anchor-id="weakly-dominated-strategies-1">Weakly Dominated Strategies</h2>
+<p>We will not spend a lot of time on this method, because it has two serious flaws:</p>
+<div class="incremental">
+<ol class="incremental" type="1">
+<li>It is possible for a Nash Equilibrium to involve playing a weakly dominated strategy.</li>
+</ol>
+<ul class="incremental">
+<li>IEWDS may therefore eliminate actual Nash Equilibria.</li>
+</ul>
+<ol class="incremental" start="2" type="1">
+<li>Unlike IESDS, the order in which you eliminate weakly dominated strategies matters:</li>
+</ol>
+<ul class="incremental">
+<li>you may get different results from different orders of elimination.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-why-weak-dominance-is-not-useful" class="level2">
+<h2 class="anchored" data-anchor-id="example-why-weak-dominance-is-not-useful">Example: Why Weak Dominance is Not Useful</h2>
+<p>In the game below, B is weakly dominated for both players.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Player 1, Player 2</th>
+<th><span class="math inline">\(A\)</span></th>
+<th><span class="math inline">\(B\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(A\)</span></strong></td>
+<td><span class="math inline">\(2,2\)</span></td>
+<td><span class="math inline">\(1,1\)</span></td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(B\)</span></strong></td>
+<td><span class="math inline">\(1,1\)</span></td>
+<td><span class="math inline">\(1,1\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<ul class="incremental">
+<li><p>If we eliminate the weakly dominated strategy for both players, then the only remaining strategy profile is (A, A)</p>
+<ul class="incremental">
+<li>this is a Nash equilibrium.</li>
+</ul></li>
+<li><p>However, (B, B) is also a Nash equilibrium:</p>
+<ul class="incremental">
+<li><p>both players get payoff 1, and neither can improve that payoff by changing their own strategy.</p></li>
+<li><p>We failed to find this equilibrium by eliminating weakly dominated strategies.</p></li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-why-weak-dominance-is-not-useful" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-why-weak-dominance-is-not-useful">Another Example: Why Weak Dominance is Not Useful</h2>
+<p>In the game below, M and R are weakly dominated.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Player 1, Player 2</th>
+<th><span class="math inline">\(L\)</span></th>
+<th><span class="math inline">\(M\)</span></th>
+<th><span class="math inline">\(R\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(T\)</span></strong></td>
+<td>0, 1</td>
+<td>1, 0</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(B\)</span></strong></td>
+<td>0, 0</td>
+<td>0, 0</td>
+<td>1, 0</td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<ul class="incremental">
+<li>If we begin by eliminating R, then afterwards, M and B are both weakly dominated, and we would eliminate them, leaving only (T, L).</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-why-weak-dominance-is-not-useful-1" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-why-weak-dominance-is-not-useful-1">Another Example: Why Weak Dominance is Not Useful</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Player 1, Player 2</th>
+<th><span class="math inline">\(L\)</span></th>
+<th><span class="math inline">\(M\)</span></th>
+<th><span class="math inline">\(R\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(T\)</span></strong></td>
+<td>0, 1</td>
+<td>1, 0</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(B\)</span></strong></td>
+<td>0, 0</td>
+<td>0, 0</td>
+<td>1, 0</td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<ul class="incremental">
+<li><p>However, if we begin by eliminating M, then T and R are both weakly dominated, and if we eliminate them, we are left with only (B, L).</p></li>
+<li><p>Not only does the outcome of IEWDS depend on what we eliminate first, it still fails to find a <strong>third</strong> Nash equilibrium, which is (B, R).</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="other-elimination-methods-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="other-elimination-methods-non-best-responses">Other Elimination Methods: Non-Best-Responses</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Generally speaking, we can eliminate any strategy which is not rational to play in a NE.</li>
+<li>It’s never rational to play strictly dominated strategies, but it’s sometimes rational to play weakly dominated strategies.</li>
+<li>There are other categories of non-rational strategies:</li>
+<li>A strategy is a <span class="hi">non-best-response</span> or <span class="hi">non-rationalizable strategy</span> if and only if, regardless of what the other players choose, it never provides the best possible payoff.</li>
+<li>I like to describe non-rationalizable strategies as strategies that you’d have to be crazy to think were a good idea, i.e.&nbsp;you can’t rationalize playing them.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="strictly-dominated-vs.-non-best-response" class="level2">
+<h2 class="anchored" data-anchor-id="strictly-dominated-vs.-non-best-response">Strictly Dominated vs.&nbsp;Non-Best-Response</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Non-rationalizability is very similar to strict dominance, but here’s the difference:</li>
+<li>Strict dominance is pairwise: a strategy <span class="math inline">\(s\)</span> dominates another, <span class="math inline">\(s'\)</span>, if <span class="math inline">\(s\)</span> specifically always gives a better payoff than <span class="math inline">\(s'\)</span>.</li>
+<li>Non-rationalizability is a property of a single strategy: for a strategy to be non-rationalizable, it means that there is always <em>some</em> option that gives a better payoff—but the better option doesn’t always have to be the same strategy.</li>
+<li>To put it another way: strategy <span class="math inline">\(s\)</span> is not a best response if there is always <strong>some strategy* which is better. To be strictly dominated, there must be </strong>one particular strategy** which is always better.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="example-non-best-responses">Example: Non-Best-Responses</h2>
+<p>In the game below, there are no strictly dominated strategies, meaning that IESDS will not do anything to simplify it.</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>However, we can see that B is non-rationalizable for Player 1: regardless of whether Player 2 chooses a, b, or c, Player 1 is better off playing either A or C.</p></li>
+<li><p>Also, b is non-rationalizable for Player 2.</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-non-best-responses">Another Example: Non-Best-Responses</h2>
+<hr>
+</section>
+<section id="iterated-elimination-of-non-best-responses" class="level2">
+<h2 class="anchored" data-anchor-id="iterated-elimination-of-non-best-responses">Iterated Elimination of Non-Best-Responses</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>It is not rational to play a non-best-response strategy in a pure-strategy context. (As we’ll see much later, it’s more complicated in a mixed-strategy context).</li>
+<li>Any strictly dominated strategy is also not a best response, but not all NBR strategies are strictly dominated.</li>
+<li>Because of this, if we eliminate non-best-responses, using the same steps as IESDS, this process will always eliminate the same strategies, and it may eliminate even more!</li>
+<li>This process is, naturally, called Iterative Elimination of Non-Best-Responses (IENBR).</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="example-ienbr" class="level2">
+<h2 class="anchored" data-anchor-id="example-ienbr">Example: IENBR</h2>
+<p>Returning to this same example, we can start by eliminating B.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Once we do this, we can now see that b and c are non-rationalizable, and eliminate them.</li>
+<li>Finally, we can see that B is non-rationalizable and eliminate it, leaving only the strategy profile (C, a), which is the Nash equilibrium of this game.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="another-example-ienbr" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-ienbr">Another Example: IENBR</h2>
+<hr>
+</section>
+<section id="iclicker-q4" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-q4">iClicker Q4</h2>
+<ul>
+<li>After eliminating Z, which is strictly dominated, what strategy is a non-best-response?
+<ol type="1">
+<li>X</li>
+<li>Y</li>
+<li>Z</li>
+<li>y</li>
+<li>z</li>
+</ol></li>
+</ul>
+<hr>
+</section>
+<section id="iclicker-q5" class="level2">
+<h2 class="anchored" data-anchor-id="iclicker-q5">iClicker Q5</h2>
+<ul>
+<li>If we complete IENBR on this game table, what strategy profile is left at the end?
+<ol type="1">
+<li>(X, x)</li>
+<li>(X, z)</li>
+<li>(Y, x)</li>
+<li>(Y, z)</li>
+<li>There is more than one strategy profile left.</li>
+</ol></li>
+</ul>
+<hr>
+</section>
+<section id="failures-of-elimination-methods" class="level2">
+<h2 class="anchored" data-anchor-id="failures-of-elimination-methods">Failures of Elimination Methods</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>There’s no guarantee that any particular game will contain strategies that are either strictly dominated or non-rationalizable.</li>
+<li>Even when there are strategies we can eliminate, there may not be enough of them to find a NE just by elimination.</li>
+<li>So why bother with this?</li>
+<li>Even if elimination doesn’t immediately identify a NE, it can still be helpful to simplify the game before trying other methods.</li>
+<li>Simplifying by elimination is <strong>especially</strong> useful when dealing with mixed strategies—which we’ll get to after the midterm.</li>
+</ul>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>This elective game theory class EC327 is taught by <a href="danteyasui.org">Dante Yasui</a> at the <a href="https://socialsciences.uoregon.edu/economics">University of Oregon</a>.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Details:</th>
-<th style="text-align: left;">Fall 2025</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Class Time:</strong></td>
-<td style="text-align: left;">Monday and Wednesday 8:30-9:50 am</td>
-</tr>
-<tr class="even">
-<td><strong>Classroom:</strong></td>
-<td style="text-align: left;">McKenzie 240C</td>
-</tr>
-<tr class="odd">
-<td><strong>Office Hours:</strong></td>
-<td style="text-align: left;">Monday 10-11 am &amp; Wednesday 1-2 pm</td>
-</tr>
-<tr class="even">
-<td><strong>Textbook:</strong></td>
-<td style="text-align: left;">Dixit, Skeath, and McAdams. Games of Strategy, 5th edition.</td>
-</tr>
-</tbody>
-</table>
-<section id="syllabus" class="level2">
-<h2 class="anchored" data-anchor-id="syllabus"><a href="Syllabus/main.pdf" class="btn btn-outline-primary" role="button">Syllabus</a></h2>
 </section>
-<section id="tentative-schedule" class="level2">
-<h2 class="anchored" data-anchor-id="tentative-schedule">Tentative Schedule</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;"><strong>Week</strong></th>
-<th style="text-align: center;"><strong>Chapters</strong></th>
-<th><strong>Topic</strong></th>
-<th>Assignments</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1, 2</td>
-<td><a href="Slides/#intro-and-syllabus-day">Intro &amp; General Principles</a></td>
-<td><a href="Homework/#assignment-1">Homework 1</a>, <a href="https://canvas.uoregon.edu/courses/274671/quizzes/415674">Quiz 1</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">3</td>
-<td><a href="Slides/#sequential-games">Sequential Move Games</a></td>
-<td><a href="Homework/#assignment-2">HW2</a>, <a href="https://canvas.uoregon.edu/courses/274671/quizzes/416468">Q2</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">4</td>
-<td><a href="Slides/#simultaneous-games">Simultaneous Move Games</a></td>
-<td><a href="Homework/#assignment-3">HW3</a>, <a href="https://canvas.uoregon.edu/courses/274671/quizzes/416799">Q3</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">5,6</td>
-<td><a href="Slides/#combining-simultaneous-and-sequential">Combining Forms</a>, <a href="Slides/#simultaneous-games">Continuous Strategies</a></td>
-<td><a href="Homework/#assignment-4">HW4</a>, Q4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">1-6</td>
-<td>Review &amp; <strong>Midterm</strong></td>
-<td></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">5,7</td>
-<td><a href="Slides/#simultaneous-games">Continuous Strategies</a>, <a href="Slides/#mixed-strategies">Mixed Strategies</a></td>
-<td>HW5, Q5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">7</td>
-<td><a href="Slides/#mixed-strategies">Mixed Strategies</a></td>
-<td>HW6, Q6</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">9</td>
-<td><a href="Slides/#asymmetric-info">Uncertainty and Information</a></td>
-<td>HW7, Q7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">8</td>
-<td><a href="Slides/#strategic-moves">Strategic Moves</a></td>
-<td>HW8, Q8</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">10</td>
-<td><a href="Slides/#repeated-games">Repeated Games</a></td>
-<td>HW9, Q9</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><em>Finals</em></td>
-<td style="text-align: center;">Cumulative</td>
-<td><strong>Exam</strong>: Monday, Dec.&nbsp;8 - 10:15am</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="homework" class="level2">
-<h2 class="anchored" data-anchor-id="homework">Homework</h2>
-<p>Homework assignments will be posted on this website, but you will upload them to Canvas.</p>
-<p><a href="./Homework/index.html">Assignments page</a></p>
-<hr>
-</section>
-<section id="acknowledgements" class="level1">
-<h1>Acknowledgements</h1>
-<p>I have used materials passed on to me from previous graduate student instructors at the University of Oregon such as slides, activities, and homework questions to create this class. Thank you to Evan Hart, <a href="https://ethanholdahl.com/">Ethan Holdahl</a>, <a href="https://sites.google.com/view/hanyuanhuang/">Hanyuan Huang</a>, <a href="https://ctwie.me/">Connor Wiegand</a>, and <a href="https://zkiefer10.github.io/">Zachary Kiefer</a> for creating some of the materials in this class, and for advice on teaching Game Theory.</p>
-
-
 </section>
 
 </main> <!-- /main -->
@@ -1078,4 +1211,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/Slides/03SimultaneousGames/0308-weakdominance.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/Slides/03SimultaneousGames/0308-weakdominance.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

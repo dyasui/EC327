@@ -1911,9 +1911,11 @@ Table&nbsp;2: Big 10 Game
 <li class="fragment">Even if elimination doesn’t immediately identify a NE, it can still be helpful to simplify the game before trying other methods.</li>
 <li class="fragment">Simplifying by elimination is especially useful when dealing with mixed strategies</li>
 </ul>
-<!-- # Nash Equilibrium
-
-## Solving Simultaneous Games
+</section></section>
+<section>
+<section id="nash-equilibrium" class="title-slide slide level1 center">
+<h1>Nash Equilibrium</h1>
+<!-- ## Solving Simultaneous Games
 
   * Before we cover how to solve a game, we first need to discuss what a solution to a game even is.
   
@@ -1923,7 +1925,7 @@ Table&nbsp;2: Big 10 Game
     
 --- -->
 </section>
-<section id="nash-equilibrium" class="slide level2">
+<section id="nash-equilibrium-1" class="slide level2">
 <h2>Nash Equilibrium</h2>
 <p>The most basic form of equilibrium in game theory is the <span class="h">Nash Equilibrium (NE)</span>, which can be described as:</p>
 <ul>
@@ -1932,7 +1934,7 @@ Table&nbsp;2: Big 10 Game
 <li><p>A strategy profile such that, after the game is played, each player is satisfied that they could not have made a better decision</p></li>
 </ul>
 </section>
-<section id="nash-equilibrium-1" class="slide level2">
+<section id="nash-equilibrium-2" class="slide level2">
 <h2>Nash Equilibrium</h2>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -2306,8 +2308,8 @@ Table&nbsp;2: Big 10 Game
 <li>Nash equilibrium assumes:
 <ol type="1">
 <li>Players form <span class="hi">beliefs</span> about the strategies of others.</li>
-<li>These beliefs must be <strong>correct</strong>.</li>
 <li>Each player then chooses their <strong>best response</strong> based on these beliefs.</li>
+<li>In equilibrium, each player’s beliefs about their opponents strategy is realized.</li>
 </ol></li>
 </ul>
 </section>
@@ -2338,7 +2340,10 @@ Table&nbsp;2: Big 10 Game
 </div>
 </div>
 </div>
+<div class="fragment">
+<p>A best response is the optimal strategy <span class="hi">holding the other’s strategy constant</span></p>
 <!-- {{< include 0303-prisdilemma.qmd >}} -->
+</div>
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Dixit, pg. 98</p></li></ol></aside></section></section>
 <section>
 <section id="best-response-analysis" class="title-slide slide level1 center">
@@ -2347,7 +2352,7 @@ Table&nbsp;2: Big 10 Game
 </section>
 <section id="limits-of-iesds" class="slide level2">
 <h2>Limits of IESDS</h2>
-<p>Not every simultaneous-move strategy can by only eliminating dominated strategies</p>
+<p>Not every game is <span class="hi">dominance solvable</span> through IESDS.</p>
 <p>Can we still find NE in those games?</p>
 <ul>
 <li class="fragment">Yes! We just need to remember the <em>best-responding</em> part of our definition of NE</li>
@@ -2358,32 +2363,60 @@ Table&nbsp;2: Big 10 Game
 <ul>
 <li class="fragment">In finding Nash equilibrium, <strong>best-response analysis</strong> is key.</li>
 <li class="fragment">Each player chooses their best action in response to the strategies of others.</li>
-<li class="fragment">This iterative process helps in solving games with multiple strategies.</li>
+<li class="fragment">This iterative process helps in solving games with many possible strategies.</li>
 </ul>
 </section>
 <section id="best-responses" class="slide level2">
 <h2>Best Responses</h2>
 <ul>
-<li class="fragment">If you know what strategy the other player will choose, then you can easily figure out what your best option (or options) are.</li>
-<li class="fragment">Of course, you don’t actually know what the other player will do when you choose your strategy in a game like this—but thinking about the game this way makes it easy to find NEs.</li>
-<li class="fragment">A strategy <span class="math inline">\(s_i\)</span> is a <span class="hi">best response</span> to another player’s strategy <span class="math inline">\(s_{-i}\)</span> if and only if it provides the highest payoff possible when the other player chooses <span class="math inline">\(s_{-i}\)</span>.</li>
+<li class="fragment">If you know other player’s strategy, then you can respond accordingly</li>
+<li class="fragment">Even if you don’t know, forming a <em>belief</em> helps you solve the game</li>
 </ul>
+<div class="fragment">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Best Response Definition</strong></p>
+</div>
+<div class="callout-content">
+<p>Strategy <span class="math inline">\(s_i\)</span> is a <span class="hi">best response</span> to <span class="math inline">\(s_{-i}\)</span> if and only if it provides the highest payoff possible when the other player chooses <span class="math inline">\(s_{-i}\)</span>.</p>
+<ul>
+<li>The best response correspondence <span class="math inline">\(b_i(s_{-i})\)</span> is the strategy or set of strategies that give the highest payoff against <span class="math inline">\(s_{-i}\)</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="some-notes-on-best-responses" class="slide level2">
 <h2>Some Notes on Best Responses</h2>
 <ul>
-<li class="fragment">The phrase “to another player’s strategy” in the definition of a best response is <strong>important</strong>.</li>
-<li class="fragment">A strategy can only be a best response <strong>to some strategy of the other player</strong>. There is no such thing as a strategy which is just “a best response.”</li>
-<li class="fragment">When dealing with strategic-form games with game tables, there is always at least one best response to another player’s strategy—and there may be multiple, if there is more than one strategy which provides the best payoff.</li>
+<li class="fragment">“to another player’s strategy” is <strong>important</strong>.</li>
+<li class="fragment">A strategy can only be a best response <strong>to some strategy of the other player</strong>.
+<ul>
+<li class="fragment">No such thing as a universally best response (that’s a dominant strategy)</li>
+</ul></li>
+<li class="fragment">There is always at least one best response to another player’s strategy
+<ul>
+<li class="fragment">And there may be multiple best responses to another players strategy</li>
+</ul></li>
 </ul>
 </section>
 <section id="best-responses-in-practice" class="slide level2">
 <h2>Best Responses in Practice</h2>
+<p>Marking best responses in normal form:</p>
 <ul>
-<li class="fragment">It’s easy to depict best responses in a game table: we can go through each strategy in the game, and mark each strategy which is a best response to them.</li>
-<li class="fragment">We do this by marking the payoffs—however, it’s important to understand that it’s not the payoff itself which is a best response–we’re just using them as a convenient way to depict where the best responses are.
+<li class="fragment">Go through each strategy in the game of one player (row or column)
 <ul>
-<li class="fragment">In other words: don’t try to describe the best response using the payoff. The best response is always the strategy.</li>
+<li class="fragment">Mark the best option of the <em>responding player</em></li>
+<li class="fragment">Okay to mark the payoffs, but keep in mind they are not same as the <em>strategies</em></li>
+</ul></li>
+<li class="fragment">Don’t try to describe the best response using the payoff.
+<ul>
+<li class="fragment">A best response is a <em>strategy</em></li>
 </ul></li>
 </ul>
 </section>
@@ -2798,18 +2831,692 @@ Table&nbsp;2: Big 10 Game
 <ul>
 <li>(<strong>Low</strong>, <strong>Middle</strong>)</li>
 </ul>
+<div class="fragment">
+<ul>
+<li>This results in a payoff of 5 to Row, 4 to Column</li>
+</ul>
+</div>
 </section>
-<section id="three-player-simultaneous-games" class="slide level2">
-<h2>Three-Player Simultaneous Games</h2>
+<section id="nash-equilibrium-from-best-responses" class="slide level2">
+<h2>Nash Equilibrium from Best Responses</h2>
+<p>Recall the various definitions of a Nash Equilibrium:</p>
+<ul>
+<li class="fragment"><p>no-one can improve their payoff by changing <em>only their own strategy</em>.</p></li>
+<li class="fragment"><p>Each player has <em>no regrets</em> about their strategy.</p></li>
+<li class="fragment"><p><span class="h">Everyone’s strategy is a best responses to everyone else’s</span></p></li>
+</ul>
+</section></section>
+<section>
+<section id="categorizing-simultaneous-games" class="title-slide slide level1 center">
+<h1>Categorizing Simultaneous Games</h1>
+
+</section>
+<section id="games-with-multiple-equilibria" class="slide level2">
+<h2>Games with Multiple Equilibria</h2>
+<p>So we’ve seen games with <em>only one</em> unique NE</p>
+<ul>
+<li class="fragment"><p>But this doesn’t have to be the case</p></li>
+<li class="fragment"><p>Next we will see games with <em>multiple</em> possible strategy profiles which are stable.</p></li>
+</ul>
+</section>
+<section id="coordination-games" class="slide level2">
+<h2>Coordination Games</h2>
+<p>I agreed to meet my friend for coffee, but we didn’t decide on which cafe and now my phone is dead:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Dante, Jose</th>
+<th>Starbucks</th>
+<th>Peet’s</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Starbucks</strong></td>
+<td>1, 1</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong>Peet’s</strong></td>
+<td>0, 0</td>
+<td>1, 1</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="coordination-games-1" class="slide level2">
+<h2>Coordination Games</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Dante, Jose</th>
+<th>Starbucks</th>
+<th>Peet’s</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Starbucks</strong></td>
+<td>1, 1</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong>Peet’s</strong></td>
+<td>0, 0</td>
+<td>1, 1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment"><p>There are two NE’s where we are both happy</p></li>
+<li class="fragment"><p>The problem is getting there</p></li>
+<li class="fragment"><p>This type of game is called a <span class="hi">coordination game</span></p></li>
+</ul>
+</section>
+<section id="coordination-games-2" class="slide level2">
+<h2>Coordination Games</h2>
+<p>Even when there is an obviously preferred NE for both players, it may not be guaranteed that we will get there:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Dante, Jose</th>
+<th>Starbucks</th>
+<th>Roma</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Starbucks</strong></td>
+<td>1, 1</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong>Roma</strong></td>
+<td>0, 0</td>
+<td>2, 2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment"><p>For different sets of <span class="hi">beliefs</span>, either strategy profile is <em>stable</em></p></li>
+<li class="fragment"><p>If we start with (Starbucks, Starbucks) no incentive for either of us to deviate</p></li>
+<li class="fragment"><p>Can we change equilibria?</p>
+<ul>
+<li class="fragment">Only with communication or joint enforcement</li>
+</ul></li>
+</ul>
+</section>
+<section id="coordination-games-3" class="slide level2">
+<h2>Coordination Games</h2>
+<p>What about when players have different preferences over NE?</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Dante, Jose</th>
+<th>T4</th>
+<th>Metropol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>T4</strong></td>
+<td>2, 1</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong>Metropol</strong></td>
+<td>0, 0</td>
+<td>1, 2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment">If Dante tries to be <em>nice</em> and go to Metropol,
+<ul>
+<li class="fragment">what if Jose does the same thing and goes to T4?</li>
+</ul></li>
+<li class="fragment"><em>Repeated games</em> may allow for opportunities to alternate</li>
+</ul>
+</section>
+<section id="anti-coordination-the-game-of-chicken" class="slide level2">
+<h2>Anti-coordination: The Game of Chicken</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>James, Dean</th>
+<th>Swerve (Chicken)</th>
+<th>Straight (Tough)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Swerve</strong></td>
+<td>0, 0</td>
+<td>-1, 1</td>
+</tr>
+<tr class="even">
+<td><strong>Straight</strong></td>
+<td>1, -1</td>
+<td>-2, -2</td>
+</tr>
+</tbody>
+</table>
+<p>Suppose that James and Dean are driving headlong towards each other, but neither one wants to be the ‘chicken’ by swerving out of the way</p>
+<ul>
+<li>What are the best respones?</li>
+</ul>
+</section>
+<section id="the-game-of-chicken" class="slide level2">
+<h2>The Game of Chicken</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>James, Dean</th>
+<th>Swerve (Chicken)</th>
+<th>Straight (Tough)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Swerve</strong></td>
+<td>0, 0</td>
+<td><u>-1</u>, <u>1</u></td>
+</tr>
+<tr class="even">
+<td><strong>Straight</strong></td>
+<td><u>1</u>, <u>-1</u></td>
+<td>-2, -2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment"><p>There are two NE of this game</p></li>
+<li class="fragment"><p>But how can we decide which one will happen?</p></li>
+<li class="fragment"><p>Chapter 9 will look at potential commitment devices either player could use to try to achieve their preferred NE</p></li>
+</ul>
+</section>
+<section id="the-deer-hunt-game" class="slide level2">
+<h2>The Deer Hunt Game</h2>
+<p>Two cavemen, Igg and Ogg, each decide whether to hunt Deer or Rabbit.</p>
+<ul>
+<li><p>Hunting Deer takes two hunters,</p>
+<ul>
+<li>both can eat for two days</li>
+</ul></li>
+<li><p>Hunting Rabbit can be done alone</p>
+<ul>
+<li>only feeds one hunter for one day</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-deer-hunt-game-1" class="slide level2">
+<h2>The Deer Hunt Game</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Igg, Ogg</th>
+<th>Deer</th>
+<th>Rabbit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Deer</strong></td>
+<td>2, 2</td>
+<td>0, 1</td>
+</tr>
+<tr class="even">
+<td><strong>Rabbit</strong></td>
+<td>1, 0</td>
+<td>1, 1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment">Are there any <em>strictly dominated strategies</em>?</li>
+<li class="fragment">What about <em>best responses</em>?</li>
+</ul>
+</section>
+<section id="the-deer-hunt-game-2" class="slide level2">
+<h2>The Deer Hunt Game</h2>
+<p>Here are Igg’s best responses:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Igg, Ogg</th>
+<th>Deer</th>
+<th>Rabbit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Deer</strong></td>
+<td><u>2</u>, 2</td>
+<td>0, 1</td>
+</tr>
+<tr class="even">
+<td><strong>Rabbit</strong></td>
+<td>1, 0</td>
+<td><u>1</u>, 1</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-deer-hunt-game-3" class="slide level2">
+<h2>The Deer Hunt Game</h2>
+<p>And here are Ogg’s best responses…</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Igg, Ogg</th>
+<th>Deer</th>
+<th>Rabbit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Deer</strong></td>
+<td><u>2</u>, <u>2</u></td>
+<td>0, 1</td>
+</tr>
+<tr class="even">
+<td><strong>Rabbit</strong></td>
+<td>1, 0</td>
+<td><u>1</u>, <u>1</u></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="deer-hunt-strict-nash-equilibria" class="slide level2">
+<h2>Deer Hunt: Strict Nash Equilibria</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Igg, Ogg</th>
+<th><span class="math inline">\(Deer\)</span></th>
+<th><span class="math inline">\(Rabbit\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(Deer\)</span></strong></td>
+<td><u>2</u>, <u>2</u></td>
+<td>0,1</td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(Rabbit\)</span></strong></td>
+<td>1,0</td>
+<td><u>1</u>, <u>1</u></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment"><p>At each Nash Equilibrium, each player has no other strategy providing the same payoff.</p></li>
+<li class="fragment"><p>This is a <em>strict</em> Nash Equilibrium.</p></li>
+</ul>
+</section>
+<section id="an-example-of-weak-nash-equilibrium" class="slide level2">
+<h2>An Example of Weak Nash Equilibrium</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Eleanor, Michael</th>
+<th><span class="math inline">\(Swerve\)</span></th>
+<th><span class="math inline">\(Straight\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(Swerve\)</span></strong></td>
+<td><u>1</u>, <u>1</u></td>
+<td><u>1</u>, <u>1</u></td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(Straight\)</span></strong></td>
+<td><u>1</u>, <u>1</u></td>
+<td>0, 0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment"><p>These equlibria feature a player who could get the same payoff if they change.</p></li>
+<li class="fragment"><p>All three are <em>weak</em> Nash equilibria</p></li>
+</ul>
+</section>
+<section id="intuition-on-strict-vs.-weak-equilibria" class="slide level2">
+<h2>Intuition on Strict vs.&nbsp;Weak Equilibria</h2>
+<ul>
+<li class="fragment"><p><span class="h">Strict</span> if and only if each player’s payoff is <em>strictly</em> less by changing strategies</p>
+<ul>
+<li class="fragment">Players have incentive to <strong>avoid</strong> deviations, more stable to mistakes</li>
+</ul></li>
+<li class="fragment"><p><span class="h">Weak</span> if at least one player could change strategy and receive an <em>equal</em> payoff</p>
+<ul>
+<li class="fragment">Indifferent players don’t have an incentive to deviate, but could be sent away by mistake</li>
+</ul></li>
+<li class="fragment"><p>In strict Nash Equilibria, strategies are the <strong>unique</strong> best responses</p></li>
+</ul>
+</section>
+<section id="a-more-complicated-example" class="slide level2">
+<h2>A more complicated example</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th><span class="math inline">\(a\)</span></th>
+<th><span class="math inline">\(b\)</span></th>
+<th><span class="math inline">\(c\)</span></th>
+<th><span class="math inline">\(d\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(A\)</span></td>
+<td>1, 1</td>
+<td>2, 2</td>
+<td>2, 2</td>
+<td>2, 1</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(B\)</span></td>
+<td>1, 3</td>
+<td>1, 3</td>
+<td>2, 2</td>
+<td>2, 3</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(C\)</span></td>
+<td>1, 2</td>
+<td>2, 4</td>
+<td>1, 3</td>
+<td>2, 3</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(D\)</span></td>
+<td>3, 2</td>
+<td>2, 3</td>
+<td>1, 4</td>
+<td>2, 2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment">Can you find any strictly dominated strategies?</li>
+<li class="fragment">Can you find any NE?</li>
+<li class="fragment">Which are <em>weak</em> vs <em>strict</em> equilibria?</li>
+</ul>
+</section>
+<section id="a-more-complicated-example-1" class="slide level2">
+<h2>A more complicated example</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 15%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th><span class="math inline">\(a\)</span></th>
+<th><span class="math inline">\(b\)</span></th>
+<th><span class="math inline">\(c\)</span></th>
+<th><span class="math inline">\(d\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(A\)</span></td>
+<td>1, 1</td>
+<td><u>2</u>, <u>2</u></td>
+<td><u>2</u>, <u>2</u></td>
+<td><u>2</u>, 1</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(B\)</span></td>
+<td>1, <u>3</u></td>
+<td>1, <u>3</u></td>
+<td><u>2</u>, 2</td>
+<td><u>2</u>,<u>3</u></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(C\)</span></td>
+<td>1, 2</td>
+<td><u>2</u>, <u>4</u></td>
+<td>1, 3</td>
+<td><u>2</u>, 3</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(D\)</span></td>
+<td><u>3</u>, 2</td>
+<td><u>2</u>, 3</td>
+<td>1, <u>4</u></td>
+<td><u>2</u>, 2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment">No strictly dominated strategies because each is a BR to some strategy</li>
+<li class="fragment"><strong>NE</strong>: <span class="math inline">\((A,b)\)</span>, <span class="math inline">\((A,c)\)</span>, <span class="math inline">\((B,d)\)</span>, <span class="math inline">\((C,b)\)</span>
+<ul>
+<li class="fragment">all are <em>weak</em> equilibria</li>
+</ul></li>
+</ul>
+</section>
+<section id="symmetric-games" class="slide level2">
+<h2>Symmetric Games</h2>
+<ul>
+<li class="fragment"><span class="hi">symmetric game</span>s are <strong>indifferent to an exchange of players</strong>
+<ul>
+<li class="fragment">Players are interchangable with each other</li>
+</ul></li>
+<li class="fragment">Examples: Prisoner’s dilemma, Deer Hunt, Game of Chicken</li>
+</ul>
+</section>
+<section id="symmetric-games-1" class="slide level2">
+<h2>Symmetric Games</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(P_1, P_2\)</span></th>
+<th><span class="math inline">\(s_2\)</span></th>
+<th><span class="math inline">\(s^{'}_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(s_1\)</span></td>
+<td><span class="math inline">\(a, a\)</span></td>
+<td><span class="math inline">\(b, c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(s^{'}_1\)</span></td>
+<td><span class="math inline">\(c, b\)</span></td>
+<td><span class="math inline">\(d, d\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>you could flip the payoffs with players, and the game would be unchanged</li>
+</ul>
+</section>
+<section id="symmetric-games-2" class="slide level2">
+<h2>Symmetric Games</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(P_1, P_2\)</span></th>
+<th><span class="math inline">\(s_2\)</span></th>
+<th><span class="math inline">\(s^{'}_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(s_1\)</span></td>
+<td><span class="math inline">\(a, a\)</span></td>
+<td><span class="math inline">\(b, c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(s^{'}_1\)</span></td>
+<td><span class="math inline">\(c, b\)</span></td>
+<td><span class="math inline">\(d, d\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>A <span class="hi">Prisoner’s Dilemma</span> is any game in which:</p>
+<ul>
+<li><span class="math inline">\(s\)</span> strictly dominates <span class="math inline">\(s^{'}\)</span> (<span class="math inline">\(a&gt;c\)</span>, <span class="math inline">\(b&gt;d\)</span>)</li>
+<li>The Nash outcome (<span class="math inline">\(a,a\)</span>) is pareto dominated by the outcome (<span class="math inline">\(d,d\)</span>)</li>
+</ul>
+</section>
+<section id="symmetric-games-3" class="slide level2">
+<h2>Symmetric Games</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(P_1, P_2\)</span></th>
+<th><span class="math inline">\(s_2\)</span></th>
+<th><span class="math inline">\(s^{'}_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(s_1\)</span></td>
+<td><span class="math inline">\(a, a\)</span></td>
+<td><span class="math inline">\(b, c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(s^{'}_1\)</span></td>
+<td><span class="math inline">\(c, b\)</span></td>
+<td><span class="math inline">\(d, d\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>A <span class="hi">coordination game</span> is when:</p>
+<ul>
+<li><span class="math inline">\((s_1,s_1)\)</span> and <span class="math inline">\((s^{'}_1, s^{'}_2)\)</span> are Nash equlibria</li>
+<li>both players choose the same strategy</li>
+</ul>
+</section>
+<section id="symmetric-games-4" class="slide level2">
+<h2>Symmetric Games</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(P_1, P_2\)</span></th>
+<th><span class="math inline">\(s_2\)</span></th>
+<th><span class="math inline">\(s^{'}_2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(s_1\)</span></td>
+<td><span class="math inline">\(a, a\)</span></td>
+<td><span class="math inline">\(b, c\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(s^{'}_1\)</span></td>
+<td><span class="math inline">\(c, b\)</span></td>
+<td><span class="math inline">\(d, d\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>A game of <span class="hi">Chicken</span> is when:</p>
+<ul>
+<li><span class="math inline">\(c&gt;a\)</span> and <span class="math inline">\(b&gt;d\)</span> (or <span class="math inline">\(a&gt;c\)</span> and <span class="math inline">\(d&gt;b\)</span>)</li>
+<li>So that the Nash equilibria have players choosing opposite strategies</li>
+</ul>
+</section>
+<section id="which-kind-of-3x3-game" class="slide level2">
+<h2>Which kind of 3x3 game?</h2>
+<p>Test your understanding:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><strong>A</strong></td>
+<td style="text-align: center;">1, 1</td>
+<td style="text-align: center;">1, 0</td>
+<td style="text-align: center;">3, 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong>B</strong></td>
+<td style="text-align: center;">0, 1</td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">2, 1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong>C</strong></td>
+<td style="text-align: center;">0, 3</td>
+<td style="text-align: center;">1, 2</td>
+<td style="text-align: center;">4, 4</td>
+</tr>
+</tbody>
+</table>
+<p>Which type of game is this?</p>
+</section>
+<section id="which-kind-of-3x3-game-1" class="slide level2">
+<h2>Which kind of 3x3 game?</h2>
+<p>Test your understanding:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><strong>A</strong></td>
+<td style="text-align: center;"><u>1</u>, <u>1</u></td>
+<td style="text-align: center;">1, 0</td>
+<td style="text-align: center;">3, 0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><strong>B</strong></td>
+<td style="text-align: center;">0, 1</td>
+<td style="text-align: center;"><u>2</u>, <u>2</u></td>
+<td style="text-align: center;">2, 1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><strong>C</strong></td>
+<td style="text-align: center;">0, 3</td>
+<td style="text-align: center;">1, 2</td>
+<td style="text-align: center;"><u>4</u>, <u>4</u></td>
+</tr>
+</tbody>
+</table>
+<p>Which type of game is this?</p>
+<ul>
+<li>A <span class="hi">coordination game</span></li>
+</ul>
+</section></section>
+<section>
+<section id="three-player-simultaneous-games" class="title-slide slide level1 center">
+<h1>Three-Player Simultaneous Games</h1>
+
+</section>
+<section id="three-player-simultaneous-planting-game" class="slide level2">
+<h2>Three-player simultaneous planting game</h2>
 <p>Let’s create a modified version of the three-roommate planting game:</p>
 <ul>
-<li class="fragment"><p>Now instead of observing who contributed to the garden already in certain order, suppose that Emily, Nina, and Talia have to choose <em>simultaneously</em></p></li>
-<li class="fragment"><p>Also instead of the garden either <em>dying</em> or <em>surviving</em>, we’ll add more detailed levels of quality depending on who contributed</p></li>
+<li class="fragment"><p>Suppose that Emily, Nina, and Talia have to choose <em>simultaneously</em></p></li>
+<li class="fragment"><p>Instead of one roomate having a first-mover advantage</p></li>
 </ul>
 </section>
 <section id="simultaneous-planting-game" class="slide level2">
 <h2>Simultaneous Planting Game</h2>
-<p>What are Emily’s preferences in this modified game? <sup>1</sup></p>
+<p>Preferences from each roommate’s perspective <sup>1</sup></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -2819,7 +3526,7 @@ Table&nbsp;2: Big 10 Game
 </thead>
 <tbody>
 <tr class="odd">
-<td>Nina and Talia contribute, Emily doesn’t</td>
+<td>My two roommates contribute, but I don’t</td>
 <td>6</td>
 </tr>
 <tr class="even">
@@ -2827,11 +3534,11 @@ Table&nbsp;2: Big 10 Game
 <td>5</td>
 </tr>
 <tr class="odd">
-<td>Either Nina or Talia contribute, Emily doesn’t</td>
+<td>One roommate contributes, not me</td>
 <td>4</td>
 </tr>
 <tr class="even">
-<td>Either Nina or Talia contribute, and Emily does</td>
+<td>One roommate contributes, and I do too</td>
 <td>3</td>
 </tr>
 <tr class="odd">
@@ -2839,7 +3546,7 @@ Table&nbsp;2: Big 10 Game
 <td>2</td>
 </tr>
 <tr class="even">
-<td>Emily is the only one to contribute</td>
+<td>I am the only one to contribute</td>
 <td>1</td>
 </tr>
 </tbody>
@@ -2970,535 +3677,8 @@ Table&nbsp;2: Big 10 Game
 </tr>
 </tbody>
 </table>
-</div></div>
-</section>
-<section id="nash-equilibrium-from-best-responses" class="slide level2">
-<h2>Nash Equilibrium from Best Responses</h2>
-<p>Recall the various definitions of a Nash Equilibrium:</p>
-<ul>
-<li class="fragment"><p>no single player can make themselves better off by <span class="hi"><em>changing only their own strategy</em></span>.</p></li>
-<li class="fragment"><p>After the game is played, each player has <span class="hi"><em>no regrets</em></span> about their strategy.</p></li>
-<li class="fragment"><p>Now we can use: “A strategy profile such that each player’s strategy is a best responses to the other player’s strategy.”</p></li>
-<li class="fragment"><p>“Playing a best response” = “cannot obtain a larger payoff by unilaterally deviating”</p></li>
-</ul>
-</section></section>
-<section>
-<section id="multiple-equilibria-in-pure-strategies" class="title-slide slide level1 center">
-<h1>Multiple Equilibria in Pure Strategies</h1>
-
-</section>
-<section id="games-with-multiple-equilibria" class="slide level2">
-<h2>Games with Multiple Equilibria</h2>
-<p>So we’ve seen games with <em>only one</em> unique NE</p>
-<ul>
-<li class="fragment"><p>But this doesn’t have to be the case</p></li>
-<li class="fragment"><p>Next we will see games with <em>multiple</em> possible strategy profiles which are stable.</p></li>
-</ul>
-</section>
-<section id="coordination-games" class="slide level2">
-<h2>Coordination Games</h2>
-<p>I agreed to meet my friend for coffee, but we didn’t decide on which cafe and now my phone is dead:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Dante, Jose</th>
-<th>Starbucks</th>
-<th>Peet’s</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Starbucks</strong></td>
-<td>1, 1</td>
-<td>0, 0</td>
-</tr>
-<tr class="even">
-<td><strong>Peet’s</strong></td>
-<td>0, 0</td>
-<td>1, 1</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="coordination-games-1" class="slide level2">
-<h2>Coordination Games</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Dante, Jose</th>
-<th>Starbucks</th>
-<th>Peet’s</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Starbucks</strong></td>
-<td>1, 1</td>
-<td>0, 0</td>
-</tr>
-<tr class="even">
-<td><strong>Peet’s</strong></td>
-<td>0, 0</td>
-<td>1, 1</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment"><p>There are two NE’s where we are both happy</p></li>
-<li class="fragment"><p>The problem is getting there</p></li>
-<li class="fragment"><p>This type of game is called a <span class="hi">coordination game</span></p></li>
-</ul>
-</section>
-<section id="coordination-games-2" class="slide level2">
-<h2>Coordination Games</h2>
-<p>Even when there is an obviously preferred NE for both players, it may not be guaranteed that we will get there:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Dante, Jose</th>
-<th>Starbucks</th>
-<th>Roma</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Starbucks</strong></td>
-<td>1, 1</td>
-<td>0, 0</td>
-</tr>
-<tr class="even">
-<td><strong>Roma</strong></td>
-<td>0, 0</td>
-<td>2, 2</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment"><p>Depending on the set of <span class="hi">beliefs</span> held by the players, both strategy profiles could be theoretically stable</p></li>
-<li class="fragment"><p>If for some reason we started out in a (Starbucks, Starbucks) equilibrium, there would be no incentive for either of us to deviate without communicating our intent to each other</p></li>
-</ul>
-</section>
-<section id="coordination-games-3" class="slide level2">
-<h2>Coordination Games</h2>
-<p>What should happen when different players have different preferences over NE?</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Dante, Jose</th>
-<th>T4</th>
-<th>Metropol</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>T4</strong></td>
-<td>2, 1</td>
-<td>0, 0</td>
-</tr>
-<tr class="even">
-<td><strong>Metropol</strong></td>
-<td>0, 0</td>
-<td>1, 2</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment">If Dante tries to be <em>nice</em> and go to Metropol, what if Jose does the same thing and goes to T4?</li>
-<li class="fragment">In chapter 10, with <em>repeated games</em>, there may be opportunities for us to alternate between each of our favorites</li>
-</ul>
-</section>
-<section id="the-deer-hunt-game" class="slide level2">
-<h2>The Deer Hunt Game</h2>
-<p>Two cavemen, Igg and Ogg, each decide whether to hunt Deer or Rabbit.</p>
-<ul>
-<li><p>If both hunt Deer, they can work together to bring one down and have enough meat to share with leftovers</p>
-<ul>
-<li>Each earn payoffs of 2</li>
-</ul></li>
-<li><p>If instead the other goes off chasing a rabbit, the cameman hunting deer won’t be able to catch any meat, but the one hunting rabbit will get just enough to feed themselves</p>
-<ul>
-<li>Unsuccessful Deer hunter gets 0, rabbit hunter gets 1</li>
-</ul></li>
-<li><p>Or both cavemen could just decide to go off and hunt rabbits by themselves, ensuring they get can feed themselves</p>
-<ul>
-<li>Both get 1</li>
-</ul></li>
-</ul>
-</section>
-<section id="the-deer-hunt-game-1" class="slide level2">
-<h2>The Deer Hunt Game</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Igg, Ogg</th>
-<th>Deer</th>
-<th>Rabbit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Deer</strong></td>
-<td>2, 2</td>
-<td>0, 1</td>
-</tr>
-<tr class="even">
-<td><strong>Rabbit</strong></td>
-<td>1, 0</td>
-<td>1, 1</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment">Are there any <em>strictly dominated strategies</em>?</li>
-<li class="fragment">What about <em>best responses</em>?</li>
-</ul>
-</section>
-<section id="the-deer-hunt-game-2" class="slide level2">
-<h2>The Deer Hunt Game</h2>
-<p>Here are Igg’s best responses…</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Igg, Ogg</th>
-<th>Deer</th>
-<th>Rabbit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Deer</strong></td>
-<td><u>2</u>, 2</td>
-<td>0, 1</td>
-</tr>
-<tr class="even">
-<td><strong>Rabbit</strong></td>
-<td>1, 0</td>
-<td><u>1</u>, 1</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="the-deer-hunt-game-3" class="slide level2">
-<h2>The Deer Hunt Game</h2>
-<p>And here are Ogg’s best responses…</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Igg, Ogg</th>
-<th>Deer</th>
-<th>Rabbit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Deer</strong></td>
-<td><u>2</u>, <u>2</u></td>
-<td>0, 1</td>
-</tr>
-<tr class="even">
-<td><strong>Rabbit</strong></td>
-<td>1, 0</td>
-<td><u>1</u>, <u>1</u></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="the-game-of-chicken" class="slide level2">
-<h2>The Game of Chicken</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>James, Dean</th>
-<th>Swerve (Chicken)</th>
-<th>Straight (Tough)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Swerve</strong></td>
-<td>0, 0</td>
-<td>-1, 1</td>
-</tr>
-<tr class="even">
-<td><strong>Straight</strong></td>
-<td>1, -1</td>
-<td>-2, -2</td>
-</tr>
-</tbody>
-</table>
-<p>Suppose that James and Dean are driving headlong towards each other, but neither one wants to be the ‘chicken’ by swerving out of the way</p>
-<ul>
-<li>What are the best respones?</li>
-</ul>
-</section>
-<section id="the-game-of-chicken-1" class="slide level2">
-<h2>The Game of Chicken</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>James, Dean</th>
-<th>Swerve (Chicken)</th>
-<th>Straight (Tough)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Swerve</strong></td>
-<td>0, 0</td>
-<td><u>-1</u>, <u>1</u></td>
-</tr>
-<tr class="even">
-<td><strong>Straight</strong></td>
-<td><u>1</u>, <u>-1</u></td>
-<td>-2, -2</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment"><p>There are two NE of this game</p></li>
-<li class="fragment"><p>But how can we decide which one will happen?</p></li>
-<li class="fragment"><p>Chapter 9 will look at potential commitment devices either player could use to try to achieve their preferred NE</p></li>
-</ul>
-</section>
-<section id="another-example-when-elimination-does-nothing" class="slide level2">
-<h2>Another Example: When Elimination Does Nothing</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th><span class="math inline">\(a\)</span></th>
-<th><span class="math inline">\(b\)</span></th>
-<th><span class="math inline">\(c\)</span></th>
-<th><span class="math inline">\(d\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(A\)</span></td>
-<td>1, 1</td>
-<td>2, 2</td>
-<td>2, 2</td>
-<td>2, 1</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(B\)</span></td>
-<td>1, 3</td>
-<td>1, 3</td>
-<td>2, 2</td>
-<td>2, 3</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(C\)</span></td>
-<td>1, 2</td>
-<td>2, 4</td>
-<td>1, 3</td>
-<td>2, 3</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(D\)</span></td>
-<td>3, 2</td>
-<td>2, 3</td>
-<td>1, 4</td>
-<td>2, 2</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment">Can you find any strictly dominated strategies?</li>
-<li class="fragment">Can you find any NE?</li>
-</ul>
-</section>
-<section id="classifying-nes" class="slide level2">
-<h2>Classifying NEs</h2>
-<ul>
-<li class="fragment">Nash Equilibria may be either <em>strict</em> or <em>weak</em>.</li>
-<li class="fragment">A Nash Equilibrium is <span class="hi">strict</span> if and only if each player would receive a (strictly) smaller payoff by changing their own strategy.</li>
-<li class="fragment">If a Nash Equilibrium is not strict—meaning that at least one player could change their own strategy and receive an equal (but not larger) payoff
-<ul>
-<li class="fragment">it is [weak]{hi}.</li>
-</ul></li>
-</ul>
-</section>
-<section id="intuition-on-strict-vs.-weak-equilibria" class="slide level2">
-<h2>Intuition on Strict vs.&nbsp;Weak Equilibria</h2>
-<ul>
-<li class="fragment">In any Nash Equilibrium, no player has a reason to change their own strategy—they cannot get a higher payoff this way.</li>
-<li class="fragment">Strict Nash Equilibria go a little further: not only does no player have a reason to change their own strategy, they also have a reason <strong>not</strong> to, because any other strategy would provide them a worse payoff.</li>
-<li class="fragment">If a Nash Equilibrium is weak, it means that some player could change their strategy, and get exactly the same payoff they already were. They have no reason to do this, but also no reason <strong>not</strong> to.</li>
-<li class="fragment">We can also say that a strict Nash Equilibrium is one where each player is playing a strategy which is a <strong>unique</strong> best response to the strategies chosen by other players.</li>
-</ul>
-</section>
-<section id="deer-hunt-strict-nash-equilibria" class="slide level2">
-<h2>Deer Hunt: Strict Nash Equilibria</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Igg, Ogg</th>
-<th><span class="math inline">\(Deer\)</span></th>
-<th><span class="math inline">\(Rabbit\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong><span class="math inline">\(Deer\)</span></strong></td>
-<td><u>2</u>, <u>2</u></td>
-<td>0,1</td>
-</tr>
-<tr class="even">
-<td><strong><span class="math inline">\(Rabbit\)</span></strong></td>
-<td>1,0</td>
-<td><u>1</u>, <u>1</u></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment"><p>Here, note that at each Nash Equilibrium, each player has no other strategy providing the same payoff.</p></li>
-<li class="fragment"><p>This is a <em>strict</em> Nash Equilibrium.</p></li>
-</ul>
-</section>
-<section id="weak-nash-equilibria-example" class="slide level2">
-<h2>Weak Nash Equilibria Example</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Eleanor, Michael</th>
-<th><span class="math inline">\(Swerve\)</span></th>
-<th><span class="math inline">\(Straight\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong><span class="math inline">\(Swerve\)</span></strong></td>
-<td><u>1</u>, <u>1</u></td>
-<td><u>1</u>, <u>1</u></td>
-</tr>
-<tr class="even">
-<td><strong><span class="math inline">\(Straight\)</span></strong></td>
-<td><u>1</u>, <u>1</u></td>
-<td>0, 0</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment">However, in this game, each Nash Equilibrium features at least one player who could still get the same payoff if they change their strategy.</li>
-</ul>
-</section>
-<section id="prisoners-dilemmas" class="slide level2">
-<h2>Prisoners’ Dilemmas</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Guido, Luca</th>
-<th><span class="math inline">\(Testify\)</span></th>
-<th><span class="math inline">\(Keep~Quiet\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong><span class="math inline">\(Testify\)</span></strong></td>
-<td>-10, -10</td>
-<td>0, -20</td>
-</tr>
-<tr class="even">
-<td><strong><span class="math inline">\(Keep~Quiet\)</span></strong></td>
-<td>-20, 0</td>
-<td>-1, -1</td>
-</tr>
-</tbody>
-</table>
-<p>In general, a Prisoner’s Dilemma is any game in which:</p>
-<ul>
-<li>The players have the same strategies, A and B.</li>
-<li>A strictly dominates B, making (A, A) the only NE.</li>
-<li>But (B, B) is better for both players than (A, A). ::: —</li>
-</ul>
-</section>
-<section id="coordination-games-4" class="slide level2">
-<h2>Coordination Games</h2>
-<ul>
-<li class="fragment">A <span class="hi">coordination game</span> is a game in which the players all have the same strategy sets, and the NEs are all of the strategy profiles where the players choose the same strategy.</li>
-<li class="fragment">The Deer Hunt is a coordination game.</li>
-</ul>
-</section>
-<section id="other-coordination-games" class="slide level2">
-<h2>Other Coordination Games</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th style="text-align: center;">A</th>
-<th style="text-align: center;">B</th>
-<th style="text-align: center;">C</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;"><strong>A</strong></td>
-<td style="text-align: center;">1, 1</td>
-<td style="text-align: center;">1, 0</td>
-<td style="text-align: center;">3, 0</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;"><strong>B</strong></td>
-<td style="text-align: center;">0, 1</td>
-<td style="text-align: center;">2, 2</td>
-<td style="text-align: center;">2, 1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;"><strong>B</strong></td>
-<td style="text-align: center;">0, 3</td>
-<td style="text-align: center;">1, 2</td>
-<td style="text-align: center;">4, 4</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="anti-coordination-games" class="slide level2">
-<h2>Anti-Coordination Games</h2>
-<ul>
-<li class="fragment">An <span class="hi">anti-coordination game</span> is a game in which the players all have the same strategy sets, but the NEs are all of the strategy profiles where the players choose different strategies.</li>
-</ul>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>James, Dean</th>
-<th>Swerve (Chicken)</th>
-<th>Straight (Tough)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Swerve</strong></td>
-<td>0, 0</td>
-<td><u>-1</u>, <u>1</u></td>
-</tr>
-<tr class="even">
-<td><strong>Straight</strong></td>
-<td><u>1</u>, <u>-1</u></td>
-<td>-2, -2</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="symmetric-games" class="slide level2">
-<h2>Symmetric Games</h2>
-<ul>
-<li class="fragment">A <span class="hi">symmetric game</span> is a game which is <strong>indifferent to an exchange of players</strong> in other words, a game where the players are interchangeable.</li>
-<li class="fragment">Consider the Prisoner’s Dilemma: if we swap the players’ names, and their positions in the game table, and the order of their payoffs, we get the same game that we started with.</li>
-</ul>
-</section>
-<section id="symmetric-games-1" class="slide level2">
-<h2>Symmetric Games</h2>
-<ul>
-<li class="fragment">A two-player game with a game table is symmetric if:
-<ul>
-<li class="fragment">The players have the same strategy sets.</li>
-<li class="fragment">In the on-diagonal cells of the game table, the players receive equal payoffs.</li>
-<li class="fragment">In the “mirrored” off-diagonal cells of the game table, the players’ payoffs are reversed.</li>
-</ul></li>
-<li class="fragment">Of the games we’ve just looked at, the Deer Hunt, the 3x3 coordination game, and Chicken are symmetric games. Bach and Stravinsky is not.</li>
-</ul>
-<!-- {{< include 0306-weakdominance.qmd >}} -->
+</div><p>The Nash equilibrium is {<span class="h">Don’t</span>, <span class="hi-bb">Don’t</span>, <span class="hi-grey">Don’t</span>}</p>
+</div>
 <!-- {{< include 0307-rationalize.qmd >}} -->
 
 

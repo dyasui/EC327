@@ -548,7 +548,7 @@ window.Quarto = {
 <h1>Best-Response Analysis</h1>
 <section id="limits-of-iesds" class="level2">
 <h2 class="anchored" data-anchor-id="limits-of-iesds">Limits of IESDS</h2>
-<p>Not every simultaneous-move strategy can by only eliminating dominated strategies</p>
+<p>Not every game is <span class="hi">dominance solvable</span> through IESDS.</p>
 <p>Can we still find NE in those games?</p>
 <div class="incremental">
 <ul class="incremental">
@@ -563,7 +563,7 @@ window.Quarto = {
 <ul class="incremental">
 <li>In finding Nash equilibrium, <strong>best-response analysis</strong> is key.</li>
 <li>Each player chooses their best action in response to the strategies of others.</li>
-<li>This iterative process helps in solving games with multiple strategies.</li>
+<li>This iterative process helps in solving games with many possible strategies.</li>
 </ul>
 </div>
 <hr>
@@ -572,10 +572,26 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="best-responses">Best Responses</h2>
 <div class="incremental">
 <ul class="incremental">
-<li>If you know what strategy the other player will choose, then you can easily figure out what your best option (or options) are.</li>
-<li>Of course, you don’t actually know what the other player will do when you choose your strategy in a game like this—but thinking about the game this way makes it easy to find NEs.</li>
-<li>A strategy <span class="math inline">\(s_i\)</span> is a <span class="hi">best response</span> to another player’s strategy <span class="math inline">\(s_{-i}\)</span> if and only if it provides the highest payoff possible when the other player chooses <span class="math inline">\(s_{-i}\)</span>.</li>
+<li>If you know other player’s strategy, then you can respond accordingly</li>
+<li>Even if you don’t know, forming a <em>belief</em> helps you solve the game</li>
 </ul>
+</div>
+<p>. . .</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Best Response Definition
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Strategy <span class="math inline">\(s_i\)</span> is a <span class="hi">best response</span> to <span class="math inline">\(s_{-i}\)</span> if and only if it provides the highest payoff possible when the other player chooses <span class="math inline">\(s_{-i}\)</span>.</p>
+<ul>
+<li>The best response correspondence <span class="math inline">\(b_i(s_{-i})\)</span> is the strategy or set of strategies that give the highest payoff against <span class="math inline">\(s_{-i}\)</span></li>
+</ul>
+</div>
 </div>
 <hr>
 </section>
@@ -583,21 +599,32 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="some-notes-on-best-responses">Some Notes on Best Responses</h2>
 <div class="incremental">
 <ul class="incremental">
-<li>The phrase “to another player’s strategy” in the definition of a best response is <strong>important</strong>.</li>
-<li>A strategy can only be a best response <strong>to some strategy of the other player</strong>. There is no such thing as a strategy which is just “a best response.”</li>
-<li>When dealing with strategic-form games with game tables, there is always at least one best response to another player’s strategy—and there may be multiple, if there is more than one strategy which provides the best payoff.</li>
+<li>“to another player’s strategy” is <strong>important</strong>.</li>
+<li>A strategy can only be a best response <strong>to some strategy of the other player</strong>.
+<ul class="incremental">
+<li>No such thing as a universally best response (that’s a dominant strategy)</li>
+</ul></li>
+<li>There is always at least one best response to another player’s strategy
+<ul class="incremental">
+<li>And there may be multiple best responses to another players strategy</li>
+</ul></li>
 </ul>
 </div>
 <hr>
 </section>
 <section id="best-responses-in-practice" class="level2">
 <h2 class="anchored" data-anchor-id="best-responses-in-practice">Best Responses in Practice</h2>
+<p>Marking best responses in normal form:</p>
 <div class="incremental">
 <ul class="incremental">
-<li>It’s easy to depict best responses in a game table: we can go through each strategy in the game, and mark each strategy which is a best response to them.</li>
-<li>We do this by marking the payoffs—however, it’s important to understand that it’s not the payoff itself which is a best response–we’re just using them as a convenient way to depict where the best responses are.
+<li>Go through each strategy in the game of one player (row or column)
 <ul class="incremental">
-<li>In other words: don’t try to describe the best response using the payoff. The best response is always the strategy.</li>
+<li>Mark the best option of the <em>responding player</em></li>
+<li>Okay to mark the payoffs, but keep in mind they are not same as the <em>strategies</em></li>
+</ul></li>
+<li>Don’t try to describe the best response using the payoff.
+<ul class="incremental">
+<li>A best response is a <em>strategy</em></li>
 </ul></li>
 </ul>
 </div>
@@ -1023,187 +1050,10 @@ window.Quarto = {
 <ul>
 <li>(<strong>Low</strong>, <strong>Middle</strong>)</li>
 </ul>
-<hr>
-</section>
-<section id="three-player-simultaneous-games" class="level2">
-<h2 class="anchored" data-anchor-id="three-player-simultaneous-games">Three-Player Simultaneous Games</h2>
-<p>Let’s create a modified version of the three-roommate planting game:</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>Now instead of observing who contributed to the garden already in certain order, suppose that Emily, Nina, and Talia have to choose <em>simultaneously</em></p></li>
-<li><p>Also instead of the garden either <em>dying</em> or <em>surviving</em>, we’ll add more detailed levels of quality depending on who contributed</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="simultaneous-planting-game" class="level2">
-<h2 class="anchored" data-anchor-id="simultaneous-planting-game">Simultaneous Planting Game</h2>
-<p>What are Emily’s preferences in this modified game? <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Outcome</th>
-<th>Payoff</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Nina and Talia contribute, Emily doesn’t</td>
-<td>6</td>
-</tr>
-<tr class="even">
-<td>Everyone contributes</td>
-<td>5</td>
-</tr>
-<tr class="odd">
-<td>Either Nina or Talia contribute, Emily doesn’t</td>
-<td>4</td>
-</tr>
-<tr class="even">
-<td>Either Nina or Talia contribute, and Emily does</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>No-one contributes</td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>Emily is the only one to contribute</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="simultaneous-planting-game-1" class="level2">
-<h2 class="anchored" data-anchor-id="simultaneous-planting-game-1">Simultaneous Planting Game</h2>
-<p><span class="hi-grey">Talia chooses:</span></p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><span class="hi-grey">Contribute</span></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 28%">
-<col style="width: 35%">
-<col style="width: 35%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="h">Emily</span>, <span class="hi-bb">Nina</span></th>
-<th><span class="hi-bb">Contribute</span></th>
-<th><span class="hi-bb">Don’t</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="h">Contribute</span></td>
-<td><span class="h">5</span>, <span class="hi-bb">5</span>, <span class="hi-grey">5</span></td>
-<td><span class="h">3</span>, <span class="hi-bb">6</span>, <span class="hi-grey">3</span></td>
-</tr>
-<tr class="even">
-<td><span class="h">Don’t</span></td>
-<td><span class="h">6</span>, <span class="hi-bb">3</span>, <span class="hi-grey">3</span></td>
-<td><span class="h">4</span>, <span class="hi-bb">4</span>, <span class="hi-grey">1</span></td>
-</tr>
-</tbody>
-</table>
-</div><div class="column" style="width:50%;">
-<p><span class="hi-grey">Don’t Contribute</span></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 28%">
-<col style="width: 35%">
-<col style="width: 35%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="h">Emily</span>, <span class="hi-bb">Nina</span></th>
-<th><span class="hi-bb">Contribute</span></th>
-<th><span class="hi-bb">Don’t</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="h">Contribute</span></td>
-<td><span class="h">3</span>, <span class="hi-bb">3</span>, <span class="hi-grey">6</span></td>
-<td><span class="h">1</span>, <span class="hi-bb">4</span>, <span class="hi-grey">4</span></td>
-</tr>
-<tr class="even">
-<td><span class="h">Don’t</span></td>
-<td><span class="h">4</span>, <span class="hi-bb">1</span>, <span class="hi-grey">4</span></td>
-<td><span class="h">2</span>, <span class="hi-bb">2</span>, <span class="hi-grey">2</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<p>. . .</p>
 <ul>
-<li>Can you find any dominant strategies?</li>
+<li>This results in a payoff of 5 to Row, 4 to Column</li>
 </ul>
-<hr>
-</section>
-<section id="simultaneous-planting-game-2" class="level2">
-<h2 class="anchored" data-anchor-id="simultaneous-planting-game-2">Simultaneous Planting Game</h2>
-<p><span class="hi-grey">Talia chooses:</span></p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><span class="hi-grey">Contribute</span></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 35%">
-<col style="width: 41%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="h">Emily</span>, <span class="hi-bb">Nina</span></th>
-<th><span class="hi-bb">Contribute</span></th>
-<th><span class="hi-bb">Don’t</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="h">Contribute</span></td>
-<td><span class="h">5</span>, <span class="hi-bb">5</span>, <span class="hi-grey">5</span></td>
-<td><span class="h">3</span>, <span class="hi-bb"><u>6</u></span>, <span class="hi-grey">3</span></td>
-</tr>
-<tr class="even">
-<td><span class="h">Don’t</span></td>
-<td><span class="h"><u>6</u></span>, <span class="hi-bb">3</span>, <span class="hi-grey">3</span></td>
-<td><span class="h"><u>4</u></span>, <span class="hi-bb"><u>4</u></span>, <span class="hi-grey">1</span></td>
-</tr>
-</tbody>
-</table>
-</div><div class="column" style="width:50%;">
-<p><span class="hi-grey">Don’t Contribute</span></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 36%">
-<col style="width: 42%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="h">Emily</span>, <span class="hi-bb">Nina</span></th>
-<th><span class="hi-bb">Contribute</span></th>
-<th><span class="hi-bb">Don’t</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="h">Contribute</span></td>
-<td><span class="h">3</span>, <span class="hi-bb">3</span>, <span class="hi-grey"><u>6</u></span></td>
-<td><span class="h">1</span>, <span class="hi-bb"><u>4</u></span>, <span class="hi-grey"><u>4</u></span></td>
-</tr>
-<tr class="even">
-<td><span class="h">Don’t</span></td>
-<td><span class="h"><u>4</u></span>, <span class="hi-bb">1</span>, <span class="hi-grey"><u>4</u></span></td>
-<td><span class="h"><u>2</u></span>, <span class="hi-bb"><u>2</u></span>, <span class="hi-grey"><u>2</u></span></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
 <hr>
 </section>
 <section id="nash-equilibrium-from-best-responses" class="level2">
@@ -1211,575 +1061,9 @@ window.Quarto = {
 <p>Recall the various definitions of a Nash Equilibrium:</p>
 <div class="incremental">
 <ul class="incremental">
-<li><p>no single player can make themselves better off by <span class="hi"><em>changing only their own strategy</em></span>.</p></li>
-<li><p>After the game is played, each player has <span class="hi"><em>no regrets</em></span> about their strategy.</p></li>
-<li><p>Now we can use: “A strategy profile such that each player’s strategy is a best responses to the other player’s strategy.”</p></li>
-<li><p>“Playing a best response” = “cannot obtain a larger payoff by unilaterally deviating”</p></li>
-</ul>
-</div>
-</section>
-</section>
-<section id="multiple-equilibria-in-pure-strategies" class="level1">
-<h1>Multiple Equilibria in Pure Strategies</h1>
-<section id="games-with-multiple-equilibria" class="level2">
-<h2 class="anchored" data-anchor-id="games-with-multiple-equilibria">Games with Multiple Equilibria</h2>
-<p>So we’ve seen games with <em>only one</em> unique NE</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>But this doesn’t have to be the case</p></li>
-<li><p>Next we will see games with <em>multiple</em> possible strategy profiles which are stable.</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="coordination-games" class="level2">
-<h2 class="anchored" data-anchor-id="coordination-games">Coordination Games</h2>
-<p>I agreed to meet my friend for coffee, but we didn’t decide on which cafe and now my phone is dead:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Dante, Jose</th>
-<th>Starbucks</th>
-<th>Peet’s</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Starbucks</strong></td>
-<td>1, 1</td>
-<td>0, 0</td>
-</tr>
-<tr class="even">
-<td><strong>Peet’s</strong></td>
-<td>0, 0</td>
-<td>1, 1</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="coordination-games-1" class="level2">
-<h2 class="anchored" data-anchor-id="coordination-games-1">Coordination Games</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Dante, Jose</th>
-<th>Starbucks</th>
-<th>Peet’s</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Starbucks</strong></td>
-<td>1, 1</td>
-<td>0, 0</td>
-</tr>
-<tr class="even">
-<td><strong>Peet’s</strong></td>
-<td>0, 0</td>
-<td>1, 1</td>
-</tr>
-</tbody>
-</table>
-<div class="incremental">
-<ul class="incremental">
-<li><p>There are two NE’s where we are both happy</p></li>
-<li><p>The problem is getting there</p></li>
-<li><p>This type of game is called a <span class="hi">coordination game</span></p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="coordination-games-2" class="level2">
-<h2 class="anchored" data-anchor-id="coordination-games-2">Coordination Games</h2>
-<p>Even when there is an obviously preferred NE for both players, it may not be guaranteed that we will get there:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Dante, Jose</th>
-<th>Starbucks</th>
-<th>Roma</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Starbucks</strong></td>
-<td>1, 1</td>
-<td>0, 0</td>
-</tr>
-<tr class="even">
-<td><strong>Roma</strong></td>
-<td>0, 0</td>
-<td>2, 2</td>
-</tr>
-</tbody>
-</table>
-<div class="incremental">
-<ul class="incremental">
-<li><p>Depending on the set of <span class="hi">beliefs</span> held by the players, both strategy profiles could be theoretically stable</p></li>
-<li><p>If for some reason we started out in a (Starbucks, Starbucks) equilibrium, there would be no incentive for either of us to deviate without communicating our intent to each other</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="coordination-games-3" class="level2">
-<h2 class="anchored" data-anchor-id="coordination-games-3">Coordination Games</h2>
-<p>What should happen when different players have different preferences over NE?</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Dante, Jose</th>
-<th>T4</th>
-<th>Metropol</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>T4</strong></td>
-<td>2, 1</td>
-<td>0, 0</td>
-</tr>
-<tr class="even">
-<td><strong>Metropol</strong></td>
-<td>0, 0</td>
-<td>1, 2</td>
-</tr>
-</tbody>
-</table>
-<div class="incremental">
-<ul class="incremental">
-<li>If Dante tries to be <em>nice</em> and go to Metropol, what if Jose does the same thing and goes to T4?</li>
-<li>In chapter 10, with <em>repeated games</em>, there may be opportunities for us to alternate between each of our favorites</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="the-deer-hunt-game" class="level2">
-<h2 class="anchored" data-anchor-id="the-deer-hunt-game">The Deer Hunt Game</h2>
-<p>Two cavemen, Igg and Ogg, each decide whether to hunt Deer or Rabbit.</p>
-<ul>
-<li><p>If both hunt Deer, they can work together to bring one down and have enough meat to share with leftovers</p>
-<ul>
-<li>Each earn payoffs of 2</li>
-</ul></li>
-<li><p>If instead the other goes off chasing a rabbit, the cameman hunting deer won’t be able to catch any meat, but the one hunting rabbit will get just enough to feed themselves</p>
-<ul>
-<li>Unsuccessful Deer hunter gets 0, rabbit hunter gets 1</li>
-</ul></li>
-<li><p>Or both cavemen could just decide to go off and hunt rabbits by themselves, ensuring they get can feed themselves</p>
-<ul>
-<li>Both get 1</li>
-</ul></li>
-</ul>
-<hr>
-</section>
-<section id="the-deer-hunt-game-1" class="level2">
-<h2 class="anchored" data-anchor-id="the-deer-hunt-game-1">The Deer Hunt Game</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Igg, Ogg</th>
-<th>Deer</th>
-<th>Rabbit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Deer</strong></td>
-<td>2, 2</td>
-<td>0, 1</td>
-</tr>
-<tr class="even">
-<td><strong>Rabbit</strong></td>
-<td>1, 0</td>
-<td>1, 1</td>
-</tr>
-</tbody>
-</table>
-<div class="incremental">
-<ul class="incremental">
-<li>Are there any <em>strictly dominated strategies</em>?</li>
-<li>What about <em>best responses</em>?</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="the-deer-hunt-game-2" class="level2">
-<h2 class="anchored" data-anchor-id="the-deer-hunt-game-2">The Deer Hunt Game</h2>
-<p>Here are Igg’s best responses…</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Igg, Ogg</th>
-<th>Deer</th>
-<th>Rabbit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Deer</strong></td>
-<td><u>2</u>, 2</td>
-<td>0, 1</td>
-</tr>
-<tr class="even">
-<td><strong>Rabbit</strong></td>
-<td>1, 0</td>
-<td><u>1</u>, 1</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="the-deer-hunt-game-3" class="level2">
-<h2 class="anchored" data-anchor-id="the-deer-hunt-game-3">The Deer Hunt Game</h2>
-<p>And here are Ogg’s best responses…</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Igg, Ogg</th>
-<th>Deer</th>
-<th>Rabbit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Deer</strong></td>
-<td><u>2</u>, <u>2</u></td>
-<td>0, 1</td>
-</tr>
-<tr class="even">
-<td><strong>Rabbit</strong></td>
-<td>1, 0</td>
-<td><u>1</u>, <u>1</u></td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="the-game-of-chicken" class="level2">
-<h2 class="anchored" data-anchor-id="the-game-of-chicken">The Game of Chicken</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>James, Dean</th>
-<th>Swerve (Chicken)</th>
-<th>Straight (Tough)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Swerve</strong></td>
-<td>0, 0</td>
-<td>-1, 1</td>
-</tr>
-<tr class="even">
-<td><strong>Straight</strong></td>
-<td>1, -1</td>
-<td>-2, -2</td>
-</tr>
-</tbody>
-</table>
-<p>Suppose that James and Dean are driving headlong towards each other, but neither one wants to be the ‘chicken’ by swerving out of the way</p>
-<ul>
-<li>What are the best respones?</li>
-</ul>
-<hr>
-</section>
-<section id="the-game-of-chicken-1" class="level2">
-<h2 class="anchored" data-anchor-id="the-game-of-chicken-1">The Game of Chicken</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>James, Dean</th>
-<th>Swerve (Chicken)</th>
-<th>Straight (Tough)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Swerve</strong></td>
-<td>0, 0</td>
-<td><u>-1</u>, <u>1</u></td>
-</tr>
-<tr class="even">
-<td><strong>Straight</strong></td>
-<td><u>1</u>, <u>-1</u></td>
-<td>-2, -2</td>
-</tr>
-</tbody>
-</table>
-<div class="incremental">
-<ul class="incremental">
-<li><p>There are two NE of this game</p></li>
-<li><p>But how can we decide which one will happen?</p></li>
-<li><p>Chapter 9 will look at potential commitment devices either player could use to try to achieve their preferred NE</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="another-example-when-elimination-does-nothing" class="level2">
-<h2 class="anchored" data-anchor-id="another-example-when-elimination-does-nothing">Another Example: When Elimination Does Nothing</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th><span class="math inline">\(a\)</span></th>
-<th><span class="math inline">\(b\)</span></th>
-<th><span class="math inline">\(c\)</span></th>
-<th><span class="math inline">\(d\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(A\)</span></td>
-<td>1, 1</td>
-<td>2, 2</td>
-<td>2, 2</td>
-<td>2, 1</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(B\)</span></td>
-<td>1, 3</td>
-<td>1, 3</td>
-<td>2, 2</td>
-<td>2, 3</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(C\)</span></td>
-<td>1, 2</td>
-<td>2, 4</td>
-<td>1, 3</td>
-<td>2, 3</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(D\)</span></td>
-<td>3, 2</td>
-<td>2, 3</td>
-<td>1, 4</td>
-<td>2, 2</td>
-</tr>
-</tbody>
-</table>
-<div class="incremental">
-<ul class="incremental">
-<li>Can you find any strictly dominated strategies?</li>
-<li>Can you find any NE?</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="classifying-nes" class="level2">
-<h2 class="anchored" data-anchor-id="classifying-nes">Classifying NEs</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Nash Equilibria may be either <em>strict</em> or <em>weak</em>.</li>
-<li>A Nash Equilibrium is <span class="hi">strict</span> if and only if each player would receive a (strictly) smaller payoff by changing their own strategy.</li>
-<li>If a Nash Equilibrium is not strict—meaning that at least one player could change their own strategy and receive an equal (but not larger) payoff
-<ul class="incremental">
-<li>it is [weak]{hi}.</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="intuition-on-strict-vs.-weak-equilibria" class="level2">
-<h2 class="anchored" data-anchor-id="intuition-on-strict-vs.-weak-equilibria">Intuition on Strict vs.&nbsp;Weak Equilibria</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>In any Nash Equilibrium, no player has a reason to change their own strategy—they cannot get a higher payoff this way.</li>
-<li>Strict Nash Equilibria go a little further: not only does no player have a reason to change their own strategy, they also have a reason <strong>not</strong> to, because any other strategy would provide them a worse payoff.</li>
-<li>If a Nash Equilibrium is weak, it means that some player could change their strategy, and get exactly the same payoff they already were. They have no reason to do this, but also no reason <strong>not</strong> to.</li>
-<li>We can also say that a strict Nash Equilibrium is one where each player is playing a strategy which is a <strong>unique</strong> best response to the strategies chosen by other players.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="deer-hunt-strict-nash-equilibria" class="level2">
-<h2 class="anchored" data-anchor-id="deer-hunt-strict-nash-equilibria">Deer Hunt: Strict Nash Equilibria</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Igg, Ogg</th>
-<th><span class="math inline">\(Deer\)</span></th>
-<th><span class="math inline">\(Rabbit\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong><span class="math inline">\(Deer\)</span></strong></td>
-<td><u>2</u>, <u>2</u></td>
-<td>0,1</td>
-</tr>
-<tr class="even">
-<td><strong><span class="math inline">\(Rabbit\)</span></strong></td>
-<td>1,0</td>
-<td><u>1</u>, <u>1</u></td>
-</tr>
-</tbody>
-</table>
-<div class="incremental">
-<ul class="incremental">
-<li><p>Here, note that at each Nash Equilibrium, each player has no other strategy providing the same payoff.</p></li>
-<li><p>This is a <em>strict</em> Nash Equilibrium.</p></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="weak-nash-equilibria-example" class="level2">
-<h2 class="anchored" data-anchor-id="weak-nash-equilibria-example">Weak Nash Equilibria Example</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Eleanor, Michael</th>
-<th><span class="math inline">\(Swerve\)</span></th>
-<th><span class="math inline">\(Straight\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong><span class="math inline">\(Swerve\)</span></strong></td>
-<td><u>1</u>, <u>1</u></td>
-<td><u>1</u>, <u>1</u></td>
-</tr>
-<tr class="even">
-<td><strong><span class="math inline">\(Straight\)</span></strong></td>
-<td><u>1</u>, <u>1</u></td>
-<td>0, 0</td>
-</tr>
-</tbody>
-</table>
-<div class="incremental">
-<ul class="incremental">
-<li>However, in this game, each Nash Equilibrium features at least one player who could still get the same payoff if they change their strategy.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="prisoners-dilemmas" class="level2">
-<h2 class="anchored" data-anchor-id="prisoners-dilemmas">Prisoners’ Dilemmas</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Guido, Luca</th>
-<th><span class="math inline">\(Testify\)</span></th>
-<th><span class="math inline">\(Keep~Quiet\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong><span class="math inline">\(Testify\)</span></strong></td>
-<td>-10, -10</td>
-<td>0, -20</td>
-</tr>
-<tr class="even">
-<td><strong><span class="math inline">\(Keep~Quiet\)</span></strong></td>
-<td>-20, 0</td>
-<td>-1, -1</td>
-</tr>
-</tbody>
-</table>
-<p>In general, a Prisoner’s Dilemma is any game in which:</p>
-<ul>
-<li>The players have the same strategies, A and B.</li>
-<li>A strictly dominates B, making (A, A) the only NE.</li>
-<li>But (B, B) is better for both players than (A, A). ::: —</li>
-</ul>
-</section>
-<section id="coordination-games-4" class="level2">
-<h2 class="anchored" data-anchor-id="coordination-games-4">Coordination Games</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>A <span class="hi">coordination game</span> is a game in which the players all have the same strategy sets, and the NEs are all of the strategy profiles where the players choose the same strategy.</li>
-<li>The Deer Hunt is a coordination game.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="other-coordination-games" class="level2">
-<h2 class="anchored" data-anchor-id="other-coordination-games">Other Coordination Games</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th style="text-align: center;">A</th>
-<th style="text-align: center;">B</th>
-<th style="text-align: center;">C</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;"><strong>A</strong></td>
-<td style="text-align: center;">1, 1</td>
-<td style="text-align: center;">1, 0</td>
-<td style="text-align: center;">3, 0</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;"><strong>B</strong></td>
-<td style="text-align: center;">0, 1</td>
-<td style="text-align: center;">2, 2</td>
-<td style="text-align: center;">2, 1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;"><strong>B</strong></td>
-<td style="text-align: center;">0, 3</td>
-<td style="text-align: center;">1, 2</td>
-<td style="text-align: center;">4, 4</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="anti-coordination-games" class="level2">
-<h2 class="anchored" data-anchor-id="anti-coordination-games">Anti-Coordination Games</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>An <span class="hi">anti-coordination game</span> is a game in which the players all have the same strategy sets, but the NEs are all of the strategy profiles where the players choose different strategies.</li>
-</ul>
-</div>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>James, Dean</th>
-<th>Swerve (Chicken)</th>
-<th>Straight (Tough)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Swerve</strong></td>
-<td>0, 0</td>
-<td><u>-1</u>, <u>1</u></td>
-</tr>
-<tr class="even">
-<td><strong>Straight</strong></td>
-<td><u>1</u>, <u>-1</u></td>
-<td>-2, -2</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="symmetric-games" class="level2">
-<h2 class="anchored" data-anchor-id="symmetric-games">Symmetric Games</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>A <span class="hi">symmetric game</span> is a game which is <strong>indifferent to an exchange of players</strong> in other words, a game where the players are interchangeable.</li>
-<li>Consider the Prisoner’s Dilemma: if we swap the players’ names, and their positions in the game table, and the order of their payoffs, we get the same game that we started with.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="symmetric-games-1" class="level2">
-<h2 class="anchored" data-anchor-id="symmetric-games-1">Symmetric Games</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>A two-player game with a game table is symmetric if:
-<ul class="incremental">
-<li>The players have the same strategy sets.</li>
-<li>In the on-diagonal cells of the game table, the players receive equal payoffs.</li>
-<li>In the “mirrored” off-diagonal cells of the game table, the players’ payoffs are reversed.</li>
-</ul></li>
-<li>Of the games we’ve just looked at, the Deer Hunt, the 3x3 coordination game, and Chicken are symmetric games. Bach and Stravinsky is not.</li>
+<li><p>no-one can improve their payoff by changing <em>only their own strategy</em>.</p></li>
+<li><p>Each player has <em>no regrets</em> about their strategy.</p></li>
+<li><p><span class="h">Everyone’s strategy is a best responses to everyone else’s</span></p></li>
 </ul>
 </div>
 
@@ -1787,13 +1071,7 @@ window.Quarto = {
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>this is a symmetric game, so Nina and Talia will have equivalent rankings<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
