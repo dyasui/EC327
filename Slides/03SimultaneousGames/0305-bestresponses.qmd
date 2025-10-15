@@ -2,7 +2,7 @@
 
 ## Limits of IESDS
 
-Not every simultaneous-move strategy can by only eliminating dominated strategies
+Not every game is [dominance solvable]{.hi} through IESDS.
 
 Can we still find NE in those games?
 
@@ -18,33 +18,47 @@ Can we still find NE in those games?
 ::: {.incremental}
 - In finding Nash equilibrium, **best-response analysis** is key.
 - Each player chooses their best action in response to the strategies of others.
-- This iterative process helps in solving games with multiple strategies.
+- This iterative process helps in solving games with many possible strategies.
 :::
 
 ---
 
 ## Best Responses
 ::: {.incremental}
-  * If you know what strategy the other player will choose, then you can easily figure out what your best option (or options) are.
-  * Of course, you don't actually know what the other player will do when you choose your strategy in a game like this---but thinking about the game this way makes it easy to find NEs.
-  * A strategy $s_i$ is a [best response]{.hi} to another player's strategy $s_{-i}$ if and only if it provides the highest payoff possible when the other player chooses $s_{-i}$.
+  * If you know other player's strategy, then you can respond accordingly
+  * Even if you don't know, forming a *belief* helps you solve the game
+:::
+
+. . .
+
+::: {.callout-note}
+## Best Response Definition
+Strategy $s_i$ is a [best response]{.hi} to $s_{-i}$ if and only if it provides the highest payoff possible when the other player chooses $s_{-i}$.
+
+  - The best response correspondence $b_i(s_{-i})$ is the strategy or set of strategies that give the highest payoff against $s_{-i}$
 :::
 ---
 
 ## Some Notes on Best Responses
 ::: {.incremental}
-  * The phrase "to another player's strategy" in the definition of a best response is **important**.
-  * A strategy can only be a best response **to some strategy of the other player**. There is no such thing as a strategy which is just "a best response."
-  * When dealing with strategic-form games with game tables, there is always at least one best response to another player's strategy---and there may be multiple, if there is more than one strategy which provides the best payoff.
+  * "to another player's strategy" is **important**.
+  * A strategy can only be a best response **to some strategy of the other player**. 
+    - No such thing as a universally best response (that's a dominant strategy)
+  * There is always at least one best response to another player's strategy
+    - And there may be multiple best responses to another players strategy
 :::
 ---
 
 ## Best Responses in Practice
 
+Marking best responses in normal form:
+
 ::: {.incremental}
-  * It's easy to depict best responses in a game table: we can go through each strategy in the game, and mark each strategy which is a best response to them.
-  * We do this by marking the payoffs---however, it's important to understand that it's not the payoff itself which is a best response--we're just using them as a convenient way to depict where the best responses are.
-    * In other words: don't try to describe the best response using the payoff. The best response is always the strategy.
+  * Go through each strategy in the game of one player (row or column)
+    - Mark the best option of the *responding player*
+    - Okay to mark the payoffs, but keep in mind they are not same as the *strategies*
+  * Don't try to describe the best response using the payoff.
+    - A best response is a *strategy*
 :::
 
 ---
@@ -183,98 +197,9 @@ The NE of this game is where the best responses intersect:
 
   * (**Low**, **Middle**)
 
----
+. . .
 
-## Three-Player Simultaneous Games
-
-Let's create a modified version of the three-roommate planting game:
-
-::: {.incremental}
-  * Now instead of observing who contributed to the garden already in certain order, 
-    suppose that Emily, Nina, and Talia have to choose *simultaneously*
-
-  * Also instead of the garden either *dying* or *surviving*, we'll add more detailed levels of quality depending on who contributed
-
-:::
-
----
-
-## Simultaneous Planting Game
-
-What are Emily's preferences in this modified game? ^[this is a symmetric game, so Nina and Talia will have equivalent rankings]
-
-| Outcome                                         | Payoff |
-|-------------------------------------------------+--------|
-| Nina and Talia contribute, Emily doesn't        | 6      |
-| Everyone contributes                            | 5      |
-| Either Nina or Talia contribute, Emily doesn't  | 4      |
-| Either Nina or Talia contribute, and Emily does | 3      |
-| No-one contributes                              | 2      |
-| Emily is the only one to contribute             | 1      |
-
----
-
-## Simultaneous Planting Game
-
-[Talia chooses:]{.hi-grey}
-
-:::: {.columns}
-
-::: {.column width="50%"}
-[Contribute]{.hi-grey}
-
-| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                | [Don't]{.hi-bb}                     |
-|-----------------------------+-------------------------------------+-------------------------------------|
-| [Contribute]{.h}            | [5]{.h}, [5]{.hi-bb}, [5]{.hi-grey} | [3]{.h}, [6]{.hi-bb}, [3]{.hi-grey} |
-| [Don't]{.h}                 | [6]{.h}, [3]{.hi-bb}, [3]{.hi-grey} | [4]{.h}, [4]{.hi-bb}, [1]{.hi-grey} |
-
-:::
-
-::: {.column width="50%"}
-
-[Don't Contribute]{.hi-grey}
-
-| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                | [Don't]{.hi-bb}                     |
-|-----------------------------+-------------------------------------+-------------------------------------|
-| [Contribute]{.h}            | [3]{.h}, [3]{.hi-bb}, [6]{.hi-grey} | [1]{.h}, [4]{.hi-bb}, [4]{.hi-grey} |
-| [Don't]{.h}                 | [4]{.h}, [1]{.hi-bb}, [4]{.hi-grey} | [2]{.h}, [2]{.hi-bb}, [2]{.hi-grey} |
-
-:::
-
-::::
-
-  * Can you find any dominant strategies?
-
----
-
-## Simultaneous Planting Game
-
-[Talia chooses:]{.hi-grey}
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-[Contribute]{.hi-grey}
-
-| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                       | [Don't]{.hi-bb}                                   |
-|-----------------------------+--------------------------------------------+---------------------------------------------------|
-| [Contribute]{.h}            | [5]{.h}, [5]{.hi-bb}, [5]{.hi-grey}        | [3]{.h}, [<u>6</u>]{.hi-bb}, [3]{.hi-grey}        |
-| [Don't]{.h}                 | [<u>6</u>]{.h}, [3]{.hi-bb}, [3]{.hi-grey} | [<u>4</u>]{.h}, [<u>4</u>]{.hi-bb}, [1]{.hi-grey} |
-
-:::
-::: {.column width="50%"}
-
-[Don't Contribute]{.hi-grey}
-
-| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                              | [Don't]{.hi-bb}                                          |
-|-----------------------------+---------------------------------------------------+----------------------------------------------------------|
-| [Contribute]{.h}            | [3]{.h}, [3]{.hi-bb}, [<u>6</u>]{.hi-grey}        | [1]{.h}, [<u>4</u>]{.hi-bb}, [<u>4</u>]{.hi-grey}        |
-| [Don't]{.h}                 | [<u>4</u>]{.h}, [1]{.hi-bb}, [<u>4</u>]{.hi-grey} | [<u>2</u>]{.h}, [<u>2</u>]{.hi-bb}, [<u>2</u>]{.hi-grey} |
-
-:::
-
-::::
+  * This results in a payoff of 5 to Row, 4 to Column
 
 ---
 
@@ -284,301 +209,10 @@ Recall the various definitions of a Nash Equilibrium:
 
 ::: {.incremental}
 
-  * no single player can make themselves better off by [*changing only their own strategy*]{.hi}.
+  * no-one can improve their payoff by changing *only their own strategy*.
 
-  * After the game is played, each player has [*no regrets*]{.hi} about their strategy.
+  * Each player has *no regrets* about their strategy.
 
-  * Now we can use: "A strategy profile such that each player's strategy is a best responses to the other player's strategy."
-
-  * "Playing a best response" = "cannot obtain a larger payoff by unilaterally deviating" 
-:::
-
-# Multiple Equilibria in Pure Strategies
-
-## Games with Multiple Equilibria
-
-So we've seen games with *only one* unique NE
-
-::: {.incremental}
-  
-  * But this doesn't have to be the case
-
-  * Next we will see games with *multiple* possible strategy profiles which are stable.
+  * [Everyone's strategy is a best responses to everyone else's]{.h}
 
 :::
-
----
-
-## Coordination Games
-
-I agreed to meet my friend for coffee, but we didn't decide on which cafe and now my phone is dead:
-
-| Dante, Jose | Starbucks | Peet's |
-|-------------+-----------+--------|
-| **Starbucks** | 1, 1      | 0, 0   |
-| **Peet's**  | 0, 0      | 1, 1   |
-
----
-
-## Coordination Games
-
-| Dante, Jose   | Starbucks | Peet's |
-|---------------+-----------+--------|
-| **Starbucks** | 1, 1      | 0, 0   |
-| **Peet's**    | 0, 0      | 1, 1   |
-
-::: {.incremental}
-  * There are two NE's where we are both happy
-
-  * The problem is getting there
-
-  * This type of game is called a [coordination game]{.hi}
-
-:::
-
----
-
-## Coordination Games
-
-Even when there is an obviously preferred NE for both players,
-it may not be guaranteed that we will get there:
-
-| Dante, Jose   | Starbucks | Roma |
-|---------------+-----------+------|
-| **Starbucks** | 1, 1      | 0, 0 |
-| **Roma**      | 0, 0      | 2, 2 |
-
-::: {.incremental}
-  * Depending on the set of [beliefs]{.hi} held by the players, 
-    both strategy profiles could be theoretically stable
-
-  * If for some reason we started out in a (Starbucks, Starbucks)
-    equilibrium, there would be no incentive for either of us 
-    to deviate without communicating our intent to each other
-:::
-
----
-
-## Coordination Games
-
-What should happen when different players have different preferences over NE?
-
-| Dante, Jose  | T4   | Metropol |
-|--------------+------+----------|
-| **T4**       | 2, 1 | 0, 0     |
-| **Metropol** | 0, 0 | 1, 2     |
-
-::: {.incremental}
-  * If Dante tries to be *nice* and go to Metropol, 
-    what if Jose does the same thing and goes to T4?
-  * In chapter 10, with *repeated games*, there may be opportunities for
-    us to alternate between each of our favorites
-:::
-
----
-
-## The Deer Hunt Game
-
-Two cavemen, Igg and Ogg, each decide whether to hunt Deer or Rabbit.
-
-  * If both hunt Deer, they can work together to bring one down and have enough meat to share with leftovers
-
-    + Each earn payoffs of 2
-
-  * If instead the other goes off chasing a rabbit, the cameman hunting deer won't be able to catch any meat, 
-    but the one hunting rabbit will get just enough to feed themselves
-
-    + Unsuccessful Deer hunter gets 0, rabbit hunter gets 1
-
-  * Or both cavemen could just decide to go off and hunt rabbits by themselves,
-    ensuring they get can feed themselves
-
-    + Both get 1
-
----
-
-## The Deer Hunt Game
-
-| Igg, Ogg   | Deer | Rabbit |
-|------------+------+--------|
-| **Deer**   | 2, 2 | 0, 1   |
-| **Rabbit** | 1, 0 | 1, 1   |
-
-::: {.incremental}
-  * Are there any *strictly dominated strategies*?
-  * What about *best responses*?
-:::
----
-
-## The Deer Hunt Game
-Here are Igg's best responses...
-
-| Igg, Ogg   | Deer        | Rabbit      |
-|------------+-------------+-------------|
-| **Deer**   | <u>2</u>, 2 | 0, 1        |
-| **Rabbit** | 1, 0        | <u>1</u>, 1 |
-
----
-
-## The Deer Hunt Game
-And here are Ogg's best responses...
-
-| Igg, Ogg   | Deer               | Rabbit             |
-|------------+--------------------+--------------------|
-| **Deer**   | <u>2</u>, <u>2</u> | 0, 1               |
-| **Rabbit** | 1, 0               | <u>1</u>, <u>1</u> |
-
----
-
-## The Game of Chicken
-
-| James, Dean  | Swerve (Chicken) | Straight (Tough) |
-|--------------+------------------+------------------|
-| **Swerve**   | 0, 0             | -1, 1            |
-| **Straight** | 1, -1            | -2, -2           |
-
-Suppose that James and Dean are driving headlong towards each other, 
-but neither one wants to be the 'chicken' by swerving out of the way
-
-  * What are the best respones?
-
----
-
-## The Game of Chicken
-
-| James, Dean  | Swerve (Chicken)    | Straight (Tough)    |
-|--------------+---------------------+---------------------|
-| **Swerve**   | 0, 0                | <u>-1</u>, <u>1</u> |
-| **Straight** | <u>1</u>, <u>-1</u> | -2, -2              |
-
-::: {.incremental}
-
-  * There are two NE of this game
-
-  * But how can we decide which one will happen?
-
-  * Chapter 9 will look at potential commitment devices either player could use to try to achieve their preferred NE
-
-:::
-
----
-
-## Another Example: When Elimination Does Nothing
-
-| $P_1$, $P_2$ | $a$  | $b$  | $c$  | $d$  |
-|--------------+------+------+------+------|
-| $A$          | 1, 1 | 2, 2 | 2, 2 | 2, 1 |
-| $B$          | 1, 3 | 1, 3 | 2, 2 | 2, 3 |
-| $C$          | 1, 2 | 2, 4 | 1, 3 | 2, 3 |
-| $D$          | 3, 2 | 2, 3 | 1, 4 | 2, 2 |
-
-::: {.incremental}
-  * Can you find any strictly dominated strategies?
-  * Can you find any NE?
-:::
-
----
-
-## Classifying NEs
-::: {.incremental}
-  * Nash Equilibria may be either *strict* or *weak*.
-  * A Nash Equilibrium is [strict]{.hi} if and only if each player would receive a (strictly) smaller payoff by changing their own strategy.
-  * If a Nash Equilibrium is not strict---meaning that at least one player could change their own strategy and receive an equal (but not larger) payoff
-      - it is [weak]{hi}.
-:::
----
-
-## Intuition on Strict vs. Weak Equilibria
-::: {.incremental}
-* In any Nash Equilibrium, no player has a reason to change their own strategy---they cannot get a higher payoff this way.
-* Strict Nash Equilibria go a little further: not only does no player have a reason to change their own strategy, they also have a reason **not** to, because any other strategy would provide them a worse payoff.
-* If a Nash Equilibrium is weak, it means that some player could change their strategy, and get exactly the same payoff they already were. They have no reason to do this, but also no reason **not** to.
-* We can also say that a strict Nash Equilibrium is one where each player is playing a strategy which is a **unique** best response to the strategies chosen by other players.
-:::
----
-
-## Deer Hunt: Strict Nash Equilibria
-
-| Igg, Ogg     | $Deer$             | $Rabbit$           |
-|--------------+--------------------+--------------------|
-| **$Deer$**   | <u>2</u>, <u>2</u> | 0,1                |
-| **$Rabbit$** | 1,0                | <u>1</u>, <u>1</u> |
-
-::: {.incremental}
-  * Here, note that at each Nash Equilibrium, each player has no other strategy providing the same payoff.
-
-  * This is a *strict* Nash Equilibrium.
-:::
----
-
-## Weak Nash Equilibria Example
-| Eleanor, Michael | $Swerve$           | $Straight$         |
-|------------------+--------------------+--------------------|
-| **$Swerve$**     | <u>1</u>, <u>1</u> | <u>1</u>, <u>1</u> |
-| **$Straight$**   | <u>1</u>, <u>1</u> | 0, 0               |
-
-::: {.incremental}
-* However, in this game, each Nash Equilibrium features at least one player who could still get the same payoff if they change their strategy.
-:::
----
-
-## Prisoners' Dilemmas
-| Guido, Luca      | $Testify$ | $Keep~Quiet$ |
-|------------------+-----------+--------------|
-| **$Testify$**    | -10, -10  | 0, -20      |
-| **$Keep~Quiet$** | -20, 0    | -1, -1      |
-
-In general, a Prisoner's Dilemma is any game in which:
-
-  * The players have the same strategies, A and B.
-  * A strictly dominates B, making (A, A) the only NE.
-  * But (B, B) is better for both players than (A, A).
-:::
----
-
-## Coordination Games
-::: {.incremental}
-  * A [coordination game]{.hi} is a game in which the players all have the same strategy sets, and the NEs are all of the strategy profiles where the players choose the same strategy.
-  * The Deer Hunt is a coordination game.
-:::
-
----
-
-## Other Coordination Games
-
-| $P_1$, $P_2$ |   A  |   B  |   C  |
-|-------------:+:----:+:----:+:----:|
-|        **A** | 1, 1 | 1, 0 | 3, 0 |
-|        **B** | 0, 1 | 2, 2 | 2, 1 |
-|        **B** | 0, 3 | 1, 2 | 4, 4 |
-
----
-
-
-## Anti-Coordination Games
-::: {.incremental}
-  * An [anti-coordination game]{.hi} is a game in which the players all have the same strategy sets, but the NEs are all of the strategy profiles where the players choose different strategies.
-:::
-| James, Dean  | Swerve (Chicken)    | Straight (Tough)    |
-|--------------+---------------------+---------------------|
-| **Swerve**   | 0, 0                | <u>-1</u>, <u>1</u> |
-| **Straight** | <u>1</u>, <u>-1</u> | -2, -2              |
-
----
-
-## Symmetric Games
-::: {.incremental}
-  * A [symmetric game]{.hi} is a game which is **indifferent to an exchange of players** in other words, a game where the players are interchangeable.
-  * Consider the Prisoner's Dilemma: if we swap the players' names, and their positions in the game table, and the order of their payoffs, we get the same game that we started with.
-:::
----
-
-## Symmetric Games
-::: {.incremental}
-  * A two-player game with a game table is symmetric if:
-    * The players have the same strategy sets.
-    * In the on-diagonal cells of the game table, the players receive equal payoffs.
-    * In the "mirrored" off-diagonal cells of the game table, the players' payoffs are reversed.
-  * Of the games we've just looked at, the Deer Hunt, the 3x3 coordination game, and Chicken are symmetric games. Bach and Stravinsky is not.
-:::
-

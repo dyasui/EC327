@@ -98,6 +98,8 @@ Most player B's actually reject any offer of 25% or less.
 
 {{< include 0305-bestresponses.qmd >}}
 
-<!-- {{< include 0306-weakdominance.qmd >}} -->
+{{< include 0306-categories.qmd >}}
+
+{{< include 0309-threeplayer.qmd >}}
 
 <!-- {{< include 0307-rationalize.qmd >}} -->

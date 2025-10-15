@@ -1,0 +1,92 @@
+# Three-Player Simultaneous Games
+
+## Three-player simultaneous planting game
+Let's create a modified version of the three-roommate planting game:
+
+::: {.incremental}
+  * Suppose that Emily, Nina, and Talia have to choose *simultaneously*
+
+  * Instead of one roomate having a first-mover advantage
+
+:::
+
+---
+
+## Simultaneous Planting Game
+
+Preferences from each roommate's perspective ^[this is a symmetric game, so Nina and Talia will have equivalent rankings]
+
+| Outcome                                         | Payoff |
+|-------------------------------------------------+--------|
+| My two roommates contribute, but I don't        | 6      |
+| Everyone contributes                            | 5      |
+| One roommate contributes, not me                | 4      |
+| One roommate contributes, and I do too          | 3      |
+| No-one contributes                              | 2      |
+| I am the only one to contribute                 | 1      |
+
+---
+
+## Simultaneous Planting Game
+
+[Talia chooses:]{.hi-grey}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+[Contribute]{.hi-grey}
+
+| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                | [Don't]{.hi-bb}                     |
+|-----------------------------+-------------------------------------+-------------------------------------|
+| [Contribute]{.h}            | [5]{.h}, [5]{.hi-bb}, [5]{.hi-grey} | [3]{.h}, [6]{.hi-bb}, [3]{.hi-grey} |
+| [Don't]{.h}                 | [6]{.h}, [3]{.hi-bb}, [3]{.hi-grey} | [4]{.h}, [4]{.hi-bb}, [1]{.hi-grey} |
+
+:::
+
+::: {.column width="50%"}
+
+[Don't Contribute]{.hi-grey}
+
+| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                | [Don't]{.hi-bb}                     |
+|-----------------------------+-------------------------------------+-------------------------------------|
+| [Contribute]{.h}            | [3]{.h}, [3]{.hi-bb}, [6]{.hi-grey} | [1]{.h}, [4]{.hi-bb}, [4]{.hi-grey} |
+| [Don't]{.h}                 | [4]{.h}, [1]{.hi-bb}, [4]{.hi-grey} | [2]{.h}, [2]{.hi-bb}, [2]{.hi-grey} |
+
+:::
+
+::::
+
+  * Can you find any dominant strategies?
+
+---
+
+## Simultaneous Planting Game
+
+[Talia chooses:]{.hi-grey}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+[Contribute]{.hi-grey}
+
+| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                       | [Don't]{.hi-bb}                                   |
+|-----------------------------+--------------------------------------------+---------------------------------------------------|
+| [Contribute]{.h}            | [5]{.h}, [5]{.hi-bb}, [5]{.hi-grey}        | [3]{.h}, [<u>6</u>]{.hi-bb}, [3]{.hi-grey}        |
+| [Don't]{.h}                 | [<u>6</u>]{.h}, [3]{.hi-bb}, [3]{.hi-grey} | [<u>4</u>]{.h}, [<u>4</u>]{.hi-bb}, [1]{.hi-grey} |
+
+:::
+::: {.column width="50%"}
+
+[Don't Contribute]{.hi-grey}
+
+| [Emily]{.h}, [Nina]{.hi-bb} | [Contribute]{.hi-bb}                              | [Don't]{.hi-bb}                                          |
+|-----------------------------+---------------------------------------------------+----------------------------------------------------------|
+| [Contribute]{.h}            | [3]{.h}, [3]{.hi-bb}, [<u>6</u>]{.hi-grey}        | [1]{.h}, [<u>4</u>]{.hi-bb}, [<u>4</u>]{.hi-grey}        |
+| [Don't]{.h}                 | [<u>4</u>]{.h}, [1]{.hi-bb}, [<u>4</u>]{.hi-grey} | [<u>2</u>]{.h}, [<u>2</u>]{.hi-bb}, [<u>2</u>]{.hi-grey} |
+
+:::
+
+The Nash equilibrium is {[Don't]{.h}, [Don't]{.hi-bb}, [Don't]{.hi-grey}}
+
+::::

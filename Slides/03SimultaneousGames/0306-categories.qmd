@@ -1,0 +1,329 @@
+# Categorizing Simultaneous Games
+
+## Games with Multiple Equilibria
+
+So we've seen games with *only one* unique NE
+
+::: {.incremental}
+  
+  * But this doesn't have to be the case
+
+  * Next we will see games with *multiple* possible strategy profiles which are stable.
+
+:::
+
+---
+
+## Coordination Games
+
+I agreed to meet my friend for coffee, but we didn't decide on which cafe and now my phone is dead:
+
+| Dante, Jose | Starbucks | Peet's |
+|-------------+-----------+--------|
+| **Starbucks** | 1, 1      | 0, 0   |
+| **Peet's**  | 0, 0      | 1, 1   |
+
+---
+
+## Coordination Games
+
+| Dante, Jose   | Starbucks | Peet's |
+|---------------+-----------+--------|
+| **Starbucks** | 1, 1      | 0, 0   |
+| **Peet's**    | 0, 0      | 1, 1   |
+
+::: {.incremental}
+  * There are two NE's where we are both happy
+
+  * The problem is getting there
+
+  * This type of game is called a [coordination game]{.hi}
+
+:::
+
+---
+
+## Coordination Games
+
+Even when there is an obviously preferred NE for both players,
+it may not be guaranteed that we will get there:
+
+| Dante, Jose   | Starbucks | Roma |
+|---------------+-----------+------|
+| **Starbucks** | 1, 1      | 0, 0 |
+| **Roma**      | 0, 0      | 2, 2 |
+
+::: {.incremental}
+  * For different sets of [beliefs]{.hi}, 
+    either strategy profile is *stable*
+
+  * If we start with (Starbucks, Starbucks)
+    no incentive for either of us 
+    to deviate
+
+  * Can we change equilibria?
+
+    - Only with communication or joint enforcement
+:::
+
+---
+
+## Coordination Games
+
+What about when players have different preferences over NE?
+
+| Dante, Jose  | T4   | Metropol |
+|--------------+------+----------|
+| **T4**       | 2, 1 | 0, 0     |
+| **Metropol** | 0, 0 | 1, 2     |
+
+::: {.incremental}
+  * If Dante tries to be *nice* and go to Metropol, 
+    - what if Jose does the same thing and goes to T4?
+  * *Repeated games* may allow for opportunities to alternate 
+:::
+
+---
+
+## Anti-coordination: The Game of Chicken
+
+| James, Dean  | Swerve (Chicken) | Straight (Tough) |
+|--------------+------------------+------------------|
+| **Swerve**   | 0, 0             | -1, 1            |
+| **Straight** | 1, -1            | -2, -2           |
+
+Suppose that James and Dean are driving headlong towards each other, 
+but neither one wants to be the 'chicken' by swerving out of the way
+
+  * What are the best respones?
+
+---
+
+## The Game of Chicken
+
+| James, Dean  | Swerve (Chicken)    | Straight (Tough)    |
+|--------------+---------------------+---------------------|
+| **Swerve**   | 0, 0                | <u>-1</u>, <u>1</u> |
+| **Straight** | <u>1</u>, <u>-1</u> | -2, -2              |
+
+::: {.incremental}
+
+  * There are two NE of this game
+
+  * But how can we decide which one will happen?
+
+  * Chapter 9 will look at potential commitment devices either player could use to try to achieve their preferred NE
+
+:::
+
+---
+
+
+## The Deer Hunt Game
+
+Two cavemen, Igg and Ogg, each decide whether to hunt Deer or Rabbit.
+
+  * Hunting Deer takes two hunters,
+
+    - both can eat for two days
+
+  * Hunting Rabbit can be done alone 
+
+    - only feeds one hunter for one day
+
+---
+
+## The Deer Hunt Game
+
+| Igg, Ogg   | Deer | Rabbit |
+|------------+------+--------|
+| **Deer**   | 2, 2 | 0, 1   |
+| **Rabbit** | 1, 0 | 1, 1   |
+
+::: {.incremental}
+  * Are there any *strictly dominated strategies*?
+  * What about *best responses*?
+:::
+---
+
+## The Deer Hunt Game
+Here are Igg's best responses:
+
+| Igg, Ogg   | Deer        | Rabbit      |
+|------------+-------------+-------------|
+| **Deer**   | <u>2</u>, 2 | 0, 1        |
+| **Rabbit** | 1, 0        | <u>1</u>, 1 |
+
+---
+
+## The Deer Hunt Game
+And here are Ogg's best responses...
+
+| Igg, Ogg   | Deer               | Rabbit             |
+|------------+--------------------+--------------------|
+| **Deer**   | <u>2</u>, <u>2</u> | 0, 1               |
+| **Rabbit** | 1, 0               | <u>1</u>, <u>1</u> |
+
+---
+
+## Deer Hunt: Strict Nash Equilibria
+
+| Igg, Ogg     | $Deer$             | $Rabbit$           |
+|--------------+--------------------+--------------------|
+| **$Deer$**   | <u>2</u>, <u>2</u> | 0,1                |
+| **$Rabbit$** | 1,0                | <u>1</u>, <u>1</u> |
+
+::: {.incremental}
+  * At each Nash Equilibrium, each player has no other strategy providing the same payoff.
+
+  * This is a *strict* Nash Equilibrium.
+:::
+---
+
+## An Example of Weak Nash Equilibrium
+| Eleanor, Michael | $Swerve$           | $Straight$         |
+|------------------+--------------------+--------------------|
+| **$Swerve$**     | <u>1</u>, <u>1</u> | <u>1</u>, <u>1</u> |
+| **$Straight$**   | <u>1</u>, <u>1</u> | 0, 0               |
+
+::: {.incremental}
+* These equlibria feature a player who could get the same payoff if they change.
+
+* All three are *weak* Nash equilibria
+:::
+---
+
+## Intuition on Strict vs. Weak Equilibria
+::: {.incremental}
+  * [Strict]{.h} if and only if each player's payoff is *strictly* less by changing strategies
+   
+    - Players have incentive to **avoid** deviations, more stable to mistakes
+
+  * [Weak]{.h} if at least one player could change strategy and receive an *equal* payoff
+
+    - Indifferent players don't have an incentive to deviate, but could be sent away by mistake
+
+  * In strict Nash Equilibria, strategies are the **unique** best responses
+
+:::
+---
+
+## A more complicated example
+
+| $P_1$, $P_2$ | $a$  | $b$  | $c$  | $d$  |
+|--------------+------+------+------+------|
+| $A$          | 1, 1 | 2, 2 | 2, 2 | 2, 1 |
+| $B$          | 1, 3 | 1, 3 | 2, 2 | 2, 3 |
+| $C$          | 1, 2 | 2, 4 | 1, 3 | 2, 3 |
+| $D$          | 3, 2 | 2, 3 | 1, 4 | 2, 2 |
+
+::: {.incremental}
+  * Can you find any strictly dominated strategies?
+  * Can you find any NE?
+  * Which are *weak* vs *strict* equilibria?
+:::
+
+---
+
+## A more complicated example
+
+| $P_1$, $P_2$ | $a$         | $b$                | $c$                | $d$               |
+|--------------+-------------+--------------------+--------------------+-------------------|
+| $A$          | 1, 1        | <u>2</u>, <u>2</u> | <u>2</u>, <u>2</u> | <u>2</u>, 1       |
+| $B$          | 1, <u>3</u> | 1,        <u>3</u> | <u>2</u>, 2        | <u>2</u>,<u>3</u> |
+| $C$          | 1, 2        | <u>2</u>, <u>4</u> | 1, 3               | <u>2</u>, 3       |
+| $D$          | <u>3</u>, 2 | <u>2</u>, 3        | 1, <u>4</u>        | <u>2</u>, 2       |
+
+::: {.incremental}
+  * No strictly dominated strategies because each is a BR to some strategy
+  * **NE**: $(A,b)$, $(A,c)$, $(B,d)$, $(C,b)$
+    - all are *weak* equilibria
+:::
+
+---
+
+## Symmetric Games
+::: {.incremental}
+  * [symmetric game]{.hi}s are **indifferent to an exchange of players** 
+    - Players are interchangable with each other
+
+  * Examples: Prisoner's dilemma, Deer Hunt, Game of Chicken
+:::
+---
+
+## Symmetric Games
+| $P_1, P_2$ | $s_2$    | $s^{'}_2$ |
+|-----------:+----------+-----------|
+| $s_1$      | $a, a$   | $b, c$    |
+| $s^{'}_1$  | $c, b$   | $d, d$    |
+
+  * you could flip the payoffs with players, and the game would be unchanged
+
+---
+
+## Symmetric Games
+| $P_1, P_2$ | $s_2$    | $s^{'}_2$ |
+|-----------:+----------+-----------|
+| $s_1$      | $a, a$   | $b, c$    |
+| $s^{'}_1$  | $c, b$   | $d, d$    |
+
+A [Prisoner's Dilemma]{.hi} is any game in which:
+
+  * $s$ strictly dominates $s^{'}$ ($a>c$, $b>d$)
+  * The Nash outcome ($a,a$) is pareto dominated by the outcome ($d,d$)
+
+---
+
+## Symmetric Games
+| $P_1, P_2$ | $s_2$    | $s^{'}_2$ |
+|-----------:+----------+-----------|
+| $s_1$      | $a, a$   | $b, c$    |
+| $s^{'}_1$  | $c, b$   | $d, d$    |
+
+A [coordination game]{.hi} is when:
+
+  * $(s_1,s_1)$ and $(s^{'}_1, s^{'}_2)$ are Nash equlibria
+  * both players choose the same strategy
+
+---
+
+## Symmetric Games
+| $P_1, P_2$ | $s_2$    | $s^{'}_2$ |
+|-----------:+----------+-----------|
+| $s_1$      | $a, a$   | $b, c$    |
+| $s^{'}_1$  | $c, b$   | $d, d$    |
+
+A game of [Chicken]{.hi} is when:
+
+  * $c>a$ and $b>d$ (or $a>c$ and $d>b$)
+  * So that the Nash equilibria have players choosing opposite strategies
+
+---
+
+## Which kind of 3x3 game?
+
+Test your understanding:
+
+| $P_1$, $P_2$ |   A  |   B  |   C  |
+|-------------:+:----:+:----:+:----:|
+|        **A** | 1, 1 | 1, 0 | 3, 0 |
+|        **B** | 0, 1 | 2, 2 | 2, 1 |
+|        **C** | 0, 3 | 1, 2 | 4, 4 |
+
+Which type of game is this?
+
+---
+
+## Which kind of 3x3 game?
+
+Test your understanding:
+
+| $P_1$, $P_2$ |   A  |   B  |   C  |
+|-------------:+:----:+:----:+:----:|
+|        **A** | <u>1</u>, <u>1</u> | 1, 0        | 3, 0 |
+|        **B** | 0, 1        | <u>2</u>, <u>2</u> | 2, 1 |
+|        **C** | 0, 3        | 1, 2        | <u>4</u>, <u>4</u> |
+
+Which type of game is this?
+
+  * A [coordination game]{.hi} 

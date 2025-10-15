@@ -1,6 +1,6 @@
-<!-- # Nash Equilibrium
+# Nash Equilibrium
 
-## Solving Simultaneous Games
+<!-- ## Solving Simultaneous Games
 
   * Before we cover how to solve a game, we first need to discuss what a solution to a game even is.
   
@@ -231,8 +231,8 @@ Let's see an example of this logic in action:
 
 - Nash equilibrium assumes:
     1. Players form [beliefs]{.hi} about the strategies of others.
-    2. These beliefs must be **correct**.
-    3. Each player then chooses their **best response** based on these beliefs.
+    2. Each player then chooses their **best response** based on these beliefs.
+    3. In equilibrium, each player's beliefs about their opponents strategy is realized.
   
 ---
 
@@ -256,3 +256,8 @@ A set of strategies, one for each player, such that:
   2. the strategy of each is the best for herself, given her beliefs about the strategies of the others.
 
 :::
+
+. . .
+
+A best response is the optimal strategy
+[holding the other's strategy constant]{.hi}
