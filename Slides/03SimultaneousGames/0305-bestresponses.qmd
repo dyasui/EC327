@@ -147,14 +147,14 @@ For Column, **Middle** is a [best response]{.hi} to **Top**
 
 ## Best Response Analysis
 
-| Row, [Column]{.blue} | Left                 | Middle               | Right          |
-|----------------------+----------------------+----------------------+----------------|
-| **Top**              | 3, [1]{.blue}        | 2, [<u>3</u>]{.blue} | 10, [2]{.blue} |
-| **High**             | 4, [<u>5</u>]{.blue} | 3, [0]{.blue}        | 6, [6]{.blue}  |
-| **Low**              | 2                    | <u>5</u>             | <u>12</u>      |
-| **Bottom**           | <u>5</u>             | 4                    | 9              |
+| Row, [Column]{.blue} | Left          | Middle               | Right          |
+|----------------------+---------------+----------------------+----------------|
+| **Top**              | 3, [1]{.blue} | 2, [<u>3</u>]{.blue} | 10, [2]{.blue} |
+| **High**             | 4, [5]{.blue} | 3, [0]{.blue}        | 6, [<u>6</u>]{.blue}  |
+| **Low**              | 2             | <u>5</u>             | <u>12</u>      |
+| **Bottom**           | <u>5</u>      | 4                    | 9              |
 
-**Left** is a [best response]{.hi} to **High**
+**Right** is a [best response]{.hi} to **High**
 
 ---
 
@@ -163,7 +163,7 @@ For Column, **Middle** is a [best response]{.hi} to **Top**
 | Row, [Column]{.blue} | Left                 | Middle                      | Right                 |
 |----------------------+----------------------+-----------------------------+-----------------------|
 | **Top**              | 3, [1]{.blue}        | 2, [<u>3</u>]{.blue}        | 10, [2]{.blue}        |
-| **High**             | 4, [<u>5</u>]{.blue} | 3, [0]{.blue}               | 6, [6]{.blue}         |
+| **High**             | 4, [5]{.blue}        | 3, [0]{.blue}               | 6, [<u>6</u>]{.blue}  |
 | **Low**              | 2, [2]{.blue}        | <u>5</u>, [<u>4</u>]{.blue} | <u>12</u>, [3]{.blue} |
 | **Bottom**           | <u>5</u>             | 4                           | 9                     |
 
@@ -176,7 +176,7 @@ For Column, **Middle** is a [best response]{.hi} to **Top**
 | Row, [Column]{.blue} | Left                 | Middle                      | Right                 |
 |----------------------+----------------------+-----------------------------+-----------------------|
 | **Top**              | 3, [1]{.blue}        | 2, [<u>3</u>]{.blue}        | 10, [2]{.blue}        |
-| **High**             | 4, [<u>5</u>]{.blue} | 3, [0]{.blue}               | 6, [6]{.blue}         |
+| **High**             | 4, [5]{.blue}        | 3, [0]{.blue}               | 6, [<u>6</u>]{.blue}  |
 | **Low**              | 2, [2]{.blue}        | <u>5</u>, [<u>4</u>]{.blue} | <u>12</u>, [3]{.blue} |
 | **Bottom**           | <u>5</u>, [6]{.blue} | 4, [5]{.blue}               | 9, [<u>7</u>]{.blue}  |
 
@@ -189,7 +189,7 @@ And **Right** is a [best response]{.hi} to **Bottom**
 | Row, [Column]{.blue} | Left                 | Middle                      | Right                 |
 |----------------------+----------------------+-----------------------------+-----------------------|
 | **Top**              | 3, [1]{.blue}        | 2, [<u>3</u>]{.blue}        | 10, [2]{.blue}        |
-| **High**             | 4, [<u>5</u>]{.blue} | 3, [0]{.blue}               | 6, [6]{.blue}         |
+| **High**             | 4, [5]{.blue}        | 3, [0]{.blue}               | 6, [<u>6</u>]{.blue}  |
 | **Low**              | 2, [2]{.blue}        | <u>5</u>, [<u>4</u>]{.blue} | <u>12</u>, [3]{.blue} |
 | **Bottom**           | <u>5</u>, [6]{.blue} | 4, [5]{.blue}               | 9, [<u>7</u>]{.blue}  |
 
