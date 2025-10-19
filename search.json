@@ -4,7 +4,7 @@
     "href": "Exams/PracticeExam/Final/FinalExamReviewSheet.html",
     "title": "Topics:",
     "section": "",
-    "text": "Basic Toolkit:\n- Simultaneous Games \n    - Strategic Form Tables\n    - Pure Strategies\n        - Eliminating Strictly Dominated Strategies\n        - Identifying Best Responses\n        - Pure Strategy Nash Equilibria\n    - Mixed Strategies\n        - Defining a mixed strategy \n        - solving for indifference conditions\n- Sequential Games\n    - Extensive Form Trees\n        - Subgames\n        - Information Sets\n    - Subgame-Perfect Nash Equilibria\n    - Backwards Induction\n- Expected Utility\n    - Risk averse vs risk seeking\n- Present Value\nApplications and Topics:\n- Uncertainty\n    - Asymmetric Info\n        - Pooling vs Separating eq\n        - Cheap Talk\n            - Babbling eq\n        - Signalling\n        - Screening\n            - Mechanism Design \n                - Incentive Compatible \n                - Individually Rational\n        - Adverse Selection\n            - Examples: Insurance, Used cars \n            - Solutions: Reputation, warranty, etc\n    - Symmetric uncertainty\n- Strategic Moves\n    - Commitments, Threats, and Promises\n    - Credibility\n    - Brinksmanship\n        - Strategic randomized plays\n    - Examples: Market Entry games, Game of Chicken, Cuban Missile Crisis\n- Repeated Games\n    - Infinite Horizon Payoffs\n    - Strategies:\n        - Grim Trigger \n        - Tit-for-Tat\n    - Solving for discount factors which support cooperation\nOther Related Concepts:\n- Pareto Efficiency/Optimality, Pareto Dominance\n- Revealed Preference \n- Hypothesis Testing (Chi-sq)"
+    "text": "Basic Toolkit:\n\nSimultaneous Games\n\nStrategic Form Tables\nPure Strategies\n\nEliminating Strictly Dominated Strategies\nIdentifying Best Responses\nPure Strategy Nash Equilibria\n\nMixed Strategies\n\nDefining a mixed strategy\nsolving for indifference conditions\n\n\nSequential Games\n\nExtensive Form Trees\n\nSubgames\nInformation Sets\n\nSubgame-Perfect Nash Equilibria\nBackwards Induction\n\nExpected Utility\n\nRisk averse vs risk seeking\n\nPresent Value\n\nApplications and Topics:\n\nUncertainty\n\nAsymmetric Info\n\nPooling vs Separating eq\nCheap Talk\n\nBabbling eq\n\nSignalling\nScreening\n\nMechanism Design\n\nIncentive Compatible\nIndividually Rational\n\n\nAdverse Selection\n\nExamples: Insurance, Used cars\nSolutions: Reputation, warranty, etc\n\n\nSymmetric uncertainty\n\nStrategic Moves\n\nCommitments, Threats, and Promises\nCredibility\nBrinksmanship\n\nStrategic randomized plays\n\nExamples: Market Entry games, Game of Chicken, Cuban Missile Crisis\n\nRepeated Games\n\nInfinite Horizon Payoffs\nStrategies:\n\nGrim Trigger\nTit-for-Tat\n\nSolving for discount factors which support cooperation\n\n\nOther Related Concepts:\n\nPareto Efficiency/Optimality, Pareto Dominance\nRevealed Preference\nHypothesis Testing (Chi-sq)"
   },
   {
     "objectID": "Exams/PracticeExam/Final/FinalExamReviewSheet.html#section-1-multiple-choice",
@@ -1244,7 +1244,7 @@
     "href": "Slides/05CombinedGames/05-main.html#combining-sequential-and-simultaneous",
     "title": "Introduction to Game Theory",
     "section": "Combining Sequential and Simultaneous",
-    "text": "Combining Sequential and Simultaneous\n\nSo far, we have only seen games that were either made up of only sequential or only simultaneous moves.\nBut realistically, many strategic interactions will contain both types of moves.\nLearning to move between extensive and strategic form will help us examine more complicated games, as well as introduce us to the roll of information and beliefs which will become useful to later topics."
+    "text": "Combining Sequential and Simultaneous\n\nSo far, games either: only sequential or only simultaneous.\nBut realistically, strategic interactions will contain both types.\nMoving between forms helps for complicated games\n\nIntroduces distinctions for information and beliefs"
   },
   {
     "objectID": "Slides/05CombinedGames/05-main.html#original-kidnap-game",
@@ -1392,13 +1392,6 @@
     "title": "Introduction to Game Theory",
     "section": "NE vs SPNE",
     "text": "NE vs SPNE\n\n\nWhat is different about the NE we found in the table and the NE we found through rollback?\nThe NE where Vivica plays \\(no~pay\\) are not Subgame Perfect because those actions are not credible threats\n\nShe can only credibly threaten not paying the ransom if she knows Guy can’t observe her action"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#games-with-both-types-of-moves",
-    "href": "Slides/05CombinedGames/05-main.html#games-with-both-types-of-moves",
-    "title": "Introduction to Game Theory",
-    "section": "Games with both types of moves",
-    "text": "Games with both types of moves\nWe separated games by the timing of moves in the first few lectures\n\nit allowed us to introduce the relevant methods for each category\nit also gave us the intuition behind the more general concept of Nash Equilibrium in a few different settings\nbut for many types of settings there are a mix of actions that are taken both sequentially and also taken simultaneously"
   },
   {
     "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames",
@@ -1602,202 +1595,6 @@
     "title": "Introduction to Game Theory",
     "section": "Finding SPNEs: Backward Induction",
     "text": "Finding SPNEs: Backward Induction\nThe method for finding SPNEs is straightforward—we’ve already been using it without spelling it out formally.\n\nFind all the decision nodes in the lowest row (assuming the tree goes top down)\nFind the optimal choice at each of these nodes, mark the corresponding branch (or erase/cross out all the other branches).\nIf you just solved the game’s initial node, you’re done!\nOtherwise, identify all of the decision nodes in the next row up and return to step 2.\n\nAt each step, remember to take into account the optimal moves that you’ve already found lower in the tree."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#introduction",
-    "href": "Slides/05CombinedGames/05-main.html#introduction",
-    "title": "Introduction to Game Theory",
-    "section": "Introduction",
-    "text": "Introduction\nThe method for finding the Nash equilibrium in a game with continuous strategies is general and applies to many types of games.\nKey steps:\n\nLabel each player’s strategy (e.g., \\(x\\), \\(y\\), etc.).\nDefine each player’s payoff as a function of all players’ strategies.\nMaximize each player’s payoff by choosing their own strategy, holding the others constant.\n\nQuestion: How does this method apply to real-world competition scenarios?"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#step-1-labeling-strategies-and-payoffs",
-    "href": "Slides/05CombinedGames/05-main.html#step-1-labeling-strategies-and-payoffs",
-    "title": "Introduction to Game Theory",
-    "section": "Step 1: Labeling Strategies and Payoffs",
-    "text": "Step 1: Labeling Strategies and Payoffs\nSuppose we have players 1, 2, and 3, with strategies labeled \\(x\\), \\(y\\), and \\(z\\), and their payoffs \\(X\\), \\(Y\\), and \\(Z\\).\nFor each player: \\[\nX = F(x, y, z), \\quad Y = G(x, y, z), \\quad Z = H(x, y, z)\n\\]\nExample: Price Competition\n\n\\(x\\) and \\(y\\) could represent the prices set by two firms, and the functions \\(F\\) and \\(G\\) represent their profits.\n\nQuestion: Why is labeling strategies and payoffs essential for structuring a game?"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#step-2-maximizing-payoff-functions",
-    "href": "Slides/05CombinedGames/05-main.html#step-2-maximizing-payoff-functions",
-    "title": "Introduction to Game Theory",
-    "section": "Step 2: Maximizing Payoff Functions",
-    "text": "Step 2: Maximizing Payoff Functions\nEach player chooses their strategy to maximize their own payoff, considering the strategies of the others as fixed.\nTo do this, we take the partial derivative of each player’s payoff with respect to their own strategy and set it to zero.\nExample:\nFor firm 1: \\[\n\\frac{\\partial F(x, y, z)}{\\partial x} = 0\n\\]\nQuestion: What does this partial derivative represent in terms of strategy adjustment?"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#step-3-solving-for-best-response-functions",
-    "href": "Slides/05CombinedGames/05-main.html#step-3-solving-for-best-response-functions",
-    "title": "Introduction to Game Theory",
-    "section": "Step 3: Solving for Best-Response Functions",
-    "text": "Step 3: Solving for Best-Response Functions\nSolve each equation to find the best-response functions. These tell each player the best strategy given what the other players are doing.\nFor firm 1, the best-response function could look like: \\[\nx = f(y, z)\n\\]\nThis gives the optimal \\(x\\) for any given values of \\(y\\) and \\(z\\)."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#step-4-nash-equilibrium",
-    "href": "Slides/05CombinedGames/05-main.html#step-4-nash-equilibrium",
-    "title": "Introduction to Game Theory",
-    "section": "Step 4: Nash Equilibrium",
-    "text": "Step 4: Nash Equilibrium\nThe Nash equilibrium occurs where all players’ best-response functions intersect. Solve the system of equations: \\[\nx = f(y, z), \\quad y = g(x, z), \\quad z = h(x, y)\n\\]\nAt this point, no player has an incentive to change their strategy.\nExample:\nIn price competition, the Nash equilibrium is where both firms set prices that maximize their respective profits.\nInteractive Question: Why is it important that no player has an incentive to deviate at Nash equilibrium?"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#step-5-handling-multiple-solutions",
-    "href": "Slides/05CombinedGames/05-main.html#step-5-handling-multiple-solutions",
-    "title": "Introduction to Game Theory",
-    "section": "Step 5: Handling Multiple Solutions",
-    "text": "Step 5: Handling Multiple Solutions\nSome games may have multiple Nash equilibria, while others may have none in pure strategies.\nDiscussion:\n\nMultiple equilibria can occur in coordination games.\nGames without equilibria in pure strategies might require us to consider mixed strategies (covered in a later chapter)."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#recap-general-steps-for-nash-equilibrium",
-    "href": "Slides/05CombinedGames/05-main.html#recap-general-steps-for-nash-equilibrium",
-    "title": "Introduction to Game Theory",
-    "section": "Recap: General Steps for Nash Equilibrium",
-    "text": "Recap: General Steps for Nash Equilibrium\n\nLabel each player’s strategies and payoffs.\nMaximize each player’s payoff with respect to their own strategy.\nSolve the system of best-response functions.\nCheck for multiple equilibria and the possibility of mixed strategies."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#discussion-of-nash-equilibrium",
-    "href": "Slides/05CombinedGames/05-main.html#discussion-of-nash-equilibrium",
-    "title": "Introduction to Game Theory",
-    "section": "Discussion of Nash Equilibrium",
-    "text": "Discussion of Nash Equilibrium\nNow that you’ve learned what it means and seen it applied to several different games, what do you think about the concept of Nash Equilbrium?\n\nDoes it make intuitive sense? Do you think people really reason through their best response to any possible situation?\nIs there anything relevant to strategic interactions you can think of that is left out of our models so far?"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#the-appeal-of-nash-equilibrium",
-    "href": "Slides/05CombinedGames/05-main.html#the-appeal-of-nash-equilibrium",
-    "title": "Introduction to Game Theory",
-    "section": "The Appeal of Nash Equilibrium",
-    "text": "The Appeal of Nash Equilibrium\nThe Nash equilibrium is based on the idea that every player’s strategy should be the best response to the strategies of others.\nBenefits of using NE:\n\nIn non-cooperative games, it makes sense that each player is making their best response to their opponent\n\nIf you can’t enforce any strategy onto your opponent, you should stick with whatever doesn’t make you worse off, given what your opponent chose.\nIn any situation which is not a Nash, there is some player who could have done better:\n\nI.E., an NE leaves no-one with any regrets"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#some-potential-critiques-of-ne-predictions",
-    "href": "Slides/05CombinedGames/05-main.html#some-potential-critiques-of-ne-predictions",
-    "title": "Introduction to Game Theory",
-    "section": "Some Potential Critiques of NE predictions",
-    "text": "Some Potential Critiques of NE predictions\n\nIESDS, Best-response functions may not be how players actually think\n\nBut NE only describe the stable combinations of strategies, there are many ways of getting there: learning from experience, repeated play, intuition, etc."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#some-potential-critiques-of-ne-predictions-1",
-    "href": "Slides/05CombinedGames/05-main.html#some-potential-critiques-of-ne-predictions-1",
-    "title": "Introduction to Game Theory",
-    "section": "Some Potential Critiques of NE predictions",
-    "text": "Some Potential Critiques of NE predictions\n\nIESDS, Best-response functions may not be how players actually think\nNash doesn’t explicitly take risk into account\n\nwith ordinal payoffs, we might leave out the incentive to play it safe to avoid very bad outcomes\nbut if we instead use cardinal payoffs, or expected utilities, we can still extend our models to those situations"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#some-potential-critiques-of-ne-predictions-2",
-    "href": "Slides/05CombinedGames/05-main.html#some-potential-critiques-of-ne-predictions-2",
-    "title": "Introduction to Game Theory",
-    "section": "Some Potential Critiques of NE predictions",
-    "text": "Some Potential Critiques of NE predictions\n\nIESDS, Best-response functions may not be how players actually think\nNash doesn’t explicitly take risk into account\nNE don’t have to be unique\n\nIf we care predictions, NE doesn’t always tell us what will happen, sometimes there can be multiple possible strategy profiles which are equally stable which means any one could happen depending how the game plays out"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#criticism-1-treatment-of-risk",
-    "href": "Slides/05CombinedGames/05-main.html#criticism-1-treatment-of-risk",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 1: Treatment of Risk",
-    "text": "Criticism 1: Treatment of Risk\nWe’ve mentioned before how sometimes the strategies played in NE don’t line up with what might intuitively feel like the ‘safe’ strategies."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#criticism-1-treatment-of-risk-1",
-    "href": "Slides/05CombinedGames/05-main.html#criticism-1-treatment-of-risk-1",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 1: Treatment of Risk",
-    "text": "Criticism 1: Treatment of Risk\nLet’s look an an example:\n\n\n\nRow, Column\nA\nB\nC\n\n\n\n\nA\n2,2\n3,1\n0,2\n\n\nB\n1,3\n2,2\n3,2\n\n\nC\n2,0\n2,3\n2,2\n\n\n\n\nWhat’s the NE?"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#criticism-1-treatment-of-risk-2",
-    "href": "Slides/05CombinedGames/05-main.html#criticism-1-treatment-of-risk-2",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 1: Treatment of Risk",
-    "text": "Criticism 1: Treatment of Risk\nLet’s look an an example:\n\n\n\nRow, Column\nA\nB\nC\n\n\n\n\nA\n2,2\n3,1\n0,2\n\n\nB\n1,3\n2,2\n3,2\n\n\nC\n2,0\n2,3\n2,2\n\n\n\n\nWhat’s the NE?\n\n\n(A, A)"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#criticism-1-treatment-of-risk-3",
-    "href": "Slides/05CombinedGames/05-main.html#criticism-1-treatment-of-risk-3",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 1: Treatment of Risk",
-    "text": "Criticism 1: Treatment of Risk\n\n\n\nRow, Column\nA\nB\nC\n\n\n\n\nA\n2,2\n3,1\n0,2\n\n\nB\n1,3\n2,2\n3,2\n\n\nC\n2,0\n2,3\n2,2\n\n\n\n\nBut what happens if the other player mistakenly plays C?\nThen it might make sense to choose the safe option of C\nYou could get the same payoff of 2, but ensure that you wouldn’t have a chance to get 0\n\nThe idea of trembling-hand perfection takes this into account by allowing probabilistic errors in strategies."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#criticism-1-treatment-of-risk-4",
-    "href": "Slides/05CombinedGames/05-main.html#criticism-1-treatment-of-risk-4",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 1: Treatment of Risk",
-    "text": "Criticism 1: Treatment of Risk\nWhat about this game?\n\n\n\nA, B\nLeft\nRight\n\n\n\n\nUp\n9, 10\n8, 9.9\n\n\nDown\n10, 10\n-1000, 9.9\n\n\n\nLet’s suppose that there is a small probability \\(p\\) that Player B will accidentally play Right &gt; What is Player A’s expected utility of playing Up?\n\\[ EU_A(Up) = 9(1-p) + 8p \\]\n\nWhat is Player A’s expected utility of playing Down?\n\n\\[ EU_B(Down) = 10(1-p) - 1000p \\]\nSo Player A should only play Down if:\n\\[\n\\begin{align}\n10(1-p) - 1000p &gt; & 9(1-p) + 8p \\\\\n              p &gt; & \\frac{1}{1009}\n\\end{align}\n\\]"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#criticism-2-multiple-equilibria",
-    "href": "Slides/05CombinedGames/05-main.html#criticism-2-multiple-equilibria",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 2: Multiple Equilibria",
-    "text": "Criticism 2: Multiple Equilibria\nIn some games, multiple Nash equilibria exist. This can create problems because: - It’s unclear which equilibrium the players will choose. - Some equilibria may not make sense in real-life situations.\nExample:\n\n\n\nDante, Jose\nT4\nMetropol\n\n\n\n\nT4\n2, 1\n0, 0\n\n\nMetropol\n0, 0\n1, 2\n\n\n\n\nIn coordination games like Battle of the Sexes, there are multiple stable outcomes."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#criticism-2-multiple-equilibria-1",
-    "href": "Slides/05CombinedGames/05-main.html#criticism-2-multiple-equilibria-1",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 2: Multiple Equilibria",
-    "text": "Criticism 2: Multiple Equilibria\nAnother Example\nPick one player to be Boston, one player as San Francisco\nHere are 9 cities which must be evenly divided between the two players:\n\n\n\nAtlanta\nChicago\nDallas\nDenver\n\n\n\nLos Angeles\nNew York\nPhilidelphia\nSeattle\n\n\nYou win if you evenly split this list between you without communicating, and without overlaps or missed cities"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#criticism-2-multiple-equilibria-2",
-    "href": "Slides/05CombinedGames/05-main.html#criticism-2-multiple-equilibria-2",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 2: Multiple Equilibria",
-    "text": "Criticism 2: Multiple Equilibria\nArriving at Specific NE\nThis last example shows the importance of shared background and culture in forming strategic beliefs for cases with multiple NE\n\nSo far, our theory have given us sets of NE which are stable given any set of realized beliefs\nBut it doesn’t help us exaplain how those beliefs might be formed\nEvolutionary Game Theory adds tools to our basic toolkit to try to answer some of these limitations"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#criticism-2-multiple-equilibria-3",
-    "href": "Slides/05CombinedGames/05-main.html#criticism-2-multiple-equilibria-3",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 2: Multiple Equilibria",
-    "text": "Criticism 2: Multiple Equilibria\nIn the later chapters we will develop ideas to help narrow down the more general concept of NE\nRefinements to NE\nA refinement is a restriction on the more general assumptions needed for Nash Equilibria\nExamples:\n\nmixed-strategy Nash equilibrium allows for probabalistic plays\nsubgame-perfect Nash equilibria aka rollback equilibria are refinements in sequential games\nperfect Bayesian equilibrium has to deal with informations asymmetries"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#criticism-3-requirements-of-rationality",
-    "href": "Slides/05CombinedGames/05-main.html#criticism-3-requirements-of-rationality",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 3: Requirements of Rationality",
-    "text": "Criticism 3: Requirements of Rationality\nOne major criticism is that Nash equilibrium assumes:\n\nPlayers have perfect knowledge of others’ strategies.\nPlayers have rational preferences and know that their opponent is rational\n\nCounter-Argument:\n\nWhat are some situations you can think of where these assumptions might break down?\n\n\nPlayers might not know who they are playing against and what preferences they might have\nPlayers might make mistakes and occasionally choose actions that don’t fulfill their rational best response"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#criticism-3-requirements-of-rationality-1",
-    "href": "Slides/05CombinedGames/05-main.html#criticism-3-requirements-of-rationality-1",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 3: Requirements of Rationality",
-    "text": "Criticism 3: Requirements of Rationality\nConsider this game:\n\n\n\nRow, Column\nC1\nC2\nC3\n\n\n\n\nR1\n0, 7\n2, 5\n7, 0\n\n\nR2\n5, 2\n3, 3\n5, 2\n\n\nR3\n7, 0\n2, 5\n0, 7\n\n\n\n\nWhat is the NE?"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#criticism-3-requirements-of-rationality-2",
-    "href": "Slides/05CombinedGames/05-main.html#criticism-3-requirements-of-rationality-2",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 3: Requirements of Rationality",
-    "text": "Criticism 3: Requirements of Rationality\nConsider this game:\n\n\n\nRow, Column\nC1\nC2\nC3\n\n\n\n\nR1\n0, 7\n2, 5\n7, 0\n\n\nR2\n5, 2\n3, 3\n5, 2\n\n\nR3\n7, 0\n2, 5\n0, 7\n\n\n\n\nWhat is the NE?\n\n\n(R2, C2) is the only NE in this game\nFor this strategy profile, both players’ beliefs about the other player’s strategy are correct.\n\nColumn believes that Row will choose R2, so she chooses her best response of C2\nRow believes that Column will choose C2, so he chooses his best response of R2\nSo in NE, each player’s belief matches their opponent’s best response"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#criticism-3-requirements-of-rationality-3",
-    "href": "Slides/05CombinedGames/05-main.html#criticism-3-requirements-of-rationality-3",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 3: Requirements of Rationality",
-    "text": "Criticism 3: Requirements of Rationality\n\n\n\nRow, Column\nC1\nC2\nC3\n\n\n\n\nR1\n0, 7\n2, 5\n7, 0\n\n\nR2\n5, 2\n3, 3\n5, 2\n\n\nR3\n7, 0\n2, 5\n0, 7\n\n\n\nBut we could use similar logic for this game even when beliefs are incorrect\n\nWe can justify Row playing R1 if she believes that Column will play C3\nRow could beleive this if she believes that Column believes she is playing R3\nAnd if she also thinks that Column believes that she is playing R3 because Column believes that Row believes that Column is playing C1"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#rebuttal-to-critics-why-not-nash-equilibrium",
-    "href": "Slides/05CombinedGames/05-main.html#rebuttal-to-critics-why-not-nash-equilibrium",
-    "title": "Introduction to Game Theory",
-    "section": "Rebuttal to Critics: Why Not Nash Equilibrium?",
-    "text": "Rebuttal to Critics: Why Not Nash Equilibrium?\nGame theorist Roger Myerson suggests: - “Why not Nash equilibrium?” If someone proposes an alternative strategy profile, that profile must be evaluated. - If it isn’t a Nash equilibrium, one of the players can improve by changing their strategy, disproving the alternative.\nInteractive Question: How does this defense of Nash equilibrium answer critics’ concerns?"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#alternative-concepts",
-    "href": "Slides/05CombinedGames/05-main.html#alternative-concepts",
-    "title": "Introduction to Game Theory",
-    "section": "Alternative Concepts",
-    "text": "Alternative Concepts\nCriticism has led to the development of alternative solution concepts, such as: - Evolutionary Stable Strategies (ESS): Strategies that persist over time through evolutionary pressure. - Correlated Equilibrium: Players coordinate their strategies based on signals they receive from a common source.\nDiscussion Prompt: Do you think alternatives like ESS or correlated equilibrium offer improvements over Nash equilibrium?"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#conclusion",
-    "href": "Slides/05CombinedGames/05-main.html#conclusion",
-    "title": "Introduction to Game Theory",
-    "section": "Conclusion",
-    "text": "Conclusion\nWhile Nash equilibrium has clear limitations, it remains a central concept in game theory. Alternative solution concepts may provide better insights into certain situations, but Nash equilibrium is still the starting point for analyzing many strategic games."
   },
   {
     "objectID": "Slides/05CombinedGames/0404-generalnash.html",
@@ -4632,7 +4429,7 @@
     "href": "Homework/index.html",
     "title": "Homework Assignments",
     "section": "",
-    "text": "Assignment 1 Download\nDue: Friday, October 3rd Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 2 Download\nDue: Friday, October 10th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 3 Download\nDue: Friday, October 17th Submit to Canvas\n\n  Expand\n  \n    \n  \n\n\n\nAssignment 4 Download\nDue: Friday, October 24th Submit to Canvas\n\n  Expand\n  \n    \n  \n\n\n\nOther Assignments: coming soon"
+    "text": "Assignment 1 Download\nDue: Friday, October 3rd Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 2 Download\nDue: Friday, October 10th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 3 Download\nDue: Friday, October 17th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 4 Download\nDue: Friday, October 24th Submit to Canvas\n\n  Expand\n  \n    \n  \n\n\n\nOther Assignments: coming soon"
   },
   {
     "objectID": "Slides/01Intro/0100-syllabus.html",
@@ -6683,14 +6480,7 @@
     "href": "Slides/05CombinedGames/0501-combinedgames.html",
     "title": "Games with both Simultaneous and Sequential Moves",
     "section": "",
-    "text": "We separated games by the timing of moves in the first few lectures\n\nit allowed us to introduce the relevant methods for each category\nit also gave us the intuition behind the more general concept of Nash Equilibrium in a few different settings\nbut for many types of settings there are a mix of actions that are taken both sequentially and also taken simultaneously\n\n\n\n\n\nCrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf only one company has fiber-optic, they get the entire market\n\nA monopolist can charge high price \\(\\rightarrow\\) earn $24 billion\nor a low price to attract more customers \\(\\rightarrow\\) earn $16 billion\n\n\n\n\n\n\n\nCrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf both companies invest, they are locked in a simultaneous pricing game\n\nIf both set high price in the fiber-optic market, each gets $12 billion\nIf both choose low, they each get $8 billion\nIf one sets high and the other sets low,\n\nthe low-price setter gets the whole market and earns $24 billion,\nthe high price setter gets $0\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe can use our tools from solving both game trees and game tables\n\n\nfirst, notice that a monopolist will always set a High price\nSo we can replace the payoffs from the High branch into the first-stage table\n\n\n\n\n\n\nTake a look at the table labelled Second stage:\n\n\n\nCrossTalk, GlobalDialog\nHigh\nLow\n\n\n\n\nHigh\n2, 2\n-10, 6\n\n\nLow\n6, -10\n-2, -2\n\n\n\n\nThis is itself a complete game nested in the larger one\n\nso it’s whats is called a subgame\nwe can solve it like we would any other game table\nThe NE of this subgame is (Low, Low)\nplace the Nash payoffs of -2, -2 into the first-stage table\n\n\n\n\n\n\nFirst-stage game with payoffs filled in:\n\n\n\nCrossTalk, GlobalDialog\nDon’t\nInvest\n\n\n\n\nDon’t\n0, 0\n0, 14\n\n\nInvest\n14, 0\n-2, -2\n\n\n\n\nNow we can solve for the NE of the whole game:\n\n(Invest High Low, Don’t High Low)\n(Don’t High Low, Invest High Low)\n\n\n\n\n\n\n\n\nIn football, each team chooses a play to run in the huddle where the other team can’t observe\n\nafter this simultaneous action which is not observable to their opponent, the teams line up at which point the coach can observe how the defensive team are aligned and choose to potentially pick a different play accordingly\nThe defensive team could in also choose to respond to the offensive play changing their play"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#games-with-both-types-of-moves",
-    "href": "Slides/05CombinedGames/0501-combinedgames.html#games-with-both-types-of-moves",
-    "title": "Games with both Simultaneous and Sequential Moves",
-    "section": "",
-    "text": "We separated games by the timing of moves in the first few lectures\n\nit allowed us to introduce the relevant methods for each category\nit also gave us the intuition behind the more general concept of Nash Equilibrium in a few different settings\nbut for many types of settings there are a mix of actions that are taken both sequentially and also taken simultaneously"
+    "text": "CrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf only one company has fiber-optic, they get the entire market\n\nA monopolist can charge high price \\(\\rightarrow\\) earn $24 billion\nor a low price to attract more customers \\(\\rightarrow\\) earn $16 billion\n\n\n\n\n\n\n\nCrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf both companies invest, they are locked in a simultaneous pricing game\n\nIf both set high price in the fiber-optic market, each gets $12 billion\nIf both choose low, they each get $8 billion\nIf one sets high and the other sets low,\n\nthe low-price setter gets the whole market and earns $24 billion,\nthe high price setter gets $0\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe can use our tools from solving both game trees and game tables\n\n\nfirst, notice that a monopolist will always set a High price\nSo we can replace the payoffs from the High branch into the first-stage table\n\n\n\n\n\n\nTake a look at the table labelled Second stage:\n\n\n\nCrossTalk, GlobalDialog\nHigh\nLow\n\n\n\n\nHigh\n2, 2\n-10, 6\n\n\nLow\n6, -10\n-2, -2\n\n\n\n\nThis is itself a complete game nested in the larger one\n\nso it’s whats is called a subgame\nwe can solve it like we would any other game table\nThe NE of this subgame is (Low, Low)\nplace the Nash payoffs of -2, -2 into the first-stage table\n\n\n\n\n\n\nFirst-stage game with payoffs filled in:\n\n\n\nCrossTalk, GlobalDialog\nDon’t\nInvest\n\n\n\n\nDon’t\n0, 0\n0, 14\n\n\nInvest\n14, 0\n-2, -2\n\n\n\n\nNow we can solve for the NE of the whole game:\n\n(Invest High Low, Don’t High Low)\n(Don’t High Low, Invest High Low)\n\n\n\n\n\n\n\n\nIn football, each team chooses a play to run in the huddle where the other team can’t observe\n\nafter this simultaneous action which is not observable to their opponent, the teams line up at which point the coach can observe how the defensive team are aligned and choose to potentially pick a different play accordingly\nThe defensive team could in also choose to respond to the offensive play changing their play"
   },
   {
     "objectID": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames",
@@ -7405,5 +7195,19 @@
     "title": "EC327 Intro to Game Theory",
     "section": "Homework",
     "text": "Homework\nHomework assignments will be posted on this website, but you will upload them to Canvas.\nAssignments page"
+  },
+  {
+    "objectID": "index.html#activities",
+    "href": "index.html#activities",
+    "title": "EC327 Intro to Game Theory",
+    "section": "Activities",
+    "text": "Activities\nAll activity sheets can be found here:\nActivites page"
+  },
+  {
+    "objectID": "index.html#exams",
+    "href": "index.html#exams",
+    "title": "EC327 Intro to Game Theory",
+    "section": "Exams",
+    "text": "Exams\nSee exam policies and study materials her:\nExams page"
   }
 ]
