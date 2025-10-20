@@ -1,0 +1,204 @@
+## Median-Voter Theorem
+
+> "Apparently, a democracy is a place where numerous elections are held at great
+cost without issues and with interchangeable candidates" -- Gore Vidal
+
+Political candidates sometimes have platforms that are more alike than different.
+
+  * How can we explain this with game theory?
+
+## Political Platform Game
+
+Assume there is a single spectrum to rank political candidates:
+
+  * \[0,1\]: set of potential platforms which could be chosen along this scale
+
+Also, assume only two parties:
+
+  * D(emocratic) or R(epublican)
+
+Candidates from either party set their platform $x_i$, where $i\in\{D,R\}$
+
+  * Voters choose the candidate who'se platform is closest to their ideology
+
+---
+
+## Voter Preference Distribution
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+# Define candidate positions
+x_D <- 0.2
+x_R <- 0.4
+midpoint <- (x_D + x_R) / 2
+
+# Generate voter distribution (centered at 0.5)
+set.seed(2025)
+voters <- data.frame(ideology = rnorm(10000, mean = 0.5, sd = 0.15)) %>%
+  filter(ideology >= 0, ideology <= 1) %>%
+  mutate(
+    preference = ifelse(abs(ideology - x_D) < abs(ideology - x_R), "D", "R")
+  )
+
+# Plot
+ggplot(voters, aes(x = ideology)) +
+  # Histogram colored by voter preference
+  geom_histogram(aes(x = ideology, y = ..density..), bins = 50, color = "white", boundary = 0) +
+  # Density overlay
+  # geom_density(color = "black", linewidth = 1, alpha = 0.7) +
+  # Candidate and midpoint markers
+  geom_vline(xintercept = c(x_D, x_R, midpoint),
+             linetype = c("solid", "solid", "dashed"),
+             color = c("blue", "red", "black"),
+             linewidth = c(1.2, 1.2, 0.8)) +
+  # Labels for regions
+  annotate("text", x = 0.15, y = 4, label = "Vote for D", 
+           fontface = "italic", size = 5, color = "blue4") +
+  annotate("text", x = 0.85, y = 4, label = "Vote for R", 
+           fontface = "italic", size = 5, color = "red4") +
+  # Axis and legend formatting
+  scale_x_continuous(
+    breaks = c(0, x_D, midpoint, x_R, 1),
+    labels = c("0", expression(x[D]), 
+               expression((x[D] + x[R]) / 2), 
+               expression(x[R]), "1")
+  ) +
+  scale_fill_manual(values = c("D" = "skyblue3", "R" = "tomato3"),
+                    name = "Preferred candidate",
+                    labels = c("Democrat (D)", "Republican (R)")) +
+  labs(
+    # title = "The Determination of a Winner in the Campaign",
+    x = NULL,
+    y = "Density of voters"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    legend.position = "top",
+    panel.grid.minor = element_blank()
+  )
+```
+
+  * Not a Nash: Democrats set too low of a platform.
+
+---
+
+## Voter Preference Distribution
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+# Define candidate positions
+x_D <- 0.4
+x_R <- 0.7
+midpoint <- (x_D + x_R) / 2
+
+# Generate voter distribution (centered at 0.5)
+set.seed(2025)
+voters <- data.frame(ideology = rnorm(10000, mean = 0.5, sd = 0.15)) %>%
+  filter(ideology >= 0, ideology <= 1) %>%
+  mutate(
+    preference = ifelse(abs(ideology - x_D) < abs(ideology - x_R), "D", "R")
+  )
+
+# Plot
+ggplot(voters, aes(x = ideology)) +
+  # Histogram colored by voter preference
+  geom_histogram(aes(x = ideology, y = ..density..), bins = 50, color = "white", boundary = 0) +
+  # Density overlay
+  # geom_density(color = "black", linewidth = 1, alpha = 0.7) +
+  # Candidate and midpoint markers
+  geom_vline(xintercept = c(x_D, x_R, midpoint),
+             linetype = c("solid", "solid", "dashed"),
+             color = c("blue", "red", "black"),
+             linewidth = c(1.2, 1.2, 0.8)) +
+  # Labels for regions
+  annotate("text", x = 0.15, y = 4, label = "Vote for D", 
+           fontface = "italic", size = 5, color = "blue4") +
+  annotate("text", x = 0.85, y = 4, label = "Vote for R", 
+           fontface = "italic", size = 5, color = "red4") +
+  # Axis and legend formatting
+  scale_x_continuous(
+    breaks = c(0, x_D, midpoint, x_R, 1),
+    labels = c("0", expression(x[D]), 
+               expression((x[D] + x[R]) / 2), 
+               expression(x[R]), "1")
+  ) +
+  scale_fill_manual(values = c("D" = "skyblue3", "R" = "tomato3"),
+                    name = "Preferred candidate",
+                    labels = c("Democrat (D)", "Republican (R)")) +
+  labs(
+    # title = "The Determination of a Winner in the Campaign",
+    x = NULL,
+    y = "Density of voters"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    legend.position = "top",
+    panel.grid.minor = element_blank()
+  )
+```
+
+  * Not a Nash: Democrats could steal more median voters from Republicans
+
+---
+
+## Nash in Political Platform Game
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+# Define candidate positions
+x_D <- 0.49
+x_R <- 0.51
+midpoint <- (x_D + x_R) / 2
+
+# Generate voter distribution (centered at 0.5)
+set.seed(2025)
+voters <- data.frame(ideology = rnorm(10000, mean = 0.5, sd = 0.15)) %>%
+  filter(ideology >= 0, ideology <= 1) %>%
+  mutate(
+    preference = ifelse(abs(ideology - x_D) < abs(ideology - x_R), "D", "R")
+  )
+
+# Plot
+ggplot(voters, aes(x = ideology, fill = preference)) +
+  # Histogram colored by voter preference
+  geom_histogram(aes(x = ideology, y = ..density..), bins = 50, color = "white", boundary = 0) +
+  # Density overlay
+  # geom_density(color = "black", linewidth = 1, alpha = 0.7) +
+  # Candidate and midpoint markers
+  geom_vline(xintercept = c(x_D, x_R, midpoint),
+             linetype = c("solid", "solid", "dashed"),
+             color = c("blue", "red", "black"),
+             linewidth = c(1.2, 1.2, 0.8)) +
+  # Labels for regions
+  annotate("text", x = 0.15, y = 4, label = "Vote for D", 
+           fontface = "italic", size = 5, color = "blue4") +
+  annotate("text", x = 0.85, y = 4, label = "Vote for R", 
+           fontface = "italic", size = 5, color = "red4") +
+  # Axis and legend formatting
+  scale_x_continuous(
+    breaks = c(0, x_D, midpoint, x_R, 1),
+    labels = c("0", "", "", "", "1")
+  ) +
+  scale_fill_manual(values = c("D" = "skyblue3", "R" = "tomato3"),
+                    name = "Preferred candidate",
+                    labels = c("Democrat (D)", "Republican (R)")) +
+  labs(
+    # title = "The Determination of a Winner in the Campaign",
+    x = NULL,
+    y = "Density of voters"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    legend.position = "top",
+    panel.grid.minor = element_blank()
+  )
+```

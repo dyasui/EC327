@@ -31,16 +31,13 @@ output:
 
 ::: {.incremental}
 
-  * So far, we have only seen games that were either made up of 
-  *only sequential* or *only simultaneous* moves.
+  * So far, games either: *only sequential* or *only simultaneous*.
 
-  * But realistically, 
-  many strategic interactions will contain both types of moves.
+  * But realistically, strategic interactions will contain both types.
 
-  * Learning to move between extensive and strategic form 
-  will help us examine more complicated games,
-  as well as introduce us to the roll of *information* and beliefs
-  which will become useful to later topics.
+  * Moving between forms helps for complicated games
+
+    - Introduces distinctions for *information* and beliefs
 
 :::
 
@@ -401,6 +398,6 @@ Here is the game matrix for the entire kidnapping game:
 
 {{< include 0505-SPNE.qmd >}}
 
-{{< include 0404-generalnash.qmd >}}
+<!-- {{< include 0404-generalnash.qmd >}} -->
 
-{{< include 0405-nashcritique.qmd >}}
+<!-- {{< include 0405-nashcritique.qmd >}} -->

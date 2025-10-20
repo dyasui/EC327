@@ -17,6 +17,8 @@ title-slide-attributes:
   data-background-position: left
 filters:
   - parse-latex
+execute: 
+  echo: false
 ---
 
 ::: {.vertical-center}
@@ -29,10 +31,62 @@ filters:
   
 :::
 
+## Continuous strategies
+
+So far, choices available to our players to are *discrete*
+
+::: {.incremental}
+- For example, 2x2 game table, extensive form with a few branches
+- Even chess has a *countable* number of strategies available to a player
+- In other cases it makes more sense to model strategies as *continous* 
+  + (non-countable)
+:::
+
+---
+
+## When Continuous Strategies are Useful
+::: {.incremental}
+  * Pricing/bidding/etc in dollar amounts
+
+  * Positions in space or in political alignment
+
+  * How much effort to put into a group project
+
+  * Price-setting in competitive markets (Bertrand model)
+
+  * Quantity-setting in competitive markets (Cournot model)
+:::
+
+---
+
+## Best-Responses to Continuous Strategies
+
+Go from *discrete* **best-response** strategies 
+to *continuous* [best-response rules]{.hi}
+
+::: {.callout-note}
+A [best-response rule]{.hi} *inputs* a value of another player's strategy 
+  * and returns a real number: the optimal value in *response*
+:::
+
+::: {.incremental}
+  * Because there might be multiple values to one input value,
+    - they are technically *correspondances*,
+    - but you can treat them like *functions*
+  * this means we can't use payoff matrices to represent these games anymore,
+  * instead we will graph these strategies in Cartesian coordinate systems
+:::
+
 {{< include 0401-pricecomp.qmd >}}
 
-{{< include 0402-oligopoly.qmd >}}
+{{< include 0402-pricematching.qmd >}}
 
-{{< include 0403-campaining.qmd >}}
+{{< include 0403-medianvoter.qmd >}}
 
-{{< include 0405-rationalize.qmd >}}
+{{< include 0404-calculusbertrand.qmd >}}
+
+{{< include 0405-cournot.qmd >}}
+
+<!-- {{< include 0405-rationalize.qmd >}} -->
+
+{{< include 0405-nashcritique.qmd >}}

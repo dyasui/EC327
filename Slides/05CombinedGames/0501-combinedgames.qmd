@@ -1,6 +1,6 @@
 # Games with both Simultaneous and Sequential Moves
 
-## Games with both types of moves
+<!-- ## Games with both types of moves
 
 We separated games by the timing of moves in the first few lectures
 
@@ -10,7 +10,7 @@ We separated games by the timing of moves in the first few lectures
 
   * but for many types of settings there are a mix of actions that are taken both *sequentially* and also taken *simultaneously*
 
----
+--- -->
 
 ## Two-Stage Games & Subgames
 

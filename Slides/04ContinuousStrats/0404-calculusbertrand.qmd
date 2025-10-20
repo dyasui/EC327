@@ -1,0 +1,255 @@
+# Price Competition with Differentiated Products
+
+## Setup: Apple and Samsung's Competition
+
+Instead of a symmetric game, let's try one with *differentiated* products
+
+For example, the market for smartphones.
+
+Let's assume only two players; A(pple) and S(amsung).
+
+  *  $D_A(P_A,P_S) = 100 - 2P_A + P_S$ 
+
+   - The higher $P_A$, fewer iPhones sold
+
+   - The higher $P_S$, more people switch from Galaxy to iPhone
+
+---
+ 
+## Apple's Profit Function
+
+Tim Cook’s profit based on his price and number of iPhone customers:
+$$
+\begin{align}
+\pi_A & = (\text{price} - \text{cost})(\textbf{quantity sold}) \\
+      & = (P_A - 10)\mathbf{(100 - 2P_A + P_S)}
+\end{align}
+$$
+
+Assume a marginal cost of 10 per unit for iPhones
+
+---
+
+## Samsung's Profit Function
+
+Samsung's profit based on prices and number of Galaxys sold:
+$$
+\begin{align}
+\pi_S & = (P_S - 30)\mathbf{(100 - 2P_S + P_A)}
+\end{align}
+$$
+
+Assume Samsung has a higher cost of 30 per Galaxy produced
+
+---
+
+## Step 1: Expand Apple's Profit Function
+
+Let’s expand Apple’s profit function:
+$$
+\begin{align}
+\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\
+      & = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)
+\end{align}
+$$
+
+---
+
+## Step 2: Simplify the Expanded Profit Function
+
+Let’s expand Apple’s profit function:
+$$
+\begin{align}
+\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\
+      & = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)
+\end{align}
+$$
+
+Now, multiply out the terms:
+
+$$
+100 P_A + P_A P_S - 2 P_A^2 - 1000 - 10 P_S + 20 P_A
+$$
+
+**What should we do next to find the best price?**
+
+---
+
+## Step 3: Deriving Apple’s Best-Response Function
+
+To find the best price, we differentiate $\Pi_A$ with respect to $P_A$.
+
+### Differentiation:
+$$
+\frac{d\pi_A}{dP_A} = 100 + P_S - 4P_A + 20 = P_S + 120 - 4P_A
+$$
+
+Set the derivative equal to zero for maximization:
+$$
+P_S + 120 - 4P_A = 0
+$$
+Solve for $P_A$:
+$$
+BR_A(P_S) = 30 + 0.25P_S
+$$
+
+---
+
+## For those without Calculus background
+
+The profit function we wrote out in step 2 seems complicated, so lets simplify it:
+
+$$
+\pi_A = - 1000 - 10 P_S +  \mathbf{P_A} (120 + P_S) - 2 \mathbf{P_A}^2 
+$$
+
+As Apple, we can only set our own price, $P_A$, 
+everything else we can just treat as a constant
+
+This fits a more general pattern:
+
+$$
+S = A + BA - CA^2
+$$
+
+---
+
+## For those without Calculus background
+
+$$
+S = A + BA - CA^2
+$$
+
+If we want to find the maximum of $S$ in this equation as a function of $A$, 
+as long as $C>0$, this will take the shape of a parabola with a single peak.
+
+::: {.incremental}
+  * The maxmimum of this function will be reached at:
+  * $A^* = \frac{B}{2C}$
+:::
+
+---
+
+## For those without Calculus background
+
+So going back to Apple's profit function, 
+
+  * If $B = 120 + P_S$
+  * and $C = 2$
+
+then applying that the maximum choice will meet $\frac{B}{2C}$, 
+
+we get the same answer of 
+$P_A^* = 30 + 0.25P_S$
+
+## Step 4: Samsung's Best-Response Function
+
+Samsung’s best-response function is similar:
+
+$$
+\begin{align}
+\pi_A & = (P_S - 30)(100 - 2P_S + P_A) \\
+      & = 100P_S - 2P_S^2 + P_A P_S - 3000 + 60P_S - 30P_A
+\end{align}
+$$
+
+$$
+\begin{align*}
+\frac{d\pi_S}{dP_S} & = 0 \\
+100 - 4P_S + P_A + 60 & = 0 \\
+BR_S(P_A) & = 40 + .25P_A
+\end{align*}
+$$
+
+### **Question:** How do we find the Nash?
+
+::: {.incremental}
+  * We have one best response rule for each player 
+    - as a function of the other player's pricing strategy
+  * I.e., a system of *two equations* and *two unknowns*
+:::
+
+---
+
+## What is a NE in this situation?
+
+A Nash is a stable configuration of strategies 
+
+  - in which each player is best responding to the other
+
+::: {.incremental}
+  * When each player is setting profit-maximizing price
+    - **conditional on the other player's price**,
+    - there will be no incentive to change price
+  * Plug in one player's best response rule *into the other player's best response rule*
+    - to solve for the equilibrium price
+:::
+
+## Step 5: Solve for Nash Equilibrium
+
+We solve the system of equations for $P_A$ and $P_S$:
+$$
+P_A = 30 + 0.25P_S
+$$
+$$
+P_S = 40 + 0.25P_A
+$$
+
+---
+
+## Step 5: Solve for Nash Equilibrium
+
+Substitute one equation into the other:
+$$
+P_A = 30 + 0.25(40 + 0.25P_S)
+$$
+Simplify:
+$$
+P_A = 30 + 10 + 0.0625P_A
+$$
+Solve for $P_S$:
+$$
+\begin{align*}
+  P_A(1-0.0625) & = 40 \\
+  P_S & = 42.67
+\end{align*}
+$$
+
+Then, plug $P_S = 20$ back into the first equation:
+$$
+P_S = 40 + 0.25(42.67) = 50.67
+$$
+
+---
+
+## Step 6: Conclusion
+
+At equilibrium:
+
+* $P_A = 42.67$, $P_S = 50.67$
+
+* Do either firm have an incentive to deviate?
+
+  - How would we check?
+
+---
+
+## Continous Strategy Nash Graphically
+
+![](figures/apple-samsung-nash.png)
+
+---
+
+## Recap: Price Competition Breakdown
+
+- Step 1: Expand the profit function.
+- Step 2: Simplify the expanded equation.
+- Step 3: Differentiate and solve for best-response.
+- Step 4: Repeat for Samsung.
+- Step 5: Solve for Nash equilibrium.
+
+---
+
+<!-- ## Graphically:
+
+![](figures/Dixit_fig5.1.png) -->

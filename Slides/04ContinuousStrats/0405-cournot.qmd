@@ -1,0 +1,102 @@
+# Cournot Duopoly
+
+## Cournot vs Bertrand
+
+In the sandwich shop game, both players set *prices*
+  
+  * We call that a [Bertrand]{.hi} model of oligopoly
+
+We could also imagine firms choosing *quantities*
+
+  * We'll call this the [Cournot]{.hi} model
+
+---
+
+## Cournot Competition: Creating the Payoff Functions
+::: {.incremental}
+
+* First of all, we need payoff functions for each player.
+
+* Since the players are firms, and the goal of a firm is to maximize profit, we'll use the firms' profits as their payoffs.
+
+* We can construct the profit functions by taking TR - TC, or in this case, Pq - c(q).
+
+* Solving for P, we find that $P = 100 - Q = 100 - q_1 - q_2$.
+
+:::
+
+---
+
+## Cournot Competition: Creating the Payoff Functions
+This gives us:
+$$
+\begin{align}
+\pi_1 &= (100 - q_1 - q_2)q_1 - 10q_1 & \pi_2 &= (100 - q_1 - q_2)q_2 - 10q_2\\
+&= 100q_1 - q_1^2 - q_1q_2 - 10q_1 & &= 100q_2 - q_1q_2 - q_2^2 - 10q_2\\
+&= 90q_1 - q_1^2 - q_1q_2 & &= 90q_2 - q_1q_2 - q_2^2\\
+&= (90 - q_2)q_1 - q_1^2 & &= (90 - q_1)q_2 - q_2^2
+\end{align}
+$$
+---
+
+## Cournot Competition: Finding Best-Response Functions
+These best-response functions are in the by-now familiar quadratic form. Both of them have negative squared terms, so we can look for a maximum:
+$$
+\begin{align}
+q_1 &= \frac{-(90 - q_2)}{2(-1)} & q_2 &= \frac{-(90 - q_1)}{2(-1)}\\
+&= \frac{90 - q_2}{2} & &= \frac{90 - q_1}{2}\\
+&= 45 - \frac{q_2}{2} & &= 45 - \frac{q_1}{2}
+\end{align}
+$$
+---
+
+## Cournot Oligopoly: Finding Nash Equilibrium
+
+Solve these best-response rules as a system of equations:
+$$
+\begin{align}
+q_1 &= 45 - \frac{1}{2}q_2\\
+q_2 &= 45 - \frac{1}{2}q_1\\
+\implies q_1 &= 45 - \frac{1}{2}(45 - \frac{1}{2}q_1) & q_2 &= 45 - \frac{1}{2}(30)\\
+q_1 &= 45 - \frac{45}{2} + \frac{1}{4}q_1 & &= 45 - 15\\
+\frac{3}{4}q_1 &= \frac{45}{2} & q_2^* &= \boxed{30}\\
+q_1^* &= \boxed{30}
+\end{align}
+$$
+
+---
+
+<!-- ## Another Cournot Example
+> Crude oil is transported across the globe in enormous tanker ships called
+> Very Large Crude Carriers (VLCCs). By 2001, more than 92% of all new
+> VLCCs were built in South Korea and Japan. Assume that the price of new
+> VLCCs (in millions of dollars) is determined by the function $P = 180 - Q$,
+> where $Q = q_{Korea} + q_{Japan}$. (That is, assume that only Japan and Korea
+> produce VLCCs, so they are a duopoly.) Assume that the cost of building
+> each ship is $30 million in both Korea and Japan. That is, $c_{Korea} = c_{Japan} = 30$,
+> where the per-ship cost is measured in millions of dollars.
+
+--- -->
+
+## Conclusion: The Economics of Oligopoly
+
+In an oligopoly:
+
+- Firms’ prices (quantities) are interdependent.
+
+- The best-response functions allow us to determine equilibrium prices (or quantities in Bertrand).
+
+<!-- ---
+
+## Interactive Exercise: Market Dynamics
+
+Let’s extend this:
+
+- **What happens when a third firm enters the market?**
+
+  - Would prices fall? Would all three firms set similar prices?
+
+  - Or would competition force one firm out of the market?
+
+Discuss!
+ -->

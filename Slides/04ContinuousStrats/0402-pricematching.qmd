@@ -1,0 +1,153 @@
+# Oligopoly
+
+## Market Competition
+
+Some definitions of competition:
+
+  * [Monopoly]{.hi}: A single firm in a market
+
+  * [Oligopoly]{.hi}: Only a few firms
+    - [Duopoly]{.hii}: Two firms (like we've been looking at)
+  
+  * [Perfect Competition]{.hi}: Enough firms to guarantee zero-profit
+
+---
+
+## Monopoly Model
+
+What would a single firm do in the market?
+
+$$
+\Pi = (p-10)(100-p)
+$$
+
+  * Here $p$ is the only price set by the monopolist
+
+---
+
+## Monopolist's Maximum Profit
+
+![](figures/monopolist-maxprofit.png)
+
+---
+
+## Solving with Calculus
+
+$$
+\begin{align*}
+  \Pi & = (p-10)(100-p) = 100p - p^2 - 1000 + 10p \\
+      & = -p^2 + 110p - 1000
+\end{align*}
+$$
+
+Find where the slope equals zero:
+$$
+\frac{\delta \Pi}{\delta p} = -2p + 110 + 0
+$$
+
+$$
+\begin{align*}
+  \frac{\delta \Pi}{\delta p} = 0 \\
+  \Rightarrow  -2p + 110 & = 0 \\
+  110 & = 2p \\
+  p = \frac{110}{2} & = 55
+\end{align*}
+$$
+
+---
+
+## Derivative of Profit
+
+![](figures/derivative.png)
+
+---
+
+## Comparing Monopoly to Bertrand
+
+If a single firm:
+
+  * Price = $55
+  * Profit = $2,025
+
+If two firms competing:
+
+  * Price = $10
+  * Profit = $0
+
+---
+
+## Price Matching Guarantees
+
+> "Store Price Gurantee -- If you're about to buy at a Best Buy store and discover a lower price than ours, let us know and we'll match that price on the spot."
+
+  * Does this seem like *competitive* behavior?
+
+  * Compared to our earlier price competition model,
+    
+    - Will prices be higher
+
+    - or lower in an equilibrium with price-matching?
+
+---
+
+## Price-matching Setup
+
+Let's use the same costs and demand curve.
+
+Two firms; shop 1 and shop 2 who both price match.
+
+  * If $p_1\leq p_2$, then shop 1 will sell at $p_1$
+  * but if $p_1 > p_2$, they agree to charge only $p_2$
+
+---
+
+## Price-matching Payoffs
+
+Shop 1's payoff function:
+$$
+\begin{equation*}
+  \Pi_1 = [\min\{p_1,p_2\}- 10][100 - \min\{p_1,p_2\}](\frac{1}{2})
+\end{equation*}
+$$
+Shop 2's payoff function:
+$$
+\begin{equation*}
+  \Pi_2 = [\min\{p_1,p_2\}- 10][100 - \min\{p_1,p_2\}](\frac{1}{2})
+\end{equation*}
+$$
+
+## Price-Matching Nash
+
+Consider both firms charging Monopolist's prices of $55:
+
+Is this a Nash?
+
+::: {.incremental}
+  
+  * If $p_1<55$:
+
+    - $\Pi_1(p_1,55) = [p_1 - 10][100 - p_1](\frac{1}{2}) < 2025$
+
+  * If $p_1>55$:
+
+    - $\Pi_1(p_1,55) = [55- 10][100 - 55](\frac{1}{2}) 2025$
+
+:::
+
+---
+
+## Price-Matching Payoffs
+
+![](figures/duopoly-profit.png)
+
+---
+
+## Price-Matching Nash Outcome
+
+With price-matching:
+
+  * Both firms setting high prices ($55) is stable
+
+  * Price-matching removes the incentives to undercut prices!
+
+  * Could be used as a form of *legal collusion*
