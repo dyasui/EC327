@@ -152,327 +152,614 @@ Dante Yasui
 </ul>
 </div>
 </section>
-<section>
-<section id="continuous-strategies" class="title-slide slide level1 center">
-<h1>Continuous Strategies</h1>
-
-</section>
-<section id="allowing-for-an-infinite-set-of-possible-strategies" class="slide level2">
-<h2>Allowing for an infinite set of possible strategies</h2>
-<p>So far, in both <em>sequential</em> and <em>simultaneous</em> games, we have restricted the sets of choices available to our players to <strong>finite</strong> sets.</p>
+<section id="continuous-strategies" class="slide level2">
+<h2>Continuous strategies</h2>
+<p>So far, choices available to our players to are <em>discrete</em></p>
 <ul>
-<li class="fragment">Even more complicated games like chess have a <em>countable</em> number of strategies available to a player</li>
-<li class="fragment">While this can sometimes make it simpler to solve for games with <em>discrete</em> strategies, in other cases it can make more sense to model the choices to players on some <em>continuum</em></li>
-</ul>
-</section>
-<section id="cases-where-continuous-strategies-are-useful" class="slide level2">
-<h2>Cases where Continuous Strategies are Useful</h2>
+<li class="fragment">For example, 2x2 game table, extensive form with a few branches</li>
+<li class="fragment">Even chess has a <em>countable</em> number of strategies available to a player</li>
+<li class="fragment">In other cases it makes more sense to model strategies as <em>continous</em>
 <ul>
-<li class="fragment">Pricing/bidding/etc in dollar amounts
-<ul>
-<li class="fragment">Even if there is some minimum unit (like a cent), when there are many options with an obviuous ordering it still makes sense to use continuous values</li>
-</ul></li>
-<li class="fragment">Positions in space
-<ul>
-<li class="fragment">For example, you could choose to place your franchise 1 mile away from your competitors, 100 yards, 1 foot etc.,</li>
+<li class="fragment">(non-countable)</li>
 </ul></li>
 </ul>
 </section>
-<section id="extending-best-response-to-continuous-variables" class="slide level2">
-<h2>Extending Best-Response to Continuous Variables</h2>
-<p>For our model of price competition, we will extend the method of finding <em>discrete</em> <strong>best-response</strong> strategies to continuous <span class="hi">best-response rules</span></p>
-<blockquote>
-<p>A <span class="hi">best-response rule</span> takes the value of another player’s continuous strategy as an <em>input</em> and returns another continuous value as the best response to that strategy</p>
-</blockquote>
+<section id="when-continuous-strategies-are-useful" class="slide level2">
+<h2>When Continuous Strategies are Useful</h2>
 <ul>
+<li class="fragment"><p>Pricing/bidding/etc in dollar amounts</p></li>
+<li class="fragment"><p>Positions in space or in political alignment</p></li>
+<li class="fragment"><p>How much effort to put into a group project</p></li>
+<li class="fragment"><p>Price-setting in competitive markets (Bertrand model)</p></li>
+<li class="fragment"><p>Quantity-setting in competitive markets (Cournot model)</p></li>
+</ul>
+</section>
+<section id="best-responses-to-continuous-strategies" class="slide level2">
+<h2>Best-Responses to Continuous Strategies</h2>
+<p>Go from <em>discrete</em> <strong>best-response</strong> strategies to <em>continuous</em> <span class="hi">best-response rules</span></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>A <span class="hi">best-response rule</span> <em>inputs</em> a value of another player’s strategy * and returns a real number: the optimal value in <em>response</em></p>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment">Because there might be multiple values to one input value,
+<ul>
+<li class="fragment">they are technically <em>correspondances</em>,</li>
+<li class="fragment">but you can treat them like <em>functions</em></li>
+</ul></li>
 <li class="fragment">this means we can’t use payoff matrices to represent these games anymore,</li>
 <li class="fragment">instead we will graph these strategies in Cartesian coordinate systems</li>
 </ul>
 </section>
-<section id="setup-xavier-and-yvonnes-competition" class="slide level2">
-<h2>Setup: Xavier and Yvonne’s Competition</h2>
-<p>Two restaurants in Yuppie Haven: Xavier’s Tapas Bar and Yvonne’s Bistro.</p>
-<p>Each place serves the exact same menu, can only compete based on how much they charge.</p>
+<section>
+<section id="price-competition" class="title-slide slide level1 center">
+<h1>Price Competition</h1>
+
+</section>
+<section id="sub-sandwich-competition-setup" class="slide level2">
+<h2>Sub Sandwich Competition: Setup</h2>
+<p>Two campus sandwich shops: Jersey Mike’s vs Port of Subs.</p>
+<p>Assume same menu and quality, only difference is price.</p>
+<h3 id="assumptions">Assumptions:</h3>
 <ul>
-<li><p>This makes this game a good application of <em>continuous</em> strategies because there are many different values which a menu price could take.</p></li>
-<li><p>Also, each restaurant’s payoff is represented by a <span class="hi">continuous payoff function</span></p>
-<ul>
-<li>In this case, the payoff is the restaurant’s <strong>profit</strong> which can take on any dollar value and depends on the price and quantity sold by the competing restaurant</li>
-</ul></li>
+<li>Both set prices simultaneously.</li>
+<li>Sandwiches cost $10 each in ingrediants, labor, etc.</li>
+<li>Shops only care about <strong>profit</strong>: <span class="math inline">\(\Pi = p*Q - c*Q\)</span></li>
+<li>Common demand curve (customers treat as <span class="hi">substitute goods</span>)</li>
 </ul>
 </section>
-<section id="assumptions" class="slide level2">
-<h2>Assumptions:</h2>
+<section id="sub-sandwich-competition-demand-curve" class="slide level2">
+<h2>Sub Sandwich Competition: Demand Curve</h2>
+
+<img data-src="04-main_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="individual-demand-curves" class="slide level2">
+<h2>Individual Demand Curves</h2>
+<p><span class="math display">\[
+\begin{equation*}
+  D_{JM}(P_{JM},P_{PS}) = \begin{cases}
+    100 - P_{JM} &amp; \text{if  } P_{JM} &lt; P_{PS} \\
+    \frac{1}{2} (100 - P_{JM}) &amp; \text{if  } P_{JM} = P_{PS} \\
+    0 &amp; \text{if  } P_{PS} &lt; P_{JM}
+  \end{cases}
+\end{equation*}
+\]</span></p>
+<p><span class="math display">\[
+\begin{equation*}
+  D_{PS}(P_{JM},P_{PS}) = \begin{cases}
+    100 - P_{PS} &amp; \text{if  } P_{PS} &lt; P_{JM} \\
+    \frac{1}{2} (100 - P_{PS}) &amp; \text{if  } P_{PS} = P_{JM} \\
+    0 &amp; \text{if  } P_{JM} &lt; P_{PS}
+  \end{cases}
+\end{equation*}
+\]</span></p>
 <ul>
-<li><p>Both set prices simultaneously.</p></li>
-<li><p>Costs per customer: $8.</p></li>
-<li><p>Demand depends on both prices:</p>
-<ul>
-<li><p><span class="math inline">\(Q_X = 44 - 2P_X + P_Y\)</span></p></li>
-<li><p><span class="math inline">\(Q_Y = 44 - 2P_Y + P_X\)</span></p></li>
-</ul></li>
+<li><p><span class="math inline">\(D_{JM}\)</span>: quantitiy of subs demanded at Jersey Mike’s</p></li>
+<li><p><span class="math inline">\(P_{JM}\)</span>: price at Jersey Mike’s, <span class="math inline">\(P_{PS}\)</span>: price at Port of Subs</p></li>
 </ul>
-<p>Where:</p>
 <ul>
-<li><p><span class="math inline">\(Q_X\)</span> is the quantitiy of meals sold and <span class="math inline">\(P_X\)</span> is the price charged by Xavier</p></li>
-<li><p><span class="math inline">\(Q_Y\)</span> is the quantity sold and <span class="math inline">\(P_Y\)</span> is the price charged by Yvonne</p></li>
+<li class="fragment">Notice each shop’s demand depends on their competitor</li>
+<li class="fragment">Also, to make things easy, this is a <em>symmetric game</em></li>
 </ul>
-<p>Notice how each restaurant’s demand depends on thier competitior</p>
 </section>
-<section id="profit-functions" class="slide level2">
-<h2>Profit Functions</h2>
-<p>Xavier’s profit is calculated based on his price and number of customers: <span class="math display">\[
+<section id="payoff-functions" class="slide level2">
+<h2>Payoff Functions</h2>
+<p>Jersey Mike’s profit is price times number of subs: <span class="math display">\[
 \begin{align}
-\pi_X &amp; = (\text{price} - \text{cost})(\textbf{quantity sold}) \\
-      &amp; = (P_X - 8)\mathbf{(44 - 2P_X + P_Y)}
+\Pi_{jm} &amp; = (\text{price} - \text{cost})(\textbf{quantity sold}) \\
+      &amp; = (P_{jm} - 10)\mathbf{D_{jm}(P_{jm},P_{ps})} \\
+      &amp; = \begin{cases}
+      (P_{jm} - 10)(100 - P_{jm}) &amp; \text{if  } P_{jm} &lt; P_{ps} \\
+    \frac{1}{2} (P_{jm} - 10)(100 - P_{jm}) &amp; \text{if  } P_{jm} = P_{ps} \\
+    0 &amp; \text{if  } P_{ps} &lt; P_{jm}
+    \end{cases}
 \end{align}
 \]</span></p>
-<p>Yvonne’s profit follows a similar formula.</p>
-<p><strong>How might we derive the best price for each?</strong></p>
 </section>
-<section id="step-1-expand-xaviers-profit-function" class="slide level2">
-<h2>Step 1: Expand Xavier’s Profit Function</h2>
-<p>Let’s expand Xavier’s profit function: <span class="math display">\[
+<section id="payoff-functions-1" class="slide level2">
+<h2>Payoff Functions</h2>
+<p>Because of <em>symmetry</em>:</p>
+<p>Jersey Mike’s payoff: <span class="math display">\[
+\begin{equation*}
+  \Pi_{jm} = \begin{cases}
+      (P_{jm} - 10)(100 - P_{jm}) &amp; \text{if  } P_{jm} &lt; P_{ps} \\
+    \frac{1}{2} (P_{jm} - 10)(100 - P_{jm}) &amp; \text{if  } P_{jm} = P_{ps} \\
+    0 &amp; \text{if  } P_{ps} &lt; P_{jm}
+    \end{cases}
+\end{equation*}
+\]</span> Port of Subs’s payoff: <span class="math display">\[
+\begin{equation*}
+  \Pi_{ps} = \begin{cases}
+    0 &amp; \text{if  } P_{jm} &lt; P_{ps} \\
+    \frac{1}{2} (P_{ps} - 10)(100 - P_{ps}) &amp; \text{if  } P_{jm} = P_{ps} \\
+    (P_{ps} - 10)(100 - P_{ps}) &amp; \text{if  } P_{ps} &lt; P_{jm}
+    \end{cases}
+\end{equation*}
+\]</span></p>
+</section>
+<section id="checking-strategy-profiles" class="slide level2">
+<h2>Checking Strategy Profiles</h2>
+<p>To start, suppose Port of Subs charges $40 per sandwich:</p>
+
+<img data-src="./figures/JM-payoff-fn.png" class="r-stretch"><ul>
+<li class="fragment"><p>How much should Jersey Mike’s charge to maximize profit?</p>
+<ul>
+<li class="fragment">$39.99!</li>
+</ul></li>
+</ul>
+</section>
+<section id="checking-strategy-profiles-1" class="slide level2">
+<h2>Checking Strategy Profiles</h2>
+<p>If Jersey Mike’s charges $30, does Port of Subs have <em>regrets</em>?</p>
+
+<img data-src="./figures/PS-payoff-fn.png" class="r-stretch"><ul>
+<li class="fragment">They would rather charge $29.99 and earn positive profit &gt; 0</li>
+</ul>
+</section>
+<section id="nash-in-sandwich-pricing-game" class="slide level2">
+<h2>Nash in Sandwich Pricing Game</h2>
+<p>What is the Nash equilibrium of this game?</p>
+<p><span class="math display">\[
+\begin{equation*}
+  \Pi_{jm} = \begin{cases}
+      (P_{jm} - 10)(100 - P_{jm}) &amp; \text{if  } P_{jm} &lt; P_{ps} \\
+    \frac{1}{2} (P_{jm} - 10)(100 - P_{jm}) &amp; \text{if  } P_{jm} = P_{ps} \\
+    0 &amp; \text{if  } P_{ps} &lt; P_{jm}
+    \end{cases}
+\end{equation*}
+\]</span> <span class="math display">\[
+\begin{equation*}
+  \Pi_{ps} = \begin{cases}
+    0 &amp; \text{if  } P_{jm} &lt; P_{ps} \\
+    \frac{1}{2} (P_{ps} - 10)(100 - P_{ps}) &amp; \text{if  } P_{jm} = P_{ps} \\
+    (P_{ps} - 10)(100 - P_{ps}) &amp; \text{if  } P_{ps} &lt; P_{jm}
+    \end{cases}
+\end{equation*}
+\]</span></p>
+</section>
+<section id="nash-in-sandwich-pricing-game-1" class="slide level2">
+<h2>Nash in Sandwich Pricing Game</h2>
+<p>Nash: Both shops set <span class="math inline">\({\color{P_{jm}=P_{ps}=\$blue}10}\)</span></p>
+<p><span class="math display">\[
+\begin{equation*}
+  \Pi_{jm} = \begin{cases}
+      ({\color{blue} 10} - 10)(100 - {\color{blue} 10}) &amp; = 0 &amp; \text{if  } P_{jm} &lt; {\color{blue} 10} \\
+    \frac{1}{2} ({\color{blue} 10} - 10)(100 - {\color{blue} 10}) &amp; = 0 &amp; \text{if  } P_{jm} = {\color{blue} 10} \\
+    0 &amp; &amp; \text{if  } P_{jm} &lt; {\color{blue} 10}
+    \end{cases}
+\end{equation*}
+\]</span> <span class="math display">\[
+\begin{equation*}
+  \Pi_{ps} = \begin{cases}
+    0 &amp; &amp; \text{if  } {\color{blue} 10} &lt; P_{ps} \\
+    \frac{1}{2} ({\color{blue} 10} - 10)(100 - {\color{blue} 10}) &amp; =0 &amp; \text{if  } P_{ps} = {\color{blue} 10} \\
+    ({\color{blue} 10} - 10)(100 - {\color{blue} 10}) &amp; =0 &amp; \text{if  } P_{ps} &lt; {\color{blue} 10}
+    \end{cases}
+\end{equation*}
+\]</span></p>
+<ul>
+<li>Everyone is indifferent between undercutting, overpricing, or keeping price 10</li>
+</ul>
+</section>
+<section id="price-competition-outcomes" class="slide level2">
+<h2>Price Competition Outcomes</h2>
+<p>In this game:</p>
+<ul>
+<li><p>Both firms charge their marginal cost</p></li>
+<li><p>Consumer surplus is mazimized</p></li>
+<li><p>Both firms make zero profit</p></li>
+</ul>
+<ul>
+<li class="fragment"><p>Does competition always lead to zero profit?</p></li>
+<li class="fragment"><p>How might firms try to increase profits?</p>
+<ul>
+<li class="fragment"><p><em>Cartels</em>, <em>collusion</em>, <em>coordination</em> might form</p>
+<ul>
+<li class="fragment"><p>but only if coordination is <em>enforcable</em></p></li>
+<li class="fragment"><p>usually this is illegal</p></li>
+</ul></li>
+</ul></li>
+<li class="fragment"><p>What about <em>legal</em> coordination?</p></li>
+</ul>
+</section></section>
+<section>
+<section id="oligopoly" class="title-slide slide level1 center">
+<h1>Oligopoly</h1>
+
+</section>
+<section id="market-competition" class="slide level2">
+<h2>Market Competition</h2>
+<p>Some definitions of competition:</p>
+<ul>
+<li><p><span class="hi">Monopoly</span>: A single firm in a market</p></li>
+<li><p><span class="hi">Oligopoly</span>: Only a few firms</p>
+<ul>
+<li><span class="hii">Duopoly</span>: Two firms (like we’ve been looking at)</li>
+</ul></li>
+<li><p><span class="hi">Perfect Competition</span>: Enough firms to guarantee zero-profit</p></li>
+</ul>
+</section>
+<section id="monopoly-model" class="slide level2">
+<h2>Monopoly Model</h2>
+<p>What would a single firm do in the market?</p>
+<p><span class="math display">\[
+\Pi = (p-10)(100-p)
+\]</span></p>
+<ul>
+<li>Here <span class="math inline">\(p\)</span> is the only price set by the monopolist</li>
+</ul>
+</section>
+<section id="monopolists-maximum-profit" class="slide level2">
+<h2>Monopolist’s Maximum Profit</h2>
+
+<img data-src="figures/monopolist-maxprofit.png" class="r-stretch"></section>
+<section id="solving-with-calculus" class="slide level2">
+<h2>Solving with Calculus</h2>
+<p><span class="math display">\[
+\begin{align*}
+  \Pi &amp; = (p-10)(100-p) = 100p - p^2 - 1000 + 10p \\
+      &amp; = -p^2 + 110p - 1000
+\end{align*}
+\]</span></p>
+<p>Find where the slope equals zero: <span class="math display">\[
+\frac{\delta \Pi}{\delta p} = -2p + 110 + 0
+\]</span></p>
+<p><span class="math display">\[
+\begin{align*}
+  \frac{\delta \Pi}{\delta p} = 0 \\
+  \Rightarrow  -2p + 110 &amp; = 0 \\
+  110 &amp; = 2p \\
+  p = \frac{110}{2} &amp; = 55
+\end{align*}
+\]</span></p>
+</section>
+<section id="derivative-of-profit" class="slide level2">
+<h2>Derivative of Profit</h2>
+
+<img data-src="figures/derivative.png" class="r-stretch"></section>
+<section id="comparing-monopoly-to-bertrand" class="slide level2">
+<h2>Comparing Monopoly to Bertrand</h2>
+<p>If a single firm:</p>
+<ul>
+<li>Price = $55</li>
+<li>Profit = $2,025</li>
+</ul>
+<p>If two firms competing:</p>
+<ul>
+<li>Price = $10</li>
+<li>Profit = $0</li>
+</ul>
+</section>
+<section id="price-matching-guarantees" class="slide level2">
+<h2>Price Matching Guarantees</h2>
+<blockquote>
+<p>“Store Price Gurantee – If you’re about to buy at a Best Buy store and discover a lower price than ours, let us know and we’ll match that price on the spot.”</p>
+</blockquote>
+<ul>
+<li><p>Does this seem like <em>competitive</em> behavior?</p></li>
+<li><p>Compared to our earlier price competition model,</p>
+<ul>
+<li><p>Will prices be higher</p></li>
+<li><p>or lower in an equilibrium with price-matching?</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="price-matching-setup" class="slide level2">
+<h2>Price-matching Setup</h2>
+<p>Let’s use the same costs and demand curve.</p>
+<p>Two firms; shop 1 and shop 2 who both price match.</p>
+<ul>
+<li>If <span class="math inline">\(p_1\leq p_2\)</span>, then shop 1 will sell at <span class="math inline">\(p_1\)</span></li>
+<li>but if <span class="math inline">\(p_1 &gt; p_2\)</span>, they agree to charge only <span class="math inline">\(p_2\)</span></li>
+</ul>
+</section>
+<section id="price-matching-payoffs" class="slide level2">
+<h2>Price-matching Payoffs</h2>
+<p>Shop 1’s payoff function: <span class="math display">\[
+\begin{equation*}
+  \Pi_1 = [\min\{p_1,p_2\}- 10][100 - \min\{p_1,p_2\}](\frac{1}{2})
+\end{equation*}
+\]</span> Shop 2’s payoff function: <span class="math display">\[
+\begin{equation*}
+  \Pi_2 = [\min\{p_1,p_2\}- 10][100 - \min\{p_1,p_2\}](\frac{1}{2})
+\end{equation*}
+\]</span></p>
+</section>
+<section id="price-matching-nash" class="slide level2">
+<h2>Price-Matching Nash</h2>
+<p>Consider both firms charging Monopolist’s prices of $55:</p>
+<p>Is this a Nash?</p>
+<ul>
+<li class="fragment"><p>If <span class="math inline">\(p_1&lt;55\)</span>:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(\Pi_1(p_1,55) = [p_1 - 10][100 - p_1](\frac{1}{2}) &lt; 2025\)</span></li>
+</ul></li>
+<li class="fragment"><p>If <span class="math inline">\(p_1&gt;55\)</span>:</p>
+<ul>
+<li class="fragment"><span class="math inline">\(\Pi_1(p_1,55) = [55- 10][100 - 55](\frac{1}{2}) 2025\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="price-matching-payoffs-1" class="slide level2">
+<h2>Price-Matching Payoffs</h2>
+
+<img data-src="figures/duopoly-profit.png" class="r-stretch"></section>
+<section id="price-matching-nash-outcome" class="slide level2">
+<h2>Price-Matching Nash Outcome</h2>
+<p>With price-matching:</p>
+<ul>
+<li><p>Both firms setting high prices ($55) is stable</p></li>
+<li><p>Price-matching removes the incentives to undercut prices!</p></li>
+<li><p>Could be used as a form of <em>legal collusion</em></p></li>
+</ul>
+</section>
+<section id="median-voter-theorem" class="slide level2">
+<h2>Median-Voter Theorem</h2>
+<blockquote>
+<p>“Apparently, a democracy is a place where numerous elections are held at great cost without issues and with interchangeable candidates” – Gore Vidal</p>
+</blockquote>
+<p>Political candidates sometimes have platforms that are more alike than different.</p>
+<ul>
+<li>How can we explain this with game theory?</li>
+</ul>
+</section>
+<section id="political-platform-game" class="slide level2">
+<h2>Political Platform Game</h2>
+<p>Assume there is a single spectrum to rank political candidates:</p>
+<ul>
+<li>[0,1]: set of potential platforms which could be chosen along this scale</li>
+</ul>
+<p>Also, assume only two parties:</p>
+<ul>
+<li>D(emocratic) or R(epublican)</li>
+</ul>
+<p>Candidates from either party set their platform <span class="math inline">\(x_i\)</span>, where <span class="math inline">\(i\in\{D,R\}\)</span></p>
+<ul>
+<li>Voters choose the candidate who’se platform is closest to their ideology</li>
+</ul>
+</section>
+<section id="voter-preference-distribution" class="slide level2">
+<h2>Voter Preference Distribution</h2>
+
+<img data-src="04-main_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><ul>
+<li>Not a Nash: Democrats set too low of a platform.</li>
+</ul>
+</section>
+<section id="voter-preference-distribution-1" class="slide level2">
+<h2>Voter Preference Distribution</h2>
+
+<img data-src="04-main_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"><ul>
+<li>Not a Nash: Democrats could steal more median voters from Republicans</li>
+</ul>
+</section>
+<section id="nash-in-political-platform-game" class="slide level2">
+<h2>Nash in Political Platform Game</h2>
+
+<img data-src="04-main_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section></section>
+<section>
+<section id="price-competition-with-differentiated-products" class="title-slide slide level1 center">
+<h1>Price Competition with Differentiated Products</h1>
+
+</section>
+<section id="setup-apple-and-samsungs-competition" class="slide level2">
+<h2>Setup: Apple and Samsung’s Competition</h2>
+<p>Instead of a symmetric game, let’s try one with <em>differentiated</em> products</p>
+<p>For example, the market for smartphones.</p>
+<p>Let’s assume only two players; A(pple) and S(amsung).</p>
+<ul>
+<li><p><span class="math inline">\(D_A(P_A,P_S) = 100 - 2P_A + P_S\)</span></p></li>
+<li><p>The higher <span class="math inline">\(P_A\)</span>, fewer iPhones sold</p></li>
+<li><p>The higher <span class="math inline">\(P_S\)</span>, more people switch from Galaxy to iPhone</p></li>
+</ul>
+</section>
+<section id="apples-profit-function" class="slide level2">
+<h2>Apple’s Profit Function</h2>
+<p>Tim Cook’s profit based on his price and number of iPhone customers: <span class="math display">\[
 \begin{align}
-\pi_X &amp; = (P_X - 8)(44 - 2P_X + P_Y) \\
-      &amp; = P_X(44 + P_Y - 2P_X) - 8(44 + P_Y - 2P_X)
+\pi_A &amp; = (\text{price} - \text{cost})(\textbf{quantity sold}) \\
+      &amp; = (P_A - 10)\mathbf{(100 - 2P_A + P_S)}
+\end{align}
+\]</span></p>
+<p>Assume a marginal cost of 10 per unit for iPhones</p>
+</section>
+<section id="samsungs-profit-function" class="slide level2">
+<h2>Samsung’s Profit Function</h2>
+<p>Samsung’s profit based on prices and number of Galaxys sold: <span class="math display">\[
+\begin{align}
+\pi_S &amp; = (P_S - 30)\mathbf{(100 - 2P_S + P_A)}
+\end{align}
+\]</span></p>
+<p>Assume Samsung has a higher cost of 30 per Galaxy produced</p>
+</section>
+<section id="step-1-expand-apples-profit-function" class="slide level2">
+<h2>Step 1: Expand Apple’s Profit Function</h2>
+<p>Let’s expand Apple’s profit function: <span class="math display">\[
+\begin{align}
+\pi_A &amp; = (P_A - 10)(100 - 2P_A + P_S) \\
+      &amp; = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)
 \end{align}
 \]</span></p>
 </section>
 <section id="step-2-simplify-the-expanded-profit-function" class="slide level2">
 <h2>Step 2: Simplify the Expanded Profit Function</h2>
-<p>Let’s expand Xavier’s profit function: <span class="math display">\[
+<p>Let’s expand Apple’s profit function: <span class="math display">\[
 \begin{align}
-\pi_X &amp; = (P_X - 8)(44 - 2P_X + P_Y) \\
-      &amp; = P_X(44 + P_Y - 2P_X) - 8(44 + P_Y - 2P_X)
+\pi_A &amp; = (P_A - 10)(100 - 2P_A + P_S) \\
+      &amp; = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)
 \end{align}
 \]</span></p>
 <p>Now, multiply out the terms:</p>
 <p><span class="math display">\[
-44 P_X + P_X P_Y - 2 P_X^2 - 352 - 8 P_Y + 16 P_X
+100 P_A + P_A P_S - 2 P_A^2 - 1000 - 10 P_S + 20 P_A
 \]</span></p>
 <p><strong>What should we do next to find the best price?</strong></p>
 </section>
-<section id="step-3-deriving-xaviers-best-response-function" class="slide level2">
-<h2>Step 3: Deriving Xavier’s Best-Response Function</h2>
-<p>To find the best price, we differentiate <span class="math inline">\(\pi_X\)</span> with respect to <span class="math inline">\(P_X\)</span>.</p>
+<section id="step-3-deriving-apples-best-response-function" class="slide level2">
+<h2>Step 3: Deriving Apple’s Best-Response Function</h2>
+<p>To find the best price, we differentiate <span class="math inline">\(\Pi_A\)</span> with respect to <span class="math inline">\(P_A\)</span>.</p>
 <h3 id="differentiation">Differentiation:</h3>
 <p><span class="math display">\[
-\frac{d\pi_X}{dP_X} = 44 + P_Y - 4P_X + 16 = P_Y + 60 - 4P_X
+\frac{d\pi_A}{dP_A} = 100 + P_S - 4P_A + 20 = P_S + 120 - 4P_A
 \]</span></p>
 <p>Set the derivative equal to zero for maximization: <span class="math display">\[
-P_Y + 60 - 4P_X = 0
-\]</span> Solve for <span class="math inline">\(P_X\)</span>: <span class="math display">\[
-P_X^* = 15 + 0.25P_Y
+P_S + 120 - 4P_A = 0
+\]</span> Solve for <span class="math inline">\(P_A\)</span>: <span class="math display">\[
+BR_A(P_S) = 30 + 0.25P_S
 \]</span></p>
 </section>
 <section id="for-those-without-calculus-background" class="slide level2">
 <h2>For those without Calculus background</h2>
 <p>The profit function we wrote out in step 2 seems complicated, so lets simplify it:</p>
 <p><span class="math display">\[
-\pi_X = - 352 - 8 P_Y +  \mathbf{P_X} (60 + P_Y) - 2 \mathbf{P_X}^2
+\pi_A = - 1000 - 10 P_S +  \mathbf{P_A} (120 + P_S) - 2 \mathbf{P_A}^2
 \]</span></p>
-<p>As Xavier, we can only set our own price, <span class="math inline">\(P_X\)</span>, everything else we can just treat as a constant</p>
+<p>As Apple, we can only set our own price, <span class="math inline">\(P_A\)</span>, everything else we can just treat as a constant</p>
 <p>This fits a more general pattern:</p>
 <p><span class="math display">\[
-Y = A + BX - CX^2
+S = A + BA - CA^2
 \]</span></p>
 </section>
 <section id="for-those-without-calculus-background-1" class="slide level2">
 <h2>For those without Calculus background</h2>
 <p><span class="math display">\[
-Y = A + BX - CX^2
+S = A + BA - CA^2
 \]</span></p>
-<p>If we want to find the maximum of <span class="math inline">\(Y\)</span> in this equation as a function of <span class="math inline">\(X\)</span>, as long as <span class="math inline">\(C&gt;0\)</span>, this will take the shape of a parabola with a single peak.</p>
+<p>If we want to find the maximum of <span class="math inline">\(S\)</span> in this equation as a function of <span class="math inline">\(A\)</span>, as long as <span class="math inline">\(C&gt;0\)</span>, this will take the shape of a parabola with a single peak.</p>
 <ul>
 <li class="fragment">The maxmimum of this function will be reached at:</li>
-<li class="fragment"><span class="math inline">\(X^* = \frac{B}{2C}\)</span></li>
+<li class="fragment"><span class="math inline">\(A^* = \frac{B}{2C}\)</span></li>
 </ul>
 </section>
 <section id="for-those-without-calculus-background-2" class="slide level2">
 <h2>For those without Calculus background</h2>
-<p>So going back to Xavier’s profit function,</p>
+<p>So going back to Apple’s profit function,</p>
 <ul>
-<li>If <span class="math inline">\(B = 60 + P_Y\)</span></li>
+<li>If <span class="math inline">\(B = 120 + P_S\)</span></li>
 <li>and <span class="math inline">\(C = 2\)</span></li>
 </ul>
 <p>then applying that the maximum choice will meet <span class="math inline">\(\frac{B}{2C}\)</span>,</p>
-<p>we get the same answer of <span class="math inline">\(P_X^* = 15 + 0.25P_Y\)</span></p>
+<p>we get the same answer of <span class="math inline">\(P_A^* = 30 + 0.25P_S\)</span></p>
 </section>
-<section id="step-4-yvonnes-best-response-function" class="slide level2">
-<h2>Step 4: Yvonne’s Best-Response Function</h2>
-<p>Yvonne’s problem is symmetric, so we can derive her best-response function similarly: <span class="math display">\[
-P_Y = 15 + 0.25P_X
+<section id="step-4-samsungs-best-response-function" class="slide level2">
+<h2>Step 4: Samsung’s Best-Response Function</h2>
+<p>Samsung’s best-response function is similar:</p>
+<p><span class="math display">\[
+\begin{align}
+\pi_A &amp; = (P_S - 30)(100 - 2P_S + P_A) \\
+      &amp; = 100P_S - 2P_S^2 + P_A P_S - 3000 + 60P_S - 30P_A
+\end{align}
 \]</span></p>
-<h3 id="question-how-do-we-find-the-nash-equilibrium-from-these-two-best-response-functions"><strong>Question:</strong> How do we find the Nash equilibrium from these two best-response functions?</h3>
+<p><span class="math display">\[
+\begin{align*}
+\frac{d\pi_S}{dP_S} &amp; = 0 \\
+100 - 4P_S + P_A + 60 &amp; = 0 \\
+BR_S(P_A) &amp; = 40 + .25P_A
+\end{align*}
+\]</span></p>
+<h3 id="question-how-do-we-find-the-nash"><strong>Question:</strong> How do we find the Nash?</h3>
 <ul>
-<li class="fragment">We have one best response rule for each player as a function of the other player’s pricing strategy</li>
+<li class="fragment">We have one best response rule for each player
+<ul>
+<li class="fragment">as a function of the other player’s pricing strategy</li>
+</ul></li>
 <li class="fragment">I.e., a system of <em>two equations</em> and <em>two unknowns</em></li>
 </ul>
 </section>
 <section id="what-is-a-ne-in-this-situation" class="slide level2">
 <h2>What is a NE in this situation?</h2>
-<p>Recall that a NE is a stable configuration of strategies in which each player is best responding to the other</p>
+<p>A Nash is a stable configuration of strategies</p>
 <ul>
-<li class="fragment">So in this case, when each player is setting a price that maximizes their profits <strong>conditional on the other player’s price</strong>, there will be no incentive to change price</li>
-<li class="fragment">In other words, we can plug in one player’s best response rule into the other player’s best response rule to solve for the equilibrium price</li>
+<li>in which each player is best responding to the other</li>
+</ul>
+<ul>
+<li class="fragment">When each player is setting profit-maximizing price
+<ul>
+<li class="fragment"><strong>conditional on the other player’s price</strong>,</li>
+<li class="fragment">there will be no incentive to change price</li>
+</ul></li>
+<li class="fragment">Plug in one player’s best response rule <em>into the other player’s best response rule</em>
+<ul>
+<li class="fragment">to solve for the equilibrium price</li>
+</ul></li>
 </ul>
 </section>
 <section id="step-5-solve-for-nash-equilibrium" class="slide level2">
 <h2>Step 5: Solve for Nash Equilibrium</h2>
-<p>We solve the system of equations for <span class="math inline">\(P_X\)</span> and <span class="math inline">\(P_Y\)</span>: <span class="math display">\[
-P_X = 15 + 0.25P_Y
+<p>We solve the system of equations for <span class="math inline">\(P_A\)</span> and <span class="math inline">\(P_S\)</span>: <span class="math display">\[
+P_A = 30 + 0.25P_S
 \]</span> <span class="math display">\[
-P_Y = 15 + 0.25P_X
+P_S = 40 + 0.25P_A
 \]</span></p>
 </section>
 <section id="step-5-solve-for-nash-equilibrium-1" class="slide level2">
 <h2>Step 5: Solve for Nash Equilibrium</h2>
 <p>Substitute one equation into the other: <span class="math display">\[
-P_Y = 15 + 0.25(15 + 0.25P_Y)
+P_A = 30 + 0.25(40 + 0.25P_S)
 \]</span> Simplify: <span class="math display">\[
-P_Y = 15 + 3.75 + 0.0625P_Y
-\]</span> Solve for <span class="math inline">\(P_Y\)</span>: <span class="math display">\[
-P_Y = 20
+P_A = 30 + 10 + 0.0625P_A
+\]</span> Solve for <span class="math inline">\(P_S\)</span>: <span class="math display">\[
+\begin{align*}
+  P_A(1-0.0625) &amp; = 40 \\
+  P_S &amp; = 42.67
+\end{align*}
 \]</span></p>
-<p>Then, plug <span class="math inline">\(P_Y = 20\)</span> back into the first equation: <span class="math display">\[
-P_X = 15 + 0.25(20) = 20
+<p>Then, plug <span class="math inline">\(P_S = 20\)</span> back into the first equation: <span class="math display">\[
+P_S = 40 + 0.25(42.67) = 50.67
 \]</span></p>
 </section>
 <section id="step-6-conclusion" class="slide level2">
 <h2>Step 6: Conclusion</h2>
 <p>At equilibrium:</p>
 <ul>
-<li><p><span class="math inline">\(P_X = 20\)</span>, <span class="math inline">\(P_Y = 20\)</span></p></li>
-<li><p>Both restaurants charge $20, serve 2,400 customers per month, and make a monthly profit of $28,800.</p></li>
+<li><p><span class="math inline">\(P_A = 42.67\)</span>, <span class="math inline">\(P_S = 50.67\)</span></p></li>
+<li><p>Do either firm have an incentive to deviate?</p>
+<ul>
+<li>How would we check?</li>
+</ul></li>
 </ul>
 </section>
+<section id="continous-strategy-nash-graphically" class="slide level2">
+<h2>Continous Strategy Nash Graphically</h2>
+
+<img data-src="figures/apple-samsung-nash.png" class="r-stretch"></section>
 <section id="recap-price-competition-breakdown" class="slide level2">
 <h2>Recap: Price Competition Breakdown</h2>
 <ul>
 <li>Step 1: Expand the profit function.</li>
 <li>Step 2: Simplify the expanded equation.</li>
 <li>Step 3: Differentiate and solve for best-response.</li>
-<li>Step 4: Repeat for Yvonne.</li>
+<li>Step 4: Repeat for Samsung.</li>
 <li>Step 5: Solve for Nash equilibrium.</li>
 </ul>
 </section>
-<section id="graphically" class="slide level2">
-<h2>Graphically:</h2>
+<section class="slide level2">
 
-<img data-src="figures/Dixit_fig5.1.png" class="r-stretch"></section></section>
+<!-- ## Graphically:
+
+![](figures/Dixit_fig5.1.png) -->
+</section></section>
 <section>
-<section id="economics-of-oligopoly" class="title-slide slide level1 center">
-<h1>Economics of Oligopoly</h1>
+<section id="cournot-duopoly" class="title-slide slide level1 center">
+<h1>Cournot Duopoly</h1>
 
 </section>
-<section id="competition-in-the-restaurant-game" class="slide level2">
-<h2>Competition in the Restaurant Game</h2>
-<p>In the last example, we found Xavier and Yvonne’s best responses independently of the other’s.</p>
+<section id="cournot-vs-bertrand" class="slide level2">
+<h2>Cournot vs Bertrand</h2>
+<p>In the sandwich shop game, both players set <em>prices</em></p>
 <ul>
-<li>But could they cooperate to raise prices more than in the NE?</li>
+<li>We call that a <span class="hi">Bertrand</span> model of oligopoly</li>
 </ul>
-</section>
-<section id="competition-in-the-restaurant-game-1" class="slide level2">
-<h2>Competition in the Restaurant Game</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>If both charged $24, then they could each get 2,000 customers:</p>
-<p><span class="math display">\[
-Q = 44 - 2($24) + 24 = 20
-\]</span></p>
-<p>And each would earn a profit of $32,000</p>
-<p><span class="math display">\[
-\pi = (24 - 8)(20)
-\]</span></p>
-<p>which is more than the $28,000 they earned in NE</p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="figures/Dixit_fig5.1.png"></p>
-</div></div>
-</section>
-<section id="introduction-to-oligopoly" class="slide level2">
-<h2>Introduction to Oligopoly</h2>
-<p>In an oligopoly, a small number of firms (here just two) compete in the same market.</p>
-<h3 id="key-concepts">Key Concepts:</h3>
+<p>We could also imagine firms choosing <em>quantities</em></p>
 <ul>
-<li><strong>Best-response curves</strong>: Show how one firm’s best price depends on the other’s.</li>
-<li><strong>Equilibrium</strong>: Each firm maximizes its profit, given the price set by the other firm.</li>
-</ul>
-<p><strong>Question:</strong> What do you think happens to prices when firms have fewer competitors?</p>
-</section>
-<section id="best-response-curves-intuition" class="slide level2">
-<h2>Best-Response Curves: Intuition</h2>
-<p>When one restaurant raises its price by $1:</p>
-<ul>
-<li class="fragment"><p>The other restaurant’s best response is to raise its own price by $0.25.</p></li>
-<li class="fragment"><p>They lose some of their customers to their competitor who can reap some extra profit by raising their prices also (as long as they don’t raise it higher than their competitor)</p></li>
-<li class="fragment"><p>Thus by raising prices, one restaurant is providing a <em>positive externalitiy</em> to their competitor which isn’t priced into the NE profit function</p></li>
-</ul>
-</section>
-<section id="allowing-for-cooperation-in-the-restaurant-game" class="slide level2">
-<h2>Allowing for cooperation in the Restaurant game</h2>
-<p>What if Xavier and Yvonne could coordinate their prices by setting them higher than equilibrium at $24?</p>
-<ul>
-<li class="fragment">Xavier’s best response function <span class="math inline">\(P_X = 15 + 0.25 P_Y\)</span> tells us that if he knows Yvonne is setting her price at $24, he should lower his price to <span class="math inline">\(P_X = 21\)</span> to attract more customers away from Yvonne</li>
-<li class="fragment">So there is always an incentive for either player to cheat the other at this cooperative strategy profile</li>
-</ul>
-</section>
-<section id="allowing-for-cooperation-in-the-restaurant-game-1" class="slide level2">
-<h2>Allowing for cooperation in the Restaurant game</h2>
-<p>Does this sound familiar?</p>
-<ul>
-<li class="fragment"><p>This is a continuous version of the Prisoners’ Dilemma we studied earlier:</p>
-<ul>
-<li class="fragment"><p>Each player is incentivized to independently add to their payoff by harming the other</p></li>
-<li class="fragment"><p>But if they could commit to coordinating, they could both be better off</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="optimal-oligopoly-pricing-in-the-restaurant-game" class="slide level2">
-<h2>Optimal Oligopoly pricing in the Restaurant game</h2>
-<p>If Xavier and Yvonne could form a <span class="hi">cartel</span> and jointly set prices for both their restaurants, they should maximize the total payoff function:</p>
-<p><span class="math display">\[
-\begin{align}
-\pi_X = \pi_Y &amp; = (P - 8)(44 - 2P + P) \\
-              &amp; = -352 + 52P - P^2
-\end{align}
-\]</span></p>
-<ul>
-<li class="fragment">Using the formula for the profit-maximizing price in this equation:</li>
-<li class="fragment"><span class="math inline">\(P^* = 52/2 = 26\)</span></li>
-<li class="fragment">The cartel should charge $26 and get $32,400 profit for each firm</li>
-</ul>
-</section>
-<section id="why-does-the-best-response-curve-slope-upwards" class="slide level2">
-<h2>Why Does the Best-Response Curve Slope Upwards?</h2>
-<p>Each firm’s <strong>best-response curve</strong> slopes upwards because:</p>
-<ul>
-<li><p>When one firm raises its price, the other can raise its price slightly and still maintain some customers.</p></li>
-<li><p>This is a characteristic of oligopolies where price competition is less intense than in markets with many competitors.</p></li>
-</ul>
-</section>
-<section id="types-of-oligopoly-cournot-vs-bertrand" class="slide level2">
-<h2>Types of Oligopoly: Cournot vs Bertrand</h2>
-<p>Our restaurant example had firms choosing <em>prices</em> to compete.</p>
-<ul>
-<li>This type of competition is called <span class="hi">Bertrand competition</span></li>
-</ul>
-<p>The other type of competition is where firms choose how much <em>quantity</em> to produce.</p>
-<ul>
-<li>Otherwise known as <span class="hi">Cournot competition</span></li>
-</ul>
-</section>
-<section id="application-cournot-competition" class="slide level2">
-<h2>Application: Cournot Competition</h2>
-<ul>
-<li class="fragment"><p>Let’s see how we can use a game with continuous strategies to model a real-world situation.</p></li>
-<li class="fragment"><p>In <span class="hi">Cournot competition</span>, two firms produce the same product, and face the same market demand curve. The firms simultaneously decide how much product to produce, which they then sell at a price determined by that market demand curve.</p></li>
-<li class="fragment"><p>This is a game with two players (the firms), and continuous strategies (the firms must pick a quantity to produce, which can be any non-negative real number).</p></li>
-<li class="fragment"><p>In this example, we will use the following values:</p>
-<ul>
-<li class="fragment">Market Demand Curve: <span class="math inline">\(Q = 100 - P\)</span>, in which <span class="math inline">\(Q = q_1 + q_2\)</span></li>
-<li class="fragment">Cost Functions: <span class="math inline">\(c_i(q_i) = 10q_i\)</span></li>
-</ul></li>
+<li>We’ll call this the <span class="hi">Cournot</span> model</li>
 </ul>
 </section>
 <section id="cournot-competition-creating-the-payoff-functions" class="slide level2">
@@ -518,11 +805,19 @@ q_1^* &amp;= \boxed{30}
 \end{align}
 \]</span></p>
 </section>
-<section id="another-cournot-example" class="slide level2">
-<h2>Another Cournot Example</h2>
-<blockquote>
-<p>Crude oil is transported across the globe in enormous tanker ships called Very Large Crude Carriers (VLCCs). By 2001, more than 92% of all new VLCCs were built in South Korea and Japan. Assume that the price of new VLCCs (in millions of dollars) is determined by the function <span class="math inline">\(P = 180 - Q\)</span>, where <span class="math inline">\(Q = q_{Korea} + q_{Japan}\)</span>. (That is, assume that only Japan and Korea produce VLCCs, so they are a duopoly.) Assume that the cost of building each ship is $30 million in both Korea and Japan. That is, <span class="math inline">\(c_{Korea} = c_{Japan} = 30\)</span>, where the per-ship cost is measured in millions of dollars.</p>
-</blockquote>
+<section class="slide level2">
+
+<!-- ## Another Cournot Example
+> Crude oil is transported across the globe in enormous tanker ships called
+> Very Large Crude Carriers (VLCCs). By 2001, more than 92% of all new
+> VLCCs were built in South Korea and Japan. Assume that the price of new
+> VLCCs (in millions of dollars) is determined by the function $P = 180 - Q$,
+> where $Q = q_{Korea} + q_{Japan}$. (That is, assume that only Japan and Korea
+> produce VLCCs, so they are a duopoly.) Assume that the cost of building
+> each ship is $30 million in both Korea and Japan. That is, $c_{Korea} = c_{Japan} = 30$,
+> where the per-ship cost is measured in millions of dollars.
+
+--- -->
 </section>
 <section id="conclusion-the-economics-of-oligopoly" class="slide level2">
 <h2>Conclusion: The Economics of Oligopoly</h2>
@@ -531,138 +826,334 @@ q_1^* &amp;= \boxed{30}
 <li><p>Firms’ prices (quantities) are interdependent.</p></li>
 <li><p>The best-response functions allow us to determine equilibrium prices (or quantities in Bertrand).</p></li>
 </ul>
-</section>
-<section id="interactive-exercise-market-dynamics" class="slide level2">
-<h2>Interactive Exercise: Market Dynamics</h2>
-<p>Let’s extend this:</p>
-<ul>
-<li><p><strong>What happens when a third firm enters the market?</strong></p>
-<ul>
-<li><p>Would prices fall? Would all three firms set similar prices?</p></li>
-<li><p>Or would competition force one firm out of the market?</p></li>
-</ul></li>
-</ul>
-<p>Discuss!</p>
+<!-- ---
+
+## Interactive Exercise: Market Dynamics
+
+Let’s extend this:
+
+- **What happens when a third firm enters the market?**
+
+  - Would prices fall? Would all three firms set similar prices?
+
+  - Or would competition force one firm out of the market?
+
+Discuss!
+ -->
+<!-- {{< include 0405-rationalize.qmd >}} -->
 </section></section>
 <section>
-<section id="political-campaign-advertising" class="title-slide slide level1 center">
-<h1>Political Campaign Advertising</h1>
+<section id="critical-discussion-of-the-nash-equilibrium-concept" class="title-slide slide level1 center">
+<h1>Critical Discussion of the Nash Equilibrium Concept</h1>
 
 </section>
-<section id="setup-competing-with-ads" class="slide level2">
-<h2>Setup: Competing with Ads</h2>
-<p>Two political parties, L and R, are competing in an election by spending money on campaign advertising.</p>
-<h3 id="key-concepts-1">Key Concepts:</h3>
+<section id="discussion-of-nash-equilibrium" class="slide level2">
+<h2>Discussion of Nash Equilibrium</h2>
+<p>Now that you’ve learned what it means and seen it applied to several different games, <em>what do you think about the concept of <span class="hi">Nash Equilbrium</span>?</em></p>
 <ul>
-<li><strong>Vote shares</strong> depend on each party’s advertising:
+<li class="fragment">Does it make intuitive sense? Do you think people really reason through their <strong>best response</strong> to any possible situation?</li>
+<li class="fragment">Is there anything relevant to strategic interactions you can think of that is left out of our models so far?</li>
+</ul>
+</section>
+<section id="the-appeal-of-nash-equilibrium" class="slide level2">
+<h2>The Appeal of Nash Equilibrium</h2>
+<p>The Nash equilibrium is based on the idea that every player’s strategy should be the best response to the strategies of others.</p>
+<h3 id="benefits-of-using-ne">Benefits of using NE:</h3>
 <ul>
-<li>If party L spends <span class="math inline">\(x\)</span> million dollars and party R spends <span class="math inline">\(y\)</span> million dollars:
+<li class="fragment"><p>In non-cooperative games, it makes sense that each player is making their best response to their opponent</p>
 <ul>
-<li>Party L’s vote share is <span class="math inline">\(\frac{x}{x + y}\)</span></li>
-<li>Party R’s vote share is <span class="math inline">\(\frac{y}{x + y}\)</span></li>
+<li class="fragment"><p>If you can’t enforce any strategy onto your opponent, you should stick with whatever doesn’t make you worse off, given what your opponent chose.</p></li>
+<li class="fragment"><p>In any situation which is not a Nash, there is some player who could have done better:</p>
+<ul>
+<li class="fragment">I.E., an NE leaves no-one with any <em>regrets</em></li>
 </ul></li>
 </ul></li>
 </ul>
-<p><strong>Question:</strong> How might spending more on ads increase one party’s vote share?</p>
 </section>
-<section id="step-1-payoffs-for-each-party" class="slide level2">
-<h2>Step 1: Payoffs for Each Party</h2>
-<p>Each party’s payoff is its vote share minus the cost of its advertising.</p>
+<section id="some-potential-critiques-of-ne-predictions" class="slide level2">
+<h2>Some Potential Critiques of NE predictions</h2>
 <ul>
-<li><strong>L’s payoff</strong>: <span class="math display">\[
-100 \times \frac{x}{x + y} - x
-\]</span></li>
-<li><strong>R’s payoff</strong>: <span class="math display">\[
-100 \times \frac{y}{x + y} - y
-\]</span></li>
+<li class="fragment"><p>IESDS, Best-response functions may not be how players actually think</p>
+<ul>
+<li class="fragment">But NE only describe the <em>stable</em> combinations of strategies, there are many ways of getting there: learning from experience, repeated play, intuition, etc.</li>
+</ul></li>
 </ul>
 </section>
-<section id="step-2-best-response-functions" class="slide level2">
-<h2>Step 2: Best-Response Functions</h2>
-<p>To find the best-response functions for each party, we use calculus.</p>
-<h3 id="for-party-r"><strong>For Party R</strong>:</h3>
+<section id="some-potential-critiques-of-ne-predictions-1" class="slide level2">
+<h2>Some Potential Critiques of NE predictions</h2>
 <ul>
-<li>Differentiate R’s payoff with respect to <span class="math inline">\(y\)</span>: <span class="math display">\[
-\frac{d}{dy} \left( 100 \times \frac{y}{x + y} - y \right) = 0
-\]</span></li>
-<li>Simplifying: <span class="math display">\[
-100 \times \frac{x}{(x + y)^2} = 1
-\]</span></li>
-<li>This gives R’s best-response function: <span class="math display">\[
-y = 10 \sqrt{x} - x
-\]</span></li>
+<li class="fragment"><p>IESDS, Best-response functions may not be how players actually think</p></li>
+<li class="fragment"><p>Nash doesn’t explicitly take risk into account</p>
+<ul>
+<li class="fragment"><p>with <em>ordinal</em> payoffs, we might leave out the incentive to play it safe to avoid very bad outcomes</p></li>
+<li class="fragment"><p>but if we instead use <em>cardinal</em> payoffs, or expected utilities, we can still extend our models to those situations</p></li>
+</ul></li>
 </ul>
 </section>
-<section id="step-3-party-ls-best-response" class="slide level2">
-<h2>Step 3: Party L’s Best Response</h2>
-<p>By symmetry, Party L’s best-response function is: <span class="math display">\[
-x = 10 \sqrt{y} - y
+<section id="some-potential-critiques-of-ne-predictions-2" class="slide level2">
+<h2>Some Potential Critiques of NE predictions</h2>
+<ul>
+<li class="fragment"><p>IESDS, Best-response functions may not be how players actually think</p></li>
+<li class="fragment"><p>Nash doesn’t explicitly take risk into account</p></li>
+<li class="fragment"><p>NE don’t have to be <em>unique</em></p>
+<ul>
+<li class="fragment">If we care <em>predictions</em>, NE doesn’t always tell us what will happen, sometimes there can be multiple possible strategy profiles which are equally stable which means any one could happen depending how the game plays out</li>
+</ul></li>
+</ul>
+</section>
+<section id="criticism-1-treatment-of-risk" class="slide level2">
+<h2>Criticism 1: Treatment of Risk</h2>
+<p>We’ve mentioned before how sometimes the strategies played in NE don’t line up with what might intuitively feel like the ‘safe’ strategies.</p>
+</section>
+<section id="criticism-1-treatment-of-risk-1" class="slide level2">
+<h2>Criticism 1: Treatment of Risk</h2>
+<p>Let’s look an an example:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Row, Column</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A</strong></td>
+<td>2,2</td>
+<td>3,1</td>
+<td>0,2</td>
+</tr>
+<tr class="even">
+<td><strong>B</strong></td>
+<td>1,3</td>
+<td>2,2</td>
+<td>3,2</td>
+</tr>
+<tr class="odd">
+<td><strong>C</strong></td>
+<td>2,0</td>
+<td>2,3</td>
+<td>2,2</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>What’s the NE?</p>
+</blockquote>
+</section>
+<section id="criticism-1-treatment-of-risk-2" class="slide level2">
+<h2>Criticism 1: Treatment of Risk</h2>
+<p>Let’s look an an example:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Row, Column</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A</strong></td>
+<td><u>2</u>,<u>2</u></td>
+<td><u>3</u>,1</td>
+<td>0,<u>2</u></td>
+</tr>
+<tr class="even">
+<td><strong>B</strong></td>
+<td>1,<u>3</u></td>
+<td>2,2</td>
+<td><u>3</u>,2</td>
+</tr>
+<tr class="odd">
+<td><strong>C</strong></td>
+<td><u>2</u>,0</td>
+<td>2,<u>3</u></td>
+<td>2,2</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>What’s the NE?</p>
+</blockquote>
+<ul>
+<li>(<strong>A</strong>, <strong>A</strong>)</li>
+</ul>
+</section>
+<section id="criticism-1-treatment-of-risk-3" class="slide level2">
+<h2>Criticism 1: Treatment of Risk</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Row, Column</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A</strong></td>
+<td>2,2</td>
+<td>3,1</td>
+<td>0,2</td>
+</tr>
+<tr class="even">
+<td><strong>B</strong></td>
+<td>1,3</td>
+<td>2,2</td>
+<td>3,2</td>
+</tr>
+<tr class="odd">
+<td><strong>C</strong></td>
+<td>2,0</td>
+<td>2,3</td>
+<td>2,2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li class="fragment"><p>But what happens if the other player mistakenly plays <strong>C</strong>?</p></li>
+<li class="fragment"><p>Then it might make sense to choose the safe option of <strong>C</strong></p></li>
+<li class="fragment"><p>You could get the same payoff of 2, but ensure that you wouldn’t have a chance to get 0</p>
+<ul>
+<li class="fragment">The idea of <span class="hi">trembling-hand perfection</span> takes this into account by allowing probabilistic errors in strategies.</li>
+</ul></li>
+</ul>
+</section>
+<section id="criticism-1-treatment-of-risk-4" class="slide level2">
+<h2>Criticism 1: Treatment of Risk</h2>
+<p>What about this game?</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>A, B</th>
+<th>Left</th>
+<th>Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Up</strong></td>
+<td>9, 10</td>
+<td>8, 9.9</td>
+</tr>
+<tr class="even">
+<td><strong>Down</strong></td>
+<td>10, 10</td>
+<td>-1000, 9.9</td>
+</tr>
+</tbody>
+</table>
+<p>Let’s suppose that there is a small probability <span class="math inline">\(p\)</span> that Player B will accidentally play Right &gt; What is Player A’s expected utility of playing Up?</p>
+<p><span class="math display">\[ EU_A(Up) = 9(1-p) + 8p \]</span></p>
+<blockquote>
+<p>What is Player A’s expected utility of playing Down?</p>
+</blockquote>
+<p><span class="math display">\[ EU_B(Down) = 10(1-p) - 1000p \]</span></p>
+<p>So Player A should only play Down if:</p>
+<p><span class="math display">\[
+\begin{align}
+10(1-p) - 1000p &gt; &amp; 9(1-p) + 8p \\
+              p &gt; &amp; \frac{1}{1009}
+\end{align}
 \]</span></p>
-<p><strong>Question:</strong> How do you think these best-response functions help us find the Nash equilibrium?</p>
 </section>
-<section id="step-4-solving-for-nash-equilibrium" class="slide level2">
-<h2>Step 4: Solving for Nash Equilibrium</h2>
-<p>We solve for <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> by substituting the best-response functions into each other.</p>
+<section id="criticism-2-multiple-equilibria" class="slide level2">
+<h2>Criticism 2: Multiple Equilibria</h2>
+<p>In some games, multiple Nash equilibria exist. This can create problems because: - It’s unclear which equilibrium the players will choose. - Some equilibria may not make sense in real-life situations.</p>
+<h3 id="example">Example:</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Dante, Jose</th>
+<th>T4</th>
+<th>Metropol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>T4</strong></td>
+<td>2, 1</td>
+<td>0, 0</td>
+</tr>
+<tr class="even">
+<td><strong>Metropol</strong></td>
+<td>0, 0</td>
+<td>1, 2</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>From <span class="math inline">\(y = 10 \sqrt{x} - x\)</span>, substitute into L’s equation: <span class="math display">\[
-x = 10 \sqrt{10 \sqrt{x} - x} - (10 \sqrt{x} - x)
-\]</span> Solve this system to find <span class="math inline">\(x = y = 25\)</span>.</li>
-</ul>
-<p><strong>Question:</strong> What does this tell us about each party’s optimal spending?</p>
-</section>
-<section id="graphical-representation" class="slide level2">
-<h2>Graphical Representation</h2>
-
-<img data-src="figures/Dixit_fig5.2.png" class="r-stretch"></section>
-<section id="step-5-interpretation-of-results" class="slide level2">
-<h2>Step 5: Interpretation of Results</h2>
-<p>At equilibrium: - Both parties spend $25 million on ads. - Neither party can improve its vote share by changing its spending.</p>
-<h3 id="discussion">Discussion:</h3>
-<ul>
-<li>In this case, both parties overspend compared to the social optimum. This situation is similar to a <strong>prisoner’s dilemma</strong>.</li>
-</ul>
-</section>
-<section id="step-6-socially-optimal-solution" class="slide level2">
-<h2>Step 6: Socially Optimal Solution</h2>
-<p>In the <strong>prisoner’s dilemma</strong> structure, both parties would be better off if they reduced their advertising spending, saving money without losing votes.</p>
-<p><strong>Question:</strong> Why don’t the parties naturally reduce their spending to reach this optimal outcome?</p>
-</section>
-<section id="asymmetries-in-political-advertising" class="slide level2">
-<h2>Asymmetries in Political Advertising</h2>
-<p>What if one party has an advantage, such as lower advertising costs or more effective ads?</p>
-<ul>
-<li>If Party R’s advertising dollars are twice as effective, its best-response curve shifts upwards, and it spends more than L.</li>
-</ul>
-<p><strong>Question:</strong> How might this advantage affect the equilibrium?</p>
-</section>
-<section id="conclusion-political-campaigns-as-a-game" class="slide level2">
-<h2>Conclusion: Political Campaigns as a Game</h2>
-<ul>
-<li>Political campaigns can be viewed as strategic games where each party competes for votes through advertising.</li>
-<li>While competition leads to higher spending, the results resemble a prisoner’s dilemma, where both parties might benefit from cooperation.</li>
+<li>In coordination games like <strong>Battle of the Sexes</strong>, there are multiple stable outcomes.</li>
 </ul>
 </section>
-<section id="interactive-exercise" class="slide level2">
-<h2>Interactive Exercise</h2>
-<p><strong>What if</strong>: - There are three competing political parties? - Or one party has access to a significantly larger budget?</p>
-<p><strong>Discuss with your peers how this might change the outcome of the advertising game.</strong></p>
+<section id="criticism-2-multiple-equilibria-1" class="slide level2">
+<h2>Criticism 2: Multiple Equilibria</h2>
+<h3 id="another-example">Another Example</h3>
+<p>Pick one player to be <span class="h">Boston</span>, one player as <span class="h">San Francisco</span></p>
+<p>Here are 9 cities which must be evenly divided between the two players:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li class="fragment">Atlanta</li>
+<li class="fragment">Chicago</li>
+<li class="fragment">Dallas</li>
+<li class="fragment">Denver</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment">Los Angeles</li>
+<li class="fragment">New York</li>
+<li class="fragment">Philidelphia</li>
+<li class="fragment">Seattle</li>
+</ul>
+</div></div>
+<p>You win if you evenly split this list between you without communicating, and without overlaps or missed cities</p>
 </section>
-<section class="slide level2">
-
-</section></section>
-<section>
-<section id="applying-rationalizability" class="title-slide slide level1 center">
-<h1>Applying Rationalizability</h1>
-
+<section id="criticism-2-multiple-equilibria-2" class="slide level2">
+<h2>Criticism 2: Multiple Equilibria</h2>
+<h3 id="arriving-at-specific-ne">Arriving at Specific NE</h3>
+<p>This last example shows the importance of shared background and culture in forming strategic beliefs for cases with multiple NE</p>
+<ul>
+<li class="fragment"><p>So far, our theory have given us sets of NE which are stable given <em>any</em> set of realized beliefs</p></li>
+<li class="fragment"><p>But it doesn’t help us exaplain how those beliefs might be formed</p></li>
+<li class="fragment"><p><span class="hi">Evolutionary Game Theory</span> adds tools to our basic toolkit to try to answer some of these limitations</p></li>
+</ul>
 </section>
-<section id="rationalizability" class="slide level2">
-<h2>Rationalizability</h2>
-<p>Recall the concept of <span class="hi">never a best response</span> strategies.</p>
-<p>All strategies which survive the eliminations of <strong>NBR</strong>’s are said to be <span class="hi">rationalizable</span>.</p>
+<section id="criticism-2-multiple-equilibria-3" class="slide level2">
+<h2>Criticism 2: Multiple Equilibria</h2>
+<p>In the later chapters we will develop ideas to help narrow down the more general concept of NE</p>
+<h3 id="refinements-to-ne">Refinements to NE</h3>
+<p>A <span class="hi">refinement</span> is a restriction on the more general assumptions needed for Nash Equilibria</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><span class="hi">mixed-strategy Nash equilibrium</span> allows for probabalistic plays</li>
+<li><span class="hi">subgame-perfect Nash equilibria</span> aka <em>rollback equilibria</em> are refinements in <em>sequential games</em></li>
+<li><span class="hi">perfect Bayesian equilibrium</span> has to deal with informations asymmetries</li>
+</ul>
 </section>
-<section id="applying-rationalizability-1" class="slide level2">
-<h2>Applying Rationalizability</h2>
-<p>Remember this game from before?</p>
+<section id="criticism-3-requirements-of-rationality" class="slide level2">
+<h2>Criticism 3: Requirements of Rationality</h2>
+<p>One major criticism is that Nash equilibrium assumes:</p>
+<ul>
+<li><p>Players have perfect knowledge of others’ strategies.</p></li>
+<li><p>Players have rational preferences <em>and know that their opponent is rational</em></p></li>
+</ul>
+<h3 id="counter-argument">Counter-Argument:</h3>
+<ul>
+<li>What are some situations you can think of where these assumptions might break down?</li>
+</ul>
+<ul>
+<li class="fragment"><p>Players might not know <em>who</em> they are playing against and what preferences they might have</p></li>
+<li class="fragment"><p>Players might make <em>mistakes</em> and occasionally choose actions that don’t fulfill their rational best response</p></li>
+</ul>
+</section>
+<section id="criticism-3-requirements-of-rationality-1" class="slide level2">
+<h2>Criticism 3: Requirements of Rationality</h2>
+<p>Consider this game:</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -675,141 +1166,129 @@ x = 10 \sqrt{10 \sqrt{x} - x} - (10 \sqrt{x} - x)
 <tbody>
 <tr class="odd">
 <td><strong>R1</strong></td>
-<td>0,7</td>
-<td>2,5</td>
-<td>7,0</td>
+<td>0, 7</td>
+<td>2, 5</td>
+<td>7, 0</td>
 </tr>
 <tr class="even">
 <td><strong>R2</strong></td>
-<td>5,2</td>
-<td>3,3</td>
-<td>5,2</td>
+<td>5, 2</td>
+<td>3, 3</td>
+<td>5, 2</td>
 </tr>
 <tr class="odd">
 <td><strong>R3</strong></td>
-<td>7,0</td>
-<td>2,5</td>
-<td>0,7</td>
+<td>7, 0</td>
+<td>2, 5</td>
+<td>0, 7</td>
 </tr>
 </tbody>
 </table>
-<ul>
-<li class="fragment">We said that there is a unique NE (R2, C2) which could be justified with one set of beliefs</li>
-<li class="fragment">But also there was another chain of beliefs which could justify R1</li>
-<li class="fragment">That’s because R1 is <em>rationalizable</em></li>
-</ul>
+<blockquote>
+<p>What is the NE?</p>
+</blockquote>
 </section>
-<section id="applying-rationalizability-2" class="slide level2">
-<h2>Applying Rationalizability</h2>
-<p>If we took away R2 and C2 from this game;</p>
+<section id="criticism-3-requirements-of-rationality-2" class="slide level2">
+<h2>Criticism 3: Requirements of Rationality</h2>
+<p>Consider this game:</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th>Row, Column</th>
 <th>C1</th>
+<th>C2</th>
 <th>C3</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>R1</strong></td>
-<td>0,7</td>
-<td>7,0</td>
+<td>0, <u>7</u></td>
+<td>2, 5</td>
+<td><u>7</u>, 0</td>
 </tr>
 <tr class="even">
+<td><strong>R2</strong></td>
+<td>5, 2</td>
+<td><u>3</u>, <u>3</u></td>
+<td>5, 2</td>
+</tr>
+<tr class="odd">
 <td><strong>R3</strong></td>
-<td>7,0</td>
-<td>0,7</td>
+<td><u>7</u>, 0</td>
+<td>2, 5</td>
+<td>0, <u>7</u></td>
 </tr>
 </tbody>
 </table>
-<p>then you can see that there is no NE in pure strategies,</p>
-<ul>
-<li><p>but all four strategy profiles are <em>rationalizable</em></p></li>
-<li><p>So <em>rationalizability</em> can still be useful even when NE cannot be found</p></li>
-</ul>
-</section>
-<section id="applying-rationalizability-to-continuous-games" class="slide level2">
-<h2>Applying Rationalizability to Continuous Games</h2>
-<p>There are two fishing boats in a small coastal town</p>
-<ul>
-<li>they can catch as many fish as they want, but too many will flood the local market</li>
-<li>the price of fish in the market is a function of how much each boat catches:</li>
-</ul>
-<p><span class="math display">\[ P = 60 - (R + S) \]</span></p>
-<pre><code>+ where $R$ and $S$ are barrels caught for each boat</code></pre>
-<ul>
-<li>Unit cost for each barrel is <strong>30</strong> ducats for boat <span class="math inline">\(R\)</span> and <strong>36</strong> ducats for boat <span class="math inline">\(S\)</span></li>
-</ul>
-</section>
-<section id="applying-rationalizability-to-continuous-games-1" class="slide level2">
-<h2>Applying Rationalizability to Continuous Games</h2>
-<p>The profits of each boat are:</p>
-<p><span class="math display">\[
-\begin{align}
-\pi_R = &amp; [(60 - R - S) - 30] \cdot R = (30 - S)R - R^2\\
-\pi_S = &amp; [(60 - R - S) - 36] \cdot S = (24 - R)S - S^2
-\end{align}
-\]</span></p>
-</section>
-<section id="applying-rationalizability-to-continuous-games-2" class="slide level2">
-<h2>Applying Rationalizability to Continuous Games</h2>
 <blockquote>
-<p>what are the best-response rules?</p>
-</blockquote>
-<p><span class="math display">\[
-\begin{align}
-\frac{\delta \pi_R}{\delta R} &amp; = (30 - S) - 2R \\
-\Rightarrow R^* = 15 - \frac{S}{2}
-\end{align}
-\]</span></p>
-<p><span class="math display">\[
-\begin{align}
-\frac{\delta \pi_S}{\delta S} &amp; = (24 - S) - 2S \\
-\Rightarrow S^* = 12 - \frac{R}{2}
-\end{align}
-\]</span></p>
-</section>
-<section id="applying-rationalizability-to-continuous-games-3" class="slide level2">
-<h2>Applying Rationalizability to Continuous Games</h2>
-<p>If you are the captian of boat <span class="math inline">\(R\)</span>,</p>
-<p>and you know that boat <span class="math inline">\(S\)</span>’s best response rule is $S^* = 12 - ,</p>
-<blockquote>
-<p>what values of <span class="math inline">\(S\)</span> should you plausibly expect them to ever pick?</p>
+<p>What is the NE?</p>
 </blockquote>
 <ul>
-<li class="fragment"><p>would they ever choose <span class="math inline">\(S&lt;0\)</span>?</p></li>
-<li class="fragment"><p>what about <span class="math inline">\(S&gt;12\)</span>?</p></li>
-<li class="fragment"><p>we can then say that only values <span class="math inline">\(S \in [0,12]\)</span> are <em>rationalizable</em></p></li>
-<li class="fragment"><p>What is <span class="math inline">\(R\)</span>’s range of possible best-responses if <span class="math inline">\(S \in [0,12]\)</span>?</p>
+<li class="fragment"><p>(R2, C2) is the only NE in this game</p></li>
+<li class="fragment"><p>For this strategy profile, both players’ beliefs about the other player’s strategy are correct.</p>
 <ul>
-<li class="fragment"><span class="math inline">\(R^*(S = 0) = 15\)</span>, <span class="math inline">\(R^*(S = 12) =  15 - 6 = 9\)</span></li>
+<li class="fragment"><p>Column believes that Row will choose R2, so she chooses her best response of C2</p></li>
+<li class="fragment"><p>Row believes that Column will choose C2, so he chooses his best response of R2</p></li>
+<li class="fragment"><p>So in NE, each player’s belief matches their opponent’s best response</p></li>
 </ul></li>
 </ul>
 </section>
-<section id="applying-rationalizability-to-continuous-games-4" class="slide level2">
-<h2>Applying Rationalizability to Continuous Games</h2>
-<p>Now if you are the captian of boat <span class="math inline">\(S\)</span>,</p>
-<p>and you know that <span class="math inline">\(R\)</span> knows that you will only choose <span class="math inline">\(S \in [0,12]\)</span>,</p>
+<section id="criticism-3-requirements-of-rationality-3" class="slide level2">
+<h2>Criticism 3: Requirements of Rationality</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Row, Column</th>
+<th>C1</th>
+<th>C2</th>
+<th>C3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>R1</strong></td>
+<td>0, <u>7</u></td>
+<td>2, 5</td>
+<td><u>7</u>, 0</td>
+</tr>
+<tr class="even">
+<td><strong>R2</strong></td>
+<td>5, 2</td>
+<td><u>3</u>, <u>3</u></td>
+<td>5, 2</td>
+</tr>
+<tr class="odd">
+<td><strong>R3</strong></td>
+<td><u>7</u>, 0</td>
+<td>2, 5</td>
+<td>0, <u>7</u></td>
+</tr>
+</tbody>
+</table>
+<p>But we could use similar logic for this game even when beliefs are <em>incorrect</em></p>
 <ul>
-<li class="fragment"><p>What is <span class="math inline">\(S\)</span>’s range of possible best-responses if <span class="math inline">\(R \in [9,15]\)</span>?</p>
-<ul>
-<li class="fragment"><span class="math inline">\(S^*(R = 9) = 12 - \frac{9}{2} = \frac{15}{2}\)</span>, <span class="math inline">\(R^*(S = 15) =  12 - \frac{15}{2}  = \frac{9}{2}\)</span></li>
-</ul></li>
+<li class="fragment"><p>We can justify Row playing <strong>R1</strong> if she believes that Column will play <strong>C3</strong></p></li>
+<li class="fragment"><p>Row could beleive this if she believes that <em>Column believes she is playing</em> <strong>R3</strong></p></li>
+<li class="fragment"><p>And if she also thinks that Column believes that she is playing <strong>R3</strong> because Column believes that <em>Row believes that Column is playing</em> <strong>C1</strong></p></li>
 </ul>
 </section>
-<section id="applying-rationalizability-to-continuous-games-5" class="slide level2">
-<h2>Applying Rationalizability to Continuous Games</h2>
-<div class="columns">
-<div class="column">
-<p><img data-src="figures/Dixit_fig5.7.png"></p>
-</div><div class="column">
-<p>Iteratively applying this logic of eliminating ranges of non-rationalizable strategies will converge on the unique NE:</p>
-<ul>
-<li><p>(<span class="math inline">\(R = 12\)</span>, <span class="math inline">\(S = 6\)</span>)</p></li>
-<li><p>this is also where the best-response rules intersect</p></li>
-</ul>
-</div></div>
+<section id="rebuttal-to-critics-why-not-nash-equilibrium" class="slide level2">
+<h2>Rebuttal to Critics: Why Not Nash Equilibrium?</h2>
+<p>Game theorist Roger Myerson suggests: - “Why not Nash equilibrium?” If someone proposes an alternative strategy profile, that profile must be evaluated. - If it isn’t a Nash equilibrium, one of the players can improve by changing their strategy, disproving the alternative.</p>
+<p><strong>Interactive Question:</strong> How does this defense of Nash equilibrium answer critics’ concerns?</p>
+</section>
+<section id="alternative-concepts" class="slide level2">
+<h2>Alternative Concepts</h2>
+<p>Criticism has led to the development of alternative solution concepts, such as: - <strong>Evolutionary Stable Strategies (ESS)</strong>: Strategies that persist over time through evolutionary pressure. - <strong>Correlated Equilibrium</strong>: Players coordinate their strategies based on signals they receive from a common source.</p>
+<h3 id="discussion-prompt-do-you-think-alternatives-like-ess-or-correlated-equilibrium-offer-improvements-over-nash-equilibrium"><strong>Discussion Prompt:</strong> Do you think alternatives like ESS or correlated equilibrium offer improvements over Nash equilibrium?</h3>
+</section>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
+<p>While Nash equilibrium has clear limitations, it remains a central concept in game theory. Alternative solution concepts may provide better insights into certain situations, but Nash equilibrium is still the starting point for analyzing many strategic games.</p>
+</section>
+<section class="slide level2">
+
 
 
 </section></section>
@@ -1029,6 +1508,44 @@ x = 10 \sqrt{10 \sqrt{x} - x} - (10 \sqrt{x} - x)
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

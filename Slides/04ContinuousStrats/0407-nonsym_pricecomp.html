@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>pricecomp – EC327 Game Theory</title>
+<title>nonsym_pricecomp – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -582,10 +547,10 @@ window.Quarto = {
 
 
 
-<section id="price-competition" class="level1">
-<h1>Price Competition</h1>
-<section id="sub-sandwich-competition-setup" class="level2">
-<h2 class="anchored" data-anchor-id="sub-sandwich-competition-setup">Sub Sandwich Competition: Setup</h2>
+<section id="price-competition-with-differentiated-products" class="level1">
+<h1>Price Competition with Differentiated Products</h1>
+<section id="setup-apple-and-samsungs-competition" class="level2">
+<h2 class="anchored" data-anchor-id="setup-apple-and-samsungs-competition">Setup: Apple and Samsung’s Competition</h2>
 <p>Two campus sandwich shops: Jersey Mike’s vs Port of Subs.</p>
 <p>Assume same menu and quality, only difference is price.</p>
 <section id="assumptions" class="level3">
@@ -599,214 +564,184 @@ window.Quarto = {
 <hr>
 </section>
 </section>
-<section id="sub-sandwich-competition-demand-curve" class="level2">
-<h2 class="anchored" data-anchor-id="sub-sandwich-competition-demand-curve">Sub Sandwich Competition: Demand Curve</h2>
-<div class="cell" data-output-location="slide">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data for the demand curve</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>demand <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">price =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>demand<span class="sc">$</span>quantity <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">-</span> demand<span class="sc">$</span>price</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the intersection point</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>price_eq <span class="ot">&lt;-</span> <span class="dv">40</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>quantity_eq <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">-</span> price_eq  <span class="co"># 60</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># set plot dimensions</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repr.plot.width =</span> <span class="dv">5</span>, <span class="at">repr.plot.height =</span><span class="dv">4</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(demand, <span class="fu">aes</span>(<span class="at">x =</span> quantity, <span class="at">y =</span> price)) <span class="sc">+</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">linewidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> price_eq, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> quantity_eq, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> quantity_eq, <span class="at">y =</span> price_eq), <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> quantity_eq <span class="sc">+</span> <span class="dv">5</span>, <span class="at">y =</span> price_eq <span class="sc">+</span> <span class="dv">5</span>,</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="st">"(Q = 60, P = 40)"</span>, <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">hjust =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Demand Curve: Q = 100 - P"</span>,</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Quantity Demanded (Units)"</span>,</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Price ($)"</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in geom_point(aes(x = quantity_eq, y = price_eq), color = "blue", : All aesthetics have length 1, but the data has 101 rows.
-ℹ Please consider using `annotate()` or provide this layer with data containing
-  a single row.</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="0401-pricecomp_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="individual-demand-curves" class="level2">
-<h2 class="anchored" data-anchor-id="individual-demand-curves">Individual Demand Curves</h2>
-<p><span class="math display">\[
-\begin{equation*}
-  D_{JM}(P_{JM},P_{PS}) = \begin{cases}
-    100 - P_{JM} &amp; \text{if  } P_{JM} &lt; P_{PS} \\
-    \frac{1}{2} (100 - P_{JM}) &amp; \text{if  } P_{JM} = P_{PS} \\
-    0 &amp; \text{if  } P_{PS} &lt; P_{JM}
-  \end{cases}
-\end{equation*}
-\]</span></p>
-<p><span class="math display">\[
-\begin{equation*}
-  D_{PS}(P_{JM},P_{PS}) = \begin{cases}
-    100 - P_{PS} &amp; \text{if  } P_{PS} &lt; P_{JM} \\
-    \frac{1}{2} (100 - P_{PS}) &amp; \text{if  } P_{PS} = P_{JM} \\
-    0 &amp; \text{if  } P_{JM} &lt; P_{PS}
-  \end{cases}
-\end{equation*}
-\]</span></p>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
 <ul>
-<li><p><span class="math inline">\(D_{JM}\)</span>: quantitiy of subs demanded at Jersey Mike’s</p></li>
-<li><p><span class="math inline">\(P_{JM}\)</span>: price at Jersey Mike’s, <span class="math inline">\(P_{PS}\)</span>: price at Port of Subs</p></li>
+<li><p><span class="math inline">\(Q_X = 44 - 2P_X + P_Y\)</span></p></li>
+<li><p><span class="math inline">\(Q_Y = 44 - 2P_Y + P_X\)</span></p></li>
+</ul>
+<p>Where:</p>
+<ul>
+<li><p><span class="math inline">\(Q_X\)</span> is the quantitiy of meals sold and <span class="math inline">\(P_X\)</span> is the price charged by Apple</p></li>
+<li><p><span class="math inline">\(Q_Y\)</span> is the quantity sold and <span class="math inline">\(P_Y\)</span> is the price charged by Samsung</p></li>
 </ul>
 <div class="incremental">
-<ul class="incremental">
-<li>Notice each shop’s demand depends on their competitor</li>
-<li>Also, to make things easy, this is a <em>symmetric game</em></li>
-</ul>
+<p>Notice how each restaurant’s demand depends on thier competitior</p>
 </div>
 <hr>
 </section>
-<section id="payoff-functions" class="level2">
-<h2 class="anchored" data-anchor-id="payoff-functions">Payoff Functions</h2>
-<p>Jersey Mike’s profit is price times number of subs: <span class="math display">\[
+<section id="profit-functions" class="level2">
+<h2 class="anchored" data-anchor-id="profit-functions">Profit Functions</h2>
+<p>Apple’s profit is calculated based on his price and number of customers: <span class="math display">\[
 \begin{align}
-\Pi_{jm} &amp; = (\text{price} - \text{cost})(\textbf{quantity sold}) \\
-      &amp; = (P_{jm} - 10)\mathbf{D_{jm}(P_{jm},P_{ps})} \\
-      &amp; = \begin{cases}
-      (P_{jm} - 10)(100 - P_{jm}) &amp; \text{if  } P_{jm} &lt; P_{ps} \\
-    \frac{1}{2} (P_{jm} - 10)(100 - P_{jm}) &amp; \text{if  } P_{jm} = P_{ps} \\
-    0 &amp; \text{if  } P_{ps} &lt; P_{jm}
-    \end{cases}
+\pi_X &amp; = (\text{price} - \text{cost})(\textbf{quantity sold}) \\
+      &amp; = (P_X - 8)\mathbf{(44 - 2P_X + P_Y)}
 \end{align}
 \]</span></p>
+<p>Samsung’s profit follows a similar formula.</p>
+<p><strong>How might we derive the best price for each?</strong></p>
+<hr>
 </section>
-<section id="payoff-functions-1" class="level2">
-<h2 class="anchored" data-anchor-id="payoff-functions-1">Payoff Functions</h2>
-<p>Because of <em>symmetry</em>:</p>
-<p>Jersey Mike’s payoff: <span class="math display">\[
-\begin{equation*}
-  \Pi_{jm} = \begin{cases}
-      (P_{jm} - 10)(100 - P_{jm}) &amp; \text{if  } P_{jm} &lt; P_{ps} \\
-    \frac{1}{2} (P_{jm} - 10)(100 - P_{jm}) &amp; \text{if  } P_{jm} = P_{ps} \\
-    0 &amp; \text{if  } P_{ps} &lt; P_{jm}
-    \end{cases}
-\end{equation*}
-\]</span> Port of Subs’s payoff: <span class="math display">\[
-\begin{equation*}
-  \Pi_{ps} = \begin{cases}
-    0 &amp; \text{if  } P_{jm} &lt; P_{ps} \\
-    \frac{1}{2} (P_{ps} - 10)(100 - P_{ps}) &amp; \text{if  } P_{jm} = P_{ps} \\
-    (P_{ps} - 10)(100 - P_{ps}) &amp; \text{if  } P_{ps} &lt; P_{jm}
-    \end{cases}
-\end{equation*}
+<section id="step-1-expand-apples-profit-function" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-expand-apples-profit-function">Step 1: Expand Apple’s Profit Function</h2>
+<p>Let’s expand Apple’s profit function: <span class="math display">\[
+\begin{align}
+\pi_X &amp; = (P_X - 8)(44 - 2P_X + P_Y) \\
+      &amp; = P_X(44 + P_Y - 2P_X) - 8(44 + P_Y - 2P_X)
+\end{align}
 \]</span></p>
 <hr>
 </section>
-<section id="checking-strategy-profiles" class="level2">
-<h2 class="anchored" data-anchor-id="checking-strategy-profiles">Checking Strategy Profiles</h2>
-<p>To start, suppose Port of Subs charges $40 per sandwich:</p>
-<p><img src="./figures/JM-payoff-fn.png" class="img-fluid"></p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>How much should Jersey Mike’s charge to maximize profit?</p>
-<ul class="incremental">
-<li>$39.99!</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="checking-strategy-profiles-1" class="level2">
-<h2 class="anchored" data-anchor-id="checking-strategy-profiles-1">Checking Strategy Profiles</h2>
-<p>If Jersey Mike’s charges $30, does Port of Subs have <em>regrets</em>?</p>
-<p><img src="./figures/PS-payoff-fn.png" class="img-fluid"></p>
-<div class="incremental">
-<ul class="incremental">
-<li>They would rather charge $29.99 and earn positive profit &gt; 0</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="nash-in-sandwich-pricing-game" class="level2">
-<h2 class="anchored" data-anchor-id="nash-in-sandwich-pricing-game">Nash in Sandwich Pricing Game</h2>
-<p>What is the Nash equilibrium of this game?</p>
+<section id="step-2-simplify-the-expanded-profit-function" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-simplify-the-expanded-profit-function">Step 2: Simplify the Expanded Profit Function</h2>
+<p>Let’s expand Apple’s profit function: <span class="math display">\[
+\begin{align}
+\pi_X &amp; = (P_X - 8)(44 - 2P_X + P_Y) \\
+      &amp; = P_X(44 + P_Y - 2P_X) - 8(44 + P_Y - 2P_X)
+\end{align}
+\]</span></p>
+<p>Now, multiply out the terms:</p>
 <p><span class="math display">\[
-\begin{equation*}
-  \Pi_{jm} = \begin{cases}
-      (P_{jm} - 10)(100 - P_{jm}) &amp; \text{if  } P_{jm} &lt; P_{ps} \\
-    \frac{1}{2} (P_{jm} - 10)(100 - P_{jm}) &amp; \text{if  } P_{jm} = P_{ps} \\
-    0 &amp; \text{if  } P_{ps} &lt; P_{jm}
-    \end{cases}
-\end{equation*}
-\]</span> <span class="math display">\[
-\begin{equation*}
-  \Pi_{ps} = \begin{cases}
-    0 &amp; \text{if  } P_{jm} &lt; P_{ps} \\
-    \frac{1}{2} (P_{ps} - 10)(100 - P_{ps}) &amp; \text{if  } P_{jm} = P_{ps} \\
-    (P_{ps} - 10)(100 - P_{ps}) &amp; \text{if  } P_{ps} &lt; P_{jm}
-    \end{cases}
-\end{equation*}
+44 P_X + P_X P_Y - 2 P_X^2 - 352 - 8 P_Y + 16 P_X
+\]</span></p>
+<p><strong>What should we do next to find the best price?</strong></p>
+<hr>
+</section>
+<section id="step-3-deriving-apples-best-response-function" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-deriving-apples-best-response-function">Step 3: Deriving Apple’s Best-Response Function</h2>
+<p>To find the best price, we differentiate <span class="math inline">\(\pi_X\)</span> with respect to <span class="math inline">\(P_X\)</span>.</p>
+<section id="differentiation" class="level3">
+<h3 class="anchored" data-anchor-id="differentiation">Differentiation:</h3>
+<p><span class="math display">\[
+\frac{d\pi_X}{dP_X} = 44 + P_Y - 4P_X + 16 = P_Y + 60 - 4P_X
+\]</span></p>
+<p>Set the derivative equal to zero for maximization: <span class="math display">\[
+P_Y + 60 - 4P_X = 0
+\]</span> Solve for <span class="math inline">\(P_X\)</span>: <span class="math display">\[
+P_X^* = 15 + 0.25P_Y
 \]</span></p>
 <hr>
 </section>
-<section id="nash-in-sandwich-pricing-game-1" class="level2">
-<h2 class="anchored" data-anchor-id="nash-in-sandwich-pricing-game-1">Nash in Sandwich Pricing Game</h2>
-<p>Nash: Both shops set <span class="math inline">\({\color{P_{jm}=P_{ps}=\$blue}10}\)</span></p>
-<p><span class="math display">\[
-\begin{equation*}
-  \Pi_{jm} = \begin{cases}
-      ({\color{blue} 10} - 10)(100 - {\color{blue} 10}) &amp; = 0 &amp; \text{if  } P_{jm} &lt; {\color{blue} 10} \\
-    \frac{1}{2} ({\color{blue} 10} - 10)(100 - {\color{blue} 10}) &amp; = 0 &amp; \text{if  } P_{jm} = {\color{blue} 10} \\
-    0 &amp; &amp; \text{if  } P_{jm} &lt; {\color{blue} 10}
-    \end{cases}
-\end{equation*}
-\]</span> <span class="math display">\[
-\begin{equation*}
-  \Pi_{ps} = \begin{cases}
-    0 &amp; &amp; \text{if  } {\color{blue} 10} &lt; P_{ps} \\
-    \frac{1}{2} ({\color{blue} 10} - 10)(100 - {\color{blue} 10}) &amp; =0 &amp; \text{if  } P_{ps} = {\color{blue} 10} \\
-    ({\color{blue} 10} - 10)(100 - {\color{blue} 10}) &amp; =0 &amp; \text{if  } P_{ps} &lt; {\color{blue} 10}
-    \end{cases}
-\end{equation*}
-\]</span></p>
-<ul>
-<li>Everyone is indifferent between undercutting, overpricing, or keeping price 10</li>
-</ul>
 </section>
-<section id="price-competition-outcomes" class="level2">
-<h2 class="anchored" data-anchor-id="price-competition-outcomes">Price Competition Outcomes</h2>
-<p>In this game:</p>
-<ul>
-<li><p>Both firms charge their marginal cost</p></li>
-<li><p>Consumer surplus is mazimized</p></li>
-<li><p>Both firms make zero profit</p></li>
-</ul>
+<section id="for-those-without-calculus-background" class="level2">
+<h2 class="anchored" data-anchor-id="for-those-without-calculus-background">For those without Calculus background</h2>
+<p>The profit function we wrote out in step 2 seems complicated, so lets simplify it:</p>
+<p><span class="math display">\[
+\pi_X = - 352 - 8 P_Y +  \mathbf{P_X} (60 + P_Y) - 2 \mathbf{P_X}^2
+\]</span></p>
+<p>As Apple, we can only set our own price, <span class="math inline">\(P_X\)</span>, everything else we can just treat as a constant</p>
+<p>This fits a more general pattern:</p>
+<p><span class="math display">\[
+Y = A + BX - CX^2
+\]</span></p>
+<hr>
+</section>
+<section id="for-those-without-calculus-background-1" class="level2">
+<h2 class="anchored" data-anchor-id="for-those-without-calculus-background-1">For those without Calculus background</h2>
+<p><span class="math display">\[
+Y = A + BX - CX^2
+\]</span></p>
+<p>If we want to find the maximum of <span class="math inline">\(Y\)</span> in this equation as a function of <span class="math inline">\(X\)</span>, as long as <span class="math inline">\(C&gt;0\)</span>, this will take the shape of a parabola with a single peak.</p>
 <div class="incremental">
 <ul class="incremental">
-<li><p>Does competition always lead to zero profit?</p></li>
-<li><p>How might firms try to increase profits?</p>
-<ul class="incremental">
-<li><p><em>Cartels</em>, <em>collusion</em>, <em>coordination</em> might form</p>
-<ul class="incremental">
-<li><p>but only if coordination is <em>enforcable</em></p></li>
-<li><p>usually this is illegal</p></li>
-</ul></li>
-</ul></li>
-<li><p>What about <em>legal</em> coordination?</p></li>
+<li>The maxmimum of this function will be reached at:</li>
+<li><span class="math inline">\(X^* = \frac{B}{2C}\)</span></li>
 </ul>
 </div>
+<hr>
+</section>
+<section id="for-those-without-calculus-background-2" class="level2">
+<h2 class="anchored" data-anchor-id="for-those-without-calculus-background-2">For those without Calculus background</h2>
+<p>So going back to Apple’s profit function,</p>
+<ul>
+<li>If <span class="math inline">\(B = 60 + P_Y\)</span></li>
+<li>and <span class="math inline">\(C = 2\)</span></li>
+</ul>
+<p>then applying that the maximum choice will meet <span class="math inline">\(\frac{B}{2C}\)</span>,</p>
+<p>we get the same answer of <span class="math inline">\(P_X^* = 15 + 0.25P_Y\)</span></p>
+</section>
+<section id="step-4-samsungs-best-response-function" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-samsungs-best-response-function">Step 4: Samsung’s Best-Response Function</h2>
+<p>Samsung’s problem is symmetric, so we can derive her best-response function similarly: <span class="math display">\[
+P_Y = 15 + 0.25P_X
+\]</span></p>
+<section id="question-how-do-we-find-the-nash-equilibrium-from-these-two-best-response-functions" class="level3">
+<h3 class="anchored" data-anchor-id="question-how-do-we-find-the-nash-equilibrium-from-these-two-best-response-functions"><strong>Question:</strong> How do we find the Nash equilibrium from these two best-response functions?</h3>
+<div class="incremental">
+<ul class="incremental">
+<li>We have one best response rule for each player as a function of the other player’s pricing strategy</li>
+<li>I.e., a system of <em>two equations</em> and <em>two unknowns</em></li>
+</ul>
+</div>
+<hr>
+</section>
+</section>
+<section id="what-is-a-ne-in-this-situation" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-ne-in-this-situation">What is a NE in this situation?</h2>
+<p>Recall that a NE is a stable configuration of strategies in which each player is best responding to the other</p>
+<div class="incremental">
+<ul class="incremental">
+<li>So in this case, when each player is setting a price that maximizes their profits <strong>conditional on the other player’s price</strong>, there will be no incentive to change price</li>
+<li>In other words, we can plug in one player’s best response rule into the other player’s best response rule to solve for the equilibrium price</li>
+</ul>
+</div>
+</section>
+<section id="step-5-solve-for-nash-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-solve-for-nash-equilibrium">Step 5: Solve for Nash Equilibrium</h2>
+<p>We solve the system of equations for <span class="math inline">\(P_X\)</span> and <span class="math inline">\(P_Y\)</span>: <span class="math display">\[
+P_X = 15 + 0.25P_Y
+\]</span> <span class="math display">\[
+P_Y = 15 + 0.25P_X
+\]</span></p>
+<hr>
+</section>
+<section id="step-5-solve-for-nash-equilibrium-1" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-solve-for-nash-equilibrium-1">Step 5: Solve for Nash Equilibrium</h2>
+<p>Substitute one equation into the other: <span class="math display">\[
+P_Y = 15 + 0.25(15 + 0.25P_Y)
+\]</span> Simplify: <span class="math display">\[
+P_Y = 15 + 3.75 + 0.0625P_Y
+\]</span> Solve for <span class="math inline">\(P_Y\)</span>: <span class="math display">\[
+P_Y = 20
+\]</span></p>
+<p>Then, plug <span class="math inline">\(P_Y = 20\)</span> back into the first equation: <span class="math display">\[
+P_X = 15 + 0.25(20) = 20
+\]</span></p>
+<hr>
+</section>
+<section id="step-6-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-conclusion">Step 6: Conclusion</h2>
+<p>At equilibrium:</p>
+<ul>
+<li><p><span class="math inline">\(P_X = 20\)</span>, <span class="math inline">\(P_Y = 20\)</span></p></li>
+<li><p>Both restaurants charge $20, serve 2,400 customers per month, and make a monthly profit of $28,800.</p></li>
+</ul>
+<hr>
+</section>
+<section id="recap-price-competition-breakdown" class="level2">
+<h2 class="anchored" data-anchor-id="recap-price-competition-breakdown">Recap: Price Competition Breakdown</h2>
+<ul>
+<li>Step 1: Expand the profit function.</li>
+<li>Step 2: Simplify the expanded equation.</li>
+<li>Step 3: Differentiate and solve for best-response.</li>
+<li>Step 4: Repeat for Samsung.</li>
+<li>Step 5: Solve for Nash equilibrium.</li>
+</ul>
+<hr>
+</section>
+<section id="graphically" class="level2">
+<h2 class="anchored" data-anchor-id="graphically">Graphically:</h2>
+<p><img src="figures/Dixit_fig5.1.png" class="img-fluid"></p>
 
 
 </section>
@@ -898,7 +833,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/dyasui\.github\.io\/EC327\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -1233,7 +1168,7 @@ window.Quarto = {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/Slides/04ContinuousStrats/0401-pricecomp.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/Slides/04ContinuousStrats/0401-pricecomp.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/Slides/04ContinuousStrats/0407-nonsym_pricecomp.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/Slides/04ContinuousStrats/0407-nonsym_pricecomp.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/dyasui/dyasui.github.io"><i class="fa-brands fa-github" aria-label="github"></i> Source</a></p>
 </div>
