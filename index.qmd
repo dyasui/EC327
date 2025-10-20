@@ -40,6 +40,19 @@ Homework assignments will be posted on this website, but you will upload them to
 
 [Assignments page](Homework/index.qmd)
 
+
+## Activities
+
+All activity sheets can be found here:
+
+[Activites page](activities/index.qmd)
+
+## Exams
+
+See exam policies and study materials her:
+
+[Exams page](Exams/index.qmd)
+
 ---
 
 # Acknowledgements
