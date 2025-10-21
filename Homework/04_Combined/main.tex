@@ -111,19 +111,22 @@ Draw out the new extensive form game.
 \end{solution}
 
 \part[4]
-First, solve for all Nash equilibria in every proper \textit{subgame} of the extensive form game tree.
+Is there a Nash equilibrium in which the Gnu always cross 
+at either the channel or rapids?
+Why or why not?
 
 \begin{solution}
-
-  In the subgame following the gnu choosing Channel,
-  the only Nash is in mixed strategies which is when the gnu \textbf{Cross 50\% of the time} (and stay 50\% of the time) and the crocs wait in the \textbf{Channel 50\% of the time} (and wait in the rapids 50\% of the time).
-
-  In the subgame following the gnu choosing Rapids,
-  the only Nash is in pure strategies where the gnu \textbf{Stay} and the crocs wait in the \textbf{Rapids}.
+  In the subgame after the gnu initially choose rapids,
+  the only stable outcome is Gnu Stay, crocs wait in Rapids.
+  In the subgame after Gnu initially choose channel,
+  Gnu crossing is not stable because crocs would wait in the Channel.
+  So no pure strategy SPNE where gnu cross.
+  
 \end{solution}
+
   \part[4]
-  How does your prediction change from homework 2?
-  Would you still expect to always see the gnu safely crossing at the channel?
+  How does your prediction compare to the perfect information version from homework 2?
+  Explain intuitively.
 
   \begin{solution}
     If the Gnu can't see the Crocs, they can't use a strategy where they only selectively cross the Channel if the Crocs are there.
@@ -136,24 +139,62 @@ First, solve for all Nash equilibria in every proper \textit{subgame} of the ext
 \newpage
 
 \question
-Consider the extensive form game treee below.
 
-\begin{center}
-  \includegraphics[width = .8\textwidth]{figures/bigtree.png}
-\end{center}
+Consider a modified deer hunt game with continuous levels of effort.
+
+Hunters can either hunt deer together, or rabbit separately.
+Rabbits take zero effort to hunt successfully and give a single hunter a payoff of 3.
+If either hunter decides to hunt deer, they also have to choose a level of effort, $e_i$.
+
+The number of deer that each hunter catches depends on the effort of the other hunter.
+There is some potential for mutual benefit in higher levels of joint effort,
+but if too much effort is exerted on deer, they will get overhunted.
+
+Assume that the payoffs to hunting deer or rabbit are:
+
+\begin{align*}
+  \pi_1(Deer, e_1,e_2) & = 6e_1 - e_1e_2 - e_1^2 \\
+  \pi_2(Deer, e_1,e_2) & = 6e_2 - e_1e_2 - e_2^2 \\
+  \pi_{1,2}(Rabbit) & = 3
+\end{align*}
 
 \begin{parts}
-  
-  \part[2] 
-  What should a complete strategy profile look like?
+  \part[4] Suppose that hunter 2 chooses to hunt deer with effort level $e_2=2$.
+  Draw out hunter 1's payoffs for both their $Deer$ and $Rabbit$ strategies
+  as a function of their own level of effort.
+  \begin{solution}
+    See graph below:
 
-  How many elements will each player have in their \textit{complete} strategy?
+    \begin{tikzpicture}
+    
+      \begin{axis}[
+        % width=\textwidth,
+        grid,
+        xlabel={$e_1$},
+        ylabel={$\pi_1$},
+        x=3cm,
+        y=.6cm,
+        xmin=0, xmax=4,
+        ymin=0, ymax=6,
+        xtick={1,2,3},
+        ytick={1,2,3,4,5},
+        grid style=dashed,
+        ]
+    
+        \addplot[draw=none] coordinates {(1,1)};
+    
+      \end{axis}
+    \end{tikzpicture}
+  \end{solution}
 
-  \part[4] Find all subgame perfect Nash equilibria in pure strategies.
+  \part[2] What is hunter 1's best response to hunter 2 choosing $e_2=2$?
 
-  \part[4] Can you find a Nash equilibrium that is not subgame perfect?
-  Carefully explain.
+  \part[4] Is there a Nash equilibrium where both hunt Deer?
+  If yes, what levels of effort will they put in?
+  If not, explain why.
 
+  \part[4] Is there a Nash equilibrium where both hunt Deer?
+  Explain why or why not.
 \end{parts}
 
 \newpage
@@ -253,50 +294,98 @@ Assume that each of them has a payoff equal to the amount of money that he or sh
 
 \newpage
 
-\question \textbf{[n-person game theory]}
+\question
+The countries of Oceania and Eurasia are at war.
+As depicted in the figure, Oceania has four cities —
+Argula, Betra, Carnat, and Dussel — 
+and it is concerned that one of them is to be bombed by Eurasia.
+The bombers could come from either base Alpha,
+which can reach the cities of Argula and Betra;
+or from base Beta, which can reach either Carnat or Dussel.
+Eurasia decides which one of these four cities to attack.
+Oceania doesn’t know which one has been selected,
+but does observe the base from which the bombers are flying.
+After making that observation, Oceania decides which one 
+(and only one) of its four cities to evacuate.
 
-Suppose there are two types of music fans:
-\textit{normies} only like a band if a majority of other people like them too;
-\textit{hipsters} only like a band if a minority of other people like them.
+Assign a payoff of 2 to Oceania
+if it succeeds in evacuating the city that is to be bombed
+and a payoff of 1 otherwise.
+Assign Eurasia a payoff of 1 if the city it bombs was not evacuated
+and a zero payoff otherwise.
+\footnote{Harrington \textit{Games, Strategies, and Decision Making}}
 
-Suppose that the payoff to \textit{normies} from liking \textit{Wolf Alice} is $100 + 2m$, where $m$ is the number of people who like them.
-The payoff to a \textit{hipster} from liking \textit{Wolf Alice} is $500 - 5m$.
-Anyone can choose to like \textit{The National} which has a payoff of 100.
-
-Assume there arre 100 people, 75 are \textit{normies}, and 25 are \textit{hipsters}.
-\footnote{Adapted from Cliff Bekar, Lewis \& Clark College}
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=.3\linewidth]{figures/figPR2.1.png} 
+\end{figure}
 
 \begin{parts}
-  \part[4]
-  Is it a Nash equilibrium for only the \textit{hipsters} to like \textit{Wolf Alice}?
-  \begin{solution}
 
-    $u(Wolf~Alice)_{hipsters} =  375 > 100 = u(National)$, so \textit{hipsters} are willing to like $WA$.
+  \part[4] Write down the extensive form game.
 
-    But \textit{normies} also like $WA$ better because
-    $u(Wolf~Alice)_{normies} = 150 > 100$.
+\begin{solution}
+  \begin{center}
+    \include{figures/OceaniavsEurasia} 
+  \end{center} 
 
-    So this is not a Nash.
-  \end{solution}
-
-  \part[4]
-  Is it a Nash equilibrium for only the \textit{normies} to like \textit{Wolf Alice}?
-  \begin{solution}
-    $u(Wolf~Alice)_{hipsters} =  125 > 100 = u(National)$, so \textit{hipsters} would also like \textit{Wolf Alice}.
-    So this is not a Nash.
-  \end{solution}
-
-  \part[4]
-  Is there a Nash equilibrium where \textit{Wolf Alice} has fans of both types?
-  \begin{solution}
-    For \textit{hipsters} to be indifferent between $WA$ and $N$, 
-    \begin{align*}
-      u(WA)_h & = u(N)_h \\
-      500 - 5m & = 100 \\ 
-      m & = 80
-    \end{align*}
-    So all \textit{normies} and 5 \textit{hipsters} liking \textit{Wolf Alice} is a Nash equilibrium.
-  \end{solution}
+  Note that $A$, $B$, $C$, and $D$ in the last row are short for the city names.
+  Eurasia acts first, so the initial node is labelled accordingly.
+  Oceania has only two info sets which are represented with the dashed ovals.
+  The $(0,2)$ or $(1,0)$ payoff sets correspond to Oceania choosing the same city that is bombed,
+  or choosing a different city respectively.
+\end{solution}
 \end{parts}
+
+
+% \newpage
+
+% \question \textbf{[n-person game theory]}
+
+% Suppose there are two types of music fans:
+% \textit{normies} only like a band if a majority of other people like them too;
+% \textit{hipsters} only like a band if a minority of other people like them.
+
+% Suppose that the payoff to \textit{normies} from liking \textit{Wolf Alice} is $100 + 2m$, where $m$ is the number of people who like them.
+% The payoff to a \textit{hipster} from liking \textit{Wolf Alice} is $500 - 5m$.
+% Anyone can choose to like \textit{The National} which has a payoff of 100.
+
+% Assume there arre 100 people, 75 are \textit{normies}, and 25 are \textit{hipsters}.
+% \footnote{Adapted from Cliff Bekar, Lewis \& Clark College}
+
+% \begin{parts}
+%   \part[4]
+%   Is it a Nash equilibrium for only the \textit{hipsters} to like \textit{Wolf Alice}?
+%   \begin{solution}
+
+%     $u(Wolf~Alice)_{hipsters} =  375 > 100 = u(National)$, so \textit{hipsters} are willing to like $WA$.
+
+%     But \textit{normies} also like $WA$ better because
+%     $u(Wolf~Alice)_{normies} = 150 > 100$.
+
+%     So this is not a Nash.
+%   \end{solution}
+
+%   \part[4]
+%   Is it a Nash equilibrium for only the \textit{normies} to like \textit{Wolf Alice}?
+%   \begin{solution}
+%     $u(Wolf~Alice)_{hipsters} =  125 > 100 = u(National)$, so \textit{hipsters} would also like \textit{Wolf Alice}.
+%     So this is not a Nash.
+%   \end{solution}
+
+%   \part[4]
+%   Is there a Nash equilibrium where \textit{Wolf Alice} has fans of both types?
+%   \begin{solution}
+%     For \textit{hipsters} to be indifferent between $WA$ and $N$, 
+%     \begin{align*}
+%       u(WA)_h & = u(N)_h \\
+%       500 - 5m & = 100 \\ 
+%       m & = 80
+%     \end{align*}
+%     So all \textit{normies} and 5 \textit{hipsters} liking \textit{Wolf Alice} is a Nash equilibrium.
+%   \end{solution}
+% \end{parts}
+
+
 \end{questions}
 \end{document}

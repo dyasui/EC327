@@ -39,7 +39,7 @@ title: "Homework Assignments"
 ```
 
 # Assignment 4 [Download](04_Combined/main.pdf){.btn .btn-outline-primary .btn role="button"} 
-**Due:** Friday, October 24th
+**Due:** Wednesday, October 29th
 [**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1927368){target="_blank"}
 ```{=html}
 <details>
