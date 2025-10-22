@@ -11,6 +11,8 @@ You will have 80 minutes to complete 10 multiple choice and 3-4 short-answer que
   * 3x5 inch handwritten notecard
   * scientific non-programmable graphing calculator (optional)
 
+# [Midterms Topics](midterm-topics.qmd)
+
 # Practice Exams:
 
 ## Midterm [Download](PracticeExam/Midterm/main.pdf){.btn .btn-outline-primary .btn role="button"}

@@ -1,0 +1,237 @@
+\begin{question}
+  Rationality means that:
+  \begin{tasks}
+    \task Players' preferences are continuous and independent
+    \task players always win over their opponents
+    \task players always act on perfect information
+    \task \correct players' preferences are complete and transitive
+  \end{tasks}
+\end{question}
+
+\begin{question}
+  Two player take turns emptying pebbles from a jar containing 100 pebbles total.
+  Each player can take any number of pebbles between 1 and 5 on their turn.
+  The player who takes the last pebble \textbf{loses} the game. \\
+  How many pebbles should the first player take on their first turn?
+  \begin{tasks}
+    \task \vary{1}{3}
+    \task \vary{2}{\correct 4}
+    \task \vary{5}{2}
+    \task \vary{\correct 4}{1} 
+    \task \vary{3}{5}
+  \end{tasks}
+\end{question}
+
+\begin{question}
+  If an outcome is \rule{1cm}{0.15mm}, 
+  then it is \rule{1cm}{0.15mm}
+  \begin{tasks}
+    \task \vary
+    {\correct never Pareto dominated, Pareto Optimal}
+    {not a Nash equilibrium, not Pareto optimal} 
+    \task \vary
+    {not a Nash equilibrium, not Pareto optimal} 
+    {\correct never Pareto dominated, Pareto Optimal}
+    \task \vary
+    {Pareto dominated, a Nash equilibrium}
+    {strictly dominated for everyone, Pareto optimal}
+    \task \vary
+    {strictly dominated for everyone, Pareto optimal}
+    {Pareto dominated, a Nash equilibrium}
+  \end{tasks}
+\end{question}
+
+  \begin{question}
+  Consider the strategic form game below:
+  \begin{table}[h!]
+    \begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabular}{*{5}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{3}{c}{$P_2$} \\\cline{3-5}
+      \multicolumn{1}{c}{} &     & $x$ & $y$ & $z$ \\\cline{2-5}
+      \multirow{3}*{$P_1$}  & $a$ & 2,0 & 6,2 & 4,2 \\\cline{2-5}
+                            & $b$ & 2,5 & 8,9 & 2,2 \\\cline{2-5}
+                            & $c$ & 1,4 & 5,3 & 5,1 \\\cline{2-5}
+    \end{tabular}
+    \end{center}
+  \end{table}
+  
+  In the game above, which strategy is strictly dominated?
+  
+  \begin{tasks}
+    \task \vary{b}{y}
+    \task \vary{a}{\correct z}
+    \task \vary{c}{b}
+    \task \vary{\correct z}{x}
+    \task \vary{x}{a}
+  \end{tasks}
+\end{question}
+
+  \begin{question} 
+  Perform Iterative Deletion of Strictly Dominated Strategies for the same game as above all the way to completion.
+  What does IDSDS tell you about the Nash equilibrium of this game?
+  \begin{tasks}
+    \task \vary{\correct The NE is (b,y)}{The NE is (a, x)}
+    \task \vary{The NE is (a, x)}{The NE is (a, y)}
+    \task \vary{The NE is (a, y)}{\correct The NE is (b,y)}
+    \task \vary{The NE is (Y, z)}{IESDS by itself does not reveal the NE of this game.}
+    \task \vary{IESDS by itself does not reveal the NE of this game.}{The NE is (Y, z)}
+  \end{tasks}
+\end{question}
+
+\begin{question}
+  A choice that is the best for a player \textbf{no matter what everyone else is doing}
+  is referred to as a:
+  \begin{tasks}
+    \task \vary
+    {Nash strategy}
+    {strictly dominated strategy}
+    \task \vary
+    {Pareto optimal strategy}
+    {confidence strategy}
+    \task \vary
+    {\correct strictly dominant strategy}
+    {Pareto optimal strategy}
+    \task \vary
+    {strictly dominated strategy}
+    {\correct strictly dominant strategy}
+  \end{tasks}
+\end{question}
+
+% \begin{question}[type=exam]{5} 
+%   \setlist{nolistsep}
+%   Iterative Deletion of Strictly Dominated Strategies 
+%   is useful because
+%   \begin{tasks}
+%     \task \vary
+%     {it will always find all Nash Equilibria of any strategic form game}
+%     {it's not useful because you will get different answers depending on which player you start with}
+%     \task \vary
+%     {it removes non-credible threats}
+%     {it can remove strategies which will never be played in a Nash Equilibrium}
+%     \task \vary
+%     {it can remove strategies which will never be played in a Nash Equilibrium}
+%     {it will always find all Nash Equilibria of any strategic form game}
+%     \task \vary
+%     {it's not useful because you will get different answers depending on which player you start with}
+%     {it removes non-credible threats}
+%   \end{tasks}
+
+\begin{question}
+  Consider the strategic form game below:
+
+  \begin{table}[h!]
+    \begin{center}
+    \begin{tabular}{*{5}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{3}{c}{$P_2$} \\\cline{3-5}
+      \multicolumn{1}{c}{} &         & Left & Middle & Right \\\cline{2-5}
+      \multirow{3}*{$P_1$}& Up       & 0,1  & 9,0    & 2,3 \\\cline{2-5}
+                          & Straight & 5,9  & 7,3    & 1,7 \\\cline{2-5}
+                          & Down     & 7,5  & 10,10  & 3,5 \\\cline{2-5}
+    \end{tabular}
+    \end{center}
+  \end{table}
+  What is the Nash Equilibrium?
+  \begin{tasks}
+    \task \vary{Up, Left}{Up, Middle}
+    \task \vary{Straight, Middle}{Straight, Right}
+    \task \vary{Down, Left}{\correct Down, Middle}
+    \task \vary{\correct Down, Middle}{Down, Right}
+  \end{tasks}
+\end{question}
+
+\begin{question}
+  Consider the extensive form game below:
+  \begin{figure}[!h]
+    \centering
+    % example from: https://www.sfu.ca/~haiyunc/notes/Game_Trees_with_TikZ.pdf
+    
+    \begin{tikzpicture}[scale=1.5,font=\footnotesize]
+        \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
+        \tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
+        \tikzstyle{level 1}=[level distance=15mm,sibling distance=3.5cm]
+        \tikzstyle{level 2}=[level distance=15mm,sibling distance=1.5cm]
+        \tikzstyle{level 3}=[level distance=15mm,sibling distance=1cm]
+        
+        \node(0)[solid node,label=above:{$P1$}]{}
+            child{node[solid node,label=above left:{$P2$}]{}
+                child{node[hollow node,label=below:{$(1,2)$}]{} edge from parent node[left]{$C$}}
+                child{node[hollow node,label=below:{$(1,-1)$}]{} edge from parent node[left]{$D$}}
+                child{node[hollow node,label=below:{$(0,2)$}]{} edge from parent node[right]{$E$}}
+                edge from parent node[left,xshift=-5]{$A$}
+            }
+            child{node[solid node,label=above right:{$P2$}]{}
+                child{node[hollow node,label=below:{$(2,2)$}]{} edge from parent node[left]{$F$}}
+                child{node[hollow node,label=below:{$(1,3)$}]{} edge from parent node[right]{$G$}}
+                edge from parent node[right,xshift=5]{$B$}
+            };
+    \end{tikzpicture}
+  \end{figure}
+
+  Which of the following is a subgame-perfect Nash equilibrium?
+  \begin{tasks}
+    \task \vary
+    {(B, CF)}
+    {(A, EF)}
+    \task \vary
+    {(A, EG)}
+    {\correct (B, CG)}
+    \task \vary
+    {\correct (B, CG)}
+    {(B, CF)}
+    \task \vary
+    {(A, EF)}
+    {(B, DG)}
+  \end{tasks}
+\end{question}
+
+% \begin{question}
+%   I make two bets on separate games.
+%   If the UO men's basketball team beats Washington, I win \$6, 
+%   but if Washington wins I lose \$6.
+%   If the UO women's team beats Colorado, I win \$12,
+%   but if Colorado wins I lose \$12.
+%   Suppose that the probability of the UO men beating Washington is $\frac{1}{3}$ 
+%   and the probability of the UO women beating Colorado is $\frac{1}{2}$. \\
+%   What is my expected (dollar) payout across both games? \\
+%   \begin{tasks}
+%     \task \$0
+%     \task -\$2
+%     \task -\$4
+%     \task \$2 
+%   \end{tasks}
+% \end{question}
+
+
+\begin{question}
+  In a \textbf{sequential-move game}, the appropriate method of analysis is:
+  \begin{tasks}
+    \task \vary
+    {Iterated elimination of dominated strategies}
+    {Nash equilibrium in mixed strategies}
+    \task \vary
+    {\correct backward induction (rollback analysis)}
+    {best response dynamics}
+    \task \vary
+    {Cournot adjustment process}
+    {\correct backward induction (rollback analysis)}
+  \end{tasks}
+\end{question}
+
+\begin{question}
+  In the \textbf{Prisoner’s Dilemma}, mutual cooperation:
+  \begin{tasks}
+    \task \vary
+    {is a dominant strategy equilibrium}
+    {\correct Pareto dominates the outcome of mutual defection}
+    \task \vary
+    {\correct Pareto dominates the outcome of mutual defection}
+    {is stable}
+    \task \vary
+    {is stable}
+    {is a credible threat}
+    \task \vary
+    {is a credible threat}
+    {is a dominant strategy equilibrium}
+  \end{tasks}
+\end{question}

@@ -1,0 +1,105 @@
+# Midterm Topics Guide^[Generated from the textbook with the help of ChatGPT. I found that it picked up most key terms, but I went through and added/removed some according to what we covered in lectures.]
+
+[Practice Exam](../Exams/index.qmd){.btn .btn-outline-primary .btn role="button"}
+
+## **Chapter 1&2: What is Game Theory?**
+
+**Main Ideas**
+
+* Strategic situations occur whenever individuals’ choices depend on others’ actions.
+* Distinguishes between **decisions** (individual optimization) and **strategic games** (mutual interdependence).
+* Classifying games: sequential vs. simultaneous, one-shot vs. repeated, complete vs. incomplete information.
+
+**Key Terms**
+
+* **Game of strategy**: a situation where each player’s payoff depends on the actions of others.
+* **Strategic** choice vs other types of maximizing behavior
+* **Elements of games**: players, strategies, payoffs, information.
+* **Strategies**: complete plans of action for every contingency.
+* **Payoffs**: numerical representation of preferences or outcomes.
+* **Equilibrium**: a stable configuration of choices
+* **Expected payoff** 
+* **Rationality**
+* **Pareto efficiency**: a social outcome that no-one would veto
+* **Cooperative vs. Noncooperative games**
+* **Zero-sum** (or constant-sum) vs games with incentives to cooperate
+* **One-shot** vs **Repeated** games (we've only represented one-shot games so far)
+
+---
+
+## **Chapter 3: Games with Sequential Moves**
+
+**Main Ideas**
+
+* Analyzes games where players move in sequence.
+* Introduces **game trees** and **rollback (backward induction)** reasoning.
+
+**Key Concepts**
+
+* **Game tree (extensive form)**: diagrams of decision nodes, branches, and terminal payoffs.
+* **Backwards Induction (Rollback equilibrium)**: find the equilibrium by solving backward from the end of the game.
+  - "pruning" branches that are part of sequentially dominated strategies
+* **First-mover vs. second-mover advantage**
+* **Subgame**: portion of a game that constitutes a smaller game starting at a node.
+* **Order advantage**
+* Empirical evidence for Rollback: **centipede** and **ultimatum** games.
+
+---
+
+## **Chapter 4: Simultaneous-Move Games with Discrete Strategies**
+
+**Main Ideas**
+
+* Players choose actions simultaneously.
+* Introduces **payoff matrices**, **dominance**, and **Nash equilibrium**.
+
+**Key Concepts**
+
+* **Normal form (matrix representation)**
+* **Dominant strategy**: best response regardless of what others do.
+* **Dominated strategy**: always worse than another available strategy.
+* **Iterated elimination of dominated strategies**
+* **Nash equilibrium**: *list of strategies* where no player can gain by deviating unilaterally.
+* **Best response** to an opponent's strategy
+* **Best response analysis**
+* **Types of games**:
+  - **coordination games**: Battle of the Sexes, Deer Hunt, assurance games
+  - **anti-coordination games**: chicken
+  - **prisoners' dilemma**
+
+---
+
+## **Chapter 5: Simultaneous-Move Games with Continuous Strategies**
+
+**Main Ideas**
+
+* Extends Nash equilibrium to settings with continuous strategy spaces (e.g., price, quantity).
+* Introduces calculus-based optimization.
+* Discusses empirical criticisms and **rationalizability**.
+
+**Key Concepts**
+
+* **Best response rules (functions)**
+* **Cournot** (quantity) and **Bertrand** (price) competition
+
+Helpful shortcut for the max of a quadratic of form
+$f(x) = A + Bx + Cx^2$:
+
+when $x=\frac{B}{2C}$, $f(x)$ is at a maximum.
+
+---
+
+## **Chapter 6: Games with Sequential and Simultaneous Moves**
+
+**Main Ideas**
+
+* Combines tree and matrix reasoning.
+* Analyzes games with both types of moves (e.g., entry games, Stackelberg competition).
+
+**Key Concepts**
+
+* **Information set**: what actions are observable by a player before they move
+* Going from **extensive** to **normal** form in the same game
+* **Subgame-perfect equilibrium**
+* **credibility**
+* **off-equilibrium paths**
