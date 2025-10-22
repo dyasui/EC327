@@ -22,11 +22,11 @@ Tim Cook’s profit based on his price and number of iPhone customers:
 $$
 \begin{align}
 \pi_A & = (\text{price} - \text{cost})(\textbf{quantity sold}) \\
-      & = (P_A - 10)\mathbf{(100 - 2P_A + P_S)}
+      & = (P_A - 12)\mathbf{(100 - 2P_A + P_S)}
 \end{align}
 $$
 
-Assume a marginal cost of 10 per unit for iPhones
+Assume a marginal cost of 12 per unit for iPhones
 
 ---
 
@@ -35,139 +35,11 @@ Assume a marginal cost of 10 per unit for iPhones
 Samsung's profit based on prices and number of Galaxys sold:
 $$
 \begin{align}
-\pi_S & = (P_S - 30)\mathbf{(100 - 2P_S + P_A)}
+\pi_S & = (P_S - 20)\mathbf{(100 - 2P_S + P_A)}
 \end{align}
 $$
 
-Assume Samsung has a higher cost of 30 per Galaxy produced
-
----
-
-## Step 1: Expand Apple's Profit Function
-
-Let’s expand Apple’s profit function:
-$$
-\begin{align}
-\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\
-      & = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)
-\end{align}
-$$
-
----
-
-## Step 2: Simplify the Expanded Profit Function
-
-Let’s expand Apple’s profit function:
-$$
-\begin{align}
-\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\
-      & = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)
-\end{align}
-$$
-
-Now, multiply out the terms:
-
-$$
-100 P_A + P_A P_S - 2 P_A^2 - 1000 - 10 P_S + 20 P_A
-$$
-
-**What should we do next to find the best price?**
-
----
-
-## Step 3: Deriving Apple’s Best-Response Function
-
-To find the best price, we differentiate $\Pi_A$ with respect to $P_A$.
-
-### Differentiation:
-$$
-\frac{d\pi_A}{dP_A} = 100 + P_S - 4P_A + 20 = P_S + 120 - 4P_A
-$$
-
-Set the derivative equal to zero for maximization:
-$$
-P_S + 120 - 4P_A = 0
-$$
-Solve for $P_A$:
-$$
-BR_A(P_S) = 30 + 0.25P_S
-$$
-
----
-
-## For those without Calculus background
-
-The profit function we wrote out in step 2 seems complicated, so lets simplify it:
-
-$$
-\pi_A = - 1000 - 10 P_S +  \mathbf{P_A} (120 + P_S) - 2 \mathbf{P_A}^2 
-$$
-
-As Apple, we can only set our own price, $P_A$, 
-everything else we can just treat as a constant
-
-This fits a more general pattern:
-
-$$
-S = A + BA - CA^2
-$$
-
----
-
-## For those without Calculus background
-
-$$
-S = A + BA - CA^2
-$$
-
-If we want to find the maximum of $S$ in this equation as a function of $A$, 
-as long as $C>0$, this will take the shape of a parabola with a single peak.
-
-::: {.incremental}
-  * The maxmimum of this function will be reached at:
-  * $A^* = \frac{B}{2C}$
-:::
-
----
-
-## For those without Calculus background
-
-So going back to Apple's profit function, 
-
-  * If $B = 120 + P_S$
-  * and $C = 2$
-
-then applying that the maximum choice will meet $\frac{B}{2C}$, 
-
-we get the same answer of 
-$P_A^* = 30 + 0.25P_S$
-
-## Step 4: Samsung's Best-Response Function
-
-Samsung’s best-response function is similar:
-
-$$
-\begin{align}
-\pi_A & = (P_S - 30)(100 - 2P_S + P_A) \\
-      & = 100P_S - 2P_S^2 + P_A P_S - 3000 + 60P_S - 30P_A
-\end{align}
-$$
-
-$$
-\begin{align*}
-\frac{d\pi_S}{dP_S} & = 0 \\
-100 - 4P_S + P_A + 60 & = 0 \\
-BR_S(P_A) & = 40 + .25P_A
-\end{align*}
-$$
-
-### **Question:** How do we find the Nash?
-
-::: {.incremental}
-  * We have one best response rule for each player 
-    - as a function of the other player's pricing strategy
-  * I.e., a system of *two equations* and *two unknowns*
-:::
+Assume Samsung has a higher cost of 20 per Galaxy produced
 
 ---
 
@@ -185,52 +57,248 @@ A Nash is a stable configuration of strategies
     - to solve for the equilibrium price
 :::
 
-## Step 5: Solve for Nash Equilibrium
+## Step 1: Expand Apple's Profit Function
 
-We solve the system of equations for $P_A$ and $P_S$:
+Let’s expand Apple’s profit function:
 $$
-P_A = 30 + 0.25P_S
+\begin{align}
+\pi_A & = (P_A - 12)(100 - 2P_A + P_S) \\
+      & = P_A(100 + P_S - 2P_A) - 12(100 + P_S - 2P_A)
+\end{align}
+$$
+
+---
+
+## Step 2: Simplify the Expanded Profit Function
+
+Let’s expand Apple’s profit function:
+$$
+\begin{align}
+\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\
+      & = P_A(100 + P_S - 2P_A) - 12(100 + P_S - 2P_A)
+\end{align}
+$$
+
+Now, multiply out the terms:
+
+$$
+100 P_A + P_A P_S - 2 P_A^2 - 1200 - 12 P_S + 24 P_A
+$$
+
+**What should we do next to find the best price?**
+
+---
+
+## Step 3: Deriving Apple’s Best-Response Function
+
+To find the best price, we differentiate $\Pi_A$ with respect to $P_A$.
+
+### Differentiation:
+$$
+\frac{d\pi_A}{dP_A} = 100 + P_S - 4P_A + 24 = P_S + 124 - 4P_A
+$$
+
+Set the derivative equal to zero for maximization:
+$$
+P_S + 124 - 4P_A = 0
+$$
+Solve for $P_A$:
+$$
+BR_A(P_S) = 31 + \frac{1}{4}P_S
+$$
+
+---
+
+## For those without Calculus background
+
+Simplify profit function from step 2:
+
+$$
+\pi_A = {\color{purple}- 1200 - 12 P_S} +  \mathbf{P_A} {\color{blue}(124 + P_S)} - {\color{green}2} \mathbf{P_A}^2 
+$$
+
+Apple's profit $\pi_A$, depends on their choice variable, $P_A$ 
+  * everything else we can just treat as *constant*
+
+This fits a more general pattern:
+
+$$
+y = {\color{purple}A} + {\color{blue}B}x - {\color{green}C}x^2
+$$
+
+---
+
+## For those without Calculus background
+
+$$
+f(x) = A + Bx - Cx^2
+$$
+
+We want to find the maximum of $f(x)$
+
+  * as long as $C>0$, this will take the shape of a parabola with a single peak.
+
+::: {.incremental}
+  * The maxmimum of this function will be reached at:
+  * $x^* = \frac{B}{2C}$
+:::
+
+---
+
+## For those without Calculus background
+
+$$
+\pi_A = {\color{purple}- 1200 - 12 P_S} +  \mathbf{P_A} {\color{blue}(124 + P_S)} - {\color{green}2} \mathbf{P_A}^2 
+$$
+
+So going back to Apple's profit function, 
+
+  * If $\color{blue}B = 124 + P_S$
+  * and $\color{green}C = 2$
+
+then applying that the maximum choice will meet $\frac{B}{2C} = \frac{\color{blue}124+P_S}{2\times {\color{green} 2}}$, 
+
+we get the same answer of 
+$P_A^* = \frac{124 + P_S}{4}$
+
+## Step 4: Samsung's Best-Response Function
+
+Samsung’s best-response function is similar:
+
+$$
+\begin{align}
+\pi_A & = (P_S - 20)(100 - 2P_S + P_A) \\
+      & = 100P_S - 2P_S^2 + P_A P_S - 2000 + 40P_S - 20P_A
+\end{align}
+$$
+
+$$
+\begin{align*}
+\frac{d\pi_S}{dP_S} & = 0 \\
+100 - 4P_S + P_A + 40 & = 0 \\
+BR_S(P_A) & = 35 + .25P_A
+\end{align*}
+$$
+
+---
+
+## **Question:** How do we find the Nash?
+
+$$
+P_A = 31 + 0.25P_S
 $$
 $$
-P_S = 40 + 0.25P_A
+P_S = 45 + 0.25P_A
 $$
+
+::: {.incremental}
+  * We have one best response rule for each player 
+    - as a function of the other player's pricing strategy
+  * I.e., a system of *two equations* and *two unknowns*
+:::
 
 ---
 
 ## Step 5: Solve for Nash Equilibrium
 
-Substitute one equation into the other:
+We solve the system of equations for $P_A$ and $P_S$:
 $$
-P_A = 30 + 0.25(40 + 0.25P_S)
+P_A = 31 + 0.25P_S
 $$
-Simplify:
 $$
-P_A = 30 + 10 + 0.0625P_A
-$$
-Solve for $P_S$:
-$$
-\begin{align*}
-  P_A(1-0.0625) & = 40 \\
-  P_S & = 42.67
-\end{align*}
+P_S = 35 + 0.25P_A
 $$
 
-Then, plug $P_S = 20$ back into the first equation:
+Remember the following from definition of Nash:
+  
+  * both players' strategies are their best responses
+
+  * equilibrium is intersection of best responses
+
+---
+
+## Step 5.1: Transform equations
+
+Either solve for Apple or Samsung's price first.
+
+  * I'll start by solving for Samsung's:
+
+    - From Apple's Best response:
 $$
-P_S = 40 + 0.25(42.67) = 50.67
+\color{purple}
+P_A = \frac{124 + P_S}{4}
+$$
+
+   - We can re-arrange Samsung's best response for $P_A$ in terms of $P_S$:
+
+$$
+\color{blue}
+\begin{align}
+P_S = \frac{140+P_A}{4} \\
+\Rightarrow 4P_S - 140 = P_A
+\end{align}
+$$
+
+Solve for $P_S$:
+
+---
+
+## Step 5.2: Solve for one variable
+We're going to use the fact that $P_A=BR_A$ in equilibrium:
+$$
+\begin{align}
+  {\color{blue}4P_S - 140} & = {\color{purple} \frac{124 +P_S}{4}} \\
+  \Rightarrow 16P_S - 560 & = 124 + P_S \\
+  \Rightarrow P_S^* & = \frac{684}{15} = 45.6 \\
+\end{align}
+$$
+
+When Samsung sets $P_S=45.6$, Apple's best response will fulfill Samsung's belief.
+
+---
+
+## Step 5.3: Solve for the other variable
+
+We could go throught steps 5.1-5.2 to solve for Apple's eqm strategy.
+
+  * Or we could just use their best-response to Samsung's eqm strategy!
+
+We already solved for $P_S^*=45.6$, so plug it into $BR_A(P_S^*)=P_A^*$
+$$
+\begin{align}
+  P_A^* & = 4{\color{green}P_S^*} -140 \\
+      & = 4\times{\color{green} \frac{684}{15}} - 140 \\
+      & = 182.4 - 140 = 42.4 \\
+\end{align}
 $$
 
 ---
 
 ## Step 6: Conclusion
 
-At equilibrium:
+In our Bertrand equilibrium:
 
-* $P_A = 42.67$, $P_S = 50.67$
+* $P_A = 42.4$, $P_S = 45.6$
+
+* $\Pi_A(P_A^*, P_S^*) = \$1,848.32$
+
+* $\Pi_S(P_A^*, P_S^*) = \$1,720.32$
+
+  - Apple's lower MC results in lower eqm price, higher profit than Samsung
+
+* Unlike Bertrand model with perfect substitutes,
+
+  - here firms earn positive profit because of product *differentiation*
 
 * Do either firm have an incentive to deviate?
 
-  - How would we check?
+---
+
+## Checking Apple's Best response
+
+Apple's profit when Samsung's price is set at $P_S^*=45.6$:
+
+![](figures/apple-profit.png)
 
 ---
 
@@ -247,8 +315,6 @@ At equilibrium:
 - Step 3: Differentiate and solve for best-response.
 - Step 4: Repeat for Samsung.
 - Step 5: Solve for Nash equilibrium.
-
----
 
 <!-- ## Graphically:
 

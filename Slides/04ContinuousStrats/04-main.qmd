@@ -89,4 +89,4 @@ A [best-response rule]{.hi} *inputs* a value of another player's strategy
 
 <!-- {{< include 0405-rationalize.qmd >}} -->
 
-{{< include 0405-nashcritique.qmd >}}
+<!-- {{< include 0405-nashcritique.qmd >}} -->

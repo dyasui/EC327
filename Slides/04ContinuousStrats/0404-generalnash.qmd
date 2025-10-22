@@ -1,15 +1,13 @@
 # General Method for Finding Nash Equilibria
 
-## Introduction
+## Outline
 
-The method for finding the Nash equilibrium in a game with continuous strategies is general and applies to many types of games.
+This methods for finding Nash equilibrium applies to *any* game.
 
 ### Key steps:
 1. Label each player's strategy (e.g., $x$, $y$, etc.).
 2. Define each player's payoff as a function of all players' strategies.
 3. Maximize each player's payoff by choosing their own strategy, holding the others constant.
-
-**Question:** How does this method apply to real-world competition scenarios?
 
 ---
 
@@ -25,15 +23,13 @@ $$
 ### Example: Price Competition
 - $x$ and $y$ could represent the prices set by two firms, and the functions $F$ and $G$ represent their profits.
 
-**Question:** Why is labeling strategies and payoffs essential for structuring a game?
-
 ---
 
 ## Step 2: Maximizing Payoff Functions
 
 Each player chooses their strategy to maximize their own payoff, considering the strategies of the others as fixed.
 
-To do this, we take the **partial derivative** of each player's payoff with respect to their own strategy and set it to zero.
+This means taking the **partial derivative** payoff with respect to *their own* strategy and set it to zero.
 
 ### Example:
 For firm 1:
@@ -68,15 +64,13 @@ $$
 At this point, no player has an incentive to change their strategy.
 
 ### Example:
-In price competition, the Nash equilibrium is where both firms set prices that maximize their respective profits.
-
-**Interactive Question:** Why is it important that no player has an incentive to deviate at Nash equilibrium?
+In price competition, both firms set prices that maximize their respective profits.
 
 ---
 
 ## Step 5: Handling Multiple Solutions
 
-Some games may have multiple Nash equilibria, while others may have none in pure strategies.
+Some games have multiple Nash equilibria, others have none in pure strategies.
 
 ### Discussion:
 - Multiple equilibria can occur in coordination games.
@@ -90,4 +84,3 @@ Some games may have multiple Nash equilibria, while others may have none in pure
 2. Maximize each player’s payoff with respect to their own strategy.
 3. Solve the system of best-response functions.
 4. Check for multiple equilibria and the possibility of mixed strategies.
-
