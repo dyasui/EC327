@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Social Media Adspace – EC327 Game Theory</title>
+<title>Social Media Adspace Simulation – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -45,6 +45,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-edbf0db1a146f148c42567bee0685584.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-72da31740c9dd7448d6ef0f9f3a0386c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../site_libs/bootstrap/bootstrap-edbf0db1a146f148c42567bee0685584.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<meta name="shinylive:serviceworker_dir" content="../..">
+<script src="../../site_libs/quarto-contrib/shinylive-0.8.0/shinylive/load-shinylive-sw.js" type="module"></script>
+<script src="../../site_libs/quarto-contrib/shinylive-0.8.0/shinylive/run-python-blocks.js" type="module"></script>
+<link href="../../site_libs/quarto-contrib/shinylive-0.8.0/shinylive/shinylive.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -75,35 +80,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -318,7 +294,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Slides/#simultaneous-games">Simultaneous Games</a></li><li class="breadcrumb-item"><a href="../../activities/05CournotComp/cournotcomp.html"><span class="text-success">Activity</span>: Social Media Adspace</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Social Media Adspace Simulation</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -401,13 +377,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Simultaneous Games</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
@@ -428,7 +404,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/05CournotComp/cournotcomp.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../activities/05CournotComp/cournotcomp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Social Media Adspace</span></a>
   </div>
 </li>
@@ -547,9 +523,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Slides/#simultaneous-games">Simultaneous Games</a></li><li class="breadcrumb-item"><a href="../../activities/05CournotComp/cournotcomp.html"><span class="text-success">Activity</span>: Social Media Adspace</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Social Media Adspace</h1>
+<h1 class="title">Social Media Adspace Simulation</h1>
 </div>
 
 
@@ -566,45 +542,123 @@ window.Quarto = {
 </header>
 
 
-<p><strong><u>Objective:</u></strong> In this activity, you will take on the role of a social media platform competing with others to attract advertising dollars. Your goal is to determine how many ad slots to release on your platform, <strong>maximizing your firm’s profit</strong> in a market where each platform’s choices affect overall ad prices.</p>
-<p>Each social media platform (firm) sells digital ad space to companies looking to reach their audience. The total number of ad slots released by all firms in the market determines the price advertisers are willing to pay per slot. The more ad space is available, the less valuable each slot becomes.</p>
-<section id="game-rules" class="level2">
-<h2 class="anchored" data-anchor-id="game-rules">Game Rules:</h2>
-<section id="divide-into-teams" class="level3">
-<h3 class="anchored" data-anchor-id="divide-into-teams">1. Divide into teams:</h3>
-<p>Come up with a name for your new social media startup and assign yourselves roles (CEO, CFO, Public Relations, Market Analyst, etc.).</p>
+<p><a href="../../activities/05CournotComp/cournotcomp.html">Back to activity home</a></p>
+<section id="market-simulation" class="level1">
+<h1>Market Simulation</h1>
+<pre class="shinylive-r" data-engine="r"><code>#| '!! shinylive warning !!': |
+#|   shinylive does not work in self-contained HTML documents.
+#|   Please set `embed-resources: false` in your metadata.
+#| standalone: true
+#| code-fold: false
+#| eval: false
+#| label: demand-curve
+#| viewerHeight: 1000
+
+library(shiny)
+library(ggplot2)
+
+# Demand curve parameters
+a_range &lt;- 50:200
+b_range &lt;- 0.5:2
+c_range &lt;- 1:10
+
+# User interface with sliders for `a` and `b` and numeric inputs for each group
+ui &lt;- fluidPage(
+    titlePanel("Digital Advertising Production Dashboard"),
+    
+    sidebarLayout(
+        sidebarPanel(
+            # Randomize demand curve parameters
+            sliderInput("a", "Demand Curve Intercept (a):", min = min(a_range), max = max(a_range), value = sample(a_range, 1)),
+            sliderInput("b", "Demand Curve Slope (b):", min = min(b_range), max = max(b_range), value = sample(b_range, 1)),
+            sliderInput("c", "Marginal Cost (c):", min = min(c_range), max = max(c_range), value = sample(c_range, 1)),
+            
+            # Input production quantities for each group (up to 12)
+            numericInput("group1", "Group 1 Ad Quantity:", value = 0, min = 0),
+            numericInput("group2", "Group 2 Ad Quantity:", value = 0, min = 0),
+            numericInput("group3", "Group 3 Ad Quantity:", value = 0, min = 0),
+            numericInput("group4", "Group 4 Ad Quantity:", value = 0, min = 0),
+            numericInput("group5", "Group 5 Ad Quantity:", value = 0, min = 0),
+            numericInput("group6", "Group 6 Ad Quantity:", value = 0, min = 0),
+            numericInput("group7", "Group 7 Ad Quantity:", value = 0, min = 0),
+            numericInput("group8", "Group 8 Ad Quantity:", value = 0, min = 0),
+            numericInput("group9", "Group 9 Ad Quantity:", value = 0, min = 0),
+            numericInput("group10", "Group 10 Ad Quantity:", value = 0, min = 0),
+            numericInput("group11", "Group 11 Ad Quantity:", value = 0, min = 0),
+            numericInput("group12", "Group 12 Ad Quantity:", value = 0, min = 0)
+        ),
+        
+        mainPanel(
+            plotOutput("demandPlot"),
+            textOutput("marketPriceText"),
+            tableOutput("profitTable")
+        )
+    )
+)
+
+# Server logic for calculating total quantity and plotting demand curve
+server &lt;- function(input, output) {
+    # Reactive calculation of total quantity from all groups
+    totalQuantity &lt;- reactive({
+        sum(input$group1, input$group2, input$group3, input$group4, input$group5,
+            input$group6, input$group7, input$group8, input$group9, input$group10,
+            input$group11, input$group12)
+    })
+    
+    # Reactive calculation of market price based on total quantity and demand curve
+    marketPrice &lt;- reactive({
+        input$a - input$b * totalQuantity()
+    })
+    
+    # Plotting the demand curve with the intersection point for market price
+    output$demandPlot &lt;- renderPlot({
+        ggplot(data = data.frame(Q = 0:(input$a/input$b)), aes(x = Q)) +
+            geom_line(aes(y = input$a - input$b * Q), color = "blue") +
+            geom_point(aes(x = totalQuantity(), y = marketPrice()), color = "red", size = 3) +
+            labs(
+                title = "Social Media Advertising Demand",
+                x = "Total Quantity of Ad Space",
+                y = "Price per Ad Slot"
+            ) +
+            theme_minimal()
+    })
+    
+    # Displaying the market price as text
+    output$marketPriceText &lt;- renderText({
+        paste("Market Price per Ad Slot: $", round(marketPrice(), 2))
+    })
+
+    # Table of profits for each group
+    output$profitTable &lt;- renderTable({
+        group_quantities &lt;- c(input$group1, input$group2, input$group3, input$group4, input$group5,
+                              input$group6, input$group7, input$group8, input$group9, input$group10,
+                              input$group11, input$group12)
+        group_profits &lt;- group_quantities * marketPrice() - input$c * group_quantities
+        
+        # Create a data frame for group profits
+        data.frame(
+            Group = paste("Group", 1:12),
+            Quantity = group_quantities,
+            Profit = round(group_profits, 2)
+        )
+    })
+}
+
+# Run the app
+shinyApp(ui, server)
+</code></pre>
 </section>
-<section id="analyze-ad-market" class="level3">
-<h3 class="anchored" data-anchor-id="analyze-ad-market">2. Analyze Ad Market:</h3>
-<p>You will be shown the market demand curve which represents the willingness to pay of advertising companies on your platforms. Values of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> will be randomly generated.</p>
-<ol type="1">
-<li>Common Demand Curve: <span class="math display">\[ P = a - b \times Q \]</span></li>
-</ol>
-<ul>
-<li><span class="math inline">\(P\)</span> is the price per ad slot.</li>
-<li><span class="math inline">\(Q\)</span> is the total ad space supplied by all firms (sum of each platform’s ad slots).</li>
-<li><span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants representing market conditions.</li>
-</ul>
-<ol start="2" type="1">
-<li>Marginal Cost:</li>
-</ol>
-<ul>
-<li>You will all have the same marginal costs <span class="math inline">\(c\)</span> drawn randomly each round.</li>
-</ul>
+<section id="round-outline" class="level1">
+<h1>Round Outline:</h1>
+<section id="rounds-1-3" class="level3">
+<h3 class="anchored" data-anchor-id="rounds-1-3">Rounds 1-3:</h3>
+<p>Repeat game among your original groups, varying the demand curve parameters after each round.</p>
 </section>
-<section id="strategize-5-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="strategize-5-minutes">3. Strategize: (5 minutes)</h3>
-<p>Discuss amongst your team as to how many ads you will allow for on your platform. Your strategy will be an integer quantity of ads slots to produce which will be bought by adverstisers at the going market rate.</p>
-</section>
-<section id="market-opens" class="level3">
-<h3 class="anchored" data-anchor-id="market-opens">4. Market Opens:</h3>
-<p>After each team has decided on their quantity of ads to produce, I will ask your CEO to report them to me. All firms quantities will be totaled and entered into the market demand curve to determine the price you will receive per ad.</p>
-</section>
-<section id="calculate-profits-discuss" class="level3">
-<h3 class="anchored" data-anchor-id="calculate-profits-discuss">5. Calculate Profits &amp; Discuss:</h3>
-<p>Have your CFO write down the profit you earn this round after all other groups quantities have been entered. Also record the demand function’s <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> of the round. Discuss your firm’s annual performance and make adjustments as necessary. After class you will submit your total profit after all rounds as well as discussion bullet points about how your team came up with a strategy, and how this activity relates to class material.</p>
-<p><a href="../../activities/05CournotComp/simulation.html" class="btn btn-outline-primary" role="button">Simulation app</a></p>
-<p><a href="../../activities/05CournotComp/discuss.html" class="btn btn-outline-primary" role="button">Discussion Questions</a></p>
+<section id="round-4--fewer-groups-each-round" class="level3">
+<h3 class="anchored" data-anchor-id="round-4--fewer-groups-each-round">Round 4-: Fewer groups each round</h3>
+<p>The tech bubble has burst and with it has disappeared the endless venture capital funding. Now only the strongest will survive!</p>
+<p>The bottom half of firms with the lowest profits in round 3 go out of business. Their employees will join the remaining firms and play in the next round.</p>
+<hr>
 
 
 </section>
@@ -1031,7 +1085,7 @@ window.Quarto = {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/activities/05CournotComp/cournotcomp.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/activities/05CournotComp/cournotcomp.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/activities/05CournotComp/simulation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/activities/05CournotComp/simulation.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/dyasui/dyasui.github.io"><i class="fa-brands fa-github" aria-label="github"></i> Source</a></p>
 </div>

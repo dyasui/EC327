@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Social Media Adspace – EC327 Game Theory</title>
+<title>discuss – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,35 +75,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -318,7 +289,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Slides/#simultaneous-games">Simultaneous Games</a></li><li class="breadcrumb-item"><a href="../../activities/05CournotComp/cournotcomp.html"><span class="text-success">Activity</span>: Social Media Adspace</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -401,13 +372,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Simultaneous Games</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/#simultaneous-games" class="sidebar-item-text sidebar-link">
@@ -428,7 +399,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/05CournotComp/cournotcomp.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../activities/05CournotComp/cournotcomp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="text-success">Activity</span>: Social Media Adspace</span></a>
   </div>
 </li>
@@ -544,70 +515,26 @@ window.Quarto = {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Slides/#simultaneous-games">Simultaneous Games</a></li><li class="breadcrumb-item"><a href="../../activities/05CournotComp/cournotcomp.html"><span class="text-success">Activity</span>: Social Media Adspace</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Social Media Adspace</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<p><strong><u>Objective:</u></strong> In this activity, you will take on the role of a social media platform competing with others to attract advertising dollars. Your goal is to determine how many ad slots to release on your platform, <strong>maximizing your firm’s profit</strong> in a market where each platform’s choices affect overall ad prices.</p>
-<p>Each social media platform (firm) sells digital ad space to companies looking to reach their audience. The total number of ad slots released by all firms in the market determines the price advertisers are willing to pay per slot. The more ad space is available, the less valuable each slot becomes.</p>
-<section id="game-rules" class="level2">
-<h2 class="anchored" data-anchor-id="game-rules">Game Rules:</h2>
-<section id="divide-into-teams" class="level3">
-<h3 class="anchored" data-anchor-id="divide-into-teams">1. Divide into teams:</h3>
-<p>Come up with a name for your new social media startup and assign yourselves roles (CEO, CFO, Public Relations, Market Analyst, etc.).</p>
-</section>
-<section id="analyze-ad-market" class="level3">
-<h3 class="anchored" data-anchor-id="analyze-ad-market">2. Analyze Ad Market:</h3>
-<p>You will be shown the market demand curve which represents the willingness to pay of advertising companies on your platforms. Values of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> will be randomly generated.</p>
-<ol type="1">
-<li>Common Demand Curve: <span class="math display">\[ P = a - b \times Q \]</span></li>
-</ol>
+<section id="discussion" class="level1">
+<h1>Discussion</h1>
+<p>In your submission, include your groups’ responses to the following points:</p>
 <ul>
-<li><span class="math inline">\(P\)</span> is the price per ad slot.</li>
-<li><span class="math inline">\(Q\)</span> is the total ad space supplied by all firms (sum of each platform’s ad slots).</li>
-<li><span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants representing market conditions.</li>
-</ul>
-<ol start="2" type="1">
-<li>Marginal Cost:</li>
-</ol>
+<li><p>What type of game did this activity resemble? What ideas from this class did you and your team use to play this game?</p></li>
+<li><p>How did this game relate to the concept of oligopoly?</p>
 <ul>
-<li>You will all have the same marginal costs <span class="math inline">\(c\)</span> drawn randomly each round.</li>
+<li><p>During each of the rounds, were the final quantities produced by firms consistent with what they would be in perfect competition or did they resemble collusion?</p></li>
+<li><p>Did any groups try to collude with others? If so, were they able to effectively enforce their agreements?</p></li>
+<li><p>Did collusion get easier as the number of firms in the market was reduced?</p></li>
+</ul></li>
 </ul>
-</section>
-<section id="strategize-5-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="strategize-5-minutes">3. Strategize: (5 minutes)</h3>
-<p>Discuss amongst your team as to how many ads you will allow for on your platform. Your strategy will be an integer quantity of ads slots to produce which will be bought by adverstisers at the going market rate.</p>
-</section>
-<section id="market-opens" class="level3">
-<h3 class="anchored" data-anchor-id="market-opens">4. Market Opens:</h3>
-<p>After each team has decided on their quantity of ads to produce, I will ask your CEO to report them to me. All firms quantities will be totaled and entered into the market demand curve to determine the price you will receive per ad.</p>
-</section>
-<section id="calculate-profits-discuss" class="level3">
-<h3 class="anchored" data-anchor-id="calculate-profits-discuss">5. Calculate Profits &amp; Discuss:</h3>
-<p>Have your CFO write down the profit you earn this round after all other groups quantities have been entered. Also record the demand function’s <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> of the round. Discuss your firm’s annual performance and make adjustments as necessary. After class you will submit your total profit after all rounds as well as discussion bullet points about how your team came up with a strategy, and how this activity relates to class material.</p>
-<p><a href="../../activities/05CournotComp/simulation.html" class="btn btn-outline-primary" role="button">Simulation app</a></p>
-<p><a href="../../activities/05CournotComp/discuss.html" class="btn btn-outline-primary" role="button">Discussion Questions</a></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1031,7 +958,7 @@ window.Quarto = {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/activities/05CournotComp/cournotcomp.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/activities/05CournotComp/cournotcomp.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/activities/05CournotComp/discuss.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/activities/05CournotComp/discuss.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/dyasui/dyasui.github.io"><i class="fa-brands fa-github" aria-label="github"></i> Source</a></p>
 </div>
