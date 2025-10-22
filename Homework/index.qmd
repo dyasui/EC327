@@ -38,14 +38,14 @@ title: "Homework Assignments"
 </details>
 ```
 
-# Assignment 4 [Download](04_Combined/main.pdf){.btn .btn-outline-primary .btn role="button"} 
+# Assignment 4 [Download](04_Combined/HW4_clean.pdf){.btn .btn-outline-primary .btn role="button"} 
 **Due:** Wednesday, October 29th
 [**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1927368){target="_blank"}
 ```{=html}
 <details>
   <summary>Expand</summary>
   <div class="embed-container">
-    <iframe src="04_Combined/main.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+    <iframe src="04_Combined/HW4_clean.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```
