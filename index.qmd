@@ -18,6 +18,14 @@ at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 [Syllabus](Syllabus/main.pdf){.btn .btn-outline-primary .btn role="button"}
 ---
 
+## Course Survey
+
+[Course Surveys site](https://duckweb.uoregon.edu/duckweb/bwskmisc.P_CourseEvaluations)
+
+If at least 66% of the class fills out a survey, I will add 1 extra credit point to everyone's midterm.
+
+---
+
 ## Tentative Schedule
 
 | **Week** | **Chapters** | **Topic**                                                       | Assignments  |
