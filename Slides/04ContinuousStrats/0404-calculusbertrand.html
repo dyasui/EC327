@@ -569,129 +569,21 @@ window.Quarto = {
 <p>Tim Cook’s profit based on his price and number of iPhone customers: <span class="math display">\[
 \begin{align}
 \pi_A &amp; = (\text{price} - \text{cost})(\textbf{quantity sold}) \\
-      &amp; = (P_A - 10)\mathbf{(100 - 2P_A + P_S)}
+      &amp; = (P_A - 12)\mathbf{(100 - 2P_A + P_S)}
 \end{align}
 \]</span></p>
-<p>Assume a marginal cost of 10 per unit for iPhones</p>
+<p>Assume a marginal cost of 12 per unit for iPhones</p>
 <hr>
 </section>
 <section id="samsungs-profit-function" class="level2">
 <h2 class="anchored" data-anchor-id="samsungs-profit-function">Samsung’s Profit Function</h2>
 <p>Samsung’s profit based on prices and number of Galaxys sold: <span class="math display">\[
 \begin{align}
-\pi_S &amp; = (P_S - 30)\mathbf{(100 - 2P_S + P_A)}
+\pi_S &amp; = (P_S - 20)\mathbf{(100 - 2P_S + P_A)}
 \end{align}
 \]</span></p>
-<p>Assume Samsung has a higher cost of 30 per Galaxy produced</p>
+<p>Assume Samsung has a higher cost of 20 per Galaxy produced</p>
 <hr>
-</section>
-<section id="step-1-expand-apples-profit-function" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-expand-apples-profit-function">Step 1: Expand Apple’s Profit Function</h2>
-<p>Let’s expand Apple’s profit function: <span class="math display">\[
-\begin{align}
-\pi_A &amp; = (P_A - 10)(100 - 2P_A + P_S) \\
-      &amp; = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)
-\end{align}
-\]</span></p>
-<hr>
-</section>
-<section id="step-2-simplify-the-expanded-profit-function" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-simplify-the-expanded-profit-function">Step 2: Simplify the Expanded Profit Function</h2>
-<p>Let’s expand Apple’s profit function: <span class="math display">\[
-\begin{align}
-\pi_A &amp; = (P_A - 10)(100 - 2P_A + P_S) \\
-      &amp; = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)
-\end{align}
-\]</span></p>
-<p>Now, multiply out the terms:</p>
-<p><span class="math display">\[
-100 P_A + P_A P_S - 2 P_A^2 - 1000 - 10 P_S + 20 P_A
-\]</span></p>
-<p><strong>What should we do next to find the best price?</strong></p>
-<hr>
-</section>
-<section id="step-3-deriving-apples-best-response-function" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-deriving-apples-best-response-function">Step 3: Deriving Apple’s Best-Response Function</h2>
-<p>To find the best price, we differentiate <span class="math inline">\(\Pi_A\)</span> with respect to <span class="math inline">\(P_A\)</span>.</p>
-<section id="differentiation" class="level3">
-<h3 class="anchored" data-anchor-id="differentiation">Differentiation:</h3>
-<p><span class="math display">\[
-\frac{d\pi_A}{dP_A} = 100 + P_S - 4P_A + 20 = P_S + 120 - 4P_A
-\]</span></p>
-<p>Set the derivative equal to zero for maximization: <span class="math display">\[
-P_S + 120 - 4P_A = 0
-\]</span> Solve for <span class="math inline">\(P_A\)</span>: <span class="math display">\[
-BR_A(P_S) = 30 + 0.25P_S
-\]</span></p>
-<hr>
-</section>
-</section>
-<section id="for-those-without-calculus-background" class="level2">
-<h2 class="anchored" data-anchor-id="for-those-without-calculus-background">For those without Calculus background</h2>
-<p>The profit function we wrote out in step 2 seems complicated, so lets simplify it:</p>
-<p><span class="math display">\[
-\pi_A = - 1000 - 10 P_S +  \mathbf{P_A} (120 + P_S) - 2 \mathbf{P_A}^2
-\]</span></p>
-<p>As Apple, we can only set our own price, <span class="math inline">\(P_A\)</span>, everything else we can just treat as a constant</p>
-<p>This fits a more general pattern:</p>
-<p><span class="math display">\[
-S = A + BA - CA^2
-\]</span></p>
-<hr>
-</section>
-<section id="for-those-without-calculus-background-1" class="level2">
-<h2 class="anchored" data-anchor-id="for-those-without-calculus-background-1">For those without Calculus background</h2>
-<p><span class="math display">\[
-S = A + BA - CA^2
-\]</span></p>
-<p>If we want to find the maximum of <span class="math inline">\(S\)</span> in this equation as a function of <span class="math inline">\(A\)</span>, as long as <span class="math inline">\(C&gt;0\)</span>, this will take the shape of a parabola with a single peak.</p>
-<div class="incremental">
-<ul class="incremental">
-<li>The maxmimum of this function will be reached at:</li>
-<li><span class="math inline">\(A^* = \frac{B}{2C}\)</span></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="for-those-without-calculus-background-2" class="level2">
-<h2 class="anchored" data-anchor-id="for-those-without-calculus-background-2">For those without Calculus background</h2>
-<p>So going back to Apple’s profit function,</p>
-<ul>
-<li>If <span class="math inline">\(B = 120 + P_S\)</span></li>
-<li>and <span class="math inline">\(C = 2\)</span></li>
-</ul>
-<p>then applying that the maximum choice will meet <span class="math inline">\(\frac{B}{2C}\)</span>,</p>
-<p>we get the same answer of <span class="math inline">\(P_A^* = 30 + 0.25P_S\)</span></p>
-</section>
-<section id="step-4-samsungs-best-response-function" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-samsungs-best-response-function">Step 4: Samsung’s Best-Response Function</h2>
-<p>Samsung’s best-response function is similar:</p>
-<p><span class="math display">\[
-\begin{align}
-\pi_A &amp; = (P_S - 30)(100 - 2P_S + P_A) \\
-      &amp; = 100P_S - 2P_S^2 + P_A P_S - 3000 + 60P_S - 30P_A
-\end{align}
-\]</span></p>
-<p><span class="math display">\[
-\begin{align*}
-\frac{d\pi_S}{dP_S} &amp; = 0 \\
-100 - 4P_S + P_A + 60 &amp; = 0 \\
-BR_S(P_A) &amp; = 40 + .25P_A
-\end{align*}
-\]</span></p>
-<section id="question-how-do-we-find-the-nash" class="level3">
-<h3 class="anchored" data-anchor-id="question-how-do-we-find-the-nash"><strong>Question:</strong> How do we find the Nash?</h3>
-<div class="incremental">
-<ul class="incremental">
-<li>We have one best response rule for each player
-<ul class="incremental">
-<li>as a function of the other player’s pricing strategy</li>
-</ul></li>
-<li>I.e., a system of <em>two equations</em> and <em>two unknowns</em></li>
-</ul>
-</div>
-<hr>
-</section>
 </section>
 <section id="what-is-a-ne-in-this-situation" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-a-ne-in-this-situation">What is a NE in this situation?</h2>
@@ -713,42 +605,212 @@ BR_S(P_A) &amp; = 40 + .25P_A
 </ul>
 </div>
 </section>
-<section id="step-5-solve-for-nash-equilibrium" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-solve-for-nash-equilibrium">Step 5: Solve for Nash Equilibrium</h2>
-<p>We solve the system of equations for <span class="math inline">\(P_A\)</span> and <span class="math inline">\(P_S\)</span>: <span class="math display">\[
-P_A = 30 + 0.25P_S
-\]</span> <span class="math display">\[
-P_S = 40 + 0.25P_A
+<section id="step-1-expand-apples-profit-function" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-expand-apples-profit-function">Step 1: Expand Apple’s Profit Function</h2>
+<p>Let’s expand Apple’s profit function: <span class="math display">\[
+\begin{align}
+\pi_A &amp; = (P_A - 12)(100 - 2P_A + P_S) \\
+      &amp; = P_A(100 + P_S - 2P_A) - 12(100 + P_S - 2P_A)
+\end{align}
 \]</span></p>
 <hr>
 </section>
-<section id="step-5-solve-for-nash-equilibrium-1" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-solve-for-nash-equilibrium-1">Step 5: Solve for Nash Equilibrium</h2>
-<p>Substitute one equation into the other: <span class="math display">\[
-P_A = 30 + 0.25(40 + 0.25P_S)
-\]</span> Simplify: <span class="math display">\[
-P_A = 30 + 10 + 0.0625P_A
-\]</span> Solve for <span class="math inline">\(P_S\)</span>: <span class="math display">\[
+<section id="step-2-simplify-the-expanded-profit-function" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-simplify-the-expanded-profit-function">Step 2: Simplify the Expanded Profit Function</h2>
+<p>Let’s expand Apple’s profit function: <span class="math display">\[
+\begin{align}
+\pi_A &amp; = (P_A - 10)(100 - 2P_A + P_S) \\
+      &amp; = P_A(100 + P_S - 2P_A) - 12(100 + P_S - 2P_A)
+\end{align}
+\]</span></p>
+<p>Now, multiply out the terms:</p>
+<p><span class="math display">\[
+100 P_A + P_A P_S - 2 P_A^2 - 1200 - 12 P_S + 24 P_A
+\]</span></p>
+<p><strong>What should we do next to find the best price?</strong></p>
+<hr>
+</section>
+<section id="step-3-deriving-apples-best-response-function" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-deriving-apples-best-response-function">Step 3: Deriving Apple’s Best-Response Function</h2>
+<p>To find the best price, we differentiate <span class="math inline">\(\Pi_A\)</span> with respect to <span class="math inline">\(P_A\)</span>.</p>
+<section id="differentiation" class="level3">
+<h3 class="anchored" data-anchor-id="differentiation">Differentiation:</h3>
+<p><span class="math display">\[
+\frac{d\pi_A}{dP_A} = 100 + P_S - 4P_A + 24 = P_S + 124 - 4P_A
+\]</span></p>
+<p>Set the derivative equal to zero for maximization: <span class="math display">\[
+P_S + 124 - 4P_A = 0
+\]</span> Solve for <span class="math inline">\(P_A\)</span>: <span class="math display">\[
+BR_A(P_S) = 31 + \frac{1}{4}P_S
+\]</span></p>
+<hr>
+</section>
+</section>
+<section id="for-those-without-calculus-background" class="level2">
+<h2 class="anchored" data-anchor-id="for-those-without-calculus-background">For those without Calculus background</h2>
+<p>Simplify profit function from step 2:</p>
+<p><span class="math display">\[
+\pi_A = {\color{purple}- 1200 - 12 P_S} +  \mathbf{P_A} {\color{blue}(124 + P_S)} - {\color{green}2} \mathbf{P_A}^2
+\]</span></p>
+<p>Apple’s profit <span class="math inline">\(\pi_A\)</span>, depends on their choice variable, <span class="math inline">\(P_A\)</span> * everything else we can just treat as <em>constant</em></p>
+<p>This fits a more general pattern:</p>
+<p><span class="math display">\[
+y = {\color{purple}A} + {\color{blue}B}x - {\color{green}C}x^2
+\]</span></p>
+<hr>
+</section>
+<section id="for-those-without-calculus-background-1" class="level2">
+<h2 class="anchored" data-anchor-id="for-those-without-calculus-background-1">For those without Calculus background</h2>
+<p><span class="math display">\[
+f(x) = A + Bx - Cx^2
+\]</span></p>
+<p>We want to find the maximum of <span class="math inline">\(f(x)\)</span></p>
+<ul>
+<li>as long as <span class="math inline">\(C&gt;0\)</span>, this will take the shape of a parabola with a single peak.</li>
+</ul>
+<div class="incremental">
+<ul class="incremental">
+<li>The maxmimum of this function will be reached at:</li>
+<li><span class="math inline">\(x^* = \frac{B}{2C}\)</span></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="for-those-without-calculus-background-2" class="level2">
+<h2 class="anchored" data-anchor-id="for-those-without-calculus-background-2">For those without Calculus background</h2>
+<p><span class="math display">\[
+\pi_A = {\color{purple}- 1200 - 12 P_S} +  \mathbf{P_A} {\color{blue}(124 + P_S)} - {\color{green}2} \mathbf{P_A}^2
+\]</span></p>
+<p>So going back to Apple’s profit function,</p>
+<ul>
+<li>If <span class="math inline">\(\color{blue}B = 124 + P_S\)</span></li>
+<li>and <span class="math inline">\(\color{green}C = 2\)</span></li>
+</ul>
+<p>then applying that the maximum choice will meet <span class="math inline">\(\frac{B}{2C} = \frac{\color{blue}124+P_S}{2\times {\color{green} 2}}\)</span>,</p>
+<p>we get the same answer of <span class="math inline">\(P_A^* = \frac{124 + P_S}{4}\)</span></p>
+</section>
+<section id="step-4-samsungs-best-response-function" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-samsungs-best-response-function">Step 4: Samsung’s Best-Response Function</h2>
+<p>Samsung’s best-response function is similar:</p>
+<p><span class="math display">\[
+\begin{align}
+\pi_A &amp; = (P_S - 20)(100 - 2P_S + P_A) \\
+      &amp; = 100P_S - 2P_S^2 + P_A P_S - 2000 + 40P_S - 20P_A
+\end{align}
+\]</span></p>
+<p><span class="math display">\[
 \begin{align*}
-  P_A(1-0.0625) &amp; = 40 \\
-  P_S &amp; = 42.67
+\frac{d\pi_S}{dP_S} &amp; = 0 \\
+100 - 4P_S + P_A + 40 &amp; = 0 \\
+BR_S(P_A) &amp; = 35 + .25P_A
 \end{align*}
 \]</span></p>
-<p>Then, plug <span class="math inline">\(P_S = 20\)</span> back into the first equation: <span class="math display">\[
-P_S = 40 + 0.25(42.67) = 50.67
+<hr>
+</section>
+<section id="question-how-do-we-find-the-nash" class="level2">
+<h2 class="anchored" data-anchor-id="question-how-do-we-find-the-nash"><strong>Question:</strong> How do we find the Nash?</h2>
+<p><span class="math display">\[
+P_A = 31 + 0.25P_S
+\]</span> <span class="math display">\[
+P_S = 45 + 0.25P_A
+\]</span></p>
+<div class="incremental">
+<ul class="incremental">
+<li>We have one best response rule for each player
+<ul class="incremental">
+<li>as a function of the other player’s pricing strategy</li>
+</ul></li>
+<li>I.e., a system of <em>two equations</em> and <em>two unknowns</em></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="step-5-solve-for-nash-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-solve-for-nash-equilibrium">Step 5: Solve for Nash Equilibrium</h2>
+<p>We solve the system of equations for <span class="math inline">\(P_A\)</span> and <span class="math inline">\(P_S\)</span>: <span class="math display">\[
+P_A = 31 + 0.25P_S
+\]</span> <span class="math display">\[
+P_S = 35 + 0.25P_A
+\]</span></p>
+<p>Remember the following from definition of Nash:</p>
+<ul>
+<li><p>both players’ strategies are their best responses</p></li>
+<li><p>equilibrium is intersection of best responses</p></li>
+</ul>
+<hr>
+</section>
+<section id="step-5.1-transform-equations" class="level2">
+<h2 class="anchored" data-anchor-id="step-5.1-transform-equations">Step 5.1: Transform equations</h2>
+<p>Either solve for Apple or Samsung’s price first.</p>
+<ul>
+<li><p>I’ll start by solving for Samsung’s:</p>
+<ul>
+<li>From Apple’s Best response: <span class="math display">\[
+\color{purple}
+P_A = \frac{124 + P_S}{4}
+\]</span></li>
+</ul></li>
+<li><p>We can re-arrange Samsung’s best response for <span class="math inline">\(P_A\)</span> in terms of <span class="math inline">\(P_S\)</span>:</p></li>
+</ul>
+<p><span class="math display">\[
+\color{blue}
+\begin{align}
+P_S = \frac{140+P_A}{4} \\
+\Rightarrow 4P_S - 140 = P_A
+\end{align}
+\]</span></p>
+<p>Solve for <span class="math inline">\(P_S\)</span>:</p>
+<hr>
+</section>
+<section id="step-5.2-solve-for-one-variable" class="level2">
+<h2 class="anchored" data-anchor-id="step-5.2-solve-for-one-variable">Step 5.2: Solve for one variable</h2>
+<p>We’re going to use the fact that <span class="math inline">\(P_A=BR_A\)</span> in equilibrium: <span class="math display">\[
+\begin{align}
+  {\color{blue}4P_S - 140} &amp; = {\color{purple} \frac{124 +P_S}{4}} \\
+  \Rightarrow 16P_S - 560 &amp; = 124 + P_S \\
+  \Rightarrow P_S^* &amp; = \frac{684}{15} = 45.6 \\
+\end{align}
+\]</span></p>
+<p>When Samsung sets <span class="math inline">\(P_S=45.6\)</span>, Apple’s best response will fulfill Samsung’s belief.</p>
+<hr>
+</section>
+<section id="step-5.3-solve-for-the-other-variable" class="level2">
+<h2 class="anchored" data-anchor-id="step-5.3-solve-for-the-other-variable">Step 5.3: Solve for the other variable</h2>
+<p>We could go throught steps 5.1-5.2 to solve for Apple’s eqm strategy.</p>
+<ul>
+<li>Or we could just use their best-response to Samsung’s eqm strategy!</li>
+</ul>
+<p>We already solved for <span class="math inline">\(P_S^*=45.6\)</span>, so plug it into <span class="math inline">\(BR_A(P_S^*)=P_A^*\)</span> <span class="math display">\[
+\begin{align}
+  P_A^* &amp; = 4{\color{green}P_S^*} -140 \\
+      &amp; = 4\times{\color{green} \frac{684}{15}} - 140 \\
+      &amp; = 182.4 - 140 = 42.4 \\
+\end{align}
 \]</span></p>
 <hr>
 </section>
 <section id="step-6-conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="step-6-conclusion">Step 6: Conclusion</h2>
-<p>At equilibrium:</p>
+<p>In our Bertrand equilibrium:</p>
 <ul>
-<li><p><span class="math inline">\(P_A = 42.67\)</span>, <span class="math inline">\(P_S = 50.67\)</span></p></li>
-<li><p>Do either firm have an incentive to deviate?</p>
+<li><p><span class="math inline">\(P_A = 42.4\)</span>, <span class="math inline">\(P_S = 45.6\)</span></p></li>
+<li><p><span class="math inline">\(\Pi_A(P_A^*, P_S^*) = \$1,848.32\)</span></p></li>
+<li><p><span class="math inline">\(\Pi_S(P_A^*, P_S^*) = \$1,720.32\)</span></p>
 <ul>
-<li>How would we check?</li>
+<li>Apple’s lower MC results in lower eqm price, higher profit than Samsung</li>
 </ul></li>
+<li><p>Unlike Bertrand model with perfect substitutes,</p>
+<ul>
+<li>here firms earn positive profit because of product <em>differentiation</em></li>
+</ul></li>
+<li><p>Do either firm have an incentive to deviate?</p></li>
 </ul>
+<hr>
+</section>
+<section id="checking-apples-best-response" class="level2">
+<h2 class="anchored" data-anchor-id="checking-apples-best-response">Checking Apple’s Best response</h2>
+<p>Apple’s profit when Samsung’s price is set at <span class="math inline">\(P_S^*=45.6\)</span>:</p>
+<p><img src="figures/apple-profit.png" class="img-fluid"></p>
 <hr>
 </section>
 <section id="continous-strategy-nash-graphically" class="level2">
@@ -765,7 +827,6 @@ P_S = 40 + 0.25(42.67) = 50.67
 <li>Step 4: Repeat for Samsung.</li>
 <li>Step 5: Solve for Nash equilibrium.</li>
 </ul>
-<hr>
 <!-- ## Graphically:
 
 ![](figures/Dixit_fig5.1.png) -->

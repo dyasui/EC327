@@ -1755,28 +1755,28 @@
     "href": "Slides/04ContinuousStrats/0404-generalnash.html",
     "title": "General Method for Finding Nash Equilibria",
     "section": "",
-    "text": "The method for finding the Nash equilibrium in a game with continuous strategies is general and applies to many types of games.\n\n\n\nLabel each player’s strategy (e.g., \\(x\\), \\(y\\), etc.).\nDefine each player’s payoff as a function of all players’ strategies.\nMaximize each player’s payoff by choosing their own strategy, holding the others constant.\n\nQuestion: How does this method apply to real-world competition scenarios?\n\n\n\n\n\nSuppose we have players 1, 2, and 3, with strategies labeled \\(x\\), \\(y\\), and \\(z\\), and their payoffs \\(X\\), \\(Y\\), and \\(Z\\).\nFor each player: \\[\nX = F(x, y, z), \\quad Y = G(x, y, z), \\quad Z = H(x, y, z)\n\\]\n\n\n\n\\(x\\) and \\(y\\) could represent the prices set by two firms, and the functions \\(F\\) and \\(G\\) represent their profits.\n\nQuestion: Why is labeling strategies and payoffs essential for structuring a game?\n\n\n\n\n\nEach player chooses their strategy to maximize their own payoff, considering the strategies of the others as fixed.\nTo do this, we take the partial derivative of each player’s payoff with respect to their own strategy and set it to zero.\n\n\nFor firm 1: \\[\n\\frac{\\partial F(x, y, z)}{\\partial x} = 0\n\\]\nQuestion: What does this partial derivative represent in terms of strategy adjustment?\n\n\n\n\n\nSolve each equation to find the best-response functions. These tell each player the best strategy given what the other players are doing.\nFor firm 1, the best-response function could look like: \\[\nx = f(y, z)\n\\]\nThis gives the optimal \\(x\\) for any given values of \\(y\\) and \\(z\\).\n\n\n\n\nThe Nash equilibrium occurs where all players’ best-response functions intersect. Solve the system of equations: \\[\nx = f(y, z), \\quad y = g(x, z), \\quad z = h(x, y)\n\\]\nAt this point, no player has an incentive to change their strategy.\n\n\nIn price competition, the Nash equilibrium is where both firms set prices that maximize their respective profits.\nInteractive Question: Why is it important that no player has an incentive to deviate at Nash equilibrium?\n\n\n\n\n\nSome games may have multiple Nash equilibria, while others may have none in pure strategies.\n\n\n\nMultiple equilibria can occur in coordination games.\nGames without equilibria in pure strategies might require us to consider mixed strategies (covered in a later chapter).\n\n\n\n\n\n\n\nLabel each player’s strategies and payoffs.\nMaximize each player’s payoff with respect to their own strategy.\nSolve the system of best-response functions.\nCheck for multiple equilibria and the possibility of mixed strategies."
+    "text": "This methods for finding Nash equilibrium applies to any game.\n\n\n\nLabel each player’s strategy (e.g., \\(x\\), \\(y\\), etc.).\nDefine each player’s payoff as a function of all players’ strategies.\nMaximize each player’s payoff by choosing their own strategy, holding the others constant.\n\n\n\n\n\n\nSuppose we have players 1, 2, and 3, with strategies labeled \\(x\\), \\(y\\), and \\(z\\), and their payoffs \\(X\\), \\(Y\\), and \\(Z\\).\nFor each player: \\[\nX = F(x, y, z), \\quad Y = G(x, y, z), \\quad Z = H(x, y, z)\n\\]\n\n\n\n\\(x\\) and \\(y\\) could represent the prices set by two firms, and the functions \\(F\\) and \\(G\\) represent their profits.\n\n\n\n\n\n\nEach player chooses their strategy to maximize their own payoff, considering the strategies of the others as fixed.\nThis means taking the partial derivative payoff with respect to their own strategy and set it to zero.\n\n\nFor firm 1: \\[\n\\frac{\\partial F(x, y, z)}{\\partial x} = 0\n\\]\nQuestion: What does this partial derivative represent in terms of strategy adjustment?\n\n\n\n\n\nSolve each equation to find the best-response functions. These tell each player the best strategy given what the other players are doing.\nFor firm 1, the best-response function could look like: \\[\nx = f(y, z)\n\\]\nThis gives the optimal \\(x\\) for any given values of \\(y\\) and \\(z\\).\n\n\n\n\nThe Nash equilibrium occurs where all players’ best-response functions intersect. Solve the system of equations: \\[\nx = f(y, z), \\quad y = g(x, z), \\quad z = h(x, y)\n\\]\nAt this point, no player has an incentive to change their strategy.\n\n\nIn price competition, both firms set prices that maximize their respective profits.\n\n\n\n\n\nSome games have multiple Nash equilibria, others have none in pure strategies.\n\n\n\nMultiple equilibria can occur in coordination games.\nGames without equilibria in pure strategies might require us to consider mixed strategies (covered in a later chapter).\n\n\n\n\n\n\n\nLabel each player’s strategies and payoffs.\nMaximize each player’s payoff with respect to their own strategy.\nSolve the system of best-response functions.\nCheck for multiple equilibria and the possibility of mixed strategies."
   },
   {
-    "objectID": "Slides/04ContinuousStrats/0404-generalnash.html#introduction",
-    "href": "Slides/04ContinuousStrats/0404-generalnash.html#introduction",
+    "objectID": "Slides/04ContinuousStrats/0404-generalnash.html#outline",
+    "href": "Slides/04ContinuousStrats/0404-generalnash.html#outline",
     "title": "General Method for Finding Nash Equilibria",
     "section": "",
-    "text": "The method for finding the Nash equilibrium in a game with continuous strategies is general and applies to many types of games.\n\n\n\nLabel each player’s strategy (e.g., \\(x\\), \\(y\\), etc.).\nDefine each player’s payoff as a function of all players’ strategies.\nMaximize each player’s payoff by choosing their own strategy, holding the others constant.\n\nQuestion: How does this method apply to real-world competition scenarios?"
+    "text": "This methods for finding Nash equilibrium applies to any game.\n\n\n\nLabel each player’s strategy (e.g., \\(x\\), \\(y\\), etc.).\nDefine each player’s payoff as a function of all players’ strategies.\nMaximize each player’s payoff by choosing their own strategy, holding the others constant."
   },
   {
     "objectID": "Slides/04ContinuousStrats/0404-generalnash.html#step-1-labeling-strategies-and-payoffs",
     "href": "Slides/04ContinuousStrats/0404-generalnash.html#step-1-labeling-strategies-and-payoffs",
     "title": "General Method for Finding Nash Equilibria",
     "section": "",
-    "text": "Suppose we have players 1, 2, and 3, with strategies labeled \\(x\\), \\(y\\), and \\(z\\), and their payoffs \\(X\\), \\(Y\\), and \\(Z\\).\nFor each player: \\[\nX = F(x, y, z), \\quad Y = G(x, y, z), \\quad Z = H(x, y, z)\n\\]\n\n\n\n\\(x\\) and \\(y\\) could represent the prices set by two firms, and the functions \\(F\\) and \\(G\\) represent their profits.\n\nQuestion: Why is labeling strategies and payoffs essential for structuring a game?"
+    "text": "Suppose we have players 1, 2, and 3, with strategies labeled \\(x\\), \\(y\\), and \\(z\\), and their payoffs \\(X\\), \\(Y\\), and \\(Z\\).\nFor each player: \\[\nX = F(x, y, z), \\quad Y = G(x, y, z), \\quad Z = H(x, y, z)\n\\]\n\n\n\n\\(x\\) and \\(y\\) could represent the prices set by two firms, and the functions \\(F\\) and \\(G\\) represent their profits."
   },
   {
     "objectID": "Slides/04ContinuousStrats/0404-generalnash.html#step-2-maximizing-payoff-functions",
     "href": "Slides/04ContinuousStrats/0404-generalnash.html#step-2-maximizing-payoff-functions",
     "title": "General Method for Finding Nash Equilibria",
     "section": "",
-    "text": "Each player chooses their strategy to maximize their own payoff, considering the strategies of the others as fixed.\nTo do this, we take the partial derivative of each player’s payoff with respect to their own strategy and set it to zero.\n\n\nFor firm 1: \\[\n\\frac{\\partial F(x, y, z)}{\\partial x} = 0\n\\]\nQuestion: What does this partial derivative represent in terms of strategy adjustment?"
+    "text": "Each player chooses their strategy to maximize their own payoff, considering the strategies of the others as fixed.\nThis means taking the partial derivative payoff with respect to their own strategy and set it to zero.\n\n\nFor firm 1: \\[\n\\frac{\\partial F(x, y, z)}{\\partial x} = 0\n\\]\nQuestion: What does this partial derivative represent in terms of strategy adjustment?"
   },
   {
     "objectID": "Slides/04ContinuousStrats/0404-generalnash.html#step-3-solving-for-best-response-functions",
@@ -1790,14 +1790,14 @@
     "href": "Slides/04ContinuousStrats/0404-generalnash.html#step-4-nash-equilibrium",
     "title": "General Method for Finding Nash Equilibria",
     "section": "",
-    "text": "The Nash equilibrium occurs where all players’ best-response functions intersect. Solve the system of equations: \\[\nx = f(y, z), \\quad y = g(x, z), \\quad z = h(x, y)\n\\]\nAt this point, no player has an incentive to change their strategy.\n\n\nIn price competition, the Nash equilibrium is where both firms set prices that maximize their respective profits.\nInteractive Question: Why is it important that no player has an incentive to deviate at Nash equilibrium?"
+    "text": "The Nash equilibrium occurs where all players’ best-response functions intersect. Solve the system of equations: \\[\nx = f(y, z), \\quad y = g(x, z), \\quad z = h(x, y)\n\\]\nAt this point, no player has an incentive to change their strategy.\n\n\nIn price competition, both firms set prices that maximize their respective profits."
   },
   {
     "objectID": "Slides/04ContinuousStrats/0404-generalnash.html#step-5-handling-multiple-solutions",
     "href": "Slides/04ContinuousStrats/0404-generalnash.html#step-5-handling-multiple-solutions",
     "title": "General Method for Finding Nash Equilibria",
     "section": "",
-    "text": "Some games may have multiple Nash equilibria, while others may have none in pure strategies.\n\n\n\nMultiple equilibria can occur in coordination games.\nGames without equilibria in pure strategies might require us to consider mixed strategies (covered in a later chapter)."
+    "text": "Some games have multiple Nash equilibria, others have none in pure strategies.\n\n\n\nMultiple equilibria can occur in coordination games.\nGames without equilibria in pure strategies might require us to consider mixed strategies (covered in a later chapter)."
   },
   {
     "objectID": "Slides/04ContinuousStrats/0404-generalnash.html#recap-general-steps-for-nash-equilibrium",
@@ -2140,63 +2140,14 @@
     "href": "Slides/04ContinuousStrats/04-main.html#apples-profit-function",
     "title": "Introduction to Game Theory",
     "section": "Apple’s Profit Function",
-    "text": "Apple’s Profit Function\nTim Cook’s profit based on his price and number of iPhone customers: \\[\n\\begin{align}\n\\pi_A & = (\\text{price} - \\text{cost})(\\textbf{quantity sold}) \\\\\n      & = (P_A - 10)\\mathbf{(100 - 2P_A + P_S)}\n\\end{align}\n\\]\nAssume a marginal cost of 10 per unit for iPhones"
+    "text": "Apple’s Profit Function\nTim Cook’s profit based on his price and number of iPhone customers: \\[\n\\begin{align}\n\\pi_A & = (\\text{price} - \\text{cost})(\\textbf{quantity sold}) \\\\\n      & = (P_A - 12)\\mathbf{(100 - 2P_A + P_S)}\n\\end{align}\n\\]\nAssume a marginal cost of 12 per unit for iPhones"
   },
   {
     "objectID": "Slides/04ContinuousStrats/04-main.html#samsungs-profit-function",
     "href": "Slides/04ContinuousStrats/04-main.html#samsungs-profit-function",
     "title": "Introduction to Game Theory",
     "section": "Samsung’s Profit Function",
-    "text": "Samsung’s Profit Function\nSamsung’s profit based on prices and number of Galaxys sold: \\[\n\\begin{align}\n\\pi_S & = (P_S - 30)\\mathbf{(100 - 2P_S + P_A)}\n\\end{align}\n\\]\nAssume Samsung has a higher cost of 30 per Galaxy produced"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#step-1-expand-apples-profit-function",
-    "href": "Slides/04ContinuousStrats/04-main.html#step-1-expand-apples-profit-function",
-    "title": "Introduction to Game Theory",
-    "section": "Step 1: Expand Apple’s Profit Function",
-    "text": "Step 1: Expand Apple’s Profit Function\nLet’s expand Apple’s profit function: \\[\n\\begin{align}\n\\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\\\\n      & = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)\n\\end{align}\n\\]"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#step-2-simplify-the-expanded-profit-function",
-    "href": "Slides/04ContinuousStrats/04-main.html#step-2-simplify-the-expanded-profit-function",
-    "title": "Introduction to Game Theory",
-    "section": "Step 2: Simplify the Expanded Profit Function",
-    "text": "Step 2: Simplify the Expanded Profit Function\nLet’s expand Apple’s profit function: \\[\n\\begin{align}\n\\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\\\\n      & = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)\n\\end{align}\n\\]\nNow, multiply out the terms:\n\\[\n100 P_A + P_A P_S - 2 P_A^2 - 1000 - 10 P_S + 20 P_A\n\\]\nWhat should we do next to find the best price?"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#step-3-deriving-apples-best-response-function",
-    "href": "Slides/04ContinuousStrats/04-main.html#step-3-deriving-apples-best-response-function",
-    "title": "Introduction to Game Theory",
-    "section": "Step 3: Deriving Apple’s Best-Response Function",
-    "text": "Step 3: Deriving Apple’s Best-Response Function\nTo find the best price, we differentiate \\(\\Pi_A\\) with respect to \\(P_A\\).\nDifferentiation:\n\\[\n\\frac{d\\pi_A}{dP_A} = 100 + P_S - 4P_A + 20 = P_S + 120 - 4P_A\n\\]\nSet the derivative equal to zero for maximization: \\[\nP_S + 120 - 4P_A = 0\n\\] Solve for \\(P_A\\): \\[\nBR_A(P_S) = 30 + 0.25P_S\n\\]"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#for-those-without-calculus-background",
-    "href": "Slides/04ContinuousStrats/04-main.html#for-those-without-calculus-background",
-    "title": "Introduction to Game Theory",
-    "section": "For those without Calculus background",
-    "text": "For those without Calculus background\nThe profit function we wrote out in step 2 seems complicated, so lets simplify it:\n\\[\n\\pi_A = - 1000 - 10 P_S +  \\mathbf{P_A} (120 + P_S) - 2 \\mathbf{P_A}^2\n\\]\nAs Apple, we can only set our own price, \\(P_A\\), everything else we can just treat as a constant\nThis fits a more general pattern:\n\\[\nS = A + BA - CA^2\n\\]"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#for-those-without-calculus-background-1",
-    "href": "Slides/04ContinuousStrats/04-main.html#for-those-without-calculus-background-1",
-    "title": "Introduction to Game Theory",
-    "section": "For those without Calculus background",
-    "text": "For those without Calculus background\n\\[\nS = A + BA - CA^2\n\\]\nIf we want to find the maximum of \\(S\\) in this equation as a function of \\(A\\), as long as \\(C&gt;0\\), this will take the shape of a parabola with a single peak.\n\nThe maxmimum of this function will be reached at:\n\\(A^* = \\frac{B}{2C}\\)"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#for-those-without-calculus-background-2",
-    "href": "Slides/04ContinuousStrats/04-main.html#for-those-without-calculus-background-2",
-    "title": "Introduction to Game Theory",
-    "section": "For those without Calculus background",
-    "text": "For those without Calculus background\nSo going back to Apple’s profit function,\n\nIf \\(B = 120 + P_S\\)\nand \\(C = 2\\)\n\nthen applying that the maximum choice will meet \\(\\frac{B}{2C}\\),\nwe get the same answer of \\(P_A^* = 30 + 0.25P_S\\)"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#step-4-samsungs-best-response-function",
-    "href": "Slides/04ContinuousStrats/04-main.html#step-4-samsungs-best-response-function",
-    "title": "Introduction to Game Theory",
-    "section": "Step 4: Samsung’s Best-Response Function",
-    "text": "Step 4: Samsung’s Best-Response Function\nSamsung’s best-response function is similar:\n\\[\n\\begin{align}\n\\pi_A & = (P_S - 30)(100 - 2P_S + P_A) \\\\\n      & = 100P_S - 2P_S^2 + P_A P_S - 3000 + 60P_S - 30P_A\n\\end{align}\n\\]\n\\[\n\\begin{align*}\n\\frac{d\\pi_S}{dP_S} & = 0 \\\\\n100 - 4P_S + P_A + 60 & = 0 \\\\\nBR_S(P_A) & = 40 + .25P_A\n\\end{align*}\n\\]\nQuestion: How do we find the Nash?\n\nWe have one best response rule for each player\n\nas a function of the other player’s pricing strategy\n\nI.e., a system of two equations and two unknowns"
+    "text": "Samsung’s Profit Function\nSamsung’s profit based on prices and number of Galaxys sold: \\[\n\\begin{align}\n\\pi_S & = (P_S - 20)\\mathbf{(100 - 2P_S + P_A)}\n\\end{align}\n\\]\nAssume Samsung has a higher cost of 20 per Galaxy produced"
   },
   {
     "objectID": "Slides/04ContinuousStrats/04-main.html#what-is-a-ne-in-this-situation",
@@ -2206,25 +2157,102 @@
     "text": "What is a NE in this situation?\nA Nash is a stable configuration of strategies\n\nin which each player is best responding to the other\n\n\nWhen each player is setting profit-maximizing price\n\nconditional on the other player’s price,\nthere will be no incentive to change price\n\nPlug in one player’s best response rule into the other player’s best response rule\n\nto solve for the equilibrium price"
   },
   {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#step-1-expand-apples-profit-function",
+    "href": "Slides/04ContinuousStrats/04-main.html#step-1-expand-apples-profit-function",
+    "title": "Introduction to Game Theory",
+    "section": "Step 1: Expand Apple’s Profit Function",
+    "text": "Step 1: Expand Apple’s Profit Function\nLet’s expand Apple’s profit function: \\[\n\\begin{align}\n\\pi_A & = (P_A - 12)(100 - 2P_A + P_S) \\\\\n      & = P_A(100 + P_S - 2P_A) - 12(100 + P_S - 2P_A)\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#step-2-simplify-the-expanded-profit-function",
+    "href": "Slides/04ContinuousStrats/04-main.html#step-2-simplify-the-expanded-profit-function",
+    "title": "Introduction to Game Theory",
+    "section": "Step 2: Simplify the Expanded Profit Function",
+    "text": "Step 2: Simplify the Expanded Profit Function\nLet’s expand Apple’s profit function: \\[\n\\begin{align}\n\\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\\\\n      & = P_A(100 + P_S - 2P_A) - 12(100 + P_S - 2P_A)\n\\end{align}\n\\]\nNow, multiply out the terms:\n\\[\n100 P_A + P_A P_S - 2 P_A^2 - 1200 - 12 P_S + 24 P_A\n\\]\nWhat should we do next to find the best price?"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#step-3-deriving-apples-best-response-function",
+    "href": "Slides/04ContinuousStrats/04-main.html#step-3-deriving-apples-best-response-function",
+    "title": "Introduction to Game Theory",
+    "section": "Step 3: Deriving Apple’s Best-Response Function",
+    "text": "Step 3: Deriving Apple’s Best-Response Function\nTo find the best price, we differentiate \\(\\Pi_A\\) with respect to \\(P_A\\).\nDifferentiation:\n\\[\n\\frac{d\\pi_A}{dP_A} = 100 + P_S - 4P_A + 24 = P_S + 124 - 4P_A\n\\]\nSet the derivative equal to zero for maximization: \\[\nP_S + 124 - 4P_A = 0\n\\] Solve for \\(P_A\\): \\[\nBR_A(P_S) = 31 + \\frac{1}{4}P_S\n\\]"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#for-those-without-calculus-background",
+    "href": "Slides/04ContinuousStrats/04-main.html#for-those-without-calculus-background",
+    "title": "Introduction to Game Theory",
+    "section": "For those without Calculus background",
+    "text": "For those without Calculus background\nSimplify profit function from step 2:\n\\[\n\\pi_A = {\\color{purple}- 1200 - 12 P_S} +  \\mathbf{P_A} {\\color{blue}(124 + P_S)} - {\\color{green}2} \\mathbf{P_A}^2\n\\]\nApple’s profit \\(\\pi_A\\), depends on their choice variable, \\(P_A\\) * everything else we can just treat as constant\nThis fits a more general pattern:\n\\[\ny = {\\color{purple}A} + {\\color{blue}B}x - {\\color{green}C}x^2\n\\]"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#for-those-without-calculus-background-1",
+    "href": "Slides/04ContinuousStrats/04-main.html#for-those-without-calculus-background-1",
+    "title": "Introduction to Game Theory",
+    "section": "For those without Calculus background",
+    "text": "For those without Calculus background\n\\[\nf(x) = A + Bx - Cx^2\n\\]\nWe want to find the maximum of \\(f(x)\\)\n\nas long as \\(C&gt;0\\), this will take the shape of a parabola with a single peak.\n\n\nThe maxmimum of this function will be reached at:\n\\(x^* = \\frac{B}{2C}\\)"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#for-those-without-calculus-background-2",
+    "href": "Slides/04ContinuousStrats/04-main.html#for-those-without-calculus-background-2",
+    "title": "Introduction to Game Theory",
+    "section": "For those without Calculus background",
+    "text": "For those without Calculus background\n\\[\n\\pi_A = {\\color{purple}- 1200 - 12 P_S} +  \\mathbf{P_A} {\\color{blue}(124 + P_S)} - {\\color{green}2} \\mathbf{P_A}^2\n\\]\nSo going back to Apple’s profit function,\n\nIf \\(\\color{blue}B = 124 + P_S\\)\nand \\(\\color{green}C = 2\\)\n\nthen applying that the maximum choice will meet \\(\\frac{B}{2C} = \\frac{\\color{blue}124+P_S}{2\\times {\\color{green} 2}}\\),\nwe get the same answer of \\(P_A^* = \\frac{124 + P_S}{4}\\)"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#step-4-samsungs-best-response-function",
+    "href": "Slides/04ContinuousStrats/04-main.html#step-4-samsungs-best-response-function",
+    "title": "Introduction to Game Theory",
+    "section": "Step 4: Samsung’s Best-Response Function",
+    "text": "Step 4: Samsung’s Best-Response Function\nSamsung’s best-response function is similar:\n\\[\n\\begin{align}\n\\pi_A & = (P_S - 20)(100 - 2P_S + P_A) \\\\\n      & = 100P_S - 2P_S^2 + P_A P_S - 2000 + 40P_S - 20P_A\n\\end{align}\n\\]\n\\[\n\\begin{align*}\n\\frac{d\\pi_S}{dP_S} & = 0 \\\\\n100 - 4P_S + P_A + 40 & = 0 \\\\\nBR_S(P_A) & = 35 + .25P_A\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#question-how-do-we-find-the-nash",
+    "href": "Slides/04ContinuousStrats/04-main.html#question-how-do-we-find-the-nash",
+    "title": "Introduction to Game Theory",
+    "section": "Question: How do we find the Nash?",
+    "text": "Question: How do we find the Nash?\n\\[\nP_A = 31 + 0.25P_S\n\\] \\[\nP_S = 45 + 0.25P_A\n\\]\n\nWe have one best response rule for each player\n\nas a function of the other player’s pricing strategy\n\nI.e., a system of two equations and two unknowns"
+  },
+  {
     "objectID": "Slides/04ContinuousStrats/04-main.html#step-5-solve-for-nash-equilibrium",
     "href": "Slides/04ContinuousStrats/04-main.html#step-5-solve-for-nash-equilibrium",
     "title": "Introduction to Game Theory",
     "section": "Step 5: Solve for Nash Equilibrium",
-    "text": "Step 5: Solve for Nash Equilibrium\nWe solve the system of equations for \\(P_A\\) and \\(P_S\\): \\[\nP_A = 30 + 0.25P_S\n\\] \\[\nP_S = 40 + 0.25P_A\n\\]"
+    "text": "Step 5: Solve for Nash Equilibrium\nWe solve the system of equations for \\(P_A\\) and \\(P_S\\): \\[\nP_A = 31 + 0.25P_S\n\\] \\[\nP_S = 35 + 0.25P_A\n\\]\nRemember the following from definition of Nash:\n\nboth players’ strategies are their best responses\nequilibrium is intersection of best responses"
   },
   {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#step-5-solve-for-nash-equilibrium-1",
-    "href": "Slides/04ContinuousStrats/04-main.html#step-5-solve-for-nash-equilibrium-1",
+    "objectID": "Slides/04ContinuousStrats/04-main.html#step-5.1-transform-equations",
+    "href": "Slides/04ContinuousStrats/04-main.html#step-5.1-transform-equations",
     "title": "Introduction to Game Theory",
-    "section": "Step 5: Solve for Nash Equilibrium",
-    "text": "Step 5: Solve for Nash Equilibrium\nSubstitute one equation into the other: \\[\nP_A = 30 + 0.25(40 + 0.25P_S)\n\\] Simplify: \\[\nP_A = 30 + 10 + 0.0625P_A\n\\] Solve for \\(P_S\\): \\[\n\\begin{align*}\n  P_A(1-0.0625) & = 40 \\\\\n  P_S & = 42.67\n\\end{align*}\n\\]\nThen, plug \\(P_S = 20\\) back into the first equation: \\[\nP_S = 40 + 0.25(42.67) = 50.67\n\\]"
+    "section": "Step 5.1: Transform equations",
+    "text": "Step 5.1: Transform equations\nEither solve for Apple or Samsung’s price first.\n\nI’ll start by solving for Samsung’s:\n\nFrom Apple’s Best response: \\[\n\\color{purple}\nP_A = \\frac{124 + P_S}{4}\n\\]\n\nWe can re-arrange Samsung’s best response for \\(P_A\\) in terms of \\(P_S\\):\n\n\\[\n\\color{blue}\n\\begin{align}\nP_S = \\frac{140+P_A}{4} \\\\\n\\Rightarrow 4P_S - 140 = P_A\n\\end{align}\n\\]\nSolve for \\(P_S\\):"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#step-5.2-solve-for-one-variable",
+    "href": "Slides/04ContinuousStrats/04-main.html#step-5.2-solve-for-one-variable",
+    "title": "Introduction to Game Theory",
+    "section": "Step 5.2: Solve for one variable",
+    "text": "Step 5.2: Solve for one variable\nWe’re going to use the fact that \\(P_A=BR_A\\) in equilibrium: \\[\n\\begin{align}\n  {\\color{blue}4P_S - 140} & = {\\color{purple} \\frac{124 +P_S}{4}} \\\\\n  \\Rightarrow 16P_S - 560 & = 124 + P_S \\\\\n  \\Rightarrow P_S^* & = \\frac{684}{15} = 45.6 \\\\\n\\end{align}\n\\]\nWhen Samsung sets \\(P_S=45.6\\), Apple’s best response will fulfill Samsung’s belief."
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#step-5.3-solve-for-the-other-variable",
+    "href": "Slides/04ContinuousStrats/04-main.html#step-5.3-solve-for-the-other-variable",
+    "title": "Introduction to Game Theory",
+    "section": "Step 5.3: Solve for the other variable",
+    "text": "Step 5.3: Solve for the other variable\nWe could go throught steps 5.1-5.2 to solve for Apple’s eqm strategy.\n\nOr we could just use their best-response to Samsung’s eqm strategy!\n\nWe already solved for \\(P_S^*=45.6\\), so plug it into \\(BR_A(P_S^*)=P_A^*\\) \\[\n\\begin{align}\n  P_A^* & = 4{\\color{green}P_S^*} -140 \\\\\n      & = 4\\times{\\color{green} \\frac{684}{15}} - 140 \\\\\n      & = 182.4 - 140 = 42.4 \\\\\n\\end{align}\n\\]"
   },
   {
     "objectID": "Slides/04ContinuousStrats/04-main.html#step-6-conclusion",
     "href": "Slides/04ContinuousStrats/04-main.html#step-6-conclusion",
     "title": "Introduction to Game Theory",
     "section": "Step 6: Conclusion",
-    "text": "Step 6: Conclusion\nAt equilibrium:\n\n\\(P_A = 42.67\\), \\(P_S = 50.67\\)\nDo either firm have an incentive to deviate?\n\nHow would we check?"
+    "text": "Step 6: Conclusion\nIn our Bertrand equilibrium:\n\n\\(P_A = 42.4\\), \\(P_S = 45.6\\)\n\\(\\Pi_A(P_A^*, P_S^*) = \\$1,848.32\\)\n\\(\\Pi_S(P_A^*, P_S^*) = \\$1,720.32\\)\n\nApple’s lower MC results in lower eqm price, higher profit than Samsung\n\nUnlike Bertrand model with perfect substitutes,\n\nhere firms earn positive profit because of product differentiation\n\nDo either firm have an incentive to deviate?"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#checking-apples-best-response",
+    "href": "Slides/04ContinuousStrats/04-main.html#checking-apples-best-response",
+    "title": "Introduction to Game Theory",
+    "section": "Checking Apple’s Best response",
+    "text": "Checking Apple’s Best response\nApple’s profit when Samsung’s price is set at \\(P_S^*=45.6\\):"
   },
   {
     "objectID": "Slides/04ContinuousStrats/04-main.html#continous-strategy-nash-graphically",
@@ -2245,189 +2273,63 @@
     "href": "Slides/04ContinuousStrats/04-main.html#cournot-vs-bertrand",
     "title": "Introduction to Game Theory",
     "section": "Cournot vs Bertrand",
-    "text": "Cournot vs Bertrand\nIn the sandwich shop game, both players set prices\n\nWe call that a Bertrand model of oligopoly\n\nWe could also imagine firms choosing quantities\n\nWe’ll call this the Cournot model"
+    "text": "Cournot vs Bertrand\nIn the smart phone game, both players set prices\n\nWe call that a Bertrand model of oligopoly\n\nWe could also imagine firms choosing quantities\n\nWe’ll call this the Cournot model"
   },
   {
     "objectID": "Slides/04ContinuousStrats/04-main.html#cournot-competition-creating-the-payoff-functions",
     "href": "Slides/04ContinuousStrats/04-main.html#cournot-competition-creating-the-payoff-functions",
     "title": "Introduction to Game Theory",
     "section": "Cournot Competition: Creating the Payoff Functions",
-    "text": "Cournot Competition: Creating the Payoff Functions\n\nFirst of all, we need payoff functions for each player.\nSince the players are firms, and the goal of a firm is to maximize profit, we’ll use the firms’ profits as their payoffs.\nWe can construct the profit functions by taking TR - TC, or in this case, Pq - c(q).\nSolving for P, we find that \\(P = 100 - Q = 100 - q_1 - q_2\\)."
+    "text": "Cournot Competition: Creating the Payoff Functions\n\nFirst of all, we need payoff functions for each player.\nPayoffs: profits: \\(\\Pi(q) TR - TC = Pq - c(q)\\).\nCommon demand curve: \\(P = 100 - Q\\),\n\nwith two firms, so \\(P = 100 - q_1 - q_2\\).\n\nBoth have \\(MC=10\\)"
   },
   {
     "objectID": "Slides/04ContinuousStrats/04-main.html#cournot-competition-creating-the-payoff-functions-1",
     "href": "Slides/04ContinuousStrats/04-main.html#cournot-competition-creating-the-payoff-functions-1",
     "title": "Introduction to Game Theory",
     "section": "Cournot Competition: Creating the Payoff Functions",
-    "text": "Cournot Competition: Creating the Payoff Functions\nThis gives us: \\[\n\\begin{align}\n\\pi_1 &= (100 - q_1 - q_2)q_1 - 10q_1 & \\pi_2 &= (100 - q_1 - q_2)q_2 - 10q_2\\\\\n&= 100q_1 - q_1^2 - q_1q_2 - 10q_1 & &= 100q_2 - q_1q_2 - q_2^2 - 10q_2\\\\\n&= 90q_1 - q_1^2 - q_1q_2 & &= 90q_2 - q_1q_2 - q_2^2\\\\\n&= (90 - q_2)q_1 - q_1^2 & &= (90 - q_1)q_2 - q_2^2\n\\end{align}\n\\] —"
+    "text": "Cournot Competition: Creating the Payoff Functions\nThis gives us: \\[\n\\begin{align}\n{\\color{red}\\pi_1} &= (100 - {\\color{red}q_1} - {\\color{blue}q_2}){\\color{red}q_1} - 10{\\color{red}q_1} & {\\color{blue}\\pi_2} &= (100 - {\\color{red}q_1} - {\\color{blue}q_2}){\\color{blue}q_2} - 10{\\color{blue}q_2}\\\\\n&= 100{\\color{red}q_1} - {\\color{red}q_1}^2 - {\\color{red}q_1}{\\color{blue}q_2} - 10{\\color{red}q_1} & &= 100{\\color{blue}q_2} - {\\color{red}q_1}{\\color{blue}q_2} - {\\color{blue}q_2}^2 - 10{\\color{blue}q_2}\\\\\n&= 90{\\color{red}q_1} - {\\color{red}q_1}^2 - {\\color{red}q_1}{\\color{blue}q_2} & &= 90{\\color{blue}q_2} - {\\color{red}q_1}{\\color{blue}q_2} - {\\color{blue}q_2}^2\\\\\n&= (90 - {\\color{blue}q_2}){\\color{red}q_1} - {\\color{red}q_1}^2 & &= (90 - {\\color{red}q_1}){\\color{blue}q_2} - {\\color{blue}q_2}^2\n\\end{align}\n\\]"
   },
   {
     "objectID": "Slides/04ContinuousStrats/04-main.html#cournot-competition-finding-best-response-functions",
     "href": "Slides/04ContinuousStrats/04-main.html#cournot-competition-finding-best-response-functions",
     "title": "Introduction to Game Theory",
     "section": "Cournot Competition: Finding Best-Response Functions",
-    "text": "Cournot Competition: Finding Best-Response Functions\nThese best-response functions are in the by-now familiar quadratic form. Both of them have negative squared terms, so we can look for a maximum: \\[\n\\begin{align}\nq_1 &= \\frac{-(90 - q_2)}{2(-1)} & q_2 &= \\frac{-(90 - q_1)}{2(-1)}\\\\\n&= \\frac{90 - q_2}{2} & &= \\frac{90 - q_1}{2}\\\\\n&= 45 - \\frac{q_2}{2} & &= 45 - \\frac{q_1}{2}\n\\end{align}\n\\] —"
+    "text": "Cournot Competition: Finding Best-Response Functions\nThese best-response functions are in the by-now familiar quadratic form. \\[\n\\begin{align}\n\\frac{d}{d {\\color{red}q_1}}\\left[(90 - {\\color{blue}q_2}){\\color{red}q_1} - {\\color{red}q_1}^2\\right] = 0, &\n\\frac{d}{d {\\color{blue}q_2}}\\left[ (90 - {\\color{red}q_1}){\\color{blue}q_2} - {\\color{blue}q_2}^2\\right]= 0\n\\end{align}\n\\]\nBoth of them have negative squared terms, so we can look for a maximum: \\[\n\\begin{align}\n{\\color{red}BR_1}(q_2) &= \\frac{(90 - {\\color{blue}q_2})}{2(1)} & {\\color{blue}BR_2}(q_1) &= \\frac{(90 - {\\color{red}q_1})}{2(1)}\\\\\n    &= 45 - \\frac{{\\color{blue}q_2}}{2}      &     &= 45 - \\frac{{\\color{red}q_1}}{2}\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#cournot-equilibrium-graphically",
+    "href": "Slides/04ContinuousStrats/04-main.html#cournot-equilibrium-graphically",
+    "title": "Introduction to Game Theory",
+    "section": "Cournot Equilibrium graphically",
+    "text": "Cournot Equilibrium graphically"
   },
   {
     "objectID": "Slides/04ContinuousStrats/04-main.html#cournot-oligopoly-finding-nash-equilibrium",
     "href": "Slides/04ContinuousStrats/04-main.html#cournot-oligopoly-finding-nash-equilibrium",
     "title": "Introduction to Game Theory",
     "section": "Cournot Oligopoly: Finding Nash Equilibrium",
-    "text": "Cournot Oligopoly: Finding Nash Equilibrium\nSolve these best-response rules as a system of equations: \\[\n\\begin{align}\nq_1 &= 45 - \\frac{1}{2}q_2\\\\\nq_2 &= 45 - \\frac{1}{2}q_1\\\\\n\\implies q_1 &= 45 - \\frac{1}{2}(45 - \\frac{1}{2}q_1) & q_2 &= 45 - \\frac{1}{2}(30)\\\\\nq_1 &= 45 - \\frac{45}{2} + \\frac{1}{4}q_1 & &= 45 - 15\\\\\n\\frac{3}{4}q_1 &= \\frac{45}{2} & q_2^* &= \\boxed{30}\\\\\nq_1^* &= \\boxed{30}\n\\end{align}\n\\]"
+    "text": "Cournot Oligopoly: Finding Nash Equilibrium\nSolve these best-response rules as a system of equations: \\[\n\\begin{align}\n{\\color{red}q_1} &= 45 - \\frac{1}{2}{\\color{blue}q_2}\\\\\n{\\color{blue}q_2} &= 45 - \\frac{1}{2}{\\color{red}q_1}\\\\\n\\implies {\\color{red}q_1} &= 45 - \\frac{1}{2}(45 - \\frac{1}{2}{\\color{red}q_1}) & {\\color{blue}q_2} &= 45 - \\frac{1}{2}(30)\\\\\n{\\color{red}q_1} &= 45 - \\frac{45}{2} + \\frac{1}{4}{\\color{red}q_1} & &= 45 - 15\\\\\n\\frac{3}{4}{\\color{red}q_1} &= \\frac{45}{2} & {\\color{blue}q_2}^* &= \\boxed{30}\\\\\n{\\color{red}q_1}^* &= \\boxed{30}\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#cournot-outcome",
+    "href": "Slides/04ContinuousStrats/04-main.html#cournot-outcome",
+    "title": "Introduction to Game Theory",
+    "section": "Cournot outcome",
+    "text": "Cournot outcome\nCompare to other market outcomes:\n\nBertrand with symmetric marginal costs, \\(P_1^{B*}=P_2^{B*}=MC\\), profits were zero\n\nIn this model:\n\n\\(P_1^{C*}=P_2^{C*}=30 &gt; MC= 10\\)\n\\(\\pi^{C*} = (100-30-30)(30) - 10(30) = \\$900\\)\n\nIn Monopoly:\n\n\\(P_M^* = \\$55\\), \\(Q_M = 45\\), \\(\\pi_M = \\$2,025\\)"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/04-main.html#extending-cournot-competition",
+    "href": "Slides/04ContinuousStrats/04-main.html#extending-cournot-competition",
+    "title": "Introduction to Game Theory",
+    "section": "Extending Cournot competition",
+    "text": "Extending Cournot competition\nLet’s extend this:\n\nWhat happens when a third firm enters the market?\n\nWould prices fall? Would all three firms set similar prices?\n\nWhat other real world factors affect competitive outcomes?"
   },
   {
     "objectID": "Slides/04ContinuousStrats/04-main.html#conclusion-the-economics-of-oligopoly",
     "href": "Slides/04ContinuousStrats/04-main.html#conclusion-the-economics-of-oligopoly",
     "title": "Introduction to Game Theory",
     "section": "Conclusion: The Economics of Oligopoly",
-    "text": "Conclusion: The Economics of Oligopoly\nIn an oligopoly:\n\nFirms’ prices (quantities) are interdependent.\nThe best-response functions allow us to determine equilibrium prices (or quantities in Bertrand)."
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#discussion-of-nash-equilibrium",
-    "href": "Slides/04ContinuousStrats/04-main.html#discussion-of-nash-equilibrium",
-    "title": "Introduction to Game Theory",
-    "section": "Discussion of Nash Equilibrium",
-    "text": "Discussion of Nash Equilibrium\nNow that you’ve learned what it means and seen it applied to several different games, what do you think about the concept of Nash Equilbrium?\n\nDoes it make intuitive sense? Do you think people really reason through their best response to any possible situation?\nIs there anything relevant to strategic interactions you can think of that is left out of our models so far?"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#the-appeal-of-nash-equilibrium",
-    "href": "Slides/04ContinuousStrats/04-main.html#the-appeal-of-nash-equilibrium",
-    "title": "Introduction to Game Theory",
-    "section": "The Appeal of Nash Equilibrium",
-    "text": "The Appeal of Nash Equilibrium\nThe Nash equilibrium is based on the idea that every player’s strategy should be the best response to the strategies of others.\nBenefits of using NE:\n\nIn non-cooperative games, it makes sense that each player is making their best response to their opponent\n\nIf you can’t enforce any strategy onto your opponent, you should stick with whatever doesn’t make you worse off, given what your opponent chose.\nIn any situation which is not a Nash, there is some player who could have done better:\n\nI.E., an NE leaves no-one with any regrets"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#some-potential-critiques-of-ne-predictions",
-    "href": "Slides/04ContinuousStrats/04-main.html#some-potential-critiques-of-ne-predictions",
-    "title": "Introduction to Game Theory",
-    "section": "Some Potential Critiques of NE predictions",
-    "text": "Some Potential Critiques of NE predictions\n\nIESDS, Best-response functions may not be how players actually think\n\nBut NE only describe the stable combinations of strategies, there are many ways of getting there: learning from experience, repeated play, intuition, etc."
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#some-potential-critiques-of-ne-predictions-1",
-    "href": "Slides/04ContinuousStrats/04-main.html#some-potential-critiques-of-ne-predictions-1",
-    "title": "Introduction to Game Theory",
-    "section": "Some Potential Critiques of NE predictions",
-    "text": "Some Potential Critiques of NE predictions\n\nIESDS, Best-response functions may not be how players actually think\nNash doesn’t explicitly take risk into account\n\nwith ordinal payoffs, we might leave out the incentive to play it safe to avoid very bad outcomes\nbut if we instead use cardinal payoffs, or expected utilities, we can still extend our models to those situations"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#some-potential-critiques-of-ne-predictions-2",
-    "href": "Slides/04ContinuousStrats/04-main.html#some-potential-critiques-of-ne-predictions-2",
-    "title": "Introduction to Game Theory",
-    "section": "Some Potential Critiques of NE predictions",
-    "text": "Some Potential Critiques of NE predictions\n\nIESDS, Best-response functions may not be how players actually think\nNash doesn’t explicitly take risk into account\nNE don’t have to be unique\n\nIf we care predictions, NE doesn’t always tell us what will happen, sometimes there can be multiple possible strategy profiles which are equally stable which means any one could happen depending how the game plays out"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#criticism-1-treatment-of-risk",
-    "href": "Slides/04ContinuousStrats/04-main.html#criticism-1-treatment-of-risk",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 1: Treatment of Risk",
-    "text": "Criticism 1: Treatment of Risk\nWe’ve mentioned before how sometimes the strategies played in NE don’t line up with what might intuitively feel like the ‘safe’ strategies."
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#criticism-1-treatment-of-risk-1",
-    "href": "Slides/04ContinuousStrats/04-main.html#criticism-1-treatment-of-risk-1",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 1: Treatment of Risk",
-    "text": "Criticism 1: Treatment of Risk\nLet’s look an an example:\n\n\n\nRow, Column\nA\nB\nC\n\n\n\n\nA\n2,2\n3,1\n0,2\n\n\nB\n1,3\n2,2\n3,2\n\n\nC\n2,0\n2,3\n2,2\n\n\n\n\nWhat’s the NE?"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#criticism-1-treatment-of-risk-2",
-    "href": "Slides/04ContinuousStrats/04-main.html#criticism-1-treatment-of-risk-2",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 1: Treatment of Risk",
-    "text": "Criticism 1: Treatment of Risk\nLet’s look an an example:\n\n\n\nRow, Column\nA\nB\nC\n\n\n\n\nA\n2,2\n3,1\n0,2\n\n\nB\n1,3\n2,2\n3,2\n\n\nC\n2,0\n2,3\n2,2\n\n\n\n\nWhat’s the NE?\n\n\n(A, A)"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#criticism-1-treatment-of-risk-3",
-    "href": "Slides/04ContinuousStrats/04-main.html#criticism-1-treatment-of-risk-3",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 1: Treatment of Risk",
-    "text": "Criticism 1: Treatment of Risk\n\n\n\nRow, Column\nA\nB\nC\n\n\n\n\nA\n2,2\n3,1\n0,2\n\n\nB\n1,3\n2,2\n3,2\n\n\nC\n2,0\n2,3\n2,2\n\n\n\n\nBut what happens if the other player mistakenly plays C?\nThen it might make sense to choose the safe option of C\nYou could get the same payoff of 2, but ensure that you wouldn’t have a chance to get 0\n\nThe idea of trembling-hand perfection takes this into account by allowing probabilistic errors in strategies."
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#criticism-1-treatment-of-risk-4",
-    "href": "Slides/04ContinuousStrats/04-main.html#criticism-1-treatment-of-risk-4",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 1: Treatment of Risk",
-    "text": "Criticism 1: Treatment of Risk\nWhat about this game?\n\n\n\nA, B\nLeft\nRight\n\n\n\n\nUp\n9, 10\n8, 9.9\n\n\nDown\n10, 10\n-1000, 9.9\n\n\n\nLet’s suppose that there is a small probability \\(p\\) that Player B will accidentally play Right &gt; What is Player A’s expected utility of playing Up?\n\\[ EU_A(Up) = 9(1-p) + 8p \\]\n\nWhat is Player A’s expected utility of playing Down?\n\n\\[ EU_B(Down) = 10(1-p) - 1000p \\]\nSo Player A should only play Down if:\n\\[\n\\begin{align}\n10(1-p) - 1000p &gt; & 9(1-p) + 8p \\\\\n              p &gt; & \\frac{1}{1009}\n\\end{align}\n\\]"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#criticism-2-multiple-equilibria",
-    "href": "Slides/04ContinuousStrats/04-main.html#criticism-2-multiple-equilibria",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 2: Multiple Equilibria",
-    "text": "Criticism 2: Multiple Equilibria\nIn some games, multiple Nash equilibria exist. This can create problems because: - It’s unclear which equilibrium the players will choose. - Some equilibria may not make sense in real-life situations.\nExample:\n\n\n\nDante, Jose\nT4\nMetropol\n\n\n\n\nT4\n2, 1\n0, 0\n\n\nMetropol\n0, 0\n1, 2\n\n\n\n\nIn coordination games like Battle of the Sexes, there are multiple stable outcomes."
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#criticism-2-multiple-equilibria-1",
-    "href": "Slides/04ContinuousStrats/04-main.html#criticism-2-multiple-equilibria-1",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 2: Multiple Equilibria",
-    "text": "Criticism 2: Multiple Equilibria\nAnother Example\nPick one player to be Boston, one player as San Francisco\nHere are 9 cities which must be evenly divided between the two players:\n\n\n\nAtlanta\nChicago\nDallas\nDenver\n\n\n\nLos Angeles\nNew York\nPhilidelphia\nSeattle\n\n\nYou win if you evenly split this list between you without communicating, and without overlaps or missed cities"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#criticism-2-multiple-equilibria-2",
-    "href": "Slides/04ContinuousStrats/04-main.html#criticism-2-multiple-equilibria-2",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 2: Multiple Equilibria",
-    "text": "Criticism 2: Multiple Equilibria\nArriving at Specific NE\nThis last example shows the importance of shared background and culture in forming strategic beliefs for cases with multiple NE\n\nSo far, our theory have given us sets of NE which are stable given any set of realized beliefs\nBut it doesn’t help us exaplain how those beliefs might be formed\nEvolutionary Game Theory adds tools to our basic toolkit to try to answer some of these limitations"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#criticism-2-multiple-equilibria-3",
-    "href": "Slides/04ContinuousStrats/04-main.html#criticism-2-multiple-equilibria-3",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 2: Multiple Equilibria",
-    "text": "Criticism 2: Multiple Equilibria\nIn the later chapters we will develop ideas to help narrow down the more general concept of NE\nRefinements to NE\nA refinement is a restriction on the more general assumptions needed for Nash Equilibria\nExamples:\n\nmixed-strategy Nash equilibrium allows for probabalistic plays\nsubgame-perfect Nash equilibria aka rollback equilibria are refinements in sequential games\nperfect Bayesian equilibrium has to deal with informations asymmetries"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#criticism-3-requirements-of-rationality",
-    "href": "Slides/04ContinuousStrats/04-main.html#criticism-3-requirements-of-rationality",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 3: Requirements of Rationality",
-    "text": "Criticism 3: Requirements of Rationality\nOne major criticism is that Nash equilibrium assumes:\n\nPlayers have perfect knowledge of others’ strategies.\nPlayers have rational preferences and know that their opponent is rational\n\nCounter-Argument:\n\nWhat are some situations you can think of where these assumptions might break down?\n\n\nPlayers might not know who they are playing against and what preferences they might have\nPlayers might make mistakes and occasionally choose actions that don’t fulfill their rational best response"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#criticism-3-requirements-of-rationality-1",
-    "href": "Slides/04ContinuousStrats/04-main.html#criticism-3-requirements-of-rationality-1",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 3: Requirements of Rationality",
-    "text": "Criticism 3: Requirements of Rationality\nConsider this game:\n\n\n\nRow, Column\nC1\nC2\nC3\n\n\n\n\nR1\n0, 7\n2, 5\n7, 0\n\n\nR2\n5, 2\n3, 3\n5, 2\n\n\nR3\n7, 0\n2, 5\n0, 7\n\n\n\n\nWhat is the NE?"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#criticism-3-requirements-of-rationality-2",
-    "href": "Slides/04ContinuousStrats/04-main.html#criticism-3-requirements-of-rationality-2",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 3: Requirements of Rationality",
-    "text": "Criticism 3: Requirements of Rationality\nConsider this game:\n\n\n\nRow, Column\nC1\nC2\nC3\n\n\n\n\nR1\n0, 7\n2, 5\n7, 0\n\n\nR2\n5, 2\n3, 3\n5, 2\n\n\nR3\n7, 0\n2, 5\n0, 7\n\n\n\n\nWhat is the NE?\n\n\n(R2, C2) is the only NE in this game\nFor this strategy profile, both players’ beliefs about the other player’s strategy are correct.\n\nColumn believes that Row will choose R2, so she chooses her best response of C2\nRow believes that Column will choose C2, so he chooses his best response of R2\nSo in NE, each player’s belief matches their opponent’s best response"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#criticism-3-requirements-of-rationality-3",
-    "href": "Slides/04ContinuousStrats/04-main.html#criticism-3-requirements-of-rationality-3",
-    "title": "Introduction to Game Theory",
-    "section": "Criticism 3: Requirements of Rationality",
-    "text": "Criticism 3: Requirements of Rationality\n\n\n\nRow, Column\nC1\nC2\nC3\n\n\n\n\nR1\n0, 7\n2, 5\n7, 0\n\n\nR2\n5, 2\n3, 3\n5, 2\n\n\nR3\n7, 0\n2, 5\n0, 7\n\n\n\nBut we could use similar logic for this game even when beliefs are incorrect\n\nWe can justify Row playing R1 if she believes that Column will play C3\nRow could beleive this if she believes that Column believes she is playing R3\nAnd if she also thinks that Column believes that she is playing R3 because Column believes that Row believes that Column is playing C1"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#rebuttal-to-critics-why-not-nash-equilibrium",
-    "href": "Slides/04ContinuousStrats/04-main.html#rebuttal-to-critics-why-not-nash-equilibrium",
-    "title": "Introduction to Game Theory",
-    "section": "Rebuttal to Critics: Why Not Nash Equilibrium?",
-    "text": "Rebuttal to Critics: Why Not Nash Equilibrium?\nGame theorist Roger Myerson suggests: - “Why not Nash equilibrium?” If someone proposes an alternative strategy profile, that profile must be evaluated. - If it isn’t a Nash equilibrium, one of the players can improve by changing their strategy, disproving the alternative.\nInteractive Question: How does this defense of Nash equilibrium answer critics’ concerns?"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#alternative-concepts",
-    "href": "Slides/04ContinuousStrats/04-main.html#alternative-concepts",
-    "title": "Introduction to Game Theory",
-    "section": "Alternative Concepts",
-    "text": "Alternative Concepts\nCriticism has led to the development of alternative solution concepts, such as: - Evolutionary Stable Strategies (ESS): Strategies that persist over time through evolutionary pressure. - Correlated Equilibrium: Players coordinate their strategies based on signals they receive from a common source.\nDiscussion Prompt: Do you think alternatives like ESS or correlated equilibrium offer improvements over Nash equilibrium?"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/04-main.html#conclusion",
-    "href": "Slides/04ContinuousStrats/04-main.html#conclusion",
-    "title": "Introduction to Game Theory",
-    "section": "Conclusion",
-    "text": "Conclusion\nWhile Nash equilibrium has clear limitations, it remains a central concept in game theory. Alternative solution concepts may provide better insights into certain situations, but Nash equilibrium is still the starting point for analyzing many strategic games."
+    "text": "Conclusion: The Economics of Oligopoly\nIn an oligopoly:\n\nFirms’ prices (quantities) are interdependent.\nType of competition matters (price vs quantity)\nThe best-response functions allow us to determine equilibrium prices (or quantities in Bertrand)."
   },
   {
     "objectID": "Slides/03SimultaneousGames/0308-weakdominance.html",
@@ -3736,7 +3638,7 @@
     "href": "Homework/index.html",
     "title": "Homework Assignments",
     "section": "",
-    "text": "Assignment 1 Download\nDue: Friday, October 3rd Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 2 Download\nDue: Friday, October 10th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 3 Download\nDue: Friday, October 17th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 4 Download\nDue: Friday, October 24th Submit to Canvas\n\n  Expand\n  \n    \n  \n\n\n\nOther Assignments: coming soon"
+    "text": "Assignment 1 Download\nDue: Friday, October 3rd Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 2 Download\nDue: Friday, October 10th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 3 Download\nDue: Friday, October 17th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 4 Download\nDue: Wednesday, October 29th Submit to Canvas\n\n  Expand\n  \n    \n  \n\n\n\nOther Assignments: coming soon"
   },
   {
     "objectID": "Exams/index.html",
@@ -3758,6 +3660,55 @@
     "title": "Exam Materials",
     "section": "Final Download",
     "text": "Final Download\n\n  Answer Key"
+  },
+  {
+    "objectID": "Exams/midterm-topics.html",
+    "href": "Exams/midterm-topics.html",
+    "title": "Midterm Topics Guide1",
+    "section": "",
+    "text": "Practice Exam\n\n\nMain Ideas\n\nStrategic situations occur whenever individuals’ choices depend on others’ actions.\nDistinguishes between decisions (individual optimization) and strategic games (mutual interdependence).\nClassifying games: sequential vs. simultaneous, one-shot vs. repeated, complete vs. incomplete information.\n\nKey Terms\n\nGame of strategy: a situation where each player’s payoff depends on the actions of others.\nStrategic choice vs other types of maximizing behavior\nElements of games: players, strategies, payoffs, information.\nStrategies: complete plans of action for every contingency.\nPayoffs: numerical representation of preferences or outcomes.\nEquilibrium: a stable configuration of choices\nExpected payoff\nRationality\nPareto efficiency: a social outcome that no-one would veto\nCooperative vs. Noncooperative games\nZero-sum (or constant-sum) vs games with incentives to cooperate\nOne-shot vs Repeated games (we’ve only represented one-shot games so far)\n\n\n\n\n\nMain Ideas\n\nAnalyzes games where players move in sequence.\nIntroduces game trees and rollback (backward induction) reasoning.\n\nKey Concepts\n\nGame tree (extensive form): diagrams of decision nodes, branches, and terminal payoffs.\nBackwards Induction (Rollback equilibrium): find the equilibrium by solving backward from the end of the game.\n\n“pruning” branches that are part of sequentially dominated strategies\n\nFirst-mover vs. second-mover advantage\nSubgame: portion of a game that constitutes a smaller game starting at a node.\nOrder advantage\nEmpirical evidence for Rollback: centipede and ultimatum games.\n\n\n\n\n\nMain Ideas\n\nPlayers choose actions simultaneously.\nIntroduces payoff matrices, dominance, and Nash equilibrium.\n\nKey Concepts\n\nNormal form (matrix representation)\nDominant strategy: best response regardless of what others do.\nDominated strategy: always worse than another available strategy.\nIterated elimination of dominated strategies\nNash equilibrium: list of strategies where no player can gain by deviating unilaterally.\nBest response to an opponent’s strategy\nBest response analysis\nTypes of games:\n\ncoordination games: Battle of the Sexes, Deer Hunt, assurance games\nanti-coordination games: chicken\nprisoners’ dilemma\n\n\n\n\n\n\nMain Ideas\n\nExtends Nash equilibrium to settings with continuous strategy spaces (e.g., price, quantity).\nIntroduces calculus-based optimization.\nDiscusses empirical criticisms and rationalizability.\n\nKey Concepts\n\nBest response rules (functions)\nCournot (quantity) and Bertrand (price) competition\n\nHelpful shortcut for the max of a quadratic of form \\(f(x) = A + Bx + Cx^2\\):\nwhen \\(x=\\frac{B}{2C}\\), \\(f(x)\\) is at a maximum.\n\n\n\n\nMain Ideas\n\nCombines tree and matrix reasoning.\nAnalyzes games with both types of moves (e.g., entry games, Stackelberg competition).\n\nKey Concepts\n\nInformation set: what actions are observable by a player before they move\nGoing from extensive to normal form in the same game\nSubgame-perfect equilibrium\ncredibility\noff-equilibrium paths"
+  },
+  {
+    "objectID": "Exams/midterm-topics.html#chapter-12-what-is-game-theory",
+    "href": "Exams/midterm-topics.html#chapter-12-what-is-game-theory",
+    "title": "Midterm Topics Guide1",
+    "section": "",
+    "text": "Main Ideas\n\nStrategic situations occur whenever individuals’ choices depend on others’ actions.\nDistinguishes between decisions (individual optimization) and strategic games (mutual interdependence).\nClassifying games: sequential vs. simultaneous, one-shot vs. repeated, complete vs. incomplete information.\n\nKey Terms\n\nGame of strategy: a situation where each player’s payoff depends on the actions of others.\nStrategic choice vs other types of maximizing behavior\nElements of games: players, strategies, payoffs, information.\nStrategies: complete plans of action for every contingency.\nPayoffs: numerical representation of preferences or outcomes.\nEquilibrium: a stable configuration of choices\nExpected payoff\nRationality\nPareto efficiency: a social outcome that no-one would veto\nCooperative vs. Noncooperative games\nZero-sum (or constant-sum) vs games with incentives to cooperate\nOne-shot vs Repeated games (we’ve only represented one-shot games so far)"
+  },
+  {
+    "objectID": "Exams/midterm-topics.html#chapter-3-games-with-sequential-moves",
+    "href": "Exams/midterm-topics.html#chapter-3-games-with-sequential-moves",
+    "title": "Midterm Topics Guide1",
+    "section": "",
+    "text": "Main Ideas\n\nAnalyzes games where players move in sequence.\nIntroduces game trees and rollback (backward induction) reasoning.\n\nKey Concepts\n\nGame tree (extensive form): diagrams of decision nodes, branches, and terminal payoffs.\nBackwards Induction (Rollback equilibrium): find the equilibrium by solving backward from the end of the game.\n\n“pruning” branches that are part of sequentially dominated strategies\n\nFirst-mover vs. second-mover advantage\nSubgame: portion of a game that constitutes a smaller game starting at a node.\nOrder advantage\nEmpirical evidence for Rollback: centipede and ultimatum games."
+  },
+  {
+    "objectID": "Exams/midterm-topics.html#chapter-4-simultaneous-move-games-with-discrete-strategies",
+    "href": "Exams/midterm-topics.html#chapter-4-simultaneous-move-games-with-discrete-strategies",
+    "title": "Midterm Topics Guide1",
+    "section": "",
+    "text": "Main Ideas\n\nPlayers choose actions simultaneously.\nIntroduces payoff matrices, dominance, and Nash equilibrium.\n\nKey Concepts\n\nNormal form (matrix representation)\nDominant strategy: best response regardless of what others do.\nDominated strategy: always worse than another available strategy.\nIterated elimination of dominated strategies\nNash equilibrium: list of strategies where no player can gain by deviating unilaterally.\nBest response to an opponent’s strategy\nBest response analysis\nTypes of games:\n\ncoordination games: Battle of the Sexes, Deer Hunt, assurance games\nanti-coordination games: chicken\nprisoners’ dilemma"
+  },
+  {
+    "objectID": "Exams/midterm-topics.html#chapter-5-simultaneous-move-games-with-continuous-strategies",
+    "href": "Exams/midterm-topics.html#chapter-5-simultaneous-move-games-with-continuous-strategies",
+    "title": "Midterm Topics Guide1",
+    "section": "",
+    "text": "Main Ideas\n\nExtends Nash equilibrium to settings with continuous strategy spaces (e.g., price, quantity).\nIntroduces calculus-based optimization.\nDiscusses empirical criticisms and rationalizability.\n\nKey Concepts\n\nBest response rules (functions)\nCournot (quantity) and Bertrand (price) competition\n\nHelpful shortcut for the max of a quadratic of form \\(f(x) = A + Bx + Cx^2\\):\nwhen \\(x=\\frac{B}{2C}\\), \\(f(x)\\) is at a maximum."
+  },
+  {
+    "objectID": "Exams/midterm-topics.html#chapter-6-games-with-sequential-and-simultaneous-moves",
+    "href": "Exams/midterm-topics.html#chapter-6-games-with-sequential-and-simultaneous-moves",
+    "title": "Midterm Topics Guide1",
+    "section": "",
+    "text": "Main Ideas\n\nCombines tree and matrix reasoning.\nAnalyzes games with both types of moves (e.g., entry games, Stackelberg competition).\n\nKey Concepts\n\nInformation set: what actions are observable by a player before they move\nGoing from extensive to normal form in the same game\nSubgame-perfect equilibrium\ncredibility\noff-equilibrium paths"
+  },
+  {
+    "objectID": "Exams/midterm-topics.html#footnotes",
+    "href": "Exams/midterm-topics.html#footnotes",
+    "title": "Midterm Topics Guide1",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nGenerated from the textbook with the help of ChatGPT. I found that it picked up most key terms, but I went through and added/removed some according to what we covered in lectures.↩︎"
   },
   {
     "objectID": "Slides/01Intro/01-main.html#welcome-to-the-class",
@@ -6459,7 +6410,7 @@
     "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html",
     "title": "Price Competition with Differentiated Products",
     "section": "",
-    "text": "Instead of a symmetric game, let’s try one with differentiated products\nFor example, the market for smartphones.\nLet’s assume only two players; A(pple) and S(amsung).\n\n\\(D_A(P_A,P_S) = 100 - 2P_A + P_S\\)\nThe higher \\(P_A\\), fewer iPhones sold\nThe higher \\(P_S\\), more people switch from Galaxy to iPhone\n\n\n\n\n\nTim Cook’s profit based on his price and number of iPhone customers: \\[\n\\begin{align}\n\\pi_A & = (\\text{price} - \\text{cost})(\\textbf{quantity sold}) \\\\\n      & = (P_A - 10)\\mathbf{(100 - 2P_A + P_S)}\n\\end{align}\n\\]\nAssume a marginal cost of 10 per unit for iPhones\n\n\n\n\nSamsung’s profit based on prices and number of Galaxys sold: \\[\n\\begin{align}\n\\pi_S & = (P_S - 30)\\mathbf{(100 - 2P_S + P_A)}\n\\end{align}\n\\]\nAssume Samsung has a higher cost of 30 per Galaxy produced\n\n\n\n\nLet’s expand Apple’s profit function: \\[\n\\begin{align}\n\\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\\\\n      & = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)\n\\end{align}\n\\]\n\n\n\n\nLet’s expand Apple’s profit function: \\[\n\\begin{align}\n\\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\\\\n      & = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)\n\\end{align}\n\\]\nNow, multiply out the terms:\n\\[\n100 P_A + P_A P_S - 2 P_A^2 - 1000 - 10 P_S + 20 P_A\n\\]\nWhat should we do next to find the best price?\n\n\n\n\nTo find the best price, we differentiate \\(\\Pi_A\\) with respect to \\(P_A\\).\n\n\n\\[\n\\frac{d\\pi_A}{dP_A} = 100 + P_S - 4P_A + 20 = P_S + 120 - 4P_A\n\\]\nSet the derivative equal to zero for maximization: \\[\nP_S + 120 - 4P_A = 0\n\\] Solve for \\(P_A\\): \\[\nBR_A(P_S) = 30 + 0.25P_S\n\\]\n\n\n\n\n\nThe profit function we wrote out in step 2 seems complicated, so lets simplify it:\n\\[\n\\pi_A = - 1000 - 10 P_S +  \\mathbf{P_A} (120 + P_S) - 2 \\mathbf{P_A}^2\n\\]\nAs Apple, we can only set our own price, \\(P_A\\), everything else we can just treat as a constant\nThis fits a more general pattern:\n\\[\nS = A + BA - CA^2\n\\]\n\n\n\n\n\\[\nS = A + BA - CA^2\n\\]\nIf we want to find the maximum of \\(S\\) in this equation as a function of \\(A\\), as long as \\(C&gt;0\\), this will take the shape of a parabola with a single peak.\n\n\nThe maxmimum of this function will be reached at:\n\\(A^* = \\frac{B}{2C}\\)\n\n\n\n\n\n\nSo going back to Apple’s profit function,\n\nIf \\(B = 120 + P_S\\)\nand \\(C = 2\\)\n\nthen applying that the maximum choice will meet \\(\\frac{B}{2C}\\),\nwe get the same answer of \\(P_A^* = 30 + 0.25P_S\\)\n\n\n\nSamsung’s best-response function is similar:\n\\[\n\\begin{align}\n\\pi_A & = (P_S - 30)(100 - 2P_S + P_A) \\\\\n      & = 100P_S - 2P_S^2 + P_A P_S - 3000 + 60P_S - 30P_A\n\\end{align}\n\\]\n\\[\n\\begin{align*}\n\\frac{d\\pi_S}{dP_S} & = 0 \\\\\n100 - 4P_S + P_A + 60 & = 0 \\\\\nBR_S(P_A) & = 40 + .25P_A\n\\end{align*}\n\\]\n\n\n\n\nWe have one best response rule for each player\n\nas a function of the other player’s pricing strategy\n\nI.e., a system of two equations and two unknowns\n\n\n\n\n\n\n\nA Nash is a stable configuration of strategies\n\nin which each player is best responding to the other\n\n\n\nWhen each player is setting profit-maximizing price\n\nconditional on the other player’s price,\nthere will be no incentive to change price\n\nPlug in one player’s best response rule into the other player’s best response rule\n\nto solve for the equilibrium price\n\n\n\n\n\n\nWe solve the system of equations for \\(P_A\\) and \\(P_S\\): \\[\nP_A = 30 + 0.25P_S\n\\] \\[\nP_S = 40 + 0.25P_A\n\\]\n\n\n\n\nSubstitute one equation into the other: \\[\nP_A = 30 + 0.25(40 + 0.25P_S)\n\\] Simplify: \\[\nP_A = 30 + 10 + 0.0625P_A\n\\] Solve for \\(P_S\\): \\[\n\\begin{align*}\n  P_A(1-0.0625) & = 40 \\\\\n  P_S & = 42.67\n\\end{align*}\n\\]\nThen, plug \\(P_S = 20\\) back into the first equation: \\[\nP_S = 40 + 0.25(42.67) = 50.67\n\\]\n\n\n\n\nAt equilibrium:\n\n\\(P_A = 42.67\\), \\(P_S = 50.67\\)\nDo either firm have an incentive to deviate?\n\nHow would we check?\n\n\n\n\n\n\n\n\n\n\n\n\nStep 1: Expand the profit function.\nStep 2: Simplify the expanded equation.\nStep 3: Differentiate and solve for best-response.\nStep 4: Repeat for Samsung.\nStep 5: Solve for Nash equilibrium."
+    "text": "Instead of a symmetric game, let’s try one with differentiated products\nFor example, the market for smartphones.\nLet’s assume only two players; A(pple) and S(amsung).\n\n\\(D_A(P_A,P_S) = 100 - 2P_A + P_S\\)\nThe higher \\(P_A\\), fewer iPhones sold\nThe higher \\(P_S\\), more people switch from Galaxy to iPhone\n\n\n\n\n\nTim Cook’s profit based on his price and number of iPhone customers: \\[\n\\begin{align}\n\\pi_A & = (\\text{price} - \\text{cost})(\\textbf{quantity sold}) \\\\\n      & = (P_A - 12)\\mathbf{(100 - 2P_A + P_S)}\n\\end{align}\n\\]\nAssume a marginal cost of 12 per unit for iPhones\n\n\n\n\nSamsung’s profit based on prices and number of Galaxys sold: \\[\n\\begin{align}\n\\pi_S & = (P_S - 20)\\mathbf{(100 - 2P_S + P_A)}\n\\end{align}\n\\]\nAssume Samsung has a higher cost of 20 per Galaxy produced\n\n\n\n\nA Nash is a stable configuration of strategies\n\nin which each player is best responding to the other\n\n\n\nWhen each player is setting profit-maximizing price\n\nconditional on the other player’s price,\nthere will be no incentive to change price\n\nPlug in one player’s best response rule into the other player’s best response rule\n\nto solve for the equilibrium price\n\n\n\n\n\n\nLet’s expand Apple’s profit function: \\[\n\\begin{align}\n\\pi_A & = (P_A - 12)(100 - 2P_A + P_S) \\\\\n      & = P_A(100 + P_S - 2P_A) - 12(100 + P_S - 2P_A)\n\\end{align}\n\\]\n\n\n\n\nLet’s expand Apple’s profit function: \\[\n\\begin{align}\n\\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\\\\n      & = P_A(100 + P_S - 2P_A) - 12(100 + P_S - 2P_A)\n\\end{align}\n\\]\nNow, multiply out the terms:\n\\[\n100 P_A + P_A P_S - 2 P_A^2 - 1200 - 12 P_S + 24 P_A\n\\]\nWhat should we do next to find the best price?\n\n\n\n\nTo find the best price, we differentiate \\(\\Pi_A\\) with respect to \\(P_A\\).\n\n\n\\[\n\\frac{d\\pi_A}{dP_A} = 100 + P_S - 4P_A + 24 = P_S + 124 - 4P_A\n\\]\nSet the derivative equal to zero for maximization: \\[\nP_S + 124 - 4P_A = 0\n\\] Solve for \\(P_A\\): \\[\nBR_A(P_S) = 31 + \\frac{1}{4}P_S\n\\]\n\n\n\n\n\nSimplify profit function from step 2:\n\\[\n\\pi_A = {\\color{purple}- 1200 - 12 P_S} +  \\mathbf{P_A} {\\color{blue}(124 + P_S)} - {\\color{green}2} \\mathbf{P_A}^2\n\\]\nApple’s profit \\(\\pi_A\\), depends on their choice variable, \\(P_A\\) * everything else we can just treat as constant\nThis fits a more general pattern:\n\\[\ny = {\\color{purple}A} + {\\color{blue}B}x - {\\color{green}C}x^2\n\\]\n\n\n\n\n\\[\nf(x) = A + Bx - Cx^2\n\\]\nWe want to find the maximum of \\(f(x)\\)\n\nas long as \\(C&gt;0\\), this will take the shape of a parabola with a single peak.\n\n\n\nThe maxmimum of this function will be reached at:\n\\(x^* = \\frac{B}{2C}\\)\n\n\n\n\n\n\n\\[\n\\pi_A = {\\color{purple}- 1200 - 12 P_S} +  \\mathbf{P_A} {\\color{blue}(124 + P_S)} - {\\color{green}2} \\mathbf{P_A}^2\n\\]\nSo going back to Apple’s profit function,\n\nIf \\(\\color{blue}B = 124 + P_S\\)\nand \\(\\color{green}C = 2\\)\n\nthen applying that the maximum choice will meet \\(\\frac{B}{2C} = \\frac{\\color{blue}124+P_S}{2\\times {\\color{green} 2}}\\),\nwe get the same answer of \\(P_A^* = \\frac{124 + P_S}{4}\\)\n\n\n\nSamsung’s best-response function is similar:\n\\[\n\\begin{align}\n\\pi_A & = (P_S - 20)(100 - 2P_S + P_A) \\\\\n      & = 100P_S - 2P_S^2 + P_A P_S - 2000 + 40P_S - 20P_A\n\\end{align}\n\\]\n\\[\n\\begin{align*}\n\\frac{d\\pi_S}{dP_S} & = 0 \\\\\n100 - 4P_S + P_A + 40 & = 0 \\\\\nBR_S(P_A) & = 35 + .25P_A\n\\end{align*}\n\\]\n\n\n\n\n\\[\nP_A = 31 + 0.25P_S\n\\] \\[\nP_S = 45 + 0.25P_A\n\\]\n\n\nWe have one best response rule for each player\n\nas a function of the other player’s pricing strategy\n\nI.e., a system of two equations and two unknowns\n\n\n\n\n\n\nWe solve the system of equations for \\(P_A\\) and \\(P_S\\): \\[\nP_A = 31 + 0.25P_S\n\\] \\[\nP_S = 35 + 0.25P_A\n\\]\nRemember the following from definition of Nash:\n\nboth players’ strategies are their best responses\nequilibrium is intersection of best responses\n\n\n\n\n\nEither solve for Apple or Samsung’s price first.\n\nI’ll start by solving for Samsung’s:\n\nFrom Apple’s Best response: \\[\n\\color{purple}\nP_A = \\frac{124 + P_S}{4}\n\\]\n\nWe can re-arrange Samsung’s best response for \\(P_A\\) in terms of \\(P_S\\):\n\n\\[\n\\color{blue}\n\\begin{align}\nP_S = \\frac{140+P_A}{4} \\\\\n\\Rightarrow 4P_S - 140 = P_A\n\\end{align}\n\\]\nSolve for \\(P_S\\):\n\n\n\n\nWe’re going to use the fact that \\(P_A=BR_A\\) in equilibrium: \\[\n\\begin{align}\n  {\\color{blue}4P_S - 140} & = {\\color{purple} \\frac{124 +P_S}{4}} \\\\\n  \\Rightarrow 16P_S - 560 & = 124 + P_S \\\\\n  \\Rightarrow P_S^* & = \\frac{684}{15} = 45.6 \\\\\n\\end{align}\n\\]\nWhen Samsung sets \\(P_S=45.6\\), Apple’s best response will fulfill Samsung’s belief.\n\n\n\n\nWe could go throught steps 5.1-5.2 to solve for Apple’s eqm strategy.\n\nOr we could just use their best-response to Samsung’s eqm strategy!\n\nWe already solved for \\(P_S^*=45.6\\), so plug it into \\(BR_A(P_S^*)=P_A^*\\) \\[\n\\begin{align}\n  P_A^* & = 4{\\color{green}P_S^*} -140 \\\\\n      & = 4\\times{\\color{green} \\frac{684}{15}} - 140 \\\\\n      & = 182.4 - 140 = 42.4 \\\\\n\\end{align}\n\\]\n\n\n\n\nIn our Bertrand equilibrium:\n\n\\(P_A = 42.4\\), \\(P_S = 45.6\\)\n\\(\\Pi_A(P_A^*, P_S^*) = \\$1,848.32\\)\n\\(\\Pi_S(P_A^*, P_S^*) = \\$1,720.32\\)\n\nApple’s lower MC results in lower eqm price, higher profit than Samsung\n\nUnlike Bertrand model with perfect substitutes,\n\nhere firms earn positive profit because of product differentiation\n\nDo either firm have an incentive to deviate?\n\n\n\n\n\nApple’s profit when Samsung’s price is set at \\(P_S^*=45.6\\):\n\n\n\n\n\n\n\n\n\n\n\nStep 1: Expand the profit function.\nStep 2: Simplify the expanded equation.\nStep 3: Differentiate and solve for best-response.\nStep 4: Repeat for Samsung.\nStep 5: Solve for Nash equilibrium."
   },
   {
     "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#setup-apple-and-samsungs-competition",
@@ -6473,63 +6424,14 @@
     "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#apples-profit-function",
     "title": "Price Competition with Differentiated Products",
     "section": "",
-    "text": "Tim Cook’s profit based on his price and number of iPhone customers: \\[\n\\begin{align}\n\\pi_A & = (\\text{price} - \\text{cost})(\\textbf{quantity sold}) \\\\\n      & = (P_A - 10)\\mathbf{(100 - 2P_A + P_S)}\n\\end{align}\n\\]\nAssume a marginal cost of 10 per unit for iPhones"
+    "text": "Tim Cook’s profit based on his price and number of iPhone customers: \\[\n\\begin{align}\n\\pi_A & = (\\text{price} - \\text{cost})(\\textbf{quantity sold}) \\\\\n      & = (P_A - 12)\\mathbf{(100 - 2P_A + P_S)}\n\\end{align}\n\\]\nAssume a marginal cost of 12 per unit for iPhones"
   },
   {
     "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#samsungs-profit-function",
     "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#samsungs-profit-function",
     "title": "Price Competition with Differentiated Products",
     "section": "",
-    "text": "Samsung’s profit based on prices and number of Galaxys sold: \\[\n\\begin{align}\n\\pi_S & = (P_S - 30)\\mathbf{(100 - 2P_S + P_A)}\n\\end{align}\n\\]\nAssume Samsung has a higher cost of 30 per Galaxy produced"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-1-expand-apples-profit-function",
-    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-1-expand-apples-profit-function",
-    "title": "Price Competition with Differentiated Products",
-    "section": "",
-    "text": "Let’s expand Apple’s profit function: \\[\n\\begin{align}\n\\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\\\\n      & = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)\n\\end{align}\n\\]"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-2-simplify-the-expanded-profit-function",
-    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-2-simplify-the-expanded-profit-function",
-    "title": "Price Competition with Differentiated Products",
-    "section": "",
-    "text": "Let’s expand Apple’s profit function: \\[\n\\begin{align}\n\\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\\\\n      & = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)\n\\end{align}\n\\]\nNow, multiply out the terms:\n\\[\n100 P_A + P_A P_S - 2 P_A^2 - 1000 - 10 P_S + 20 P_A\n\\]\nWhat should we do next to find the best price?"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-3-deriving-apples-best-response-function",
-    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-3-deriving-apples-best-response-function",
-    "title": "Price Competition with Differentiated Products",
-    "section": "",
-    "text": "To find the best price, we differentiate \\(\\Pi_A\\) with respect to \\(P_A\\).\n\n\n\\[\n\\frac{d\\pi_A}{dP_A} = 100 + P_S - 4P_A + 20 = P_S + 120 - 4P_A\n\\]\nSet the derivative equal to zero for maximization: \\[\nP_S + 120 - 4P_A = 0\n\\] Solve for \\(P_A\\): \\[\nBR_A(P_S) = 30 + 0.25P_S\n\\]"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#for-those-without-calculus-background",
-    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#for-those-without-calculus-background",
-    "title": "Price Competition with Differentiated Products",
-    "section": "",
-    "text": "The profit function we wrote out in step 2 seems complicated, so lets simplify it:\n\\[\n\\pi_A = - 1000 - 10 P_S +  \\mathbf{P_A} (120 + P_S) - 2 \\mathbf{P_A}^2\n\\]\nAs Apple, we can only set our own price, \\(P_A\\), everything else we can just treat as a constant\nThis fits a more general pattern:\n\\[\nS = A + BA - CA^2\n\\]"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#for-those-without-calculus-background-1",
-    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#for-those-without-calculus-background-1",
-    "title": "Price Competition with Differentiated Products",
-    "section": "",
-    "text": "\\[\nS = A + BA - CA^2\n\\]\nIf we want to find the maximum of \\(S\\) in this equation as a function of \\(A\\), as long as \\(C&gt;0\\), this will take the shape of a parabola with a single peak.\n\n\nThe maxmimum of this function will be reached at:\n\\(A^* = \\frac{B}{2C}\\)"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#for-those-without-calculus-background-2",
-    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#for-those-without-calculus-background-2",
-    "title": "Price Competition with Differentiated Products",
-    "section": "",
-    "text": "So going back to Apple’s profit function,\n\nIf \\(B = 120 + P_S\\)\nand \\(C = 2\\)\n\nthen applying that the maximum choice will meet \\(\\frac{B}{2C}\\),\nwe get the same answer of \\(P_A^* = 30 + 0.25P_S\\)"
-  },
-  {
-    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-4-samsungs-best-response-function",
-    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-4-samsungs-best-response-function",
-    "title": "Price Competition with Differentiated Products",
-    "section": "",
-    "text": "Samsung’s best-response function is similar:\n\\[\n\\begin{align}\n\\pi_A & = (P_S - 30)(100 - 2P_S + P_A) \\\\\n      & = 100P_S - 2P_S^2 + P_A P_S - 3000 + 60P_S - 30P_A\n\\end{align}\n\\]\n\\[\n\\begin{align*}\n\\frac{d\\pi_S}{dP_S} & = 0 \\\\\n100 - 4P_S + P_A + 60 & = 0 \\\\\nBR_S(P_A) & = 40 + .25P_A\n\\end{align*}\n\\]\n\n\n\n\nWe have one best response rule for each player\n\nas a function of the other player’s pricing strategy\n\nI.e., a system of two equations and two unknowns"
+    "text": "Samsung’s profit based on prices and number of Galaxys sold: \\[\n\\begin{align}\n\\pi_S & = (P_S - 20)\\mathbf{(100 - 2P_S + P_A)}\n\\end{align}\n\\]\nAssume Samsung has a higher cost of 20 per Galaxy produced"
   },
   {
     "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#what-is-a-ne-in-this-situation",
@@ -6539,25 +6441,102 @@
     "text": "A Nash is a stable configuration of strategies\n\nin which each player is best responding to the other\n\n\n\nWhen each player is setting profit-maximizing price\n\nconditional on the other player’s price,\nthere will be no incentive to change price\n\nPlug in one player’s best response rule into the other player’s best response rule\n\nto solve for the equilibrium price"
   },
   {
+    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-1-expand-apples-profit-function",
+    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-1-expand-apples-profit-function",
+    "title": "Price Competition with Differentiated Products",
+    "section": "",
+    "text": "Let’s expand Apple’s profit function: \\[\n\\begin{align}\n\\pi_A & = (P_A - 12)(100 - 2P_A + P_S) \\\\\n      & = P_A(100 + P_S - 2P_A) - 12(100 + P_S - 2P_A)\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-2-simplify-the-expanded-profit-function",
+    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-2-simplify-the-expanded-profit-function",
+    "title": "Price Competition with Differentiated Products",
+    "section": "",
+    "text": "Let’s expand Apple’s profit function: \\[\n\\begin{align}\n\\pi_A & = (P_A - 10)(100 - 2P_A + P_S) \\\\\n      & = P_A(100 + P_S - 2P_A) - 12(100 + P_S - 2P_A)\n\\end{align}\n\\]\nNow, multiply out the terms:\n\\[\n100 P_A + P_A P_S - 2 P_A^2 - 1200 - 12 P_S + 24 P_A\n\\]\nWhat should we do next to find the best price?"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-3-deriving-apples-best-response-function",
+    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-3-deriving-apples-best-response-function",
+    "title": "Price Competition with Differentiated Products",
+    "section": "",
+    "text": "To find the best price, we differentiate \\(\\Pi_A\\) with respect to \\(P_A\\).\n\n\n\\[\n\\frac{d\\pi_A}{dP_A} = 100 + P_S - 4P_A + 24 = P_S + 124 - 4P_A\n\\]\nSet the derivative equal to zero for maximization: \\[\nP_S + 124 - 4P_A = 0\n\\] Solve for \\(P_A\\): \\[\nBR_A(P_S) = 31 + \\frac{1}{4}P_S\n\\]"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#for-those-without-calculus-background",
+    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#for-those-without-calculus-background",
+    "title": "Price Competition with Differentiated Products",
+    "section": "",
+    "text": "Simplify profit function from step 2:\n\\[\n\\pi_A = {\\color{purple}- 1200 - 12 P_S} +  \\mathbf{P_A} {\\color{blue}(124 + P_S)} - {\\color{green}2} \\mathbf{P_A}^2\n\\]\nApple’s profit \\(\\pi_A\\), depends on their choice variable, \\(P_A\\) * everything else we can just treat as constant\nThis fits a more general pattern:\n\\[\ny = {\\color{purple}A} + {\\color{blue}B}x - {\\color{green}C}x^2\n\\]"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#for-those-without-calculus-background-1",
+    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#for-those-without-calculus-background-1",
+    "title": "Price Competition with Differentiated Products",
+    "section": "",
+    "text": "\\[\nf(x) = A + Bx - Cx^2\n\\]\nWe want to find the maximum of \\(f(x)\\)\n\nas long as \\(C&gt;0\\), this will take the shape of a parabola with a single peak.\n\n\n\nThe maxmimum of this function will be reached at:\n\\(x^* = \\frac{B}{2C}\\)"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#for-those-without-calculus-background-2",
+    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#for-those-without-calculus-background-2",
+    "title": "Price Competition with Differentiated Products",
+    "section": "",
+    "text": "\\[\n\\pi_A = {\\color{purple}- 1200 - 12 P_S} +  \\mathbf{P_A} {\\color{blue}(124 + P_S)} - {\\color{green}2} \\mathbf{P_A}^2\n\\]\nSo going back to Apple’s profit function,\n\nIf \\(\\color{blue}B = 124 + P_S\\)\nand \\(\\color{green}C = 2\\)\n\nthen applying that the maximum choice will meet \\(\\frac{B}{2C} = \\frac{\\color{blue}124+P_S}{2\\times {\\color{green} 2}}\\),\nwe get the same answer of \\(P_A^* = \\frac{124 + P_S}{4}\\)"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-4-samsungs-best-response-function",
+    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-4-samsungs-best-response-function",
+    "title": "Price Competition with Differentiated Products",
+    "section": "",
+    "text": "Samsung’s best-response function is similar:\n\\[\n\\begin{align}\n\\pi_A & = (P_S - 20)(100 - 2P_S + P_A) \\\\\n      & = 100P_S - 2P_S^2 + P_A P_S - 2000 + 40P_S - 20P_A\n\\end{align}\n\\]\n\\[\n\\begin{align*}\n\\frac{d\\pi_S}{dP_S} & = 0 \\\\\n100 - 4P_S + P_A + 40 & = 0 \\\\\nBR_S(P_A) & = 35 + .25P_A\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#question-how-do-we-find-the-nash",
+    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#question-how-do-we-find-the-nash",
+    "title": "Price Competition with Differentiated Products",
+    "section": "",
+    "text": "\\[\nP_A = 31 + 0.25P_S\n\\] \\[\nP_S = 45 + 0.25P_A\n\\]\n\n\nWe have one best response rule for each player\n\nas a function of the other player’s pricing strategy\n\nI.e., a system of two equations and two unknowns"
+  },
+  {
     "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-5-solve-for-nash-equilibrium",
     "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-5-solve-for-nash-equilibrium",
     "title": "Price Competition with Differentiated Products",
     "section": "",
-    "text": "We solve the system of equations for \\(P_A\\) and \\(P_S\\): \\[\nP_A = 30 + 0.25P_S\n\\] \\[\nP_S = 40 + 0.25P_A\n\\]"
+    "text": "We solve the system of equations for \\(P_A\\) and \\(P_S\\): \\[\nP_A = 31 + 0.25P_S\n\\] \\[\nP_S = 35 + 0.25P_A\n\\]\nRemember the following from definition of Nash:\n\nboth players’ strategies are their best responses\nequilibrium is intersection of best responses"
   },
   {
-    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-5-solve-for-nash-equilibrium-1",
-    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-5-solve-for-nash-equilibrium-1",
+    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-5.1-transform-equations",
+    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-5.1-transform-equations",
     "title": "Price Competition with Differentiated Products",
     "section": "",
-    "text": "Substitute one equation into the other: \\[\nP_A = 30 + 0.25(40 + 0.25P_S)\n\\] Simplify: \\[\nP_A = 30 + 10 + 0.0625P_A\n\\] Solve for \\(P_S\\): \\[\n\\begin{align*}\n  P_A(1-0.0625) & = 40 \\\\\n  P_S & = 42.67\n\\end{align*}\n\\]\nThen, plug \\(P_S = 20\\) back into the first equation: \\[\nP_S = 40 + 0.25(42.67) = 50.67\n\\]"
+    "text": "Either solve for Apple or Samsung’s price first.\n\nI’ll start by solving for Samsung’s:\n\nFrom Apple’s Best response: \\[\n\\color{purple}\nP_A = \\frac{124 + P_S}{4}\n\\]\n\nWe can re-arrange Samsung’s best response for \\(P_A\\) in terms of \\(P_S\\):\n\n\\[\n\\color{blue}\n\\begin{align}\nP_S = \\frac{140+P_A}{4} \\\\\n\\Rightarrow 4P_S - 140 = P_A\n\\end{align}\n\\]\nSolve for \\(P_S\\):"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-5.2-solve-for-one-variable",
+    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-5.2-solve-for-one-variable",
+    "title": "Price Competition with Differentiated Products",
+    "section": "",
+    "text": "We’re going to use the fact that \\(P_A=BR_A\\) in equilibrium: \\[\n\\begin{align}\n  {\\color{blue}4P_S - 140} & = {\\color{purple} \\frac{124 +P_S}{4}} \\\\\n  \\Rightarrow 16P_S - 560 & = 124 + P_S \\\\\n  \\Rightarrow P_S^* & = \\frac{684}{15} = 45.6 \\\\\n\\end{align}\n\\]\nWhen Samsung sets \\(P_S=45.6\\), Apple’s best response will fulfill Samsung’s belief."
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-5.3-solve-for-the-other-variable",
+    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-5.3-solve-for-the-other-variable",
+    "title": "Price Competition with Differentiated Products",
+    "section": "",
+    "text": "We could go throught steps 5.1-5.2 to solve for Apple’s eqm strategy.\n\nOr we could just use their best-response to Samsung’s eqm strategy!\n\nWe already solved for \\(P_S^*=45.6\\), so plug it into \\(BR_A(P_S^*)=P_A^*\\) \\[\n\\begin{align}\n  P_A^* & = 4{\\color{green}P_S^*} -140 \\\\\n      & = 4\\times{\\color{green} \\frac{684}{15}} - 140 \\\\\n      & = 182.4 - 140 = 42.4 \\\\\n\\end{align}\n\\]"
   },
   {
     "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-6-conclusion",
     "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#step-6-conclusion",
     "title": "Price Competition with Differentiated Products",
     "section": "",
-    "text": "At equilibrium:\n\n\\(P_A = 42.67\\), \\(P_S = 50.67\\)\nDo either firm have an incentive to deviate?\n\nHow would we check?"
+    "text": "In our Bertrand equilibrium:\n\n\\(P_A = 42.4\\), \\(P_S = 45.6\\)\n\\(\\Pi_A(P_A^*, P_S^*) = \\$1,848.32\\)\n\\(\\Pi_S(P_A^*, P_S^*) = \\$1,720.32\\)\n\nApple’s lower MC results in lower eqm price, higher profit than Samsung\n\nUnlike Bertrand model with perfect substitutes,\n\nhere firms earn positive profit because of product differentiation\n\nDo either firm have an incentive to deviate?"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#checking-apples-best-response",
+    "href": "Slides/04ContinuousStrats/0404-calculusbertrand.html#checking-apples-best-response",
+    "title": "Price Competition with Differentiated Products",
+    "section": "",
+    "text": "Apple’s profit when Samsung’s price is set at \\(P_S^*=45.6\\):"
   },
   {
     "objectID": "Slides/04ContinuousStrats/0404-calculusbertrand.html#recap-price-competition-breakdown",
@@ -6571,49 +6550,63 @@
     "href": "Slides/04ContinuousStrats/0405-cournot.html",
     "title": "Cournot Duopoly",
     "section": "",
-    "text": "In the sandwich shop game, both players set prices\n\nWe call that a Bertrand model of oligopoly\n\nWe could also imagine firms choosing quantities\n\nWe’ll call this the Cournot model\n\n\n\n\n\n\n\nFirst of all, we need payoff functions for each player.\nSince the players are firms, and the goal of a firm is to maximize profit, we’ll use the firms’ profits as their payoffs.\nWe can construct the profit functions by taking TR - TC, or in this case, Pq - c(q).\nSolving for P, we find that \\(P = 100 - Q = 100 - q_1 - q_2\\).\n\n\n\n\n\n\nThis gives us: \\[\n\\begin{align}\n\\pi_1 &= (100 - q_1 - q_2)q_1 - 10q_1 & \\pi_2 &= (100 - q_1 - q_2)q_2 - 10q_2\\\\\n&= 100q_1 - q_1^2 - q_1q_2 - 10q_1 & &= 100q_2 - q_1q_2 - q_2^2 - 10q_2\\\\\n&= 90q_1 - q_1^2 - q_1q_2 & &= 90q_2 - q_1q_2 - q_2^2\\\\\n&= (90 - q_2)q_1 - q_1^2 & &= (90 - q_1)q_2 - q_2^2\n\\end{align}\n\\] —\n\n\n\nThese best-response functions are in the by-now familiar quadratic form. Both of them have negative squared terms, so we can look for a maximum: \\[\n\\begin{align}\nq_1 &= \\frac{-(90 - q_2)}{2(-1)} & q_2 &= \\frac{-(90 - q_1)}{2(-1)}\\\\\n&= \\frac{90 - q_2}{2} & &= \\frac{90 - q_1}{2}\\\\\n&= 45 - \\frac{q_2}{2} & &= 45 - \\frac{q_1}{2}\n\\end{align}\n\\] —\n\n\n\nSolve these best-response rules as a system of equations: \\[\n\\begin{align}\nq_1 &= 45 - \\frac{1}{2}q_2\\\\\nq_2 &= 45 - \\frac{1}{2}q_1\\\\\n\\implies q_1 &= 45 - \\frac{1}{2}(45 - \\frac{1}{2}q_1) & q_2 &= 45 - \\frac{1}{2}(30)\\\\\nq_1 &= 45 - \\frac{45}{2} + \\frac{1}{4}q_1 & &= 45 - 15\\\\\n\\frac{3}{4}q_1 &= \\frac{45}{2} & q_2^* &= \\boxed{30}\\\\\nq_1^* &= \\boxed{30}\n\\end{align}\n\\]\n\n\n\n\n\nIn an oligopoly:\n\nFirms’ prices (quantities) are interdependent.\nThe best-response functions allow us to determine equilibrium prices (or quantities in Bertrand)."
+    "text": "In the smart phone game, both players set prices\n\nWe call that a Bertrand model of oligopoly\n\nWe could also imagine firms choosing quantities\n\nWe’ll call this the Cournot model\n\n\n\n\n\n\n\nFirst of all, we need payoff functions for each player.\nPayoffs: profits: \\(\\Pi(q) TR - TC = Pq - c(q)\\).\nCommon demand curve: \\(P = 100 - Q\\),\n\nwith two firms, so \\(P = 100 - q_1 - q_2\\).\n\nBoth have \\(MC=10\\)\n\n\n\n\n\n\nThis gives us: \\[\n\\begin{align}\n{\\color{red}\\pi_1} &= (100 - {\\color{red}q_1} - {\\color{blue}q_2}){\\color{red}q_1} - 10{\\color{red}q_1} & {\\color{blue}\\pi_2} &= (100 - {\\color{red}q_1} - {\\color{blue}q_2}){\\color{blue}q_2} - 10{\\color{blue}q_2}\\\\\n&= 100{\\color{red}q_1} - {\\color{red}q_1}^2 - {\\color{red}q_1}{\\color{blue}q_2} - 10{\\color{red}q_1} & &= 100{\\color{blue}q_2} - {\\color{red}q_1}{\\color{blue}q_2} - {\\color{blue}q_2}^2 - 10{\\color{blue}q_2}\\\\\n&= 90{\\color{red}q_1} - {\\color{red}q_1}^2 - {\\color{red}q_1}{\\color{blue}q_2} & &= 90{\\color{blue}q_2} - {\\color{red}q_1}{\\color{blue}q_2} - {\\color{blue}q_2}^2\\\\\n&= (90 - {\\color{blue}q_2}){\\color{red}q_1} - {\\color{red}q_1}^2 & &= (90 - {\\color{red}q_1}){\\color{blue}q_2} - {\\color{blue}q_2}^2\n\\end{align}\n\\]\n\n\n\n\nThese best-response functions are in the by-now familiar quadratic form. \\[\n\\begin{align}\n\\frac{d}{d {\\color{red}q_1}}\\left[(90 - {\\color{blue}q_2}){\\color{red}q_1} - {\\color{red}q_1}^2\\right] = 0, &\n\\frac{d}{d {\\color{blue}q_2}}\\left[ (90 - {\\color{red}q_1}){\\color{blue}q_2} - {\\color{blue}q_2}^2\\right]= 0\n\\end{align}\n\\]\nBoth of them have negative squared terms, so we can look for a maximum: \\[\n\\begin{align}\n{\\color{red}BR_1}(q_2) &= \\frac{(90 - {\\color{blue}q_2})}{2(1)} & {\\color{blue}BR_2}(q_1) &= \\frac{(90 - {\\color{red}q_1})}{2(1)}\\\\\n    &= 45 - \\frac{{\\color{blue}q_2}}{2}      &     &= 45 - \\frac{{\\color{red}q_1}}{2}\n\\end{align}\n\\]\n\n\n\n\n\n\n\n\n\nSolve these best-response rules as a system of equations: \\[\n\\begin{align}\n{\\color{red}q_1} &= 45 - \\frac{1}{2}{\\color{blue}q_2}\\\\\n{\\color{blue}q_2} &= 45 - \\frac{1}{2}{\\color{red}q_1}\\\\\n\\implies {\\color{red}q_1} &= 45 - \\frac{1}{2}(45 - \\frac{1}{2}{\\color{red}q_1}) & {\\color{blue}q_2} &= 45 - \\frac{1}{2}(30)\\\\\n{\\color{red}q_1} &= 45 - \\frac{45}{2} + \\frac{1}{4}{\\color{red}q_1} & &= 45 - 15\\\\\n\\frac{3}{4}{\\color{red}q_1} &= \\frac{45}{2} & {\\color{blue}q_2}^* &= \\boxed{30}\\\\\n{\\color{red}q_1}^* &= \\boxed{30}\n\\end{align}\n\\]\n\n\n\n\nCompare to other market outcomes:\n\nBertrand with symmetric marginal costs, \\(P_1^{B*}=P_2^{B*}=MC\\), profits were zero\n\nIn this model:\n\n\\(P_1^{C*}=P_2^{C*}=30 &gt; MC= 10\\)\n\\(\\pi^{C*} = (100-30-30)(30) - 10(30) = \\$900\\)\n\nIn Monopoly:\n\n\\(P_M^* = \\$55\\), \\(Q_M = 45\\), \\(\\pi_M = \\$2,025\\)\n\n\n\n\n\nLet’s extend this:\n\nWhat happens when a third firm enters the market?\n\nWould prices fall? Would all three firms set similar prices?\n\nWhat other real world factors affect competitive outcomes?\n\n\n\n\n\n\nIn an oligopoly:\n\nFirms’ prices (quantities) are interdependent.\nType of competition matters (price vs quantity)\nThe best-response functions allow us to determine equilibrium prices (or quantities in Bertrand)."
   },
   {
     "objectID": "Slides/04ContinuousStrats/0405-cournot.html#cournot-vs-bertrand",
     "href": "Slides/04ContinuousStrats/0405-cournot.html#cournot-vs-bertrand",
     "title": "Cournot Duopoly",
     "section": "",
-    "text": "In the sandwich shop game, both players set prices\n\nWe call that a Bertrand model of oligopoly\n\nWe could also imagine firms choosing quantities\n\nWe’ll call this the Cournot model"
+    "text": "In the smart phone game, both players set prices\n\nWe call that a Bertrand model of oligopoly\n\nWe could also imagine firms choosing quantities\n\nWe’ll call this the Cournot model"
   },
   {
     "objectID": "Slides/04ContinuousStrats/0405-cournot.html#cournot-competition-creating-the-payoff-functions",
     "href": "Slides/04ContinuousStrats/0405-cournot.html#cournot-competition-creating-the-payoff-functions",
     "title": "Cournot Duopoly",
     "section": "",
-    "text": "First of all, we need payoff functions for each player.\nSince the players are firms, and the goal of a firm is to maximize profit, we’ll use the firms’ profits as their payoffs.\nWe can construct the profit functions by taking TR - TC, or in this case, Pq - c(q).\nSolving for P, we find that \\(P = 100 - Q = 100 - q_1 - q_2\\)."
+    "text": "First of all, we need payoff functions for each player.\nPayoffs: profits: \\(\\Pi(q) TR - TC = Pq - c(q)\\).\nCommon demand curve: \\(P = 100 - Q\\),\n\nwith two firms, so \\(P = 100 - q_1 - q_2\\).\n\nBoth have \\(MC=10\\)"
   },
   {
     "objectID": "Slides/04ContinuousStrats/0405-cournot.html#cournot-competition-creating-the-payoff-functions-1",
     "href": "Slides/04ContinuousStrats/0405-cournot.html#cournot-competition-creating-the-payoff-functions-1",
     "title": "Cournot Duopoly",
     "section": "",
-    "text": "This gives us: \\[\n\\begin{align}\n\\pi_1 &= (100 - q_1 - q_2)q_1 - 10q_1 & \\pi_2 &= (100 - q_1 - q_2)q_2 - 10q_2\\\\\n&= 100q_1 - q_1^2 - q_1q_2 - 10q_1 & &= 100q_2 - q_1q_2 - q_2^2 - 10q_2\\\\\n&= 90q_1 - q_1^2 - q_1q_2 & &= 90q_2 - q_1q_2 - q_2^2\\\\\n&= (90 - q_2)q_1 - q_1^2 & &= (90 - q_1)q_2 - q_2^2\n\\end{align}\n\\] —"
+    "text": "This gives us: \\[\n\\begin{align}\n{\\color{red}\\pi_1} &= (100 - {\\color{red}q_1} - {\\color{blue}q_2}){\\color{red}q_1} - 10{\\color{red}q_1} & {\\color{blue}\\pi_2} &= (100 - {\\color{red}q_1} - {\\color{blue}q_2}){\\color{blue}q_2} - 10{\\color{blue}q_2}\\\\\n&= 100{\\color{red}q_1} - {\\color{red}q_1}^2 - {\\color{red}q_1}{\\color{blue}q_2} - 10{\\color{red}q_1} & &= 100{\\color{blue}q_2} - {\\color{red}q_1}{\\color{blue}q_2} - {\\color{blue}q_2}^2 - 10{\\color{blue}q_2}\\\\\n&= 90{\\color{red}q_1} - {\\color{red}q_1}^2 - {\\color{red}q_1}{\\color{blue}q_2} & &= 90{\\color{blue}q_2} - {\\color{red}q_1}{\\color{blue}q_2} - {\\color{blue}q_2}^2\\\\\n&= (90 - {\\color{blue}q_2}){\\color{red}q_1} - {\\color{red}q_1}^2 & &= (90 - {\\color{red}q_1}){\\color{blue}q_2} - {\\color{blue}q_2}^2\n\\end{align}\n\\]"
   },
   {
     "objectID": "Slides/04ContinuousStrats/0405-cournot.html#cournot-competition-finding-best-response-functions",
     "href": "Slides/04ContinuousStrats/0405-cournot.html#cournot-competition-finding-best-response-functions",
     "title": "Cournot Duopoly",
     "section": "",
-    "text": "These best-response functions are in the by-now familiar quadratic form. Both of them have negative squared terms, so we can look for a maximum: \\[\n\\begin{align}\nq_1 &= \\frac{-(90 - q_2)}{2(-1)} & q_2 &= \\frac{-(90 - q_1)}{2(-1)}\\\\\n&= \\frac{90 - q_2}{2} & &= \\frac{90 - q_1}{2}\\\\\n&= 45 - \\frac{q_2}{2} & &= 45 - \\frac{q_1}{2}\n\\end{align}\n\\] —"
+    "text": "These best-response functions are in the by-now familiar quadratic form. \\[\n\\begin{align}\n\\frac{d}{d {\\color{red}q_1}}\\left[(90 - {\\color{blue}q_2}){\\color{red}q_1} - {\\color{red}q_1}^2\\right] = 0, &\n\\frac{d}{d {\\color{blue}q_2}}\\left[ (90 - {\\color{red}q_1}){\\color{blue}q_2} - {\\color{blue}q_2}^2\\right]= 0\n\\end{align}\n\\]\nBoth of them have negative squared terms, so we can look for a maximum: \\[\n\\begin{align}\n{\\color{red}BR_1}(q_2) &= \\frac{(90 - {\\color{blue}q_2})}{2(1)} & {\\color{blue}BR_2}(q_1) &= \\frac{(90 - {\\color{red}q_1})}{2(1)}\\\\\n    &= 45 - \\frac{{\\color{blue}q_2}}{2}      &     &= 45 - \\frac{{\\color{red}q_1}}{2}\n\\end{align}\n\\]"
   },
   {
     "objectID": "Slides/04ContinuousStrats/0405-cournot.html#cournot-oligopoly-finding-nash-equilibrium",
     "href": "Slides/04ContinuousStrats/0405-cournot.html#cournot-oligopoly-finding-nash-equilibrium",
     "title": "Cournot Duopoly",
     "section": "",
-    "text": "Solve these best-response rules as a system of equations: \\[\n\\begin{align}\nq_1 &= 45 - \\frac{1}{2}q_2\\\\\nq_2 &= 45 - \\frac{1}{2}q_1\\\\\n\\implies q_1 &= 45 - \\frac{1}{2}(45 - \\frac{1}{2}q_1) & q_2 &= 45 - \\frac{1}{2}(30)\\\\\nq_1 &= 45 - \\frac{45}{2} + \\frac{1}{4}q_1 & &= 45 - 15\\\\\n\\frac{3}{4}q_1 &= \\frac{45}{2} & q_2^* &= \\boxed{30}\\\\\nq_1^* &= \\boxed{30}\n\\end{align}\n\\]"
+    "text": "Solve these best-response rules as a system of equations: \\[\n\\begin{align}\n{\\color{red}q_1} &= 45 - \\frac{1}{2}{\\color{blue}q_2}\\\\\n{\\color{blue}q_2} &= 45 - \\frac{1}{2}{\\color{red}q_1}\\\\\n\\implies {\\color{red}q_1} &= 45 - \\frac{1}{2}(45 - \\frac{1}{2}{\\color{red}q_1}) & {\\color{blue}q_2} &= 45 - \\frac{1}{2}(30)\\\\\n{\\color{red}q_1} &= 45 - \\frac{45}{2} + \\frac{1}{4}{\\color{red}q_1} & &= 45 - 15\\\\\n\\frac{3}{4}{\\color{red}q_1} &= \\frac{45}{2} & {\\color{blue}q_2}^* &= \\boxed{30}\\\\\n{\\color{red}q_1}^* &= \\boxed{30}\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/0405-cournot.html#cournot-outcome",
+    "href": "Slides/04ContinuousStrats/0405-cournot.html#cournot-outcome",
+    "title": "Cournot Duopoly",
+    "section": "",
+    "text": "Compare to other market outcomes:\n\nBertrand with symmetric marginal costs, \\(P_1^{B*}=P_2^{B*}=MC\\), profits were zero\n\nIn this model:\n\n\\(P_1^{C*}=P_2^{C*}=30 &gt; MC= 10\\)\n\\(\\pi^{C*} = (100-30-30)(30) - 10(30) = \\$900\\)\n\nIn Monopoly:\n\n\\(P_M^* = \\$55\\), \\(Q_M = 45\\), \\(\\pi_M = \\$2,025\\)"
+  },
+  {
+    "objectID": "Slides/04ContinuousStrats/0405-cournot.html#extending-cournot-competition",
+    "href": "Slides/04ContinuousStrats/0405-cournot.html#extending-cournot-competition",
+    "title": "Cournot Duopoly",
+    "section": "",
+    "text": "Let’s extend this:\n\nWhat happens when a third firm enters the market?\n\nWould prices fall? Would all three firms set similar prices?\n\nWhat other real world factors affect competitive outcomes?"
   },
   {
     "objectID": "Slides/04ContinuousStrats/0405-cournot.html#conclusion-the-economics-of-oligopoly",
     "href": "Slides/04ContinuousStrats/0405-cournot.html#conclusion-the-economics-of-oligopoly",
     "title": "Cournot Duopoly",
     "section": "",
-    "text": "In an oligopoly:\n\nFirms’ prices (quantities) are interdependent.\nThe best-response functions allow us to determine equilibrium prices (or quantities in Bertrand)."
+    "text": "In an oligopoly:\n\nFirms’ prices (quantities) are interdependent.\nType of competition matters (price vs quantity)\nThe best-response functions allow us to determine equilibrium prices (or quantities in Bertrand)."
   },
   {
     "objectID": "Slides/04ContinuousStrats/0405-rationalize.html",

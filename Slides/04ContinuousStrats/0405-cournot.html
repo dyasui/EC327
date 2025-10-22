@@ -554,7 +554,7 @@ window.Quarto = {
 <h1>Cournot Duopoly</h1>
 <section id="cournot-vs-bertrand" class="level2">
 <h2 class="anchored" data-anchor-id="cournot-vs-bertrand">Cournot vs Bertrand</h2>
-<p>In the sandwich shop game, both players set <em>prices</em></p>
+<p>In the smart phone game, both players set <em>prices</em></p>
 <ul>
 <li>We call that a <span class="hi">Bertrand</span> model of oligopoly</li>
 </ul>
@@ -569,9 +569,12 @@ window.Quarto = {
 <div class="incremental">
 <ul class="incremental">
 <li><p>First of all, we need payoff functions for each player.</p></li>
-<li><p>Since the players are firms, and the goal of a firm is to maximize profit, we’ll use the firms’ profits as their payoffs.</p></li>
-<li><p>We can construct the profit functions by taking TR - TC, or in this case, Pq - c(q).</p></li>
-<li><p>Solving for P, we find that <span class="math inline">\(P = 100 - Q = 100 - q_1 - q_2\)</span>.</p></li>
+<li><p><em>Payoffs: profits</em>: <span class="math inline">\(\Pi(q) TR - TC = Pq - c(q)\)</span>.</p></li>
+<li><p>Common demand curve: <span class="math inline">\(P = 100 - Q\)</span>,</p>
+<ul class="incremental">
+<li>with two firms, so <span class="math inline">\(P = 100 - q_1 - q_2\)</span>.</li>
+</ul></li>
+<li><p>Both have <span class="math inline">\(MC=10\)</span></p></li>
 </ul>
 </div>
 <hr>
@@ -580,35 +583,76 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="cournot-competition-creating-the-payoff-functions-1">Cournot Competition: Creating the Payoff Functions</h2>
 <p>This gives us: <span class="math display">\[
 \begin{align}
-\pi_1 &amp;= (100 - q_1 - q_2)q_1 - 10q_1 &amp; \pi_2 &amp;= (100 - q_1 - q_2)q_2 - 10q_2\\
-&amp;= 100q_1 - q_1^2 - q_1q_2 - 10q_1 &amp; &amp;= 100q_2 - q_1q_2 - q_2^2 - 10q_2\\
-&amp;= 90q_1 - q_1^2 - q_1q_2 &amp; &amp;= 90q_2 - q_1q_2 - q_2^2\\
-&amp;= (90 - q_2)q_1 - q_1^2 &amp; &amp;= (90 - q_1)q_2 - q_2^2
+{\color{red}\pi_1} &amp;= (100 - {\color{red}q_1} - {\color{blue}q_2}){\color{red}q_1} - 10{\color{red}q_1} &amp; {\color{blue}\pi_2} &amp;= (100 - {\color{red}q_1} - {\color{blue}q_2}){\color{blue}q_2} - 10{\color{blue}q_2}\\
+&amp;= 100{\color{red}q_1} - {\color{red}q_1}^2 - {\color{red}q_1}{\color{blue}q_2} - 10{\color{red}q_1} &amp; &amp;= 100{\color{blue}q_2} - {\color{red}q_1}{\color{blue}q_2} - {\color{blue}q_2}^2 - 10{\color{blue}q_2}\\
+&amp;= 90{\color{red}q_1} - {\color{red}q_1}^2 - {\color{red}q_1}{\color{blue}q_2} &amp; &amp;= 90{\color{blue}q_2} - {\color{red}q_1}{\color{blue}q_2} - {\color{blue}q_2}^2\\
+&amp;= (90 - {\color{blue}q_2}){\color{red}q_1} - {\color{red}q_1}^2 &amp; &amp;= (90 - {\color{red}q_1}){\color{blue}q_2} - {\color{blue}q_2}^2
 \end{align}
-\]</span> —</p>
+\]</span></p>
+<hr>
 </section>
 <section id="cournot-competition-finding-best-response-functions" class="level2">
 <h2 class="anchored" data-anchor-id="cournot-competition-finding-best-response-functions">Cournot Competition: Finding Best-Response Functions</h2>
-<p>These best-response functions are in the by-now familiar quadratic form. Both of them have negative squared terms, so we can look for a maximum: <span class="math display">\[
+<p>These best-response functions are in the by-now familiar quadratic form. <span class="math display">\[
 \begin{align}
-q_1 &amp;= \frac{-(90 - q_2)}{2(-1)} &amp; q_2 &amp;= \frac{-(90 - q_1)}{2(-1)}\\
-&amp;= \frac{90 - q_2}{2} &amp; &amp;= \frac{90 - q_1}{2}\\
-&amp;= 45 - \frac{q_2}{2} &amp; &amp;= 45 - \frac{q_1}{2}
+\frac{d}{d {\color{red}q_1}}\left[(90 - {\color{blue}q_2}){\color{red}q_1} - {\color{red}q_1}^2\right] = 0, &amp;
+\frac{d}{d {\color{blue}q_2}}\left[ (90 - {\color{red}q_1}){\color{blue}q_2} - {\color{blue}q_2}^2\right]= 0
 \end{align}
-\]</span> —</p>
+\]</span></p>
+<p>Both of them have negative squared terms, so we can look for a maximum: <span class="math display">\[
+\begin{align}
+{\color{red}BR_1}(q_2) &amp;= \frac{(90 - {\color{blue}q_2})}{2(1)} &amp; {\color{blue}BR_2}(q_1) &amp;= \frac{(90 - {\color{red}q_1})}{2(1)}\\
+    &amp;= 45 - \frac{{\color{blue}q_2}}{2}      &amp;     &amp;= 45 - \frac{{\color{red}q_1}}{2}
+\end{align}
+\]</span></p>
+<hr>
+</section>
+<section id="cournot-equilibrium-graphically" class="level2">
+<h2 class="anchored" data-anchor-id="cournot-equilibrium-graphically">Cournot Equilibrium graphically</h2>
+<p><img src="figures/cournot-nash.png" class="img-fluid"></p>
+<hr>
 </section>
 <section id="cournot-oligopoly-finding-nash-equilibrium" class="level2">
 <h2 class="anchored" data-anchor-id="cournot-oligopoly-finding-nash-equilibrium">Cournot Oligopoly: Finding Nash Equilibrium</h2>
 <p>Solve these best-response rules as a system of equations: <span class="math display">\[
 \begin{align}
-q_1 &amp;= 45 - \frac{1}{2}q_2\\
-q_2 &amp;= 45 - \frac{1}{2}q_1\\
-\implies q_1 &amp;= 45 - \frac{1}{2}(45 - \frac{1}{2}q_1) &amp; q_2 &amp;= 45 - \frac{1}{2}(30)\\
-q_1 &amp;= 45 - \frac{45}{2} + \frac{1}{4}q_1 &amp; &amp;= 45 - 15\\
-\frac{3}{4}q_1 &amp;= \frac{45}{2} &amp; q_2^* &amp;= \boxed{30}\\
-q_1^* &amp;= \boxed{30}
+{\color{red}q_1} &amp;= 45 - \frac{1}{2}{\color{blue}q_2}\\
+{\color{blue}q_2} &amp;= 45 - \frac{1}{2}{\color{red}q_1}\\
+\implies {\color{red}q_1} &amp;= 45 - \frac{1}{2}(45 - \frac{1}{2}{\color{red}q_1}) &amp; {\color{blue}q_2} &amp;= 45 - \frac{1}{2}(30)\\
+{\color{red}q_1} &amp;= 45 - \frac{45}{2} + \frac{1}{4}{\color{red}q_1} &amp; &amp;= 45 - 15\\
+\frac{3}{4}{\color{red}q_1} &amp;= \frac{45}{2} &amp; {\color{blue}q_2}^* &amp;= \boxed{30}\\
+{\color{red}q_1}^* &amp;= \boxed{30}
 \end{align}
 \]</span></p>
+<hr>
+</section>
+<section id="cournot-outcome" class="level2">
+<h2 class="anchored" data-anchor-id="cournot-outcome">Cournot outcome</h2>
+<p>Compare to other market outcomes:</p>
+<ul>
+<li>Bertrand with symmetric marginal costs, <span class="math inline">\(P_1^{B*}=P_2^{B*}=MC\)</span>, profits were zero</li>
+</ul>
+<p>In this model:</p>
+<ul>
+<li><p><span class="math inline">\(P_1^{C*}=P_2^{C*}=30 &gt; MC= 10\)</span></p></li>
+<li><p><span class="math inline">\(\pi^{C*} = (100-30-30)(30) - 10(30) = \$900\)</span></p></li>
+</ul>
+<p>In Monopoly:</p>
+<ul>
+<li><span class="math inline">\(P_M^* = \$55\)</span>, <span class="math inline">\(Q_M = 45\)</span>, <span class="math inline">\(\pi_M = \$2,025\)</span></li>
+</ul>
+<hr>
+</section>
+<section id="extending-cournot-competition" class="level2">
+<h2 class="anchored" data-anchor-id="extending-cournot-competition">Extending Cournot competition</h2>
+<p>Let’s extend this:</p>
+<ul>
+<li><p><strong>What happens when a third firm enters the market?</strong></p>
+<ul>
+<li>Would prices fall? Would all three firms set similar prices?</li>
+</ul></li>
+<li><p>What other real world factors affect competitive outcomes?</p></li>
+</ul>
 <hr>
 <!-- ## Another Cournot Example
 > Crude oil is transported across the globe in enormous tanker ships called
@@ -627,22 +671,9 @@ q_1^* &amp;= \boxed{30}
 <p>In an oligopoly:</p>
 <ul>
 <li><p>Firms’ prices (quantities) are interdependent.</p></li>
+<li><p>Type of competition matters (price vs quantity)</p></li>
 <li><p>The best-response functions allow us to determine equilibrium prices (or quantities in Bertrand).</p></li>
 </ul>
-<!-- ---
-
-## Interactive Exercise: Market Dynamics
-
-Let’s extend this:
-
-- **What happens when a third firm enters the market?**
-
-  - Would prices fall? Would all three firms set similar prices?
-
-  - Or would competition force one firm out of the market?
-
-Discuss!
- -->
 
 
 </section>

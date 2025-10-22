@@ -565,113 +565,19 @@ Dante Yasui
 <p>Tim Cook’s profit based on his price and number of iPhone customers: <span class="math display">\[
 \begin{align}
 \pi_A &amp; = (\text{price} - \text{cost})(\textbf{quantity sold}) \\
-      &amp; = (P_A - 10)\mathbf{(100 - 2P_A + P_S)}
+      &amp; = (P_A - 12)\mathbf{(100 - 2P_A + P_S)}
 \end{align}
 \]</span></p>
-<p>Assume a marginal cost of 10 per unit for iPhones</p>
+<p>Assume a marginal cost of 12 per unit for iPhones</p>
 </section>
 <section id="samsungs-profit-function" class="slide level2">
 <h2>Samsung’s Profit Function</h2>
 <p>Samsung’s profit based on prices and number of Galaxys sold: <span class="math display">\[
 \begin{align}
-\pi_S &amp; = (P_S - 30)\mathbf{(100 - 2P_S + P_A)}
+\pi_S &amp; = (P_S - 20)\mathbf{(100 - 2P_S + P_A)}
 \end{align}
 \]</span></p>
-<p>Assume Samsung has a higher cost of 30 per Galaxy produced</p>
-</section>
-<section id="step-1-expand-apples-profit-function" class="slide level2">
-<h2>Step 1: Expand Apple’s Profit Function</h2>
-<p>Let’s expand Apple’s profit function: <span class="math display">\[
-\begin{align}
-\pi_A &amp; = (P_A - 10)(100 - 2P_A + P_S) \\
-      &amp; = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)
-\end{align}
-\]</span></p>
-</section>
-<section id="step-2-simplify-the-expanded-profit-function" class="slide level2">
-<h2>Step 2: Simplify the Expanded Profit Function</h2>
-<p>Let’s expand Apple’s profit function: <span class="math display">\[
-\begin{align}
-\pi_A &amp; = (P_A - 10)(100 - 2P_A + P_S) \\
-      &amp; = P_A(100 + P_S - 2P_A) - 10(100 + P_S - 2P_A)
-\end{align}
-\]</span></p>
-<p>Now, multiply out the terms:</p>
-<p><span class="math display">\[
-100 P_A + P_A P_S - 2 P_A^2 - 1000 - 10 P_S + 20 P_A
-\]</span></p>
-<p><strong>What should we do next to find the best price?</strong></p>
-</section>
-<section id="step-3-deriving-apples-best-response-function" class="slide level2">
-<h2>Step 3: Deriving Apple’s Best-Response Function</h2>
-<p>To find the best price, we differentiate <span class="math inline">\(\Pi_A\)</span> with respect to <span class="math inline">\(P_A\)</span>.</p>
-<h3 id="differentiation">Differentiation:</h3>
-<p><span class="math display">\[
-\frac{d\pi_A}{dP_A} = 100 + P_S - 4P_A + 20 = P_S + 120 - 4P_A
-\]</span></p>
-<p>Set the derivative equal to zero for maximization: <span class="math display">\[
-P_S + 120 - 4P_A = 0
-\]</span> Solve for <span class="math inline">\(P_A\)</span>: <span class="math display">\[
-BR_A(P_S) = 30 + 0.25P_S
-\]</span></p>
-</section>
-<section id="for-those-without-calculus-background" class="slide level2">
-<h2>For those without Calculus background</h2>
-<p>The profit function we wrote out in step 2 seems complicated, so lets simplify it:</p>
-<p><span class="math display">\[
-\pi_A = - 1000 - 10 P_S +  \mathbf{P_A} (120 + P_S) - 2 \mathbf{P_A}^2
-\]</span></p>
-<p>As Apple, we can only set our own price, <span class="math inline">\(P_A\)</span>, everything else we can just treat as a constant</p>
-<p>This fits a more general pattern:</p>
-<p><span class="math display">\[
-S = A + BA - CA^2
-\]</span></p>
-</section>
-<section id="for-those-without-calculus-background-1" class="slide level2">
-<h2>For those without Calculus background</h2>
-<p><span class="math display">\[
-S = A + BA - CA^2
-\]</span></p>
-<p>If we want to find the maximum of <span class="math inline">\(S\)</span> in this equation as a function of <span class="math inline">\(A\)</span>, as long as <span class="math inline">\(C&gt;0\)</span>, this will take the shape of a parabola with a single peak.</p>
-<ul>
-<li class="fragment">The maxmimum of this function will be reached at:</li>
-<li class="fragment"><span class="math inline">\(A^* = \frac{B}{2C}\)</span></li>
-</ul>
-</section>
-<section id="for-those-without-calculus-background-2" class="slide level2">
-<h2>For those without Calculus background</h2>
-<p>So going back to Apple’s profit function,</p>
-<ul>
-<li>If <span class="math inline">\(B = 120 + P_S\)</span></li>
-<li>and <span class="math inline">\(C = 2\)</span></li>
-</ul>
-<p>then applying that the maximum choice will meet <span class="math inline">\(\frac{B}{2C}\)</span>,</p>
-<p>we get the same answer of <span class="math inline">\(P_A^* = 30 + 0.25P_S\)</span></p>
-</section>
-<section id="step-4-samsungs-best-response-function" class="slide level2">
-<h2>Step 4: Samsung’s Best-Response Function</h2>
-<p>Samsung’s best-response function is similar:</p>
-<p><span class="math display">\[
-\begin{align}
-\pi_A &amp; = (P_S - 30)(100 - 2P_S + P_A) \\
-      &amp; = 100P_S - 2P_S^2 + P_A P_S - 3000 + 60P_S - 30P_A
-\end{align}
-\]</span></p>
-<p><span class="math display">\[
-\begin{align*}
-\frac{d\pi_S}{dP_S} &amp; = 0 \\
-100 - 4P_S + P_A + 60 &amp; = 0 \\
-BR_S(P_A) &amp; = 40 + .25P_A
-\end{align*}
-\]</span></p>
-<h3 id="question-how-do-we-find-the-nash"><strong>Question:</strong> How do we find the Nash?</h3>
-<ul>
-<li class="fragment">We have one best response rule for each player
-<ul>
-<li class="fragment">as a function of the other player’s pricing strategy</li>
-</ul></li>
-<li class="fragment">I.e., a system of <em>two equations</em> and <em>two unknowns</em></li>
-</ul>
+<p>Assume Samsung has a higher cost of 20 per Galaxy produced</p>
 </section>
 <section id="what-is-a-ne-in-this-situation" class="slide level2">
 <h2>What is a NE in this situation?</h2>
@@ -691,41 +597,195 @@ BR_S(P_A) &amp; = 40 + .25P_A
 </ul></li>
 </ul>
 </section>
+<section id="step-1-expand-apples-profit-function" class="slide level2">
+<h2>Step 1: Expand Apple’s Profit Function</h2>
+<p>Let’s expand Apple’s profit function: <span class="math display">\[
+\begin{align}
+\pi_A &amp; = (P_A - 12)(100 - 2P_A + P_S) \\
+      &amp; = P_A(100 + P_S - 2P_A) - 12(100 + P_S - 2P_A)
+\end{align}
+\]</span></p>
+</section>
+<section id="step-2-simplify-the-expanded-profit-function" class="slide level2">
+<h2>Step 2: Simplify the Expanded Profit Function</h2>
+<p>Let’s expand Apple’s profit function: <span class="math display">\[
+\begin{align}
+\pi_A &amp; = (P_A - 10)(100 - 2P_A + P_S) \\
+      &amp; = P_A(100 + P_S - 2P_A) - 12(100 + P_S - 2P_A)
+\end{align}
+\]</span></p>
+<p>Now, multiply out the terms:</p>
+<p><span class="math display">\[
+100 P_A + P_A P_S - 2 P_A^2 - 1200 - 12 P_S + 24 P_A
+\]</span></p>
+<p><strong>What should we do next to find the best price?</strong></p>
+</section>
+<section id="step-3-deriving-apples-best-response-function" class="slide level2">
+<h2>Step 3: Deriving Apple’s Best-Response Function</h2>
+<p>To find the best price, we differentiate <span class="math inline">\(\Pi_A\)</span> with respect to <span class="math inline">\(P_A\)</span>.</p>
+<h3 id="differentiation">Differentiation:</h3>
+<p><span class="math display">\[
+\frac{d\pi_A}{dP_A} = 100 + P_S - 4P_A + 24 = P_S + 124 - 4P_A
+\]</span></p>
+<p>Set the derivative equal to zero for maximization: <span class="math display">\[
+P_S + 124 - 4P_A = 0
+\]</span> Solve for <span class="math inline">\(P_A\)</span>: <span class="math display">\[
+BR_A(P_S) = 31 + \frac{1}{4}P_S
+\]</span></p>
+</section>
+<section id="for-those-without-calculus-background" class="slide level2">
+<h2>For those without Calculus background</h2>
+<p>Simplify profit function from step 2:</p>
+<p><span class="math display">\[
+\pi_A = {\color{purple}- 1200 - 12 P_S} +  \mathbf{P_A} {\color{blue}(124 + P_S)} - {\color{green}2} \mathbf{P_A}^2
+\]</span></p>
+<p>Apple’s profit <span class="math inline">\(\pi_A\)</span>, depends on their choice variable, <span class="math inline">\(P_A\)</span> * everything else we can just treat as <em>constant</em></p>
+<p>This fits a more general pattern:</p>
+<p><span class="math display">\[
+y = {\color{purple}A} + {\color{blue}B}x - {\color{green}C}x^2
+\]</span></p>
+</section>
+<section id="for-those-without-calculus-background-1" class="slide level2">
+<h2>For those without Calculus background</h2>
+<p><span class="math display">\[
+f(x) = A + Bx - Cx^2
+\]</span></p>
+<p>We want to find the maximum of <span class="math inline">\(f(x)\)</span></p>
+<ul>
+<li>as long as <span class="math inline">\(C&gt;0\)</span>, this will take the shape of a parabola with a single peak.</li>
+</ul>
+<ul>
+<li class="fragment">The maxmimum of this function will be reached at:</li>
+<li class="fragment"><span class="math inline">\(x^* = \frac{B}{2C}\)</span></li>
+</ul>
+</section>
+<section id="for-those-without-calculus-background-2" class="slide level2">
+<h2>For those without Calculus background</h2>
+<p><span class="math display">\[
+\pi_A = {\color{purple}- 1200 - 12 P_S} +  \mathbf{P_A} {\color{blue}(124 + P_S)} - {\color{green}2} \mathbf{P_A}^2
+\]</span></p>
+<p>So going back to Apple’s profit function,</p>
+<ul>
+<li>If <span class="math inline">\(\color{blue}B = 124 + P_S\)</span></li>
+<li>and <span class="math inline">\(\color{green}C = 2\)</span></li>
+</ul>
+<p>then applying that the maximum choice will meet <span class="math inline">\(\frac{B}{2C} = \frac{\color{blue}124+P_S}{2\times {\color{green} 2}}\)</span>,</p>
+<p>we get the same answer of <span class="math inline">\(P_A^* = \frac{124 + P_S}{4}\)</span></p>
+</section>
+<section id="step-4-samsungs-best-response-function" class="slide level2">
+<h2>Step 4: Samsung’s Best-Response Function</h2>
+<p>Samsung’s best-response function is similar:</p>
+<p><span class="math display">\[
+\begin{align}
+\pi_A &amp; = (P_S - 20)(100 - 2P_S + P_A) \\
+      &amp; = 100P_S - 2P_S^2 + P_A P_S - 2000 + 40P_S - 20P_A
+\end{align}
+\]</span></p>
+<p><span class="math display">\[
+\begin{align*}
+\frac{d\pi_S}{dP_S} &amp; = 0 \\
+100 - 4P_S + P_A + 40 &amp; = 0 \\
+BR_S(P_A) &amp; = 35 + .25P_A
+\end{align*}
+\]</span></p>
+</section>
+<section id="question-how-do-we-find-the-nash" class="slide level2">
+<h2><strong>Question:</strong> How do we find the Nash?</h2>
+<p><span class="math display">\[
+P_A = 31 + 0.25P_S
+\]</span> <span class="math display">\[
+P_S = 45 + 0.25P_A
+\]</span></p>
+<ul>
+<li class="fragment">We have one best response rule for each player
+<ul>
+<li class="fragment">as a function of the other player’s pricing strategy</li>
+</ul></li>
+<li class="fragment">I.e., a system of <em>two equations</em> and <em>two unknowns</em></li>
+</ul>
+</section>
 <section id="step-5-solve-for-nash-equilibrium" class="slide level2">
 <h2>Step 5: Solve for Nash Equilibrium</h2>
 <p>We solve the system of equations for <span class="math inline">\(P_A\)</span> and <span class="math inline">\(P_S\)</span>: <span class="math display">\[
-P_A = 30 + 0.25P_S
+P_A = 31 + 0.25P_S
 \]</span> <span class="math display">\[
-P_S = 40 + 0.25P_A
+P_S = 35 + 0.25P_A
 \]</span></p>
+<p>Remember the following from definition of Nash:</p>
+<ul>
+<li><p>both players’ strategies are their best responses</p></li>
+<li><p>equilibrium is intersection of best responses</p></li>
+</ul>
 </section>
-<section id="step-5-solve-for-nash-equilibrium-1" class="slide level2">
-<h2>Step 5: Solve for Nash Equilibrium</h2>
-<p>Substitute one equation into the other: <span class="math display">\[
-P_A = 30 + 0.25(40 + 0.25P_S)
-\]</span> Simplify: <span class="math display">\[
-P_A = 30 + 10 + 0.0625P_A
-\]</span> Solve for <span class="math inline">\(P_S\)</span>: <span class="math display">\[
-\begin{align*}
-  P_A(1-0.0625) &amp; = 40 \\
-  P_S &amp; = 42.67
-\end{align*}
+<section id="step-5.1-transform-equations" class="slide level2">
+<h2>Step 5.1: Transform equations</h2>
+<p>Either solve for Apple or Samsung’s price first.</p>
+<ul>
+<li><p>I’ll start by solving for Samsung’s:</p>
+<ul>
+<li>From Apple’s Best response: <span class="math display">\[
+\color{purple}
+P_A = \frac{124 + P_S}{4}
+\]</span></li>
+</ul></li>
+<li><p>We can re-arrange Samsung’s best response for <span class="math inline">\(P_A\)</span> in terms of <span class="math inline">\(P_S\)</span>:</p></li>
+</ul>
+<p><span class="math display">\[
+\color{blue}
+\begin{align}
+P_S = \frac{140+P_A}{4} \\
+\Rightarrow 4P_S - 140 = P_A
+\end{align}
 \]</span></p>
-<p>Then, plug <span class="math inline">\(P_S = 20\)</span> back into the first equation: <span class="math display">\[
-P_S = 40 + 0.25(42.67) = 50.67
+<p>Solve for <span class="math inline">\(P_S\)</span>:</p>
+</section>
+<section id="step-5.2-solve-for-one-variable" class="slide level2">
+<h2>Step 5.2: Solve for one variable</h2>
+<p>We’re going to use the fact that <span class="math inline">\(P_A=BR_A\)</span> in equilibrium: <span class="math display">\[
+\begin{align}
+  {\color{blue}4P_S - 140} &amp; = {\color{purple} \frac{124 +P_S}{4}} \\
+  \Rightarrow 16P_S - 560 &amp; = 124 + P_S \\
+  \Rightarrow P_S^* &amp; = \frac{684}{15} = 45.6 \\
+\end{align}
+\]</span></p>
+<p>When Samsung sets <span class="math inline">\(P_S=45.6\)</span>, Apple’s best response will fulfill Samsung’s belief.</p>
+</section>
+<section id="step-5.3-solve-for-the-other-variable" class="slide level2">
+<h2>Step 5.3: Solve for the other variable</h2>
+<p>We could go throught steps 5.1-5.2 to solve for Apple’s eqm strategy.</p>
+<ul>
+<li>Or we could just use their best-response to Samsung’s eqm strategy!</li>
+</ul>
+<p>We already solved for <span class="math inline">\(P_S^*=45.6\)</span>, so plug it into <span class="math inline">\(BR_A(P_S^*)=P_A^*\)</span> <span class="math display">\[
+\begin{align}
+  P_A^* &amp; = 4{\color{green}P_S^*} -140 \\
+      &amp; = 4\times{\color{green} \frac{684}{15}} - 140 \\
+      &amp; = 182.4 - 140 = 42.4 \\
+\end{align}
 \]</span></p>
 </section>
 <section id="step-6-conclusion" class="slide level2">
 <h2>Step 6: Conclusion</h2>
-<p>At equilibrium:</p>
+<p>In our Bertrand equilibrium:</p>
 <ul>
-<li><p><span class="math inline">\(P_A = 42.67\)</span>, <span class="math inline">\(P_S = 50.67\)</span></p></li>
-<li><p>Do either firm have an incentive to deviate?</p>
+<li><p><span class="math inline">\(P_A = 42.4\)</span>, <span class="math inline">\(P_S = 45.6\)</span></p></li>
+<li><p><span class="math inline">\(\Pi_A(P_A^*, P_S^*) = \$1,848.32\)</span></p></li>
+<li><p><span class="math inline">\(\Pi_S(P_A^*, P_S^*) = \$1,720.32\)</span></p>
 <ul>
-<li>How would we check?</li>
+<li>Apple’s lower MC results in lower eqm price, higher profit than Samsung</li>
 </ul></li>
+<li><p>Unlike Bertrand model with perfect substitutes,</p>
+<ul>
+<li>here firms earn positive profit because of product <em>differentiation</em></li>
+</ul></li>
+<li><p>Do either firm have an incentive to deviate?</p></li>
 </ul>
 </section>
+<section id="checking-apples-best-response" class="slide level2">
+<h2>Checking Apple’s Best response</h2>
+<p>Apple’s profit when Samsung’s price is set at <span class="math inline">\(P_S^*=45.6\)</span>:</p>
+
+<img data-src="figures/apple-profit.png" class="r-stretch"></section>
 <section id="continous-strategy-nash-graphically" class="slide level2">
 <h2>Continous Strategy Nash Graphically</h2>
 
@@ -739,9 +799,6 @@ P_S = 40 + 0.25(42.67) = 50.67
 <li>Step 4: Repeat for Samsung.</li>
 <li>Step 5: Solve for Nash equilibrium.</li>
 </ul>
-</section>
-<section class="slide level2">
-
 <!-- ## Graphically:
 
 ![](figures/Dixit_fig5.1.png) -->
@@ -753,7 +810,7 @@ P_S = 40 + 0.25(42.67) = 50.67
 </section>
 <section id="cournot-vs-bertrand" class="slide level2">
 <h2>Cournot vs Bertrand</h2>
-<p>In the sandwich shop game, both players set <em>prices</em></p>
+<p>In the smart phone game, both players set <em>prices</em></p>
 <ul>
 <li>We call that a <span class="hi">Bertrand</span> model of oligopoly</li>
 </ul>
@@ -766,44 +823,83 @@ P_S = 40 + 0.25(42.67) = 50.67
 <h2>Cournot Competition: Creating the Payoff Functions</h2>
 <ul>
 <li class="fragment"><p>First of all, we need payoff functions for each player.</p></li>
-<li class="fragment"><p>Since the players are firms, and the goal of a firm is to maximize profit, we’ll use the firms’ profits as their payoffs.</p></li>
-<li class="fragment"><p>We can construct the profit functions by taking TR - TC, or in this case, Pq - c(q).</p></li>
-<li class="fragment"><p>Solving for P, we find that <span class="math inline">\(P = 100 - Q = 100 - q_1 - q_2\)</span>.</p></li>
+<li class="fragment"><p><em>Payoffs: profits</em>: <span class="math inline">\(\Pi(q) TR - TC = Pq - c(q)\)</span>.</p></li>
+<li class="fragment"><p>Common demand curve: <span class="math inline">\(P = 100 - Q\)</span>,</p>
+<ul>
+<li class="fragment">with two firms, so <span class="math inline">\(P = 100 - q_1 - q_2\)</span>.</li>
+</ul></li>
+<li class="fragment"><p>Both have <span class="math inline">\(MC=10\)</span></p></li>
 </ul>
 </section>
 <section id="cournot-competition-creating-the-payoff-functions-1" class="slide level2">
 <h2>Cournot Competition: Creating the Payoff Functions</h2>
 <p>This gives us: <span class="math display">\[
 \begin{align}
-\pi_1 &amp;= (100 - q_1 - q_2)q_1 - 10q_1 &amp; \pi_2 &amp;= (100 - q_1 - q_2)q_2 - 10q_2\\
-&amp;= 100q_1 - q_1^2 - q_1q_2 - 10q_1 &amp; &amp;= 100q_2 - q_1q_2 - q_2^2 - 10q_2\\
-&amp;= 90q_1 - q_1^2 - q_1q_2 &amp; &amp;= 90q_2 - q_1q_2 - q_2^2\\
-&amp;= (90 - q_2)q_1 - q_1^2 &amp; &amp;= (90 - q_1)q_2 - q_2^2
+{\color{red}\pi_1} &amp;= (100 - {\color{red}q_1} - {\color{blue}q_2}){\color{red}q_1} - 10{\color{red}q_1} &amp; {\color{blue}\pi_2} &amp;= (100 - {\color{red}q_1} - {\color{blue}q_2}){\color{blue}q_2} - 10{\color{blue}q_2}\\
+&amp;= 100{\color{red}q_1} - {\color{red}q_1}^2 - {\color{red}q_1}{\color{blue}q_2} - 10{\color{red}q_1} &amp; &amp;= 100{\color{blue}q_2} - {\color{red}q_1}{\color{blue}q_2} - {\color{blue}q_2}^2 - 10{\color{blue}q_2}\\
+&amp;= 90{\color{red}q_1} - {\color{red}q_1}^2 - {\color{red}q_1}{\color{blue}q_2} &amp; &amp;= 90{\color{blue}q_2} - {\color{red}q_1}{\color{blue}q_2} - {\color{blue}q_2}^2\\
+&amp;= (90 - {\color{blue}q_2}){\color{red}q_1} - {\color{red}q_1}^2 &amp; &amp;= (90 - {\color{red}q_1}){\color{blue}q_2} - {\color{blue}q_2}^2
 \end{align}
-\]</span> —</p>
+\]</span></p>
 </section>
 <section id="cournot-competition-finding-best-response-functions" class="slide level2">
 <h2>Cournot Competition: Finding Best-Response Functions</h2>
-<p>These best-response functions are in the by-now familiar quadratic form. Both of them have negative squared terms, so we can look for a maximum: <span class="math display">\[
+<p>These best-response functions are in the by-now familiar quadratic form. <span class="math display">\[
 \begin{align}
-q_1 &amp;= \frac{-(90 - q_2)}{2(-1)} &amp; q_2 &amp;= \frac{-(90 - q_1)}{2(-1)}\\
-&amp;= \frac{90 - q_2}{2} &amp; &amp;= \frac{90 - q_1}{2}\\
-&amp;= 45 - \frac{q_2}{2} &amp; &amp;= 45 - \frac{q_1}{2}
+\frac{d}{d {\color{red}q_1}}\left[(90 - {\color{blue}q_2}){\color{red}q_1} - {\color{red}q_1}^2\right] = 0, &amp;
+\frac{d}{d {\color{blue}q_2}}\left[ (90 - {\color{red}q_1}){\color{blue}q_2} - {\color{blue}q_2}^2\right]= 0
 \end{align}
-\]</span> —</p>
+\]</span></p>
+<p>Both of them have negative squared terms, so we can look for a maximum: <span class="math display">\[
+\begin{align}
+{\color{red}BR_1}(q_2) &amp;= \frac{(90 - {\color{blue}q_2})}{2(1)} &amp; {\color{blue}BR_2}(q_1) &amp;= \frac{(90 - {\color{red}q_1})}{2(1)}\\
+    &amp;= 45 - \frac{{\color{blue}q_2}}{2}      &amp;     &amp;= 45 - \frac{{\color{red}q_1}}{2}
+\end{align}
+\]</span></p>
 </section>
+<section id="cournot-equilibrium-graphically" class="slide level2">
+<h2>Cournot Equilibrium graphically</h2>
+
+<img data-src="figures/cournot-nash.png" class="r-stretch"></section>
 <section id="cournot-oligopoly-finding-nash-equilibrium" class="slide level2">
 <h2>Cournot Oligopoly: Finding Nash Equilibrium</h2>
 <p>Solve these best-response rules as a system of equations: <span class="math display">\[
 \begin{align}
-q_1 &amp;= 45 - \frac{1}{2}q_2\\
-q_2 &amp;= 45 - \frac{1}{2}q_1\\
-\implies q_1 &amp;= 45 - \frac{1}{2}(45 - \frac{1}{2}q_1) &amp; q_2 &amp;= 45 - \frac{1}{2}(30)\\
-q_1 &amp;= 45 - \frac{45}{2} + \frac{1}{4}q_1 &amp; &amp;= 45 - 15\\
-\frac{3}{4}q_1 &amp;= \frac{45}{2} &amp; q_2^* &amp;= \boxed{30}\\
-q_1^* &amp;= \boxed{30}
+{\color{red}q_1} &amp;= 45 - \frac{1}{2}{\color{blue}q_2}\\
+{\color{blue}q_2} &amp;= 45 - \frac{1}{2}{\color{red}q_1}\\
+\implies {\color{red}q_1} &amp;= 45 - \frac{1}{2}(45 - \frac{1}{2}{\color{red}q_1}) &amp; {\color{blue}q_2} &amp;= 45 - \frac{1}{2}(30)\\
+{\color{red}q_1} &amp;= 45 - \frac{45}{2} + \frac{1}{4}{\color{red}q_1} &amp; &amp;= 45 - 15\\
+\frac{3}{4}{\color{red}q_1} &amp;= \frac{45}{2} &amp; {\color{blue}q_2}^* &amp;= \boxed{30}\\
+{\color{red}q_1}^* &amp;= \boxed{30}
 \end{align}
 \]</span></p>
+</section>
+<section id="cournot-outcome" class="slide level2">
+<h2>Cournot outcome</h2>
+<p>Compare to other market outcomes:</p>
+<ul>
+<li>Bertrand with symmetric marginal costs, <span class="math inline">\(P_1^{B*}=P_2^{B*}=MC\)</span>, profits were zero</li>
+</ul>
+<p>In this model:</p>
+<ul>
+<li><p><span class="math inline">\(P_1^{C*}=P_2^{C*}=30 &gt; MC= 10\)</span></p></li>
+<li><p><span class="math inline">\(\pi^{C*} = (100-30-30)(30) - 10(30) = \$900\)</span></p></li>
+</ul>
+<p>In Monopoly:</p>
+<ul>
+<li><span class="math inline">\(P_M^* = \$55\)</span>, <span class="math inline">\(Q_M = 45\)</span>, <span class="math inline">\(\pi_M = \$2,025\)</span></li>
+</ul>
+</section>
+<section id="extending-cournot-competition" class="slide level2">
+<h2>Extending Cournot competition</h2>
+<p>Let’s extend this:</p>
+<ul>
+<li><p><strong>What happens when a third firm enters the market?</strong></p>
+<ul>
+<li>Would prices fall? Would all three firms set similar prices?</li>
+</ul></li>
+<li><p>What other real world factors affect competitive outcomes?</p></li>
+</ul>
 </section>
 <section class="slide level2">
 
@@ -824,471 +920,11 @@ q_1^* &amp;= \boxed{30}
 <p>In an oligopoly:</p>
 <ul>
 <li><p>Firms’ prices (quantities) are interdependent.</p></li>
+<li><p>Type of competition matters (price vs quantity)</p></li>
 <li><p>The best-response functions allow us to determine equilibrium prices (or quantities in Bertrand).</p></li>
 </ul>
-<!-- ---
-
-## Interactive Exercise: Market Dynamics
-
-Let’s extend this:
-
-- **What happens when a third firm enters the market?**
-
-  - Would prices fall? Would all three firms set similar prices?
-
-  - Or would competition force one firm out of the market?
-
-Discuss!
- -->
 <!-- {{< include 0405-rationalize.qmd >}} -->
-</section></section>
-<section>
-<section id="critical-discussion-of-the-nash-equilibrium-concept" class="title-slide slide level1 center">
-<h1>Critical Discussion of the Nash Equilibrium Concept</h1>
-
-</section>
-<section id="discussion-of-nash-equilibrium" class="slide level2">
-<h2>Discussion of Nash Equilibrium</h2>
-<p>Now that you’ve learned what it means and seen it applied to several different games, <em>what do you think about the concept of <span class="hi">Nash Equilbrium</span>?</em></p>
-<ul>
-<li class="fragment">Does it make intuitive sense? Do you think people really reason through their <strong>best response</strong> to any possible situation?</li>
-<li class="fragment">Is there anything relevant to strategic interactions you can think of that is left out of our models so far?</li>
-</ul>
-</section>
-<section id="the-appeal-of-nash-equilibrium" class="slide level2">
-<h2>The Appeal of Nash Equilibrium</h2>
-<p>The Nash equilibrium is based on the idea that every player’s strategy should be the best response to the strategies of others.</p>
-<h3 id="benefits-of-using-ne">Benefits of using NE:</h3>
-<ul>
-<li class="fragment"><p>In non-cooperative games, it makes sense that each player is making their best response to their opponent</p>
-<ul>
-<li class="fragment"><p>If you can’t enforce any strategy onto your opponent, you should stick with whatever doesn’t make you worse off, given what your opponent chose.</p></li>
-<li class="fragment"><p>In any situation which is not a Nash, there is some player who could have done better:</p>
-<ul>
-<li class="fragment">I.E., an NE leaves no-one with any <em>regrets</em></li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="some-potential-critiques-of-ne-predictions" class="slide level2">
-<h2>Some Potential Critiques of NE predictions</h2>
-<ul>
-<li class="fragment"><p>IESDS, Best-response functions may not be how players actually think</p>
-<ul>
-<li class="fragment">But NE only describe the <em>stable</em> combinations of strategies, there are many ways of getting there: learning from experience, repeated play, intuition, etc.</li>
-</ul></li>
-</ul>
-</section>
-<section id="some-potential-critiques-of-ne-predictions-1" class="slide level2">
-<h2>Some Potential Critiques of NE predictions</h2>
-<ul>
-<li class="fragment"><p>IESDS, Best-response functions may not be how players actually think</p></li>
-<li class="fragment"><p>Nash doesn’t explicitly take risk into account</p>
-<ul>
-<li class="fragment"><p>with <em>ordinal</em> payoffs, we might leave out the incentive to play it safe to avoid very bad outcomes</p></li>
-<li class="fragment"><p>but if we instead use <em>cardinal</em> payoffs, or expected utilities, we can still extend our models to those situations</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="some-potential-critiques-of-ne-predictions-2" class="slide level2">
-<h2>Some Potential Critiques of NE predictions</h2>
-<ul>
-<li class="fragment"><p>IESDS, Best-response functions may not be how players actually think</p></li>
-<li class="fragment"><p>Nash doesn’t explicitly take risk into account</p></li>
-<li class="fragment"><p>NE don’t have to be <em>unique</em></p>
-<ul>
-<li class="fragment">If we care <em>predictions</em>, NE doesn’t always tell us what will happen, sometimes there can be multiple possible strategy profiles which are equally stable which means any one could happen depending how the game plays out</li>
-</ul></li>
-</ul>
-</section>
-<section id="criticism-1-treatment-of-risk" class="slide level2">
-<h2>Criticism 1: Treatment of Risk</h2>
-<p>We’ve mentioned before how sometimes the strategies played in NE don’t line up with what might intuitively feel like the ‘safe’ strategies.</p>
-</section>
-<section id="criticism-1-treatment-of-risk-1" class="slide level2">
-<h2>Criticism 1: Treatment of Risk</h2>
-<p>Let’s look an an example:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Row, Column</th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>A</strong></td>
-<td>2,2</td>
-<td>3,1</td>
-<td>0,2</td>
-</tr>
-<tr class="even">
-<td><strong>B</strong></td>
-<td>1,3</td>
-<td>2,2</td>
-<td>3,2</td>
-</tr>
-<tr class="odd">
-<td><strong>C</strong></td>
-<td>2,0</td>
-<td>2,3</td>
-<td>2,2</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>What’s the NE?</p>
-</blockquote>
-</section>
-<section id="criticism-1-treatment-of-risk-2" class="slide level2">
-<h2>Criticism 1: Treatment of Risk</h2>
-<p>Let’s look an an example:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Row, Column</th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>A</strong></td>
-<td><u>2</u>,<u>2</u></td>
-<td><u>3</u>,1</td>
-<td>0,<u>2</u></td>
-</tr>
-<tr class="even">
-<td><strong>B</strong></td>
-<td>1,<u>3</u></td>
-<td>2,2</td>
-<td><u>3</u>,2</td>
-</tr>
-<tr class="odd">
-<td><strong>C</strong></td>
-<td><u>2</u>,0</td>
-<td>2,<u>3</u></td>
-<td>2,2</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>What’s the NE?</p>
-</blockquote>
-<ul>
-<li>(<strong>A</strong>, <strong>A</strong>)</li>
-</ul>
-</section>
-<section id="criticism-1-treatment-of-risk-3" class="slide level2">
-<h2>Criticism 1: Treatment of Risk</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Row, Column</th>
-<th>A</th>
-<th>B</th>
-<th>C</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>A</strong></td>
-<td>2,2</td>
-<td>3,1</td>
-<td>0,2</td>
-</tr>
-<tr class="even">
-<td><strong>B</strong></td>
-<td>1,3</td>
-<td>2,2</td>
-<td>3,2</td>
-</tr>
-<tr class="odd">
-<td><strong>C</strong></td>
-<td>2,0</td>
-<td>2,3</td>
-<td>2,2</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li class="fragment"><p>But what happens if the other player mistakenly plays <strong>C</strong>?</p></li>
-<li class="fragment"><p>Then it might make sense to choose the safe option of <strong>C</strong></p></li>
-<li class="fragment"><p>You could get the same payoff of 2, but ensure that you wouldn’t have a chance to get 0</p>
-<ul>
-<li class="fragment">The idea of <span class="hi">trembling-hand perfection</span> takes this into account by allowing probabilistic errors in strategies.</li>
-</ul></li>
-</ul>
-</section>
-<section id="criticism-1-treatment-of-risk-4" class="slide level2">
-<h2>Criticism 1: Treatment of Risk</h2>
-<p>What about this game?</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>A, B</th>
-<th>Left</th>
-<th>Right</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Up</strong></td>
-<td>9, 10</td>
-<td>8, 9.9</td>
-</tr>
-<tr class="even">
-<td><strong>Down</strong></td>
-<td>10, 10</td>
-<td>-1000, 9.9</td>
-</tr>
-</tbody>
-</table>
-<p>Let’s suppose that there is a small probability <span class="math inline">\(p\)</span> that Player B will accidentally play Right &gt; What is Player A’s expected utility of playing Up?</p>
-<p><span class="math display">\[ EU_A(Up) = 9(1-p) + 8p \]</span></p>
-<blockquote>
-<p>What is Player A’s expected utility of playing Down?</p>
-</blockquote>
-<p><span class="math display">\[ EU_B(Down) = 10(1-p) - 1000p \]</span></p>
-<p>So Player A should only play Down if:</p>
-<p><span class="math display">\[
-\begin{align}
-10(1-p) - 1000p &gt; &amp; 9(1-p) + 8p \\
-              p &gt; &amp; \frac{1}{1009}
-\end{align}
-\]</span></p>
-</section>
-<section id="criticism-2-multiple-equilibria" class="slide level2">
-<h2>Criticism 2: Multiple Equilibria</h2>
-<p>In some games, multiple Nash equilibria exist. This can create problems because: - It’s unclear which equilibrium the players will choose. - Some equilibria may not make sense in real-life situations.</p>
-<h3 id="example">Example:</h3>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Dante, Jose</th>
-<th>T4</th>
-<th>Metropol</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>T4</strong></td>
-<td>2, 1</td>
-<td>0, 0</td>
-</tr>
-<tr class="even">
-<td><strong>Metropol</strong></td>
-<td>0, 0</td>
-<td>1, 2</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>In coordination games like <strong>Battle of the Sexes</strong>, there are multiple stable outcomes.</li>
-</ul>
-</section>
-<section id="criticism-2-multiple-equilibria-1" class="slide level2">
-<h2>Criticism 2: Multiple Equilibria</h2>
-<h3 id="another-example">Another Example</h3>
-<p>Pick one player to be <span class="h">Boston</span>, one player as <span class="h">San Francisco</span></p>
-<p>Here are 9 cities which must be evenly divided between the two players:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li class="fragment">Atlanta</li>
-<li class="fragment">Chicago</li>
-<li class="fragment">Dallas</li>
-<li class="fragment">Denver</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li class="fragment">Los Angeles</li>
-<li class="fragment">New York</li>
-<li class="fragment">Philidelphia</li>
-<li class="fragment">Seattle</li>
-</ul>
-</div></div>
-<p>You win if you evenly split this list between you without communicating, and without overlaps or missed cities</p>
-</section>
-<section id="criticism-2-multiple-equilibria-2" class="slide level2">
-<h2>Criticism 2: Multiple Equilibria</h2>
-<h3 id="arriving-at-specific-ne">Arriving at Specific NE</h3>
-<p>This last example shows the importance of shared background and culture in forming strategic beliefs for cases with multiple NE</p>
-<ul>
-<li class="fragment"><p>So far, our theory have given us sets of NE which are stable given <em>any</em> set of realized beliefs</p></li>
-<li class="fragment"><p>But it doesn’t help us exaplain how those beliefs might be formed</p></li>
-<li class="fragment"><p><span class="hi">Evolutionary Game Theory</span> adds tools to our basic toolkit to try to answer some of these limitations</p></li>
-</ul>
-</section>
-<section id="criticism-2-multiple-equilibria-3" class="slide level2">
-<h2>Criticism 2: Multiple Equilibria</h2>
-<p>In the later chapters we will develop ideas to help narrow down the more general concept of NE</p>
-<h3 id="refinements-to-ne">Refinements to NE</h3>
-<p>A <span class="hi">refinement</span> is a restriction on the more general assumptions needed for Nash Equilibria</p>
-<p><strong>Examples:</strong></p>
-<ul>
-<li><span class="hi">mixed-strategy Nash equilibrium</span> allows for probabalistic plays</li>
-<li><span class="hi">subgame-perfect Nash equilibria</span> aka <em>rollback equilibria</em> are refinements in <em>sequential games</em></li>
-<li><span class="hi">perfect Bayesian equilibrium</span> has to deal with informations asymmetries</li>
-</ul>
-</section>
-<section id="criticism-3-requirements-of-rationality" class="slide level2">
-<h2>Criticism 3: Requirements of Rationality</h2>
-<p>One major criticism is that Nash equilibrium assumes:</p>
-<ul>
-<li><p>Players have perfect knowledge of others’ strategies.</p></li>
-<li><p>Players have rational preferences <em>and know that their opponent is rational</em></p></li>
-</ul>
-<h3 id="counter-argument">Counter-Argument:</h3>
-<ul>
-<li>What are some situations you can think of where these assumptions might break down?</li>
-</ul>
-<ul>
-<li class="fragment"><p>Players might not know <em>who</em> they are playing against and what preferences they might have</p></li>
-<li class="fragment"><p>Players might make <em>mistakes</em> and occasionally choose actions that don’t fulfill their rational best response</p></li>
-</ul>
-</section>
-<section id="criticism-3-requirements-of-rationality-1" class="slide level2">
-<h2>Criticism 3: Requirements of Rationality</h2>
-<p>Consider this game:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Row, Column</th>
-<th>C1</th>
-<th>C2</th>
-<th>C3</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>R1</strong></td>
-<td>0, 7</td>
-<td>2, 5</td>
-<td>7, 0</td>
-</tr>
-<tr class="even">
-<td><strong>R2</strong></td>
-<td>5, 2</td>
-<td>3, 3</td>
-<td>5, 2</td>
-</tr>
-<tr class="odd">
-<td><strong>R3</strong></td>
-<td>7, 0</td>
-<td>2, 5</td>
-<td>0, 7</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>What is the NE?</p>
-</blockquote>
-</section>
-<section id="criticism-3-requirements-of-rationality-2" class="slide level2">
-<h2>Criticism 3: Requirements of Rationality</h2>
-<p>Consider this game:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Row, Column</th>
-<th>C1</th>
-<th>C2</th>
-<th>C3</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>R1</strong></td>
-<td>0, <u>7</u></td>
-<td>2, 5</td>
-<td><u>7</u>, 0</td>
-</tr>
-<tr class="even">
-<td><strong>R2</strong></td>
-<td>5, 2</td>
-<td><u>3</u>, <u>3</u></td>
-<td>5, 2</td>
-</tr>
-<tr class="odd">
-<td><strong>R3</strong></td>
-<td><u>7</u>, 0</td>
-<td>2, 5</td>
-<td>0, <u>7</u></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>What is the NE?</p>
-</blockquote>
-<ul>
-<li class="fragment"><p>(R2, C2) is the only NE in this game</p></li>
-<li class="fragment"><p>For this strategy profile, both players’ beliefs about the other player’s strategy are correct.</p>
-<ul>
-<li class="fragment"><p>Column believes that Row will choose R2, so she chooses her best response of C2</p></li>
-<li class="fragment"><p>Row believes that Column will choose C2, so he chooses his best response of R2</p></li>
-<li class="fragment"><p>So in NE, each player’s belief matches their opponent’s best response</p></li>
-</ul></li>
-</ul>
-</section>
-<section id="criticism-3-requirements-of-rationality-3" class="slide level2">
-<h2>Criticism 3: Requirements of Rationality</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Row, Column</th>
-<th>C1</th>
-<th>C2</th>
-<th>C3</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>R1</strong></td>
-<td>0, <u>7</u></td>
-<td>2, 5</td>
-<td><u>7</u>, 0</td>
-</tr>
-<tr class="even">
-<td><strong>R2</strong></td>
-<td>5, 2</td>
-<td><u>3</u>, <u>3</u></td>
-<td>5, 2</td>
-</tr>
-<tr class="odd">
-<td><strong>R3</strong></td>
-<td><u>7</u>, 0</td>
-<td>2, 5</td>
-<td>0, <u>7</u></td>
-</tr>
-</tbody>
-</table>
-<p>But we could use similar logic for this game even when beliefs are <em>incorrect</em></p>
-<ul>
-<li class="fragment"><p>We can justify Row playing <strong>R1</strong> if she believes that Column will play <strong>C3</strong></p></li>
-<li class="fragment"><p>Row could beleive this if she believes that <em>Column believes she is playing</em> <strong>R3</strong></p></li>
-<li class="fragment"><p>And if she also thinks that Column believes that she is playing <strong>R3</strong> because Column believes that <em>Row believes that Column is playing</em> <strong>C1</strong></p></li>
-</ul>
-</section>
-<section id="rebuttal-to-critics-why-not-nash-equilibrium" class="slide level2">
-<h2>Rebuttal to Critics: Why Not Nash Equilibrium?</h2>
-<p>Game theorist Roger Myerson suggests: - “Why not Nash equilibrium?” If someone proposes an alternative strategy profile, that profile must be evaluated. - If it isn’t a Nash equilibrium, one of the players can improve by changing their strategy, disproving the alternative.</p>
-<p><strong>Interactive Question:</strong> How does this defense of Nash equilibrium answer critics’ concerns?</p>
-</section>
-<section id="alternative-concepts" class="slide level2">
-<h2>Alternative Concepts</h2>
-<p>Criticism has led to the development of alternative solution concepts, such as: - <strong>Evolutionary Stable Strategies (ESS)</strong>: Strategies that persist over time through evolutionary pressure. - <strong>Correlated Equilibrium</strong>: Players coordinate their strategies based on signals they receive from a common source.</p>
-<h3 id="discussion-prompt-do-you-think-alternatives-like-ess-or-correlated-equilibrium-offer-improvements-over-nash-equilibrium"><strong>Discussion Prompt:</strong> Do you think alternatives like ESS or correlated equilibrium offer improvements over Nash equilibrium?</h3>
-</section>
-<section id="conclusion" class="slide level2">
-<h2>Conclusion</h2>
-<p>While Nash equilibrium has clear limitations, it remains a central concept in game theory. Alternative solution concepts may provide better insights into certain situations, but Nash equilibrium is still the starting point for analyzing many strategic games.</p>
-</section>
-<section class="slide level2">
-
+<!-- {{< include 0405-nashcritique.qmd >}} -->
 
 
 </section></section>
