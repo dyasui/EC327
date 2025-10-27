@@ -563,144 +563,293 @@ We separated games by the timing of moves in the first few lectures
   * but for many types of settings there are a mix of actions that are taken both *sequentially* and also taken *simultaneously*
 
 --- -->
-<section id="two-stage-games-subgames" class="level2">
-<h2 class="anchored" data-anchor-id="two-stage-games-subgames">Two-Stage Games &amp; Subgames</h2>
-<p><span class="h">CrossTalk</span> and <span class="h">GlobalDialog</span> are competing telecom companies</p>
+<!-- ## Two-Stage Games & Subgames
+
+[CrossTalk]{.h} and [GlobalDialog]{.h} are competing telecom companies
+
+  * Each could invest $10 billion in fiber-optic infrastructure
+
+::: {.incremenatl}
+
+  * If only one company has fiber-optic, they get the entire market
+
+    + A monopolist can charge **high** price $\rightarrow$ earn $24 billion
+
+    + or a **low** price to attract more customers $\rightarrow$ earn $16 billion
+
+:::
+
+---
+
+## Two-Stage Games & Subgames
+
+[CrossTalk]{.h} and [GlobalDialog]{.h} are competing telecom companies
+
+  * Each could invest $10 billion in fiber-optic infrastructure
+
+::: {.incremental}
+
+  * If *both* companies invest, they are locked in a ***simultaneous*** pricing game
+
+    + If both set **high** price in the fiber-optic market, each gets $12 billion
+
+    + If both choose **low**, they each get $8 billion
+
+    + If one sets **high** and the other sets **low**, 
+      
+      - the low-price setter gets the whole market and earns $24 billion,
+
+      - the high price setter gets $0
+
+:::
+
+---
+
+## Two-Stage Games & Subgames
+
+![](figures/Dixit_fig6.1.png)
+
+---
+
+## Two-Stage Games & Subgames
+
+We can use our tools from solving both game trees and game tables 
+
+::: {.incremental}
+
+  * first, notice that a monopolist will always set a **High** price
+
+  * So we can replace the payoffs from the **High** branch into the first-stage table
+
+:::
+
+---
+
+## Two-Stage Games & Subgames
+
+Take a look at the table labelled Second stage:
+
+| CrossTalk, GlobalDialog |  High  |   Low  |
+|:-----------------------:+:------:+:------:|
+|         **High**        |  2, 2  | -10, 6 |
+|         **Low**         | 6, -10 | -2, -2 |
+
+::: {.incremental}
+
+This is itself a complete game nested in the larger one
+
+  * so it's whats is called a [subgame]{.hi}
+
+  * we can solve it like we would any other game table
+
+  * The NE of this subgame is (**Low**, **Low**) 
+
+  * place the Nash payoffs of -2, -2 into the first-stage table
+:::
+
+---
+
+## Two-Stage Games & Subgames
+
+First-stage game with payoffs filled in:
+
+| CrossTalk, GlobalDialog |   Don't   |   Invest   |
+|:-----------------------:+:---------:+:----------:|
+|        **Don't**        |    0, 0   |  0, **14** |
+|        **Invest**       | **14**, 0 | **-2, -2** |
+
+::: {.incremental}
+Now we can solve for the NE of the whole game:
+  
+  * (**Invest** **High** **Low**, **Don't** **High** **Low**)
+
+  * (**Don't** **High** **Low**, **Invest** **High** **Low**)
+:::
+
+--- -->
+<!-- ## Two-Stage Games & Subgames
+
+### Football play game
+
+In football, each team chooses a play to run in the huddle where the other team can't observe
+
+  * after this *simultaneous* action which is not observable to their opponent, the teams line up at which point the coach *can* observe how the defensive team are aligned and choose to potentially pick a different play accordingly
+
+  * The defensive team could in also choose to respond to the offensive play changing their play
+
+---
+
+## Two-Stage Games & Subgames
+
+![](figures/Dixit_fig6.4.png) -->
+<section id="kidnapping-with-hidden-information" class="level2">
+<h2 class="anchored" data-anchor-id="kidnapping-with-hidden-information">Kidnapping with hidden information</h2>
+<div class="columns">
+<div class="column">
+<p><img src="figures/kidnapgame_infoset.png" class="img-fluid"></p>
+</div><div class="column">
 <ul>
-<li>Each could invest $10 billion in fiber-optic infrastructure</li>
+<li><p>When we first saw this game, Guy could observe whether Vivica had paid the ransom before he made the decision to <span class="math inline">\(Kill\)</span> or <span class="math inline">\(Release\)</span> Orlando</p></li>
+<li><p>Now we will consider a variation of this game where Guy doesnt know whether Vivica has paid when he chooses to Kill or Release</p></li>
 </ul>
-<div class="incremenatl">
-<ul>
-<li><p>If only one company has fiber-optic, they get the entire market</p>
-<ul>
-<li><p>A monopolist can charge <strong>high</strong> price <span class="math inline">\(\rightarrow\)</span> earn $24 billion</p></li>
-<li><p>or a <strong>low</strong> price to attract more customers <span class="math inline">\(\rightarrow\)</span> earn $16 billion</p></li>
-</ul></li>
-</ul>
+</div>
 </div>
 <hr>
 </section>
-<section id="two-stage-games-subgames-1" class="level2">
-<h2 class="anchored" data-anchor-id="two-stage-games-subgames-1">Two-Stage Games &amp; Subgames</h2>
-<p><span class="h">CrossTalk</span> and <span class="h">GlobalDialog</span> are competing telecom companies</p>
-<ul>
-<li>Each could invest $10 billion in fiber-optic infrastructure</li>
-</ul>
+<section id="kidnap-game-with-a-simultaneous-subgame" class="level2">
+<h2 class="anchored" data-anchor-id="kidnap-game-with-a-simultaneous-subgame">Kidnap Game with a simultaneous subgame</h2>
 <div class="incremental">
 <ul class="incremental">
-<li><p>If <em>both</em> companies invest, they are locked in a <strong><em>simultaneous</em></strong> pricing game</p>
-<ul class="incremental">
-<li><p>If both set <strong>high</strong> price in the fiber-optic market, each gets $12 billion</p></li>
-<li><p>If both choose <strong>low</strong>, they each get $8 billion</p></li>
-<li><p>If one sets <strong>high</strong> and the other sets <strong>low</strong>,</p>
-<ul class="incremental">
-<li><p>the low-price setter gets the whole market and earns $24 billion,</p></li>
-<li><p>the high price setter gets $0</p></li>
-</ul></li>
-</ul></li>
+<li><p>The dotted box around Guy’s nodes <span class="math inline">\(N_3\)</span> and <span class="math inline">\(N_4\)</span> indicate that he can’t tell them apart.</p></li>
+<li><p>They are part of the same <span class="hi">information set</span>; to Guy, they are indistinguishable from each other.</p></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Information set
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>is the set of information available to a player when making a decision. In the extensive form, every decision node belongs to one and only one info set, but multiple nodes may be in the same info set if the player at that node cannot tell them apart.</p>
+</div>
+</div>
 </div>
 <hr>
 </section>
-<section id="two-stage-games-subgames-2" class="level2">
-<h2 class="anchored" data-anchor-id="two-stage-games-subgames-2">Two-Stage Games &amp; Subgames</h2>
-<p><img src="figures/Dixit_fig6.1.png" class="img-fluid"></p>
-<hr>
-</section>
-<section id="two-stage-games-subgames-3" class="level2">
-<h2 class="anchored" data-anchor-id="two-stage-games-subgames-3">Two-Stage Games &amp; Subgames</h2>
-<p>We can use our tools from solving both game trees and game tables</p>
+<section id="using-strategic-form-in-extensive-games" class="level2">
+<h2 class="anchored" data-anchor-id="using-strategic-form-in-extensive-games">Using Strategic Form in Extensive Games</h2>
+<p>Consider the situation when Guy has already kidnapped Orlando.</p>
+<p>List the remaining strategies for each player:</p>
 <div class="incremental">
 <ul class="incremental">
-<li><p>first, notice that a monopolist will always set a <strong>High</strong> price</p></li>
-<li><p>So we can replace the payoffs from the <strong>High</strong> branch into the first-stage table</p></li>
+<li><p>Vivica can decide to <strong>Pay</strong> or <strong>Don’t</strong> pay the ransom</p></li>
+<li><p>Guy can either <strong>Kill</strong> or <strong>Release</strong> Orlando</p></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="two-stage-games-subgames-4" class="level2">
-<h2 class="anchored" data-anchor-id="two-stage-games-subgames-4">Two-Stage Games &amp; Subgames</h2>
-<p>Take a look at the table labelled Second stage:</p>
+<section id="using-strategic-form-in-extensive-games-1" class="level2">
+<h2 class="anchored" data-anchor-id="using-strategic-form-in-extensive-games-1">Using Strategic Form in Extensive Games</h2>
+<p>With these strategy profiles, we can write this subgame out in its strategic form:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: center;">CrossTalk, GlobalDialog</th>
-<th style="text-align: center;">High</th>
-<th style="text-align: center;">Low</th>
+<th>Guy, Vivica</th>
+<th>Pay</th>
+<th>Don’t</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><strong>High</strong></td>
-<td style="text-align: center;">2, 2</td>
-<td style="text-align: center;">-10, 6</td>
+<td><strong>Kill</strong></td>
+<td>4, 1</td>
+<td>2, 2</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><strong>Low</strong></td>
-<td style="text-align: center;">6, -10</td>
-<td style="text-align: center;">-2, -2</td>
+<td><strong>Release</strong></td>
+<td>5, 3</td>
+<td>1, 4</td>
 </tr>
 </tbody>
 </table>
+<hr>
+</section>
+<section id="going-from-strategic-to-extensive" class="level2">
+<h2 class="anchored" data-anchor-id="going-from-strategic-to-extensive">Going from Strategic to Extensive</h2>
+<p>For every strategic form game, there are multiple extensive form game trees which can be drawn.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="figures/kidnapgame_sg1.png" class="img-fluid"></p>
+</div><div class="column" style="width:50%;">
+<p><img src="figures/kidnapgame_sg2.png" class="img-fluid"></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="another-way-to-represent-the-entire-kidnap-game" class="level2">
+<h2 class="anchored" data-anchor-id="another-way-to-represent-the-entire-kidnap-game">Another way to represent the entire Kidnap Game</h2>
+<p><img src="figures/kidnapgame_combined.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="solving-the-kidnap-game-w-simultaneous-sugame" class="level2">
+<h2 class="anchored" data-anchor-id="solving-the-kidnap-game-w-simultaneous-sugame">Solving the Kidnap Game w/ Simultaneous Sugame</h2>
+<p>What will a complete strategy profile look like for each player?</p>
 <div class="incremental">
-<p>This is itself a complete game nested in the larger one</p>
 <ul class="incremental">
-<li><p>so it’s whats is called a <span class="hi">subgame</span></p></li>
-<li><p>we can solve it like we would any other game table</p></li>
-<li><p>The NE of this subgame is (<strong>Low</strong>, <strong>Low</strong>)</p></li>
-<li><p>place the Nash payoffs of -2, -2 into the first-stage table</p></li>
+<li>Guy’s strategy:
+<ul class="incremental">
+<li>element 1: <span class="red"><span class="math inline">\(Kidnap\)</span></span> or <span class="red"><span class="math inline">\(Don't~Kidnap\)</span></span></li>
+<li>element 2: <span class="red"><span class="math inline">\(Kill\)</span></span> or <span class="red"><span class="math inline">\(Release\)</span></span></li>
+</ul></li>
+<li>Vivica’s strategy:
+<ul class="incremental">
+<li>element 1: <span class="blue"><span class="math inline">\(Pay\)</span></span> or <span class="blue"><span class="math inline">\(Don't\)</span></span></li>
+</ul></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="two-stage-games-subgames-5" class="level2">
-<h2 class="anchored" data-anchor-id="two-stage-games-subgames-5">Two-Stage Games &amp; Subgames</h2>
-<p>First-stage game with payoffs filled in:</p>
+<section id="solving-the-kidnap-game-w-simultaneous-sugame-1" class="level2">
+<h2 class="anchored" data-anchor-id="solving-the-kidnap-game-w-simultaneous-sugame-1">Solving the Kidnap Game w/ Simultaneous Sugame</h2>
+<p>What is/are the NE of the subgame?</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: center;">CrossTalk, GlobalDialog</th>
-<th style="text-align: center;">Don’t</th>
-<th style="text-align: center;">Invest</th>
+<th></th>
+<th><span class="blue"><span class="math inline">\(Pay\)</span></span></th>
+<th><span class="blue"><span class="math inline">\(Don't\)</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><strong>Don’t</strong></td>
-<td style="text-align: center;">0, 0</td>
-<td style="text-align: center;">0, <strong>14</strong></td>
+<td><span class="red"><span class="math inline">\(Kill\)</span></span></td>
+<td>4,1</td>
+<td>2,2</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><strong>Invest</strong></td>
-<td style="text-align: center;"><strong>14</strong>, 0</td>
-<td style="text-align: center;"><strong>-2, -2</strong></td>
+<td><span class="red"><span class="math inline">\(Release\)</span></span></td>
+<td>5,3</td>
+<td>1,4</td>
 </tr>
 </tbody>
 </table>
 <div class="incremental">
-<p>Now we can solve for the NE of the whole game:</p>
 <ul class="incremental">
-<li><p>(<strong>Invest</strong> <strong>High</strong> <strong>Low</strong>, <strong>Don’t</strong> <strong>High</strong> <strong>Low</strong>)</p></li>
-<li><p>(<strong>Don’t</strong> <strong>High</strong> <strong>Low</strong>, <strong>Invest</strong> <strong>High</strong> <strong>Low</strong>)</p></li>
+<li><p>(<span class="red"><span class="math inline">\(Release\)</span></span>, <span class="blue"><span class="math inline">\(Pay\)</span></span>) is no longer <em>stable</em> because Vivica wouldn’t pay the ransom if Guy releases</p></li>
+<li><p>(<span class="red"><span class="math inline">\(Kill\)</span></span>, <span class="blue"><span class="math inline">\(Don't\)</span></span>) is the only NE in this table</p></li>
 </ul>
 </div>
 <hr>
 </section>
-<section id="two-stage-games-subgames-6" class="level2">
-<h2 class="anchored" data-anchor-id="two-stage-games-subgames-6">Two-Stage Games &amp; Subgames</h2>
-<section id="football-play-game" class="level3">
-<h3 class="anchored" data-anchor-id="football-play-game">Football play game</h3>
-<p>In football, each team chooses a play to run in the huddle where the other team can’t observe</p>
+<section id="solving-the-kidnap-game-w-simultaneous-sugame-2" class="level2">
+<h2 class="anchored" data-anchor-id="solving-the-kidnap-game-w-simultaneous-sugame-2">Solving the Kidnap Game w/ Simultaneous Sugame</h2>
+<p>Knowing this, what is the NE in the full game?</p>
+<p><img src="figures/kidnapgame_combined.png" class="img-fluid"></p>
+<p>. . .</p>
 <ul>
-<li><p>after this <em>simultaneous</em> action which is not observable to their opponent, the teams line up at which point the coach <em>can</em> observe how the defensive team are aligned and choose to potentially pick a different play accordingly</p></li>
-<li><p>The defensive team could in also choose to respond to the offensive play changing their play</p></li>
+<li>{ (<span class="red"><span class="math inline">\(Don't~Kidnap\)</span>, <span class="math inline">\(Kill\)</span></span>), <span class="blue"><span class="math inline">\(Don't~pay\)</span></span> }</li>
 </ul>
 <hr>
 </section>
-</section>
-<section id="two-stage-games-subgames-7" class="level2">
-<h2 class="anchored" data-anchor-id="two-stage-games-subgames-7">Two-Stage Games &amp; Subgames</h2>
-<p><img src="figures/Dixit_fig6.4.png" class="img-fluid"></p>
+<section id="comparing-ne-in-the-different-kidnapping-games" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-ne-in-the-different-kidnapping-games">Comparing NE in the different Kidnapping Games</h2>
+<p>In the version where Vivica’s action was <em>observable</em>, we found the NE:</p>
+<ul>
+<li>{ (<span class="red"><span class="math inline">\(Kidnap, Kill_3, Release_4\)</span></span>), <span class="blue"><span class="math inline">\(Pay\)</span></span> }</li>
+</ul>
+<p>But in the version where Guy couldn’t see whether Vivica paid the ransom, it was:</p>
+<ul>
+<li>{ (<span class="red"><span class="math inline">\(Don't~Kidnap\)</span>, <span class="math inline">\(Kill\)</span></span>), <span class="blue"><span class="math inline">\(Don't~pay\)</span></span> }</li>
+</ul>
+<div class="incremental">
+<ul class="incremental">
+<li>If you were Guy, which version would you prefer?</li>
+<li>Guy’s advantage is in making a conditional promise/threat to Vivica which is taken away if he can only pick one action</li>
+</ul>
+</div>
 
 
 </section>

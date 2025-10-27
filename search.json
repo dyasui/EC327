@@ -1151,79 +1151,100 @@
   {
     "objectID": "Slides/05CombinedGames/0503-changemethod.html",
     "href": "Slides/05CombinedGames/0503-changemethod.html",
-    "title": "Change in the Method of Analysis",
+    "title": "Sequential Games in Strategic Form",
     "section": "",
-    "text": "Evert, Navratilova\nDL\nCC\n\n\n\n\nDL\n50, 50\n80, 20\n\n\nCC\n90, 10\n20, 80\n\n\n\nNavratilova has volleyed the ball to Evert\n\nEvert can send the ball down the line, DL, or crosscourt CC (a softer diagonal shot)\nNavratilova has to simultaneously choose to set up to receive either type of shot\n\n\n\n\n\nThe simultaneous tennis game can also be represented as a tree\n\nThe information set indicates that Navratilova doesn’t know which shot before she has to choose how to receive\n\n\n\nEven in cases which aren’t actually strategic, we can still use some of these tools\n\n\n\n\nWe found the NE will be (Deficit, High Rates) when this game is played simultaneously\n\n\n\nCongress, Federal Reserve\nLow rates\nHigh Rates\n\n\n\n\nBalance\n3, 4\n1, 3\n\n\nDeficit\n4, 1\n2, 2\n\n\n\n\n\n\nWhat about when the Fed moves first?\n\n\n\nWe get the same NE\n\n\n\n\n\n\nWhat about when Congress moves first?\n\n\n\nnow we get a different NE with congress playing their strictly dominated strategy\nthis is because when the Fed acts second, they can make a credible threat\n\n\n\n\n\n\nIn the game where Congress moves first, they have two strategies, but the Fed has 4\n\n\n\n\n\n\n\n\n\n\nCongress, Fed\nL if B, H if D\nH if B, L if D\nalways Low\nalways H\n\n\n\n\nBalance\n3,4\n1,3\n3,4\n1,3\n\n\nDeficit\n2,2\n4,1\n4,1\n2,2\n\n\n\n\n\n\n\nWhen we implemented rollback on the extensive form version, there was only one NE,\n\nbut here there are two:\n\n{Deficit, always High }\n{ Balance, (L if B, H if D) }\n\n\nBoth are NE of this game, but the second is a special type of NE\nA subgame-perfect Nash equilibrium because it involves the Fed making their rational choice in every subgame.\n\n\n\n\nIt’s not subgame-rational for the Fed to play High always because if the case where Congress already spent in deficit were to happen, the Fed’s only rational action would be to set low interest rates.\n\nWe can say that the Fed’s High always strategy is not a credible promise\n\n\n\n\nThe rollback method finds the subgame-perfect Nash equilibria of sequential games\n\nA complete plan of action such that at every node including off-equilibrium paths, it is still rational to stick to that original plan of action."
+    "text": "Rollback solution with perfect information:\n\n{ (\\(Kidnap, Release, Kill\\)), \\(Pay\\) }\n\n. . .\n\nIn other words:\n\nGuy \\(kidnaps\\), promises to \\(release\\) if ransom paid, otherwise threatens \\(kill\\)\n\nrational if he believes Vivica will pay the ransom.\n\nVivica \\(pays\\)\n\nrational if she believes Guy’s threat/promise above\n\n\nIs this the only stable outcome?\n\nIt depends on beliefs!\n\n\n\n\n\n\nWhat are all of Guy’s possible strategies?\n. . .\n\nKidnap, Release if paid, Kill if unpaid\n\n. . .\n\nKidnap, R, R\nKidnap, K, K\nKidnap, K, R\n\n. . .\n\nDon’t kidnap, Release, Kill\nDNK, R, R\nDNK, K, K\nDNK, K, R\n\n\n\n\n\nWhat are all of Vivica’s strategies?\n. . .\n\nPay\nor Don’t pay\n\n. . .\nHow to check for another Nash strategy profile besides\n{ (\\(Kidnap, Release, Kill\\)), \\(Pay\\) }?\n. . .\n\nCheck all 16 possible strat. profiles?\n\n. . .\n\nor use a tool we’ve learned to help?\n\n\n\n\n\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, Kill, Kill\n3, 5\n3, 5\n\n\nDNK, Kill, Release\n3, 5\n3, 5\n\n\nDNK, Release, Kill\n3, 5\n3, 5\n\n\nDNK, Release, Release\n3, 5\n3, 5\n\n\nKidnap, Kill, Kill\n4, 1\n2, 2\n\n\nKidnap, Kill, Release\n4, 1\n1, 4\n\n\nKidnap, Release, Kill\n5, 3\n2, 2\n\n\nKidnap, Release, Release\n5, 3\n1, 4\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, Kill, Kill\n3, 5\n3, 5\n\n\nDNK, Kill, Release\n3, 5\n3, 5\n\n\nDNK, Release, Kill\n3, 5\n3, 5\n\n\nDNK, Release, Release\n3, 5\n3, 5\n\n\nKidnap, Kill, Kill\n4, 1\n2, 2\n\n\nKidnap, Kill, Release\n4, 1\n1, 4\n\n\nKidnap, Release, Kill\n5, 3\n2, 2\n\n\nKidnap, Release, Release\n5, 3\n1, 4\n\n\n\n\n\n\n\n\n\n\n\nThe top half of the table represents don’t kidnap branch\n\nWhy does it take up multiple cells?\n\nThey represent different beliefs\nWhy might Guy choose to not kidnap?\n\nIf he believes Vivica won’t pay\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, K, K\n3, 5\n3, 5\n\n\nDNK, K, R\n3, 5\n3, 5\n\n\nDNK, R, K\n3, 5\n3, 5\n\n\nDNK, R, R\n3, 5\n3, 5\n\n\nKidnap, K, K\n4, 1\n2, 2\n\n\nKidnap, K, R\n4, 1\n1, 4\n\n\nKidnap, R, K\n5, 3\n2, 2\n\n\nKidnap, R, R\n5, 3\n1, 4\n\n\n\n\n\n\n\nWhen would Vivica choose to not pay the ransom?\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, K, K\n3, 5\n3, 5\n\n\nDNK, K, R\n3, 5\n3, 5\n\n\nDNK, R, K\n3, 5\n3, 5\n\n\nDNK, R, R\n3, 5\n3, 5\n\n\nKidnap, K, K\n4, 1\n2, 2\n\n\nKidnap, K, R\n4, 1\n1, 4\n\n\nKidnap, R, K\n5, 3\n2, 2\n\n\nKidnap, R, R\n5, 3\n1, 4\n\n\n\n\n\n\n\nWe found { (\\(Kidnap, Release, Kill\\)), \\(Pay\\) }\nthrough backwards induction.\n. . .\nThrough BR analysis in Strategic form:\n\nAny strategy profile where:\n\nGuy Doesn’t Kidnap (DNK,K,K; DNK,K,R; DNK,R,K; DNK,R,R)\nVivica Doesn’t Pay\n\nis also a Nash\n\nThe rollback eq. is not the only NE of this game!\n\n\n\n\n\n\nWhat is different about rollback eq. and other Nash?\n\nBackwards induction rules out threats that aren’t credible\n\nVivica could threaten to not pay ransom\n\nIf Guy believes this, he would get 2 or 1 by Kidnapping,\n\nor 3 by not kidnapping\n\nDon’t kidnap, Don’t pay NE are stable\n\ngiven certain beliefs\n\n\nBut if Guy’s really savvy,\n\nHe should rationally state his preference of killing if paid, release if unpaid\nhe should know Vivica wouldn’t follow through once really faced with decision of 3 vs 2\nVivica’s threat of “I won’t pay” isn’t credible\n\nIt’s not subgame rational\n\n\n\n\n\n\n\n\n{ (\\(Kidnap, Kill_3, Release_4\\)), \\(Pay\\) }\nOn top of being a regular NE, this strategy profile is also called subgame-perfect because both players’ actions are credible:\n\n\nGuy’s threat of killing Orlando if the ransom goes unpaid aligns with his preference\nHis promise to release Orlando if the ransom is paid is also credible because he would rather not kill if he gets the money\nVivica has every reason to pay the ransom when she believes guy will make good on his threat because she doesn’t want Orlando to die"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#rollback-in-the-kidnap-game",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#rollback-in-the-kidnap-game",
+    "title": "Sequential Games in Strategic Form",
+    "section": "",
+    "text": "Rollback solution with perfect information:\n\n{ (\\(Kidnap, Release, Kill\\)), \\(Pay\\) }\n\n. . .\n\nIn other words:\n\nGuy \\(kidnaps\\), promises to \\(release\\) if ransom paid, otherwise threatens \\(kill\\)\n\nrational if he believes Vivica will pay the ransom.\n\nVivica \\(pays\\)\n\nrational if she believes Guy’s threat/promise above\n\n\nIs this the only stable outcome?\n\nIt depends on beliefs!"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#checking-for-other-kidnap-game-nash-guy",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#checking-for-other-kidnap-game-nash-guy",
+    "title": "Sequential Games in Strategic Form",
+    "section": "",
+    "text": "What are all of Guy’s possible strategies?\n. . .\n\nKidnap, Release if paid, Kill if unpaid\n\n. . .\n\nKidnap, R, R\nKidnap, K, K\nKidnap, K, R\n\n. . .\n\nDon’t kidnap, Release, Kill\nDNK, R, R\nDNK, K, K\nDNK, K, R"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#checking-for-other-kidnap-nash-vivica",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#checking-for-other-kidnap-nash-vivica",
+    "title": "Sequential Games in Strategic Form",
+    "section": "",
+    "text": "What are all of Vivica’s strategies?\n. . .\n\nPay\nor Don’t pay\n\n. . .\nHow to check for another Nash strategy profile besides\n{ (\\(Kidnap, Release, Kill\\)), \\(Pay\\) }?\n. . .\n\nCheck all 16 possible strat. profiles?\n\n. . .\n\nor use a tool we’ve learned to help?"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#a-strategic-form-representation",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#a-strategic-form-representation",
+    "title": "Sequential Games in Strategic Form",
+    "section": "",
+    "text": "Guy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, Kill, Kill\n3, 5\n3, 5\n\n\nDNK, Kill, Release\n3, 5\n3, 5\n\n\nDNK, Release, Kill\n3, 5\n3, 5\n\n\nDNK, Release, Release\n3, 5\n3, 5\n\n\nKidnap, Kill, Kill\n4, 1\n2, 2\n\n\nKidnap, Kill, Release\n4, 1\n1, 4\n\n\nKidnap, Release, Kill\n5, 3\n2, 2\n\n\nKidnap, Release, Release\n5, 3\n1, 4"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#new-look-same-game",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#new-look-same-game",
+    "title": "Sequential Games in Strategic Form",
+    "section": "",
+    "text": "Guy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, Kill, Kill\n3, 5\n3, 5\n\n\nDNK, Kill, Release\n3, 5\n3, 5\n\n\nDNK, Release, Kill\n3, 5\n3, 5\n\n\nDNK, Release, Release\n3, 5\n3, 5\n\n\nKidnap, Kill, Kill\n4, 1\n2, 2\n\n\nKidnap, Kill, Release\n4, 1\n1, 4\n\n\nKidnap, Release, Kill\n5, 3\n2, 2\n\n\nKidnap, Release, Release\n5, 3\n1, 4"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#solving-kidnap-in-strategic-form",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#solving-kidnap-in-strategic-form",
+    "title": "Sequential Games in Strategic Form",
+    "section": "",
+    "text": "The top half of the table represents don’t kidnap branch\n\nWhy does it take up multiple cells?\n\nThey represent different beliefs\nWhy might Guy choose to not kidnap?\n\nIf he believes Vivica won’t pay"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#guys-br-in-strategic-form",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#guys-br-in-strategic-form",
+    "title": "Sequential Games in Strategic Form",
+    "section": "",
+    "text": "Guy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, K, K\n3, 5\n3, 5\n\n\nDNK, K, R\n3, 5\n3, 5\n\n\nDNK, R, K\n3, 5\n3, 5\n\n\nDNK, R, R\n3, 5\n3, 5\n\n\nKidnap, K, K\n4, 1\n2, 2\n\n\nKidnap, K, R\n4, 1\n1, 4\n\n\nKidnap, R, K\n5, 3\n2, 2\n\n\nKidnap, R, R\n5, 3\n1, 4"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#vivicas-brs-in-strategic-form",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#vivicas-brs-in-strategic-form",
+    "title": "Sequential Games in Strategic Form",
+    "section": "",
+    "text": "When would Vivica choose to not pay the ransom?\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, K, K\n3, 5\n3, 5\n\n\nDNK, K, R\n3, 5\n3, 5\n\n\nDNK, R, K\n3, 5\n3, 5\n\n\nDNK, R, R\n3, 5\n3, 5\n\n\nKidnap, K, K\n4, 1\n2, 2\n\n\nKidnap, K, R\n4, 1\n1, 4\n\n\nKidnap, R, K\n5, 3\n2, 2\n\n\nKidnap, R, R\n5, 3\n1, 4"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#new-nash-eq.-in-kidnap-game",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#new-nash-eq.-in-kidnap-game",
+    "title": "Sequential Games in Strategic Form",
+    "section": "",
+    "text": "We found { (\\(Kidnap, Release, Kill\\)), \\(Pay\\) }\nthrough backwards induction.\n. . .\nThrough BR analysis in Strategic form:\n\nAny strategy profile where:\n\nGuy Doesn’t Kidnap (DNK,K,K; DNK,K,R; DNK,R,K; DNK,R,R)\nVivica Doesn’t Pay\n\nis also a Nash\n\nThe rollback eq. is not the only NE of this game!"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#ne-vs-spne",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#ne-vs-spne",
+    "title": "Sequential Games in Strategic Form",
+    "section": "",
+    "text": "What is different about rollback eq. and other Nash?\n\nBackwards induction rules out threats that aren’t credible\n\nVivica could threaten to not pay ransom\n\nIf Guy believes this, he would get 2 or 1 by Kidnapping,\n\nor 3 by not kidnapping\n\nDon’t kidnap, Don’t pay NE are stable\n\ngiven certain beliefs\n\n\nBut if Guy’s really savvy,\n\nHe should rationally state his preference of killing if paid, release if unpaid\nhe should know Vivica wouldn’t follow through once really faced with decision of 3 vs 2\nVivica’s threat of “I won’t pay” isn’t credible\n\nIt’s not subgame rational"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#rollback-in-the-kidnap-game-1",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#rollback-in-the-kidnap-game-1",
+    "title": "Sequential Games in Strategic Form",
+    "section": "",
+    "text": "{ (\\(Kidnap, Kill_3, Release_4\\)), \\(Pay\\) }\nOn top of being a regular NE, this strategy profile is also called subgame-perfect because both players’ actions are credible:\n\n\nGuy’s threat of killing Orlando if the ransom goes unpaid aligns with his preference\nHis promise to release Orlando if the ransom is paid is also credible because he would rather not kill if he gets the money\nVivica has every reason to pay the ransom when she believes guy will make good on his threat because she doesn’t want Orlando to die"
   },
   {
     "objectID": "Slides/05CombinedGames/0503-changemethod.html#illustrating-sim.-games-using-trees",
     "href": "Slides/05CombinedGames/0503-changemethod.html#illustrating-sim.-games-using-trees",
-    "title": "Change in the Method of Analysis",
-    "section": "",
-    "text": "Evert, Navratilova\nDL\nCC\n\n\n\n\nDL\n50, 50\n80, 20\n\n\nCC\n90, 10\n20, 80\n\n\n\nNavratilova has volleyed the ball to Evert\n\nEvert can send the ball down the line, DL, or crosscourt CC (a softer diagonal shot)\nNavratilova has to simultaneously choose to set up to receive either type of shot"
+    "title": "Sequential Games in Strategic Form",
+    "section": "Illustrating Sim. Games using Trees",
+    "text": "Illustrating Sim. Games using Trees\n\nMartina Navratilova v. Chris Evert\n\n\n\nEvert, Navratilova\nDL\nCC\n\n\n\n\nDL\n50, 50\n80, 20\n\n\nCC\n90, 10\n20, 80\n\n\n\nNavratilova has volleyed the ball to Evert\n\nEvert can send the ball down the line, DL, or crosscourt CC (a softer diagonal shot)\nNavratilova has to simultaneously choose to set up to receive either type of shot"
   },
   {
     "objectID": "Slides/05CombinedGames/0503-changemethod.html#illustrating-sim.-games-using-trees-1",
     "href": "Slides/05CombinedGames/0503-changemethod.html#illustrating-sim.-games-using-trees-1",
-    "title": "Change in the Method of Analysis",
-    "section": "",
-    "text": "The simultaneous tennis game can also be represented as a tree\n\nThe information set indicates that Navratilova doesn’t know which shot before she has to choose how to receive"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/0503-changemethod.html#adding-nature-as-a-player",
-    "href": "Slides/05CombinedGames/0503-changemethod.html#adding-nature-as-a-player",
-    "title": "Change in the Method of Analysis",
-    "section": "",
-    "text": "Even in cases which aren’t actually strategic, we can still use some of these tools"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/0503-changemethod.html#changing-the-order-of-moves",
-    "href": "Slides/05CombinedGames/0503-changemethod.html#changing-the-order-of-moves",
-    "title": "Change in the Method of Analysis",
-    "section": "",
-    "text": "We found the NE will be (Deficit, High Rates) when this game is played simultaneously\n\n\n\nCongress, Federal Reserve\nLow rates\nHigh Rates\n\n\n\n\nBalance\n3, 4\n1, 3\n\n\nDeficit\n4, 1\n2, 2"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/0503-changemethod.html#changing-the-order-of-moves-1",
-    "href": "Slides/05CombinedGames/0503-changemethod.html#changing-the-order-of-moves-1",
-    "title": "Change in the Method of Analysis",
-    "section": "",
-    "text": "What about when the Fed moves first?\n\n\n\nWe get the same NE"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/0503-changemethod.html#changing-the-order-of-moves-2",
-    "href": "Slides/05CombinedGames/0503-changemethod.html#changing-the-order-of-moves-2",
-    "title": "Change in the Method of Analysis",
-    "section": "",
-    "text": "What about when Congress moves first?\n\n\n\nnow we get a different NE with congress playing their strictly dominated strategy\nthis is because when the Fed acts second, they can make a credible threat"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/0503-changemethod.html#showing-seq.-games-in-strategic-form",
-    "href": "Slides/05CombinedGames/0503-changemethod.html#showing-seq.-games-in-strategic-form",
-    "title": "Change in the Method of Analysis",
-    "section": "",
-    "text": "In the game where Congress moves first, they have two strategies, but the Fed has 4\n\n\n\n\n\n\n\n\n\n\nCongress, Fed\nL if B, H if D\nH if B, L if D\nalways Low\nalways H\n\n\n\n\nBalance\n3,4\n1,3\n3,4\n1,3\n\n\nDeficit\n2,2\n4,1\n4,1\n2,2"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/0503-changemethod.html#showing-seq.-games-in-strategic-form-1",
-    "href": "Slides/05CombinedGames/0503-changemethod.html#showing-seq.-games-in-strategic-form-1",
-    "title": "Change in the Method of Analysis",
-    "section": "",
-    "text": "When we implemented rollback on the extensive form version, there was only one NE,\n\nbut here there are two:\n\n{Deficit, always High }\n{ Balance, (L if B, H if D) }\n\n\nBoth are NE of this game, but the second is a special type of NE\nA subgame-perfect Nash equilibrium because it involves the Fed making their rational choice in every subgame."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/0503-changemethod.html#showing-seq.-games-in-strategic-form-2",
-    "href": "Slides/05CombinedGames/0503-changemethod.html#showing-seq.-games-in-strategic-form-2",
-    "title": "Change in the Method of Analysis",
-    "section": "",
-    "text": "It’s not subgame-rational for the Fed to play High always because if the case where Congress already spent in deficit were to happen, the Fed’s only rational action would be to set low interest rates.\n\nWe can say that the Fed’s High always strategy is not a credible promise"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/0503-changemethod.html#spne",
-    "href": "Slides/05CombinedGames/0503-changemethod.html#spne",
-    "title": "Change in the Method of Analysis",
-    "section": "",
-    "text": "The rollback method finds the subgame-perfect Nash equilibria of sequential games\n\nA complete plan of action such that at every node including off-equilibrium paths, it is still rational to stick to that original plan of action."
+    "title": "Sequential Games in Strategic Form",
+    "section": "Illustrating Sim. Games using Trees",
+    "text": "Illustrating Sim. Games using Trees\nThe simultaneous tennis game can also be represented as a tree\n\nThe information set indicates that Navratilova doesn’t know which shot before she has to choose how to receive"
   },
   {
     "objectID": "Slides/05CombinedGames/05-main.html#combining-sequential-and-simultaneous",
@@ -1244,42 +1265,98 @@
     "href": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game",
     "title": "Introduction to Game Theory",
     "section": "Rollback in the Kidnap Game",
-    "text": "Rollback in the Kidnap Game\n\n\n\n\n\nWhat should Guy do if Vivica pays?\n\n\\(Release\\) (5 &gt; 4)\n\nWhat should Guy do if Vivica doesn’t pay?\n\n\\(Kill\\) (2 &gt; 1)"
+    "text": "Rollback in the Kidnap Game\nRollback solution with perfect information:\n\n{ (\\(Kidnap, Release, Kill\\)), \\(Pay\\) }\n\n\n\nIn other words:\n\nGuy \\(kidnaps\\), promises to \\(release\\) if ransom paid, otherwise threatens \\(kill\\)\n\nrational if he believes Vivica will pay the ransom.\n\nVivica \\(pays\\)\n\nrational if she believes Guy’s threat/promise above\n\n\nIs this the only stable outcome?\n\nIt depends on beliefs!"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#checking-for-other-kidnap-game-nash-guy",
+    "href": "Slides/05CombinedGames/05-main.html#checking-for-other-kidnap-game-nash-guy",
+    "title": "Introduction to Game Theory",
+    "section": "Checking for Other Kidnap Game Nash, Guy",
+    "text": "Checking for Other Kidnap Game Nash, Guy\nWhat are all of Guy’s possible strategies?\n\n\nKidnap, Release if paid, Kill if unpaid\n\n\n\n\nKidnap, R, R\nKidnap, K, K\nKidnap, K, R\n\n\n\n\nDon’t kidnap, Release, Kill\nDNK, R, R\nDNK, K, K\nDNK, K, R"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#checking-for-other-kidnap-nash-vivica",
+    "href": "Slides/05CombinedGames/05-main.html#checking-for-other-kidnap-nash-vivica",
+    "title": "Introduction to Game Theory",
+    "section": "Checking for Other Kidnap Nash, Vivica",
+    "text": "Checking for Other Kidnap Nash, Vivica\nWhat are all of Vivica’s strategies?\n\n\nPay\nor Don’t pay\n\n\n\nHow to check for another Nash strategy profile besides\n{ (\\(Kidnap, Release, Kill\\)), \\(Pay\\) }?\n\n\n\nCheck all 16 possible strat. profiles?\n\n\n\n\nor use a tool we’ve learned to help?"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation",
+    "href": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation",
+    "title": "Introduction to Game Theory",
+    "section": "A Strategic Form representation",
+    "text": "A Strategic Form representation\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, Kill, Kill\n3, 5\n3, 5\n\n\nDNK, Kill, Release\n3, 5\n3, 5\n\n\nDNK, Release, Kill\n3, 5\n3, 5\n\n\nDNK, Release, Release\n3, 5\n3, 5\n\n\nKidnap, Kill, Kill\n4, 1\n2, 2\n\n\nKidnap, Kill, Release\n4, 1\n1, 4\n\n\nKidnap, Release, Kill\n5, 3\n2, 2\n\n\nKidnap, Release, Release\n5, 3\n1, 4"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#new-look-same-game",
+    "href": "Slides/05CombinedGames/05-main.html#new-look-same-game",
+    "title": "Introduction to Game Theory",
+    "section": "New look, same game",
+    "text": "New look, same game\n\n\n\n\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, Kill, Kill\n3, 5\n3, 5\n\n\nDNK, Kill, Release\n3, 5\n3, 5\n\n\nDNK, Release, Kill\n3, 5\n3, 5\n\n\nDNK, Release, Release\n3, 5\n3, 5\n\n\nKidnap, Kill, Kill\n4, 1\n2, 2\n\n\nKidnap, Kill, Release\n4, 1\n1, 4\n\n\nKidnap, Release, Kill\n5, 3\n2, 2\n\n\nKidnap, Release, Release\n5, 3\n1, 4"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#solving-kidnap-in-strategic-form",
+    "href": "Slides/05CombinedGames/05-main.html#solving-kidnap-in-strategic-form",
+    "title": "Introduction to Game Theory",
+    "section": "Solving Kidnap in Strategic Form",
+    "text": "Solving Kidnap in Strategic Form\n\nThe top half of the table represents don’t kidnap branch\n\nWhy does it take up multiple cells?\n\nThey represent different beliefs\nWhy might Guy choose to not kidnap?\n\nIf he believes Vivica won’t pay"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#guys-br-in-strategic-form",
+    "href": "Slides/05CombinedGames/05-main.html#guys-br-in-strategic-form",
+    "title": "Introduction to Game Theory",
+    "section": "Guy’s BR in Strategic Form",
+    "text": "Guy’s BR in Strategic Form\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, K, K\n3, 5\n3, 5\n\n\nDNK, K, R\n3, 5\n3, 5\n\n\nDNK, R, K\n3, 5\n3, 5\n\n\nDNK, R, R\n3, 5\n3, 5\n\n\nKidnap, K, K\n4, 1\n2, 2\n\n\nKidnap, K, R\n4, 1\n1, 4\n\n\nKidnap, R, K\n5, 3\n2, 2\n\n\nKidnap, R, R\n5, 3\n1, 4"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#vivicas-brs-in-strategic-form",
+    "href": "Slides/05CombinedGames/05-main.html#vivicas-brs-in-strategic-form",
+    "title": "Introduction to Game Theory",
+    "section": "Vivica’s BRs in Strategic Form",
+    "text": "Vivica’s BRs in Strategic Form\nWhen would Vivica choose to not pay the ransom?\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, K, K\n3, 5\n3, 5\n\n\nDNK, K, R\n3, 5\n3, 5\n\n\nDNK, R, K\n3, 5\n3, 5\n\n\nDNK, R, R\n3, 5\n3, 5\n\n\nKidnap, K, K\n4, 1\n2, 2\n\n\nKidnap, K, R\n4, 1\n1, 4\n\n\nKidnap, R, K\n5, 3\n2, 2\n\n\nKidnap, R, R\n5, 3\n1, 4"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#new-nash-eq.-in-kidnap-game",
+    "href": "Slides/05CombinedGames/05-main.html#new-nash-eq.-in-kidnap-game",
+    "title": "Introduction to Game Theory",
+    "section": "New Nash Eq. in Kidnap Game",
+    "text": "New Nash Eq. in Kidnap Game\nWe found { (\\(Kidnap, Release, Kill\\)), \\(Pay\\) }\nthrough backwards induction.\n\nThrough BR analysis in Strategic form:\n\nAny strategy profile where:\n\nGuy Doesn’t Kidnap (DNK,K,K; DNK,K,R; DNK,R,K; DNK,R,R)\nVivica Doesn’t Pay\n\nis also a Nash\n\nThe rollback eq. is not the only NE of this game!"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#ne-vs-spne",
+    "href": "Slides/05CombinedGames/05-main.html#ne-vs-spne",
+    "title": "Introduction to Game Theory",
+    "section": "NE vs SPNE",
+    "text": "NE vs SPNE\n\n\nWhat is different about rollback eq. and other Nash?\n\nBackwards induction rules out threats that aren’t credible\n\nVivica could threaten to not pay ransom\n\nIf Guy believes this, he would get 2 or 1 by Kidnapping,\n\nor 3 by not kidnapping\n\nDon’t kidnap, Don’t pay NE are stable\n\ngiven certain beliefs\n\n\nBut if Guy’s really savvy,\n\nHe should rationally state his preference of killing if paid, release if unpaid\nhe should know Vivica wouldn’t follow through once really faced with decision of 3 vs 2\nVivica’s threat of “I won’t pay” isn’t credible\n\nIt’s not subgame rational"
   },
   {
     "objectID": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-1",
     "href": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-1",
     "title": "Introduction to Game Theory",
     "section": "Rollback in the Kidnap Game",
-    "text": "Rollback in the Kidnap Game\n\n\n\n\n\nWhat should Vivica do knowing that Guy will \\(Release\\) if she pays, and \\(Kill\\) if she doesn’t?\n\nPay the ransom (3 &gt; 2)"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-2",
-    "href": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-2",
-    "title": "Introduction to Game Theory",
-    "section": "Rollback in the Kidnap Game",
-    "text": "Rollback in the Kidnap Game\n\n\n\n\n\nWhat should Guy do knowing that Vivica will \\(Pay\\), knowing that he will (\\(Kill\\), \\(Release\\))?\n\nKidnap (5 &gt; 3)"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-3",
-    "href": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-3",
-    "title": "Introduction to Game Theory",
-    "section": "Rollback in the Kidnap Game",
-    "text": "Rollback in the Kidnap Game\nSo the rollback solution in this version of the game where both players have perfect information about all previous actions is:\n\n{ (\\(Kidnap, Kill_3, Release_4\\)), \\(Pay\\) }\n\n\n\nIn other words:\n\nGuy \\(kidnaps\\) because he believes Vivica will pay the ransom. He threatens to \\(kill\\) if Vivica doesn’t pay, but promises to \\(release\\) if she does pay\nVivica \\(pays\\) because she believes Guy’s threat/promise"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-4",
-    "href": "Slides/05CombinedGames/05-main.html#rollback-in-the-kidnap-game-4",
-    "title": "Introduction to Game Theory",
-    "section": "Rollback in the Kidnap Game",
     "text": "Rollback in the Kidnap Game\n{ (\\(Kidnap, Kill_3, Release_4\\)), \\(Pay\\) }\nOn top of being a regular NE, this strategy profile is also called subgame-perfect because both players’ actions are credible:\n\nGuy’s threat of killing Orlando if the ransom goes unpaid aligns with his preference\nHis promise to release Orlando if the ransom is paid is also credible because he would rather not kill if he gets the money\nVivica has every reason to pay the ransom when she believes guy will make good on his threat because she doesn’t want Orlando to die"
   },
   {
-    "objectID": "Slides/05CombinedGames/05-main.html#modifying-the-game",
-    "href": "Slides/05CombinedGames/05-main.html#modifying-the-game",
+    "objectID": "Slides/05CombinedGames/05-main.html#illustrating-sim.-games-using-trees",
+    "href": "Slides/05CombinedGames/05-main.html#illustrating-sim.-games-using-trees",
     "title": "Introduction to Game Theory",
-    "section": "Modifying the game",
-    "text": "Modifying the game\n\n\n\n\n\nWhen we first saw this game, Guy could observe whether Vivica had paid the ransom before he made the decision to \\(Kill\\) or \\(Release\\) Orlando\nNow we will consider a variation of this game where Guy doesnt know whether Vivica has paid when he chooses to Kill or Release"
+    "section": "Illustrating Sim. Games using Trees",
+    "text": "Illustrating Sim. Games using Trees\nMartina Navratilova v. Chris Evert\n\n\n\nEvert, Navratilova\nDL\nCC\n\n\n\n\nDL\n50, 50\n80, 20\n\n\nCC\n90, 10\n20, 80\n\n\n\nNavratilova has volleyed the ball to Evert\n\nEvert can send the ball down the line, DL, or crosscourt CC (a softer diagonal shot)\nNavratilova has to simultaneously choose to set up to receive either type of shot"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#illustrating-sim.-games-using-trees-1",
+    "href": "Slides/05CombinedGames/05-main.html#illustrating-sim.-games-using-trees-1",
+    "title": "Introduction to Game Theory",
+    "section": "Illustrating Sim. Games using Trees",
+    "text": "Illustrating Sim. Games using Trees\nThe simultaneous tennis game can also be represented as a tree\n\nThe information set indicates that Navratilova doesn’t know which shot before she has to choose how to receive"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#kidnapping-with-hidden-information",
+    "href": "Slides/05CombinedGames/05-main.html#kidnapping-with-hidden-information",
+    "title": "Introduction to Game Theory",
+    "section": "Kidnapping with hidden information",
+    "text": "Kidnapping with hidden information\n\n\n\n\n\nWhen we first saw this game, Guy could observe whether Vivica had paid the ransom before he made the decision to \\(Kill\\) or \\(Release\\) Orlando\nNow we will consider a variation of this game where Guy doesnt know whether Vivica has paid when he chooses to Kill or Release"
   },
   {
     "objectID": "Slides/05CombinedGames/05-main.html#kidnap-game-with-a-simultaneous-subgame",
@@ -1343,244 +1420,6 @@
     "title": "Introduction to Game Theory",
     "section": "Comparing NE in the different Kidnapping Games",
     "text": "Comparing NE in the different Kidnapping Games\nIn the version where Vivica’s action was observable, we found the NE:\n\n{ (\\(Kidnap, Kill_3, Release_4\\)), \\(Pay\\) }\n\nBut in the version where Guy couldn’t see whether Vivica paid the ransom, it was:\n\n{ (\\(Don't~Kidnap\\), \\(Kill\\)), \\(Don't~pay\\) }\n\n\nIf you were Guy, which version would you prefer?\nGuy’s advantage is in making a conditional promise/threat to Vivica which is taken away if he can only pick one action"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation",
-    "href": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation",
-    "title": "Introduction to Game Theory",
-    "section": "A Strategic Form representation",
-    "text": "A Strategic Form representation\nHere is the game matrix for the entire kidnapping game: (when Guy can see Vivica’s action)\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, Kill, Kill\n3, 5\n3, 5\n\n\nDNK, Kill, Release\n3, 5\n3, 5\n\n\nDNK, Release, Kill\n3, 5\n3, 5\n\n\nDNK, Release, Release\n3, 5\n3, 5\n\n\nKidnap, Kill, Kill\n4, 1\n2, 2\n\n\nKidnap, Kill, Release\n4, 1\n1, 4\n\n\nKidnap, Release, Kill\n5, 3\n2, 2\n\n\nKidnap, Release, Release\n5, 3\n1, 4"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation-1",
-    "href": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation-1",
-    "title": "Introduction to Game Theory",
-    "section": "A Strategic Form representation",
-    "text": "A Strategic Form representation\n\nNotice that the top half of the table represent the single don’t kidnap branch in the original tree\nWhat are the NE?"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation-2",
-    "href": "Slides/05CombinedGames/05-main.html#a-strategic-form-representation-2",
-    "title": "Introduction to Game Theory",
-    "section": "A Strategic Form representation",
-    "text": "A Strategic Form representation\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, K, K\n3, 5\n3, 5\n\n\nDNK, K, R\n3, 5\n3, 5\n\n\nDNK, R, K\n3, 5\n3, 5\n\n\nDNK, R, R\n3, 5\n3, 5\n\n\nKidnap, K, K\n4, 1\n2, 2\n\n\nKidnap, K, R\n4, 1\n1, 4\n\n\nKidnap, R, K\n5, 3\n2, 2\n\n\nKidnap, R, R\n5, 3\n1, 4"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#ne-vs-spne",
-    "href": "Slides/05CombinedGames/05-main.html#ne-vs-spne",
-    "title": "Introduction to Game Theory",
-    "section": "NE vs SPNE",
-    "text": "NE vs SPNE\n\n\n\n\n\n\n\n\n\n\n\n\nGuy, Vivica\nPay\nDon’t Pay\n\n\n\n\nDNK, K, K\n3, 5\n3, 5\n\n\nDNK, K, R\n3, 5\n3, 5\n\n\nDNK, R, K\n3, 5\n3, 5\n\n\nDNK, R, R\n3, 5\n3, 5\n\n\nKidnap, K, K\n4, 1\n2, 2\n\n\nKidnap, K, R\n4, 1\n1, 4\n\n\nKidnap, R, K\n5, 3\n2, 2\n\n\nKidnap, R, R\n5, 3\n1, 4"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#ne-vs-spne-1",
-    "href": "Slides/05CombinedGames/05-main.html#ne-vs-spne-1",
-    "title": "Introduction to Game Theory",
-    "section": "NE vs SPNE",
-    "text": "NE vs SPNE\n\n\nWhat is different about the NE we found in the table and the NE we found through rollback?\nThe NE where Vivica plays \\(no~pay\\) are not Subgame Perfect because those actions are not credible threats\n\nShe can only credibly threaten not paying the ransom if she knows Guy can’t observe her action"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames",
-    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames",
-    "title": "Introduction to Game Theory",
-    "section": "Two-Stage Games & Subgames",
-    "text": "Two-Stage Games & Subgames\nCrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf only one company has fiber-optic, they get the entire market\n\nA monopolist can charge high price \\(\\rightarrow\\) earn $24 billion\nor a low price to attract more customers \\(\\rightarrow\\) earn $16 billion"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-1",
-    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-1",
-    "title": "Introduction to Game Theory",
-    "section": "Two-Stage Games & Subgames",
-    "text": "Two-Stage Games & Subgames\nCrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\nIf both companies invest, they are locked in a simultaneous pricing game\n\nIf both set high price in the fiber-optic market, each gets $12 billion\nIf both choose low, they each get $8 billion\nIf one sets high and the other sets low,\n\nthe low-price setter gets the whole market and earns $24 billion,\nthe high price setter gets $0"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-2",
-    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-2",
-    "title": "Introduction to Game Theory",
-    "section": "Two-Stage Games & Subgames",
-    "text": "Two-Stage Games & Subgames"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-3",
-    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-3",
-    "title": "Introduction to Game Theory",
-    "section": "Two-Stage Games & Subgames",
-    "text": "Two-Stage Games & Subgames\nWe can use our tools from solving both game trees and game tables\n\nfirst, notice that a monopolist will always set a High price\nSo we can replace the payoffs from the High branch into the first-stage table"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-4",
-    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-4",
-    "title": "Introduction to Game Theory",
-    "section": "Two-Stage Games & Subgames",
-    "text": "Two-Stage Games & Subgames\nTake a look at the table labelled Second stage:\n\n\n\nCrossTalk, GlobalDialog\nHigh\nLow\n\n\n\n\nHigh\n2, 2\n-10, 6\n\n\nLow\n6, -10\n-2, -2\n\n\n\nThis is itself a complete game nested in the larger one\n\nso it’s whats is called a subgame\nwe can solve it like we would any other game table\nThe NE of this subgame is (Low, Low)\nplace the Nash payoffs of -2, -2 into the first-stage table"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-5",
-    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-5",
-    "title": "Introduction to Game Theory",
-    "section": "Two-Stage Games & Subgames",
-    "text": "Two-Stage Games & Subgames\nFirst-stage game with payoffs filled in:\n\n\n\nCrossTalk, GlobalDialog\nDon’t\nInvest\n\n\n\n\nDon’t\n0, 0\n0, 14\n\n\nInvest\n14, 0\n-2, -2\n\n\n\nNow we can solve for the NE of the whole game:\n\n(Invest High Low, Don’t High Low)\n(Don’t High Low, Invest High Low)"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-6",
-    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-6",
-    "title": "Introduction to Game Theory",
-    "section": "Two-Stage Games & Subgames",
-    "text": "Two-Stage Games & Subgames\nFootball play game\nIn football, each team chooses a play to run in the huddle where the other team can’t observe\n\nafter this simultaneous action which is not observable to their opponent, the teams line up at which point the coach can observe how the defensive team are aligned and choose to potentially pick a different play accordingly\nThe defensive team could in also choose to respond to the offensive play changing their play"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-7",
-    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-7",
-    "title": "Introduction to Game Theory",
-    "section": "Two-Stage Games & Subgames",
-    "text": "Two-Stage Games & Subgames"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#illustrating-sim.-games-using-trees",
-    "href": "Slides/05CombinedGames/05-main.html#illustrating-sim.-games-using-trees",
-    "title": "Introduction to Game Theory",
-    "section": "Illustrating Sim. Games using Trees",
-    "text": "Illustrating Sim. Games using Trees\nMartina Navratilova v. Chris Evert\n\n\n\nEvert, Navratilova\nDL\nCC\n\n\n\n\nDL\n50, 50\n80, 20\n\n\nCC\n90, 10\n20, 80\n\n\n\nNavratilova has volleyed the ball to Evert\n\nEvert can send the ball down the line, DL, or crosscourt CC (a softer diagonal shot)\nNavratilova has to simultaneously choose to set up to receive either type of shot"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#illustrating-sim.-games-using-trees-1",
-    "href": "Slides/05CombinedGames/05-main.html#illustrating-sim.-games-using-trees-1",
-    "title": "Introduction to Game Theory",
-    "section": "Illustrating Sim. Games using Trees",
-    "text": "Illustrating Sim. Games using Trees\nThe simultaneous tennis game can also be represented as a tree\n\nThe information set indicates that Navratilova doesn’t know which shot before she has to choose how to receive"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#adding-nature-as-a-player",
-    "href": "Slides/05CombinedGames/05-main.html#adding-nature-as-a-player",
-    "title": "Introduction to Game Theory",
-    "section": "Adding Nature as a player",
-    "text": "Adding Nature as a player\nEven in cases which aren’t actually strategic, we can still use some of these tools"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#changing-the-order-of-moves",
-    "href": "Slides/05CombinedGames/05-main.html#changing-the-order-of-moves",
-    "title": "Introduction to Game Theory",
-    "section": "Changing the order of Moves",
-    "text": "Changing the order of Moves\nWe found the NE will be (Deficit, High Rates) when this game is played simultaneously\n\n\n\nCongress, Federal Reserve\nLow rates\nHigh Rates\n\n\n\n\nBalance\n3, 4\n1, 3\n\n\nDeficit\n4, 1\n2, 2"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#changing-the-order-of-moves-1",
-    "href": "Slides/05CombinedGames/05-main.html#changing-the-order-of-moves-1",
-    "title": "Introduction to Game Theory",
-    "section": "Changing the order of Moves",
-    "text": "Changing the order of Moves\nWhat about when the Fed moves first?\n\n\nWe get the same NE"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#changing-the-order-of-moves-2",
-    "href": "Slides/05CombinedGames/05-main.html#changing-the-order-of-moves-2",
-    "title": "Introduction to Game Theory",
-    "section": "Changing the order of Moves",
-    "text": "Changing the order of Moves\nWhat about when Congress moves first?\n\n\nnow we get a different NE with congress playing their strictly dominated strategy\nthis is because when the Fed acts second, they can make a credible threat"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#showing-seq.-games-in-strategic-form",
-    "href": "Slides/05CombinedGames/05-main.html#showing-seq.-games-in-strategic-form",
-    "title": "Introduction to Game Theory",
-    "section": "Showing Seq. Games in Strategic Form",
-    "text": "Showing Seq. Games in Strategic Form\nIn the game where Congress moves first, they have two strategies, but the Fed has 4\n\n\n\n\n\n\n\n\n\n\nCongress, Fed\nL if B, H if D\nH if B, L if D\nalways Low\nalways H\n\n\n\n\nBalance\n3,4\n1,3\n3,4\n1,3\n\n\nDeficit\n2,2\n4,1\n4,1\n2,2"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#showing-seq.-games-in-strategic-form-1",
-    "href": "Slides/05CombinedGames/05-main.html#showing-seq.-games-in-strategic-form-1",
-    "title": "Introduction to Game Theory",
-    "section": "Showing Seq. Games in Strategic Form",
-    "text": "Showing Seq. Games in Strategic Form\nWhen we implemented rollback on the extensive form version, there was only one NE,\n\nbut here there are two:\n\n{Deficit, always High }\n{ Balance, (L if B, H if D) }\n\n\nBoth are NE of this game, but the second is a special type of NE\nA subgame-perfect Nash equilibrium because it involves the Fed making their rational choice in every subgame."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#showing-seq.-games-in-strategic-form-2",
-    "href": "Slides/05CombinedGames/05-main.html#showing-seq.-games-in-strategic-form-2",
-    "title": "Introduction to Game Theory",
-    "section": "Showing Seq. Games in Strategic Form",
-    "text": "Showing Seq. Games in Strategic Form\n\nIt’s not subgame-rational for the Fed to play High always because if the case where Congress already spent in deficit were to happen, the Fed’s only rational action would be to set low interest rates.\n\nWe can say that the Fed’s High always strategy is not a credible promise"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#spne",
-    "href": "Slides/05CombinedGames/05-main.html#spne",
-    "title": "Introduction to Game Theory",
-    "section": "SPNE",
-    "text": "SPNE\nThe rollback method finds the subgame-perfect Nash equilibria of sequential games\n\nA complete plan of action such that at every node including off-equilibrium paths, it is still rational to stick to that original plan of action."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#market-entry-game",
-    "href": "Slides/05CombinedGames/05-main.html#market-entry-game",
-    "title": "Introduction to Game Theory",
-    "section": "Market Entry Game",
-    "text": "Market Entry Game\nConsider this variation on the Entry Game, in which the Entrant is not as efficient as the Incumbent:\n\n\n\n\n\n\n\nEntrant, Incumbent\n\\(Fight\\)\n\\(Accom.\\)\n\n\n\n\n\\(Enter\\)\n-1, 1\n1, 2\n\n\n\\(Out\\)\n0, 3\n0, 3\n\n\n\n\n\nNote that this game has two NEs: (Enter, Accommodate) and (Out, Fight).\nDoes it really make sense for the Incumbent to ever Fight?"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#refining-nash-equilibrium",
-    "href": "Slides/05CombinedGames/05-main.html#refining-nash-equilibrium",
-    "title": "Introduction to Game Theory",
-    "section": "Refining Nash Equilibrium",
-    "text": "Refining Nash Equilibrium\n\nThe more you think about it, the less sense this Nash equilibrium makes.\n\nEntrant would stay Out if they really, truly believe that if they Entered, the Incumbent would Fight.\n… but it’s hard to justify that belief when Fighting is costly for the Incumbent.\n\nThe Incumbent would have to somehow convince the Entrant that they really would Fight them,\n\nperhaps by making a credible threat.\n\nWe will talk more about this kind of strategic move later in the course.\nWe often don’t want this kind of Nash Equilibrium. To rule it out, we have the concept of subgame perfection."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#subgames",
-    "href": "Slides/05CombinedGames/05-main.html#subgames",
-    "title": "Introduction to Game Theory",
-    "section": "Subgames",
-    "text": "Subgames\n\nA subgame is a subset of an extensive-form game which, itself, is a complete game.\nA subgame is a single node, and all of the branches and nodes descending from it,\n\nso it forms a complete game by itself"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#examples-of-subgames",
-    "href": "Slides/05CombinedGames/05-main.html#examples-of-subgames",
-    "title": "Introduction to Game Theory",
-    "section": "Examples of Subgames",
-    "text": "Examples of Subgames\nEach of these green boxes contains a subgame."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#examples-of-subgames-1",
-    "href": "Slides/05CombinedGames/05-main.html#examples-of-subgames-1",
-    "title": "Introduction to Game Theory",
-    "section": "Examples of Subgames",
-    "text": "Examples of Subgames\nEach of these green boxes contains a subgame.\n\nThe smaller boxes are trivial subgames, because they don’t contain any meaningful choices."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#examples-of-subgames-2",
-    "href": "Slides/05CombinedGames/05-main.html#examples-of-subgames-2",
-    "title": "Introduction to Game Theory",
-    "section": "Examples of Subgames",
-    "text": "Examples of Subgames\nA game is, technically, a subgame of itself, but it is an improper subgame.\n\n(Any subgames other than the entire game are proper subgames.)"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#subgame-perfection",
-    "href": "Slides/05CombinedGames/05-main.html#subgame-perfection",
-    "title": "Introduction to Game Theory",
-    "section": "Subgame Perfection",
-    "text": "Subgame Perfection\nSo why do we care about subgames?\n\nsubgame-perfect Nash equilibrium (aka SPNE), that does not produce the questionable equilibria we saw earlier.\nAll SPNE are also regular Nash equilibria.\nBut unique to SPNE, they have to also produce a Nash equilibrium in every subgame"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#spne-in-the-entry-game",
-    "href": "Slides/05CombinedGames/05-main.html#spne-in-the-entry-game",
-    "title": "Introduction to Game Theory",
-    "section": "SPNE in the Entry Game",
-    "text": "SPNE in the Entry Game\n\n\n\n\n\nThere is only a single proper subgame in the Entry Game.\nA SPNE of this game must have a NE in that subgame.\nThe only NE of the subgame is for the Incumbent to Accommodate."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#spne-in-the-entry-game-1",
-    "href": "Slides/05CombinedGames/05-main.html#spne-in-the-entry-game-1",
-    "title": "Introduction to Game Theory",
-    "section": "SPNE in the Entry Game",
-    "text": "SPNE in the Entry Game\n\n\n\n\n\nGiven that the Incumbent Accommodates, the Entrant now faces a choice between staying Out, or Entering and being Accommodated.\nThe Entrant’s best response is to Enter, and the SPNE is (Enter, Accommodate)"
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#rationality-and-subgame-perfection",
-    "href": "Slides/05CombinedGames/05-main.html#rationality-and-subgame-perfection",
-    "title": "Introduction to Game Theory",
-    "section": "Rationality and Subgame Perfection",
-    "text": "Rationality and Subgame Perfection\n\nTo justify looking for SPNEs instead of NEs, we assume commonly known sequential rationality.\n\nPlayers are aware that other players are sequentially rational.\nKnowing that other players are sequentially rational, each player can predict the others’ rational behavior and chooses an action with the highest payoff at each of their decision nodes.\n\nSequentially rational players choose their strategy on the fly, one move at a time, instead of all at once at the beginning of the game."
-  },
-  {
-    "objectID": "Slides/05CombinedGames/05-main.html#finding-spnes-backward-induction",
-    "href": "Slides/05CombinedGames/05-main.html#finding-spnes-backward-induction",
-    "title": "Introduction to Game Theory",
-    "section": "Finding SPNEs: Backward Induction",
-    "text": "Finding SPNEs: Backward Induction\nThe method for finding SPNEs is straightforward—we’ve already been using it without spelling it out formally.\n\nFind all the decision nodes in the lowest row (assuming the tree goes top down)\nFind the optimal choice at each of these nodes, mark the corresponding branch (or erase/cross out all the other branches).\nIf you just solved the game’s initial node, you’re done!\nOtherwise, identify all of the decision nodes in the next row up and return to step 2.\n\nAt each step, remember to take into account the optimal moves that you’ve already found lower in the tree."
   },
   {
     "objectID": "Slides/04ContinuousStrats/0405-nashcritique.html",
@@ -6669,49 +6508,70 @@
     "href": "Slides/05CombinedGames/0501-combinedgames.html",
     "title": "Games with both Simultaneous and Sequential Moves",
     "section": "",
-    "text": "CrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf only one company has fiber-optic, they get the entire market\n\nA monopolist can charge high price \\(\\rightarrow\\) earn $24 billion\nor a low price to attract more customers \\(\\rightarrow\\) earn $16 billion\n\n\n\n\n\n\n\nCrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf both companies invest, they are locked in a simultaneous pricing game\n\nIf both set high price in the fiber-optic market, each gets $12 billion\nIf both choose low, they each get $8 billion\nIf one sets high and the other sets low,\n\nthe low-price setter gets the whole market and earns $24 billion,\nthe high price setter gets $0\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe can use our tools from solving both game trees and game tables\n\n\nfirst, notice that a monopolist will always set a High price\nSo we can replace the payoffs from the High branch into the first-stage table\n\n\n\n\n\n\nTake a look at the table labelled Second stage:\n\n\n\nCrossTalk, GlobalDialog\nHigh\nLow\n\n\n\n\nHigh\n2, 2\n-10, 6\n\n\nLow\n6, -10\n-2, -2\n\n\n\n\nThis is itself a complete game nested in the larger one\n\nso it’s whats is called a subgame\nwe can solve it like we would any other game table\nThe NE of this subgame is (Low, Low)\nplace the Nash payoffs of -2, -2 into the first-stage table\n\n\n\n\n\n\nFirst-stage game with payoffs filled in:\n\n\n\nCrossTalk, GlobalDialog\nDon’t\nInvest\n\n\n\n\nDon’t\n0, 0\n0, 14\n\n\nInvest\n14, 0\n-2, -2\n\n\n\n\nNow we can solve for the NE of the whole game:\n\n(Invest High Low, Don’t High Low)\n(Don’t High Low, Invest High Low)\n\n\n\n\n\n\n\n\nIn football, each team chooses a play to run in the huddle where the other team can’t observe\n\nafter this simultaneous action which is not observable to their opponent, the teams line up at which point the coach can observe how the defensive team are aligned and choose to potentially pick a different play accordingly\nThe defensive team could in also choose to respond to the offensive play changing their play"
+    "text": "When we first saw this game, Guy could observe whether Vivica had paid the ransom before he made the decision to \\(Kill\\) or \\(Release\\) Orlando\nNow we will consider a variation of this game where Guy doesnt know whether Vivica has paid when he chooses to Kill or Release\n\n\n\n\n\n\n\n\n\nThe dotted box around Guy’s nodes \\(N_3\\) and \\(N_4\\) indicate that he can’t tell them apart.\nThey are part of the same information set; to Guy, they are indistinguishable from each other.\n\n\n\n\n\n\n\nInformation set\n\n\n\nis the set of information available to a player when making a decision. In the extensive form, every decision node belongs to one and only one info set, but multiple nodes may be in the same info set if the player at that node cannot tell them apart.\n\n\n\n\n\n\n\nConsider the situation when Guy has already kidnapped Orlando.\nList the remaining strategies for each player:\n\n\nVivica can decide to Pay or Don’t pay the ransom\nGuy can either Kill or Release Orlando\n\n\n\n\n\n\nWith these strategy profiles, we can write this subgame out in its strategic form:\n\n\n\nGuy, Vivica\nPay\nDon’t\n\n\n\n\nKill\n4, 1\n2, 2\n\n\nRelease\n5, 3\n1, 4\n\n\n\n\n\n\n\nFor every strategic form game, there are multiple extensive form game trees which can be drawn.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat will a complete strategy profile look like for each player?\n\n\nGuy’s strategy:\n\nelement 1: \\(Kidnap\\) or \\(Don't~Kidnap\\)\nelement 2: \\(Kill\\) or \\(Release\\)\n\nVivica’s strategy:\n\nelement 1: \\(Pay\\) or \\(Don't\\)\n\n\n\n\n\n\n\nWhat is/are the NE of the subgame?\n\n\n\n\n\\(Pay\\)\n\\(Don't\\)\n\n\n\n\n\\(Kill\\)\n4,1\n2,2\n\n\n\\(Release\\)\n5,3\n1,4\n\n\n\n\n\n(\\(Release\\), \\(Pay\\)) is no longer stable because Vivica wouldn’t pay the ransom if Guy releases\n(\\(Kill\\), \\(Don't\\)) is the only NE in this table\n\n\n\n\n\n\nKnowing this, what is the NE in the full game?\n\n. . .\n\n{ (\\(Don't~Kidnap\\), \\(Kill\\)), \\(Don't~pay\\) }\n\n\n\n\n\nIn the version where Vivica’s action was observable, we found the NE:\n\n{ (\\(Kidnap, Kill_3, Release_4\\)), \\(Pay\\) }\n\nBut in the version where Guy couldn’t see whether Vivica paid the ransom, it was:\n\n{ (\\(Don't~Kidnap\\), \\(Kill\\)), \\(Don't~pay\\) }\n\n\n\nIf you were Guy, which version would you prefer?\nGuy’s advantage is in making a conditional promise/threat to Vivica which is taken away if he can only pick one action"
   },
   {
-    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames",
-    "href": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames",
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#kidnapping-with-hidden-information",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#kidnapping-with-hidden-information",
     "title": "Games with both Simultaneous and Sequential Moves",
     "section": "",
-    "text": "CrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf only one company has fiber-optic, they get the entire market\n\nA monopolist can charge high price \\(\\rightarrow\\) earn $24 billion\nor a low price to attract more customers \\(\\rightarrow\\) earn $16 billion"
+    "text": "When we first saw this game, Guy could observe whether Vivica had paid the ransom before he made the decision to \\(Kill\\) or \\(Release\\) Orlando\nNow we will consider a variation of this game where Guy doesnt know whether Vivica has paid when he chooses to Kill or Release"
   },
   {
-    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-1",
-    "href": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-1",
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#kidnap-game-with-a-simultaneous-subgame",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#kidnap-game-with-a-simultaneous-subgame",
     "title": "Games with both Simultaneous and Sequential Moves",
     "section": "",
-    "text": "CrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf both companies invest, they are locked in a simultaneous pricing game\n\nIf both set high price in the fiber-optic market, each gets $12 billion\nIf both choose low, they each get $8 billion\nIf one sets high and the other sets low,\n\nthe low-price setter gets the whole market and earns $24 billion,\nthe high price setter gets $0"
+    "text": "The dotted box around Guy’s nodes \\(N_3\\) and \\(N_4\\) indicate that he can’t tell them apart.\nThey are part of the same information set; to Guy, they are indistinguishable from each other.\n\n\n\n\n\n\n\nInformation set\n\n\n\nis the set of information available to a player when making a decision. In the extensive form, every decision node belongs to one and only one info set, but multiple nodes may be in the same info set if the player at that node cannot tell them apart."
   },
   {
-    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-3",
-    "href": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-3",
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#using-strategic-form-in-extensive-games",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#using-strategic-form-in-extensive-games",
     "title": "Games with both Simultaneous and Sequential Moves",
     "section": "",
-    "text": "We can use our tools from solving both game trees and game tables\n\n\nfirst, notice that a monopolist will always set a High price\nSo we can replace the payoffs from the High branch into the first-stage table"
+    "text": "Consider the situation when Guy has already kidnapped Orlando.\nList the remaining strategies for each player:\n\n\nVivica can decide to Pay or Don’t pay the ransom\nGuy can either Kill or Release Orlando"
   },
   {
-    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-4",
-    "href": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-4",
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#using-strategic-form-in-extensive-games-1",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#using-strategic-form-in-extensive-games-1",
     "title": "Games with both Simultaneous and Sequential Moves",
     "section": "",
-    "text": "Take a look at the table labelled Second stage:\n\n\n\nCrossTalk, GlobalDialog\nHigh\nLow\n\n\n\n\nHigh\n2, 2\n-10, 6\n\n\nLow\n6, -10\n-2, -2\n\n\n\n\nThis is itself a complete game nested in the larger one\n\nso it’s whats is called a subgame\nwe can solve it like we would any other game table\nThe NE of this subgame is (Low, Low)\nplace the Nash payoffs of -2, -2 into the first-stage table"
+    "text": "With these strategy profiles, we can write this subgame out in its strategic form:\n\n\n\nGuy, Vivica\nPay\nDon’t\n\n\n\n\nKill\n4, 1\n2, 2\n\n\nRelease\n5, 3\n1, 4"
   },
   {
-    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-5",
-    "href": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-5",
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#going-from-strategic-to-extensive",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#going-from-strategic-to-extensive",
     "title": "Games with both Simultaneous and Sequential Moves",
     "section": "",
-    "text": "First-stage game with payoffs filled in:\n\n\n\nCrossTalk, GlobalDialog\nDon’t\nInvest\n\n\n\n\nDon’t\n0, 0\n0, 14\n\n\nInvest\n14, 0\n-2, -2\n\n\n\n\nNow we can solve for the NE of the whole game:\n\n(Invest High Low, Don’t High Low)\n(Don’t High Low, Invest High Low)"
+    "text": "For every strategic form game, there are multiple extensive form game trees which can be drawn."
   },
   {
-    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-6",
-    "href": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-6",
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#solving-the-kidnap-game-w-simultaneous-sugame",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#solving-the-kidnap-game-w-simultaneous-sugame",
     "title": "Games with both Simultaneous and Sequential Moves",
     "section": "",
-    "text": "In football, each team chooses a play to run in the huddle where the other team can’t observe\n\nafter this simultaneous action which is not observable to their opponent, the teams line up at which point the coach can observe how the defensive team are aligned and choose to potentially pick a different play accordingly\nThe defensive team could in also choose to respond to the offensive play changing their play"
+    "text": "What will a complete strategy profile look like for each player?\n\n\nGuy’s strategy:\n\nelement 1: \\(Kidnap\\) or \\(Don't~Kidnap\\)\nelement 2: \\(Kill\\) or \\(Release\\)\n\nVivica’s strategy:\n\nelement 1: \\(Pay\\) or \\(Don't\\)"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#solving-the-kidnap-game-w-simultaneous-sugame-1",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#solving-the-kidnap-game-w-simultaneous-sugame-1",
+    "title": "Games with both Simultaneous and Sequential Moves",
+    "section": "",
+    "text": "What is/are the NE of the subgame?\n\n\n\n\n\\(Pay\\)\n\\(Don't\\)\n\n\n\n\n\\(Kill\\)\n4,1\n2,2\n\n\n\\(Release\\)\n5,3\n1,4\n\n\n\n\n\n(\\(Release\\), \\(Pay\\)) is no longer stable because Vivica wouldn’t pay the ransom if Guy releases\n(\\(Kill\\), \\(Don't\\)) is the only NE in this table"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#solving-the-kidnap-game-w-simultaneous-sugame-2",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#solving-the-kidnap-game-w-simultaneous-sugame-2",
+    "title": "Games with both Simultaneous and Sequential Moves",
+    "section": "",
+    "text": "Knowing this, what is the NE in the full game?\n\n. . .\n\n{ (\\(Don't~Kidnap\\), \\(Kill\\)), \\(Don't~pay\\) }"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#comparing-ne-in-the-different-kidnapping-games",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#comparing-ne-in-the-different-kidnapping-games",
+    "title": "Games with both Simultaneous and Sequential Moves",
+    "section": "",
+    "text": "In the version where Vivica’s action was observable, we found the NE:\n\n{ (\\(Kidnap, Kill_3, Release_4\\)), \\(Pay\\) }\n\nBut in the version where Guy couldn’t see whether Vivica paid the ransom, it was:\n\n{ (\\(Don't~Kidnap\\), \\(Kill\\)), \\(Don't~pay\\) }\n\n\n\nIf you were Guy, which version would you prefer?\nGuy’s advantage is in making a conditional promise/threat to Vivica which is taken away if he can only pick one action"
   },
   {
     "objectID": "Slides/05CombinedGames/0505-SPNE.html",

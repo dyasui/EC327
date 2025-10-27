@@ -142,12 +142,6 @@ Dante Yasui
 
   <p class="date">2025</p>
 </section>
-<section class="slide level2">
-
-<div class="vertical-center">
-<p><span class="hi big">Outline</span></p>
-</div>
-</section>
 <section id="combining-sequential-and-simultaneous" class="slide level2">
 <h2>Combining Sequential and Simultaneous</h2>
 <ul>
@@ -159,73 +153,457 @@ Dante Yasui
 </ul></li>
 </ul>
 </section>
+<section>
+<section id="sequential-games-in-strategic-form" class="title-slide slide level1 center">
+<h1>Sequential Games in Strategic Form</h1>
+
+</section>
 <section id="original-kidnap-game" class="slide level2">
 <h2>Original Kidnap Game</h2>
 
+<!-- ## Rollback in the Kidnap Game
+
+::::: {.columns}
+
+:::: {.column}
+![](figures/kidnapgame.png)
+::::
+
+:::: {.column}
+::: {.incremental}
+  * What should [Guy]{.red} do if Vivica pays?
+    + $Release$ (5 > 4)
+  * What should [Guy]{.red} do if Vivica doesn't pay?
+    + $Kill$ (2 > 1)
+:::
+::::
+
+:::::
+
+---
+
+## Rollback in the Kidnap Game
+
+::::: {.columns}
+
+:::: {.column}
+![](figures/kidnapgame.png)
+::::
+
+:::: {.column}
+::: {.incremental}
+  * What should [Vivica]{.blue} do knowing that Guy will $Release$ if she pays,
+  and $Kill$ if she doesn't?
+    * [Pay]{.blue} the ransom (3 > 2)
+:::
+::::
+
+:::::
+
+---
+
+## Rollback in the Kidnap Game
+
+::::: {.columns}
+
+:::: {.column}
+![](figures/kidnapgame.png)
+::::
+
+:::: {.column}
+::: {.incremental}
+  * What should [Guy]{.red} do
+  knowing that [Vivica]{.blue} will [$Pay$]{.blue},
+  knowing that he will [($Kill$, $Release$)]{.red}?
+    + [Kidnap]{.red} (5 > 3)
+:::
+::::
+
+:::::
+
+--- -->
 <img data-src="figures/kidnapgame.png" class="r-stretch"></section>
 <section id="rollback-in-the-kidnap-game" class="slide level2">
 <h2>Rollback in the Kidnap Game</h2>
-<div class="columns">
-<div class="column">
-<p><img data-src="figures/kidnapgame.png"></p>
-</div><div class="column">
+<p>Rollback solution with <span class="hi">perfect information</span>:</p>
 <ul>
-<li class="fragment">What should <span class="red">Guy</span> do if Vivica pays?
-<ul>
-<li class="fragment"><span class="math inline">\(Release\)</span> (5 &gt; 4)</li>
-</ul></li>
-<li class="fragment">What should <span class="red">Guy</span> do if Vivica doesn’t pay?
-<ul>
-<li class="fragment"><span class="math inline">\(Kill\)</span> (2 &gt; 1)</li>
-</ul></li>
-</ul>
-</div></div>
-</section>
-<section id="rollback-in-the-kidnap-game-1" class="slide level2">
-<h2>Rollback in the Kidnap Game</h2>
-<div class="columns">
-<div class="column">
-<p><img data-src="figures/kidnapgame.png"></p>
-</div><div class="column">
-<ul>
-<li class="fragment">What should <span class="blue">Vivica</span> do knowing that Guy will <span class="math inline">\(Release\)</span> if she pays, and <span class="math inline">\(Kill\)</span> if she doesn’t?
-<ul>
-<li class="fragment"><span class="blue">Pay</span> the ransom (3 &gt; 2)</li>
-</ul></li>
-</ul>
-</div></div>
-</section>
-<section id="rollback-in-the-kidnap-game-2" class="slide level2">
-<h2>Rollback in the Kidnap Game</h2>
-<div class="columns">
-<div class="column">
-<p><img data-src="figures/kidnapgame.png"></p>
-</div><div class="column">
-<ul>
-<li class="fragment">What should <span class="red">Guy</span> do knowing that <span class="blue">Vivica</span> will <span class="blue"><span class="math inline">\(Pay\)</span></span>, knowing that he will <span class="red">(<span class="math inline">\(Kill\)</span>, <span class="math inline">\(Release\)</span>)</span>?
-<ul>
-<li class="fragment"><span class="red">Kidnap</span> (5 &gt; 3)</li>
-</ul></li>
-</ul>
-</div></div>
-</section>
-<section id="rollback-in-the-kidnap-game-3" class="slide level2">
-<h2>Rollback in the Kidnap Game</h2>
-<p>So the rollback solution in this version of the game where both players have <span class="hi">perfect information</span> about all previous actions is:</p>
-<ul>
-<li>{ (<span class="red"><span class="math inline">\(Kidnap, Kill_3, Release_4\)</span></span>), <span class="blue"><span class="math inline">\(Pay\)</span></span> }</li>
+<li>{ (<span class="red"><span class="math inline">\(Kidnap, Release, Kill\)</span></span>), <span class="blue"><span class="math inline">\(Pay\)</span></span> }</li>
 </ul>
 <div class="fragment">
 <ul>
 <li><p>In other words:</p>
 <ul>
-<li><p>Guy <span class="red"><span class="math inline">\(kidnaps\)</span></span> because he believes Vivica will pay the ransom. He threatens to <span class="red"><span class="math inline">\(kill\)</span></span> if Vivica doesn’t pay, but promises to <span class="red"><span class="math inline">\(release\)</span></span> if she does pay</p></li>
-<li><p>Vivica <span class="blue"><span class="math inline">\(pays\)</span></span> because she believes Guy’s threat/promise</p></li>
+<li><p>Guy <span class="red"><span class="math inline">\(kidnaps\)</span></span>, promises to <span class="red"><span class="math inline">\(release\)</span></span> if ransom paid, otherwise threatens <span class="red"><span class="math inline">\(kill\)</span></span></p>
+<ul>
+<li>rational if he believes Vivica will pay the ransom.</li>
+</ul></li>
+<li><p>Vivica <span class="blue"><span class="math inline">\(pays\)</span></span></p>
+<ul>
+<li>rational if she believes Guy’s threat/promise above</li>
+</ul></li>
+</ul></li>
+<li><p>Is this the only stable outcome?</p>
+<ul>
+<li>It depends on beliefs!</li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="rollback-in-the-kidnap-game-4" class="slide level2">
+<section id="checking-for-other-kidnap-game-nash-guy" class="slide level2">
+<h2>Checking for Other Kidnap Game Nash, Guy</h2>
+<p>What are <em>all of</em> Guy’s possible strategies?</p>
+<div class="fragment">
+<ul>
+<li>Kidnap, Release if paid, Kill if unpaid</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Kidnap, R, R</li>
+<li>Kidnap, K, K</li>
+<li>Kidnap, K, R</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Don’t kidnap, Release, Kill</li>
+<li>DNK, R, R</li>
+<li>DNK, K, K</li>
+<li>DNK, K, R</li>
+</ul>
+</div>
+</section>
+<section id="checking-for-other-kidnap-nash-vivica" class="slide level2">
+<h2>Checking for Other Kidnap Nash, Vivica</h2>
+<p>What are all of Vivica’s strategies?</p>
+<div class="fragment">
+<ul>
+<li>Pay</li>
+<li>or Don’t pay</li>
+</ul>
+</div>
+<div class="fragment">
+<p>How to check for another Nash strategy profile besides</p>
+<p>{ (<span class="red"><span class="math inline">\(Kidnap, Release, Kill\)</span></span>), <span class="blue"><span class="math inline">\(Pay\)</span></span> }?</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Check all 16 possible strat. profiles?</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>or use a tool we’ve learned to help?</li>
+</ul>
+</div>
+</section>
+<section id="a-strategic-form-representation" class="slide level2">
+<h2>A Strategic Form representation</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 29%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="red">Guy</span>, <span class="blue">Vivica</span></th>
+<th style="text-align: center;">Pay</th>
+<th style="text-align: center;">Don’t Pay</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="h">DNK, Kill, Kill</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">DNK, Kill, Release</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+</tr>
+<tr class="odd">
+<td><span class="h">DNK, Release, Kill</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">DNK, Release, Release</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, Kill, Kill</span></td>
+<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
+<td style="text-align: center;"><span class="red">2</span>, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, Kill, Release</span></td>
+<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
+<td style="text-align: center;"><span class="red">1</span>, <span class="blue">4</span></td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, Release, Kill</span></td>
+<td style="text-align: center;"><span class="red">5</span>, <span class="blue">3</span></td>
+<td style="text-align: center;"><span class="red">2</span>, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, Release, Release</span></td>
+<td style="text-align: center;"><span class="red">5</span>, <span class="blue">3</span></td>
+<td style="text-align: center;"><span class="red">1</span>, <span class="blue">4</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="new-look-same-game" class="slide level2">
+<h2>New look, same game</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="figures/kidnapgame.png"></p>
+</div><div class="column small" style="width:60%;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 29%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="red">Guy</span>, <span class="blue">Vivica</span></th>
+<th style="text-align: center;">Pay</th>
+<th style="text-align: center;">Don’t Pay</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="h">DNK, Kill, Kill</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">DNK, Kill, Release</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+</tr>
+<tr class="odd">
+<td><span class="h">DNK, Release, Kill</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">DNK, Release, Release</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, Kill, Kill</span></td>
+<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
+<td style="text-align: center;"><span class="red">2</span>, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, Kill, Release</span></td>
+<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
+<td style="text-align: center;"><span class="red">1</span>, <span class="blue">4</span></td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, Release, Kill</span></td>
+<td style="text-align: center;"><span class="red">5</span>, <span class="blue">3</span></td>
+<td style="text-align: center;"><span class="red">2</span>, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, Release, Release</span></td>
+<td style="text-align: center;"><span class="red">5</span>, <span class="blue">3</span></td>
+<td style="text-align: center;"><span class="red">1</span>, <span class="blue">4</span></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</section>
+<section id="solving-kidnap-in-strategic-form" class="slide level2">
+<h2>Solving Kidnap in Strategic Form</h2>
+<ul>
+<li class="fragment">The top half of the table represents <em>don’t kidnap</em> branch
+<ul>
+<li class="fragment">Why does it take up multiple cells?
+<ul>
+<li class="fragment">They represent different <em>beliefs</em></li>
+<li class="fragment">Why might Guy choose to not kidnap?
+<ul>
+<li class="fragment">If he <em>believes</em> Vivica won’t pay</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="guys-br-in-strategic-form" class="slide level2">
+<h2>Guy’s BR in Strategic Form</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="red">Guy</span>, <span class="blue">Vivica</span></th>
+<th style="text-align: center;">Pay</th>
+<th style="text-align: center;">Don’t Pay</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="h">DNK, K, K</span></td>
+<td style="text-align: center;"><span class="red">3</span>, 5</td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, 5</td>
+</tr>
+<tr class="even">
+<td><span class="h">DNK, K, R</span></td>
+<td style="text-align: center;"><span class="red">3</span>, 5</td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, 5</td>
+</tr>
+<tr class="odd">
+<td><span class="h">DNK, R, K</span></td>
+<td style="text-align: center;"><span class="red">3</span>, 5</td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, 5</td>
+</tr>
+<tr class="even">
+<td><span class="h">DNK, R, R</span></td>
+<td style="text-align: center;"><span class="red">3</span>, 5</td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, 5</td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, K, K</span></td>
+<td style="text-align: center;"><span class="red">4</span>, 1</td>
+<td style="text-align: center;"><span class="red">2</span>, 2</td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, K, R</span></td>
+<td style="text-align: center;"><span class="red">4</span>, 1</td>
+<td style="text-align: center;"><span class="red">1</span>, 4</td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, R, K</span></td>
+<td style="text-align: center;"><u><span class="red">5</span></u>, 3</td>
+<td style="text-align: center;"><span class="red">2</span>, 2</td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, R, R</span></td>
+<td style="text-align: center;"><u><span class="red">5</span></u>, 3</td>
+<td style="text-align: center;"><span class="red">1</span>, 4</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vivicas-brs-in-strategic-form" class="slide level2">
+<h2>Vivica’s BRs in Strategic Form</h2>
+<p>When would Vivica choose to not pay the ransom?</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="red">Guy</span>, <span class="blue">Vivica</span></th>
+<th style="text-align: center;">Pay</th>
+<th style="text-align: center;">Don’t Pay</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="h">DNK, K, K</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
+</tr>
+<tr class="even">
+<td><span class="h">DNK, K, R</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
+</tr>
+<tr class="odd">
+<td><span class="h">DNK, R, K</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
+</tr>
+<tr class="even">
+<td><span class="h">DNK, R, R</span></td>
+<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
+<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, K, K</span></td>
+<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
+<td style="text-align: center;"><span class="red">2</span>, <u><span class="blue">2</span></u></td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, K, R</span></td>
+<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
+<td style="text-align: center;"><span class="red">1</span>, <u><span class="blue">4</span></u></td>
+</tr>
+<tr class="odd">
+<td><span class="h">Kidnap, R, K</span></td>
+<td style="text-align: center;"><u><span class="red">5</span></u>, <u><span class="blue">3</span></u></td>
+<td style="text-align: center;"><span class="red">2</span>, <span class="blue">2</span></td>
+</tr>
+<tr class="even">
+<td><span class="h">Kidnap, R, R</span></td>
+<td style="text-align: center;"><u><span class="red">5</span></u>, <span class="blue">3</span></td>
+<td style="text-align: center;"><span class="red">1</span>, <u><span class="blue">4</span></u></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="new-nash-eq.-in-kidnap-game" class="slide level2">
+<h2>New Nash Eq. in Kidnap Game</h2>
+<p>We found { (<span class="red"><span class="math inline">\(Kidnap, Release, Kill\)</span></span>), <span class="blue"><span class="math inline">\(Pay\)</span></span> }</p>
+<p>through backwards induction.</p>
+<div class="fragment">
+<p>Through BR analysis in Strategic form:</p>
+<ul>
+<li>Any strategy profile where:
+<ul>
+<li>Guy Doesn’t Kidnap (DNK,K,K; DNK,K,R; DNK,R,K; DNK,R,R)</li>
+<li>Vivica Doesn’t Pay</li>
+</ul></li>
+<li>is also a Nash</li>
+</ul>
+<p>The rollback eq. is not the only NE of this game!</p>
+</div>
+</section>
+<section id="ne-vs-spne" class="slide level2">
+<h2>NE vs SPNE</h2>
+<div class="small">
+<ul>
+<li class="fragment"><p>What is different about <em>rollback</em> eq. and other Nash?</p>
+<ul>
+<li class="fragment">Backwards induction rules out threats that aren’t <em>credible</em></li>
+</ul></li>
+<li class="fragment"><p>Vivica could threaten to not pay ransom</p>
+<ul>
+<li class="fragment"><p>If Guy believes this, he would get 2 or 1 by Kidnapping,</p>
+<ul>
+<li class="fragment">or 3 by not kidnapping</li>
+</ul></li>
+<li class="fragment"><p>Don’t kidnap, Don’t pay NE are stable</p>
+<ul>
+<li class="fragment">given certain <em>beliefs</em></li>
+</ul></li>
+</ul></li>
+<li class="fragment"><p>But if Guy’s really savvy,</p>
+<ul>
+<li class="fragment"><p>He should rationally state his preference of killing if paid, release if unpaid</p></li>
+<li class="fragment"><p>he should know Vivica wouldn’t follow through once really faced with decision of 3 vs 2</p></li>
+<li class="fragment"><p>Vivica’s threat of “I won’t pay” isn’t <em>credible</em></p>
+<ul>
+<li class="fragment">It’s not subgame rational</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="rollback-in-the-kidnap-game-1" class="slide level2">
 <h2>Rollback in the Kidnap Game</h2>
 <p>{ (<span class="red"><span class="math inline">\(Kidnap, Kill_3, Release_4\)</span></span>), <span class="blue"><span class="math inline">\(Pay\)</span></span> }</p>
 <p>On top of being a regular NE, this strategy profile is also called <span class="hi">subgame-perfect</span> because both players’ actions are <em>credible</em>:</p>
@@ -234,9 +612,273 @@ Dante Yasui
 <li class="fragment">His promise to release Orlando if the ransom <em>is</em> paid is also credible because he would rather not kill if he gets the money</li>
 <li class="fragment">Vivica has every reason to pay the ransom when she believes guy will make good on his threat because she doesn’t want Orlando to die</li>
 </ul>
+</section></section>
+<section>
+<section id="simultaneous-games-in-sequential-form" class="title-slide slide level1 center">
+<h1>Simultaneous Games in Sequential Form</h1>
+
 </section>
-<section id="modifying-the-game" class="slide level2">
-<h2>Modifying the game</h2>
+<section id="illustrating-sim.-games-using-trees" class="slide level2">
+<h2>Illustrating Sim. Games using Trees</h2>
+<h3 id="martina-navratilova-v.-chris-evert">Martina Navratilova v. Chris Evert</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Evert, Navratilova</th>
+<th style="text-align: center;">DL</th>
+<th style="text-align: center;">CC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>DL</strong></td>
+<td style="text-align: center;">50, 50</td>
+<td style="text-align: center;">80, 20</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>CC</strong></td>
+<td style="text-align: center;">90, 10</td>
+<td style="text-align: center;">20, 80</td>
+</tr>
+</tbody>
+</table>
+<p>Navratilova has volleyed the ball to Evert</p>
+<ul>
+<li><p>Evert can send the ball down the line, <strong>DL</strong>, or crosscourt <strong>CC</strong> (a softer diagonal shot)</p></li>
+<li><p>Navratilova has to simultaneously choose to set up to receive either type of shot</p></li>
+</ul>
+</section>
+<section id="illustrating-sim.-games-using-trees-1" class="slide level2">
+<h2>Illustrating Sim. Games using Trees</h2>
+<p>The simultaneous tennis game can also be represented as a tree</p>
+
+<img data-src="figures/Dixit_fig6.7.png" class="r-stretch"><p>The <span class="hi">information set</span> indicates that Navratilova doesn’t know which shot before she has to choose how to receive</p>
+<!-- ## Adding Nature as a player
+
+Even in cases which aren't actually *strategic*, 
+we can still use some of these tools
+
+![](figures/Dixit_fig6.8.png)
+
+## Changing the order of Moves
+
+We found the NE will be (**Deficit**, **High Rates**)
+when this game is played simultaneously
+
+| Congress, Federal Reserve | Low rates | High Rates |
+|:-------------------------:+:---------:+:----------:|
+|        **Balance**        |    3, 4   |    1, 3    |
+|        **Deficit**        |    4, 1   |    2, 2    |
+
+## Changing the order of Moves
+
+What about when the Fed moves first?
+
+![](figures/Dixit_fig6.6b.png)
+
+::: {.incremental}
+
+  * We get the same NE
+
+:::
+---
+
+## Changing the order of Moves
+
+What about when Congress moves first?
+
+![](figures/Dixit_fig6.6c.png)
+
+::: {.incremental}
+
+  * now we get a different NE with congress playing their strictly dominated strategy
+
+  * this is because when the Fed acts second, they can make a *credible threat*
+
+:::
+
+---
+
+## Showing Seq. Games in Strategic Form
+
+In the game where Congress moves first,
+they have two strategies, but the Fed has 4
+
+| Congress, Fed | L if B, H if D | H if B, L if D | always Low | always H |
+|---------------+----------------+----------------+------------+----------|
+| **Balance**   | 3,4            | 1,3            | 3,4        | 1,3      |
+| **Deficit**   | 2,2            | 4,1            | 4,1        | 2,2      |
+
+---
+
+## Showing Seq. Games in Strategic Form
+
+When we implemented *rollback* on the extensive form version,
+there was only one NE,
+
+  * but here there are two: 
+
+    + \{**Deficit**, always **High** \}
+    
+    + \{ **Balance**, (**L** if B, **H** if D) \}
+
+Both are NE of this game, but the second is a special type of NE
+
+A [subgame-perfect Nash equilibrium]{.hi} because it involves the Fed making their rational choice in every subgame.
+
+## Showing Seq. Games in Strategic Form
+
+![](figures/Dixit_fig6.6c.png)
+
+It's not *subgame-rational* for the Fed to play **High always**
+because if the case where Congress already spent in deficit were to happen,
+the Fed's only rational action would be to set low interest rates.
+
+  * We can say that the Fed's **High always** strategy is not a [credible]{.hi} promise
+
+## SPNE
+
+The rollback method finds the [subgame-perfect Nash equilibria]{.hi} of sequential games
+
+  * A complete plan of action such that at every node *including off-equilibrium* paths, it is still rational to stick to that original plan of action. -->
+<!-- {{< include 0505-SPNE.qmd >}} -->
+</section></section>
+<section>
+<section id="games-with-both-simultaneous-and-sequential-moves" class="title-slide slide level1 center">
+<h1>Games with both Simultaneous and Sequential Moves</h1>
+<!-- ## Games with both types of moves
+
+We separated games by the timing of moves in the first few lectures
+
+  * it allowed us to introduce the relevant methods for each category
+
+  * it also gave us the intuition behind the more general concept of Nash Equilibrium in a few different settings
+
+  * but for many types of settings there are a mix of actions that are taken both *sequentially* and also taken *simultaneously*
+
+--- -->
+<!-- ## Two-Stage Games & Subgames
+
+[CrossTalk]{.h} and [GlobalDialog]{.h} are competing telecom companies
+
+  * Each could invest $10 billion in fiber-optic infrastructure
+
+::: {.incremenatl}
+
+  * If only one company has fiber-optic, they get the entire market
+
+    + A monopolist can charge **high** price $\rightarrow$ earn $24 billion
+
+    + or a **low** price to attract more customers $\rightarrow$ earn $16 billion
+
+:::
+
+---
+
+## Two-Stage Games & Subgames
+
+[CrossTalk]{.h} and [GlobalDialog]{.h} are competing telecom companies
+
+  * Each could invest $10 billion in fiber-optic infrastructure
+
+::: {.incremental}
+
+  * If *both* companies invest, they are locked in a ***simultaneous*** pricing game
+
+    + If both set **high** price in the fiber-optic market, each gets $12 billion
+
+    + If both choose **low**, they each get $8 billion
+
+    + If one sets **high** and the other sets **low**, 
+      
+      - the low-price setter gets the whole market and earns $24 billion,
+
+      - the high price setter gets $0
+
+:::
+
+---
+
+## Two-Stage Games & Subgames
+
+![](figures/Dixit_fig6.1.png)
+
+---
+
+## Two-Stage Games & Subgames
+
+We can use our tools from solving both game trees and game tables 
+
+::: {.incremental}
+
+  * first, notice that a monopolist will always set a **High** price
+
+  * So we can replace the payoffs from the **High** branch into the first-stage table
+
+:::
+
+---
+
+## Two-Stage Games & Subgames
+
+Take a look at the table labelled Second stage:
+
+| CrossTalk, GlobalDialog |  High  |   Low  |
+|:-----------------------:+:------:+:------:|
+|         **High**        |  2, 2  | -10, 6 |
+|         **Low**         | 6, -10 | -2, -2 |
+
+::: {.incremental}
+
+This is itself a complete game nested in the larger one
+
+  * so it's whats is called a [subgame]{.hi}
+
+  * we can solve it like we would any other game table
+
+  * The NE of this subgame is (**Low**, **Low**) 
+
+  * place the Nash payoffs of -2, -2 into the first-stage table
+:::
+
+---
+
+## Two-Stage Games & Subgames
+
+First-stage game with payoffs filled in:
+
+| CrossTalk, GlobalDialog |   Don't   |   Invest   |
+|:-----------------------:+:---------:+:----------:|
+|        **Don't**        |    0, 0   |  0, **14** |
+|        **Invest**       | **14**, 0 | **-2, -2** |
+
+::: {.incremental}
+Now we can solve for the NE of the whole game:
+  
+  * (**Invest** **High** **Low**, **Don't** **High** **Low**)
+
+  * (**Don't** **High** **Low**, **Invest** **High** **Low**)
+:::
+
+--- -->
+<!-- ## Two-Stage Games & Subgames
+
+### Football play game
+
+In football, each team chooses a play to run in the huddle where the other team can't observe
+
+  * after this *simultaneous* action which is not observable to their opponent, the teams line up at which point the coach *can* observe how the defensive team are aligned and choose to potentially pick a different play accordingly
+
+  * The defensive team could in also choose to respond to the offensive play changing their play
+
+---
+
+## Two-Stage Games & Subgames
+
+![](figures/Dixit_fig6.4.png) -->
+</section>
+<section id="kidnapping-with-hidden-information" class="slide level2">
+<h2>Kidnapping with hidden information</h2>
 <div class="columns">
 <div class="column">
 <p><img data-src="figures/kidnapgame_infoset.png"></p>
@@ -383,637 +1025,6 @@ Dante Yasui
 <li class="fragment">If you were Guy, which version would you prefer?</li>
 <li class="fragment">Guy’s advantage is in making a conditional promise/threat to Vivica which is taken away if he can only pick one action</li>
 </ul>
-</section>
-<section id="a-strategic-form-representation" class="slide level2">
-<h2>A Strategic Form representation</h2>
-<p>Here is the game matrix for the entire kidnapping game: (when Guy can see Vivica’s action)</p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 41%">
-<col style="width: 29%">
-<col style="width: 29%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="red">Guy</span>, <span class="blue">Vivica</span></th>
-<th style="text-align: center;">Pay</th>
-<th style="text-align: center;">Don’t Pay</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="h">DNK, Kill, Kill</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
-</tr>
-<tr class="even">
-<td><span class="h">DNK, Kill, Release</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
-</tr>
-<tr class="odd">
-<td><span class="h">DNK, Release, Kill</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
-</tr>
-<tr class="even">
-<td><span class="h">DNK, Release, Release</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <span class="blue">5</span></td>
-</tr>
-<tr class="odd">
-<td><span class="h">Kidnap, Kill, Kill</span></td>
-<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
-<td style="text-align: center;"><span class="red">2</span>, <span class="blue">2</span></td>
-</tr>
-<tr class="even">
-<td><span class="h">Kidnap, Kill, Release</span></td>
-<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
-<td style="text-align: center;"><span class="red">1</span>, <span class="blue">4</span></td>
-</tr>
-<tr class="odd">
-<td><span class="h">Kidnap, Release, Kill</span></td>
-<td style="text-align: center;"><span class="red">5</span>, <span class="blue">3</span></td>
-<td style="text-align: center;"><span class="red">2</span>, <span class="blue">2</span></td>
-</tr>
-<tr class="even">
-<td><span class="h">Kidnap, Release, Release</span></td>
-<td style="text-align: center;"><span class="red">5</span>, <span class="blue">3</span></td>
-<td style="text-align: center;"><span class="red">1</span>, <span class="blue">4</span></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a-strategic-form-representation-1" class="slide level2">
-<h2>A Strategic Form representation</h2>
-<ul>
-<li class="fragment">Notice that the top half of the table represent the single <em>don’t kidnap</em> branch in the original tree</li>
-<li class="fragment">What are the NE?</li>
-</ul>
-</section>
-<section id="a-strategic-form-representation-2" class="slide level2">
-<h2>A Strategic Form representation</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 28%">
-<col style="width: 35%">
-<col style="width: 35%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="red">Guy</span>, <span class="blue">Vivica</span></th>
-<th style="text-align: center;">Pay</th>
-<th style="text-align: center;">Don’t Pay</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="h">DNK, K, K</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
-<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
-</tr>
-<tr class="even">
-<td><span class="h">DNK, K, R</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
-<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
-</tr>
-<tr class="odd">
-<td><span class="h">DNK, R, K</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
-<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
-</tr>
-<tr class="even">
-<td><span class="h">DNK, R, R</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
-<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
-</tr>
-<tr class="odd">
-<td><span class="h">Kidnap, K, K</span></td>
-<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
-<td style="text-align: center;"><span class="red">2</span>, <u><span class="blue">2</span></u></td>
-</tr>
-<tr class="even">
-<td><span class="h">Kidnap, K, R</span></td>
-<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
-<td style="text-align: center;"><span class="red">1</span>, <u><span class="blue">4</span></u></td>
-</tr>
-<tr class="odd">
-<td><span class="h">Kidnap, R, K</span></td>
-<td style="text-align: center;"><u><span class="red">5</span></u>, <u><span class="blue">3</span></u></td>
-<td style="text-align: center;"><span class="red">2</span>, <span class="blue">2</span></td>
-</tr>
-<tr class="even">
-<td><span class="h">Kidnap, R, R</span></td>
-<td style="text-align: center;"><u><span class="red">5</span></u>, <span class="blue">3</span></td>
-<td style="text-align: center;"><span class="red">1</span>, <span class="blue">4</span></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="ne-vs-spne" class="slide level2">
-<h2>NE vs SPNE</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="figures/kidnapgame.png"></p>
-</div><div class="column small" style="width:60%;">
-<table class="caption-top">
-<colgroup>
-<col style="width: 30%">
-<col style="width: 30%">
-<col style="width: 38%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><span class="red">Guy</span>, <span class="blue">Vivica</span></th>
-<th style="text-align: center;">Pay</th>
-<th style="text-align: center;">Don’t Pay</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="h">DNK, K, K</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
-<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
-</tr>
-<tr class="even">
-<td><span class="h">DNK, K, R</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
-<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
-</tr>
-<tr class="odd">
-<td><span class="h">DNK, R, K</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
-<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
-</tr>
-<tr class="even">
-<td><span class="h">DNK, R, R</span></td>
-<td style="text-align: center;"><span class="red">3</span>, <u><span class="blue">5</span></u></td>
-<td style="text-align: center;"><u><span class="red">3</span></u>, <u><span class="blue">5</span></u></td>
-</tr>
-<tr class="odd">
-<td><span class="h">Kidnap, K, K</span></td>
-<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
-<td style="text-align: center;"><span class="red">2</span>, <u><span class="blue">2</span></u></td>
-</tr>
-<tr class="even">
-<td><span class="h">Kidnap, K, R</span></td>
-<td style="text-align: center;"><span class="red">4</span>, <span class="blue">1</span></td>
-<td style="text-align: center;"><span class="red">1</span>, <u><span class="blue">4</span></u></td>
-</tr>
-<tr class="odd">
-<td><span class="h">Kidnap, R, K</span></td>
-<td style="text-align: center;"><u><span class="red">5</span></u>, <u><span class="blue">3</span></u></td>
-<td style="text-align: center;"><span class="red">2</span>, <span class="blue">2</span></td>
-</tr>
-<tr class="even">
-<td><span class="h">Kidnap, R, R</span></td>
-<td style="text-align: center;"><u><span class="red">5</span></u>, <span class="blue">3</span></td>
-<td style="text-align: center;"><span class="red">1</span>, <span class="blue">4</span></td>
-</tr>
-</tbody>
-</table>
-</div></div>
-</section>
-<section id="ne-vs-spne-1" class="slide level2">
-<h2>NE vs SPNE</h2>
-<div class="small">
-<ul>
-<li class="fragment"><p>What is different about the NE we found in the table and the NE we found through <em>rollback</em>?</p></li>
-<li class="fragment"><p>The NE where Vivica plays <span class="math inline">\(no~pay\)</span> are not Subgame Perfect because those actions are not <span class="hi">credible threats</span></p>
-<ul>
-<li class="fragment">She can only credibly threaten not paying the ransom if she knows Guy can’t observe her action</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section>
-<section id="games-with-both-simultaneous-and-sequential-moves" class="title-slide slide level1 center">
-<h1>Games with both Simultaneous and Sequential Moves</h1>
-<!-- ## Games with both types of moves
-
-We separated games by the timing of moves in the first few lectures
-
-  * it allowed us to introduce the relevant methods for each category
-
-  * it also gave us the intuition behind the more general concept of Nash Equilibrium in a few different settings
-
-  * but for many types of settings there are a mix of actions that are taken both *sequentially* and also taken *simultaneously*
-
---- -->
-</section>
-<section id="two-stage-games-subgames" class="slide level2">
-<h2>Two-Stage Games &amp; Subgames</h2>
-<p><span class="h">CrossTalk</span> and <span class="h">GlobalDialog</span> are competing telecom companies</p>
-<ul>
-<li>Each could invest $10 billion in fiber-optic infrastructure</li>
-</ul>
-<div class="incremenatl">
-<ul>
-<li><p>If only one company has fiber-optic, they get the entire market</p>
-<ul>
-<li><p>A monopolist can charge <strong>high</strong> price <span class="math inline">\(\rightarrow\)</span> earn $24 billion</p></li>
-<li><p>or a <strong>low</strong> price to attract more customers <span class="math inline">\(\rightarrow\)</span> earn $16 billion</p></li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="two-stage-games-subgames-1" class="slide level2">
-<h2>Two-Stage Games &amp; Subgames</h2>
-<p><span class="h">CrossTalk</span> and <span class="h">GlobalDialog</span> are competing telecom companies</p>
-<ul>
-<li>Each could invest $10 billion in fiber-optic infrastructure</li>
-</ul>
-<ul>
-<li class="fragment"><p>If <em>both</em> companies invest, they are locked in a <strong><em>simultaneous</em></strong> pricing game</p>
-<ul>
-<li class="fragment"><p>If both set <strong>high</strong> price in the fiber-optic market, each gets $12 billion</p></li>
-<li class="fragment"><p>If both choose <strong>low</strong>, they each get $8 billion</p></li>
-<li class="fragment"><p>If one sets <strong>high</strong> and the other sets <strong>low</strong>,</p>
-<ul>
-<li class="fragment"><p>the low-price setter gets the whole market and earns $24 billion,</p></li>
-<li class="fragment"><p>the high price setter gets $0</p></li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="two-stage-games-subgames-2" class="slide level2">
-<h2>Two-Stage Games &amp; Subgames</h2>
-
-<img data-src="figures/Dixit_fig6.1.png" class="r-stretch"></section>
-<section id="two-stage-games-subgames-3" class="slide level2">
-<h2>Two-Stage Games &amp; Subgames</h2>
-<p>We can use our tools from solving both game trees and game tables</p>
-<ul>
-<li class="fragment"><p>first, notice that a monopolist will always set a <strong>High</strong> price</p></li>
-<li class="fragment"><p>So we can replace the payoffs from the <strong>High</strong> branch into the first-stage table</p></li>
-</ul>
-</section>
-<section id="two-stage-games-subgames-4" class="slide level2">
-<h2>Two-Stage Games &amp; Subgames</h2>
-<p>Take a look at the table labelled Second stage:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">CrossTalk, GlobalDialog</th>
-<th style="text-align: center;">High</th>
-<th style="text-align: center;">Low</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>High</strong></td>
-<td style="text-align: center;">2, 2</td>
-<td style="text-align: center;">-10, 6</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>Low</strong></td>
-<td style="text-align: center;">6, -10</td>
-<td style="text-align: center;">-2, -2</td>
-</tr>
-</tbody>
-</table>
-<p>This is itself a complete game nested in the larger one</p>
-<ul>
-<li class="fragment"><p>so it’s whats is called a <span class="hi">subgame</span></p></li>
-<li class="fragment"><p>we can solve it like we would any other game table</p></li>
-<li class="fragment"><p>The NE of this subgame is (<strong>Low</strong>, <strong>Low</strong>)</p></li>
-<li class="fragment"><p>place the Nash payoffs of -2, -2 into the first-stage table</p></li>
-</ul>
-</section>
-<section id="two-stage-games-subgames-5" class="slide level2">
-<h2>Two-Stage Games &amp; Subgames</h2>
-<p>First-stage game with payoffs filled in:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">CrossTalk, GlobalDialog</th>
-<th style="text-align: center;">Don’t</th>
-<th style="text-align: center;">Invest</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>Don’t</strong></td>
-<td style="text-align: center;">0, 0</td>
-<td style="text-align: center;">0, <strong>14</strong></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>Invest</strong></td>
-<td style="text-align: center;"><strong>14</strong>, 0</td>
-<td style="text-align: center;"><strong>-2, -2</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Now we can solve for the NE of the whole game:</p>
-<ul>
-<li class="fragment"><p>(<strong>Invest</strong> <strong>High</strong> <strong>Low</strong>, <strong>Don’t</strong> <strong>High</strong> <strong>Low</strong>)</p></li>
-<li class="fragment"><p>(<strong>Don’t</strong> <strong>High</strong> <strong>Low</strong>, <strong>Invest</strong> <strong>High</strong> <strong>Low</strong>)</p></li>
-</ul>
-</section>
-<section id="two-stage-games-subgames-6" class="slide level2">
-<h2>Two-Stage Games &amp; Subgames</h2>
-<h3 id="football-play-game">Football play game</h3>
-<p>In football, each team chooses a play to run in the huddle where the other team can’t observe</p>
-<ul>
-<li><p>after this <em>simultaneous</em> action which is not observable to their opponent, the teams line up at which point the coach <em>can</em> observe how the defensive team are aligned and choose to potentially pick a different play accordingly</p></li>
-<li><p>The defensive team could in also choose to respond to the offensive play changing their play</p></li>
-</ul>
-</section>
-<section id="two-stage-games-subgames-7" class="slide level2">
-<h2>Two-Stage Games &amp; Subgames</h2>
-
-<img data-src="figures/Dixit_fig6.4.png" class="r-stretch"></section></section>
-<section>
-<section id="change-in-the-method-of-analysis" class="title-slide slide level1 center">
-<h1>Change in the Method of Analysis</h1>
-
-</section>
-<section id="illustrating-sim.-games-using-trees" class="slide level2">
-<h2>Illustrating Sim. Games using Trees</h2>
-<h3 id="martina-navratilova-v.-chris-evert">Martina Navratilova v. Chris Evert</h3>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Evert, Navratilova</th>
-<th style="text-align: center;">DL</th>
-<th style="text-align: center;">CC</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>DL</strong></td>
-<td style="text-align: center;">50, 50</td>
-<td style="text-align: center;">80, 20</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>CC</strong></td>
-<td style="text-align: center;">90, 10</td>
-<td style="text-align: center;">20, 80</td>
-</tr>
-</tbody>
-</table>
-<p>Navratilova has volleyed the ball to Evert</p>
-<ul>
-<li><p>Evert can send the ball down the line, <strong>DL</strong>, or crosscourt <strong>CC</strong> (a softer diagonal shot)</p></li>
-<li><p>Navratilova has to simultaneously choose to set up to receive either type of shot</p></li>
-</ul>
-</section>
-<section id="illustrating-sim.-games-using-trees-1" class="slide level2">
-<h2>Illustrating Sim. Games using Trees</h2>
-<p>The simultaneous tennis game can also be represented as a tree</p>
-
-<img data-src="figures/Dixit_fig6.7.png" class="r-stretch"><p>The <span class="hi">information set</span> indicates that Navratilova doesn’t know which shot before she has to choose how to receive</p>
-</section>
-<section id="adding-nature-as-a-player" class="slide level2">
-<h2>Adding Nature as a player</h2>
-<p>Even in cases which aren’t actually <em>strategic</em>, we can still use some of these tools</p>
-
-<img data-src="figures/Dixit_fig6.8.png" class="r-stretch"></section>
-<section id="changing-the-order-of-moves" class="slide level2">
-<h2>Changing the order of Moves</h2>
-<p>We found the NE will be (<strong>Deficit</strong>, <strong>High Rates</strong>) when this game is played simultaneously</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Congress, Federal Reserve</th>
-<th style="text-align: center;">Low rates</th>
-<th style="text-align: center;">High Rates</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>Balance</strong></td>
-<td style="text-align: center;">3, 4</td>
-<td style="text-align: center;">1, 3</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>Deficit</strong></td>
-<td style="text-align: center;">4, 1</td>
-<td style="text-align: center;">2, 2</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="changing-the-order-of-moves-1" class="slide level2">
-<h2>Changing the order of Moves</h2>
-<p>What about when the Fed moves first?</p>
-
-<img data-src="figures/Dixit_fig6.6b.png" class="r-stretch"><ul>
-<li class="fragment">We get the same NE</li>
-</ul>
-</section>
-<section id="changing-the-order-of-moves-2" class="slide level2">
-<h2>Changing the order of Moves</h2>
-<p>What about when Congress moves first?</p>
-
-<img data-src="figures/Dixit_fig6.6c.png" class="r-stretch"><ul>
-<li class="fragment"><p>now we get a different NE with congress playing their strictly dominated strategy</p></li>
-<li class="fragment"><p>this is because when the Fed acts second, they can make a <em>credible threat</em></p></li>
-</ul>
-</section>
-<section id="showing-seq.-games-in-strategic-form" class="slide level2">
-<h2>Showing Seq. Games in Strategic Form</h2>
-<p>In the game where Congress moves first, they have two strategies, but the Fed has 4</p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 23%">
-<col style="width: 23%">
-<col style="width: 17%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Congress, Fed</th>
-<th>L if B, H if D</th>
-<th>H if B, L if D</th>
-<th>always Low</th>
-<th>always H</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Balance</strong></td>
-<td>3,4</td>
-<td>1,3</td>
-<td>3,4</td>
-<td>1,3</td>
-</tr>
-<tr class="even">
-<td><strong>Deficit</strong></td>
-<td>2,2</td>
-<td>4,1</td>
-<td>4,1</td>
-<td>2,2</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="showing-seq.-games-in-strategic-form-1" class="slide level2">
-<h2>Showing Seq. Games in Strategic Form</h2>
-<p>When we implemented <em>rollback</em> on the extensive form version, there was only one NE,</p>
-<ul>
-<li><p>but here there are two:</p>
-<ul>
-<li><p>{<strong>Deficit</strong>, always <strong>High</strong> }</p></li>
-<li><p>{ <strong>Balance</strong>, (<strong>L</strong> if B, <strong>H</strong> if D) }</p></li>
-</ul></li>
-</ul>
-<p>Both are NE of this game, but the second is a special type of NE</p>
-<p>A <span class="hi">subgame-perfect Nash equilibrium</span> because it involves the Fed making their rational choice in every subgame.</p>
-</section>
-<section id="showing-seq.-games-in-strategic-form-2" class="slide level2">
-<h2>Showing Seq. Games in Strategic Form</h2>
-
-<img data-src="figures/Dixit_fig6.6c.png" class="r-stretch"><p>It’s not <em>subgame-rational</em> for the Fed to play <strong>High always</strong> because if the case where Congress already spent in deficit were to happen, the Fed’s only rational action would be to set low interest rates.</p>
-<ul>
-<li>We can say that the Fed’s <strong>High always</strong> strategy is not a <span class="hi">credible</span> promise</li>
-</ul>
-</section>
-<section id="spne" class="slide level2">
-<h2>SPNE</h2>
-<p>The rollback method finds the <span class="hi">subgame-perfect Nash equilibria</span> of sequential games</p>
-<ul>
-<li>A complete plan of action such that at every node <em>including off-equilibrium</em> paths, it is still rational to stick to that original plan of action.</li>
-</ul>
-</section>
-<section id="market-entry-game" class="slide level2">
-<h2>Market Entry Game</h2>
-<p>Consider this variation on the Entry Game, in which the Entrant is not as efficient as the Incumbent:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="figures/08InferiorEntrant.png"></p>
-</div><div class="column" style="width:50%;">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Entrant, Incumbent</th>
-<th><span class="math inline">\(Fight\)</span></th>
-<th><span class="math inline">\(Accom.\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong><span class="math inline">\(Enter\)</span></strong></td>
-<td>-1, 1</td>
-<td>1, 2</td>
-</tr>
-<tr class="even">
-<td><strong><span class="math inline">\(Out\)</span></strong></td>
-<td>0, 3</td>
-<td>0, 3</td>
-</tr>
-</tbody>
-</table>
-</div></div>
-<ul>
-<li>Note that this game has two NEs: (Enter, Accommodate) and (Out, Fight).</li>
-<li>Does it really make sense for the Incumbent to ever Fight?</li>
-</ul>
-</section>
-<section id="refining-nash-equilibrium" class="slide level2">
-<h2>Refining Nash Equilibrium</h2>
-<ul>
-<li class="fragment"><p>The more you think about it, the less sense this Nash equilibrium makes.</p>
-<ul>
-<li class="fragment"><p>Entrant would stay Out if they really, truly believe that if they Entered, the Incumbent would Fight.</p></li>
-<li class="fragment"><p>… but it’s hard to justify that belief when Fighting is costly for the Incumbent.</p></li>
-</ul></li>
-<li class="fragment"><p>The Incumbent would have to somehow convince the Entrant that they really would Fight them,</p>
-<ul>
-<li class="fragment">perhaps by making a <span class="hi">credible threat</span>.</li>
-</ul></li>
-<li class="fragment"><p>We will talk more about this kind of <span class="hi">strategic move</span> later in the course.</p></li>
-<li class="fragment"><p>We often don’t want this kind of Nash Equilibrium. To rule it out, we have the concept of <span class="hi">subgame perfection</span>.</p></li>
-</ul>
-</section>
-<section id="subgames" class="slide level2">
-<h2>Subgames</h2>
-<ul>
-<li class="fragment"><p>A <span class="hi">subgame</span> is a subset of an extensive-form game which, itself, is a complete game.</p></li>
-<li class="fragment"><p>A subgame is a <strong>single node</strong>, and all of the branches and nodes descending from it,</p>
-<ul>
-<li class="fragment">so it forms a <strong>complete game</strong> by itself</li>
-</ul></li>
-</ul>
-</section>
-<section id="examples-of-subgames" class="slide level2">
-<h2>Examples of Subgames</h2>
-<p>Each of these green boxes contains a subgame.</p>
-
-<img data-src="figures/06SubgameExample01.png" class="r-stretch"></section>
-<section id="examples-of-subgames-1" class="slide level2">
-<h2>Examples of Subgames</h2>
-<p>Each of these green boxes contains a subgame.</p>
-<ul>
-<li class="fragment">The smaller boxes are <span class="hi">trivial subgames</span>, because they don’t contain any meaningful choices.</li>
-</ul>
-
-<img data-src="figures/06SubgameExample02.png" class="r-stretch"></section>
-<section id="examples-of-subgames-2" class="slide level2">
-<h2>Examples of Subgames</h2>
-<p>A game is, technically, a subgame of itself, but it is an <span class="hi">improper subgame</span>.</p>
-<ul>
-<li>(Any subgames other than the entire game are <span class="hi">proper subgames</span>.)</li>
-</ul>
-
-<img data-src="figures/06SubgameExample03.png" class="r-stretch"></section>
-<section id="subgame-perfection" class="slide level2">
-<h2>Subgame Perfection</h2>
-<p>So why do we care about subgames?</p>
-<ul>
-<li class="fragment"><p><span class="hi">subgame-perfect Nash equilibrium</span> (<em>aka SPNE</em>), that does not produce the questionable equilibria we saw earlier.</p></li>
-<li class="fragment"><p>All SPNE are also regular Nash equilibria.</p></li>
-<li class="fragment"><p>But unique to SPNE, they have to also produce a Nash equilibrium <strong>in every subgame</strong></p></li>
-</ul>
-</section>
-<section id="spne-in-the-entry-game" class="slide level2">
-<h2>SPNE in the Entry Game</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="figures/08InferiorEntrant.png"></p>
-</div><div class="columns" width="50%">
-<ul>
-<li><p>There is only a single proper subgame in the Entry Game.</p></li>
-<li><p>A SPNE of this game must have a NE in that subgame.</p></li>
-<li><p>The only NE of the subgame is for the Incumbent to Accommodate.</p></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="spne-in-the-entry-game-1" class="slide level2">
-<h2>SPNE in the Entry Game</h2>
-<div class="columns">
-<div class="columns" width="50%">
-<p><img data-src="figures/08InferiorEntrant.png"></p>
-</div><div class="column" style="width:50%;">
-<ul>
-<li class="fragment">Given that the Incumbent Accommodates, the Entrant now faces a choice between staying Out, or Entering and being Accommodated.</li>
-<li class="fragment">The Entrant’s best response is to Enter, and the SPNE is (Enter, Accommodate)</li>
-</ul>
-</div></div>
-</section>
-<section id="rationality-and-subgame-perfection" class="slide level2">
-<h2>Rationality and Subgame Perfection</h2>
-<ul>
-<li class="fragment">To justify looking for SPNEs instead of NEs, we assume <span class="hi">commonly known sequential rationality</span>.
-<ul>
-<li class="fragment">Players are aware that other players are sequentially rational.</li>
-<li class="fragment">Knowing that other players are sequentially rational, each player can predict the others’ rational behavior and chooses an action with the highest payoff <strong>at each of their decision nodes</strong>.</li>
-</ul></li>
-<li class="fragment">Sequentially rational players choose their strategy on the fly, one move at a time, instead of all at once at the beginning of the game.</li>
-</ul>
-</section>
-<section id="finding-spnes-backward-induction" class="slide level2">
-<h2>Finding SPNEs: Backward Induction</h2>
-<p>The method for finding SPNEs is straightforward—we’ve already been using it without spelling it out formally.</p>
-<ol type="1">
-<li class="fragment">Find all the decision nodes in the <strong>lowest row</strong> (assuming the tree goes top down)</li>
-<li class="fragment">Find the optimal choice at each of these nodes, mark the corresponding branch (or erase/cross out all the other branches).</li>
-<li class="fragment">If you just solved the game’s initial node, you’re done!</li>
-<li class="fragment">Otherwise, identify all of the decision nodes in the <strong>next row up</strong> and return to step 2.</li>
-</ol>
-<p>At each step, remember to take into account the optimal moves that you’ve already found lower in the tree.</p>
 <!-- {{< include 0404-generalnash.qmd >}} -->
 <!-- {{< include 0405-nashcritique.qmd >}} -->
 
