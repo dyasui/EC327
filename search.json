@@ -1247,6 +1247,62 @@
     "text": "Illustrating Sim. Games using Trees\nThe simultaneous tennis game can also be represented as a tree\n\nThe information set indicates that Navratilova doesn’t know which shot before she has to choose how to receive"
   },
   {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#adding-nature-as-a-player",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#adding-nature-as-a-player",
+    "title": "Sequential Games in Strategic Form",
+    "section": "Adding Nature as a player",
+    "text": "Adding Nature as a player\nEven in cases which aren’t actually strategic, we can still use some of these tools"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#changing-the-order-of-moves",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#changing-the-order-of-moves",
+    "title": "Sequential Games in Strategic Form",
+    "section": "Changing the order of Moves",
+    "text": "Changing the order of Moves\nWe found the NE will be (Deficit, High Rates) when this game is played simultaneously\n\n\n\nCongress, Federal Reserve\nLow rates\nHigh Rates\n\n\n\n\nBalance\n3, 4\n1, 3\n\n\nDeficit\n4, 1\n2, 2"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#changing-the-order-of-moves-1",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#changing-the-order-of-moves-1",
+    "title": "Sequential Games in Strategic Form",
+    "section": "Changing the order of Moves",
+    "text": "Changing the order of Moves\nWhat about when the Fed moves first?\n\n\n\nWe get the same NE"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#changing-the-order-of-moves-2",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#changing-the-order-of-moves-2",
+    "title": "Sequential Games in Strategic Form",
+    "section": "Changing the order of Moves",
+    "text": "Changing the order of Moves\nWhat about when Congress moves first?\n\n\n\nnow we get a different NE with congress playing their strictly dominated strategy\nthis is because when the Fed acts second, they can make a credible threat"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#showing-seq.-games-in-strategic-form",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#showing-seq.-games-in-strategic-form",
+    "title": "Sequential Games in Strategic Form",
+    "section": "Showing Seq. Games in Strategic Form",
+    "text": "Showing Seq. Games in Strategic Form\nIn the game where Congress moves first, they have two strategies, but the Fed has 4\n\n\n\n\n\n\n\n\n\n\nCongress, Fed\nL if B, H if D\nH if B, L if D\nalways Low\nalways H\n\n\n\n\nBalance\n3,4\n1,3\n3,4\n1,3\n\n\nDeficit\n2,2\n4,1\n4,1\n2,2"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#showing-seq.-games-in-strategic-form-1",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#showing-seq.-games-in-strategic-form-1",
+    "title": "Sequential Games in Strategic Form",
+    "section": "Showing Seq. Games in Strategic Form",
+    "text": "Showing Seq. Games in Strategic Form\nWhen we implemented rollback on the extensive form version, there was only one NE,\n\nbut here there are two:\n\n{Deficit, always High }\n{ Balance, (L if B, H if D) }\n\n\nBoth are NE of this game, but the second is a special type of NE\nA subgame-perfect Nash equilibrium because it involves the Fed making their rational choice in every subgame."
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#showing-seq.-games-in-strategic-form-2",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#showing-seq.-games-in-strategic-form-2",
+    "title": "Sequential Games in Strategic Form",
+    "section": "Showing Seq. Games in Strategic Form",
+    "text": "Showing Seq. Games in Strategic Form\n\nIt’s not subgame-rational for the Fed to play High always because if the case where Congress already spent in deficit were to happen, the Fed’s only rational action would be to set low interest rates.\n\nWe can say that the Fed’s High always strategy is not a credible promise"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0503-changemethod.html#spne",
+    "href": "Slides/05CombinedGames/0503-changemethod.html#spne",
+    "title": "Sequential Games in Strategic Form",
+    "section": "SPNE",
+    "text": "SPNE\nThe rollback method finds the subgame-perfect Nash equilibria of sequential games\n\nA complete plan of action such that at every node including off-equilibrium paths, it is still rational to stick to that original plan of action."
+  },
+  {
     "objectID": "Slides/05CombinedGames/05-main.html#combining-sequential-and-simultaneous",
     "href": "Slides/05CombinedGames/05-main.html#combining-sequential-and-simultaneous",
     "title": "Introduction to Game Theory",
@@ -1350,6 +1406,111 @@
     "title": "Introduction to Game Theory",
     "section": "Illustrating Sim. Games using Trees",
     "text": "Illustrating Sim. Games using Trees\nThe simultaneous tennis game can also be represented as a tree\n\nThe information set indicates that Navratilova doesn’t know which shot before she has to choose how to receive"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#adding-nature-as-a-player",
+    "href": "Slides/05CombinedGames/05-main.html#adding-nature-as-a-player",
+    "title": "Introduction to Game Theory",
+    "section": "Adding Nature as a player",
+    "text": "Adding Nature as a player\nEven in cases which aren’t actually strategic, we can still use some of these tools"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#changing-the-order-of-moves",
+    "href": "Slides/05CombinedGames/05-main.html#changing-the-order-of-moves",
+    "title": "Introduction to Game Theory",
+    "section": "Changing the order of Moves",
+    "text": "Changing the order of Moves\nWe found the NE will be (Deficit, High Rates) when this game is played simultaneously\n\n\n\nCongress, Federal Reserve\nLow rates\nHigh Rates\n\n\n\n\nBalance\n3, 4\n1, 3\n\n\nDeficit\n4, 1\n2, 2"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#changing-the-order-of-moves-1",
+    "href": "Slides/05CombinedGames/05-main.html#changing-the-order-of-moves-1",
+    "title": "Introduction to Game Theory",
+    "section": "Changing the order of Moves",
+    "text": "Changing the order of Moves\nWhat about when the Fed moves first?\n\n\nWe get the same NE"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#changing-the-order-of-moves-2",
+    "href": "Slides/05CombinedGames/05-main.html#changing-the-order-of-moves-2",
+    "title": "Introduction to Game Theory",
+    "section": "Changing the order of Moves",
+    "text": "Changing the order of Moves\nWhat about when Congress moves first?\n\n\nnow we get a different NE with congress playing their strictly dominated strategy\nthis is because when the Fed acts second, they can make a credible threat"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#showing-seq.-games-in-strategic-form",
+    "href": "Slides/05CombinedGames/05-main.html#showing-seq.-games-in-strategic-form",
+    "title": "Introduction to Game Theory",
+    "section": "Showing Seq. Games in Strategic Form",
+    "text": "Showing Seq. Games in Strategic Form\nIn the game where Congress moves first, they have two strategies, but the Fed has 4\n\n\n\n\n\n\n\n\n\n\nCongress, Fed\nL if B, H if D\nH if B, L if D\nalways Low\nalways H\n\n\n\n\nBalance\n3,4\n1,3\n3,4\n1,3\n\n\nDeficit\n2,2\n4,1\n4,1\n2,2"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#showing-seq.-games-in-strategic-form-1",
+    "href": "Slides/05CombinedGames/05-main.html#showing-seq.-games-in-strategic-form-1",
+    "title": "Introduction to Game Theory",
+    "section": "Showing Seq. Games in Strategic Form",
+    "text": "Showing Seq. Games in Strategic Form\nWhen we implemented rollback on the extensive form version, there was only one NE,\n\nbut here there are two:\n\n{Deficit, always High }\n{ Balance, (L if B, H if D) }\n\n\nBoth are NE of this game, but the second is a special type of NE\nA subgame-perfect Nash equilibrium because it involves the Fed making their rational choice in every subgame."
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#showing-seq.-games-in-strategic-form-2",
+    "href": "Slides/05CombinedGames/05-main.html#showing-seq.-games-in-strategic-form-2",
+    "title": "Introduction to Game Theory",
+    "section": "Showing Seq. Games in Strategic Form",
+    "text": "Showing Seq. Games in Strategic Form\n\nIt’s not subgame-rational for the Fed to play High always because if the case where Congress already spent in deficit were to happen, the Fed’s only rational action would be to set low interest rates.\n\nWe can say that the Fed’s High always strategy is not a credible promise"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#spne",
+    "href": "Slides/05CombinedGames/05-main.html#spne",
+    "title": "Introduction to Game Theory",
+    "section": "SPNE",
+    "text": "SPNE\nThe rollback method finds the subgame-perfect Nash equilibria of sequential games\n\nA complete plan of action such that at every node including off-equilibrium paths, it is still rational to stick to that original plan of action."
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#games-with-both-types-of-moves",
+    "href": "Slides/05CombinedGames/05-main.html#games-with-both-types-of-moves",
+    "title": "Introduction to Game Theory",
+    "section": "Games with both types of moves",
+    "text": "Games with both types of moves\nWe separated games by the timing of moves in the first few lectures\n\nit allowed us to introduce the relevant methods for each category\nit also gave us the intuition behind the more general concept of Nash Equilibrium in a few different settings\nbut for many types of settings there are a mix of actions that are taken both sequentially and also taken simultaneously"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames",
+    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames",
+    "title": "Introduction to Game Theory",
+    "section": "Two-Stage Games & Subgames",
+    "text": "Two-Stage Games & Subgames\nCrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf only one company has fiber-optic, they get the entire market\n\nA monopolist can charge high price \\(\\rightarrow\\) earn $24 billion\nor a low price to attract more customers \\(\\rightarrow\\) earn $16 billion"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-1",
+    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-1",
+    "title": "Introduction to Game Theory",
+    "section": "Two-Stage Games & Subgames",
+    "text": "Two-Stage Games & Subgames\nCrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\nIf both companies invest, they are locked in a simultaneous pricing game\n\nIf both set high price in the fiber-optic market, each gets $12 billion\nIf both choose low, they each get $8 billion\nIf one sets high and the other sets low,\n\nthe low-price setter gets the whole market and earns $24 billion,\nthe high price setter gets $0"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-2",
+    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-2",
+    "title": "Introduction to Game Theory",
+    "section": "Two-Stage Games & Subgames",
+    "text": "Two-Stage Games & Subgames"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-3",
+    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-3",
+    "title": "Introduction to Game Theory",
+    "section": "Two-Stage Games & Subgames",
+    "text": "Two-Stage Games & Subgames\nWe can use our tools from solving both game trees and game tables\n\nfirst, notice that a monopolist will always set a High price\nSo we can replace the payoffs from the High branch into the first-stage table"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-4",
+    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-4",
+    "title": "Introduction to Game Theory",
+    "section": "Two-Stage Games & Subgames",
+    "text": "Two-Stage Games & Subgames\nTake a look at the table labelled Second stage:\n\n\n\nCrossTalk, GlobalDialog\nHigh\nLow\n\n\n\n\nHigh\n2, 2\n-10, 6\n\n\nLow\n6, -10\n-2, -2\n\n\n\nThis is itself a complete game nested in the larger one\n\nso it’s whats is called a subgame\nwe can solve it like we would any other game table\nThe NE of this subgame is (Low, Low)\nplace the Nash payoffs of -2, -2 into the first-stage table"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-5",
+    "href": "Slides/05CombinedGames/05-main.html#two-stage-games-subgames-5",
+    "title": "Introduction to Game Theory",
+    "section": "Two-Stage Games & Subgames",
+    "text": "Two-Stage Games & Subgames\nFirst-stage game with payoffs filled in:\n\n\n\nCrossTalk, GlobalDialog\nDon’t\nInvest\n\n\n\n\nDon’t\n0, 0\n0, 14\n\n\nInvest\n14, 0\n-2, -2\n\n\n\nNow we can solve for the NE of the whole game:\n\n(Invest High Low, Don’t High Low)\n(Don’t High Low, Invest High Low)"
   },
   {
     "objectID": "Slides/05CombinedGames/05-main.html#kidnapping-with-hidden-information",
@@ -6508,7 +6669,49 @@
     "href": "Slides/05CombinedGames/0501-combinedgames.html",
     "title": "Games with both Simultaneous and Sequential Moves",
     "section": "",
-    "text": "When we first saw this game, Guy could observe whether Vivica had paid the ransom before he made the decision to \\(Kill\\) or \\(Release\\) Orlando\nNow we will consider a variation of this game where Guy doesnt know whether Vivica has paid when he chooses to Kill or Release\n\n\n\n\n\n\n\n\n\nThe dotted box around Guy’s nodes \\(N_3\\) and \\(N_4\\) indicate that he can’t tell them apart.\nThey are part of the same information set; to Guy, they are indistinguishable from each other.\n\n\n\n\n\n\n\nInformation set\n\n\n\nis the set of information available to a player when making a decision. In the extensive form, every decision node belongs to one and only one info set, but multiple nodes may be in the same info set if the player at that node cannot tell them apart.\n\n\n\n\n\n\n\nConsider the situation when Guy has already kidnapped Orlando.\nList the remaining strategies for each player:\n\n\nVivica can decide to Pay or Don’t pay the ransom\nGuy can either Kill or Release Orlando\n\n\n\n\n\n\nWith these strategy profiles, we can write this subgame out in its strategic form:\n\n\n\nGuy, Vivica\nPay\nDon’t\n\n\n\n\nKill\n4, 1\n2, 2\n\n\nRelease\n5, 3\n1, 4\n\n\n\n\n\n\n\nFor every strategic form game, there are multiple extensive form game trees which can be drawn.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat will a complete strategy profile look like for each player?\n\n\nGuy’s strategy:\n\nelement 1: \\(Kidnap\\) or \\(Don't~Kidnap\\)\nelement 2: \\(Kill\\) or \\(Release\\)\n\nVivica’s strategy:\n\nelement 1: \\(Pay\\) or \\(Don't\\)\n\n\n\n\n\n\n\nWhat is/are the NE of the subgame?\n\n\n\n\n\\(Pay\\)\n\\(Don't\\)\n\n\n\n\n\\(Kill\\)\n4,1\n2,2\n\n\n\\(Release\\)\n5,3\n1,4\n\n\n\n\n\n(\\(Release\\), \\(Pay\\)) is no longer stable because Vivica wouldn’t pay the ransom if Guy releases\n(\\(Kill\\), \\(Don't\\)) is the only NE in this table\n\n\n\n\n\n\nKnowing this, what is the NE in the full game?\n\n. . .\n\n{ (\\(Don't~Kidnap\\), \\(Kill\\)), \\(Don't~pay\\) }\n\n\n\n\n\nIn the version where Vivica’s action was observable, we found the NE:\n\n{ (\\(Kidnap, Kill_3, Release_4\\)), \\(Pay\\) }\n\nBut in the version where Guy couldn’t see whether Vivica paid the ransom, it was:\n\n{ (\\(Don't~Kidnap\\), \\(Kill\\)), \\(Don't~pay\\) }\n\n\n\nIf you were Guy, which version would you prefer?\nGuy’s advantage is in making a conditional promise/threat to Vivica which is taken away if he can only pick one action"
+    "text": "We separated games by the timing of moves in the first few lectures\n\nit allowed us to introduce the relevant methods for each category\nit also gave us the intuition behind the more general concept of Nash Equilibrium in a few different settings\nbut for many types of settings there are a mix of actions that are taken both sequentially and also taken simultaneously\n\n\n\n\n\nCrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf only one company has fiber-optic, they get the entire market\n\nA monopolist can charge high price \\(\\rightarrow\\) earn $24 billion\nor a low price to attract more customers \\(\\rightarrow\\) earn $16 billion\n\n\n\n\n\n\n\nCrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf both companies invest, they are locked in a simultaneous pricing game\n\nIf both set high price in the fiber-optic market, each gets $12 billion\nIf both choose low, they each get $8 billion\nIf one sets high and the other sets low,\n\nthe low-price setter gets the whole market and earns $24 billion,\nthe high price setter gets $0\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe can use our tools from solving both game trees and game tables\n\n\nfirst, notice that a monopolist will always set a High price\nSo we can replace the payoffs from the High branch into the first-stage table\n\n\n\n\n\n\nTake a look at the table labelled Second stage:\n\n\n\nCrossTalk, GlobalDialog\nHigh\nLow\n\n\n\n\nHigh\n2, 2\n-10, 6\n\n\nLow\n6, -10\n-2, -2\n\n\n\n\nThis is itself a complete game nested in the larger one\n\nso it’s whats is called a subgame\nwe can solve it like we would any other game table\nThe NE of this subgame is (Low, Low)\nplace the Nash payoffs of -2, -2 into the first-stage table\n\n\n\n\n\n\nFirst-stage game with payoffs filled in:\n\n\n\nCrossTalk, GlobalDialog\nDon’t\nInvest\n\n\n\n\nDon’t\n0, 0\n0, 14\n\n\nInvest\n14, 0\n-2, -2\n\n\n\n\nNow we can solve for the NE of the whole game:\n\n(Invest High Low, Don’t High Low)\n(Don’t High Low, Invest High Low)\n\n\n\n\n\n\n\n\n\n\n\n\nWhen we first saw this game, Guy could observe whether Vivica had paid the ransom before he made the decision to \\(Kill\\) or \\(Release\\) Orlando\nNow we will consider a variation of this game where Guy doesnt know whether Vivica has paid when he chooses to Kill or Release\n\n\n\n\n\n\n\n\n\nThe dotted box around Guy’s nodes \\(N_3\\) and \\(N_4\\) indicate that he can’t tell them apart.\nThey are part of the same information set; to Guy, they are indistinguishable from each other.\n\n\n\n\n\n\n\nInformation set\n\n\n\nis the set of information available to a player when making a decision. In the extensive form, every decision node belongs to one and only one info set, but multiple nodes may be in the same info set if the player at that node cannot tell them apart.\n\n\n\n\n\n\n\nConsider the situation when Guy has already kidnapped Orlando.\nList the remaining strategies for each player:\n\n\nVivica can decide to Pay or Don’t pay the ransom\nGuy can either Kill or Release Orlando\n\n\n\n\n\n\nWith these strategy profiles, we can write this subgame out in its strategic form:\n\n\n\nGuy, Vivica\nPay\nDon’t\n\n\n\n\nKill\n4, 1\n2, 2\n\n\nRelease\n5, 3\n1, 4\n\n\n\n\n\n\n\nFor every strategic form game, there are multiple extensive form game trees which can be drawn.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat will a complete strategy profile look like for each player?\n\n\nGuy’s strategy:\n\nelement 1: \\(Kidnap\\) or \\(Don't~Kidnap\\)\nelement 2: \\(Kill\\) or \\(Release\\)\n\nVivica’s strategy:\n\nelement 1: \\(Pay\\) or \\(Don't\\)\n\n\n\n\n\n\n\nWhat is/are the NE of the subgame?\n\n\n\n\n\\(Pay\\)\n\\(Don't\\)\n\n\n\n\n\\(Kill\\)\n4,1\n2,2\n\n\n\\(Release\\)\n5,3\n1,4\n\n\n\n\n\n(\\(Release\\), \\(Pay\\)) is no longer stable because Vivica wouldn’t pay the ransom if Guy releases\n(\\(Kill\\), \\(Don't\\)) is the only NE in this table\n\n\n\n\n\n\nKnowing this, what is the NE in the full game?\n\n. . .\n\n{ (\\(Don't~Kidnap\\), \\(Kill\\)), \\(Don't~pay\\) }\n\n\n\n\n\nIn the version where Vivica’s action was observable, we found the NE:\n\n{ (\\(Kidnap, Kill_3, Release_4\\)), \\(Pay\\) }\n\nBut in the version where Guy couldn’t see whether Vivica paid the ransom, it was:\n\n{ (\\(Don't~Kidnap\\), \\(Kill\\)), \\(Don't~pay\\) }\n\n\n\nIf you were Guy, which version would you prefer?\nGuy’s advantage is in making a conditional promise/threat to Vivica which is taken away if he can only pick one action"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#games-with-both-types-of-moves",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#games-with-both-types-of-moves",
+    "title": "Games with both Simultaneous and Sequential Moves",
+    "section": "",
+    "text": "We separated games by the timing of moves in the first few lectures\n\nit allowed us to introduce the relevant methods for each category\nit also gave us the intuition behind the more general concept of Nash Equilibrium in a few different settings\nbut for many types of settings there are a mix of actions that are taken both sequentially and also taken simultaneously"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames",
+    "title": "Games with both Simultaneous and Sequential Moves",
+    "section": "",
+    "text": "CrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf only one company has fiber-optic, they get the entire market\n\nA monopolist can charge high price \\(\\rightarrow\\) earn $24 billion\nor a low price to attract more customers \\(\\rightarrow\\) earn $16 billion"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-1",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-1",
+    "title": "Games with both Simultaneous and Sequential Moves",
+    "section": "",
+    "text": "CrossTalk and GlobalDialog are competing telecom companies\n\nEach could invest $10 billion in fiber-optic infrastructure\n\n\n\nIf both companies invest, they are locked in a simultaneous pricing game\n\nIf both set high price in the fiber-optic market, each gets $12 billion\nIf both choose low, they each get $8 billion\nIf one sets high and the other sets low,\n\nthe low-price setter gets the whole market and earns $24 billion,\nthe high price setter gets $0"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-3",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-3",
+    "title": "Games with both Simultaneous and Sequential Moves",
+    "section": "",
+    "text": "We can use our tools from solving both game trees and game tables\n\n\nfirst, notice that a monopolist will always set a High price\nSo we can replace the payoffs from the High branch into the first-stage table"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-4",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-4",
+    "title": "Games with both Simultaneous and Sequential Moves",
+    "section": "",
+    "text": "Take a look at the table labelled Second stage:\n\n\n\nCrossTalk, GlobalDialog\nHigh\nLow\n\n\n\n\nHigh\n2, 2\n-10, 6\n\n\nLow\n6, -10\n-2, -2\n\n\n\n\nThis is itself a complete game nested in the larger one\n\nso it’s whats is called a subgame\nwe can solve it like we would any other game table\nThe NE of this subgame is (Low, Low)\nplace the Nash payoffs of -2, -2 into the first-stage table"
+  },
+  {
+    "objectID": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-5",
+    "href": "Slides/05CombinedGames/0501-combinedgames.html#two-stage-games-subgames-5",
+    "title": "Games with both Simultaneous and Sequential Moves",
+    "section": "",
+    "text": "First-stage game with payoffs filled in:\n\n\n\nCrossTalk, GlobalDialog\nDon’t\nInvest\n\n\n\n\nDon’t\n0, 0\n0, 14\n\n\nInvest\n14, 0\n-2, -2\n\n\n\n\nNow we can solve for the NE of the whole game:\n\n(Invest High Low, Don’t High Low)\n(Don’t High Low, Invest High Low)"
   },
   {
     "objectID": "Slides/05CombinedGames/0501-combinedgames.html#kidnapping-with-hidden-information",

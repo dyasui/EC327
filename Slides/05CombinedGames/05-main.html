@@ -653,214 +653,246 @@ Dante Yasui
 <p>The simultaneous tennis game can also be represented as a tree</p>
 
 <img data-src="figures/Dixit_fig6.7.png" class="r-stretch"><p>The <span class="hi">information set</span> indicates that Navratilova doesn’t know which shot before she has to choose how to receive</p>
-<!-- ## Adding Nature as a player
+</section>
+<section id="adding-nature-as-a-player" class="slide level2">
+<h2>Adding Nature as a player</h2>
+<p>Even in cases which aren’t actually <em>strategic</em>, we can still use some of these tools</p>
 
-Even in cases which aren't actually *strategic*, 
-we can still use some of these tools
+<img data-src="figures/Dixit_fig6.8.png" class="r-stretch"></section>
+<section id="changing-the-order-of-moves" class="slide level2">
+<h2>Changing the order of Moves</h2>
+<p>We found the NE will be (<strong>Deficit</strong>, <strong>High Rates</strong>) when this game is played simultaneously</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Congress, Federal Reserve</th>
+<th style="text-align: center;">Low rates</th>
+<th style="text-align: center;">High Rates</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Balance</strong></td>
+<td style="text-align: center;">3, 4</td>
+<td style="text-align: center;">1, 3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Deficit</strong></td>
+<td style="text-align: center;">4, 1</td>
+<td style="text-align: center;">2, 2</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="changing-the-order-of-moves-1" class="slide level2">
+<h2>Changing the order of Moves</h2>
+<p>What about when the Fed moves first?</p>
 
-![](figures/Dixit_fig6.8.png)
+<img data-src="figures/Dixit_fig6.6b.png" class="r-stretch"><ul>
+<li class="fragment">We get the same NE</li>
+</ul>
+</section>
+<section id="changing-the-order-of-moves-2" class="slide level2">
+<h2>Changing the order of Moves</h2>
+<p>What about when Congress moves first?</p>
 
-## Changing the order of Moves
+<img data-src="figures/Dixit_fig6.6c.png" class="r-stretch"><ul>
+<li class="fragment"><p>now we get a different NE with congress playing their strictly dominated strategy</p></li>
+<li class="fragment"><p>this is because when the Fed acts second, they can make a <em>credible threat</em></p></li>
+</ul>
+</section>
+<section id="showing-seq.-games-in-strategic-form" class="slide level2">
+<h2>Showing Seq. Games in Strategic Form</h2>
+<p>In the game where Congress moves first, they have two strategies, but the Fed has 4</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 17%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Congress, Fed</th>
+<th>L if B, H if D</th>
+<th>H if B, L if D</th>
+<th>always Low</th>
+<th>always H</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Balance</strong></td>
+<td>3,4</td>
+<td>1,3</td>
+<td>3,4</td>
+<td>1,3</td>
+</tr>
+<tr class="even">
+<td><strong>Deficit</strong></td>
+<td>2,2</td>
+<td>4,1</td>
+<td>4,1</td>
+<td>2,2</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="showing-seq.-games-in-strategic-form-1" class="slide level2">
+<h2>Showing Seq. Games in Strategic Form</h2>
+<p>When we implemented <em>rollback</em> on the extensive form version, there was only one NE,</p>
+<ul>
+<li><p>but here there are two:</p>
+<ul>
+<li><p>{<strong>Deficit</strong>, always <strong>High</strong> }</p></li>
+<li><p>{ <strong>Balance</strong>, (<strong>L</strong> if B, <strong>H</strong> if D) }</p></li>
+</ul></li>
+</ul>
+<p>Both are NE of this game, but the second is a special type of NE</p>
+<p>A <span class="hi">subgame-perfect Nash equilibrium</span> because it involves the Fed making their rational choice in every subgame.</p>
+</section>
+<section id="showing-seq.-games-in-strategic-form-2" class="slide level2">
+<h2>Showing Seq. Games in Strategic Form</h2>
 
-We found the NE will be (**Deficit**, **High Rates**)
-when this game is played simultaneously
-
-| Congress, Federal Reserve | Low rates | High Rates |
-|:-------------------------:+:---------:+:----------:|
-|        **Balance**        |    3, 4   |    1, 3    |
-|        **Deficit**        |    4, 1   |    2, 2    |
-
-## Changing the order of Moves
-
-What about when the Fed moves first?
-
-![](figures/Dixit_fig6.6b.png)
-
-::: {.incremental}
-
-  * We get the same NE
-
-:::
----
-
-## Changing the order of Moves
-
-What about when Congress moves first?
-
-![](figures/Dixit_fig6.6c.png)
-
-::: {.incremental}
-
-  * now we get a different NE with congress playing their strictly dominated strategy
-
-  * this is because when the Fed acts second, they can make a *credible threat*
-
-:::
-
----
-
-## Showing Seq. Games in Strategic Form
-
-In the game where Congress moves first,
-they have two strategies, but the Fed has 4
-
-| Congress, Fed | L if B, H if D | H if B, L if D | always Low | always H |
-|---------------+----------------+----------------+------------+----------|
-| **Balance**   | 3,4            | 1,3            | 3,4        | 1,3      |
-| **Deficit**   | 2,2            | 4,1            | 4,1        | 2,2      |
-
----
-
-## Showing Seq. Games in Strategic Form
-
-When we implemented *rollback* on the extensive form version,
-there was only one NE,
-
-  * but here there are two: 
-
-    + \{**Deficit**, always **High** \}
-    
-    + \{ **Balance**, (**L** if B, **H** if D) \}
-
-Both are NE of this game, but the second is a special type of NE
-
-A [subgame-perfect Nash equilibrium]{.hi} because it involves the Fed making their rational choice in every subgame.
-
-## Showing Seq. Games in Strategic Form
-
-![](figures/Dixit_fig6.6c.png)
-
-It's not *subgame-rational* for the Fed to play **High always**
-because if the case where Congress already spent in deficit were to happen,
-the Fed's only rational action would be to set low interest rates.
-
-  * We can say that the Fed's **High always** strategy is not a [credible]{.hi} promise
-
-## SPNE
-
-The rollback method finds the [subgame-perfect Nash equilibria]{.hi} of sequential games
-
-  * A complete plan of action such that at every node *including off-equilibrium* paths, it is still rational to stick to that original plan of action. -->
+<img data-src="figures/Dixit_fig6.6c.png" class="r-stretch"><p>It’s not <em>subgame-rational</em> for the Fed to play <strong>High always</strong> because if the case where Congress already spent in deficit were to happen, the Fed’s only rational action would be to set low interest rates.</p>
+<ul>
+<li>We can say that the Fed’s <strong>High always</strong> strategy is not a <span class="hi">credible</span> promise</li>
+</ul>
+</section>
+<section id="spne" class="slide level2">
+<h2>SPNE</h2>
+<p>The rollback method finds the <span class="hi">subgame-perfect Nash equilibria</span> of sequential games</p>
+<ul>
+<li>A complete plan of action such that at every node <em>including off-equilibrium</em> paths, it is still rational to stick to that original plan of action.</li>
+</ul>
 <!-- {{< include 0505-SPNE.qmd >}} -->
 </section></section>
 <section>
 <section id="games-with-both-simultaneous-and-sequential-moves" class="title-slide slide level1 center">
 <h1>Games with both Simultaneous and Sequential Moves</h1>
-<!-- ## Games with both types of moves
 
-We separated games by the timing of moves in the first few lectures
+</section>
+<section id="games-with-both-types-of-moves" class="slide level2">
+<h2>Games with both types of moves</h2>
+<p>We separated games by the timing of moves in the first few lectures</p>
+<ul>
+<li><p>it allowed us to introduce the relevant methods for each category</p></li>
+<li><p>it also gave us the intuition behind the more general concept of Nash Equilibrium in a few different settings</p></li>
+<li><p>but for many types of settings there are a mix of actions that are taken both <em>sequentially</em> and also taken <em>simultaneously</em></p></li>
+</ul>
+</section>
+<section id="two-stage-games-subgames" class="slide level2">
+<h2>Two-Stage Games &amp; Subgames</h2>
+<p><span class="h">CrossTalk</span> and <span class="h">GlobalDialog</span> are competing telecom companies</p>
+<ul>
+<li>Each could invest $10 billion in fiber-optic infrastructure</li>
+</ul>
+<div class="incremenatl">
+<ul>
+<li><p>If only one company has fiber-optic, they get the entire market</p>
+<ul>
+<li><p>A monopolist can charge <strong>high</strong> price <span class="math inline">\(\rightarrow\)</span> earn $24 billion</p></li>
+<li><p>or a <strong>low</strong> price to attract more customers <span class="math inline">\(\rightarrow\)</span> earn $16 billion</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="two-stage-games-subgames-1" class="slide level2">
+<h2>Two-Stage Games &amp; Subgames</h2>
+<p><span class="h">CrossTalk</span> and <span class="h">GlobalDialog</span> are competing telecom companies</p>
+<ul>
+<li>Each could invest $10 billion in fiber-optic infrastructure</li>
+</ul>
+<ul>
+<li class="fragment"><p>If <em>both</em> companies invest, they are locked in a <strong><em>simultaneous</em></strong> pricing game</p>
+<ul>
+<li class="fragment"><p>If both set <strong>high</strong> price in the fiber-optic market, each gets $12 billion</p></li>
+<li class="fragment"><p>If both choose <strong>low</strong>, they each get $8 billion</p></li>
+<li class="fragment"><p>If one sets <strong>high</strong> and the other sets <strong>low</strong>,</p>
+<ul>
+<li class="fragment"><p>the low-price setter gets the whole market and earns $24 billion,</p></li>
+<li class="fragment"><p>the high price setter gets $0</p></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="two-stage-games-subgames-2" class="slide level2">
+<h2>Two-Stage Games &amp; Subgames</h2>
 
-  * it allowed us to introduce the relevant methods for each category
+<img data-src="figures/Dixit_fig6.1.png" class="r-stretch"></section>
+<section id="two-stage-games-subgames-3" class="slide level2">
+<h2>Two-Stage Games &amp; Subgames</h2>
+<p>We can use our tools from solving both game trees and game tables</p>
+<ul>
+<li class="fragment"><p>first, notice that a monopolist will always set a <strong>High</strong> price</p></li>
+<li class="fragment"><p>So we can replace the payoffs from the <strong>High</strong> branch into the first-stage table</p></li>
+</ul>
+</section>
+<section id="two-stage-games-subgames-4" class="slide level2">
+<h2>Two-Stage Games &amp; Subgames</h2>
+<p>Take a look at the table labelled Second stage:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">CrossTalk, GlobalDialog</th>
+<th style="text-align: center;">High</th>
+<th style="text-align: center;">Low</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>High</strong></td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">-10, 6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Low</strong></td>
+<td style="text-align: center;">6, -10</td>
+<td style="text-align: center;">-2, -2</td>
+</tr>
+</tbody>
+</table>
+<p>This is itself a complete game nested in the larger one</p>
+<ul>
+<li class="fragment"><p>so it’s whats is called a <span class="hi">subgame</span></p></li>
+<li class="fragment"><p>we can solve it like we would any other game table</p></li>
+<li class="fragment"><p>The NE of this subgame is (<strong>Low</strong>, <strong>Low</strong>)</p></li>
+<li class="fragment"><p>place the Nash payoffs of -2, -2 into the first-stage table</p></li>
+</ul>
+</section>
+<section id="two-stage-games-subgames-5" class="slide level2">
+<h2>Two-Stage Games &amp; Subgames</h2>
+<p>First-stage game with payoffs filled in:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">CrossTalk, GlobalDialog</th>
+<th style="text-align: center;">Don’t</th>
+<th style="text-align: center;">Invest</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Don’t</strong></td>
+<td style="text-align: center;">0, 0</td>
+<td style="text-align: center;">0, <strong>14</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Invest</strong></td>
+<td style="text-align: center;"><strong>14</strong>, 0</td>
+<td style="text-align: center;"><strong>-2, -2</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Now we can solve for the NE of the whole game:</p>
+<ul>
+<li class="fragment"><p>(<strong>Invest</strong> <strong>High</strong> <strong>Low</strong>, <strong>Don’t</strong> <strong>High</strong> <strong>Low</strong>)</p></li>
+<li class="fragment"><p>(<strong>Don’t</strong> <strong>High</strong> <strong>Low</strong>, <strong>Invest</strong> <strong>High</strong> <strong>Low</strong>)</p></li>
+</ul>
+</section>
+<section class="slide level2">
 
-  * it also gave us the intuition behind the more general concept of Nash Equilibrium in a few different settings
-
-  * but for many types of settings there are a mix of actions that are taken both *sequentially* and also taken *simultaneously*
-
---- -->
-<!-- ## Two-Stage Games & Subgames
-
-[CrossTalk]{.h} and [GlobalDialog]{.h} are competing telecom companies
-
-  * Each could invest $10 billion in fiber-optic infrastructure
-
-::: {.incremenatl}
-
-  * If only one company has fiber-optic, they get the entire market
-
-    + A monopolist can charge **high** price $\rightarrow$ earn $24 billion
-
-    + or a **low** price to attract more customers $\rightarrow$ earn $16 billion
-
-:::
-
----
-
-## Two-Stage Games & Subgames
-
-[CrossTalk]{.h} and [GlobalDialog]{.h} are competing telecom companies
-
-  * Each could invest $10 billion in fiber-optic infrastructure
-
-::: {.incremental}
-
-  * If *both* companies invest, they are locked in a ***simultaneous*** pricing game
-
-    + If both set **high** price in the fiber-optic market, each gets $12 billion
-
-    + If both choose **low**, they each get $8 billion
-
-    + If one sets **high** and the other sets **low**, 
-      
-      - the low-price setter gets the whole market and earns $24 billion,
-
-      - the high price setter gets $0
-
-:::
-
----
-
-## Two-Stage Games & Subgames
-
-![](figures/Dixit_fig6.1.png)
-
----
-
-## Two-Stage Games & Subgames
-
-We can use our tools from solving both game trees and game tables 
-
-::: {.incremental}
-
-  * first, notice that a monopolist will always set a **High** price
-
-  * So we can replace the payoffs from the **High** branch into the first-stage table
-
-:::
-
----
-
-## Two-Stage Games & Subgames
-
-Take a look at the table labelled Second stage:
-
-| CrossTalk, GlobalDialog |  High  |   Low  |
-|:-----------------------:+:------:+:------:|
-|         **High**        |  2, 2  | -10, 6 |
-|         **Low**         | 6, -10 | -2, -2 |
-
-::: {.incremental}
-
-This is itself a complete game nested in the larger one
-
-  * so it's whats is called a [subgame]{.hi}
-
-  * we can solve it like we would any other game table
-
-  * The NE of this subgame is (**Low**, **Low**) 
-
-  * place the Nash payoffs of -2, -2 into the first-stage table
-:::
-
----
-
-## Two-Stage Games & Subgames
-
-First-stage game with payoffs filled in:
-
-| CrossTalk, GlobalDialog |   Don't   |   Invest   |
-|:-----------------------:+:---------:+:----------:|
-|        **Don't**        |    0, 0   |  0, **14** |
-|        **Invest**       | **14**, 0 | **-2, -2** |
-
-::: {.incremental}
-Now we can solve for the NE of the whole game:
-  
-  * (**Invest** **High** **Low**, **Don't** **High** **Low**)
-
-  * (**Don't** **High** **Low**, **Invest** **High** **Low**)
-:::
-
---- -->
 <!-- ## Two-Stage Games & Subgames
 
 ### Football play game

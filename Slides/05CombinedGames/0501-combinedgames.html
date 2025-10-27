@@ -326,8 +326,8 @@ window.Quarto = {
       </button>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="dc1d8a069b8367a369aa3e27f7c69248" class="alert alert-warning hidden"><i class="bi bi-clipboard2-check-fill quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p>Please fill out course survey! If 40 responses -&gt; 1 extra credit on midterm</p>
+  <div id="quarto-announcement" data-announcement-id="bbbfe362e3e07928ef2d5f3d036040e6" class="alert alert-warning hidden"><i class="bi bi-clipboard2-check-fill quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p>Midterm exam this Wednesday: Oct.&nbsp;29th</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
@@ -552,121 +552,138 @@ window.Quarto = {
 
 <section id="games-with-both-simultaneous-and-sequential-moves" class="level1">
 <h1>Games with both Simultaneous and Sequential Moves</h1>
-<!-- ## Games with both types of moves
-
-We separated games by the timing of moves in the first few lectures
-
-  * it allowed us to introduce the relevant methods for each category
-
-  * it also gave us the intuition behind the more general concept of Nash Equilibrium in a few different settings
-
-  * but for many types of settings there are a mix of actions that are taken both *sequentially* and also taken *simultaneously*
-
---- -->
-<!-- ## Two-Stage Games & Subgames
-
-[CrossTalk]{.h} and [GlobalDialog]{.h} are competing telecom companies
-
-  * Each could invest $10 billion in fiber-optic infrastructure
-
-::: {.incremenatl}
-
-  * If only one company has fiber-optic, they get the entire market
-
-    + A monopolist can charge **high** price $\rightarrow$ earn $24 billion
-
-    + or a **low** price to attract more customers $\rightarrow$ earn $16 billion
-
-:::
-
----
-
-## Two-Stage Games & Subgames
-
-[CrossTalk]{.h} and [GlobalDialog]{.h} are competing telecom companies
-
-  * Each could invest $10 billion in fiber-optic infrastructure
-
-::: {.incremental}
-
-  * If *both* companies invest, they are locked in a ***simultaneous*** pricing game
-
-    + If both set **high** price in the fiber-optic market, each gets $12 billion
-
-    + If both choose **low**, they each get $8 billion
-
-    + If one sets **high** and the other sets **low**, 
-      
-      - the low-price setter gets the whole market and earns $24 billion,
-
-      - the high price setter gets $0
-
-:::
-
----
-
-## Two-Stage Games & Subgames
-
-![](figures/Dixit_fig6.1.png)
-
----
-
-## Two-Stage Games & Subgames
-
-We can use our tools from solving both game trees and game tables 
-
-::: {.incremental}
-
-  * first, notice that a monopolist will always set a **High** price
-
-  * So we can replace the payoffs from the **High** branch into the first-stage table
-
-:::
-
----
-
-## Two-Stage Games & Subgames
-
-Take a look at the table labelled Second stage:
-
-| CrossTalk, GlobalDialog |  High  |   Low  |
-|:-----------------------:+:------:+:------:|
-|         **High**        |  2, 2  | -10, 6 |
-|         **Low**         | 6, -10 | -2, -2 |
-
-::: {.incremental}
-
-This is itself a complete game nested in the larger one
-
-  * so it's whats is called a [subgame]{.hi}
-
-  * we can solve it like we would any other game table
-
-  * The NE of this subgame is (**Low**, **Low**) 
-
-  * place the Nash payoffs of -2, -2 into the first-stage table
-:::
-
----
-
-## Two-Stage Games & Subgames
-
-First-stage game with payoffs filled in:
-
-| CrossTalk, GlobalDialog |   Don't   |   Invest   |
-|:-----------------------:+:---------:+:----------:|
-|        **Don't**        |    0, 0   |  0, **14** |
-|        **Invest**       | **14**, 0 | **-2, -2** |
-
-::: {.incremental}
-Now we can solve for the NE of the whole game:
-  
-  * (**Invest** **High** **Low**, **Don't** **High** **Low**)
-
-  * (**Don't** **High** **Low**, **Invest** **High** **Low**)
-:::
-
---- -->
+<section id="games-with-both-types-of-moves" class="level2">
+<h2 class="anchored" data-anchor-id="games-with-both-types-of-moves">Games with both types of moves</h2>
+<p>We separated games by the timing of moves in the first few lectures</p>
+<ul>
+<li><p>it allowed us to introduce the relevant methods for each category</p></li>
+<li><p>it also gave us the intuition behind the more general concept of Nash Equilibrium in a few different settings</p></li>
+<li><p>but for many types of settings there are a mix of actions that are taken both <em>sequentially</em> and also taken <em>simultaneously</em></p></li>
+</ul>
+<hr>
+</section>
+<section id="two-stage-games-subgames" class="level2">
+<h2 class="anchored" data-anchor-id="two-stage-games-subgames">Two-Stage Games &amp; Subgames</h2>
+<p><span class="h">CrossTalk</span> and <span class="h">GlobalDialog</span> are competing telecom companies</p>
+<ul>
+<li>Each could invest $10 billion in fiber-optic infrastructure</li>
+</ul>
+<div class="incremenatl">
+<ul>
+<li><p>If only one company has fiber-optic, they get the entire market</p>
+<ul>
+<li><p>A monopolist can charge <strong>high</strong> price <span class="math inline">\(\rightarrow\)</span> earn $24 billion</p></li>
+<li><p>or a <strong>low</strong> price to attract more customers <span class="math inline">\(\rightarrow\)</span> earn $16 billion</p></li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="two-stage-games-subgames-1" class="level2">
+<h2 class="anchored" data-anchor-id="two-stage-games-subgames-1">Two-Stage Games &amp; Subgames</h2>
+<p><span class="h">CrossTalk</span> and <span class="h">GlobalDialog</span> are competing telecom companies</p>
+<ul>
+<li>Each could invest $10 billion in fiber-optic infrastructure</li>
+</ul>
+<div class="incremental">
+<ul class="incremental">
+<li><p>If <em>both</em> companies invest, they are locked in a <strong><em>simultaneous</em></strong> pricing game</p>
+<ul class="incremental">
+<li><p>If both set <strong>high</strong> price in the fiber-optic market, each gets $12 billion</p></li>
+<li><p>If both choose <strong>low</strong>, they each get $8 billion</p></li>
+<li><p>If one sets <strong>high</strong> and the other sets <strong>low</strong>,</p>
+<ul class="incremental">
+<li><p>the low-price setter gets the whole market and earns $24 billion,</p></li>
+<li><p>the high price setter gets $0</p></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="two-stage-games-subgames-2" class="level2">
+<h2 class="anchored" data-anchor-id="two-stage-games-subgames-2">Two-Stage Games &amp; Subgames</h2>
+<p><img src="figures/Dixit_fig6.1.png" class="img-fluid"></p>
+<hr>
+</section>
+<section id="two-stage-games-subgames-3" class="level2">
+<h2 class="anchored" data-anchor-id="two-stage-games-subgames-3">Two-Stage Games &amp; Subgames</h2>
+<p>We can use our tools from solving both game trees and game tables</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p>first, notice that a monopolist will always set a <strong>High</strong> price</p></li>
+<li><p>So we can replace the payoffs from the <strong>High</strong> branch into the first-stage table</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="two-stage-games-subgames-4" class="level2">
+<h2 class="anchored" data-anchor-id="two-stage-games-subgames-4">Two-Stage Games &amp; Subgames</h2>
+<p>Take a look at the table labelled Second stage:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">CrossTalk, GlobalDialog</th>
+<th style="text-align: center;">High</th>
+<th style="text-align: center;">Low</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>High</strong></td>
+<td style="text-align: center;">2, 2</td>
+<td style="text-align: center;">-10, 6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Low</strong></td>
+<td style="text-align: center;">6, -10</td>
+<td style="text-align: center;">-2, -2</td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<p>This is itself a complete game nested in the larger one</p>
+<ul class="incremental">
+<li><p>so it’s whats is called a <span class="hi">subgame</span></p></li>
+<li><p>we can solve it like we would any other game table</p></li>
+<li><p>The NE of this subgame is (<strong>Low</strong>, <strong>Low</strong>)</p></li>
+<li><p>place the Nash payoffs of -2, -2 into the first-stage table</p></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="two-stage-games-subgames-5" class="level2">
+<h2 class="anchored" data-anchor-id="two-stage-games-subgames-5">Two-Stage Games &amp; Subgames</h2>
+<p>First-stage game with payoffs filled in:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">CrossTalk, GlobalDialog</th>
+<th style="text-align: center;">Don’t</th>
+<th style="text-align: center;">Invest</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Don’t</strong></td>
+<td style="text-align: center;">0, 0</td>
+<td style="text-align: center;">0, <strong>14</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Invest</strong></td>
+<td style="text-align: center;"><strong>14</strong>, 0</td>
+<td style="text-align: center;"><strong>-2, -2</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="incremental">
+<p>Now we can solve for the NE of the whole game:</p>
+<ul class="incremental">
+<li><p>(<strong>Invest</strong> <strong>High</strong> <strong>Low</strong>, <strong>Don’t</strong> <strong>High</strong> <strong>Low</strong>)</p></li>
+<li><p>(<strong>Don’t</strong> <strong>High</strong> <strong>Low</strong>, <strong>Invest</strong> <strong>High</strong> <strong>Low</strong>)</p></li>
+</ul>
+</div>
+<hr>
 <!-- ## Two-Stage Games & Subgames
 
 ### Football play game
@@ -682,6 +699,7 @@ In football, each team chooses a play to run in the huddle where the other team 
 ## Two-Stage Games & Subgames
 
 ![](figures/Dixit_fig6.4.png) -->
+</section>
 <section id="kidnapping-with-hidden-information" class="level2">
 <h2 class="anchored" data-anchor-id="kidnapping-with-hidden-information">Kidnapping with hidden information</h2>
 <div class="columns">
