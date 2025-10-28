@@ -97,6 +97,6 @@ website:
   announcement: 
     icon: clipboard2-check-fill
     dismissable: true
-    content: "Please fill out course survey! If 40 responses -> 1 extra credit on midterm"
+    content: "Midterm exam this Wednesday: Oct. 29th"
     type: warning
     position: below-navbar

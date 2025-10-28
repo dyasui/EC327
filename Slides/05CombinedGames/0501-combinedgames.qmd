@@ -1,6 +1,6 @@
 # Games with both Simultaneous and Sequential Moves
 
-<!-- ## Games with both types of moves
+## Games with both types of moves
 
 We separated games by the timing of moves in the first few lectures
 
@@ -10,7 +10,7 @@ We separated games by the timing of moves in the first few lectures
 
   * but for many types of settings there are a mix of actions that are taken both *sequentially* and also taken *simultaneously*
 
---- -->
+---
 
 ## Two-Stage Games & Subgames
 
@@ -117,7 +117,7 @@ Now we can solve for the NE of the whole game:
 
 ---
 
-## Two-Stage Games & Subgames
+<!-- ## Two-Stage Games & Subgames
 
 ### Football play game
 
@@ -131,6 +131,171 @@ In football, each team chooses a play to run in the huddle where the other team 
 
 ## Two-Stage Games & Subgames
 
-![](figures/Dixit_fig6.4.png)
+![](figures/Dixit_fig6.4.png) -->
 
 
+## Kidnapping with hidden information
+
+:::: {.columns}
+::: {.column}
+![](figures/kidnapgame_infoset.png)
+:::
+::: {.column}
+
+  * When we first saw this game,
+  Guy could observe whether Vivica had paid the ransom 
+  before he made the decision to $Kill$ or $Release$ Orlando
+
+  * Now we will consider a variation of this game 
+  where Guy doesnt know whether Vivica has paid when he chooses to Kill or Release
+
+:::
+::::
+
+---
+
+
+## Kidnap Game with a simultaneous subgame
+
+:::: {.incremental}
+
+  * The dotted box around Guy's nodes $N_3$ and $N_4$
+  indicate that he can't tell them apart.
+
+  * They are part of the same [information set]{.hi}; 
+  to Guy, they are indistinguishable from each other.
+
+::: {.callout-note}
+### Information set 
+is the set of information available to a player when making a decision. 
+In the extensive form, 
+every decision node belongs to one and only one info set,
+but multiple nodes may be in the same info set 
+if the player at that node cannot tell them apart.
+:::
+
+::::
+
+---
+
+## Using Strategic Form in Extensive Games
+
+Consider the situation when Guy has already kidnapped Orlando.
+
+List the remaining strategies for each player:
+
+::: {.incremental}
+
+  * Vivica can decide to **Pay** or **Don't** pay the ransom
+
+  * Guy can either **Kill** or **Release** Orlando
+  
+:::
+
+---
+
+## Using Strategic Form in Extensive Games
+
+With these strategy profiles,
+we can write this subgame out in its strategic form:
+
+| Guy, Vivica | Pay  | Don't |
+|-------------+------+-------|
+| **Kill**    | 4, 1 | 2, 2  |
+| **Release** | 5, 3 | 1, 4  |
+
+---
+
+
+## Going from Strategic to Extensive
+  
+For every strategic form game, 
+there are multiple extensive form game trees
+which can be drawn.
+
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![](figures/kidnapgame_sg1.png)
+
+:::
+::: {.column width="50%"}
+
+![](figures/kidnapgame_sg2.png)
+
+:::
+::::
+
+---
+
+
+## Another way to represent the entire Kidnap Game
+
+![](figures/kidnapgame_combined.png)
+
+---
+
+## Solving the Kidnap Game w/ Simultaneous Sugame
+
+What will a complete strategy profile look like for each player?
+
+::: {.incremental}
+  * Guy's strategy:
+    + element 1: [$Kidnap$]{.red} or [$Don't~Kidnap$]{.red}
+    + element 2: [$Kill$]{.red} or [$Release$]{.red}
+  * Vivica's strategy:
+    + element 1: [$Pay$]{.blue} or [$Don't$]{.blue}
+:::
+
+---
+
+## Solving the Kidnap Game w/ Simultaneous Sugame
+
+What is/are the NE of the subgame?
+
+|                   | [$Pay$]{.blue} | [$Don't$]{.blue} |
+|-------------------+----------------+------------------|
+| [$Kill$]{.red}    | 4,1            | 2,2              |
+| [$Release$]{.red} | 5,3            | 1,4              |
+
+
+::: {.incremental}
+  * ([$Release$]{.red}, [$Pay$]{.blue}) is no longer *stable* 
+  because Vivica wouldn't pay the ransom if Guy releases
+
+  * ([$Kill$]{.red}, [$Don't$]{.blue}) is the only NE in this table
+:::
+
+---
+
+## Solving the Kidnap Game w/ Simultaneous Sugame
+
+Knowing this, what is the NE in the full game?
+
+![](figures/kidnapgame_combined.png)
+
+. . .
+
+  * \{ ([$Don't~Kidnap$, $Kill$]{.red}), [$Don't~pay$]{.blue} \}
+
+---
+
+## Comparing NE in the different Kidnapping Games
+
+In the version where Vivica's action was *observable*,
+we found the NE:
+
+  * \{ ([$Kidnap, Kill_3, Release_4$]{.red}), [$Pay$]{.blue} \}
+
+But in the version where Guy couldn't see whether Vivica paid the ransom,
+it was:
+
+  * \{ ([$Don't~Kidnap$, $Kill$]{.red}), [$Don't~pay$]{.blue} \}
+
+
+::: {.incremental}
+  * If you were Guy, which version would you prefer?
+  * Guy's advantage is in making a conditional promise/threat to Vivica
+  which is taken away if he can only pick one action
+:::

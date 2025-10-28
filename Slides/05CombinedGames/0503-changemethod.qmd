@@ -1,4 +1,293 @@
-# Change in the Method of Analysis
+# Sequential Games in Strategic Form
+
+## Original Kidnap Game
+
+![](figures/kidnapgame.png)
+
+<!-- ## Rollback in the Kidnap Game
+
+::::: {.columns}
+
+:::: {.column}
+![](figures/kidnapgame.png)
+::::
+
+:::: {.column}
+::: {.incremental}
+  * What should [Guy]{.red} do if Vivica pays?
+    + $Release$ (5 > 4)
+  * What should [Guy]{.red} do if Vivica doesn't pay?
+    + $Kill$ (2 > 1)
+:::
+::::
+
+:::::
+
+---
+
+## Rollback in the Kidnap Game
+
+::::: {.columns}
+
+:::: {.column}
+![](figures/kidnapgame.png)
+::::
+
+:::: {.column}
+::: {.incremental}
+  * What should [Vivica]{.blue} do knowing that Guy will $Release$ if she pays,
+  and $Kill$ if she doesn't?
+    * [Pay]{.blue} the ransom (3 > 2)
+:::
+::::
+
+:::::
+
+---
+
+## Rollback in the Kidnap Game
+
+::::: {.columns}
+
+:::: {.column}
+![](figures/kidnapgame.png)
+::::
+
+:::: {.column}
+::: {.incremental}
+  * What should [Guy]{.red} do
+  knowing that [Vivica]{.blue} will [$Pay$]{.blue},
+  knowing that he will [($Kill$, $Release$)]{.red}?
+    + [Kidnap]{.red} (5 > 3)
+:::
+::::
+
+:::::
+
+--- -->
+
+## Rollback in the Kidnap Game
+
+Rollback solution with
+[perfect information]{.hi}:
+
+  * \{ ([$Kidnap, Release, Kill$]{.red}), [$Pay$]{.blue} \}
+
+. . .
+
+  * In other words:
+    
+    + Guy [$kidnaps$]{.red},
+    promises to [$release$]{.red} if ransom paid,
+    otherwise threatens [$kill$]{.red}
+
+      - rational if he believes Vivica will pay the ransom.
+
+    + Vivica [$pays$]{.blue} 
+    
+      - rational if she believes Guy's threat/promise above
+
+  * Is this the only stable outcome?
+    
+    + It depends on beliefs!
+
+---
+
+## Checking for Other Kidnap Game Nash, Guy
+
+What are *all of* Guy's possible strategies?
+
+. . .
+
+  * Kidnap, Release if paid, Kill if unpaid
+
+. . .
+
+  * Kidnap, R, R
+  * Kidnap, K, K
+  * Kidnap, K, R
+
+. . .
+
+  * Don't kidnap, Release, Kill
+  * DNK, R, R
+  * DNK, K, K
+  * DNK, K, R
+
+---
+
+## Checking for Other Kidnap Nash, Vivica
+
+What are all of Vivica's strategies?
+
+. . .
+
+  * Pay
+  * or Don't pay
+
+. . .
+
+How to check for another Nash strategy profile besides
+
+\{ ([$Kidnap, Release, Kill$]{.red}), [$Pay$]{.blue} \}?
+
+. . .
+
+  * Check all 16 possible strat. profiles?
+
+. . .
+
+   + or use a tool we've learned to help?
+
+---
+
+## A Strategic Form representation
+
+| [Guy]{.red}, [Vivica]{.blue}   |          Pay          |       Don't Pay       |
+|--------------------------------+:---------------------:+:---------------------:|
+| [DNK, Kill, Kill]{.h}          | [3]{.red}, [5]{.blue} | [3]{.red}, [5]{.blue} |
+| [DNK, Kill, Release]{.h}       | [3]{.red}, [5]{.blue} | [3]{.red}, [5]{.blue} |
+| [DNK, Release, Kill]{.h}       | [3]{.red}, [5]{.blue} | [3]{.red}, [5]{.blue} |
+| [DNK, Release, Release]{.h}    | [3]{.red}, [5]{.blue} | [3]{.red}, [5]{.blue} |
+| [Kidnap, Kill, Kill]{.h}       | [4]{.red}, [1]{.blue} | [2]{.red}, [2]{.blue} |
+| [Kidnap, Kill, Release]{.h}    | [4]{.red}, [1]{.blue} | [1]{.red}, [4]{.blue} |
+| [Kidnap, Release, Kill]{.h}    | [5]{.red}, [3]{.blue} | [2]{.red}, [2]{.blue} |
+| [Kidnap, Release, Release]{.h} | [5]{.red}, [3]{.blue} | [1]{.red}, [4]{.blue} |
+
+---
+
+## New look, same game
+
+::::: {.columns}
+:::: {.column width="40%"}
+![](figures/kidnapgame.png)
+::::
+:::: {.column width="60%" .small}
+
+| [Guy]{.red}, [Vivica]{.blue}   |          Pay          |       Don't Pay       |
+|--------------------------------+:---------------------:+:---------------------:|
+| [DNK, Kill, Kill]{.h}          | [3]{.red}, [5]{.blue} | [3]{.red}, [5]{.blue} |
+| [DNK, Kill, Release]{.h}       | [3]{.red}, [5]{.blue} | [3]{.red}, [5]{.blue} |
+| [DNK, Release, Kill]{.h}       | [3]{.red}, [5]{.blue} | [3]{.red}, [5]{.blue} |
+| [DNK, Release, Release]{.h}    | [3]{.red}, [5]{.blue} | [3]{.red}, [5]{.blue} |
+| [Kidnap, Kill, Kill]{.h}       | [4]{.red}, [1]{.blue} | [2]{.red}, [2]{.blue} |
+| [Kidnap, Kill, Release]{.h}    | [4]{.red}, [1]{.blue} | [1]{.red}, [4]{.blue} |
+| [Kidnap, Release, Kill]{.h}    | [5]{.red}, [3]{.blue} | [2]{.red}, [2]{.blue} |
+| [Kidnap, Release, Release]{.h} | [5]{.red}, [3]{.blue} | [1]{.red}, [4]{.blue} |
+
+::::
+:::::
+
+---
+
+## Solving Kidnap in Strategic Form
+
+::: {.incremental}
+  * The top half of the table represents *don't kidnap* branch
+    + Why does it take up multiple cells?
+      - They represent different *beliefs*
+      - Why might Guy choose to not kidnap?
+        * If he *believes* Vivica won't pay
+:::
+
+---
+
+## Guy's BR in Strategic Form
+
+| [Guy]{.red}, [Vivica]{.blue} |                 Pay                 |              Don't Pay              |
+|------------------------------+:-----------------------------------:+:-----------------------------------:|
+| [DNK, K, K]{.h}              |     [3]{.red}, 5    | <u>[3]{.red}</u>,  5 |
+| [DNK, K, R]{.h}              |     [3]{.red}, 5    | <u>[3]{.red}</u>, 5 |
+| [DNK, R, K]{.h}              |     [3]{.red}, 5    | <u>[3]{.red}</u>, 5 |
+| [DNK, R, R]{.h}              |     [3]{.red}, 5    | <u>[3]{.red}</u>, 5 |
+| [Kidnap, K, K]{.h}           |        [4]{.red}, 1       |     [2]{.red}, 2    |
+| [Kidnap, K, R]{.h}           |        [4]{.red}, 1        |     [1]{.red}, 4    |
+| [Kidnap, R, K]{.h}           | <u>[5]{.red}</u>, 3 |        [2]{.red}, 2        |
+| [Kidnap, R, R]{.h}           |     <u>[5]{.red}</u>, 3    |        [1]{.red}, 4        |
+
+---
+
+## Vivica's BRs in Strategic Form
+
+When would Vivica choose to not pay the ransom?
+
+| [Guy]{.red}, [Vivica]{.blue} |                 Pay                 |              Don't Pay              |
+|------------------------------+:-----------------------------------:+:-----------------------------------:|
+| [DNK, K, K]{.h}              |     [3]{.red}, <u>[5]{.blue}</u>    | <u>[3]{.red}</u>, <u>[5]{.blue}</u> |
+| [DNK, K, R]{.h}              |     [3]{.red}, <u>[5]{.blue}</u>    | <u>[3]{.red}</u>, <u>[5]{.blue}</u> |
+| [DNK, R, K]{.h}              |     [3]{.red}, <u>[5]{.blue}</u>    | <u>[3]{.red}</u>, <u>[5]{.blue}</u> |
+| [DNK, R, R]{.h}              |     [3]{.red}, <u>[5]{.blue}</u>    | <u>[3]{.red}</u>, <u>[5]{.blue}</u> |
+| [Kidnap, K, K]{.h}           |        [4]{.red}, [1]{.blue}        |     [2]{.red}, <u>[2]{.blue}</u>    |
+| [Kidnap, K, R]{.h}           |        [4]{.red}, [1]{.blue}        |     [1]{.red}, <u>[4]{.blue}</u>    |
+| [Kidnap, R, K]{.h}           | <u>[5]{.red}</u>, <u>[3]{.blue}</u> |        [2]{.red}, [2]{.blue}        |
+| [Kidnap, R, R]{.h}           |     <u>[5]{.red}</u>, [3]{.blue}    |        [1]{.red}, <u>[4]{.blue}</u>        |
+
+---
+
+## New Nash Eq. in Kidnap Game
+
+We found \{ ([$Kidnap, Release, Kill$]{.red}), [$Pay$]{.blue} \}
+
+through backwards induction.
+
+. . .
+
+Through BR analysis in Strategic form:
+
+  * Any strategy profile where:
+    + Guy Doesn't Kidnap (DNK,K,K; DNK,K,R; DNK,R,K; DNK,R,R)
+    + Vivica Doesn't Pay
+  * is also a Nash
+
+The rollback eq. is not the only NE of this game!
+
+---
+
+## NE vs SPNE
+
+::: {.incremental .small}
+  * What is different about *rollback* eq. and other Nash?
+    
+    + Backwards induction rules out threats that aren't *credible*
+  
+  * Vivica could threaten to not pay ransom
+
+    + If Guy believes this, he would get 2 or 1 by Kidnapping,
+      - or 3 by not kidnapping
+  
+    + Don't kidnap, Don't pay NE are stable
+
+      - given certain *beliefs*
+  
+  * But if Guy's really savvy,
+
+    + He should rationally state his preference of killing if paid, release if unpaid
+
+    + he should know Vivica wouldn't follow through once really faced with decision of 3 vs 2
+
+    + Vivica's threat of "I won't pay" isn't *credible*
+
+      - It's not subgame rational
+
+:::
+
+---
+
+## Rollback in the Kidnap Game
+
+\{ ([$Kidnap, Kill_3, Release_4$]{.red}), [$Pay$]{.blue} \}
+
+On top of being a regular NE, this strategy profile is also called [subgame-perfect]{.hi}
+because both players' actions are *credible*:
+
+::: {.incremental}
+  + Guy's threat of killing Orlando if the ransom goes unpaid aligns with his preference
+  + His promise to release Orlando if the ransom *is* paid is also credible because he would rather not kill if he gets the money
+  + Vivica has every reason to pay the ransom when she believes guy will make good on his threat
+    because she doesn't want Orlando to die
+:::
+
+# Simultaneous Games in Sequential Form
 
 ## Illustrating Sim. Games using Trees
 
