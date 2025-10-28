@@ -15,12 +15,12 @@ You will have 80 minutes to complete 10 multiple choice and 3-4 short-answer que
 
 # Practice Exams:
 
-## Midterm [Download](PracticeExam/Midterm/main.pdf){.btn .btn-outline-primary .btn role="button"}
+## Midterm [Download](PracticeExam/Midterm/PracticeMT_F25.pdf){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <details>
   <summary>Answer Key</summary>
   <div class="embed-container">
-    <iframe src="PracticeExam/Midterm/PracticeExam_key.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+    <iframe src="PracticeExam/Midterm/PracticeMT_F25_key.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```

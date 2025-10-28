@@ -20,14 +20,14 @@
 \newcounter{questions}
 \SetupExSheets{
   headings = block-wp,
-  solution/print = true % set this to true to print key
+  % solution/print = true % set this to true to print key
 }
 
 \usepackage{etoolbox}
 
 % mark mc options as correct with custom \correct command
 \newcommand{\ShowAnswers}{false}
-\renewcommand{\ShowAnswers}{true} %comment this out if you do not want to show the answers
+% \renewcommand{\ShowAnswers}{true} %comment this out if you do not want to show the answers
 \newcommand{\correct}{%
     \expandafter\ifstrequal\expandafter{\ShowAnswers}{true}{\bfseries}{}%
 }
@@ -166,7 +166,6 @@
 %------------------------------------------------------------------
 
 \begin{question} 
-
 Giustina and Ne\v{z}a can each either go to dinner at 
   \textit{Lion \& Owl} or \textit{Spice N Steam}.
 They both would prefer to go to a restaurant together than to go alone.
@@ -176,54 +175,61 @@ Giustina is the more decisive of the two,
 so she chooses a restaurant first
 and then Ne\v{z} decides which restaurant she will go to 
 after seeing where Giustina is going.
-
-\begin{enumerate}
-
-  \item Draw an extensive form game to go with this story 
+\begin{tasks}
+  \task Draw an extensive form game to go with this story 
   and solve for all subgame perfect Nash equilibria. 
-
-  \vspace{7cm}
-
-  \item 
+  \task 
   Now represent this game in strategic form
   and solve for all pure strategy Nash Equilibria.
   Can you find any Nash equilibria which are not subgame perfect?
-
-  
-\end{enumerate}
-
+\end{tasks}
+\begin{solution}
+  \begin{tasks}
+    \task Extensive form w/ arrows representing sub-game rational actions: \\
+    \begin{tikzpicture}[scale=1.5,font=\footnotesize, edge from parent/.style={draw}]
+      \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
+      \tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
+      \tikzstyle{level 1}=[level distance=15mm,sibling distance=2.5cm]
+      \tikzstyle{level 2}=[level distance=15mm,sibling distance=1.5cm]
+      \node(0)[hollow node,label=above:{Giustina}]{}
+          child{node(1)[solid node,label=above left:{Ne\v{z}a}]{}
+              child{node[label=below:{$(2,1)$}]{} edge from parent[->, very thick] node[left]{$L$}}
+              child{node[label=below:{$(0,0)$}]{} edge from parent node[right]{$S$}}
+              edge from parent[->, very thick] node[left,xshift=-5]{$L$}
+          }
+          child{node(2)[solid node,label=above right:{Ne\v{z}a}]{}
+              child{node[label=below:{$(0,0)$}]{} edge from parent node[left]{$L$}}
+              child{node[label=below:{$(2,1)$}]{} edge from parent[->, very thick] node[right]{$S$}}
+              edge from parent node[right,xshift=5]{$S$}
+          };
+  \end{tikzpicture}\
+  SPNE: 
+  $\{(L)_G, (L\text{ if L}, S\text{ if S})_N\}$
+  \task Normal form w/ underlined BR payoffs: \\
+  \begin{tabular}{*{6}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{4}{c}{Ne\v{z}a} \\ \cline{3-6}
+      \multicolumn{1}{c}{} &  & $L,L$ & $L,S$ & $S,L$ & $S,S$ \\ \cline{2-6} 
+      \multirow{2}*{Giustina}
+      & $L$ & \underline{2}, \underline{1} &  \underline{2}, \underline{1} & 0, 0 & 0, 0 \\ \cline{2-6}
+      & $S$ & 0, 0 &  1, \underline{2} & 0, 0 & \underline{1}, \underline{2} \\ \cline{2-6} 
+  \end{tabular} \\
+  $\{(L)_G, (L\text{ if L}, L\text{ if S})_N\}$
+  is an NE but not SPNE
+  because Ne\v{z}a would be irrational to pick Lion and Owl
+  in the off-equilibrium path after Giustina goes to Spice N Steam. \\
+  $\{(S)_G, (S\text{ if L}, S\text{ if S})_N\}$
+  is another NE that is not sub-game perfect
+  because Ne\v{z}a would be irrational to pick Spice N Steam
+  in the off-equilibrium path after Giustina goes to Lion and Owl. \\
+  \end{tasks}
+\end{solution}
 \end{question}
-
-% \newpage
-
-% Now suppose that if Giustina and Ne\v{z}a show up to \textit{Lion \& Owl} together,
-% there is a chance that they will have to wait up to an hour to get a table.
-% If they have to wait, Giustina would be equally happy going to \textit{Spice N Steam} 
-% together where they wouldn't have to wait. 
-% Ne\v{z}a would be equally waiting to go to \textit{Lion \& Owl} with Giustina
-% or \textit{Spice N Steam}
-  
-% \begin{enumerate}
-  
-%   \item Draw a new extensive form game to match the updated story.
-%   Make sure to define any variables you include.
-
-%   \vspace{7cm}
-
-%   \item Find all subgame perfect Nash equilibrium which results in both
-%   Giustina and Ne\v{z}a going to \textit{Spice N Steam}.
-
-%   Your answer should be a function of the probability of waiting in line at \textit{Lion \& Owl}.
-% \end{enumerate}
-% \end{question}
 
 \newpage
 %------------------------------------------------------------------
 
 \begin{question}%[20]
-
 Consider the strategic form game below:
-
 \begin{table}[!h]
   \begin{center}
     \begin{tabular}{*{6}{c|}}
@@ -237,42 +243,50 @@ Consider the strategic form game below:
   \end{tabular}
   \end{center}
 \end{table}
-
-\begin{enumerate}
- 
-  \item 
+\begin{tasks}
+  \task 
   Use Iterated Deletion of Strictly Dominated Strategies
   and write out a simplified game table with any remaining cells.
-
-  \vspace{50mm}
-
-  \item
+  \task
   Find all Nash equilibria in \textit{pure strategies}.
   Explain why you know they are Nash equilibria.
-
-  \vspace{50mm}
-  
   % \item 
   % Define mixed strategies for each player
   % using any pure strategies left after IDSDS.
   % Make sure to define all variables you introduce.
-
-  % \newpage 
-
   % \item
   % Graph each player's expected utilities as functions of the 
   % other players' mixed strategy you defined in part (c).
-
-  % \vspace{100mm}
-
   % \item
   % Solve for all Mixed Strategy Nash equilibria in this game.
   % A complete answer will include all calculations used 
   % and a graph of best response functions.
-
-  % blank page for work
-
-\end{enumerate}
+\end{tasks}
+\begin{solution}
+  \begin{tasks}
+    \task
+    \begin{enumerate}
+      \item $C$ strictly dominated by $A$
+      \item $Z$ is now SD by $Y$
+      \item $B$ is now SD by $A$
+      \item $Y$ is now SD by $W$
+      \item no more SD strats, so stop IDSDS
+    \end{enumerate}
+      \begin{center}
+        \begin{tabular}{*{4}{c|}}
+          \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\ \cline{3-4}
+          \multicolumn{1}{c}{} &     & $A$    & $D$ \\ \cline{2-4}
+          \multirow{2}*{$P_1$} & $W$ & \underline{15}, -7 & 11, \underline{5} \\ \cline{2-4}
+                               & $X$ & -3, \underline{18} & \underline{17}, \underline{18} \\ \cline{2-4}
+        \end{tabular}
+      \end{center}
+      \task
+      NE: $\{X,D\}$ \\
+      $X$ is BR to $D$, so $P_1$ has no regrets. \\
+      $D$ is BR to $X$, so $P_2$ has no regrets. \\
+      neither has any incentive to unilaterally deviate their own strategy.
+  \end{tasks}
+\end{solution}
 \end{question}
 
 \newpage
@@ -281,7 +295,6 @@ Consider the strategic form game below:
 
 \begin{question}
 Consider the strategic form game below:
-
 \begin{table}[h!]
   \begin{center}
   \begin{tabular}{*{5}{c|}}
@@ -293,11 +306,33 @@ Consider the strategic form game below:
   \end{tabular}
   \end{center}
 \end{table}
-
-Find all pure Nash strategy profiles.
-
-\vspace{40mm}
+\begin{tasks}
+  \task
+  Find all pure Nash strategy profiles when both play \textit{simultaneously}.
+  \task
+  Find all pure Nash strategy profiles when \textit{Hagano goes first}.
+  Carefully explain all strategy profiles.
+\end{tasks}
+\begin{solution}
+  \begin{tasks}
+    \task There are three simultaneous pure strategy NE:
+    $\{H_h,L_a\}$, $\{M_h, M_a\}$, and $\{L_h,H_a\}$
+    \task 
+    There is only one SPNE when Hagano goes first:
+    \begin{itemize}
+      \item Hagano plays $Low$
+      \item Aslanbeck plays:
+      \begin{itemize}
+        \item $High$ if Hagano plays $High$
+        \item $Moderate$ if Hagano plays $Moderate$
+        \item $Low$ if Hagano plays $Low$
+      \end{itemize}
+    \end{itemize}
+  \end{tasks}
+\end{solution}
 \end{question}
+
+\newpage
 
 %------------------------------------------------------------------
 
@@ -313,13 +348,79 @@ Gilberta has to choose one and only one place to look.
 If there are two people hiding in the same spot, 
 they crowd each other and Gilberta can see them.
 If there is only one person in a spot, Gilberta can't see 
-who's hiding there.
-
+who's hiding there. \\
 Create an extensive form game tree
 and clearly specify Gilberta's information set.
-
+\begin{solution}
+  \begin{tikzpicture}[
+  grow=right, 
+  %edge from parent/.style={draw, very thick},
+  level distance = 40mm,
+  sibling distance = 25mm,
+  %label distance = 1mm
+  ]
+  \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
+  \tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
+  \tikzstyle{level 1}=[level distance=3cm,sibling distance=4cm]
+  \tikzstyle{level 2}=[level distance=3cm,sibling distance=2cm]
+  \tikzstyle{level 3}=[level distance=3cm,sibling distance=1cm]
+ \node(0)[hollow node, label=left:{\textbf{Akua}}]{}
+      child{node(1)[solid node, label=below:{\textbf{\color{blue} Barta}}]{}
+          child{node()[solid node, label=below:{\textbf{\color{gray} Gilberta}}]{} 
+              child{node[label=right:{0,{\color{blue}0},{\color{gray}3}}]{}
+                  edge from parent node[below, sloped]{\textit{\color{gray} Tree}}
+              }
+              child{node[label=right:{1,{\color{blue}1},{\color{gray}0}}]{}
+                  edge from parent node[above, sloped]{\textit{\color{gray} Rock}}
+              }
+              edge from parent node[below, sloped]{\textit{\color{blue} Tree}}
+          }
+          child{node(4)[solid node]{}
+              child{node[label=right:{0,{\color{blue}1},{\color{gray}2}}]{}
+                  edge from parent node[below, sloped]{\textit{\color{gray} Tree}}
+              }
+              child{node[label=right:{1,{\color{blue}0},{\color{gray}1}}]{}
+                  edge from parent node[above, sloped]{\textit{\color{gray} Rock}}
+              }
+              edge from parent node[above, sloped]{\textit{\color{blue} Rock}}
+          }
+          edge from parent node[below, sloped]{\textit{Tree}}
+      }
+      child{node(2)[solid node, label=above:{\textbf{\color{blue} Barta}}]{}
+          child{node(3)[solid node]{} 
+              child{node[label=right:{1,{\color{blue}0},{\color{gray}1}}]{}
+                  edge from parent node[below, sloped]{\textit{\color{gray} Tree}}
+              }
+              child{node[label=right:{0,{\color{blue}1},{\color{gray}2}}]{}
+                  edge from parent node[above, sloped]{\textit{\color{gray} Rock}}
+              }
+              edge from parent node[below, sloped]{\textit{\color{blue} Tree}}
+          }
+          child{node()[solid node, label=above:{\textbf{\color{gray} Gilberta}}]{}
+              child{node[label=right:{1,{\color{blue}1},{\color{gray}0}}]{}
+                  edge from parent node[below, sloped]{\textit{\color{gray} Tree}}
+              }
+              child{node[label=right:{0,{\color{blue}0},{\color{gray}3}}]{}
+                  edge from parent node[above, sloped]{\textit{\color{gray} Rock}}
+              }
+              edge from parent node[above, sloped]{\textit{\color{blue} Rock}}
+          }
+          edge from parent node[above, sloped]{\textit{Rock}}
+      };
+      \draw[dashed,rounded corners=10]($(3) + (-.2,.25)$)rectangle($(4) +(.2,-.25)$);
+      \node at($(3)!.5!(4)$){\textbf{\color{gray} Gilberta}};
+  \end{tikzpicture} \\
+  \underline{Gilberta's information set:}
+  \begin{itemize}
+    \item Either both players are behind the Tree,
+    \item or both players are behind the Rock,
+    \item or: either Akua is behind the Rock and Bartua is behind the Tree;
+    or Akua is behind the Tree and Bartua is behind the Rock
+    (represented on the tree by the circled nodes)
+  \end{itemize}
+\end{solution}
 \end{question}
-% \vspace{40mm}
+
 \newpage
 
 %------------------------------------------------------------------
@@ -330,40 +431,68 @@ Let $V$ be the tons of fish caught by Vlatislav's boat,
 and $J$ be the tons of fish caught by Jeren's boat.
 People in this town only want to buy so many fish,
 so the price $P$ of fish is given by the inverse demand function:
-  $$P = 60 - (R+S)$$
-
-Assuming both boat owners only care about profit, 
-we get that Vlatislav's best response function is
-  $$ V = 15 - \frac{J}{2} $$
-
-and that Jeren's best response function is
-$$ J = 12 - \frac{V}{2}$$ 
-
-Graph both players' best response functions 
-and find all Nash Equilibria.
-Label your graph appropriately.
-
-\vspace{10mm}
-
+  $$P = 60 - (V+J)$$
+Assume that Vlatislav has a marginal cost of 30
+and Jeren has a marginal cost of 36.
+\begin{tasks}
+  \task Solve for Vlatislav's best response rule
+  as a function of $J$.
+  \task Solve for Jeren's best response rule
+  as a function of $K$.
+  \task
+  Graph both players' best response functions 
+  and find all Nash Equilibria.
+  Label your graph appropriately.
+\end{tasks}
+\begin{solution}
+  \begin{tasks}
+    \task
+    \begin{align*}
+      \Pi_v & = (60 - V - J)V - 30 V \\
+            & = 60V - V^2 - VJ - 30 V \\
+      \frac{d\Pi_v}{dV} & = 60 - 2V - J - 30 \\
+      BR_V(J) & = \frac{60-30-J}{2} = 15 - \frac{J}{2}
+    \end{align*}
+  \task
+  \begin{align*}
+      \Pi_j & = (60 - V - J)J - 36 J \\
+      \frac{d\Pi_j}{dJ} & = 60 - 2J - V - 36 \\
+      BR_V(J) & = \frac{60-36-V}{2} = 12 - \frac{V}{2}
+  \end{align*}
+  \task
 \begin{tikzpicture}
-
   \begin{axis}[
     width=0.6\textwidth,
     grid,
-    % xlabel={Fish caught by Vlatislav ($V$)},
-    % ylabel={Fish caught by Jeren ($J$)},
+    ylabel={Fish caught by Vlatislav ($V$)},
+    xlabel={Fish caught by Jeren ($J$)},
     xmin=0, xmax=30,
     ymin=0, ymax=30,
     xtick={2,4,...,30},
     ytick={2,4,...,30},
     grid style=dashed,
     ]
-
+    \addplot [
+        domain=0:30,
+        line width=3pt,
+        color=blue,
+        ] 
+        {15-0.5*x};
+        \addlegendentry{\(BR_V(J)\)=15-0.5J}
+        \addplot [
+        domain=0:30,
+        line width=3pt,
+        color=red,
+        ] 
+        {24-2*x};
+        \addlegendentry{\(BR_J(V)\)=12-0.5V}
     \addplot[draw=none] coordinates {(1,1)};
-
   \end{axis}
-\end{tikzpicture}
-
+\end{tikzpicture} \\
+\underline{NE:} $(J=6, J=12)$ is the only strategy profile
+where both players' best responses intersect.
+  \end{tasks}
+\end{solution}
 \end{question}
 %------------------------------------------------------------------
 
