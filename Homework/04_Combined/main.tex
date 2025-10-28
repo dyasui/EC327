@@ -11,6 +11,8 @@
 \usepackage{multirow,array} % for payoff matrix formatting
 \usepackage[colorlinks,pdfusetitle,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
 
+\usepackage{adjustbox}
+
 \definecolor{crimson}{RGB}{ 170, 4, 36 }
 \definecolor{darkblue}{RGB}{ 4, 47, 170 }
 \definecolor{brown}{RGB}{ 111, 71, 2 }
@@ -153,48 +155,67 @@ but if too much effort is exerted on deer, they will get overhunted.
 Assume that the payoffs to hunting deer or rabbit are:
 
 \begin{align*}
-  \pi_1(Deer, e_1,e_2) & = 6e_1 - e_1e_2 - e_1^2 \\
-  \pi_2(Deer, e_1,e_2) & = 6e_2 - e_1e_2 - e_2^2 \\
-  \pi_{1,2}(Rabbit) & = 3
+  \pi_1(Deer_1, e_1,e_2) & = 3e_1 + 1.5e_2 - e_1e_2 - e_1^2 \\
+  \pi_2(Deer_2, e_1,e_2) & = 3e_2 + 1.5e_1 - e_1e_2 - e_2^2 \\
+  \pi_{1,2}(Rabbit) & = 2.4
 \end{align*}
 
 \begin{parts}
-  \part[4] Suppose that hunter 2 chooses to hunt deer with effort level $e_2=2$.
-  Draw out hunter 1's payoffs for both their $Deer$ and $Rabbit$ strategies
-  as a function of their own level of effort.
+  \part[4] Suppose that hunter 2 chooses to hunt deer with effort level $e_2=1$.
+  Draw out hunter 1's payoffs for both of his $Deer$ and $Rabbit$ strategies
+  as a function of his own level of effort.
   \begin{solution}
     See graph below:
 
-    \begin{tikzpicture}
-    
-      \begin{axis}[
-        % width=\textwidth,
-        grid,
-        xlabel={$e_1$},
-        ylabel={$\pi_1$},
-        x=3cm,
-        y=.6cm,
-        xmin=0, xmax=4,
-        ymin=0, ymax=6,
-        xtick={1,2,3},
-        ytick={1,2,3,4,5},
-        grid style=dashed,
-        ]
-    
-        \addplot[draw=none] coordinates {(1,1)};
-    
-      \end{axis}
-    \end{tikzpicture}
+    \begin{adjustbox}{width=0.6\textwidth, center}
+      \includegraphics*{figures/deer-hunt-payoffs.png}
+    \end{adjustbox}
+
+    Payoff to rabbit is constant at 2.4.
+    Payoff to deer is maximised when level of effort is $e_1=1$, resulting in a payoff of 2.5.
   \end{solution}
 
-  \part[2] What is hunter 1's best response to hunter 2 choosing $e_2=2$?
+  \part[2] What is hunter 1's best response to hunter 2 choosing $e_2=1$?
+  If deer, how much effort should he put in?
 
-  \part[4] Is there a Nash equilibrium where both hunt Deer?
+  \begin{solution}
+    Hunt Deer with effort $e_1=1$.
+  \end{solution}
+
+  \part[2] What is hunter 1's best response to hunter 2 choosing $e_2=0$?
+  If deer, how much effort should he put in?
+
+  \begin{solution}
+    Hunt Rabbit. ($e_1=0$)
+
+    \begin{adjustbox}{width=0.5\textwidth, center}
+      \includegraphics*{figures/deer-hunt-payoffs2.png}
+    \end{adjustbox}
+
+    If the other hunter puts in zero effort, 
+    then hunting rabbit is better than hunting deer alone at any level of effort.
+    The maximum payoff to hunting deer of $2.25 < 2.4$ from hunting rabbit.
+  \end{solution}
+
+  \part[4] Is there a Nash equilibrium where both hunt \textbf{Deer}?
   If yes, what levels of effort will they put in?
   If not, explain why.
+  
+  \begin{solution}
+    Both hunting deer is a Nash as long as the maximum payoff is greater than 2.4.
+    For example, $\{ (Deer_1, e_1=1) (Deer_2, e_2=2) \}$
+    is a Nash because each earn a payoff of 2.5.
+  \end{solution}
 
-  \part[4] Is there a Nash equilibrium where both hunt Deer?
+  \part[4] Is there a Nash equilibrium where both hunt \textbf{Rabbit}?
   Explain why or why not.
+
+  \begin{solution}
+    Yes, there is a Nash where 
+    As long as both are hunting rabbit and putting in zero effort to hunt deer,
+    there is no incentive to switch from rabbit.
+
+  \end{solution}
 \end{parts}
 
 \newpage
