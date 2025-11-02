@@ -103,3 +103,32 @@ when $x=\frac{B}{2C}$, $f(x)$ is at a maximum.
 * **Subgame-perfect equilibrium**
 * **credibility**
 * **off-equilibrium paths**
+
+---
+<!-- 
+# Midterm Exam Structure
+
+1. 10 Multiple Choice questions
+  - 4 points each (40 total)
+  - similar to quiz questions
+11. Changing forms (6 points)
+  - going from strategic to extensive
+  - or extensive to normal
+  - *Find all pure Nash strategy profiles*
+  - Make sure to explain like on HW3 Q2d
+12. ISDS on big strategic form game (12 points)
+  - e.g 5x5 grid
+  - be able to explain each step
+  - Find all NE
+13. Backwards Induction with a twist (12 points)
+  - be careful of information sets
+  - take it one subgame at a time
+  - remember definition of SPNE
+  - Solve for all SPNE
+  - explain all work and reasoning
+14. Continuous Strategy NE
+  - either Bertrand or Cournot
+    + no price-matching
+  - Solve for each BR rule
+  - graph BR's
+  - Solve for all NE. Explain why they are stable -->
