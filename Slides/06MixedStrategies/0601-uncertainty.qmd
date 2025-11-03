@@ -1,17 +1,11 @@
 ## Thinking about Randomness
 
-> "I, at any rate, am convinced that [God] does not throw dice"
-
-  - Albert Einstein ^[1926, Letter to Max Born, published in 1971, Irene Born (translator), The Born-Einstein Letters, Walker and Company, New York]
-
----
-
-## Thinking about Randomness
-
 > "Rational decision makers are able to give reasons for each action they take; outside Las Vegas players do not spin roulette wheels"
+^[Ariel Rubenstein, “John Nash: The Master of Economic Modeling.” The Scandinavian Journal of Economics 97, no. 1 (1995): 9–13. https://doi.org/10.2307/3440824.]
 
-  - Ariel Rubenstein
-  ^[“John Nash: The Master of Economic Modeling.” The Scandinavian Journal of Economics 97, no. 1 (1995): 9–13. https://doi.org/10.2307/3440824.]
+  - Do you agree?
+
+  - Would rational players act randomly?
 
 ---
 
@@ -24,30 +18,26 @@ Why should we use mixed strategies?!
   * As we saw in Activity 2, 
   rarely do real life data fit in completely deterministic models
 
-  * You can interpret the mixed strategy of one player as the beliefs of other players in equilibrium
+  * Interpret mixed strategy of one player as the *beliefs* of other players 
 
-  * Learning some basics of probability theory will help you outside of this class
+  * Probability and statistics are useful outside of this class
 
 :::
 
 ---
 
 ## Lotteries
+Any choices with *uncertain* payoffs will be called [lotteries]{.hi}.
+
 ::: {.incremental}
-  * In this class, any choices with *uncertain* payoffs will be called [lotteries]{.hi}.
-  * A lottery doesn't have to only be about money
-  * For any set of outcomes in a lottery, there will be an associated
-  probability: if $a$ is a possible outcome, then $P(a)$ is the probability
-  that it occurs.
-  
-    + All probabilities must be between 0 and 1: $0 \leq P(a) \leq 1$ for all possibilities $a$.
-    + Additionally, the probabilities given in a particular lottery must sum to
-    exactly 1: we will assume that one, and exactly one, outcome must actually
-    occur.
+  * Doesn't have to only be about money
+  * Any outcome has an associated probability: 
+    - if $o$ is a possible outcome, then $p(o)$ is the probability of that outcome
+  * All probabilities must be between 0 and 1: 
+    - $0 \leq P(a) \leq 1$ for all possibilities $a$.
+  * All probabilities in a particular lottery must *sum to exactly 1*:
 :::
 ---
-
-
 
 ## Expected Utility
 ::: {.incremental}
@@ -62,19 +52,16 @@ Why should we use mixed strategies?!
 :::
 ---
 
-
-
 ## Expected Payoffs
   * You calculate an average by adding up the values of a lottery times the probability of how likely each is.
 
-  $$U(a) = \mathbb{E}[u(a)] = \sum_{a}u(a)P(a)$$
+  $$U(a) = \mathbb{E}[u(a)] = \sum_{a}u(a)p(a)$$
 
 ::: {.incremental}
   * This is a weighted average of the payoffs associated with each outcome $a$, with the weights being the probabilities of each one happening.
 :::
----
 
-## Double or Nothing 'game'
+<!-- ## Double or Nothing 'game'
 
 ![](figures/doubleornothing.png)
 
@@ -92,13 +79,14 @@ $0.50(\$10) + 0.50(\$0) = \$5 - \$0 = \$5$.
   $$0.25(\$10) + 0.75(\$0) = \$2.50 + \$0 = \$2.50 $$.
 
 :::
----
+--- -->
 
 ## Cardinal Payoffs
 
-* Using expected payoffs implies that the payoffs of the outcomes are
-[cardinal]{.hi}, not merely ordinal: this means that the payoffs can be used
-not just to rank, but to compare the relative "goodness" of outcomes.
+Expected payoffs imply that payoffs are [cardinal]{.hi}
+
+  * relative differences in payoffs matter
+  * instead of *ordinal* where only rankings matter
 
 ::: {.incremental}
   * i.e. an outcome with payoff 2 is actually twice as good as an outcome with payoff 1.
@@ -108,36 +96,33 @@ not just to rank, but to compare the relative "goodness" of outcomes.
 
 ## Von-Neumann Morgenstern Utility
 
-There are a few other axioms beyond just *completeness* and *transitivity*
-which are needed when it comes to making rational choices over lotteries.
+We need new assumptions for rationality over lotteries:
 
-::: {.incremental}
-
-  * [Continuity:]{.hi} Small changes in lottery probabilities shouldn't make your ranking jump around.
+  * [Continuity:]{.hi} Small changes in probabilities shouldn't make your ranking jump around.
 
   * [Independence:]{.hi} If you know which of two lotteries you prefer, when I
   add a little bit of another unrelated option into both, it shouldn't change
   your mind.
 
-:::
+  * *expected utility* requires special assumptions, so it gets it's own special name: 
 
-Because *expected utility* requires special assumptions beyond those of regular *utility*, 
-it gets it's own special name: 
-
-[Von-Neumann Morgenstern utility function]{.hi}
+    - [Von-Neumann Morgenstern utility function]{.hi}
 
 ---
 
 ## Types of Uncertainty
-There are two main types of uncertainty that we'll cover in this course: [external]{.hi} and [internal]{.hi}.
+Two main types of uncertainty: [external]{.hi} and [internal]{.hi}.
 
 ::: {.incremental}
-  * [External uncertainty]{.hi} results from factors outside of the game that the players don't control, such as weather or other random events.
-  * [Internal uncertainty]{.hi} result from players' own actions inside of the game: it is caused whenever a player acts in a random way.
+  * [External uncertainty]{.hi} from factors outside of the players' control
+    - such as weather or other random events, or external players
+  * [Internal uncertainty]{.hi} from players' own actions: 
+    - when some player acts in an unpredictable way,
+      - *even to themselves*
+    - For example, I flip a coin to tell me what to choose
 :::
----
 
-## External Uncertainty: States of Nature
+<!-- ## External Uncertainty: States of Nature
 * The simplest form of uncertainty that we'll discuss is <u>simple uncertainty</u> or uncertainty about the <u>state of nature</u>.
 * Players don't know which state of nature will occur --- 
   but we assume that they do *know the probability associated with each state*.
@@ -263,4 +248,4 @@ To have a NE where Wyatt Quits, we just need Wyatt to be happy with Quitting.
 * ($Raise,~Quit$) is a NE if $-1 \geq -4p + 2$, i.e. if $p \geq \frac{3}{4}$.
 * One interpretation of this is that it is only rational for Wyatt to Quit if he is very confident that Doc has the better hand.
 :::
-
+ -->

@@ -1,0 +1,90 @@
+---
+title: "Penalty Kicks Calculator"
+filters:
+  - shinylive
+---
+
+```{shinylive-r}
+#| standalone: true
+#| code-fold: false
+#| label: soccer-penalty-shootout
+#| viewerHeight: 600
+
+library(shiny)
+
+# Define the goal probabilities matrix
+goal_probabilities <- matrix(
+  c(0.3, 0.9, 0.9,
+    0.6, 0.0, 0.6,
+    0.9, 0.9, 0.3),
+  nrow = 3, byrow = TRUE,
+  dimnames = list(Kicker = c("Left", "Center", "Right"), Goalie = c("Left", "Center", "Right"))
+)
+
+# User interface
+ui <- fluidPage(
+    titlePanel("Soccer Penalty Shootout Simulation"),
+    
+    sidebarLayout(
+        sidebarPanel(
+            # Coin flip button and display
+            actionButton("coin_flip", "Flip Coin to Decide Kicker"),
+            textOutput("coin_result"),
+            
+            # Strategy selection
+            selectInput("kicker_choice", "Kicker's Strategy:", choices = c("Left", "Center", "Right")),
+            selectInput("goalie_choice", "Goalie's Strategy:", choices = c("Left", "Center", "Right")),
+            
+            # Button to simulate outcome and display result
+            actionButton("shoot", "Take Shot"),
+            textOutput("outcome_result")
+        ),
+        
+        mainPanel(
+            # Display probability table for reference
+            h4("Goal Probability Table"),
+            tableOutput("probability_table")
+        )
+    )
+)
+
+# Server logic
+server <- function(input, output) {
+    # Display probability table in the UI
+    output$probability_table <- renderTable({
+        as.data.frame(goal_probabilities)
+    }, rownames = TRUE)
+    
+    # Coin flip logic
+    output$coin_result <- renderText({
+        input$coin_flip
+        isolate({
+            if (input$coin_flip > 0) {
+                result <- sample(c("Heads", "Tails"), 1)
+                paste("Coin Flip Result:", result)
+            }
+        })
+    })
+    
+    # Shoot outcome logic
+    output$outcome_result <- renderText({
+        input$shoot
+        isolate({
+            if (input$shoot > 0) {
+                kicker <- input$kicker_choice
+                goalie <- input$goalie_choice
+                prob_goal <- goal_probabilities[kicker, goalie]
+                
+                # Randomize outcome based on the goal probability
+                outcome <- ifelse(runif(1) < prob_goal, "Goal!", "Missed!")
+                paste("Kicker's choice:", kicker, "| Goalie's choice:", goalie, "| Result:", outcome)
+            }
+        })
+    })
+}
+
+# Run the app
+shinyApp(ui, server)
+```
+
+[Back to Rules](penaltykicks.qmd){.btn .btn-outline-primary .btn role="button"}

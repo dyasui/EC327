@@ -94,9 +94,9 @@ website:
       Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)<br>
       [{{< fa brands github >}} Source](https://github.com/dyasui/dyasui.github.io)
 
-  announcement: 
-    icon: clipboard2-check-fill
-    dismissable: true
-    content: "Midterm exam this Wednesday: Oct. 29th"
-    type: warning
-    position: below-navbar
+  # announcement: 
+  #   icon: clipboard2-check-fill
+  #   dismissable: true
+  #   content: "Midterm exam this Wednesday: Oct. 29th"
+  #   type: warning
+  #   position: below-navbar

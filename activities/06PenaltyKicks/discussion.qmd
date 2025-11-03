@@ -1,0 +1,44 @@
+---
+title: "Penalty Kicks Discussion Sheet"
+---
+
+<u>Are penalty kicks played in a *mixed strategy equilibrium?*</u>
+
+This is the question asked by [Ignacio Palacios-Huerta](http://www.palacios-huerta.com/docs/professionals.pdf).
+^[Palacios-Huerta, Ignacio. "Professionals Play Minimax," *Review of Economic Studies*, 70 (2003), 395-415]
+The data come from 1417 penalty kicks during professional games in England, Italy, and Spain between 1995-2000 .
+The choices of the kickers are recorded as either *left* (L), *center* (C), or *right* (R), corresponding to the area of the goal they kick the ball towards.
+The goalies choices, L, C, or R, correspond to which area of the goal the goalie dives towards. 
+
+The table below shows the observed probability of a goal being scored for each combination of kicker and goalie choices
+simplifying the choice of a kicker down to $Dominant$ representing a right-footed kicker kicking to the left or a left-footed kicker kicking to the left,
+and $NonDominant$ represents kicking to the opposite side.
+
+<u>Scoring Probabilities (payoffs)</u>
+
+| Kicker, Goalie  | $Dominant_g$ | $NonDominant_g$ |
+|-----------------+--------------+-----------------|
+| $Dominant_k$    | 58.30        | 94.97           |
+| $NonDominant_k$ | 92.91        | 69.92           |
+
+The next table shows the frequency with which each combination of these strategies were actually observed during play:
+
+<u>Strategy Frequencies Observed</u>
+
+| Strategy        | frequency (%) |
+|-----------------+---------------|
+| $Dominant_k$    | 42.31         |
+| $NonDominant_k$ | 57.69         |
+| $Dominant_g$    | 39.98         |
+| $NonDominant_g$ | 60.02         |
+
+## Assignment:
+
+Calculate the theoretical mixed-strategy Nash equilibrium according to the payoff table
+and compare with the observed frequencies.
+
+Is the evidence consistent with the hypothesis that penalty kicks are played in an MSNE?
+
+Submit your work and your discussion to Canvas.
+
+[Back to Activity](penaltykicks.qmd){.btn .btn-outline-primary .btn role="button"}

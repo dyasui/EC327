@@ -1,28 +1,26 @@
 ## Mixed Strategies in Penalty Kicks
-Why might mixed strategies be useful in analyzing behavior of kickers and goalies in penalty shootouts?
+Why might randomized actions be useful?
 
 ::: {.incremental}
   * reaction times $\rightarrow$ essentially [simultaneous game]{.hi}
   * [zero-sum]{.hi} game with incentive to *keep the other player guessing*
+    - Being predictable helps your opponent
   * modelling observed strategies chosen as [random variables]{.h}
-    + specific empirical statistics can be compared to their theoretical values
+    + Can compare empirical data with theoretical predictions
 :::
 
 ---
 
 ## 2x2 Penalty Kick Game {.smaller}
 
-### Simplest form of this game, 
-(prob of making goal is either 0% or 100%)
+### Simplified penalty kick game
+with only Left and Right as strategies
 
-::::: {.columns}
-:::: {.column .smaller width="35%"}
 | Kicker, Goalie |     $Left_g$    |    $Right_g$    |
 |---------------:+:---------------:+:---------------:|
 |       $Left_k$ | 0.3, <u>0.7</u> | <u>0.9</u>, 0.1 |
 |      $Right_k$ | <u>0.9</u>, 0.1 | 0.3, <u>0.7</u> |
-::::
-:::: {.column width="65%"}
+
 What should the Kicker do?
 
 ::: {.incremental}
@@ -31,8 +29,7 @@ What should the Kicker do?
   * *Purely* **Right** means goalie could block by always going **Right**
   * So a rational strategy must be a **random mix** between both *pure* strategies
 :::
-::::
-:::::
+
 ---
 
 ## 2x2 Penalty Kick Game {.smaller}
@@ -152,20 +149,17 @@ So what should the **Kicker** do?
 
 ## 2x2 Penalty Kick Game {.smaller}
 
-::::: {.columns}
-:::: {.column .smaller width="35%"}
 |    Kicker, Goalie | $Left_g$ | $Right_g$ |
 |------------------:+:--------:+:---------:|
 |          $Left_k$ | 0.3, 0.7 |  0.9, 0.1 |
 |         $Right_k$ | 0.9, 0.1 |  0.3, 0.7 |
-::::
-:::: {.column width="60%"}
-  * So the **Kicker** should play $Left_k$ 50% of the time, $Right_k$ 50%
-  * the **Goalie** should play $Left_g$ 50% of the time, $Right_g$ 50%
-  * In this mixed-strategy Nash equilibrium, both players are *indifferent* between either of their pure strategies
-  * The kicker's probability of scoring is 0.6 *no matter what direction they choose*
-::::
-:::::
+
+In Nash equilibrium:
+  * The **Kicker** should play Left 50% of the time
+  * The **Goalie** should play Left 50%
+  * Both players are *indifferent* between either pure strategy
+  * Kicker's probability of scoring is 0.6 
+    - *no matter what direction they choose*
 
 <!--## Mixed Strategies in 3x3 Penalty Shootout {.smaller}-->
 <!---->

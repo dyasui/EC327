@@ -35,7 +35,7 @@ If at least 66% of the class fills out a survey, I will add 1 extra credit point
 |     3    |      4      | [Simultaneous Move Games](Slides/#simultaneous-games)            | [HW3](Homework/#assignment-3), [Q3](https://canvas.uoregon.edu/courses/274671/quizzes/416799) |
 |     4    |      5,6    | [Combining Forms](Slides/#combining-simultaneous-and-sequential), [Continuous Strategies](Slides/#simultaneous-games) | [HW4](Homework/#assignment-4), [Q4](https://canvas.uoregon.edu/courses/274671/quizzes/417209) |
 |     5    |      1-6    | Review & **Midterm**                                             |         |
-|     6    |      7      | [Mixed Strategies](Slides/#mixed-strategies)                     | HW5, Q5 |
+|     6    |      7      | [Mixed Strategies](Slides/#mixed-strategies)                     | [HW5](Homework/#assignment-5), [Q5](https://canvas.uoregon.edu/courses/274671/quizzes/418005) |
 |     7    |      8      | [Uncertainty and Information](Slides/#asymmetric-info)           | HW6, Q6 |
 |     8    |      9      | [Strategic Moves](Slides/#strategic-moves)                       | HW7, Q7 |
 |     9    |      TBD      |                        |  |

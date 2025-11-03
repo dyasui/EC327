@@ -51,8 +51,8 @@ title: "Homework Assignments"
 ```
 
 # Assignment 5 [Download](05_Mixed/HW5_clean.pdf){.btn .btn-outline-primary .btn role="button"} 
-**Due:** Wednesday, November 7th
-[**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1927368){target="_blank"}
+**Due:** Friday, November 7th
+[**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1940611){target="_blank"}
 ```{=html}
 <details>
   <summary>Expand</summary>
