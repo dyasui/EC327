@@ -326,9 +326,6 @@ window.Quarto = {
       </button>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="bbbfe362e3e07928ef2d5f3d036040e6" class="alert alert-warning hidden"><i class="bi bi-clipboard2-check-fill quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p>Midterm exam this Wednesday: Oct.&nbsp;29th</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -553,46 +550,41 @@ window.Quarto = {
 <section id="thinking-about-randomness" class="level2">
 <h2 class="anchored" data-anchor-id="thinking-about-randomness">Thinking about Randomness</h2>
 <blockquote class="blockquote">
-<p>“I, at any rate, am convinced that [God] does not throw dice”</p>
+<p>“Rational decision makers are able to give reasons for each action they take; outside Las Vegas players do not spin roulette wheels” <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 </blockquote>
 <ul>
-<li>Albert Einstein <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li><p>Do you agree?</p></li>
+<li><p>Would rational players act randomly?</p></li>
 </ul>
 <hr>
 </section>
 <section id="thinking-about-randomness-1" class="level2">
 <h2 class="anchored" data-anchor-id="thinking-about-randomness-1">Thinking about Randomness</h2>
-<blockquote class="blockquote">
-<p>“Rational decision makers are able to give reasons for each action they take; outside Las Vegas players do not spin roulette wheels”</p>
-</blockquote>
-<ul>
-<li>Ariel Rubenstein <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
-</ul>
-<hr>
-</section>
-<section id="thinking-about-randomness-2" class="level2">
-<h2 class="anchored" data-anchor-id="thinking-about-randomness-2">Thinking about Randomness</h2>
 <p>Why should we use mixed strategies?!</p>
 <div class="incremental">
 <ul class="incremental">
 <li><p>As we saw in Activity 2, rarely do real life data fit in completely deterministic models</p></li>
-<li><p>You can interpret the mixed strategy of one player as the beliefs of other players in equilibrium</p></li>
-<li><p>Learning some basics of probability theory will help you outside of this class</p></li>
+<li><p>Interpret mixed strategy of one player as the <em>beliefs</em> of other players</p></li>
+<li><p>Probability and statistics are useful outside of this class</p></li>
 </ul>
 </div>
 <hr>
 </section>
 <section id="lotteries" class="level2">
 <h2 class="anchored" data-anchor-id="lotteries">Lotteries</h2>
+<p>Any choices with <em>uncertain</em> payoffs will be called <span class="hi">lotteries</span>.</p>
 <div class="incremental">
 <ul class="incremental">
-<li><p>In this class, any choices with <em>uncertain</em> payoffs will be called <span class="hi">lotteries</span>.</p></li>
-<li><p>A lottery doesn’t have to only be about money</p></li>
-<li><p>For any set of outcomes in a lottery, there will be an associated probability: if <span class="math inline">\(a\)</span> is a possible outcome, then <span class="math inline">\(P(a)\)</span> is the probability that it occurs.</p>
+<li>Doesn’t have to only be about money</li>
+<li>Any outcome has an associated probability:
 <ul class="incremental">
-<li>All probabilities must be between 0 and 1: <span class="math inline">\(0 \leq P(a) \leq 1\)</span> for all possibilities <span class="math inline">\(a\)</span>.</li>
-<li>Additionally, the probabilities given in a particular lottery must sum to exactly 1: we will assume that one, and exactly one, outcome must actually occur.</li>
+<li>if <span class="math inline">\(o\)</span> is a possible outcome, then <span class="math inline">\(p(o)\)</span> is the probability of that outcome</li>
 </ul></li>
+<li>All probabilities must be between 0 and 1:
+<ul class="incremental">
+<li><span class="math inline">\(0 \leq P(a) \leq 1\)</span> for all possibilities <span class="math inline">\(a\)</span>.</li>
+</ul></li>
+<li>All probabilities in a particular lottery must <em>sum to exactly 1</em>:</li>
 </ul>
 </div>
 <hr>
@@ -613,34 +605,38 @@ window.Quarto = {
 <ul>
 <li>You calculate an average by adding up the values of a lottery times the probability of how likely each is.</li>
 </ul>
-<p><span class="math display">\[U(a) = \mathbb{E}[u(a)] = \sum_{a}u(a)P(a)\]</span></p>
+<p><span class="math display">\[U(a) = \mathbb{E}[u(a)] = \sum_{a}u(a)p(a)\]</span></p>
 <div class="incremental">
 <ul class="incremental">
 <li>This is a weighted average of the payoffs associated with each outcome <span class="math inline">\(a\)</span>, with the weights being the probabilities of each one happening.</li>
 </ul>
 </div>
-<hr>
-</section>
-<section id="double-or-nothing-game" class="level2">
-<h2 class="anchored" data-anchor-id="double-or-nothing-game">Double or Nothing ‘game’</h2>
-<p><img src="figures/doubleornothing.png" class="img-fluid"></p>
-<hr>
-</section>
-<section id="expected-payoff-examples" class="level2">
-<h2 class="anchored" data-anchor-id="expected-payoff-examples">Expected Payoff Examples</h2>
-<p>Zoidberg’s expected payout if he Lets it Ride is <span class="math inline">\(0.50(\$10) + 0.50(\$0) = \$5 - \$0 = \$5\)</span>.</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p>Let’s face it, Zoidberg always has luck stacked against him, so suppose instead the coin has a 75% probability of tails,</p></li>
-<li><p>The expected payoff would then be <span class="math display">\[0.25(\$10) + 0.75(\$0) = \$2.50 + \$0 = \$2.50 \]</span>.</p></li>
-</ul>
-</div>
-<hr>
+<!-- ## Double or Nothing 'game'
+
+![](figures/doubleornothing.png)
+
+---
+
+## Expected Payoff Examples
+
+Zoidberg's expected payout if he Lets it Ride is 
+$0.50(\$10) + 0.50(\$0) = \$5 - \$0 = \$5$.
+
+::: {.incremental}
+  * Let's face it, Zoidberg always has luck stacked against him, so suppose instead the coin has a 75\% probability of tails,
+
+  * The expected payoff would then be 
+  $$0.25(\$10) + 0.75(\$0) = \$2.50 + \$0 = \$2.50 $$.
+
+:::
+--- -->
 </section>
 <section id="cardinal-payoffs" class="level2">
 <h2 class="anchored" data-anchor-id="cardinal-payoffs">Cardinal Payoffs</h2>
+<p>Expected payoffs imply that payoffs are <span class="hi">cardinal</span></p>
 <ul>
-<li>Using expected payoffs implies that the payoffs of the outcomes are <span class="hi">cardinal</span>, not merely ordinal: this means that the payoffs can be used not just to rank, but to compare the relative “goodness” of outcomes.</li>
+<li>relative differences in payoffs matter</li>
+<li>instead of <em>ordinal</em> where only rankings matter</li>
 </ul>
 <div class="incremental">
 <ul class="incremental">
@@ -651,231 +647,163 @@ window.Quarto = {
 </section>
 <section id="von-neumann-morgenstern-utility" class="level2">
 <h2 class="anchored" data-anchor-id="von-neumann-morgenstern-utility">Von-Neumann Morgenstern Utility</h2>
-<p>There are a few other axioms beyond just <em>completeness</em> and <em>transitivity</em> which are needed when it comes to making rational choices over lotteries.</p>
-<div class="incremental">
-<ul class="incremental">
-<li><p><span class="hi">Continuity:</span> Small changes in lottery probabilities shouldn’t make your ranking jump around.</p></li>
+<p>We need new assumptions for rationality over lotteries:</p>
+<ul>
+<li><p><span class="hi">Continuity:</span> Small changes in probabilities shouldn’t make your ranking jump around.</p></li>
 <li><p><span class="hi">Independence:</span> If you know which of two lotteries you prefer, when I add a little bit of another unrelated option into both, it shouldn’t change your mind.</p></li>
+<li><p><em>expected utility</em> requires special assumptions, so it gets it’s own special name:</p>
+<ul>
+<li><span class="hi">Von-Neumann Morgenstern utility function</span></li>
+</ul></li>
 </ul>
-</div>
-<p>Because <em>expected utility</em> requires special assumptions beyond those of regular <em>utility</em>, it gets it’s own special name:</p>
-<p><span class="hi">Von-Neumann Morgenstern utility function</span></p>
 <hr>
 </section>
 <section id="types-of-uncertainty" class="level2">
 <h2 class="anchored" data-anchor-id="types-of-uncertainty">Types of Uncertainty</h2>
-<p>There are two main types of uncertainty that we’ll cover in this course: <span class="hi">external</span> and <span class="hi">internal</span>.</p>
+<p>Two main types of uncertainty: <span class="hi">external</span> and <span class="hi">internal</span>.</p>
 <div class="incremental">
 <ul class="incremental">
-<li><span class="hi">External uncertainty</span> results from factors outside of the game that the players don’t control, such as weather or other random events.</li>
-<li><span class="hi">Internal uncertainty</span> result from players’ own actions inside of the game: it is caused whenever a player acts in a random way.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="external-uncertainty-states-of-nature" class="level2">
-<h2 class="anchored" data-anchor-id="external-uncertainty-states-of-nature">External Uncertainty: States of Nature</h2>
-<ul>
-<li>The simplest form of uncertainty that we’ll discuss is <u>simple uncertainty</u> or uncertainty about the <u>state of nature</u>.</li>
-<li>Players don’t know which state of nature will occur — but we assume that they do <em>know the probability associated with each state</em>. —</li>
-</ul>
-</section>
-<section id="example-a-card-game" class="level2">
-<h2 class="anchored" data-anchor-id="example-a-card-game">Example: A Card Game</h2>
-<p>There are two players, Doc and Wyatt. Both are dealt a hand of cards: there is a 50% probability that Wyatt’s hand is better, and a 50% probability that Doc’s is. There are no ties.</p>
-<ul>
-<li>At the beginning of the game, both players must bet $1.</li>
-<li>After seeing his cards, Doc may either Stay, keeping the $1 bet, or may Raise, bringing his bet to $2.</li>
-<li>Doc simultaneously decides to either Match Doc’s bet, whatever that may be, or to Quit and forfeit his $1.</li>
-<li><h2 id="if-wyatt-matches-the-player-with-the-better-hand-wins-all-the-money.-if-wyatt-quits-doc-wins-all-the-money-by-default." class="anchored">If Wyatt Matches, the player with the better hand wins all the money. If Wyatt Quits, Doc wins all the money by default.</h2></li>
-</ul>
-</section>
-<section id="game-table-docs-hand-is-better" class="level2">
-<h2 class="anchored" data-anchor-id="game-table-docs-hand-is-better">Game Table: Doc’s Hand is Better</h2>
-<p>In the state of nature where Doc has the better hand, this is the game table:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Doc, Wyatt</th>
-<th><span class="math inline">\(Match\)</span></th>
-<th><span class="math inline">\(Quit\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(Stay\)</span></td>
-<td><span class="math inline">\(1, -1\)</span></td>
-<td><span class="math inline">\(1, -1\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Raise\)</span></td>
-<td><span class="math inline">\(2, -2\)</span></td>
-<td><span class="math inline">\(1,-1\)</span></td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="game-table-wyatts-hand-is-better" class="level2">
-<h2 class="anchored" data-anchor-id="game-table-wyatts-hand-is-better">Game Table: Wyatt’s Hand is Better</h2>
-<p>On the other hand, if Wyatt has the better hand, this is the game table:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Doc, Wyatt</th>
-<th><span class="math inline">\(Match\)</span></th>
-<th><span class="math inline">\(Quit\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(Stay\)</span></td>
-<td><span class="math inline">\(-1, 1\)</span></td>
-<td><span class="math inline">\(1, -1\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Raise\)</span></td>
-<td><span class="math inline">\(-2, 2\)</span></td>
-<td><span class="math inline">\(1,-1\)</span></td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="payoffs-as-lotteries" class="level2">
-<h2 class="anchored" data-anchor-id="payoffs-as-lotteries">Payoffs as Lotteries</h2>
-<p>We could solve each of these game tables separately but neither player knows which state really applies.</p>
-<ul>
-<li>Instead, to solve this game, we must approach the payoffs as lotteries:</li>
-</ul>
-<div class="incremental">
+<li><span class="hi">External uncertainty</span> from factors outside of the players’ control
 <ul class="incremental">
-<li>Doc’s payoff from (<span class="math inline">\(Stay,~Match\)</span>): gains 1 with probability 0.5, and loses 1 with probability 0.5.</li>
-<li>Wyatt’s payoff from (<span class="math inline">\(Stay,~Match\)</span>): loses 1 with probability 0.5, and gains 1 with probability 0.5.</li>
-<li>the expected payoffs of these lotteries are both 0.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="game-table-expected-payoffs" class="level2">
-<h2 class="anchored" data-anchor-id="game-table-expected-payoffs">Game Table: Expected Payoffs</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Doc, Wyatt</th>
-<th><span class="math inline">\(Match\)</span></th>
-<th><span class="math inline">\(Quit\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(Stay\)</span></td>
-<td><u>0</u>, <u>0</u></td>
-<td><u>1</u>, -1</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Raise\)</span></td>
-<td><u>0</u>, <u>0</u></td>
-<td><u>1</u>,-1</td>
-</tr>
-</tbody>
-</table>
-<div class="incremental">
-<ul class="incremental">
-<li>The Nash equilibria under uncertainty are (<span class="math inline">\(Stay,~Match\)</span>) and (<span class="math inline">\(Raise,~Match\)</span>).</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="variation-unknown-probabilities" class="level2">
-<h2 class="anchored" data-anchor-id="variation-unknown-probabilities">Variation: Unknown Probabilities</h2>
-<p>Suppose that the probability Doc has the better hand is <span class="math inline">\(p\)</span>.</p>
-<ul>
-<li>How large does <span class="math inline">\(p\)</span> have to be before there is a Nash equilibrium where Wyatt Quits?</li>
-</ul>
-<p>We can find the expected payoffs in terms of p:</p>
-<div class="incremental">
-<ul class="incremental">
-<li>(Stay, Match):
-<ul class="incremental">
-<li>Doc’s Expected Payoff:
-<ul class="incremental">
-<li><span class="math inline">\(1p - 1(1-p) = 2p - 1\)</span></li>
+<li>such as weather or other random events, or external players</li>
 </ul></li>
-<li>Wyatt’s Expected Payoff:
+<li><span class="hi">Internal uncertainty</span> from players’ own actions:
 <ul class="incremental">
-<li><span class="math inline">\(-1p + 1(1-p) = -2p + 1\)</span></li>
+<li>when some player acts in an unpredictable way,
+<ul class="incremental">
+<li><em>even to themselves</em></li>
 </ul></li>
+<li>For example, I flip a coin to tell me what to choose</li>
 </ul></li>
 </ul>
 </div>
-<hr>
-</section>
-<section id="variation-unknown-probabilities-1" class="level2">
-<h2 class="anchored" data-anchor-id="variation-unknown-probabilities-1">Variation: Unknown Probabilities</h2>
-<div class="columns">
-<div class="column">
-<p>(Raise, Match):</p>
-<div class="incremental">
-<ul class="incremental">
-<li>Doc’s Expected Payoff:
-<ul class="incremental">
-<li><span class="math inline">\(2p - 2(1-p) = 4p -2\)</span></li>
-</ul></li>
-<li>Wyatt’s Expected Payoff:
-<ul class="incremental">
-<li><span class="math inline">\(-2p + 2(1-p) = -4p + 2\)</span></li>
-</ul></li>
-</ul>
-</div>
-</div><div class="column">
-<p>(Stay, Quit) and (Raise, Quit):</p>
-<div class="incremental">
-<ul class="incremental">
-<li>Doc’s Expected Payoff:
-<ul class="incremental">
-<li><span class="math inline">\(1p + 1(1-p) = 1\)</span></li>
-</ul></li>
-<li>Wyatt’s Expected Payoff:</li>
-<li><span class="math inline">\(-1p -1(1-p) = -1\)</span></li>
-</ul>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="variation-unknown-probabilities-2" class="level2">
-<h2 class="anchored" data-anchor-id="variation-unknown-probabilities-2">Variation: Unknown Probabilities</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Doc, Wyatt</th>
-<th><span class="math inline">\(Match\)</span></th>
-<th><span class="math inline">\(Quit\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(Stay\)</span></td>
-<td><span class="math inline">\(2p - 1, -2p + 1\)</span></td>
-<td><span class="math inline">\(1, -1\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Raise\)</span></td>
-<td><span class="math inline">\(4p - 2, -4p + 2\)</span></td>
-<td><span class="math inline">\(1,-1\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>If Wyatt Quits, Doc doesn’t care whether he Stays or Raises</p>
-<p>To have a NE where Wyatt Quits, we just need Wyatt to be happy with Quitting.</p>
-<div class="incremental">
-<ul class="incremental">
-<li>(<span class="math inline">\(Stay,~Quit\)</span>) is a NE if <span class="math inline">\(-1 \geq -2p + 1\)</span>, i.e.&nbsp;if <span class="math inline">\(p \geq 1\)</span>.</li>
-<li>(<span class="math inline">\(Raise,~Quit\)</span>) is a NE if <span class="math inline">\(-1 \geq -4p + 2\)</span>, i.e.&nbsp;if <span class="math inline">\(p \geq \frac{3}{4}\)</span>.</li>
-<li>One interpretation of this is that it is only rational for Wyatt to Quit if he is very confident that Doc has the better hand.</li>
-</ul>
-</div>
+<!-- ## External Uncertainty: States of Nature
+* The simplest form of uncertainty that we'll discuss is <u>simple uncertainty</u> or uncertainty about the <u>state of nature</u>.
+* Players don't know which state of nature will occur --- 
+  but we assume that they do *know the probability associated with each state*.
+---
+
+## Example: A Card Game
+There are two players, Doc and Wyatt. Both are dealt a hand of cards: there is
+a 50\% probability that Wyatt's hand is better, and a 50\% probability that
+Doc's is.  There are no ties.
+
+* At the beginning of the game, both players must bet $1. 
+* After seeing his cards, Doc may either Stay, keeping the $1 bet, or may Raise, bringing his bet to $2.
+* Doc simultaneously decides to either Match Doc's bet, whatever that may be, or to Quit and forfeit his $1.
+* If Wyatt Matches, the player with the better hand wins all the money. If Wyatt Quits, Doc wins all the money by default.
+---
+
+## Game Table: Doc's Hand is Better
+In the state of nature where Doc has the better hand, this is the game table:
+
+| Doc, Wyatt | $Match$ | $Quit$  |
+|------------+---------+---------|
+| $Stay$     | $1, -1$ | $1, -1$ |
+| $Raise$    | $2, -2$ | $1,-1$  |
+
+---
+
+## Game Table: Wyatt's Hand is Better
+On the other hand, if Wyatt has the better hand, this is the game table:
+
+| Doc, Wyatt | $Match$ | $Quit$  |
+|------------+---------+---------|
+| $Stay$     | $-1, 1$ | $1, -1$ |
+| $Raise$    | $-2, 2$ | $1,-1$  |
+
+---
+
+## Payoffs as Lotteries
+We could solve each of these game tables separately 
+but neither player knows which state really applies. 
+
+* Instead, to solve this game, we must approach the payoffs as lotteries:
+
+::: {.incremental}
+* Doc's payoff from ($Stay,~Match$): gains 1 with probability 0.5, and loses 1 with probability 0.5.
+* Wyatt's payoff from ($Stay,~Match$): loses 1 with probability 0.5, and gains 1 with probability 0.5.
+* the expected payoffs of these lotteries are both 0. 
+:::
+---
+
+## Game Table: Expected Payoffs
+
+| Doc, Wyatt | $Match$            | $Quit$       |
+|------------+--------------------+--------------|
+| $Stay$     | <u>0</u>, <u>0</u> | <u>1</u>, -1 |
+| $Raise$    | <u>0</u>, <u>0</u> | <u>1</u>,-1  |
+
+::: {.incremental}
+* The Nash equilibria under uncertainty are ($Stay,~Match$) and ($Raise,~Match$).
+:::
+
+---
+
+## Variation: Unknown Probabilities
+Suppose that the probability Doc has the better hand is $p$. 
+
+  * How large does $p$ have to be before there is a Nash equilibrium where Wyatt Quits?
+  
+We can find the expected payoffs in terms of p:
+
+::: {.incremental}
+  * (Stay, Match):
+    + Doc's Expected Payoff:
+      - $1p - 1(1-p) = 2p - 1$
+    + Wyatt's Expected Payoff:
+      - $-1p + 1(1-p) = -2p + 1$
+:::
+---
+
+## Variation: Unknown Probabilities
+
+::::: {.columns}
+
+:::: {.column}
+(Raise, Match):
+
+::: {.incremental}
+  * Doc's Expected Payoff:
+    - $2p - 2(1-p) = 4p -2$
+
+  * Wyatt's Expected Payoff:
+    - $-2p + 2(1-p) = -4p + 2$
+:::
+::::
+
+:::: {.column}
+(Stay, Quit) and (Raise, Quit):
+
+::: {.incremental}
+  * Doc's Expected Payoff:
+    - $1p + 1(1-p) = 1$
+
+  * Wyatt's Expected Payoff:
+  - $-1p -1(1-p) = -1$
+:::
+::::
+:::::
+
+---
+
+## Variation: Unknown Probabilities
+
+| Doc, Wyatt | $Match$           | $Quit$  |
+|------------+-------------------+---------|
+| $Stay$     | $2p - 1, -2p + 1$ | $1, -1$ |
+| $Raise$    | $4p - 2, -4p + 2$ | $1,-1$  |
+
+If Wyatt Quits, Doc doesn't care whether he Stays or Raises 
+
+To have a NE where Wyatt Quits, we just need Wyatt to be happy with Quitting.
+
+::: {.incremental}
+* ($Stay,~Quit$) is a NE if $-1 \geq -2p + 1$, i.e. if $p \geq 1$.
+* ($Raise,~Quit$) is a NE if $-1 \geq -4p + 2$, i.e. if $p \geq \frac{3}{4}$.
+* One interpretation of this is that it is only rational for Wyatt to Quit if he is very confident that Doc has the better hand.
+:::
+ -->
 
 
 </section>
@@ -884,8 +812,7 @@ window.Quarto = {
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>1926, Letter to Max Born, published in 1971, Irene Born (translator), The Born-Einstein Letters, Walker and Company, New York<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>“John Nash: The Master of Economic Modeling.” The Scandinavian Journal of Economics 97, no. 1 (1995): 9–13. https://doi.org/10.2307/3440824.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Ariel Rubenstein, “John Nash: The Master of Economic Modeling.” The Scandinavian Journal of Economics 97, no. 1 (1995): 9–13. https://doi.org/10.2307/3440824.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

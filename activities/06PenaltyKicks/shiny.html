@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Activity 5 Results – EC327 Game Theory</title>
+<title>Penalty Kicks Calculator – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -80,6 +45,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-edbf0db1a146f148c42567bee0685584.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-72da31740c9dd7448d6ef0f9f3a0386c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../site_libs/bootstrap/bootstrap-edbf0db1a146f148c42567bee0685584.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<meta name="shinylive:serviceworker_dir" content="../..">
+<script src="../../site_libs/quarto-contrib/shinylive-0.8.0/shinylive/load-shinylive-sw.js" type="module"></script>
+<script src="../../site_libs/quarto-contrib/shinylive-0.8.0/shinylive/run-python-blocks.js" type="module"></script>
+<link href="../../site_libs/quarto-contrib/shinylive-0.8.0/shinylive/shinylive.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -110,35 +80,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -353,7 +294,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Activity 5 Results</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Penalty Kicks Calculator</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -581,7 +522,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Activity 5 Results</h1>
+<h1 class="title">Penalty Kicks Calculator</h1>
 </div>
 
 
@@ -598,153 +539,92 @@ window.Quarto = {
 </header>
 
 
-<p>For homework, you will analyze the class data from Activity 5 to relate the results to theoretical predictions about market behavior. Below, I’ve provided some guidance and code examples to help you structure your analysis.</p>
-<p>Feel free to use as much or as little of the code provided as you like. However, your goal should be to connect these results to the predictions of economic theory. Simply summarizing the data without interpretation will not be sufficient.</p>
-<p>Click on any heading with <code>&gt; See the code</code> to reveal hidden code chunks:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>See the code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># comments look like this</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"This is R code"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "This is R code"</code></pre>
-</div>
-</div>
-<section id="dataset-structure" class="level2">
-<h2 class="anchored" data-anchor-id="dataset-structure">Dataset Structure</h2>
-<p>The results from our in-class activity are stored in a CSV file where each row represents the decisions made by a group in a specific round.</p>
-<p>Key columns in the dataset include:</p>
-<ul>
-<li><code>group</code>: The group ID.</li>
-<li><code>round</code>: The round number of the activity.</li>
-<li><code>quantity</code>: The quantity of social media ads produced by the group in that round.</li>
-<li><code>a</code>, <code>b</code>: Parameters of the demand curve in each round.</li>
-</ul>
-<p>To analyze the data, you can load them into an object in R with the <code>tidyverse</code> package:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>See the code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load tidyverse packages</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># load in the results recorded in class from csv file</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="at">file =</span> <span class="st">"EC327F24-activity5_results.csv"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># change `group` and `round` to be categorical</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">c</span>(group, round), as_factor)) </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the first 10 observations</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data, <span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10 × 8
-   group round quantity     a     b     Q     P    pi
-   &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1 1     1          100   162   1.5   631     0     0
- 2 2     1          100   162   1.5   631     0     0
- 3 3     1           12   162   1.5   631     0     0
- 4 4     1           75   162   1.5   631     0     0
- 5 5     1           43   162   1.5   631     0     0
- 6 6     1            3   162   1.5   631     0     0
- 7 8     1          105   162   1.5   631     0     0
- 8 9     1          100   162   1.5   631     0     0
- 9 10    1           48   162   1.5   631     0     0
-10 11    1           45   162   1.5   631     0     0</code></pre>
-</div>
-</div>
-</section>
-<section id="adjusting-production-quantities" class="level2">
-<h2 class="anchored" data-anchor-id="adjusting-production-quantities">Adjusting Production Quantities</h2>
-<p>To compare the results across rounds, we could standardize each group’s production quantity by the theoretical monopolist’s quantity <span class="math inline">\(Q_{mp} = \frac{a}{2b}\)</span>. This adjustment allows us to evaluate whether groups overproduced or underproduced relative to what they could collectively achieve through collusion.</p>
-<p>If instead of a monopoly, several firms were acting competing in an <em>oligopoly</em>, thier individual best-response functions would be:</p>
-<p><span class="math display">\[
-quantity_i = \frac{a}{2b} - \frac{\sum_{j\neq i}^N quantity_j}{2}
-\]</span></p>
-<p>where</p>
-<ul>
-<li><span class="math inline">\(quantity_i\)</span> is the quantity produced by the single firm <span class="math inline">\(i\)</span></li>
-<li><span class="math inline">\(quantity_j\)</span> are the individual quantities produced by firms besides <span class="math inline">\(i\)</span></li>
-<li><span class="math inline">\(N\)</span> is the total number of firms in the market</li>
-</ul>
-<p>One example of an oligopolistic equilibrium would be all competing firms set the same price, in which each firm chooses the individual quantity <span class="math inline">\(quantity_i^{oligopoly} = \frac{a}{b(N+1)}\)</span>.</p>
-<p>If firms could cooperate and decide to split the Monopolist’s quantity amongst each other, where <span class="math inline">\(quantity_i^{collusion} = \frac{Q_{mp}}{N}\)</span>, they would produce fewer ads than in the equilibrium above, and jointly earn higher profit.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>See the code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># modify data for plotting</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(round) <span class="sc">%&gt;%</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">num_firms =</span> <span class="fu">sum</span>(<span class="sc">!</span><span class="fu">is.na</span>(quantity))) <span class="sc">%&gt;%</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># standardize quantity by `a` and `b` of each round</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">Q_mp =</span> a<span class="sc">/</span>(<span class="dv">2</span><span class="sc">*</span>b), <span class="co"># monopolist's quantity</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># equal split of monopoly quantity across all firms</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">q_mp =</span> Q_mp <span class="sc">/</span> num_firms,</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># divide actual quantities by cooperative quantities</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">q_adj =</span> quantity <span class="sc">/</span> q_mp</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  ) </span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 90 × 12
-   group round quantity     a     b     Q     P    pi num_firms  Q_mp  q_mp
-   &lt;fct&gt; &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;     &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1 1     1          100   162   1.5   631     0     0        10    54   5.4
- 2 2     1          100   162   1.5   631     0     0        10    54   5.4
- 3 3     1           12   162   1.5   631     0     0        10    54   5.4
- 4 4     1           75   162   1.5   631     0     0        10    54   5.4
- 5 5     1           43   162   1.5   631     0     0        10    54   5.4
- 6 6     1            3   162   1.5   631     0     0        10    54   5.4
- 7 8     1          105   162   1.5   631     0     0        10    54   5.4
- 8 9     1          100   162   1.5   631     0     0        10    54   5.4
- 9 10    1           48   162   1.5   631     0     0        10    54   5.4
-10 11    1           45   162   1.5   631     0     0        10    54   5.4
-# ℹ 80 more rows
-# ℹ 1 more variable: q_adj &lt;dbl&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="plot-the-adjusted-data-across-rounds" class="level2">
-<h2 class="anchored" data-anchor-id="plot-the-adjusted-data-across-rounds">Plot the adjusted data across rounds</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>See the code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot adjusted quantities produced for all groups across rounds</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>( <span class="fu">aes</span>( <span class="at">x =</span> round, <span class="at">y =</span> q_adj,</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">group =</span> group, <span class="at">color =</span> group )) <span class="sc">+</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="dv">20</span>) <span class="sc">+</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  ggthemes<span class="sc">::</span><span class="fu">theme_pander</span>() <span class="sc">+</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Activity 5 - Social Media Ads"</span>,</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Adjusted production quantities across 9 rounds"</span>,</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"We started with 10 groups competing to sell ads in a market with a randomly generated demand curve. </span><span class="sc">\n</span><span class="st">Each round firms were shown the demand curve and asked to choose a quantity of ads to produce. </span><span class="sc">\n</span><span class="st">Because the total quantity produced ranged from round to round depending on the demand curve,</span><span class="sc">\n</span><span class="st"> the quantities shown here are adjusted by taking the ratio of the quantity that a theoretical monopolist firm would set given the same demand curve </span><span class="sc">\n</span><span class="st">divided by how many ads each firm produced each round ."</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 25 rows containing missing values or values outside the scale range
-(`geom_line()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 26 rows containing missing values or values outside the scale range
-(`geom_point()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="results_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+<pre class="shinylive-r" data-engine="r"><code>#| '!! shinylive warning !!': |
+#|   shinylive does not work in self-contained HTML documents.
+#|   Please set `embed-resources: false` in your metadata.
+#| standalone: true
+#| code-fold: false
+#| label: soccer-penalty-shootout
+#| viewerHeight: 600
+
+library(shiny)
+
+# Define the goal probabilities matrix
+goal_probabilities &lt;- matrix(
+  c(0.3, 0.9, 0.9,
+    0.6, 0.0, 0.6,
+    0.9, 0.9, 0.3),
+  nrow = 3, byrow = TRUE,
+  dimnames = list(Kicker = c("Left", "Center", "Right"), Goalie = c("Left", "Center", "Right"))
+)
+
+# User interface
+ui &lt;- fluidPage(
+    titlePanel("Soccer Penalty Shootout Simulation"),
+    
+    sidebarLayout(
+        sidebarPanel(
+            # Coin flip button and display
+            actionButton("coin_flip", "Flip Coin to Decide Kicker"),
+            textOutput("coin_result"),
+            
+            # Strategy selection
+            selectInput("kicker_choice", "Kicker's Strategy:", choices = c("Left", "Center", "Right")),
+            selectInput("goalie_choice", "Goalie's Strategy:", choices = c("Left", "Center", "Right")),
+            
+            # Button to simulate outcome and display result
+            actionButton("shoot", "Take Shot"),
+            textOutput("outcome_result")
+        ),
+        
+        mainPanel(
+            # Display probability table for reference
+            h4("Goal Probability Table"),
+            tableOutput("probability_table")
+        )
+    )
+)
+
+# Server logic
+server &lt;- function(input, output) {
+    # Display probability table in the UI
+    output$probability_table &lt;- renderTable({
+        as.data.frame(goal_probabilities)
+    }, rownames = TRUE)
+    
+    # Coin flip logic
+    output$coin_result &lt;- renderText({
+        input$coin_flip
+        isolate({
+            if (input$coin_flip &gt; 0) {
+                result &lt;- sample(c("Heads", "Tails"), 1)
+                paste("Coin Flip Result:", result)
+            }
+        })
+    })
+    
+    # Shoot outcome logic
+    output$outcome_result &lt;- renderText({
+        input$shoot
+        isolate({
+            if (input$shoot &gt; 0) {
+                kicker &lt;- input$kicker_choice
+                goalie &lt;- input$goalie_choice
+                prob_goal &lt;- goal_probabilities[kicker, goalie]
+                
+                # Randomize outcome based on the goal probability
+                outcome &lt;- ifelse(runif(1) &lt; prob_goal, "Goal!", "Missed!")
+                paste("Kicker's choice:", kicker, "| Goalie's choice:", goalie, "| Result:", outcome)
+            }
+        })
+    })
+}
+
+# Run the app
+shinyApp(ui, server)</code></pre>
+<p><a href="../../activities/06PenaltyKicks/penaltykicks.html" class="btn btn-outline-primary" role="button">Back to Rules</a></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1167,7 +1047,7 @@ quantity_i = \frac{a}{2b} - \frac{\sum_{j\neq i}^N quantity_j}{2}
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/activities/05CournotComp/results.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/activities/05CournotComp/results.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/activities/06PenaltyKicks/shiny.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/activities/06PenaltyKicks/shiny.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://github.com/dyasui/dyasui.github.io"><i class="fa-brands fa-github" aria-label="github"></i> Source</a></p>
 </div>

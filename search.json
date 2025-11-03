@@ -99,32 +99,47 @@
     ]
   },
   {
-    "objectID": "activities/06PenaltyKicks/penaltykicks_results.html",
-    "href": "activities/06PenaltyKicks/penaltykicks_results.html",
-    "title": "Activity 6 Results",
+    "objectID": "activities/06PenaltyKicks/shiny.html",
+    "href": "activities/06PenaltyKicks/shiny.html",
+    "title": "Penalty Kicks Calculator",
     "section": "",
-    "text": "On homework 3, I ask you use some statistics about the class data from activity 6 to relate to theoretical predictions. I realised not everyone has taken a stats or metrics class yet, so I wanted to post some pieces of R code as examples of starting places to help you answer this question.\nFeel free to use as much (or to ignore) of the code provided as you want, but keep in mind that just copying these statistics without applying them to specific theoretical predictions will not be enough to earn you credit for this assignment.\nClick on any heading with &gt; See the code to reveal hidden code chunks:\nSee the code\n# comments look like this\nprint(\"This is R code\")\n\n\n[1] \"This is R code\""
+    "text": "#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| code-fold: false\n#| label: soccer-penalty-shootout\n#| viewerHeight: 600\n\nlibrary(shiny)\n\n# Define the goal probabilities matrix\ngoal_probabilities &lt;- matrix(\n  c(0.3, 0.9, 0.9,\n    0.6, 0.0, 0.6,\n    0.9, 0.9, 0.3),\n  nrow = 3, byrow = TRUE,\n  dimnames = list(Kicker = c(\"Left\", \"Center\", \"Right\"), Goalie = c(\"Left\", \"Center\", \"Right\"))\n)\n\n# User interface\nui &lt;- fluidPage(\n    titlePanel(\"Soccer Penalty Shootout Simulation\"),\n    \n    sidebarLayout(\n        sidebarPanel(\n            # Coin flip button and display\n            actionButton(\"coin_flip\", \"Flip Coin to Decide Kicker\"),\n            textOutput(\"coin_result\"),\n            \n            # Strategy selection\n            selectInput(\"kicker_choice\", \"Kicker's Strategy:\", choices = c(\"Left\", \"Center\", \"Right\")),\n            selectInput(\"goalie_choice\", \"Goalie's Strategy:\", choices = c(\"Left\", \"Center\", \"Right\")),\n            \n            # Button to simulate outcome and display result\n            actionButton(\"shoot\", \"Take Shot\"),\n            textOutput(\"outcome_result\")\n        ),\n        \n        mainPanel(\n            # Display probability table for reference\n            h4(\"Goal Probability Table\"),\n            tableOutput(\"probability_table\")\n        )\n    )\n)\n\n# Server logic\nserver &lt;- function(input, output) {\n    # Display probability table in the UI\n    output$probability_table &lt;- renderTable({\n        as.data.frame(goal_probabilities)\n    }, rownames = TRUE)\n    \n    # Coin flip logic\n    output$coin_result &lt;- renderText({\n        input$coin_flip\n        isolate({\n            if (input$coin_flip &gt; 0) {\n                result &lt;- sample(c(\"Heads\", \"Tails\"), 1)\n                paste(\"Coin Flip Result:\", result)\n            }\n        })\n    })\n    \n    # Shoot outcome logic\n    output$outcome_result &lt;- renderText({\n        input$shoot\n        isolate({\n            if (input$shoot &gt; 0) {\n                kicker &lt;- input$kicker_choice\n                goalie &lt;- input$goalie_choice\n                prob_goal &lt;- goal_probabilities[kicker, goalie]\n                \n                # Randomize outcome based on the goal probability\n                outcome &lt;- ifelse(runif(1) &lt; prob_goal, \"Goal!\", \"Missed!\")\n                paste(\"Kicker's choice:\", kicker, \"| Goalie's choice:\", goalie, \"| Result:\", outcome)\n            }\n        })\n    })\n}\n\n# Run the app\nshinyApp(ui, server)\nBack to Rules"
   },
   {
-    "objectID": "activities/06PenaltyKicks/penaltykicks_results.html#dataset-structure",
-    "href": "activities/06PenaltyKicks/penaltykicks_results.html#dataset-structure",
-    "title": "Activity 6 Results",
-    "section": "Dataset Structure",
-    "text": "Dataset Structure\nI collected the results from the in-class penalty kicks activity as a csv file where each row represents an different attempted shot.\nThe columns round, match, and shot contain the id representing which round in the bracket, which match of that specific round, and whether that shot was the first, second, third, fourth, or fifth shot of that match, respectively.\nTo make these data easier to visualize and calculate statistics, you can import them to an object in R using the read_csv function from the tidyverse package.\n\n# load tidyverse packages\nlibrary(tidyverse)\n\n# setwd(\"activities/06PenaltyKicks\")\n\n# read in the class results from csv file\ndata &lt;- read_csv(\"EC327F24-activity6_results.csv\") %&gt;%\n  filter(!is.na(s_k), !is.na(s_g)) # filter out missing data\n\n# print the first 10 observations\nhead(data, n = 10)\n\n# A tibble: 10 × 6\n   round match  shot s_k    s_g    goal \n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;lgl&gt;\n 1     1     1     1 Right  Left   FALSE\n 2     1     1     1 Left   Right  FALSE\n 3     1     1     2 Center Center FALSE\n 4     1     1     2 Left   Right  FALSE\n 5     1     1     3 Right  Left   FALSE\n 6     1     2     1 Left   Right  TRUE \n 7     1     2     1 Left   Center TRUE \n 8     1     2     2 Right  Left   TRUE \n 9     1     2     2 Left   Center TRUE \n10     1     2     3 Center Left   FALSE\n\n\nThe important variables are the choices of the kicker and goalie for each kick attempt as well as whether a goal was scored or not:\n\ns_k represents the direction the kicker chose to kick\ns_g represents the direction the goalie chose to attempt to block\ngoal is an indicator which is TRUE if a goal was scored, and FALSE if a kick was blocked or missed.\n\n\nN &lt;- nrow(data)\n\nAcross all rounds and matches played in class this quarter, we had 324 different shots attempted, which are each a row in this dataset."
+    "objectID": "activities/06PenaltyKicks/penaltykicks.html",
+    "href": "activities/06PenaltyKicks/penaltykicks.html",
+    "title": "Penalty Kick Shootout",
+    "section": "",
+    "text": "Watch the clip from the 2022 FIFA world cup final game between Argentina and France:\nObjective: In this activity you will play a game which demonstrates the idea of mixed strategies in simultaneous games. You will pair up with another classmate to simulate a soccer penalty shootout where each of you will represent different soccer teams. Your goal is to score more goals than your opponent after taking turns as both the kicker and the goalie.",
+    "crumbs": [
+      "Syllabus",
+      "Mixed Strategies",
+      "[Activity]{.text-success}: Penalty Kick Shootout"
+    ]
   },
   {
-    "objectID": "activities/06PenaltyKicks/penaltykicks_results.html#group-results-by-srategy-profile",
-    "href": "activities/06PenaltyKicks/penaltykicks_results.html#group-results-by-srategy-profile",
-    "title": "Activity 6 Results",
-    "section": "Group Results by Srategy Profile",
-    "text": "Group Results by Srategy Profile\nI might want to compare how often we see a kicker choosing \\(Right\\) at the same time a goalie blocked \\(Right\\), vs a kicker chosing \\(Right\\) when a goalie blocked \\(Left\\), etc, for all 9 different possible pure strategy combinations.\n\n\nSee the code\n# summarize by type of strategy profile\nprofiles_tbl &lt;- data %&gt;%\n  group_by(s_k, s_g) %&gt;% # group by each strategy combo to summarise each group\n  summarise(\n    n = n(), # get counts of each profile\n    p = n / N, # calculate proportions of total observations\n    num_goals = sum(goal), # count numbers of goals scored\n    prob_goal = num_goals / N # probability of goal scored\n  ) %&gt;%\n  ungroup() # get rid of groups structure to make later manipulations easier\n# print the profiles table\nprofiles_tbl\n\n\n# A tibble: 9 × 6\n  s_k    s_g        n      p num_goals prob_goal\n  &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt;  &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;\n1 Center Center    29 0.0895         0    0     \n2 Center Left      25 0.0772        18    0.0556\n3 Center Right     35 0.108         23    0.0710\n4 Left   Center    37 0.114         30    0.0926\n5 Left   Left      38 0.117          8    0.0247\n6 Left   Right     45 0.139         36    0.111 \n7 Right  Center    36 0.111         34    0.105 \n8 Right  Left      41 0.127         34    0.105 \n9 Right  Right     38 0.117         11    0.0340\n\n\nThis table shows that the Kicker choosing \\(Left\\) when the goalie chose \\(Right\\) was the most common type of outcome, which happened in 14% of the 324 total shots.\n\nPlotting frequency of each strategy profile\nIf you want a more visual representation of the information in this table, you could use a bar graph where each bar represents a row of the table:\n\n\nSee the code\nggplot(profiles_tbl, aes(x = s_g, y = n, fill = s_k)) +\n  geom_bar(stat = \"identity\") +\n  facet_wrap(vars(s_k))\n\n\n\n\n\n\n\n\n\n\n\nTesting strategy profiles against theory\nIf you wanted to compare the frequency of each type of choice matchup in this table with what you would expect in an MSNE, you could use the chisq.test function to test the goodness of fit of the n column in our table to some theoretical distribution of p which we would expect for each pure strategy combination.\nFor example, suppose that a mixed strategy Nash equilibrium of this game would result in each profile being observed with equal probability of 1/9.\n\n\nSee the code\n# use observed num of each choice combo from profiles table\nn_observed &lt;- profiles_tbl %&gt;% select(n)\n# theoretical predictions of each profile being observed\n# make sure they're in the same order as in the profiles table\np_predicted &lt;- c(1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9)\n# test whether n is drawn from p_predicted distribution\nchisq.test(\n  x = n_observed,\n  p = p_predicted\n)\n\n\n\n    Chi-squared test for given probabilities\n\ndata:  n_observed\nX-squared = 7.9444, df = 8, p-value = 0.4389\n\n\nCompare the resulting \\(\\chi^2\\)- statistic against the critical value of 15.51 from the \\(\\chi^2\\) distribution with 8 degrees of freedom at the 95% confidence level."
+    "objectID": "activities/06PenaltyKicks/penaltykicks.html#game-rules",
+    "href": "activities/06PenaltyKicks/penaltykicks.html#game-rules",
+    "title": "Penalty Kick Shootout",
+    "section": "Game Rules:",
+    "text": "Game Rules:\n\n1. Pair up and flip to kick first\nFind your opponent and flip a coin to determine who will kick first. The other person will be be the goalie and attempt to block the kicker’s shots on goal.\n\n\n2. Shoot for best out of 5\nA strategy for each player is one of three parts of the goal:\n\nLeft\nCenter\nor Right 1\n\nOn the count of three, you and your opponent will simultaneously point to a direction which will determine the probability of a goal being scored.\nFor each combination of strategies, the payoffs in the table below represent the probability of a goal being scored.\n\n\n\nKicker, Goalie\nLeft\nCenter\nRight\n\n\n\n\nLeft\n30, 70\n90, 10\n90, 10\n\n\nCenter\n60, 40\n0, 100\n60, 40\n\n\nRight\n90, 10\n90, 10\n30, 70\n\n\n\nFor example, if the Kicker kicks to the Left and the Goalie tries to block Left, there is a 30% chance of the ball going in and the kicker scoring, but there is a 70% chance that the goalie successfully blocks the goal.\n\n\n3. Record every kick\nAfter each kick, make sure to record both players’ strategies as well whether a goal was scored.\nGoogle Sheet for Recording\n\nAlternate between you and your opponent being the kicker and goalie until you have both attempted 5 shots each.\nIf there is a tie after 5 kicks each, you will enter sudden death where you keep alternating kicks until one player scores and the other misses.\n\n\n\n4. Repeat with a new opponent\nFind your next opponent in the bracket. If you are knocked out of the bracket, find someone else to play against for fun, or observe the competitions of others.\nCalculate the outcomes!",
+    "crumbs": [
+      "Syllabus",
+      "Mixed Strategies",
+      "[Activity]{.text-success}: Penalty Kick Shootout"
+    ]
   },
   {
-    "objectID": "activities/06PenaltyKicks/penaltykicks_results.html#comparing-kickers-strategies",
-    "href": "activities/06PenaltyKicks/penaltykicks_results.html#comparing-kickers-strategies",
-    "title": "Activity 6 Results",
-    "section": "Comparing Kicker’s Strategies",
-    "text": "Comparing Kicker’s Strategies\nInstead of comparing to a specific distribution of observed strategy combinations, you might be interested in seeing the actual average payoff to either player for each of their strategies played in the data.\n\n\nSee the code\n# summarise win probabiltiy by kicker's strategy\nkicker_strats &lt;- data %&gt;%\n  group_by(s_k) %&gt;% # group all kickers strategies together\n  summarise(\n    num_goals = sum(goal), # count how many times kicker scored\n    prob_goal = sum(goal) / N # calculate success rate\n  )\n# print kicker strategies table\nkicker_strats\n\n\n# A tibble: 3 × 3\n  s_k    num_goals prob_goal\n  &lt;chr&gt;      &lt;int&gt;     &lt;dbl&gt;\n1 Center        41     0.127\n2 Left          74     0.228\n3 Right         79     0.244\n\n\n\nTesting for equal success rates for each kick\n\n\nSee the code\n# use observed num of each choice combo from kicker strategies table\nn_observed &lt;- kicker_strats %&gt;% select(num_goals)\n# equal probobility of success for each strategy\np_predicted &lt;- c(1/3, 1/3, 1/3)\n# test whether num_goals are equal across strategy choice\nchisq.test(\n  x = n_observed,\n  p = p_predicted\n)\n\n\n\n    Chi-squared test for given probabilities\n\ndata:  n_observed\nX-squared = 13.186, df = 2, p-value = 0.00137\n\n\n\n\nSee the code\n# chi-square critical value with 2 degrees of freedom\nchisq.crit &lt;- qchisq(p = 0.95, df = 2)\n\n\nCompare \\(\\chi^2\\)-statistic to a critical value of 5.99. If the statistic is greater than the critical value, reject the null hypothesis that the success rates are equal with 95% confidence.\n\n\nSee the code\ndata %&gt;%\n  mutate(\n    s_k = case_when(\n      s_k %in% c(\"Right\", \"Left\") ~ \"Side\",\n      s_k == \"Center\" ~ \"Center\"\n    ),\n    s_g = case_when(\n      s_g %in% c(\"Right\", \"Left\") ~ \"Side\",\n      s_g == \"Center\" ~ \"Center\"\n    )\n  ) %&gt;%\n  group_by(s_k, s_g) %&gt;%\n  summarise(\n    n_obs = n(),\n    num_goals = sum(goal==TRUE),\n    prob_goal = sum(goal) / n()\n  )\n\n\n`summarise()` has grouped output by 's_k'. You can override using the `.groups`\nargument.\n\n\n# A tibble: 4 × 5\n# Groups:   s_k [2]\n  s_k    s_g    n_obs num_goals prob_goal\n  &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt;     &lt;int&gt;     &lt;dbl&gt;\n1 Center Center    29         0     0    \n2 Center Side      60        41     0.683\n3 Side   Center    73        64     0.877\n4 Side   Side     162        89     0.549"
+    "objectID": "activities/06PenaltyKicks/penaltykicks.html#footnotes",
+    "href": "activities/06PenaltyKicks/penaltykicks.html#footnotes",
+    "title": "Penalty Kick Shootout",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nfrom the kicker’s perspective↩︎",
+    "crumbs": [
+      "Syllabus",
+      "Mixed Strategies",
+      "[Activity]{.text-success}: Penalty Kick Shootout"
+    ]
   },
   {
     "objectID": "activities/05CournotComp/simulation.html",
@@ -439,35 +454,28 @@
     "href": "Slides/06MixedStrategies/0601-uncertainty.html",
     "title": "EC327 Game Theory",
     "section": "",
-    "text": "“I, at any rate, am convinced that [God] does not throw dice”\n\n\nAlbert Einstein 1"
+    "text": "“Rational decision makers are able to give reasons for each action they take; outside Las Vegas players do not spin roulette wheels” 1\n\n\nDo you agree?\nWould rational players act randomly?"
   },
   {
     "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#thinking-about-randomness",
     "href": "Slides/06MixedStrategies/0601-uncertainty.html#thinking-about-randomness",
     "title": "EC327 Game Theory",
     "section": "",
-    "text": "“I, at any rate, am convinced that [God] does not throw dice”\n\n\nAlbert Einstein 1"
+    "text": "“Rational decision makers are able to give reasons for each action they take; outside Las Vegas players do not spin roulette wheels” 1\n\n\nDo you agree?\nWould rational players act randomly?"
   },
   {
     "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#thinking-about-randomness-1",
     "href": "Slides/06MixedStrategies/0601-uncertainty.html#thinking-about-randomness-1",
     "title": "EC327 Game Theory",
     "section": "Thinking about Randomness",
-    "text": "Thinking about Randomness\n\n“Rational decision makers are able to give reasons for each action they take; outside Las Vegas players do not spin roulette wheels”\n\n\nAriel Rubenstein 2"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#thinking-about-randomness-2",
-    "href": "Slides/06MixedStrategies/0601-uncertainty.html#thinking-about-randomness-2",
-    "title": "EC327 Game Theory",
-    "section": "Thinking about Randomness",
-    "text": "Thinking about Randomness\nWhy should we use mixed strategies?!\n\n\nAs we saw in Activity 2, rarely do real life data fit in completely deterministic models\nYou can interpret the mixed strategy of one player as the beliefs of other players in equilibrium\nLearning some basics of probability theory will help you outside of this class"
+    "text": "Thinking about Randomness\nWhy should we use mixed strategies?!\n\n\nAs we saw in Activity 2, rarely do real life data fit in completely deterministic models\nInterpret mixed strategy of one player as the beliefs of other players\nProbability and statistics are useful outside of this class"
   },
   {
     "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#lotteries",
     "href": "Slides/06MixedStrategies/0601-uncertainty.html#lotteries",
     "title": "EC327 Game Theory",
     "section": "Lotteries",
-    "text": "Lotteries\n\n\nIn this class, any choices with uncertain payoffs will be called lotteries.\nA lottery doesn’t have to only be about money\nFor any set of outcomes in a lottery, there will be an associated probability: if \\(a\\) is a possible outcome, then \\(P(a)\\) is the probability that it occurs.\n\nAll probabilities must be between 0 and 1: \\(0 \\leq P(a) \\leq 1\\) for all possibilities \\(a\\).\nAdditionally, the probabilities given in a particular lottery must sum to exactly 1: we will assume that one, and exactly one, outcome must actually occur."
+    "text": "Lotteries\nAny choices with uncertain payoffs will be called lotteries.\n\n\nDoesn’t have to only be about money\nAny outcome has an associated probability:\n\nif \\(o\\) is a possible outcome, then \\(p(o)\\) is the probability of that outcome\n\nAll probabilities must be between 0 and 1:\n\n\\(0 \\leq P(a) \\leq 1\\) for all possibilities \\(a\\).\n\nAll probabilities in a particular lottery must sum to exactly 1:"
   },
   {
     "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#expected-utility",
@@ -481,126 +489,49 @@
     "href": "Slides/06MixedStrategies/0601-uncertainty.html#expected-payoffs",
     "title": "EC327 Game Theory",
     "section": "Expected Payoffs",
-    "text": "Expected Payoffs\n\nYou calculate an average by adding up the values of a lottery times the probability of how likely each is.\n\n\\[U(a) = \\mathbb{E}[u(a)] = \\sum_{a}u(a)P(a)\\]\n\n\nThis is a weighted average of the payoffs associated with each outcome \\(a\\), with the weights being the probabilities of each one happening."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#double-or-nothing-game",
-    "href": "Slides/06MixedStrategies/0601-uncertainty.html#double-or-nothing-game",
-    "title": "EC327 Game Theory",
-    "section": "Double or Nothing ‘game’",
-    "text": "Double or Nothing ‘game’"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#expected-payoff-examples",
-    "href": "Slides/06MixedStrategies/0601-uncertainty.html#expected-payoff-examples",
-    "title": "EC327 Game Theory",
-    "section": "Expected Payoff Examples",
-    "text": "Expected Payoff Examples\nZoidberg’s expected payout if he Lets it Ride is \\(0.50(\\$10) + 0.50(\\$0) = \\$5 - \\$0 = \\$5\\).\n\n\nLet’s face it, Zoidberg always has luck stacked against him, so suppose instead the coin has a 75% probability of tails,\nThe expected payoff would then be \\[0.25(\\$10) + 0.75(\\$0) = \\$2.50 + \\$0 = \\$2.50 \\]."
+    "text": "Expected Payoffs\n\nYou calculate an average by adding up the values of a lottery times the probability of how likely each is.\n\n\\[U(a) = \\mathbb{E}[u(a)] = \\sum_{a}u(a)p(a)\\]\n\n\nThis is a weighted average of the payoffs associated with each outcome \\(a\\), with the weights being the probabilities of each one happening."
   },
   {
     "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#cardinal-payoffs",
     "href": "Slides/06MixedStrategies/0601-uncertainty.html#cardinal-payoffs",
     "title": "EC327 Game Theory",
     "section": "Cardinal Payoffs",
-    "text": "Cardinal Payoffs\n\nUsing expected payoffs implies that the payoffs of the outcomes are cardinal, not merely ordinal: this means that the payoffs can be used not just to rank, but to compare the relative “goodness” of outcomes.\n\n\n\ni.e. an outcome with payoff 2 is actually twice as good as an outcome with payoff 1."
+    "text": "Cardinal Payoffs\nExpected payoffs imply that payoffs are cardinal\n\nrelative differences in payoffs matter\ninstead of ordinal where only rankings matter\n\n\n\ni.e. an outcome with payoff 2 is actually twice as good as an outcome with payoff 1."
   },
   {
     "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#von-neumann-morgenstern-utility",
     "href": "Slides/06MixedStrategies/0601-uncertainty.html#von-neumann-morgenstern-utility",
     "title": "EC327 Game Theory",
     "section": "Von-Neumann Morgenstern Utility",
-    "text": "Von-Neumann Morgenstern Utility\nThere are a few other axioms beyond just completeness and transitivity which are needed when it comes to making rational choices over lotteries.\n\n\nContinuity: Small changes in lottery probabilities shouldn’t make your ranking jump around.\nIndependence: If you know which of two lotteries you prefer, when I add a little bit of another unrelated option into both, it shouldn’t change your mind.\n\n\nBecause expected utility requires special assumptions beyond those of regular utility, it gets it’s own special name:\nVon-Neumann Morgenstern utility function"
+    "text": "Von-Neumann Morgenstern Utility\nWe need new assumptions for rationality over lotteries:\n\nContinuity: Small changes in probabilities shouldn’t make your ranking jump around.\nIndependence: If you know which of two lotteries you prefer, when I add a little bit of another unrelated option into both, it shouldn’t change your mind.\nexpected utility requires special assumptions, so it gets it’s own special name:\n\nVon-Neumann Morgenstern utility function"
   },
   {
     "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#types-of-uncertainty",
     "href": "Slides/06MixedStrategies/0601-uncertainty.html#types-of-uncertainty",
     "title": "EC327 Game Theory",
     "section": "Types of Uncertainty",
-    "text": "Types of Uncertainty\nThere are two main types of uncertainty that we’ll cover in this course: external and internal.\n\n\nExternal uncertainty results from factors outside of the game that the players don’t control, such as weather or other random events.\nInternal uncertainty result from players’ own actions inside of the game: it is caused whenever a player acts in a random way."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#external-uncertainty-states-of-nature",
-    "href": "Slides/06MixedStrategies/0601-uncertainty.html#external-uncertainty-states-of-nature",
-    "title": "EC327 Game Theory",
-    "section": "External Uncertainty: States of Nature",
-    "text": "External Uncertainty: States of Nature\n\nThe simplest form of uncertainty that we’ll discuss is simple uncertainty or uncertainty about the state of nature.\nPlayers don’t know which state of nature will occur — but we assume that they do know the probability associated with each state. —"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#example-a-card-game",
-    "href": "Slides/06MixedStrategies/0601-uncertainty.html#example-a-card-game",
-    "title": "EC327 Game Theory",
-    "section": "Example: A Card Game",
-    "text": "Example: A Card Game\nThere are two players, Doc and Wyatt. Both are dealt a hand of cards: there is a 50% probability that Wyatt’s hand is better, and a 50% probability that Doc’s is. There are no ties.\n\nAt the beginning of the game, both players must bet $1.\nAfter seeing his cards, Doc may either Stay, keeping the $1 bet, or may Raise, bringing his bet to $2.\nDoc simultaneously decides to either Match Doc’s bet, whatever that may be, or to Quit and forfeit his $1.\nIf Wyatt Matches, the player with the better hand wins all the money. If Wyatt Quits, Doc wins all the money by default."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#game-table-docs-hand-is-better",
-    "href": "Slides/06MixedStrategies/0601-uncertainty.html#game-table-docs-hand-is-better",
-    "title": "EC327 Game Theory",
-    "section": "Game Table: Doc’s Hand is Better",
-    "text": "Game Table: Doc’s Hand is Better\nIn the state of nature where Doc has the better hand, this is the game table:\n\n\n\nDoc, Wyatt\n\\(Match\\)\n\\(Quit\\)\n\n\n\n\n\\(Stay\\)\n\\(1, -1\\)\n\\(1, -1\\)\n\n\n\\(Raise\\)\n\\(2, -2\\)\n\\(1,-1\\)"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#game-table-wyatts-hand-is-better",
-    "href": "Slides/06MixedStrategies/0601-uncertainty.html#game-table-wyatts-hand-is-better",
-    "title": "EC327 Game Theory",
-    "section": "Game Table: Wyatt’s Hand is Better",
-    "text": "Game Table: Wyatt’s Hand is Better\nOn the other hand, if Wyatt has the better hand, this is the game table:\n\n\n\nDoc, Wyatt\n\\(Match\\)\n\\(Quit\\)\n\n\n\n\n\\(Stay\\)\n\\(-1, 1\\)\n\\(1, -1\\)\n\n\n\\(Raise\\)\n\\(-2, 2\\)\n\\(1,-1\\)"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#payoffs-as-lotteries",
-    "href": "Slides/06MixedStrategies/0601-uncertainty.html#payoffs-as-lotteries",
-    "title": "EC327 Game Theory",
-    "section": "Payoffs as Lotteries",
-    "text": "Payoffs as Lotteries\nWe could solve each of these game tables separately but neither player knows which state really applies.\n\nInstead, to solve this game, we must approach the payoffs as lotteries:\n\n\n\nDoc’s payoff from (\\(Stay,~Match\\)): gains 1 with probability 0.5, and loses 1 with probability 0.5.\nWyatt’s payoff from (\\(Stay,~Match\\)): loses 1 with probability 0.5, and gains 1 with probability 0.5.\nthe expected payoffs of these lotteries are both 0."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#game-table-expected-payoffs",
-    "href": "Slides/06MixedStrategies/0601-uncertainty.html#game-table-expected-payoffs",
-    "title": "EC327 Game Theory",
-    "section": "Game Table: Expected Payoffs",
-    "text": "Game Table: Expected Payoffs\n\n\n\nDoc, Wyatt\n\\(Match\\)\n\\(Quit\\)\n\n\n\n\n\\(Stay\\)\n0, 0\n1, -1\n\n\n\\(Raise\\)\n0, 0\n1,-1\n\n\n\n\n\nThe Nash equilibria under uncertainty are (\\(Stay,~Match\\)) and (\\(Raise,~Match\\))."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#variation-unknown-probabilities",
-    "href": "Slides/06MixedStrategies/0601-uncertainty.html#variation-unknown-probabilities",
-    "title": "EC327 Game Theory",
-    "section": "Variation: Unknown Probabilities",
-    "text": "Variation: Unknown Probabilities\nSuppose that the probability Doc has the better hand is \\(p\\).\n\nHow large does \\(p\\) have to be before there is a Nash equilibrium where Wyatt Quits?\n\nWe can find the expected payoffs in terms of p:\n\n\n(Stay, Match):\n\nDoc’s Expected Payoff:\n\n\\(1p - 1(1-p) = 2p - 1\\)\n\nWyatt’s Expected Payoff:\n\n\\(-1p + 1(1-p) = -2p + 1\\)"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#variation-unknown-probabilities-1",
-    "href": "Slides/06MixedStrategies/0601-uncertainty.html#variation-unknown-probabilities-1",
-    "title": "EC327 Game Theory",
-    "section": "Variation: Unknown Probabilities",
-    "text": "Variation: Unknown Probabilities\n\n\n(Raise, Match):\n\n\nDoc’s Expected Payoff:\n\n\\(2p - 2(1-p) = 4p -2\\)\n\nWyatt’s Expected Payoff:\n\n\\(-2p + 2(1-p) = -4p + 2\\)\n\n\n\n\n(Stay, Quit) and (Raise, Quit):\n\n\nDoc’s Expected Payoff:\n\n\\(1p + 1(1-p) = 1\\)\n\nWyatt’s Expected Payoff:\n\\(-1p -1(1-p) = -1\\)"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#variation-unknown-probabilities-2",
-    "href": "Slides/06MixedStrategies/0601-uncertainty.html#variation-unknown-probabilities-2",
-    "title": "EC327 Game Theory",
-    "section": "Variation: Unknown Probabilities",
-    "text": "Variation: Unknown Probabilities\n\n\n\nDoc, Wyatt\n\\(Match\\)\n\\(Quit\\)\n\n\n\n\n\\(Stay\\)\n\\(2p - 1, -2p + 1\\)\n\\(1, -1\\)\n\n\n\\(Raise\\)\n\\(4p - 2, -4p + 2\\)\n\\(1,-1\\)\n\n\n\nIf Wyatt Quits, Doc doesn’t care whether he Stays or Raises\nTo have a NE where Wyatt Quits, we just need Wyatt to be happy with Quitting.\n\n\n(\\(Stay,~Quit\\)) is a NE if \\(-1 \\geq -2p + 1\\), i.e. if \\(p \\geq 1\\).\n(\\(Raise,~Quit\\)) is a NE if \\(-1 \\geq -4p + 2\\), i.e. if \\(p \\geq \\frac{3}{4}\\).\nOne interpretation of this is that it is only rational for Wyatt to Quit if he is very confident that Doc has the better hand."
+    "text": "Types of Uncertainty\nTwo main types of uncertainty: external and internal.\n\n\nExternal uncertainty from factors outside of the players’ control\n\nsuch as weather or other random events, or external players\n\nInternal uncertainty from players’ own actions:\n\nwhen some player acts in an unpredictable way,\n\neven to themselves\n\nFor example, I flip a coin to tell me what to choose"
   },
   {
     "objectID": "Slides/06MixedStrategies/0601-uncertainty.html#footnotes",
     "href": "Slides/06MixedStrategies/0601-uncertainty.html#footnotes",
     "title": "EC327 Game Theory",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\n1926, Letter to Max Born, published in 1971, Irene Born (translator), The Born-Einstein Letters, Walker and Company, New York↩︎\n“John Nash: The Master of Economic Modeling.” The Scandinavian Journal of Economics 97, no. 1 (1995): 9–13. https://doi.org/10.2307/3440824.↩︎"
+    "text": "Footnotes\n\n\nAriel Rubenstein, “John Nash: The Master of Economic Modeling.” The Scandinavian Journal of Economics 97, no. 1 (1995): 9–13. https://doi.org/10.2307/3440824.↩︎"
   },
   {
     "objectID": "Slides/06MixedStrategies/06-main.html#mixed-strategies-in-penalty-kicks",
     "href": "Slides/06MixedStrategies/06-main.html#mixed-strategies-in-penalty-kicks",
     "title": "Introduction to Game Theory",
     "section": "Mixed Strategies in Penalty Kicks",
-    "text": "Mixed Strategies in Penalty Kicks\nWhy might mixed strategies be useful in analyzing behavior of kickers and goalies in penalty shootouts?\n\nreaction times \\(\\rightarrow\\) essentially simultaneous game\nzero-sum game with incentive to keep the other player guessing\nmodelling observed strategies chosen as random variables\n\nspecific empirical statistics can be compared to their theoretical values"
+    "text": "Mixed Strategies in Penalty Kicks\nWhy might randomized actions be useful?\n\nreaction times \\(\\rightarrow\\) essentially simultaneous game\nzero-sum game with incentive to keep the other player guessing\n\nBeing predictable helps your opponent\n\nmodelling observed strategies chosen as random variables\n\nCan compare empirical data with theoretical predictions"
   },
   {
     "objectID": "Slides/06MixedStrategies/06-main.html#x2-penalty-kick-game",
     "href": "Slides/06MixedStrategies/06-main.html#x2-penalty-kick-game",
     "title": "Introduction to Game Theory",
     "section": "2x2 Penalty Kick Game",
-    "text": "2x2 Penalty Kick Game\nSimplest form of this game,\n(prob of making goal is either 0% or 100%)\n\n\n\n\n\nKicker, Goalie\n\\(Left_g\\)\n\\(Right_g\\)\n\n\n\n\n\\(Left_k\\)\n0.3, 0.7\n0.9, 0.1\n\n\n\\(Right_k\\)\n0.9, 0.1\n0.3, 0.7\n\n\n\n\nWhat should the Kicker do?\n\nPurely Left means goalie could block by always going Left 1\nPurely Right means goalie could block by always going Right\nSo a rational strategy must be a random mix between both pure strategies\n\n\nRecall that we are defining the direction according to the kicker’s perspective"
+    "text": "2x2 Penalty Kick Game\nSimplified penalty kick game\nwith only Left and Right as strategies\n\n\n\nKicker, Goalie\n\\(Left_g\\)\n\\(Right_g\\)\n\n\n\n\n\\(Left_k\\)\n0.3, 0.7\n0.9, 0.1\n\n\n\\(Right_k\\)\n0.9, 0.1\n0.3, 0.7\n\n\n\nWhat should the Kicker do?\n\nPurely Left means goalie could block by always going Left 1\nPurely Right means goalie could block by always going Right\nSo a rational strategy must be a random mix between both pure strategies\n\nRecall that we are defining the direction according to the kicker’s perspective"
   },
   {
     "objectID": "Slides/06MixedStrategies/06-main.html#x2-penalty-kick-game-1",
@@ -635,35 +566,28 @@
     "href": "Slides/06MixedStrategies/06-main.html#x2-penalty-kick-game-5",
     "title": "Introduction to Game Theory",
     "section": "2x2 Penalty Kick Game",
-    "text": "2x2 Penalty Kick Game\n\n\n\n\n\nKicker, Goalie\n\\(Left_g\\)\n\\(Right_g\\)\n\n\n\n\n\\(Left_k\\)\n0.3, 0.7\n0.9, 0.1\n\n\n\\(Right_k\\)\n0.9, 0.1\n0.3, 0.7\n\n\n\n\n\nSo the Kicker should play \\(Left_k\\) 50% of the time, \\(Right_k\\) 50%\nthe Goalie should play \\(Left_g\\) 50% of the time, \\(Right_g\\) 50%\nIn this mixed-strategy Nash equilibrium, both players are indifferent between either of their pure strategies\nThe kicker’s probability of scoring is 0.6 no matter what direction they choose"
+    "text": "2x2 Penalty Kick Game\n\n\n\nKicker, Goalie\n\\(Left_g\\)\n\\(Right_g\\)\n\n\n\n\n\\(Left_k\\)\n0.3, 0.7\n0.9, 0.1\n\n\n\\(Right_k\\)\n0.9, 0.1\n0.3, 0.7\n\n\n\nIn Nash equilibrium: * The Kicker should play Left 50% of the time * The Goalie should play Left 50% * Both players are indifferent between either pure strategy * Kicker’s probability of scoring is 0.6 - no matter what direction they choose"
   },
   {
     "objectID": "Slides/06MixedStrategies/06-main.html#thinking-about-randomness",
     "href": "Slides/06MixedStrategies/06-main.html#thinking-about-randomness",
     "title": "Introduction to Game Theory",
     "section": "Thinking about Randomness",
-    "text": "Thinking about Randomness\n\n“I, at any rate, am convinced that [God] does not throw dice”\n\n\nAlbert Einstein 1\n\n1926, Letter to Max Born, published in 1971, Irene Born (translator), The Born-Einstein Letters, Walker and Company, New York"
+    "text": "Thinking about Randomness\n\n“Rational decision makers are able to give reasons for each action they take; outside Las Vegas players do not spin roulette wheels” 1\n\n\nDo you agree?\nWould rational players act randomly?\n\nAriel Rubenstein, “John Nash: The Master of Economic Modeling.” The Scandinavian Journal of Economics 97, no. 1 (1995): 9–13. https://doi.org/10.2307/3440824."
   },
   {
     "objectID": "Slides/06MixedStrategies/06-main.html#thinking-about-randomness-1",
     "href": "Slides/06MixedStrategies/06-main.html#thinking-about-randomness-1",
     "title": "Introduction to Game Theory",
     "section": "Thinking about Randomness",
-    "text": "Thinking about Randomness\n\n“Rational decision makers are able to give reasons for each action they take; outside Las Vegas players do not spin roulette wheels”\n\n\nAriel Rubenstein 1\n\n“John Nash: The Master of Economic Modeling.” The Scandinavian Journal of Economics 97, no. 1 (1995): 9–13. https://doi.org/10.2307/3440824."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/06-main.html#thinking-about-randomness-2",
-    "href": "Slides/06MixedStrategies/06-main.html#thinking-about-randomness-2",
-    "title": "Introduction to Game Theory",
-    "section": "Thinking about Randomness",
-    "text": "Thinking about Randomness\nWhy should we use mixed strategies?!\n\nAs we saw in Activity 2, rarely do real life data fit in completely deterministic models\nYou can interpret the mixed strategy of one player as the beliefs of other players in equilibrium\nLearning some basics of probability theory will help you outside of this class"
+    "text": "Thinking about Randomness\nWhy should we use mixed strategies?!\n\nAs we saw in Activity 2, rarely do real life data fit in completely deterministic models\nInterpret mixed strategy of one player as the beliefs of other players\nProbability and statistics are useful outside of this class"
   },
   {
     "objectID": "Slides/06MixedStrategies/06-main.html#lotteries",
     "href": "Slides/06MixedStrategies/06-main.html#lotteries",
     "title": "Introduction to Game Theory",
     "section": "Lotteries",
-    "text": "Lotteries\n\nIn this class, any choices with uncertain payoffs will be called lotteries.\nA lottery doesn’t have to only be about money\nFor any set of outcomes in a lottery, there will be an associated probability: if \\(a\\) is a possible outcome, then \\(P(a)\\) is the probability that it occurs.\n\nAll probabilities must be between 0 and 1: \\(0 \\leq P(a) \\leq 1\\) for all possibilities \\(a\\).\nAdditionally, the probabilities given in a particular lottery must sum to exactly 1: we will assume that one, and exactly one, outcome must actually occur."
+    "text": "Lotteries\nAny choices with uncertain payoffs will be called lotteries.\n\nDoesn’t have to only be about money\nAny outcome has an associated probability:\n\nif \\(o\\) is a possible outcome, then \\(p(o)\\) is the probability of that outcome\n\nAll probabilities must be between 0 and 1:\n\n\\(0 \\leq P(a) \\leq 1\\) for all possibilities \\(a\\).\n\nAll probabilities in a particular lottery must sum to exactly 1:"
   },
   {
     "objectID": "Slides/06MixedStrategies/06-main.html#expected-utility",
@@ -677,105 +601,28 @@
     "href": "Slides/06MixedStrategies/06-main.html#expected-payoffs",
     "title": "Introduction to Game Theory",
     "section": "Expected Payoffs",
-    "text": "Expected Payoffs\n\nYou calculate an average by adding up the values of a lottery times the probability of how likely each is.\n\n\\[U(a) = \\mathbb{E}[u(a)] = \\sum_{a}u(a)P(a)\\]\n\nThis is a weighted average of the payoffs associated with each outcome \\(a\\), with the weights being the probabilities of each one happening."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/06-main.html#double-or-nothing-game",
-    "href": "Slides/06MixedStrategies/06-main.html#double-or-nothing-game",
-    "title": "Introduction to Game Theory",
-    "section": "Double or Nothing ‘game’",
-    "text": "Double or Nothing ‘game’"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/06-main.html#expected-payoff-examples",
-    "href": "Slides/06MixedStrategies/06-main.html#expected-payoff-examples",
-    "title": "Introduction to Game Theory",
-    "section": "Expected Payoff Examples",
-    "text": "Expected Payoff Examples\nZoidberg’s expected payout if he Lets it Ride is \\(0.50(\\$10) + 0.50(\\$0) = \\$5 - \\$0 = \\$5\\).\n\nLet’s face it, Zoidberg always has luck stacked against him, so suppose instead the coin has a 75% probability of tails,\nThe expected payoff would then be \\[0.25(\\$10) + 0.75(\\$0) = \\$2.50 + \\$0 = \\$2.50 \\]."
+    "text": "Expected Payoffs\n\nYou calculate an average by adding up the values of a lottery times the probability of how likely each is.\n\n\\[U(a) = \\mathbb{E}[u(a)] = \\sum_{a}u(a)p(a)\\]\n\nThis is a weighted average of the payoffs associated with each outcome \\(a\\), with the weights being the probabilities of each one happening."
   },
   {
     "objectID": "Slides/06MixedStrategies/06-main.html#cardinal-payoffs",
     "href": "Slides/06MixedStrategies/06-main.html#cardinal-payoffs",
     "title": "Introduction to Game Theory",
     "section": "Cardinal Payoffs",
-    "text": "Cardinal Payoffs\n\nUsing expected payoffs implies that the payoffs of the outcomes are cardinal, not merely ordinal: this means that the payoffs can be used not just to rank, but to compare the relative “goodness” of outcomes.\n\n\ni.e. an outcome with payoff 2 is actually twice as good as an outcome with payoff 1."
+    "text": "Cardinal Payoffs\nExpected payoffs imply that payoffs are cardinal\n\nrelative differences in payoffs matter\ninstead of ordinal where only rankings matter\n\n\ni.e. an outcome with payoff 2 is actually twice as good as an outcome with payoff 1."
   },
   {
     "objectID": "Slides/06MixedStrategies/06-main.html#von-neumann-morgenstern-utility",
     "href": "Slides/06MixedStrategies/06-main.html#von-neumann-morgenstern-utility",
     "title": "Introduction to Game Theory",
     "section": "Von-Neumann Morgenstern Utility",
-    "text": "Von-Neumann Morgenstern Utility\nThere are a few other axioms beyond just completeness and transitivity which are needed when it comes to making rational choices over lotteries.\n\nContinuity: Small changes in lottery probabilities shouldn’t make your ranking jump around.\nIndependence: If you know which of two lotteries you prefer, when I add a little bit of another unrelated option into both, it shouldn’t change your mind.\n\nBecause expected utility requires special assumptions beyond those of regular utility, it gets it’s own special name:\nVon-Neumann Morgenstern utility function"
+    "text": "Von-Neumann Morgenstern Utility\nWe need new assumptions for rationality over lotteries:\n\nContinuity: Small changes in probabilities shouldn’t make your ranking jump around.\nIndependence: If you know which of two lotteries you prefer, when I add a little bit of another unrelated option into both, it shouldn’t change your mind.\nexpected utility requires special assumptions, so it gets it’s own special name:\n\nVon-Neumann Morgenstern utility function"
   },
   {
     "objectID": "Slides/06MixedStrategies/06-main.html#types-of-uncertainty",
     "href": "Slides/06MixedStrategies/06-main.html#types-of-uncertainty",
     "title": "Introduction to Game Theory",
     "section": "Types of Uncertainty",
-    "text": "Types of Uncertainty\nThere are two main types of uncertainty that we’ll cover in this course: external and internal.\n\nExternal uncertainty results from factors outside of the game that the players don’t control, such as weather or other random events.\nInternal uncertainty result from players’ own actions inside of the game: it is caused whenever a player acts in a random way."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/06-main.html#external-uncertainty-states-of-nature",
-    "href": "Slides/06MixedStrategies/06-main.html#external-uncertainty-states-of-nature",
-    "title": "Introduction to Game Theory",
-    "section": "External Uncertainty: States of Nature",
-    "text": "External Uncertainty: States of Nature\n\nThe simplest form of uncertainty that we’ll discuss is simple uncertainty or uncertainty about the state of nature.\nPlayers don’t know which state of nature will occur — but we assume that they do know the probability associated with each state. —"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/06-main.html#example-a-card-game",
-    "href": "Slides/06MixedStrategies/06-main.html#example-a-card-game",
-    "title": "Introduction to Game Theory",
-    "section": "Example: A Card Game",
-    "text": "Example: A Card Game\nThere are two players, Doc and Wyatt. Both are dealt a hand of cards: there is a 50% probability that Wyatt’s hand is better, and a 50% probability that Doc’s is. There are no ties.\n\nAt the beginning of the game, both players must bet $1.\nAfter seeing his cards, Doc may either Stay, keeping the $1 bet, or may Raise, bringing his bet to $2.\nDoc simultaneously decides to either Match Doc’s bet, whatever that may be, or to Quit and forfeit his $1.\nIf Wyatt Matches, the player with the better hand wins all the money. If Wyatt Quits, Doc wins all the money by default."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/06-main.html#game-table-docs-hand-is-better",
-    "href": "Slides/06MixedStrategies/06-main.html#game-table-docs-hand-is-better",
-    "title": "Introduction to Game Theory",
-    "section": "Game Table: Doc’s Hand is Better",
-    "text": "Game Table: Doc’s Hand is Better\nIn the state of nature where Doc has the better hand, this is the game table:\n\n\n\nDoc, Wyatt\n\\(Match\\)\n\\(Quit\\)\n\n\n\n\n\\(Stay\\)\n\\(1, -1\\)\n\\(1, -1\\)\n\n\n\\(Raise\\)\n\\(2, -2\\)\n\\(1,-1\\)"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/06-main.html#game-table-wyatts-hand-is-better",
-    "href": "Slides/06MixedStrategies/06-main.html#game-table-wyatts-hand-is-better",
-    "title": "Introduction to Game Theory",
-    "section": "Game Table: Wyatt’s Hand is Better",
-    "text": "Game Table: Wyatt’s Hand is Better\nOn the other hand, if Wyatt has the better hand, this is the game table:\n\n\n\nDoc, Wyatt\n\\(Match\\)\n\\(Quit\\)\n\n\n\n\n\\(Stay\\)\n\\(-1, 1\\)\n\\(1, -1\\)\n\n\n\\(Raise\\)\n\\(-2, 2\\)\n\\(1,-1\\)"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/06-main.html#payoffs-as-lotteries",
-    "href": "Slides/06MixedStrategies/06-main.html#payoffs-as-lotteries",
-    "title": "Introduction to Game Theory",
-    "section": "Payoffs as Lotteries",
-    "text": "Payoffs as Lotteries\nWe could solve each of these game tables separately but neither player knows which state really applies.\n\nInstead, to solve this game, we must approach the payoffs as lotteries:\n\n\nDoc’s payoff from (\\(Stay,~Match\\)): gains 1 with probability 0.5, and loses 1 with probability 0.5.\nWyatt’s payoff from (\\(Stay,~Match\\)): loses 1 with probability 0.5, and gains 1 with probability 0.5.\nthe expected payoffs of these lotteries are both 0."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/06-main.html#game-table-expected-payoffs",
-    "href": "Slides/06MixedStrategies/06-main.html#game-table-expected-payoffs",
-    "title": "Introduction to Game Theory",
-    "section": "Game Table: Expected Payoffs",
-    "text": "Game Table: Expected Payoffs\n\n\n\nDoc, Wyatt\n\\(Match\\)\n\\(Quit\\)\n\n\n\n\n\\(Stay\\)\n0, 0\n1, -1\n\n\n\\(Raise\\)\n0, 0\n1,-1\n\n\n\n\nThe Nash equilibria under uncertainty are (\\(Stay,~Match\\)) and (\\(Raise,~Match\\))."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/06-main.html#variation-unknown-probabilities",
-    "href": "Slides/06MixedStrategies/06-main.html#variation-unknown-probabilities",
-    "title": "Introduction to Game Theory",
-    "section": "Variation: Unknown Probabilities",
-    "text": "Variation: Unknown Probabilities\nSuppose that the probability Doc has the better hand is \\(p\\).\n\nHow large does \\(p\\) have to be before there is a Nash equilibrium where Wyatt Quits?\n\nWe can find the expected payoffs in terms of p:\n\n(Stay, Match):\n\nDoc’s Expected Payoff:\n\n\\(1p - 1(1-p) = 2p - 1\\)\n\nWyatt’s Expected Payoff:\n\n\\(-1p + 1(1-p) = -2p + 1\\)"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/06-main.html#variation-unknown-probabilities-1",
-    "href": "Slides/06MixedStrategies/06-main.html#variation-unknown-probabilities-1",
-    "title": "Introduction to Game Theory",
-    "section": "Variation: Unknown Probabilities",
-    "text": "Variation: Unknown Probabilities\n\n\n(Raise, Match):\n\nDoc’s Expected Payoff:\n\n\\(2p - 2(1-p) = 4p -2\\)\n\nWyatt’s Expected Payoff:\n\n\\(-2p + 2(1-p) = -4p + 2\\)\n\n\n\n(Stay, Quit) and (Raise, Quit):\n\nDoc’s Expected Payoff:\n\n\\(1p + 1(1-p) = 1\\)\n\nWyatt’s Expected Payoff:\n\\(-1p -1(1-p) = -1\\)"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/06-main.html#variation-unknown-probabilities-2",
-    "href": "Slides/06MixedStrategies/06-main.html#variation-unknown-probabilities-2",
-    "title": "Introduction to Game Theory",
-    "section": "Variation: Unknown Probabilities",
-    "text": "Variation: Unknown Probabilities\n\n\n\nDoc, Wyatt\n\\(Match\\)\n\\(Quit\\)\n\n\n\n\n\\(Stay\\)\n\\(2p - 1, -2p + 1\\)\n\\(1, -1\\)\n\n\n\\(Raise\\)\n\\(4p - 2, -4p + 2\\)\n\\(1,-1\\)\n\n\n\nIf Wyatt Quits, Doc doesn’t care whether he Stays or Raises\nTo have a NE where Wyatt Quits, we just need Wyatt to be happy with Quitting.\n\n(\\(Stay,~Quit\\)) is a NE if \\(-1 \\geq -2p + 1\\), i.e. if \\(p \\geq 1\\).\n(\\(Raise,~Quit\\)) is a NE if \\(-1 \\geq -4p + 2\\), i.e. if \\(p \\geq \\frac{3}{4}\\).\nOne interpretation of this is that it is only rational for Wyatt to Quit if he is very confident that Doc has the better hand."
+    "text": "Types of Uncertainty\nTwo main types of uncertainty: external and internal.\n\nExternal uncertainty from factors outside of the players’ control\n\nsuch as weather or other random events, or external players\n\nInternal uncertainty from players’ own actions:\n\nwhen some player acts in an unpredictable way,\n\neven to themselves\n\nFor example, I flip a coin to tell me what to choose"
   },
   {
     "objectID": "Slides/06MixedStrategies/06-main.html#internal-uncertainty",
@@ -3624,7 +3471,7 @@
     "href": "Homework/index.html",
     "title": "Homework Assignments",
     "section": "",
-    "text": "Assignment 1 Download\nDue: Friday, October 3rd Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 2 Download\nDue: Friday, October 10th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 3 Download\nDue: Friday, October 17th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 4 Download\nDue: Wednesday, October 29th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 5 Download\nDue: Wednesday, November 7th Submit to Canvas\n\n  Expand\n  \n    \n  \n\n\n\nOther Assignments: coming soon"
+    "text": "Assignment 1 Download\nDue: Friday, October 3rd Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 2 Download\nDue: Friday, October 10th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 3 Download\nDue: Friday, October 17th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 4 Download\nDue: Wednesday, October 29th Submit to Canvas\n\n  Answer Key\n  \n    \n  \n\n\n\nAssignment 5 Download\nDue: Friday, November 7th Submit to Canvas\n\n  Expand\n  \n    \n  \n\n\n\nOther Assignments: coming soon"
   },
   {
     "objectID": "Exams/index.html",
@@ -6865,21 +6712,21 @@
     "href": "Slides/06MixedStrategies/0600-penaltykicks.html",
     "title": "EC327 Game Theory",
     "section": "",
-    "text": "Why might mixed strategies be useful in analyzing behavior of kickers and goalies in penalty shootouts?\n\n\nreaction times \\(\\rightarrow\\) essentially simultaneous game\nzero-sum game with incentive to keep the other player guessing\nmodelling observed strategies chosen as random variables\n\nspecific empirical statistics can be compared to their theoretical values"
+    "text": "Why might randomized actions be useful?\n\n\nreaction times \\(\\rightarrow\\) essentially simultaneous game\nzero-sum game with incentive to keep the other player guessing\n\nBeing predictable helps your opponent\n\nmodelling observed strategies chosen as random variables\n\nCan compare empirical data with theoretical predictions"
   },
   {
     "objectID": "Slides/06MixedStrategies/0600-penaltykicks.html#mixed-strategies-in-penalty-kicks",
     "href": "Slides/06MixedStrategies/0600-penaltykicks.html#mixed-strategies-in-penalty-kicks",
     "title": "EC327 Game Theory",
     "section": "",
-    "text": "Why might mixed strategies be useful in analyzing behavior of kickers and goalies in penalty shootouts?\n\n\nreaction times \\(\\rightarrow\\) essentially simultaneous game\nzero-sum game with incentive to keep the other player guessing\nmodelling observed strategies chosen as random variables\n\nspecific empirical statistics can be compared to their theoretical values"
+    "text": "Why might randomized actions be useful?\n\n\nreaction times \\(\\rightarrow\\) essentially simultaneous game\nzero-sum game with incentive to keep the other player guessing\n\nBeing predictable helps your opponent\n\nmodelling observed strategies chosen as random variables\n\nCan compare empirical data with theoretical predictions"
   },
   {
     "objectID": "Slides/06MixedStrategies/0600-penaltykicks.html#x2-penalty-kick-game",
     "href": "Slides/06MixedStrategies/0600-penaltykicks.html#x2-penalty-kick-game",
     "title": "EC327 Game Theory",
     "section": "2x2 Penalty Kick Game",
-    "text": "2x2 Penalty Kick Game\n\nSimplest form of this game,\n(prob of making goal is either 0% or 100%)\n\n\n\n\n\nKicker, Goalie\n\\(Left_g\\)\n\\(Right_g\\)\n\n\n\n\n\\(Left_k\\)\n0.3, 0.7\n0.9, 0.1\n\n\n\\(Right_k\\)\n0.9, 0.1\n0.3, 0.7\n\n\n\n\nWhat should the Kicker do?\n\n\nPurely Left means goalie could block by always going Left 1\nPurely Right means goalie could block by always going Right\nSo a rational strategy must be a random mix between both pure strategies"
+    "text": "2x2 Penalty Kick Game\n\nSimplified penalty kick game\nwith only Left and Right as strategies\n\n\n\nKicker, Goalie\n\\(Left_g\\)\n\\(Right_g\\)\n\n\n\n\n\\(Left_k\\)\n0.3, 0.7\n0.9, 0.1\n\n\n\\(Right_k\\)\n0.9, 0.1\n0.3, 0.7\n\n\n\nWhat should the Kicker do?\n\n\nPurely Left means goalie could block by always going Left 1\nPurely Right means goalie could block by always going Right\nSo a rational strategy must be a random mix between both pure strategies"
   },
   {
     "objectID": "Slides/06MixedStrategies/0600-penaltykicks.html#x2-penalty-kick-game-1",
@@ -6914,7 +6761,7 @@
     "href": "Slides/06MixedStrategies/0600-penaltykicks.html#x2-penalty-kick-game-5",
     "title": "EC327 Game Theory",
     "section": "2x2 Penalty Kick Game",
-    "text": "2x2 Penalty Kick Game\n\n\n\n\n\nKicker, Goalie\n\\(Left_g\\)\n\\(Right_g\\)\n\n\n\n\n\\(Left_k\\)\n0.3, 0.7\n0.9, 0.1\n\n\n\\(Right_k\\)\n0.9, 0.1\n0.3, 0.7\n\n\n\n\n\nSo the Kicker should play \\(Left_k\\) 50% of the time, \\(Right_k\\) 50%\nthe Goalie should play \\(Left_g\\) 50% of the time, \\(Right_g\\) 50%\nIn this mixed-strategy Nash equilibrium, both players are indifferent between either of their pure strategies\nThe kicker’s probability of scoring is 0.6 no matter what direction they choose"
+    "text": "2x2 Penalty Kick Game\n\n\n\nKicker, Goalie\n\\(Left_g\\)\n\\(Right_g\\)\n\n\n\n\n\\(Left_k\\)\n0.3, 0.7\n0.9, 0.1\n\n\n\\(Right_k\\)\n0.9, 0.1\n0.3, 0.7\n\n\n\nIn Nash equilibrium: * The Kicker should play Left 50% of the time * The Goalie should play Left 50% * Both players are indifferent between either pure strategy * Kicker’s probability of scoring is 0.6 - no matter what direction they choose"
   },
   {
     "objectID": "Slides/06MixedStrategies/0600-penaltykicks.html#footnotes",
@@ -7313,52 +7160,53 @@
     "text": "Plot the adjusted data across rounds\n\n\nSee the code\n# plot adjusted quantities produced for all groups across rounds\ndata %&gt;%\n  ggplot( aes( x = round, y = q_adj,\n      group = group, color = group )) +\n  geom_line(alpha = 0.5) +\n  geom_point() +\n  ylim(0,20) +\n  geom_hline(yintercept = 1) +\n  ggthemes::theme_pander() +\n  theme(plot.caption = element_text(hjust = 0)) +\n  labs(\n    title = \"Activity 5 - Social Media Ads\",\n    subtitle = \"Adjusted production quantities across 9 rounds\",\n    caption = \"We started with 10 groups competing to sell ads in a market with a randomly generated demand curve. \\nEach round firms were shown the demand curve and asked to choose a quantity of ads to produce. \\nBecause the total quantity produced ranged from round to round depending on the demand curve,\\n the quantities shown here are adjusted by taking the ratio of the quantity that a theoretical monopolist firm would set given the same demand curve \\ndivided by how many ads each firm produced each round .\"\n  ) \n\n\nWarning: Removed 25 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 26 rows containing missing values or values outside the scale range\n(`geom_point()`)."
   },
   {
-    "objectID": "activities/06PenaltyKicks/penaltykicks.html",
-    "href": "activities/06PenaltyKicks/penaltykicks.html",
-    "title": "Penalty Kick Shootout",
+    "objectID": "activities/06PenaltyKicks/discussion.html",
+    "href": "activities/06PenaltyKicks/discussion.html",
+    "title": "Penalty Kicks Discussion Sheet",
     "section": "",
-    "text": "Watch the clip from the 2022 FIFA world cup final game between Argentina and France:\nObjective: In this activity you will play a game which demonstrates the idea of mixed strategies in simultaneous games. You will pair up with another classmate to simulate a soccer penalty shootout where each of you will represent different soccer teams. Your goal is to score more goals than your opponent after taking turns as both the kicker and the goalie.",
-    "crumbs": [
-      "Syllabus",
-      "Mixed Strategies",
-      "[Activity]{.text-success}: Penalty Kick Shootout"
-    ]
+    "text": "Are penalty kicks played in a mixed strategy equilibrium?\nThis is the question asked by Ignacio Palacios-Huerta. 1 The data come from 1417 penalty kicks during professional games in England, Italy, and Spain between 1995-2000 . The choices of the kickers are recorded as either left (L), center (C), or right (R), corresponding to the area of the goal they kick the ball towards. The goalies choices, L, C, or R, correspond to which area of the goal the goalie dives towards.\nThe table below shows the observed probability of a goal being scored for each combination of kicker and goalie choices simplifying the choice of a kicker down to \\(Dominant\\) representing a right-footed kicker kicking to the left or a left-footed kicker kicking to the left, and \\(NonDominant\\) represents kicking to the opposite side.\nScoring Probabilities (payoffs)\nThe next table shows the frequency with which each combination of these strategies were actually observed during play:\nStrategy Frequencies Observed"
   },
   {
-    "objectID": "activities/06PenaltyKicks/penaltykicks.html#game-rules",
-    "href": "activities/06PenaltyKicks/penaltykicks.html#game-rules",
-    "title": "Penalty Kick Shootout",
-    "section": "Game Rules:",
-    "text": "Game Rules:\n\n1. Pair up and flip to kick first\nFind your opponent and flip a coin to determine who will kick first. The other person will be be the goalie and attempt to block the kicker’s shots on goal.\n\n\n2. Shoot for best out of 5\nA strategy for each player is one of three parts of the goal: * Left * Center * or Right 1 On the count of three, you and your opponent will simultaneously point to a direction which will determine the probability of a goal being scored.\nFor each combination of strategies, the probability of a goal being scored is given by the table below:\n\n\n\n\n\n\n\n\n\nKicker, Goalie\nL\nC\nR\n\n\n\n\nL\n.3\n.9\n.9\n\n\nC\n.6\n0\n.6\n\n\nR\n.9\n.9\n.3\n\n\n\n\n\n3. Record every kick\nAfter each kick, make sure to record both players’ strategies as well whether a goal was scored.\nGoogle Sheet for Recording: https://docs.google.com/spreadsheets/d/1soh4vh9bWGs3yhY0A8mQfTR7tYmRYLN-OoSdAxfyOc4/edit?usp=sharing\n\nAlternate between you and your opponent being the kicker and goalie until you have both attempted 5 shots each.\nIf there is a tie after 5 kicks each, you will enter sudden death where you keep alternating kicks until one player scores and the other misses.\n\n\n\n4. Repeat with a new opponent\nFind your next opponent in the bracket. If you are knocked out of the bracket, find someone else to play against for fun, or observe the competitions of others.\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| code-fold: false\n#| label: soccer-penalty-shootout\n#| viewerHeight: 600\n\nlibrary(shiny)\n\n# Define the goal probabilities matrix\ngoal_probabilities &lt;- matrix(\n  c(0.3, 0.9, 0.9,\n    0.6, 0.0, 0.6,\n    0.9, 0.9, 0.3),\n  nrow = 3, byrow = TRUE,\n  dimnames = list(Kicker = c(\"Left\", \"Center\", \"Right\"), Goalie = c(\"Left\", \"Center\", \"Right\"))\n)\n\n# User interface\nui &lt;- fluidPage(\n    titlePanel(\"Soccer Penalty Shootout Simulation\"),\n    \n    sidebarLayout(\n        sidebarPanel(\n            # Coin flip button and display\n            actionButton(\"coin_flip\", \"Flip Coin to Decide Kicker\"),\n            textOutput(\"coin_result\"),\n            \n            # Strategy selection\n            selectInput(\"kicker_choice\", \"Kicker's Strategy:\", choices = c(\"Left\", \"Center\", \"Right\")),\n            selectInput(\"goalie_choice\", \"Goalie's Strategy:\", choices = c(\"Left\", \"Center\", \"Right\")),\n            \n            # Button to simulate outcome and display result\n            actionButton(\"shoot\", \"Take Shot\"),\n            textOutput(\"outcome_result\")\n        ),\n        \n        mainPanel(\n            # Display probability table for reference\n            h4(\"Goal Probability Table\"),\n            tableOutput(\"probability_table\")\n        )\n    )\n)\n\n# Server logic\nserver &lt;- function(input, output) {\n    # Display probability table in the UI\n    output$probability_table &lt;- renderTable({\n        as.data.frame(goal_probabilities)\n    }, rownames = TRUE)\n    \n    # Coin flip logic\n    output$coin_result &lt;- renderText({\n        input$coin_flip\n        isolate({\n            if (input$coin_flip &gt; 0) {\n                result &lt;- sample(c(\"Kicker goes first!\", \"Goalie goes first!\"), 1)\n                paste(\"Coin Flip Result:\", result)\n            }\n        })\n    })\n    \n    # Shoot outcome logic\n    output$outcome_result &lt;- renderText({\n        input$shoot\n        isolate({\n            if (input$shoot &gt; 0) {\n                kicker &lt;- input$kicker_choice\n                goalie &lt;- input$goalie_choice\n                prob_goal &lt;- goal_probabilities[kicker, goalie]\n                \n                # Randomize outcome based on the goal probability\n                outcome &lt;- ifelse(runif(1) &lt; prob_goal, \"Goal!\", \"Missed!\")\n                paste(\"Kicker's choice:\", kicker, \"| Goalie's choice:\", goalie, \"| Result:\", outcome)\n            }\n        })\n    })\n}\n\n# Run the app\nshinyApp(ui, server)",
-    "crumbs": [
-      "Syllabus",
-      "Mixed Strategies",
-      "[Activity]{.text-success}: Penalty Kick Shootout"
-    ]
-  },
-  {
-    "objectID": "activities/06PenaltyKicks/penaltykicks.html#assignment",
-    "href": "activities/06PenaltyKicks/penaltykicks.html#assignment",
-    "title": "Penalty Kick Shootout",
+    "objectID": "activities/06PenaltyKicks/discussion.html#assignment",
+    "href": "activities/06PenaltyKicks/discussion.html#assignment",
+    "title": "Penalty Kicks Discussion Sheet",
     "section": "Assignment:",
-    "text": "Assignment:\nCalculate the theoretical mixed-strategy Nash equilibrium according to the payoff table and compare with the observed frequencies.\nIs the evidence consistent with the hypothesis that penalty kicks are played in an MSNE?\nSubmit your work and your discussion to Canvas.",
-    "crumbs": [
-      "Syllabus",
-      "Mixed Strategies",
-      "[Activity]{.text-success}: Penalty Kick Shootout"
-    ]
+    "text": "Assignment:\nCalculate the theoretical mixed-strategy Nash equilibrium according to the payoff table and compare with the observed frequencies.\nIs the evidence consistent with the hypothesis that penalty kicks are played in an MSNE?\nSubmit your work and your discussion to Canvas.\nBack to Activity"
   },
   {
-    "objectID": "activities/06PenaltyKicks/penaltykicks.html#footnotes",
-    "href": "activities/06PenaltyKicks/penaltykicks.html#footnotes",
-    "title": "Penalty Kick Shootout",
+    "objectID": "activities/06PenaltyKicks/discussion.html#footnotes",
+    "href": "activities/06PenaltyKicks/discussion.html#footnotes",
+    "title": "Penalty Kicks Discussion Sheet",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nfrom the kicker’s perspective↩︎\nPalacios-Huerta, Ignacio. “Professionals Play Minimax,” Review of Economic Studies, 70 (2003), 395-415↩︎",
-    "crumbs": [
-      "Syllabus",
-      "Mixed Strategies",
-      "[Activity]{.text-success}: Penalty Kick Shootout"
-    ]
+    "text": "Footnotes\n\n\nPalacios-Huerta, Ignacio. “Professionals Play Minimax,” Review of Economic Studies, 70 (2003), 395-415↩︎"
+  },
+  {
+    "objectID": "activities/06PenaltyKicks/penaltykicks_results.html",
+    "href": "activities/06PenaltyKicks/penaltykicks_results.html",
+    "title": "Activity 6 Results",
+    "section": "",
+    "text": "On homework 3, I ask you use some statistics about the class data from activity 6 to relate to theoretical predictions. I realised not everyone has taken a stats or metrics class yet, so I wanted to post some pieces of R code as examples of starting places to help you answer this question.\nFeel free to use as much (or to ignore) of the code provided as you want, but keep in mind that just copying these statistics without applying them to specific theoretical predictions will not be enough to earn you credit for this assignment.\nClick on any heading with &gt; See the code to reveal hidden code chunks:\nSee the code\n# comments look like this\nprint(\"This is R code\")\n\n\n[1] \"This is R code\""
+  },
+  {
+    "objectID": "activities/06PenaltyKicks/penaltykicks_results.html#dataset-structure",
+    "href": "activities/06PenaltyKicks/penaltykicks_results.html#dataset-structure",
+    "title": "Activity 6 Results",
+    "section": "Dataset Structure",
+    "text": "Dataset Structure\nI collected the results from the in-class penalty kicks activity as a csv file where each row represents an different attempted shot.\nThe columns round, match, and shot contain the id representing which round in the bracket, which match of that specific round, and whether that shot was the first, second, third, fourth, or fifth shot of that match, respectively.\nTo make these data easier to visualize and calculate statistics, you can import them to an object in R using the read_csv function from the tidyverse package.\n\n# load tidyverse packages\nlibrary(tidyverse)\n\n# setwd(\"activities/06PenaltyKicks\")\n\n# read in the class results from csv file\ndata &lt;- read_csv(\"EC327F24-activity6_results.csv\") %&gt;%\n  filter(!is.na(s_k), !is.na(s_g)) # filter out missing data\n\n# print the first 10 observations\nhead(data, n = 10)\n\n# A tibble: 10 × 6\n   round match  shot s_k    s_g    goal \n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;lgl&gt;\n 1     1     1     1 Right  Left   FALSE\n 2     1     1     1 Left   Right  FALSE\n 3     1     1     2 Center Center FALSE\n 4     1     1     2 Left   Right  FALSE\n 5     1     1     3 Right  Left   FALSE\n 6     1     2     1 Left   Right  TRUE \n 7     1     2     1 Left   Center TRUE \n 8     1     2     2 Right  Left   TRUE \n 9     1     2     2 Left   Center TRUE \n10     1     2     3 Center Left   FALSE\n\n\nThe important variables are the choices of the kicker and goalie for each kick attempt as well as whether a goal was scored or not:\n\ns_k represents the direction the kicker chose to kick\ns_g represents the direction the goalie chose to attempt to block\ngoal is an indicator which is TRUE if a goal was scored, and FALSE if a kick was blocked or missed.\n\n\nN &lt;- nrow(data)\n\nAcross all rounds and matches played in class this quarter, we had 324 different shots attempted, which are each a row in this dataset."
+  },
+  {
+    "objectID": "activities/06PenaltyKicks/penaltykicks_results.html#group-results-by-srategy-profile",
+    "href": "activities/06PenaltyKicks/penaltykicks_results.html#group-results-by-srategy-profile",
+    "title": "Activity 6 Results",
+    "section": "Group Results by Srategy Profile",
+    "text": "Group Results by Srategy Profile\nI might want to compare how often we see a kicker choosing \\(Right\\) at the same time a goalie blocked \\(Right\\), vs a kicker chosing \\(Right\\) when a goalie blocked \\(Left\\), etc, for all 9 different possible pure strategy combinations.\n\n\nSee the code\n# summarize by type of strategy profile\nprofiles_tbl &lt;- data %&gt;%\n  group_by(s_k, s_g) %&gt;% # group by each strategy combo to summarise each group\n  summarise(\n    n = n(), # get counts of each profile\n    p = n / N, # calculate proportions of total observations\n    num_goals = sum(goal), # count numbers of goals scored\n    prob_goal = num_goals / N # probability of goal scored\n  ) %&gt;%\n  ungroup() # get rid of groups structure to make later manipulations easier\n# print the profiles table\nprofiles_tbl\n\n\n# A tibble: 9 × 6\n  s_k    s_g        n      p num_goals prob_goal\n  &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt;  &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;\n1 Center Center    29 0.0895         0    0     \n2 Center Left      25 0.0772        18    0.0556\n3 Center Right     35 0.108         23    0.0710\n4 Left   Center    37 0.114         30    0.0926\n5 Left   Left      38 0.117          8    0.0247\n6 Left   Right     45 0.139         36    0.111 \n7 Right  Center    36 0.111         34    0.105 \n8 Right  Left      41 0.127         34    0.105 \n9 Right  Right     38 0.117         11    0.0340\n\n\nThis table shows that the Kicker choosing \\(Left\\) when the goalie chose \\(Right\\) was the most common type of outcome, which happened in 14% of the 324 total shots.\n\nPlotting frequency of each strategy profile\nIf you want a more visual representation of the information in this table, you could use a bar graph where each bar represents a row of the table:\n\n\nSee the code\nggplot(profiles_tbl, aes(x = s_g, y = n, fill = s_k)) +\n  geom_bar(stat = \"identity\") +\n  facet_wrap(vars(s_k))\n\n\n\n\n\n\n\n\n\n\n\nTesting strategy profiles against theory\nIf you wanted to compare the frequency of each type of choice matchup in this table with what you would expect in an MSNE, you could use the chisq.test function to test the goodness of fit of the n column in our table to some theoretical distribution of p which we would expect for each pure strategy combination.\nFor example, suppose that a mixed strategy Nash equilibrium of this game would result in each profile being observed with equal probability of 1/9.\n\n\nSee the code\n# use observed num of each choice combo from profiles table\nn_observed &lt;- profiles_tbl %&gt;% select(n)\n# theoretical predictions of each profile being observed\n# make sure they're in the same order as in the profiles table\np_predicted &lt;- c(1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9)\n# test whether n is drawn from p_predicted distribution\nchisq.test(\n  x = n_observed,\n  p = p_predicted\n)\n\n\n\n    Chi-squared test for given probabilities\n\ndata:  n_observed\nX-squared = 7.9444, df = 8, p-value = 0.4389\n\n\nCompare the resulting \\(\\chi^2\\)- statistic against the critical value of 15.51 from the \\(\\chi^2\\) distribution with 8 degrees of freedom at the 95% confidence level."
+  },
+  {
+    "objectID": "activities/06PenaltyKicks/penaltykicks_results.html#comparing-kickers-strategies",
+    "href": "activities/06PenaltyKicks/penaltykicks_results.html#comparing-kickers-strategies",
+    "title": "Activity 6 Results",
+    "section": "Comparing Kicker’s Strategies",
+    "text": "Comparing Kicker’s Strategies\nInstead of comparing to a specific distribution of observed strategy combinations, you might be interested in seeing the actual average payoff to either player for each of their strategies played in the data.\n\n\nSee the code\n# summarise win probabiltiy by kicker's strategy\nkicker_strats &lt;- data %&gt;%\n  group_by(s_k) %&gt;% # group all kickers strategies together\n  summarise(\n    num_goals = sum(goal), # count how many times kicker scored\n    prob_goal = sum(goal) / N # calculate success rate\n  )\n# print kicker strategies table\nkicker_strats\n\n\n# A tibble: 3 × 3\n  s_k    num_goals prob_goal\n  &lt;chr&gt;      &lt;int&gt;     &lt;dbl&gt;\n1 Center        41     0.127\n2 Left          74     0.228\n3 Right         79     0.244\n\n\n\nTesting for equal success rates for each kick\n\n\nSee the code\n# use observed num of each choice combo from kicker strategies table\nn_observed &lt;- kicker_strats %&gt;% select(num_goals)\n# equal probobility of success for each strategy\np_predicted &lt;- c(1/3, 1/3, 1/3)\n# test whether num_goals are equal across strategy choice\nchisq.test(\n  x = n_observed,\n  p = p_predicted\n)\n\n\n\n    Chi-squared test for given probabilities\n\ndata:  n_observed\nX-squared = 13.186, df = 2, p-value = 0.00137\n\n\n\n\nSee the code\n# chi-square critical value with 2 degrees of freedom\nchisq.crit &lt;- qchisq(p = 0.95, df = 2)\n\n\nCompare \\(\\chi^2\\)-statistic to a critical value of 5.99. If the statistic is greater than the critical value, reject the null hypothesis that the success rates are equal with 95% confidence.\n\n\nSee the code\ndata %&gt;%\n  mutate(\n    s_k = case_when(\n      s_k %in% c(\"Right\", \"Left\") ~ \"Side\",\n      s_k == \"Center\" ~ \"Center\"\n    ),\n    s_g = case_when(\n      s_g %in% c(\"Right\", \"Left\") ~ \"Side\",\n      s_g == \"Center\" ~ \"Center\"\n    )\n  ) %&gt;%\n  group_by(s_k, s_g) %&gt;%\n  summarise(\n    n_obs = n(),\n    num_goals = sum(goal==TRUE),\n    prob_goal = sum(goal) / n()\n  )\n\n\n`summarise()` has grouped output by 's_k'. You can override using the `.groups`\nargument.\n\n\n# A tibble: 4 × 5\n# Groups:   s_k [2]\n  s_k    s_g    n_obs num_goals prob_goal\n  &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt;     &lt;int&gt;     &lt;dbl&gt;\n1 Center Center    29         0     0    \n2 Center Side      60        41     0.683\n3 Side   Center    73        64     0.877\n4 Side   Side     162        89     0.549"
   },
   {
     "objectID": "activities/06PenaltyKicks/solution.html",

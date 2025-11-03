@@ -45,11 +45,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-edbf0db1a146f148c42567bee0685584.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-72da31740c9dd7448d6ef0f9f3a0386c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../site_libs/bootstrap/bootstrap-edbf0db1a146f148c42567bee0685584.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<meta name="shinylive:serviceworker_dir" content="../..">
-<script src="../../site_libs/quarto-contrib/shinylive-0.8.0/shinylive/load-shinylive-sw.js" type="module"></script>
-<script src="../../site_libs/quarto-contrib/shinylive-0.8.0/shinylive/run-python-blocks.js" type="module"></script>
-<link href="../../site_libs/quarto-contrib/shinylive-0.8.0/shinylive/shinylive.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/shinylive-quarto-css/shinylive-quarto.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -80,35 +75,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -331,9 +297,6 @@ window.Quarto = {
       </button>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="bbbfe362e3e07928ef2d5f3d036040e6" class="alert alert-warning hidden"><i class="bi bi-clipboard2-check-fill quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p>Midterm exam this Wednesday: Oct.&nbsp;29th</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -582,49 +545,50 @@ window.Quarto = {
 </section>
 <section id="shoot-for-best-out-of-5" class="level3">
 <h3 class="anchored" data-anchor-id="shoot-for-best-out-of-5">2. Shoot for best out of 5</h3>
-<p>A strategy for each player is one of three parts of the goal: * Left * Center * or Right <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> On the count of three, you and your opponent will simultaneously point to a direction which will determine the probability of a goal being scored.</p>
-<p>For each combination of strategies, the probability of a goal being scored is given by the table below:</p>
+<p>A strategy for each player is one of three parts of the goal:</p>
+<ul>
+<li>Left</li>
+<li>Center</li>
+<li>or Right <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+</ul>
+<p>On the count of three, you and your opponent will simultaneously point to a direction which will determine the probability of a goal being scored.</p>
+<p>For each combination of strategies, the payoffs in the table below represent the probability of a goal being scored.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 47%">
-<col style="width: 17%">
-<col style="width: 17%">
-<col style="width: 17%">
-</colgroup>
 <thead>
 <tr class="header">
-<th><span class="red">Kicker</span>, <span class="blue">Goalie</span></th>
-<th><span class="blue">L</span></th>
-<th><span class="blue">C</span></th>
-<th><span class="blue">R</span></th>
+<th style="text-align: right;">Kicker, Goalie</th>
+<th>Left</th>
+<th>Center</th>
+<th>Right</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="red">L</span></td>
-<td>.3</td>
-<td>.9</td>
-<td>.9</td>
+<td style="text-align: right;">Left</td>
+<td>30, 70</td>
+<td>90, 10</td>
+<td>90, 10</td>
 </tr>
 <tr class="even">
-<td><span class="red">C</span></td>
-<td>.6</td>
-<td>0</td>
-<td>.6</td>
+<td style="text-align: right;">Center</td>
+<td>60, 40</td>
+<td>0, 100</td>
+<td>60, 40</td>
 </tr>
 <tr class="odd">
-<td><span class="red">R</span></td>
-<td>.9</td>
-<td>.9</td>
-<td>.3</td>
+<td style="text-align: right;">Right</td>
+<td>90, 10</td>
+<td>90, 10</td>
+<td>30, 70</td>
 </tr>
 </tbody>
 </table>
+<p>For example, if the Kicker kicks to the Left and the Goalie tries to block Left, there is a 30% chance of the ball going in and the kicker scoring, but there is a 70% chance that the goalie successfully blocks the goal.</p>
 </section>
 <section id="record-every-kick" class="level3">
 <h3 class="anchored" data-anchor-id="record-every-kick">3. Record every kick</h3>
 <p>After each kick, make sure to <strong>record both players’ strategies</strong> as well <strong>whether a goal was scored</strong>.</p>
-<p><u>Google Sheet for Recording:</u> <a href="https://docs.google.com/spreadsheets/d/1soh4vh9bWGs3yhY0A8mQfTR7tYmRYLN-OoSdAxfyOc4/edit?usp=sharing" class="uri">https://docs.google.com/spreadsheets/d/1soh4vh9bWGs3yhY0A8mQfTR7tYmRYLN-OoSdAxfyOc4/edit?usp=sharing</a></p>
+<p><a href="https://docs.google.com/spreadsheets/d/1N3GAKdCjf9GVBnk5vkWsFJjAaTv-sJCps1nz-rVsUKY/edit?usp=sharing" class="btn btn-outline-primary" role="button">Google Sheet for Recording</a></p>
 <ul>
 <li><p>Alternate between you and your opponent being the kicker and goalie until you have both attempted 5 shots each.</p></li>
 <li><p>If there is a tie after 5 kicks each, you will enter <em>sudden death</em> where you keep alternating kicks until one player scores and the other misses.</p></li>
@@ -633,154 +597,14 @@ window.Quarto = {
 <section id="repeat-with-a-new-opponent" class="level3">
 <h3 class="anchored" data-anchor-id="repeat-with-a-new-opponent">4. Repeat with a new opponent</h3>
 <p>Find your next opponent in the bracket. If you are knocked out of the bracket, find someone else to play against for fun, or observe the competitions of others.</p>
-<pre class="shinylive-r" data-engine="r"><code>#| '!! shinylive warning !!': |
-#|   shinylive does not work in self-contained HTML documents.
-#|   Please set `embed-resources: false` in your metadata.
-#| standalone: true
-#| code-fold: false
-#| label: soccer-penalty-shootout
-#| viewerHeight: 600
-
-library(shiny)
-
-# Define the goal probabilities matrix
-goal_probabilities &lt;- matrix(
-  c(0.3, 0.9, 0.9,
-    0.6, 0.0, 0.6,
-    0.9, 0.9, 0.3),
-  nrow = 3, byrow = TRUE,
-  dimnames = list(Kicker = c("Left", "Center", "Right"), Goalie = c("Left", "Center", "Right"))
-)
-
-# User interface
-ui &lt;- fluidPage(
-    titlePanel("Soccer Penalty Shootout Simulation"),
-    
-    sidebarLayout(
-        sidebarPanel(
-            # Coin flip button and display
-            actionButton("coin_flip", "Flip Coin to Decide Kicker"),
-            textOutput("coin_result"),
-            
-            # Strategy selection
-            selectInput("kicker_choice", "Kicker's Strategy:", choices = c("Left", "Center", "Right")),
-            selectInput("goalie_choice", "Goalie's Strategy:", choices = c("Left", "Center", "Right")),
-            
-            # Button to simulate outcome and display result
-            actionButton("shoot", "Take Shot"),
-            textOutput("outcome_result")
-        ),
-        
-        mainPanel(
-            # Display probability table for reference
-            h4("Goal Probability Table"),
-            tableOutput("probability_table")
-        )
-    )
-)
-
-# Server logic
-server &lt;- function(input, output) {
-    # Display probability table in the UI
-    output$probability_table &lt;- renderTable({
-        as.data.frame(goal_probabilities)
-    }, rownames = TRUE)
-    
-    # Coin flip logic
-    output$coin_result &lt;- renderText({
-        input$coin_flip
-        isolate({
-            if (input$coin_flip &gt; 0) {
-                result &lt;- sample(c("Kicker goes first!", "Goalie goes first!"), 1)
-                paste("Coin Flip Result:", result)
-            }
-        })
-    })
-    
-    # Shoot outcome logic
-    output$outcome_result &lt;- renderText({
-        input$shoot
-        isolate({
-            if (input$shoot &gt; 0) {
-                kicker &lt;- input$kicker_choice
-                goalie &lt;- input$goalie_choice
-                prob_goal &lt;- goal_probabilities[kicker, goalie]
-                
-                # Randomize outcome based on the goal probability
-                outcome &lt;- ifelse(runif(1) &lt; prob_goal, "Goal!", "Missed!")
-                paste("Kicker's choice:", kicker, "| Goalie's choice:", goalie, "| Result:", outcome)
-            }
-        })
-    })
-}
-
-# Run the app
-shinyApp(ui, server)</code></pre>
+<p><a href="../../activities/06PenaltyKicks/shiny.html" class="btn btn-outline-primary" role="button">Calculate the outcomes!</a></p>
 </section>
 </section>
 <section id="discussion" class="level1">
 <h1>Discussion</h1>
-<p><u>Are penalty kicks played in a <em>mixed strategy equilibrium?</em></u></p>
-<p>This is the question asked by <a href="http://www.palacios-huerta.com/docs/professionals.pdf">Ignacio Palacios-Huerta</a>. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> The data come from 1417 penalty kicks during professional games in England, Italy, and Spain between 1995-2000 . The choices of the kickers are recorded as either <em>left</em> (L), <em>center</em> (C), or <em>right</em> (R), corresponding to the area of the goal they kick the ball towards. The goalies choices, L, C, or R, correspond to which area of the goal the goalie dives towards.</p>
-<p>The table below shows the observed probability of a goal being scored for each combination of kicker and goalie choices simplifying the choice of a kicker down to <span class="math inline">\(Dominant\)</span> representing a right-footed kicker kicking to the left or a left-footed kicker kicking to the left, and <span class="math inline">\(NonDominant\)</span> represents kicking to the opposite side.</p>
-<p><u>Scoring Probabilities (payoffs)</u></p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Kicker, Goalie</th>
-<th><span class="math inline">\(Dominant_g\)</span></th>
-<th><span class="math inline">\(NonDominant_g\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(Dominant_k\)</span></td>
-<td>58.30</td>
-<td>94.97</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(NonDominant_k\)</span></td>
-<td>92.91</td>
-<td>69.92</td>
-</tr>
-</tbody>
-</table>
-<p>The next table shows the frequency with which each combination of these strategies were actually observed during play:</p>
-<p><u>Strategy Frequencies Observed</u></p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Strategy</th>
-<th>frequency (%)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(Dominant_k\)</span></td>
-<td>42.31</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(NonDominant_k\)</span></td>
-<td>57.69</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(Dominant_g\)</span></td>
-<td>39.98</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(NonDominant_g\)</span></td>
-<td>60.02</td>
-</tr>
-</tbody>
-</table>
-<section id="assignment" class="level2">
-<h2 class="anchored" data-anchor-id="assignment">Assignment:</h2>
-<p>Calculate the theoretical mixed-strategy Nash equilibrium according to the payoff table and compare with the observed frequencies.</p>
-<p>Is the evidence consistent with the hypothesis that penalty kicks are played in an MSNE?</p>
-<p>Submit your work and your discussion to Canvas.</p>
+<p><a href="../../activities/06PenaltyKicks/discussion.html" class="btn btn-outline-primary" role="button">Discussion questions</a></p>
 
 
-</section>
 </section>
 
 
@@ -788,7 +612,6 @@ shinyApp(ui, server)</code></pre>
 
 <ol>
 <li id="fn1"><p>from the kicker’s perspective<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Palacios-Huerta, Ignacio. “Professionals Play Minimax,” <em>Review of Economic Studies</em>, 70 (2003), 395-415<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

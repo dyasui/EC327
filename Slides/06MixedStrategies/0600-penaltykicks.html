@@ -326,9 +326,6 @@ window.Quarto = {
       </button>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="bbbfe362e3e07928ef2d5f3d036040e6" class="alert alert-warning hidden"><i class="bi bi-clipboard2-check-fill quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p>Midterm exam this Wednesday: Oct.&nbsp;29th</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -552,14 +549,17 @@ window.Quarto = {
 
 <section id="mixed-strategies-in-penalty-kicks" class="level2">
 <h2 class="anchored" data-anchor-id="mixed-strategies-in-penalty-kicks">Mixed Strategies in Penalty Kicks</h2>
-<p>Why might mixed strategies be useful in analyzing behavior of kickers and goalies in penalty shootouts?</p>
+<p>Why might randomized actions be useful?</p>
 <div class="incremental">
 <ul class="incremental">
 <li>reaction times <span class="math inline">\(\rightarrow\)</span> essentially <span class="hi">simultaneous game</span></li>
-<li><span class="hi">zero-sum</span> game with incentive to <em>keep the other player guessing</em></li>
+<li><span class="hi">zero-sum</span> game with incentive to <em>keep the other player guessing</em>
+<ul class="incremental">
+<li>Being predictable helps your opponent</li>
+</ul></li>
 <li>modelling observed strategies chosen as <span class="h">random variables</span>
 <ul class="incremental">
-<li>specific empirical statistics can be compared to their theoretical values</li>
+<li>Can compare empirical data with theoretical predictions</li>
 </ul></li>
 </ul>
 </div>
@@ -567,11 +567,9 @@ window.Quarto = {
 </section>
 <section id="x2-penalty-kick-game" class="level2 smaller">
 <h2 class="smaller anchored" data-anchor-id="x2-penalty-kick-game">2x2 Penalty Kick Game</h2>
-<section id="simplest-form-of-this-game" class="level3">
-<h3 class="anchored" data-anchor-id="simplest-form-of-this-game">Simplest form of this game,</h3>
-<p>(prob of making goal is either 0% or 100%)</p>
-<div class="columns">
-<div class="column smaller" style="width:35%;">
+<section id="simplified-penalty-kick-game" class="level3">
+<h3 class="anchored" data-anchor-id="simplified-penalty-kick-game">Simplified penalty kick game</h3>
+<p>with only Left and Right as strategies</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -593,7 +591,6 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:65%;">
 <p>What should the Kicker do?</p>
 <div class="incremental">
 <ul class="incremental">
@@ -601,8 +598,6 @@ window.Quarto = {
 <li><em>Purely</em> <strong>Right</strong> means goalie could block by always going <strong>Right</strong></li>
 <li>So a rational strategy must be a <strong>random mix</strong> between both <em>pure</em> strategies</li>
 </ul>
-</div>
-</div>
 </div>
 <hr>
 </section>
@@ -787,8 +782,6 @@ window.Quarto = {
 </section>
 <section id="x2-penalty-kick-game-5" class="level2 smaller">
 <h2 class="smaller anchored" data-anchor-id="x2-penalty-kick-game-5">2x2 Penalty Kick Game</h2>
-<div class="columns">
-<div class="column smaller" style="width:35%;">
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -810,15 +803,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:60%;">
-<ul>
-<li>So the <strong>Kicker</strong> should play <span class="math inline">\(Left_k\)</span> 50% of the time, <span class="math inline">\(Right_k\)</span> 50%</li>
-<li>the <strong>Goalie</strong> should play <span class="math inline">\(Left_g\)</span> 50% of the time, <span class="math inline">\(Right_g\)</span> 50%</li>
-<li>In this mixed-strategy Nash equilibrium, both players are <em>indifferent</em> between either of their pure strategies</li>
-<li>The kicker’s probability of scoring is 0.6 <em>no matter what direction they choose</em></li>
-</ul>
-</div>
-</div>
+<p>In Nash equilibrium: * The <strong>Kicker</strong> should play Left 50% of the time * The <strong>Goalie</strong> should play Left 50% * Both players are <em>indifferent</em> between either pure strategy * Kicker’s probability of scoring is 0.6 - <em>no matter what direction they choose</em></p>
 <!--## Mixed Strategies in 3x3 Penalty Shootout {.smaller}-->
 <!---->
 <!--| Kicker, Goalie |     L    |     C    |     R    |-->
