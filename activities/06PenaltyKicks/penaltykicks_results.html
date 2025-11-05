@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -68,18 +68,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../..//favicon/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-edbf0db1a146f148c42567bee0685584.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-72da31740c9dd7448d6ef0f9f3a0386c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-edbf0db1a146f148c42567bee0685584.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-14d69860e42394bc8f238ef95fc5195d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-1d40ab3de2e22f651de4f1058cc38141.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-14d69860e42394bc8f238ef95fc5195d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -110,35 +111,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -311,6 +283,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EC327 Game Theory</span>
     </a>
@@ -366,6 +340,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -604,8 +582,8 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>See the code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># comments look like this</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"This is R code"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># comments look like this</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"This is R code"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "This is R code"</code></pre>
@@ -617,88 +595,88 @@ window.Quarto = {
 <p>The columns <code>round</code>, <code>match</code>, and <code>shot</code> contain the id representing which round in the bracket, which match of that specific round, and whether that shot was the first, second, third, fourth, or fifth shot of that match, respectively.</p>
 <p>To make these data easier to visualize and calculate statistics, you can import them to an object in <code>R</code> using the <code>read_csv</code> function from the <code>tidyverse</code> package.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load tidyverse packages</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load tidyverse packages</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># setwd("activities/06PenaltyKicks")</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># read in the class results from csv file</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"EC327F24-activity6_results.csv"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(s_k), <span class="sc">!</span><span class="fu">is.na</span>(s_g)) <span class="co"># filter out missing data</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># print the first 10 observations</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data, <span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"EC327F25-activity6_results.csv"</span>) </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># print the first 10 observations</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data, <span class="at">n =</span> <span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10 × 6
-   round match  shot s_k    s_g    goal 
-   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;lgl&gt;
- 1     1     1     1 Right  Left   FALSE
- 2     1     1     1 Left   Right  FALSE
- 3     1     1     2 Center Center FALSE
- 4     1     1     2 Left   Right  FALSE
- 5     1     1     3 Right  Left   FALSE
- 6     1     2     1 Left   Right  TRUE 
- 7     1     2     1 Left   Center TRUE 
- 8     1     2     2 Right  Left   TRUE 
- 9     1     2     2 Left   Center TRUE 
-10     1     2     3 Center Left   FALSE</code></pre>
+<pre><code># A tibble: 10 × 10
+   round match kicker    goalie    shot   kick   dive   goal  winner final_score
+   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;  &lt;lgl&gt; &lt;chr&gt;  &lt;chr&gt;      
+ 1     1     1 Owen      Alejandro shot 1 Left   Left   TRUE  Owen   Owen:3 Ale…
+ 2     1     1 Alejandro Owen      shot 1 Left   Left   FALSE Owen   Owen:3 Ale…
+ 3     1     1 Owen      Alejandro shot 2 Right  Right  FALSE Owen   Owen:3 Ale…
+ 4     1     1 Alejandro Owen      shot 2 Center Left   FALSE Owen   Owen:3 Ale…
+ 5     1     1 Owen      Alejandro shot 3 Left   Left   FALSE Owen   Owen:3 Ale…
+ 6     1     1 Alejandro Owen      shot 3 Left   Center TRUE  Owen   Owen:3 Ale…
+ 7     1     1 Owen      Alejandro shot 4 Left   Center TRUE  Owen   Owen:3 Ale…
+ 8     1     1 Alejandro Owen      shot 4 Left   Right  TRUE  Owen   Owen:3 Ale…
+ 9     1     1 Owen      Alejandro shot 5 Right  Center FALSE Owen   Owen:3 Ale…
+10     1     1 Alejandro Owen      shot 5 Right  Right  FALSE Owen   Owen:3 Ale…</code></pre>
 </div>
 </div>
 <p>The important variables are the choices of the kicker and goalie for each kick attempt as well as whether a goal was scored or not:</p>
 <ul>
-<li><code>s_k</code> represents the direction the kicker chose to kick</li>
-<li><code>s_g</code> represents the direction the goalie chose to attempt to block</li>
+<li><code>kick</code> represents the direction the kicker chose to kick</li>
+<li><code>dive</code> represents the direction the goalie chose to attempt to block</li>
 <li><code>goal</code> is an indicator which is <code>TRUE</code> if a goal was scored, and <code>FALSE</code> if a kick was blocked or missed.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="fu">nrow</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="fu">nrow</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Across all rounds and matches played in class this quarter, we had 324 different shots attempted, which are each a row in this dataset.</p>
+<p>Across all rounds and matches played in class this quarter, we had 320 different shots attempted, which are each a row in this dataset.</p>
 </section>
-<section id="group-results-by-srategy-profile" class="level2">
-<h2 class="anchored" data-anchor-id="group-results-by-srategy-profile">Group Results by Srategy Profile</h2>
-<p>I might want to compare how often we see a kicker choosing <span class="math inline">\(Right\)</span> at the same time a goalie blocked <span class="math inline">\(Right\)</span>, vs a kicker chosing <span class="math inline">\(Right\)</span> when a goalie blocked <span class="math inline">\(Left\)</span>, etc, for all 9 different possible pure strategy combinations.</p>
+<section id="strategy-frequencies" class="level2">
+<h2 class="anchored" data-anchor-id="strategy-frequencies">Strategy Frequencies</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>See the code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># summarize by type of strategy profile</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>profiles_tbl <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(s_k, s_g) <span class="sc">%&gt;%</span> <span class="co"># group by each strategy combo to summarise each group</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(), <span class="co"># get counts of each profile</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">p =</span> n <span class="sc">/</span> N, <span class="co"># calculate proportions of total observations</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">num_goals =</span> <span class="fu">sum</span>(goal), <span class="co"># count numbers of goals scored</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">prob_goal =</span> num_goals <span class="sc">/</span> N <span class="co"># probability of goal scored</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="co"># get rid of groups structure to make later manipulations easier</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># print the profiles table</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>profiles_tbl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(kick) <span class="sc">|&gt;</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>(</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">p =</span> n <span class="sc">/</span> N,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">goals =</span> <span class="fu">sum</span>(goal),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">avg_goal =</span> <span class="fu">mean</span>(goal)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="st">""</span>, <span class="at">fill=</span>kick, <span class="at">y=</span>p)) <span class="sc">+</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">width=</span><span class="dv">1</span>, <span class="at">color=</span><span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="fu">coord_polar</span>(<span class="st">"y"</span>,<span class="at">start=</span><span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co"># geom_text(aes(label = s_k), position = position_stack(vjust = 0.5)) +</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> p), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 9 × 6
-  s_k    s_g        n      p num_goals prob_goal
-  &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt;  &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
-1 Center Center    29 0.0895         0    0     
-2 Center Left      25 0.0772        18    0.0556
-3 Center Right     35 0.108         23    0.0710
-4 Left   Center    37 0.114         30    0.0926
-5 Left   Left      38 0.117          8    0.0247
-6 Left   Right     45 0.139         36    0.111 
-7 Right  Center    36 0.111         34    0.105 
-8 Right  Left      41 0.127         34    0.105 
-9 Right  Right     38 0.117         11    0.0340</code></pre>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="penaltykicks_results_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
-<p>This table shows that the Kicker choosing <span class="math inline">\(Left\)</span> when the goalie chose <span class="math inline">\(Right\)</span> was the most common type of outcome, which happened in 14% of the 324 total shots.</p>
-<section id="plotting-frequency-of-each-strategy-profile" class="level3">
-<h3 class="anchored" data-anchor-id="plotting-frequency-of-each-strategy-profile">Plotting frequency of each strategy profile</h3>
-<p>If you want a more visual representation of the information in this table, you could use a bar graph where each bar represents a row of the table:</p>
+</div>
 <div class="cell">
 <details class="code-fold">
 <summary>See the code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(profiles_tbl, <span class="fu">aes</span>(<span class="at">x =</span> s_g, <span class="at">y =</span> n, <span class="at">fill =</span> s_k)) <span class="sc">+</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(s_k))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(dive) <span class="sc">|&gt;</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">p =</span> n <span class="sc">/</span> N,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">goals =</span> <span class="fu">sum</span>(goal),</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">avg_goal =</span> <span class="fu">mean</span>(goal)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="st">""</span>, <span class="at">fill=</span>dive, <span class="at">y=</span>p)) <span class="sc">+</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">width=</span><span class="dv">1</span>, <span class="at">color=</span><span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">coord_polar</span>(<span class="st">"y"</span>,<span class="at">start=</span><span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co"># geom_text(aes(label = s_k), position = position_stack(vjust = 0.5)) +</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> p), <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -709,127 +687,58 @@ window.Quarto = {
 </div>
 </div>
 </section>
+<section id="success-rates-by-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="success-rates-by-strategy">Success Rates by Strategy</h2>
+<section id="kickers-win-rates-by-strategy" class="level3">
+<h3 class="anchored" data-anchor-id="kickers-win-rates-by-strategy">Kickers’ win rates by strategy</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>See the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(kick) <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">goals =</span> <span class="fu">sum</span>(goal),</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">win_rate =</span> goals <span class="sc">/</span> n</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+  kick       n goals win_rate
+  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;    &lt;dbl&gt;
+1 Center    74    34    0.459
+2 Left     130    87    0.669
+3 Right    116    72    0.621</code></pre>
+</div>
+</div>
+</section>
+<section id="goalies-win-rates-by-strategy" class="level3">
+<h3 class="anchored" data-anchor-id="goalies-win-rates-by-strategy">Goalies’ win rates by strategy</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>See the code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(dive) <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">goals =</span> <span class="fu">sum</span>(goal),</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">win_rate =</span> goals <span class="sc">/</span> n</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+  dive       n goals win_rate
+  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;    &lt;dbl&gt;
+1 Center    99    61    0.616
+2 Left     108    64    0.593
+3 Right    113    68    0.602</code></pre>
+</div>
+</div>
+</section>
 <section id="testing-strategy-profiles-against-theory" class="level3">
 <h3 class="anchored" data-anchor-id="testing-strategy-profiles-against-theory">Testing strategy profiles against theory</h3>
-<p>If you wanted to compare the frequency of each type of choice matchup in this table with what you would expect in an MSNE, you could use the <code>chisq.test</code> function to test the goodness of fit of the <code>n</code> column in our table to some theoretical distribution of <code>p</code> which we would expect for each pure strategy combination.</p>
-<p>For example, suppose that a mixed strategy Nash equilibrium of this game would result in each profile being observed with equal probability of 1/9.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>See the code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use observed num of each choice combo from profiles table</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>n_observed <span class="ot">&lt;-</span> profiles_tbl <span class="sc">%&gt;%</span> <span class="fu">select</span>(n)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># theoretical predictions of each profile being observed</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># make sure they're in the same order as in the profiles table</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>p_predicted <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">9</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># test whether n is drawn from p_predicted distribution</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> n_observed,</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">p =</span> p_predicted</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Chi-squared test for given probabilities
-
-data:  n_observed
-X-squared = 7.9444, df = 8, p-value = 0.4389</code></pre>
-</div>
-</div>
-<p>Compare the resulting <span class="math inline">\(\chi^2\)</span>- statistic against the critical value of 15.51 from the <span class="math inline">\(\chi^2\)</span> distribution with 8 degrees of freedom at the 95% confidence level.</p>
-</section>
-</section>
-<section id="comparing-kickers-strategies" class="level2">
-<h2 class="anchored" data-anchor-id="comparing-kickers-strategies">Comparing Kicker’s Strategies</h2>
-<p>Instead of comparing to a specific distribution of observed strategy combinations, you might be interested in seeing the actual average payoff to either player for each of their strategies played in the data.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>See the code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># summarise win probabiltiy by kicker's strategy</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>kicker_strats <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(s_k) <span class="sc">%&gt;%</span> <span class="co"># group all kickers strategies together</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">num_goals =</span> <span class="fu">sum</span>(goal), <span class="co"># count how many times kicker scored</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">prob_goal =</span> <span class="fu">sum</span>(goal) <span class="sc">/</span> N <span class="co"># calculate success rate</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># print kicker strategies table</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>kicker_strats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 3
-  s_k    num_goals prob_goal
-  &lt;chr&gt;      &lt;int&gt;     &lt;dbl&gt;
-1 Center        41     0.127
-2 Left          74     0.228
-3 Right         79     0.244</code></pre>
-</div>
-</div>
-<section id="testing-for-equal-success-rates-for-each-kick" class="level3">
-<h3 class="anchored" data-anchor-id="testing-for-equal-success-rates-for-each-kick">Testing for equal success rates for each kick</h3>
-<div class="cell">
-<details class="code-fold">
-<summary>See the code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use observed num of each choice combo from kicker strategies table</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>n_observed <span class="ot">&lt;-</span> kicker_strats <span class="sc">%&gt;%</span> <span class="fu">select</span>(num_goals)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># equal probobility of success for each strategy</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>p_predicted <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>)</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># test whether num_goals are equal across strategy choice</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> n_observed,</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">p =</span> p_predicted</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Chi-squared test for given probabilities
-
-data:  n_observed
-X-squared = 13.186, df = 2, p-value = 0.00137</code></pre>
-</div>
-</div>
-<div class="cell">
-<details class="code-fold">
-<summary>See the code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># chi-square critical value with 2 degrees of freedom</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>chisq.crit <span class="ot">&lt;-</span> <span class="fu">qchisq</span>(<span class="at">p =</span> <span class="fl">0.95</span>, <span class="at">df =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>Compare <span class="math inline">\(\chi^2\)</span>-statistic to a critical value of 5.99. If the statistic is greater than the critical value, reject the null hypothesis that the success rates are equal with 95% confidence.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>See the code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">s_k =</span> <span class="fu">case_when</span>(</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>      s_k <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Right"</span>, <span class="st">"Left"</span>) <span class="sc">~</span> <span class="st">"Side"</span>,</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>      s_k <span class="sc">==</span> <span class="st">"Center"</span> <span class="sc">~</span> <span class="st">"Center"</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">s_g =</span> <span class="fu">case_when</span>(</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>      s_g <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Right"</span>, <span class="st">"Left"</span>) <span class="sc">~</span> <span class="st">"Side"</span>,</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>      s_g <span class="sc">==</span> <span class="st">"Center"</span> <span class="sc">~</span> <span class="st">"Center"</span></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(s_k, s_g) <span class="sc">%&gt;%</span></span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_obs =</span> <span class="fu">n</span>(),</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">num_goals =</span> <span class="fu">sum</span>(goal<span class="sc">==</span><span class="cn">TRUE</span>),</span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">prob_goal =</span> <span class="fu">sum</span>(goal) <span class="sc">/</span> <span class="fu">n</span>()</span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 's_k'. You can override using the `.groups`
-argument.</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 4 × 5
-# Groups:   s_k [2]
-  s_k    s_g    n_obs num_goals prob_goal
-  &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt;     &lt;int&gt;     &lt;dbl&gt;
-1 Center Center    29         0     0    
-2 Center Side      60        41     0.683
-3 Side   Center    73        64     0.877
-4 Side   Side     162        89     0.549</code></pre>
-</div>
-</div>
+<p>Think about how you could compare the theory of mixed-strategy Nash equilibrium against the data generated from class.</p>
+<p>What are some hypotheses you could generate using the theory to compare to statistics from the activity?</p>
 
 
 </section>
@@ -900,13 +809,14 @@ argument.</code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

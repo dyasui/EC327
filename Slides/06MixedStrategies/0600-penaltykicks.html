@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,18 +33,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="../..//favicon/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-edbf0db1a146f148c42567bee0685584.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-72da31740c9dd7448d6ef0f9f3a0386c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-edbf0db1a146f148c42567bee0685584.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-14d69860e42394bc8f238ef95fc5195d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-1d40ab3de2e22f651de4f1058cc38141.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-14d69860e42394bc8f238ef95fc5195d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -89,7 +90,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -276,6 +277,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EC327 Game Theory</span>
     </a>
@@ -331,6 +334,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -547,6 +554,8 @@ window.Quarto = {
 
 
 
+<section id="penalty-kick-shootout" class="level1">
+<h1>Penalty Kick Shootout</h1>
 <section id="mixed-strategies-in-penalty-kicks" class="level2">
 <h2 class="anchored" data-anchor-id="mixed-strategies-in-penalty-kicks">Mixed Strategies in Penalty Kicks</h2>
 <p>Why might randomized actions be useful?</p>
@@ -803,63 +812,196 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>In Nash equilibrium: * The <strong>Kicker</strong> should play Left 50% of the time * The <strong>Goalie</strong> should play Left 50% * Both players are <em>indifferent</em> between either pure strategy * Kicker’s probability of scoring is 0.6 - <em>no matter what direction they choose</em></p>
-<!--## Mixed Strategies in 3x3 Penalty Shootout {.smaller}-->
-<!---->
-<!--| Kicker, Goalie |     L    |     C    |     R    |-->
-<!--|:--------------:+:--------:+:--------:+:--------:|-->
-<!--|        L       | 0.3, 0.7 | 0.9, 0.1 | 0.9, 0.1 |-->
-<!--|        C       | 0.6, 0.4 |   0, 1   | 0.6, 0.4 |-->
-<!--|        R       | 0.9, 0.1 | 0.9, 0.1 | 0.3, 0.7 |-->
-<!---->
-<!--Let's define:-->
-<!---->
-<!--:::: {.columns}-->
-<!--::: {.column}-->
-<!--  * $\ell_k$ the **Kicker's** probabilty of kicking Left-->
-<!--  * $c_k$ the **Kicker's** probabilty of kicking Center-->
-<!--  * $r_k$ the **Kicker's** probabilty of kicking Right-->
-<!--:::-->
-<!--::: {.column}-->
-<!--  * $\ell_g$ the **Goalie's** probabilty of kicking Left-->
-<!--  * $c_g$ the **Goalie's** probabilty of kicking Center-->
-<!--  * $r_g$ the **Goalie's** probabilty of kicking Right-->
-<!--:::-->
-<!--::::-->
-<!---->
-<!------->
-<!---->
-<!--## Mixed Strategies in 3x3 Penalty Shootout {.smaller}-->
-<!---->
-<!--| Kicker, Goalie |     L    |     C    |     R    |-->
-<!--|:--------------:+:--------:+:--------:+:--------:|-->
-<!--|        L       | 0.3, 0.7 | 0.9, 0.1 | 0.9, 0.1 |-->
-<!--|        C       | 0.6, 0.4 |   0, 1   | 0.6, 0.4 |-->
-<!--|        R       | 0.9, 0.1 | 0.9, 0.1 | 0.3, 0.7 |-->
-<!---->
-<!--::::: {.columns}-->
-<!--:::: {.incremental}-->
-<!---->
-<!--::: {.column}-->
-<!--The Kicker's expected utility depends on $\sigma_g$:-->
-<!---->
-<!--  * $EU_k(L_k, \sigma_g) = 0.3\ell_g + 0.9c_g + 0.9r_g$-->
-<!--  * $EU_k(C_k, \sigma_g) = 0.6\ell_g + 0c_g + 0.6r_g$-->
-<!--  * $EU_k(R_k, \sigma_g) = 0.9\ell_g + 0.9c_g + 0.3r_g$-->
-<!--:::-->
-<!--::: {.column}-->
-<!---->
-<!--The Goalie's expected utility depends on $sigma_k$:-->
-<!---->
-<!--  * $EU_g(L_g, \sigma_k) = 0.7\ell_k + 0.4c_g + 0.1r_g$-->
-<!--  * $EU_g(C_g, \sigma_k) = 0.1\ell_g + 1c_g + 0.1r_g$-->
-<!--  * $EU_g(R_g, \sigma_k) = 0.1\ell_g + 0.4c_g + 0.7r_g$-->
-<!--:::-->
-<!--::::-->
-<!--:::::-->
-<!------->
+<p>In Nash equilibrium:</p>
+<ul>
+<li>The <strong>Kicker</strong> should play Left 50% of the time</li>
+<li>The <strong>Goalie</strong> should play Left 50%</li>
+<li>Both players are <em>indifferent</em> between either pure strategy</li>
+<li>Kicker’s probability of scoring is 0.6
+<ul>
+<li><em>no matter what direction they choose</em></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="mixed-strategies-in-3x3-penalty-shootout" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="mixed-strategies-in-3x3-penalty-shootout">Mixed Strategies in 3x3 Penalty Shootout</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Kicker, Goalie</th>
+<th style="text-align: center;">L</th>
+<th style="text-align: center;">C</th>
+<th style="text-align: center;">R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">L</td>
+<td style="text-align: center;">0.3, 0.7</td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.9, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">0.6, 0.4</td>
+<td style="text-align: center;">0, 1</td>
+<td style="text-align: center;">0.6, 0.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.3, 0.7</td>
+</tr>
+</tbody>
+</table>
+<p>Let’s define:</p>
+<div class="columns">
+<div class="column">
+<ul>
+<li><span class="math inline">\(\ell_k\)</span> the <strong>Kicker’s</strong> probabilty of kicking Left</li>
+<li><span class="math inline">\(c_k\)</span> the <strong>Kicker’s</strong> probabilty of kicking Center</li>
+<li><span class="math inline">\(r_k\)</span> the <strong>Kicker’s</strong> probabilty of kicking Right</li>
+</ul>
+</div><div class="column">
+<ul>
+<li><span class="math inline">\(\ell_g\)</span> the <strong>Goalie’s</strong> probabilty of kicking Left</li>
+<li><span class="math inline">\(c_g\)</span> the <strong>Goalie’s</strong> probabilty of kicking Center</li>
+<li><span class="math inline">\(r_g\)</span> the <strong>Goalie’s</strong> probabilty of kicking Right</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="mixed-strategies-in-3x3-penalty-shootout-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="mixed-strategies-in-3x3-penalty-shootout-1">Mixed Strategies in 3x3 Penalty Shootout</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Kicker, Goalie</th>
+<th style="text-align: center;">L</th>
+<th style="text-align: center;">C</th>
+<th style="text-align: center;">R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">L</td>
+<td style="text-align: center;">0.3, 0.7</td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.9, 0.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">0.6, 0.4</td>
+<td style="text-align: center;">0, 1</td>
+<td style="text-align: center;">0.6, 0.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">R</td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.9, 0.1</td>
+<td style="text-align: center;">0.3, 0.7</td>
+</tr>
+</tbody>
+</table>
+<div class="columns">
+<div class="incremental">
+<div class="column">
+<p>The Kicker’s expected utility depends on <span class="math inline">\(\sigma_g\)</span>:</p>
+<ul class="incremental">
+<li><span class="math inline">\(EU_k(L_k, \sigma_g) = 0.3\ell_g + 0.9c_g + 0.9r_g\)</span></li>
+<li><span class="math inline">\(EU_k(C_k, \sigma_g) = 0.6\ell_g + 0c_g + 0.6r_g\)</span></li>
+<li><span class="math inline">\(EU_k(R_k, \sigma_g) = 0.9\ell_g + 0.9c_g + 0.3r_g\)</span></li>
+</ul>
+</div>
+<div class="column">
+<p>The Goalie’s expected utility depends on <span class="math inline">\(\sigma_k\)</span>:</p>
+<ul class="incremental">
+<li><span class="math inline">\(EU_g(L_g, \sigma_k) = 0.7\ell_k + 0.4c_g + 0.1r_g\)</span></li>
+<li><span class="math inline">\(EU_g(C_g, \sigma_k) = 0.1\ell_g + 1c_g + 0.1r_g\)</span></li>
+<li><span class="math inline">\(EU_g(R_g, \sigma_k) = 0.1\ell_g + 0.4c_g + 0.7r_g\)</span></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="kickers-indifference-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="kickers-indifference-conditions">Kicker’s Indifference Conditions</h2>
+<ul>
+<li>When will Kicker be indifferent between <strong>L</strong>, <strong>C</strong>, and <strong>R</strong>?</li>
+</ul>
+<div class="incremental">
+<ul class="incremental">
+<li>Indifferent between <strong>L</strong> and <strong>C</strong> when <span class="math inline">\(3\ell_g + 9 c_g + 9 r_g = 6\ell_g + 6r_g\)</span>
+<ul class="incremental">
+<li><span class="math inline">\(\Rightarrow \ell_g \leq 3c_g + r_g\)</span></li>
+</ul></li>
+<li>Indifferent between <strong>C</strong> and <strong>R</strong> when <span class="math inline">\(6\ell_g + 6r_g = 9\ell_g + 9c_g + 3r_g\)</span>
+<ul class="incremental">
+<li><span class="math inline">\(\Rightarrow r_g = 3c_g + \ell_g\)</span></li>
+</ul></li>
+<li>Indifferent between <strong>L</strong> and <strong>R</strong> when <span class="math inline">\(3\ell_g + 9 c_g + 9 r_g = 9\ell_g + 9c_g + 3r_g\)</span>
+<ul class="incremental">
+<li><span class="math inline">\(\Rightarrow r_g = \ell_g\)</span></li>
+</ul></li>
+<li>Only one way for all three to hold: if <span class="math inline">\(c_g=0\)</span></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="kickers-indifference" class="level2">
+<h2 class="anchored" data-anchor-id="kickers-indifference">Kicker’s Indifference</h2>
+<p>So the kicker will only kick all three directions when the goalie never blocks center.</p>
+<ul>
+<li>Is the goalie willing to avoid blocking center?</li>
+</ul>
+<hr>
+</section>
+<section id="kickers-indifference-conditions-1" class="level2">
+<h2 class="anchored" data-anchor-id="kickers-indifference-conditions-1">Kicker’s Indifference Conditions</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>When will Goalie be indifferent between <strong>L</strong> and <strong>R</strong>?
+<ul class="incremental">
+<li>When <span class="math inline">\(7\ell_k + 4c_k + 1r_k = 1\ell_k + 4c_k + 7r_k\)</span>
+<ul class="incremental">
+<li>Or when <span class="math inline">\(\ell_k=r_k\)</span></li>
+</ul></li>
+</ul></li>
+<li>When will Goalie never play <strong>C</strong>?
+<ul class="incremental">
+<li>When <span class="math inline">\(7\ell_k + 4c_k + 1r_k &gt; 1\ell_k + 10c_k + 1r_k\)</span>
+<ul class="incremental">
+<li>Or when <span class="math inline">\(\ell_k &gt; c_k\)</span></li>
+</ul></li>
+<li>And when <span class="math inline">\(1\ell_k + 4c_k + 7r_k &gt; 1\ell_k + 10c_k + 1r_k\)</span>
+<ul class="incremental">
+<li>Or when <span class="math inline">\(r_k &gt; c_k\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="msne-in-penalty-kicks" class="level2">
+<h2 class="anchored" data-anchor-id="msne-in-penalty-kicks">MSNE in Penalty Kicks</h2>
+<p>So a set mixed-strategy Nash equilibrium in this game:</p>
+<ul>
+<li><span class="math inline">\(\sigma_k = (\ell_k Left, c_k Center, r_k Right)\)</span> where <span class="math inline">\(\ell_k=r_k &gt; c_k\)</span></li>
+<li><span class="math inline">\(\sigma_g = (1/2 Left, 0 Center, 1/2 Right)\)</span></li>
+</ul>
+</section>
+<section id="msne-predictions-for-penalty-kicks" class="level2">
+<h2 class="anchored" data-anchor-id="msne-predictions-for-penalty-kicks">MSNE predictions for Penalty Kicks</h2>
+<p>How can we apply our MSNE theory to the activity?</p>
+<ul>
+<li>What are some testable hypotheses?</li>
+</ul>
 
 
+</section>
 </section>
 
 
@@ -934,13 +1076,14 @@ window.Quarto = {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,18 +33,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="../..//favicon/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-edbf0db1a146f148c42567bee0685584.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-72da31740c9dd7448d6ef0f9f3a0386c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-edbf0db1a146f148c42567bee0685584.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-14d69860e42394bc8f238ef95fc5195d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-1d40ab3de2e22f651de4f1058cc38141.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-14d69860e42394bc8f238ef95fc5195d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -89,7 +90,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -276,6 +277,8 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">EC327 Game Theory</span>
     </a>
@@ -331,6 +334,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -547,6 +554,8 @@ window.Quarto = {
 
 
 
+<section id="mixed-strategies-in-larger-games" class="level1">
+<h1>Mixed strategies in larger games</h1>
 <section id="msne-in-a-larger-game" class="level2">
 <h2 class="anchored" data-anchor-id="msne-in-a-larger-game">MSNE in a Larger Game</h2>
 <p>Suppose that we have this 3x2 game:</p>
@@ -560,169 +569,87 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">A (p)</td>
+<td style="text-align: right;">A (<span class="math inline">\(\alpha\)</span>)</td>
 <td>2, 1</td>
 <td>0, 1</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">B (q)</td>
+<td style="text-align: right;">B (<span class="math inline">\(\beta\)</span>)</td>
 <td>1, 2</td>
 <td>2, 0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">C (z)</td>
+<td style="text-align: right;">C (<span class="math inline">\(\gamma\)</span>)</td>
 <td>0, 0</td>
 <td>3, 2</td>
 </tr>
 </tbody>
 </table>
-<div class="incremental">
-<ul class="incremental">
-<li>Player 1’s mixed strategy uses probabilities p, q, and z, since they have three pure strategies.</li>
+<ul>
+<li>Player 1’s mixed strategy uses probabilities <span class="math inline">\(\alpha, \beta, \gamma\)</span> since they have three pure strategies.
+<ul>
+<li>You could also replace <span class="math inline">\(\gamma\)</span> with <span class="math inline">\((1-\alpha-\beta)\)</span>
+<ul>
+<li>because lotter probabilites sum to one</li>
+</ul></li>
+</ul></li>
+<li>Player 2 just has two pure strategies w/ probability <span class="math inline">\(r\)</span> of <span class="math inline">\(X\)</span></li>
 </ul>
-</div>
 <hr>
 </section>
-<section id="msne-in-a-larger-game-1" class="level2">
-<h2 class="anchored" data-anchor-id="msne-in-a-larger-game-1">MSNE in a Larger Game</h2>
-<div class="columns">
-<div class="column smaller" style="width:30%;">
+<section id="strategy-players-payoffs" class="level2">
+<h2 class="anchored" data-anchor-id="strategy-players-payoffs">3-Strategy Player’s Payoffs</h2>
+<p>Let’s put together Player 1’s expected payoffs:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: center;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th style="text-align: center;">X (r)</th>
-<th style="text-align: center;">Y (1 - r)</th>
+<th style="text-align: center;">X (<span class="math inline">\(r\)</span>)</th>
+<th style="text-align: center;">Y (<span class="math inline">\(1-r\)</span>)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">A (p)</td>
+<td style="text-align: center;">A</td>
 <td style="text-align: center;">2, 1</td>
 <td style="text-align: center;">0, 1</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">B (q)</td>
+<td style="text-align: center;">B</td>
 <td style="text-align: center;">1, 2</td>
 <td style="text-align: center;">2, 0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">C (z)</td>
+<td style="text-align: center;">C</td>
 <td style="text-align: center;">0, 0</td>
 <td style="text-align: center;">3, 2</td>
 </tr>
 </tbody>
 </table>
-</div><div class="column">
-<p>Let’s put together Player 1’s expected payoffs:</p>
+<p>They have three discrete strategies to choose from:</p>
 <div class="incremental">
 <ul class="incremental">
-<li><span class="math inline">\(U_1(A) = 2r + 0 = 2r\)</span>.</li>
-<li><span class="math inline">\(U_1(B) = 1r + 2(1 - r) = 2 - r\)</span>.</li>
-<li><span class="math inline">\(U_1(C) = 0 + 3(1 - r) = 3 - 3r\)</span>.</li>
+<li><span class="math inline">\(EU_1(A) = 2r + 0 = 2r\)</span>.</li>
+<li><span class="math inline">\(EU_1(B) = 1r + 2(1 - r) = 2 - r\)</span>.</li>
+<li><span class="math inline">\(EU_1(C) = 0 + 3(1 - r) = 3 - 3r\)</span>.</li>
 </ul>
-</div>
-</div>
 </div>
 <hr>
 </section>
-<section id="msne-in-a-larger-game-2" class="level2">
-<h2 class="anchored" data-anchor-id="msne-in-a-larger-game-2">MSNE in a Larger Game</h2>
-<div class="columns">
-<div class="column smaller" style="width:30%;">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: right;"><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th style="text-align: center;">X (r)</th>
-<th style="text-align: center;">Y (1 - r)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">A (p)</td>
-<td style="text-align: center;">2, 1</td>
-<td style="text-align: center;">0, 1</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">B (q)</td>
-<td style="text-align: center;">1, 2</td>
-<td style="text-align: center;">2, 0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">C (z)</td>
-<td style="text-align: center;">0, 0</td>
-<td style="text-align: center;">3, 2</td>
-</tr>
-</tbody>
-</table>
-</div><div class="column smaller">
-<p>Next, let’s see what it would take to get Player 1 to mix different pairs of strategies:</p>
+<section id="strategy-players-indifference" class="level2">
+<h2 class="anchored" data-anchor-id="strategy-players-indifference">3-strategy Player’s Indifference</h2>
+<p>When would Player 1 want to play different strategies?</p>
 <div class="incremental">
 <ul class="incremental">
-<li>A and B: <span class="math inline">\(2r = 2 - r \implies r = \frac{2}{3}\)</span>.</li>
-<li>A and C: <span class="math inline">\(2r = 3 - 3r \implies r = \frac{3}{5}\)</span>.</li>
-<li>B and C: <span class="math inline">\(2 - r = 3 - 3r \implies r = \frac{1}{2}\)</span>.</li>
-</ul>
-</div>
-</div>
-</div>
-<p>Note that each pair of strategies requires a different value of <span class="math inline">\(r\)</span>: there is no mixed strategy for Player 2 that would make Player 1 willing to mix all three of their pure strategies.</p>
-<hr>
-</section>
-<section id="msne-in-a-larger-game-3" class="level2">
-<h2 class="anchored" data-anchor-id="msne-in-a-larger-game-3">MSNE in a Larger Game</h2>
-<div class="columns">
-<div class="column smaller" style="width:30%;">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
-<th>X (r)</th>
-<th>Y (1 - r)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>A (p)</td>
-<td>2, 1</td>
-<td>0, 1</td>
-</tr>
-<tr class="even">
-<td>B (q)</td>
-<td>1, 2</td>
-<td>2, 0</td>
-</tr>
-<tr class="odd">
-<td>C (z)</td>
-<td>0, 0</td>
-<td>3, 2</td>
-</tr>
-</tbody>
-</table>
-</div><div class="column">
-<p>Let’s check Player 2’s expected payoffs next:</p>
-<div class="incremental">
+<li>Indifferent between A and B: <span class="math inline">\(2r = 2 - r \implies r = \frac{2}{3}\)</span>.</li>
+<li>Indifferent between A and C: <span class="math inline">\(2r = 3 - 3r \implies r = \frac{3}{5}\)</span>.</li>
+<li>Indifferent between B and C: <span class="math inline">\(2 - r = 3 - 3r \implies r = \frac{1}{2}\)</span>.
 <ul class="incremental">
-<li><span class="math inline">\(U_2(X) = 1p + 2q + 0\)</span>.</li>
-<li><span class="math inline">\(U_2(Y) = 1p + 0 + 2(z)\)</span>.</li>
-<li>So Player 2 will play a mixed strategy if <span class="math inline">\(p + 2q = p + 2(z) \implies q = z\)</span>.</li>
-<li>There are two ways that this can be true: Either Player 1 plays B and C with equal probability (and we know from earlier that they would <strong>only</strong> be playing these two, not A), or Player 1 plays A only, and B and C not at all.</li>
-</ul>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="msne-in-a-larger-game-4" class="level2">
-<h2 class="anchored" data-anchor-id="msne-in-a-larger-game-4">MSNE in a Larger Game</h2>
-<p>So, one type of MSNE is where Player 1 only plays A:</p>
-<p>this requires <span class="math inline">\(2r \geq 2 - r\)</span> and <span class="math inline">\(2r \geq 3 - 3r \Rightarrow r \geq \frac{2}{3}\)</span> and <span class="math inline">\(r \geq \frac{3}{5}\)</span>.</p>
-<div class="incremental">
+<li>Note that each pair of strategies requires a different value of <span class="math inline">\(r\)</span>:
 <ul class="incremental">
-<li>MSNE: <span class="math inline">\((1, 0, 0), (r, 1 - r)\)</span>, where <span class="math inline">\(r \geq \frac{2}{3}\)</span>.</li>
-<li>And the other type of MSNE is where Player 1 plays B and C with equal (1/2) probability, and Player 2 plays X and Y with equal (1/2) probability.</li>
-<li>MSNE: <span class="math inline">\((0, 1/2, 1/2), (1/2, 1/2)\)</span></li>
+<li>never willing to mix all three of their pure strategies.</li>
+</ul></li>
+</ul></li>
 </ul>
 </div>
 <hr>
@@ -739,9 +666,11 @@ window.Quarto = {
 </div>
 </div>
 <ul>
-<li>If <span class="math inline">\(q&lt;z\)</span> then <span class="math inline">\(BR_2 = \{X\}\)</span></li>
-<li>If <span class="math inline">\(q&gt;z\)</span> then <span class="math inline">\(BR_2 = \{Y\}\)</span></li>
-<li>If <span class="math inline">\(q=z\)</span> then <span class="math inline">\(BR_2 = \{X,Y,(r)\}\)</span></li>
+<li>If <span class="math inline">\(r&lt;0.5\)</span> then <span class="math inline">\(BR_1 = \{C\}\)</span></li>
+<li>If <span class="math inline">\(r=0.5\)</span> then <span class="math inline">\(BR_1 = \{B,C\}\)</span></li>
+<li>If <span class="math inline">\(0.5&lt;r&lt;0.\bar{6}\)</span> then <span class="math inline">\(BR_1 = \{B\}\)</span></li>
+<li>If <span class="math inline">\(r=0.\bar{6}\)</span> then <span class="math inline">\(BR_1 = \{A,B\}\)</span></li>
+<li>If <span class="math inline">\(0.\bar{6}&lt;r\)</span> then <span class="math inline">\(BR_1 = \{A\}\)</span></li>
 </ul>
 <hr>
 </section>
@@ -761,16 +690,60 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="msne-in-a-larger-game-5" class="level2">
-<h2 class="anchored" data-anchor-id="msne-in-a-larger-game-5">MSNE in a Larger Game</h2>
+<section id="two-strat-players-indifference" class="level2">
+<h2 class="anchored" data-anchor-id="two-strat-players-indifference">Two-Strat Player’s Indifference</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th>X</th>
+<th>Y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A (<span class="math inline">\(\alpha\)</span>)</td>
+<td>2, 1</td>
+<td>0, 1</td>
+</tr>
+<tr class="even">
+<td>B (<span class="math inline">\(\beta\)</span>)</td>
+<td>1, 2</td>
+<td>2, 0</td>
+</tr>
+<tr class="odd">
+<td>C (<span class="math inline">\(\gamma\)</span>)</td>
+<td>0, 0</td>
+<td>3, 2</td>
+</tr>
+</tbody>
+</table>
 <p>Let’s check Player 2’s expected payoffs next:</p>
 <div class="incremental">
 <ul class="incremental">
-<li><p><span class="math inline">\(U_2(X) = 1p + 2q + 0\)</span>.</p></li>
-<li><p><span class="math inline">\(U_2(Y) = 1p + 0 + 2(z)\)</span>.</p></li>
-<li><p>So Player 2 will play a mixed strategy if <span class="math display">\[p + 2q = p + 2(z)\]</span> <span class="math display">\[\implies q = z\]</span>.</p></li>
-<li><p>Recall that <span class="math inline">\(q\)</span> was the probability we put on Player 2 playing <span class="math inline">\(B\)</span>,</p></li>
-<li><p>and <span class="math inline">\(z\)</span> was the probability they play <span class="math inline">\(C\)</span>.</p></li>
+<li>They only have two pure strats, but have to react to three different probabilities</li>
+<li><span class="math inline">\(U_2(X) = 1\alpha + 2\beta + 0\gamma\)</span>.</li>
+<li><span class="math inline">\(U_2(Y) = 1\alpha + 0\beta + 2\gamma\)</span>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="msne-in-a-larger-game-1" class="level2">
+<h2 class="anchored" data-anchor-id="msne-in-a-larger-game-1">MSNE in a Larger Game</h2>
+<p>Let’s check Player 2’s expected payoffs next:</p>
+<div class="incremental">
+<ul class="incremental">
+<li><span class="math inline">\(U_2(X) = 1\alpha + 2\beta + 0\)</span>.</li>
+<li><span class="math inline">\(U_2(Y) = 1\alpha + 0 + 2\gamma\)</span>.</li>
+<li><span class="hi">Opponent’s Indifference Condition</span>:
+<ul class="incremental">
+<li>Player 2 will mix if <span class="math inline">\(\alpha + 2\beta = \alpha + 2\gamma \implies \beta = \gamma\)</span>.</li>
+<li>Examples of when this can be true:
+<ul class="incremental">
+<li>Either Player 1 plays B and C equally</li>
+<li>or Player 1 plays A only, and B and C not at all.</li>
+</ul></li>
+</ul></li>
 </ul>
 </div>
 <hr>
@@ -786,34 +759,143 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<hr>
-</section>
-<section id="when-will-player-2-mix" class="level2">
-<h2 class="anchored" data-anchor-id="when-will-player-2-mix">When will Player 2 mix?</h2>
-<p>We found they are indifferent between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> when <span class="math display">\[ q = z \]</span>.</p>
-<p>There are two ways that this can be true:</p>
-<div class="incremental">
-<ul class="incremental">
-<li>Either Player 1 plays B and C with equal probability (and we know from earlier that they would <strong>only</strong> be playing these two, not A),</li>
-<li>or Player 1 plays A only, and B and C not at all.</li>
+<ul>
+<li>If <span class="math inline">\(\beta&lt;\gamma\)</span> then <span class="math inline">\(BR_2 = \{X\}\)</span></li>
+<li>If <span class="math inline">\(\beta&gt;\gamma\)</span> then <span class="math inline">\(BR_2 = \{Y\}\)</span></li>
+<li>If <span class="math inline">\(\beta=\gamma\)</span> then <span class="math inline">\(BR_2 = \{X,Y\}\)</span>
+<ul>
+<li>AKA they would be willing to mix between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> with prob <span class="math inline">\(r\)</span></li>
+</ul></li>
 </ul>
-</div>
 <hr>
 </section>
-<section id="msne-in-a-larger-game-6" class="level2">
-<h2 class="anchored" data-anchor-id="msne-in-a-larger-game-6">MSNE in a Larger Game</h2>
-<p><u>Case 1</u>: Player 1 only plays A:</p>
+<section id="checking-for-all-msne" class="level2">
+<h2 class="anchored" data-anchor-id="checking-for-all-msne">Checking for all MSNE</h2>
+<p>There might be multiple MSNE</p>
+<ul>
+<li><p>How can we make sure we find them all?</p>
+<ul>
+<li><p>Check case-by-case</p></li>
+<li><p>I’ll use the ranges of <span class="math inline">\(r\)</span> to check for any BR intersections</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="checking-for-all-msne-1" class="level2">
+<h2 class="anchored" data-anchor-id="checking-for-all-msne-1">Checking for all MSNE</h2>
+<p><u>Case 1</u>: <span class="math inline">\(r&gt;2/3\)</span>:</p>
 <div class="columns">
 <div class="column">
 <div class="incremental">
 <ul class="incremental">
-<li>this requires <span class="math inline">\(2r \geq 2 - r\)</span> and <span class="math inline">\(2r \geq 3 - 3r\)</span>,</li>
-<li>which imply that <span class="math inline">\(r \geq \frac{2}{3}\)</span> and <span class="math inline">\(r \geq \frac{3}{5}\)</span>.</li>
+<li>Player 1 only plays <strong>A</strong></li>
+<li>Player 2 is indifferent between <strong>X</strong> and <strong>Y</strong>
+<ul class="incremental">
+<li>because <span class="math inline">\(\beta=\gamma=0\)</span></li>
+<li>So player 2 will be willing to mix</li>
+</ul></li>
 <li><strong>MSNE 1:</strong>
 <ul class="incremental">
-<li><span class="math inline">\(\sigma_1 = (p = 1, q = 0, z = 0),\)</span></li>
+<li><span class="math inline">\(\sigma_1 = (\alpha = 1, \beta = 0, \gamma = 0),\)</span></li>
 <li><span class="math inline">\(\sigma_2 = (r, 1 - r)\)</span> where <span class="math inline">\(r \geq \frac{2}{3}\)</span>.</li>
 </ul></li>
+</ul>
+</div>
+</div><div class="column">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th>X</th>
+<th>Y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td><u>2</u>, <u>1</u></td>
+<td>0, <u>1</u></td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>1, 2</td>
+<td>2, 0</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>0, 0</td>
+<td>3, 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr>
+</section>
+<section id="checking-for-all-msne-2" class="level2">
+<h2 class="anchored" data-anchor-id="checking-for-all-msne-2">Checking for all MSNE</h2>
+<p><u>Case 2</u>: <span class="math inline">\(r=2/3\)</span>:</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="incremental">
+<ul class="incremental">
+<li>Player 1 is indifferent betwen <strong>A</strong> and <strong>B</strong>
+<ul class="incremental">
+<li>Never plays <strong>C</strong></li>
+</ul></li>
+<li>Player 2 won’t mix if <span class="math inline">\(\beta\neq \gamma =0\)</span></li>
+<li><strong>MSNE 1:</strong>
+<ul class="incremental">
+<li><span class="math inline">\(\sigma_1 = (1, 0, 0),\)</span></li>
+<li><span class="math inline">\(\sigma_2 = (\frac{2}{3}, \frac{1}{3})\)</span></li>
+</ul></li>
+<li>This is just a subcase of <strong>MSNE 1</strong></li>
+</ul>
+</div>
+</div><div class="column" style="width:40%;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th>X</th>
+<th>Y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td><u>2</u>, <u>1</u></td>
+<td>0, <u>1</u></td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>1, 2</td>
+<td>2, 0</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>0, 0</td>
+<td>3, 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr>
+</section>
+<section id="checking-for-all-msne-3" class="level2">
+<h2 class="anchored" data-anchor-id="checking-for-all-msne-3">Checking for all MSNE</h2>
+<p><u>Case 3</u>: <span class="math inline">\(\frac{1}{2}&lt;r&lt;\frac{2}{3}\)</span></p>
+<div class="columns">
+<div class="column">
+<div class="incremental">
+<ul class="incremental">
+<li>then Player 1 plays only <strong>B</strong></li>
+<li>But if <span class="math inline">\(\beta=1\)</span> then <span class="math inline">\(\gamma \neq \beta\)</span>
+<ul class="incremental">
+<li>Player 2 is no longer indifferent</li>
+<li>They would rather play only <strong>X</strong></li>
+</ul></li>
+<li>No MSNE here</li>
 </ul>
 </div>
 </div><div class="column">
@@ -830,15 +912,23 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="msne-in-a-larger-game-7" class="level2">
-<h2 class="anchored" data-anchor-id="msne-in-a-larger-game-7">MSNE in a Larger Game</h2>
-<p><u>Case 2</u>: Player 1 plays <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> with equal probability</p>
+<section id="checking-for-all-msne-4" class="level2">
+<h2 class="anchored" data-anchor-id="checking-for-all-msne-4">Checking for all MSNE</h2>
+<p><u>Case 4</u>: <span class="math inline">\(r=\frac{1}{2}\)</span></p>
 <div class="columns">
 <div class="column">
 <div class="incremental">
 <ul class="incremental">
-<li>then Player 2 plays X and Y with equal (1/2) probability.</li>
-<li><strong>MSNE</strong>: <span class="math inline">\(\sigma_1 = (p = 0, q = 1/2, z = 1/2), \sigma_2 = (1/2, 1/2)\)</span></li>
+<li>Player 1 mixes between <strong>B</strong> and <strong>C</strong>
+<ul class="incremental">
+<li>But never plays <strong>A</strong> (<span class="math inline">\(\alpha=0\)</span>)</li>
+</ul></li>
+<li>Player 2 will mix if <span class="math inline">\(\beta=\gamma\)</span></li>
+<li><strong>MSNE 2</strong>:
+<ul class="incremental">
+<li><span class="math inline">\(\sigma_1 = (\alpha = 0, \beta = 1/2, \gamma = 1/2)\)</span>,</li>
+<li><span class="math inline">\(\sigma_2 = (1/2, 1/2)\)</span></li>
+</ul></li>
 </ul>
 </div>
 </div><div class="column">
@@ -853,6 +943,77 @@ window.Quarto = {
 </div>
 </div>
 </div>
+<hr>
+</section>
+<section id="checking-for-all-msne-5" class="level2">
+<h2 class="anchored" data-anchor-id="checking-for-all-msne-5">Checking for all MSNE</h2>
+<p><u>Case 5</u>: <span class="math inline">\(r&lt;\frac{1}{2}\)</span></p>
+<div class="columns">
+<div class="column">
+<div class="incremental">
+<ul class="incremental">
+<li>Player 1 only plays <strong>C</strong></li>
+<li>Player 2’s best response is only <strong>Y</strong></li>
+<li><strong>MSNE 3</strong>:
+<ul class="incremental">
+<li><span class="math inline">\(\sigma_1 = (\alpha = 0, \beta = 0, \gamma = 1)\)</span>,</li>
+<li><span class="math inline">\(\sigma_2 = (0, 1)\)</span></li>
+</ul></li>
+<li>This is also a <em>pure strategy</em> Nash</li>
+</ul>
+</div>
+</div><div class="column">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(P_1\)</span>, <span class="math inline">\(P_2\)</span></th>
+<th>X</th>
+<th>Y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>2, 1</td>
+<td>0, 1</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>1, 2</td>
+<td>2, 0</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>0, 0</td>
+<td><u>3</u>, <u>2</u></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr>
+</section>
+<section id="msne-in-3x2-game" class="level2">
+<h2 class="anchored" data-anchor-id="msne-in-3x2-game">MSNE in 3x2 Game</h2>
+<p>So across all cases, we found:</p>
+<ul>
+<li>Two pure strategy Nash:
+<ul>
+<li><span class="math inline">\(\{A, X\}\)</span></li>
+<li><span class="math inline">\(\{C, Y\}\)</span></li>
+</ul></li>
+<li>One MSNE where both player mix:
+<ul>
+<li><span class="math inline">\(\{(0A, 1/2 B, 1/2 C),~ (1/2 X, 1/2 Y)\}\)</span></li>
+</ul></li>
+<li>Another MSNE when only Player 2 mixes:
+<ul>
+<li><span class="math inline">\(\{(1A, 0 B, 0 C),~ (r X, (1-r) Y)\}\)</span> where <span class="math inline">\(r \geq 2/3\)</span>
+<ul>
+<li>(includes PSNE <span class="math inline">\(\{A, X\}\)</span>)</li>
+</ul></li>
+</ul></li>
+</ul>
 <hr>
 </section>
 <section id="solving-msne-in-a-3x3-game" class="level2">
@@ -1106,6 +1267,7 @@ c &amp; = 1/7
 
 
 </section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1172,13 +1334,14 @@ c &amp; = 1/7
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
