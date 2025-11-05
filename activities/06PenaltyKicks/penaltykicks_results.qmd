@@ -42,11 +42,10 @@ from the `tidyverse` package.
 # load tidyverse packages
 library(tidyverse)
 
-# setwd("activities/06PenaltyKicks")
+setwd("activities/06PenaltyKicks")
 
 # read in the class results from csv file
-data <- read_csv("EC327F24-activity6_results.csv") %>%
-  filter(!is.na(s_k), !is.na(s_g)) # filter out missing data
+data <- read_csv("EC327F25-activity6_results.csv") 
 
 # print the first 10 observations
 head(data, n = 10)
@@ -68,12 +67,25 @@ N <- nrow(data)
 Across all rounds and matches played in class this quarter,
 we had `r N` different shots attempted, which are each a row in this dataset.
 
-## Group Results by Srategy Profile
+## Strategy Frequencies
 
-I might want to compare how often we see a kicker choosing $Right$
-at the same time a goalie blocked $Right$,
-vs a kicker chosing $Right$ when a goalie blocked $Left$, etc, 
-for all 9 different possible pure strategy combinations.
+```{r}
+data |> 
+group_by(kick) |> 
+summarise(
+  n = n(),
+  p = n / N,
+  goals = sum(goal),
+  avg_goal = mean(goal)
+) |> 
+ggplot(aes(x="", fill=kick, y=p)) +
+geom_bar(stat = "identity", width=1, color="white") +
+coord_polar("y",start=0) +
+theme_void() +
+# geom_text(aes(label = s_k), position = position_stack(vjust = 0.5)) +
+geom_text(aes(label = p), position = position_stack(vjust = 0.5))
+```
+## Group Results by Srategy
 
 ```{r}
 #| message: false
