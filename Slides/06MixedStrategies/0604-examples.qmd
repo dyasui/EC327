@@ -1,0 +1,220 @@
+# More MSNE Examples
+
+## Mixed Strategies in the Deer Hunt
+
+Consider the Deer Hunt:
+
+| Igg, Ogg | Deer | Rabbit |
+|----------+--------+----------|
+| Deer     | $2, 2$ | $0, 1$   |
+| Rabbit   | $1, 0$ | $1, 1$   |
+
+Suppose that Igg hunts Deer 3/4 of the time, and Rabbit 1/4 of the time.
+
+::: {.incremental}
+  * If Ogg *always hunts deer*; 
+  what is Ogg's *expected payoff*?
+	* Ogg's expected payoff from playing Deer will be $0.75(2) + 0.25(0) = 1.5$.
+:::
+---
+
+## Mixed Strategies in the Deer Hunt: Generalizing
+
+We can generalize this approach to calculate Ogg's expected payoffs from any strategy that Igg chooses to play:
+
+::: {.incremental}
+  * Suppose Igg plays Deer with prob p, and Rabbit with prob 1 - p.
+  * Ogg's expected payoff from Deer is:
+    + $2(p) + 0(1 - p) = 2p$, 
+  * and from Rabbit:
+    +  $1(p) + 1(1 - p) = 1$.
+  * Ogg's expected payoff from Deer gets larger with p:
+    - more likely Igg is to hunt Deer, more attractive Deer becomes to Ogg.
+:::
+---
+
+## MSNE in the Deer Hunt
+We already saw that Ogg's expected payoffs from Deer and Rabbit are $2p$ and $1$, respectively, 
+
+so Ogg would only play a mixed strategy if $p = \frac{1}{2}$.
+
+::: {.incremental}
+  * Likewise, Igg's expected payoffs are $2q$ and $1$, and Igg will play a mixed strategy if $q = \frac{1}{2}$.
+  * The MSNE in this game can be written as:
+  $\{(1/2~Deer, 1/2~Rabbit)_{Ogg}, \ (1/2~Deer, 1/2~Rabbit)_{Igg}\}$.
+:::
+
+---
+
+## Error-Checking
+
+Make sure that you're setting up the equations used to solve for a player's strategy correctly:
+
+::: {.incremental}
+  * Describe when a player is *indifferent* between their pure strategies: 
+    + if you're trying to figure out when **Player 1** is indifferent, you need to use **Player 1's** payoffs.
+  * However, the probabilities will be based on the **other** player's mixed strategy: 
+    + in a game with mixed strategies, the randomness a player deals with is created by the **other** player---not themselves.
+:::
+
+---
+
+## Another Example: Police Patrol and Drug Trade {.smaller}
+
+| Police, Dealer | Streets (d) | Park (1 - d) |
+|----------------+-------------+--------------|
+| Streets (p)    | 80, 20      | 0,100        |
+| Park (1 - p)   | 10, 90      | 60,40        |
+
+^[Harrington, pg. 226]
+
+::::: {.columns}
+:::: {.column}
+::: {.incremental}
+  * Police Officer's expected utility:
+    + $U_P(Streets) = 80d + 0(1-d)$
+      - $= 80d$ 
+    + $U_P(Park) = 10d + 60(1-d)$
+      - $= 60 - 50d$.
+:::
+::::
+:::: {.column}
+::: {.incremental}
+  * Drug Dealer's expected utility:
+    + $U_D(Streets) = 20p + 90(1-p)$
+      - $= 90 - 70p$ 
+    + $U_D(Park) = 100p + 40(1-p)$
+      - $= 40 + 60p$.
+:::
+::::
+:::::
+---
+
+## MSNE in Patrol and Trade game:
+* When is the Police Officer indifferent between Park and Streets?
+
+* When is the Drug Dealer indifferent between Park and Streets?
+
+  * What is the [Mixed Strategies Nash equilibrium?]{.hi}
+---
+
+## Graph Police Officer's expected utilities
+
+```{r}
+#| echo: false
+# Load necessary libraries
+library(ggplot2)
+
+# Define the expected utility functions for Streets and Park
+U_Streets <- function(d) {
+  80 * d
+}
+
+U_Park <- function(d) {
+  60 - 50 * d
+}
+
+# Generate a sequence of values for d from 0 to 1
+d_values <- seq(0, 1, length.out = 100)
+
+# Compute the expected utilities for each value of d
+streets_utilities <- U_Streets(d_values)
+park_utilities <- U_Park(d_values)
+
+# Create a data frame for plotting
+data <- data.frame(d = d_values, Streets = streets_utilities, Park = park_utilities)
+
+# Plot the expected utilities and indicate the best response threshold
+ggplot(data, aes(x = d)) +
+  geom_line(aes(y = Streets, color = "Streets (80d)"), linewidth = 2) +
+  geom_line(aes(y = Park, color = "Park (60 - 50d)"), linewidth = 2) +
+  geom_vline(xintercept = 6/13, linetype = "dashed", color = "grey50") +
+  annotate("text", x = 6/13, y = 0, label = "d = 6/13", hjust = -0.1, color = "grey50") +
+  labs(title = "Expected Utility Functions for Streets and Park",
+       x = "Probability (d)",
+       y = "Expected Utility",
+       color = "Choice") +
+  theme_minimal()
+```
+
+---
+
+## Graph Drug Dealer's expected utilities
+ 
+```{r}
+#| echo: false
+
+# Define the updated expected utility functions for the Drug Dealer
+U_Streets_D <- function(p) {
+  90 - 70 * p
+}
+
+U_Park_D <- function(p) {
+  40 + 60 * p
+}
+
+# Generate a sequence of values for p from 0 to 1
+p_values <- seq(0, 1, length.out = 100)
+
+# Compute the expected utilities for each value of p
+streets_utilities_D <- U_Streets_D(p_values)
+park_utilities_D <- U_Park_D(p_values)
+
+# Create a data frame for plotting
+data_D <- data.frame(p = p_values, Streets = streets_utilities_D, Park = park_utilities_D)
+
+# Plot the expected utilities and indicate the best response threshold
+ggplot(data_D, aes(x = p)) +
+  geom_line(aes(y = Streets, color = "Streets (90 - 70p)"), linewidth = 2) +
+  geom_line(aes(y = Park, color = "Park (40 + 60p)"), linewidth = 2) +
+  geom_vline(xintercept = 5/13, linetype = "dashed", color = "grey50") +
+  annotate("text", x = 5/13, y = 0, label = "p = 5/13", hjust = -0.1, color = "grey50") +
+  labs(title = "Expected Utility Functions for Streets and Park (Drug Dealer)",
+       x = "Probability (p)",
+       y = "Expected Utility",
+       color = "Choice") +
+  theme_minimal()
+```
+
+---
+
+## Graph Best Response functions
+ 
+```{r}
+#| code-fold: true
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(latex2exp)
+
+data <- tibble(
+  d = c(0, 6/13, 6/13, 1),
+  PR = c(0, 0, 1, 1),
+  p = c(1, 5/13, 5/13, 0),
+  DR = c(0, 0, 1, 1),
+)
+
+# Plot the best response functions
+ggplot(data) +
+  geom_hline(yintercept = 5/13, linetype = "dashed", color = "grey50") +
+  geom_vline(xintercept = 6/13, linetype = "dashed", color = "grey50") +
+  geom_step(aes(x = d, y = PR, color = "Police Officer's Best Response"), direction = "hv", linewidth = 2) +
+  geom_step(aes(x = DR, y = p, color = "Drug Dealer's Best Response"), direction = "hv", linewidth = 2) +
+  geom_point(data = tibble(d = 6/13, p = 5/13), aes(x=d, y=p, color = "MSNE"), size = 3) +
+  annotate("text", y = 5/13, x = 0, label = TeX("$p^* = 5/13$"), hjust = -0.1, vjust = 2, color = "grey50") +
+  annotate("text", x = 6/13, y = 0, label = TeX("$d^* = 6/13$"), hjust = -0.2, vjust = 1, color = "grey50") +
+  labs(title = "Best Response Functions for Mixed Strategy Nash Equilibrium",
+       x = "Drug Dealer's Probability (d)",
+       y = "Police Officer's Probability (p)",
+       color = "Best Response") +
+  theme_minimal()
+```
+---
+
+## MSNE in Patrol and Trade game:
+
+* Note that the players' asymmetric preferences result in an interior solution.
+
+* Notice that it isn't a 50:50, it is more likely that both meet in the Park 
+  than it is likely that they both meet in the Streets

@@ -1,99 +1,53 @@
+# Mixed strategies in larger games
+
 ## MSNE in a Larger Game
 Suppose that we have this 3x2 game:
 
 | $P_1$, $P_2$ | X (r) | Y (1 - r) |
 |-------------:+-------+-----------|
-|        A (p) | 2, 1  | 0, 1      |
-|        B (q) | 1, 2  | 2, 0      |
-|        C (z) | 0, 0  | 3, 2      |
+| A ($\alpha$) | 2, 1  | 0, 1      |
+| B ($\beta$)  | 1, 2  | 2, 0      |
+| C ($\gamma$) | 0, 0  | 3, 2      |
 
-::: {.incremental}
-  * Player 1's mixed strategy uses probabilities p, q, and z, since they have three pure strategies.
-:::
+  * Player 1's mixed strategy uses probabilities $\alpha, \beta, \gamma$ since they have three pure strategies.
+    + You could also replace $\gamma$ with $(1-\alpha-\beta)$
+      - because lotter probabilites sum to one
+  * Player 2 just has two pure strategies w/ probability $r$ of $X$
+
 ---
 
-## MSNE in a Larger Game
+## 3-Strategy Player's Payoffs
 
-::::: {.columns}
-:::: {.column .smaller width="30%"}
-| $P_1$, $P_2$ | X (r) | Y (1 - r) |
-|:------------:+:-----:+:---------:|
-|     A (p)    |  2, 1 |    0, 1   |
-|     B (q)    |  1, 2 |    2, 0   |
-|     C (z)    |  0, 0 |    3, 2   |
-::::
-:::: {.column}
 Let's put together Player 1's expected payoffs:
 
-::: {.incremental}
-  * $U_1(A) = 2r + 0 = 2r$.
-  * $U_1(B) = 1r + 2(1 - r) = 2 - r$.
-  * $U_1(C) = 0 + 3(1 - r) = 3 - 3r$.
-:::
-::::
-:::::
----
+| $P_1$, $P_2$ | X ($r$) | Y ($1-r$)|
+|:------------:+:-----:+:---------:|
+| A  | 2, 1  | 0, 1      |
+| B  | 1, 2  | 2, 0      |
+| C  | 0, 0  | 3, 2      |
 
-## MSNE in a Larger Game
-
-::::: {.columns}
-:::: {.column .smaller width="30%"}
-| $P_1$, $P_2$ | X (r) | Y (1 - r) |
-|-------------:+:-----:+:---------:|
-|        A (p) |  2, 1 |    0, 1   |
-|        B (q) |  1, 2 |    2, 0   |
-|        C (z) |  0, 0 |    3, 2   |
-::::
-:::: {.column .smaller}
-Next, let's see what it would take to get Player 1 to mix different pairs of strategies:
+They have three discrete strategies to choose from:
 
 ::: {.incremental}
-  * A and B: $2r = 2 - r \implies r = \frac{2}{3}$.
-  * A and C: $2r = 3 - 3r \implies r = \frac{3}{5}$.
-  * B and C: $2 - r = 3 - 3r \implies r = \frac{1}{2}$.
+  * $EU_1(A) = 2r + 0 = 2r$.
+  * $EU_1(B) = 1r + 2(1 - r) = 2 - r$.
+  * $EU_1(C) = 0 + 3(1 - r) = 3 - 3r$.
 :::
-::::
-:::::
-Note that each pair of strategies requires a different value of $r$: there is no mixed strategy for Player 2 that would make Player 1 willing to mix all three of their pure strategies.
 
 ---
 
-## MSNE in a Larger Game 
+## 3-strategy Player's Indifference
 
-::::: {.columns}
-:::: {.column .smaller width="30%"}
-| $P_1$, $P_2$ | X (r) | Y (1 - r) |
-|--------------+-------+-----------|
-| A (p)        | 2, 1  | 0, 1      |
-| B (q)        | 1, 2  | 2, 0      |
-| C (z)        | 0, 0  | 3, 2      |
-::::
-:::: {.column}
-Let's check Player 2's expected payoffs next:
+When would Player 1 want to play different strategies?
 
 ::: {.incremental}
-  * $U_2(X) = 1p + 2q + 0$.
-  * $U_2(Y) = 1p + 0 + 2(z)$.
-  * So Player 2 will play a mixed strategy if $p + 2q = p + 2(z) \implies q = z$.
-  * There are two ways that this can be true: Either Player 1 plays B and C
-  with equal probability (and we know from earlier that they would **only** be
-  playing these two, not A), or Player 1 plays A only, and B and C not at all. 
+  * Indifferent between A and B: $2r = 2 - r \implies r = \frac{2}{3}$.
+  * Indifferent between A and C: $2r = 3 - 3r \implies r = \frac{3}{5}$.
+  * Indifferent between B and C: $2 - r = 3 - 3r \implies r = \frac{1}{2}$.
+    - Note that each pair of strategies requires a different value of $r$:
+      + never willing to mix all three of their pure strategies.
 :::
-::::
-:::::
----
 
-## MSNE in a Larger Game
-So, one type of MSNE is where Player 1 only plays A: 
-
-this requires $2r \geq 2 - r$ and $2r \geq 3 - 3r \Rightarrow r \geq \frac{2}{3}$ and $r \geq \frac{3}{5}$.
-
-::: {.incremental}
-  * MSNE: $(1, 0, 0), (r, 1 - r)$, where $r \geq \frac{2}{3}$.
-  * And the other type of MSNE is where Player 1 plays B and C with equal (1/2)
-    probability, and Player 2 plays X and Y with equal (1/2) probability.
-  * MSNE: $(0, 1/2, 1/2), (1/2, 1/2)$
-:::
 ---
 
 ## Graph Player 1's expected utilities
@@ -134,9 +88,12 @@ EU1_plot <- ggplot(data_1, aes(x = r)) +
   theme_minimal()
 EU1_plot 
 ```
-  * If $q<z$ then $BR_2 = \{X\}$
-  * If $q>z$ then $BR_2 = \{Y\}$
-  * If $q=z$ then $BR_2 = \{X,Y,(r)\}$
+
+* If $r<0.5$ then $BR_1 = \{C\}$
+* If $r=0.5$ then $BR_1 = \{B,C\}$
+* If $0.5<r<0.\bar{6}$ then $BR_1 = \{B\}$
+* If $r=0.\bar{6}$ then $BR_1 = \{A,B\}$
+* If $0.\bar{6}<r$ then $BR_1 = \{A\}$
 
 ---
 
@@ -152,18 +109,35 @@ What it would take to get Player 1 to mix different pairs of strategies:
 :::
 ---
 
+## Two-Strat Player's Indifference
+
+| $P_1$, $P_2$ | X  | Y  |
+|--------------+-------+-----------|
+| A ($\alpha$) | 2, 1  | 0, 1      |
+| B ($\beta$)  | 1, 2  | 2, 0      |
+| C ($\gamma$) | 0, 0  | 3, 2      |
+
+Let's check Player 2's expected payoffs next:
+
+::: {.incremental}
+  * They only have two pure strats, but have to react to three different probabilities
+  * $U_2(X) = 1\alpha + 2\beta + 0\gamma$.
+  * $U_2(Y) = 1\alpha + 0\beta + 2\gamma$.
+:::
+
+---
+
 ## MSNE in a Larger Game
 Let's check Player 2's expected payoffs next:
 
 ::: {.incremental}
-  * $U_2(X) = 1p + 2q + 0$.
-  * $U_2(Y) = 1p + 0 + 2(z)$.
-  * So Player 2 will play a mixed strategy if
-  $$p + 2q = p + 2(z)$$ 
-  $$\implies q = z$$.
-
-  * Recall that $q$ was the probability we put on Player 2 playing $B$,
-  * and $z$ was the probability they play $C$. 
+  * $U_2(X) = 1\alpha + 2\beta + 0$.
+  * $U_2(Y) = 1\alpha + 0 + 2\gamma$.
+  * [Opponent's Indifference Condition]{.hi}:
+    - Player 2 will mix if $\alpha + 2\beta = \alpha + 2\gamma \implies \beta = \gamma$.
+    - Examples of when this can be true: 
+      + Either Player 1 plays B and C equally
+      + or Player 1 plays A only, and B and C not at all. 
 :::
 
 ---
@@ -176,43 +150,119 @@ Let's check Player 2's expected payoffs next:
 library(ggtern)
 
 data <- tidyr::tibble(
-  p = runif(100),
-  q = seq(0, 1, length.out = 100),
-  z = seq(0, 1, length.out = 100)
+  a = runif(100),
+  b = seq(0, 1, length.out = 100),
+  c = seq(0, 1, length.out = 100)
 )
-EU2_plot <- ggtern(data, aes(x=p, y=q, z=z, color = "Indifference: q = z")) +
+EU2_plot <- ggtern(data, aes(x=b, y=a, z=c, color = "Indifference: b = c")) +
   geom_path(linewidth = 2) +
   theme_rgbw()
 EU2_plot
 ```
----
 
-## When will Player 2 mix? 
-We found they are indifferent between $X$ and $Y$ when 
-$$ q = z $$.
-
-There are two ways that this can be true: 
-
-::: {.incremental}
-  * Either Player 1 plays B and C with equal probability
-  (and we know from earlier that they would **only** be playing these two, not A),
-  * or Player 1 plays A only, and B and C not at all. 
-:::
+  * If $\beta<\gamma$ then $BR_2 = \{X\}$
+  * If $\beta>\gamma$ then $BR_2 = \{Y\}$
+  * If $\beta=\gamma$ then $BR_2 = \{X,Y\}$
+    + AKA they would be willing to mix between $X$ and $Y$ with prob $r$
 
 ---
 
-## MSNE in a Larger Game 
-<u>Case 1</u>: Player 1 only plays A:
+## Checking for all MSNE
+
+There might be multiple MSNE
+
+* How can we make sure we find them all?
+
+  + Check case-by-case
+
+  + I'll use the ranges of $r$ to check for any BR intersections
+
+## Checking for all MSNE
+<u>Case 1</u>: $r>2/3$:
 
 ::::: {.columns}
 :::: {.column}
 ::: {.incremental}
-  * this requires $2r \geq 2 - r$ and $2r \geq 3 - 3r$,
-  * which imply that $r \geq \frac{2}{3}$ and $r \geq \frac{3}{5}$.
+  * Player 1 only plays **A**
+  * Player 2 is indifferent between **X** and **Y**
+    + because $\beta=\gamma=0$
+    + So player 2 will be willing to mix
   * **MSNE 1:** 
-    + $\sigma_1 = (p = 1, q = 0, z = 0),$
+    + $\sigma_1 = (\alpha = 1, \beta = 0, \gamma = 0),$
     + $\sigma_2 = (r, 1 - r)$ where $r \geq \frac{2}{3}$.
 :::
+::::
+:::: {.column}
+| $P_1$, $P_2$ | X  | Y  |
+|--------------+----+----|
+| A       | <u>2</u>, <u>1</u>  | 0, <u>1</u> |
+| B       | 1, 2  | 2, 0 |
+| C       | 0, 0  | 3, 2 |
+::::
+:::::
+---
+
+## Checking for all MSNE
+<u>Case 2</u>: $r=2/3$:
+
+::::: {.columns}
+:::: {.column width="60%"}
+::: {.incremental}
+  * Player 1 is indifferent betwen **A** and **B**
+    + Never plays **C**
+  * Player 2 won't mix if $\beta\neq \gamma =0$
+  * **MSNE 1:** 
+    + $\sigma_1 = (1, 0, 0),$
+    + $\sigma_2 = (\frac{2}{3}, \frac{1}{3})$ 
+  * This is just a subcase of **MSNE 1**
+:::
+::::
+:::: {.column width="40%"}
+| $P_1$, $P_2$ | X  | Y  |
+|--------------+----+----|
+| A       | <u>2</u>, <u>1</u>  | 0, <u>1</u> |
+| B       | 1, 2  | 2, 0 |
+| C       | 0, 0  | 3, 2 |
+::::
+:::::
+---
+
+## Checking for all MSNE
+<u>Case 3</u>: $\frac{1}{2}<r<\frac{2}{3}$ 
+
+::::: {.columns}
+:::: {.column}
+::: {.incremental}
+  * then Player 1 plays only **B**
+  * But if $\beta=1$ then $\gamma \neq \beta$
+    + Player 2 is no longer indifferent
+    + They would rather play only **X**
+  * No MSNE here
+::: 
+::::
+:::: {.column}
+```{r}
+#| echo: false
+EU1_plot
+```
+::::
+:::::
+
+---
+
+## Checking for all MSNE
+<u>Case 4</u>: $r=\frac{1}{2}$ 
+
+::::: {.columns}
+:::: {.column}
+::: {.incremental}
+  * Player 1 mixes between **B** and **C**
+    + But never plays **A** ($\alpha=0$)
+  * Player 2 will mix if $\beta=\gamma$
+  * **MSNE 2**: 
+    + $\sigma_1 = (\alpha = 0, \beta = 1/2, \gamma = 1/2)$,
+    + $\sigma_2 = (1/2, 1/2)$
+::: 
 ::::
 :::: {.column}
 ```{r}
@@ -223,23 +273,43 @@ EU1_plot
 :::::
 ---
 
-## MSNE in a Larger Game 
-<u>Case 2</u>: Player 1 plays $B$ and $C$ with equal probability 
+## Checking for all MSNE
+<u>Case 5</u>: $r<\frac{1}{2}$ 
 
 ::::: {.columns}
 :::: {.column}
 ::: {.incremental}
-  * then Player 2 plays X and Y with equal (1/2) probability.
-  * **MSNE**: $\sigma_1 = (p = 0, q = 1/2, z = 1/2), \sigma_2 = (1/2, 1/2)$
+  * Player 1 only plays **C**
+  * Player 2's best response is only **Y**
+  * **MSNE 3**: 
+    + $\sigma_1 = (\alpha = 0, \beta = 0, \gamma = 1)$,
+    + $\sigma_2 = (0, 1)$
+  * This is also a *pure strategy* Nash
 ::: 
 ::::
 :::: {.column}
-```{r}
-#| echo: false
-EU2_plot
-```
+| $P_1$, $P_2$ | X  | Y  |
+|--------------+----+----|
+| A       | 2, 1  | 0, 1 |
+| B       | 1, 2  | 2, 0 |
+| C       | 0, 0  | <u>3</u>, <u>2</u> |
 ::::
 :::::
+---
+
+## MSNE in 3x2 Game
+
+So across all cases, we found:
+
+* Two pure strategy Nash:
+  + $\{A, X\}$
+  + $\{C, Y\}$
+* One MSNE where both player mix:
+  + $\{(0A, 1/2 B, 1/2 C),~ (1/2 X, 1/2 Y)\}$
+* Another MSNE when only Player 2 mixes:
+  + $\{(1A, 0 B, 0 C),~ (r X, (1-r) Y)\}$ where $r \geq 2/3$
+    - (includes PSNE $\{A, X\}$)
+
 ---
 
 ## Solving MSNE in a 3x3 Game

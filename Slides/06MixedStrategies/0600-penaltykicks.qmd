@@ -1,3 +1,5 @@
+# Penalty Kick Shootout
+
 ## Mixed Strategies in Penalty Kicks
 Why might randomized actions be useful?
 
@@ -155,63 +157,117 @@ So what should the **Kicker** do?
 |         $Right_k$ | 0.9, 0.1 |  0.3, 0.7 |
 
 In Nash equilibrium:
+
   * The **Kicker** should play Left 50% of the time
   * The **Goalie** should play Left 50%
   * Both players are *indifferent* between either pure strategy
   * Kicker's probability of scoring is 0.6 
     - *no matter what direction they choose*
 
-<!--## Mixed Strategies in 3x3 Penalty Shootout {.smaller}-->
-<!---->
-<!--| Kicker, Goalie |     L    |     C    |     R    |-->
-<!--|:--------------:+:--------:+:--------:+:--------:|-->
-<!--|        L       | 0.3, 0.7 | 0.9, 0.1 | 0.9, 0.1 |-->
-<!--|        C       | 0.6, 0.4 |   0, 1   | 0.6, 0.4 |-->
-<!--|        R       | 0.9, 0.1 | 0.9, 0.1 | 0.3, 0.7 |-->
-<!---->
-<!--Let's define:-->
-<!---->
-<!--:::: {.columns}-->
-<!--::: {.column}-->
-<!--  * $\ell_k$ the **Kicker's** probabilty of kicking Left-->
-<!--  * $c_k$ the **Kicker's** probabilty of kicking Center-->
-<!--  * $r_k$ the **Kicker's** probabilty of kicking Right-->
-<!--:::-->
-<!--::: {.column}-->
-<!--  * $\ell_g$ the **Goalie's** probabilty of kicking Left-->
-<!--  * $c_g$ the **Goalie's** probabilty of kicking Center-->
-<!--  * $r_g$ the **Goalie's** probabilty of kicking Right-->
-<!--:::-->
-<!--::::-->
-<!---->
-<!------->
-<!---->
-<!--## Mixed Strategies in 3x3 Penalty Shootout {.smaller}-->
-<!---->
-<!--| Kicker, Goalie |     L    |     C    |     R    |-->
-<!--|:--------------:+:--------:+:--------:+:--------:|-->
-<!--|        L       | 0.3, 0.7 | 0.9, 0.1 | 0.9, 0.1 |-->
-<!--|        C       | 0.6, 0.4 |   0, 1   | 0.6, 0.4 |-->
-<!--|        R       | 0.9, 0.1 | 0.9, 0.1 | 0.3, 0.7 |-->
-<!---->
-<!--::::: {.columns}-->
-<!--:::: {.incremental}-->
-<!---->
-<!--::: {.column}-->
-<!--The Kicker's expected utility depends on $\sigma_g$:-->
-<!---->
-<!--  * $EU_k(L_k, \sigma_g) = 0.3\ell_g + 0.9c_g + 0.9r_g$-->
-<!--  * $EU_k(C_k, \sigma_g) = 0.6\ell_g + 0c_g + 0.6r_g$-->
-<!--  * $EU_k(R_k, \sigma_g) = 0.9\ell_g + 0.9c_g + 0.3r_g$-->
-<!--:::-->
-<!--::: {.column}-->
-<!---->
-<!--The Goalie's expected utility depends on $sigma_k$:-->
-<!---->
-<!--  * $EU_g(L_g, \sigma_k) = 0.7\ell_k + 0.4c_g + 0.1r_g$-->
-<!--  * $EU_g(C_g, \sigma_k) = 0.1\ell_g + 1c_g + 0.1r_g$-->
-<!--  * $EU_g(R_g, \sigma_k) = 0.1\ell_g + 0.4c_g + 0.7r_g$-->
-<!--:::-->
-<!--::::-->
-<!--:::::-->
-<!------->
+---
+
+## Mixed Strategies in 3x3 Penalty Shootout {.smaller}
+
+| Kicker, Goalie |     L    |     C    |     R    |
+|:--------------:+:--------:+:--------:+:--------:|
+|        L       | 0.3, 0.7 | 0.9, 0.1 | 0.9, 0.1 |
+|        C       | 0.6, 0.4 |   0, 1   | 0.6, 0.4 |
+|        R       | 0.9, 0.1 | 0.9, 0.1 | 0.3, 0.7 |
+
+Let's define:
+
+:::: {.columns}
+::: {.column}
+ * $\ell_k$ the **Kicker's** probabilty of kicking Left
+ * $c_k$ the **Kicker's** probabilty of kicking Center
+ * $r_k$ the **Kicker's** probabilty of kicking Right
+:::
+::: {.column}
+ * $\ell_g$ the **Goalie's** probabilty of kicking Left
+ * $c_g$ the **Goalie's** probabilty of kicking Center
+ * $r_g$ the **Goalie's** probabilty of kicking Right
+:::
+::::
+
+---
+
+## Mixed Strategies in 3x3 Penalty Shootout {.smaller}
+
+| Kicker, Goalie |     L    |     C    |     R    |
+|:--------------:+:--------:+:--------:+:--------:|
+|        L       | 0.3, 0.7 | 0.9, 0.1 | 0.9, 0.1 |
+|        C       | 0.6, 0.4 |   0, 1   | 0.6, 0.4 |
+|        R       | 0.9, 0.1 | 0.9, 0.1 | 0.3, 0.7 |
+
+::::: {.columns}
+:::: {.incremental}
+
+::: {.column}
+The Kicker's expected utility depends on $\sigma_g$:
+
+ * $EU_k(L_k, \sigma_g) = 0.3\ell_g + 0.9c_g + 0.9r_g$
+ * $EU_k(C_k, \sigma_g) = 0.6\ell_g + 0c_g + 0.6r_g$
+ * $EU_k(R_k, \sigma_g) = 0.9\ell_g + 0.9c_g + 0.3r_g$
+:::
+::: {.column}
+
+The Goalie's expected utility depends on $\sigma_k$:
+
+ * $EU_g(L_g, \sigma_k) = 0.7\ell_k + 0.4c_g + 0.1r_g$
+ * $EU_g(C_g, \sigma_k) = 0.1\ell_g + 1c_g + 0.1r_g$
+ * $EU_g(R_g, \sigma_k) = 0.1\ell_g + 0.4c_g + 0.7r_g$
+:::
+::::
+:::::
+
+---
+
+## Kicker's Indifference Conditions
+
+* When will Kicker be indifferent between **L**, **C**, and **R**?
+
+::: {.incremental}
+  + Indifferent between **L** and **C** when $3\ell_g + 9 c_g + 9 r_g = 6\ell_g + 6r_g$
+    - $\Rightarrow \ell_g \leq 3c_g + r_g$
+  + Indifferent between **C** and **R** when $6\ell_g + 6r_g = 9\ell_g + 9c_g + 3r_g$
+    - $\Rightarrow r_g = 3c_g + \ell_g$
+  + Indifferent between **L** and **R** when $3\ell_g + 9 c_g + 9 r_g = 9\ell_g + 9c_g + 3r_g$
+    - $\Rightarrow r_g = \ell_g$
+  + Only one way for all three to hold: if $c_g=0$
+:::
+
+---
+
+## Kicker's Indifference
+
+So the kicker will only kick all three directions when the goalie never blocks center.
+
+  * Is the goalie willing to avoid blocking center?
+
+---
+
+## Kicker's Indifference Conditions
+
+::: {.incremental}
+* When will Goalie be indifferent between **L** and **R**?
+  + When $7\ell_k + 4c_k + 1r_k = 1\ell_k + 4c_k + 7r_k$
+    - Or when $\ell_k=r_k$
+* When will Goalie never play **C**?
+  + When $7\ell_k + 4c_k + 1r_k > 1\ell_k + 10c_k + 1r_k$
+    - Or when $\ell_k > c_k$
+  + And when $1\ell_k + 4c_k + 7r_k > 1\ell_k + 10c_k + 1r_k$
+    - Or when $r_k > c_k$
+:::
+
+## MSNE in Penalty Kicks
+
+So a set mixed-strategy Nash equilibrium in this game:
+
+* $\sigma_k = (\ell_k Left, c_k Center, r_k Right)$ where $\ell_k=r_k > c_k$
+* $\sigma_g = (1/2 Left, 0 Center, 1/2 Right)$
+
+## MSNE predictions for Penalty Kicks
+
+How can we apply our MSNE theory to the activity?
+
+* What are some testable hypotheses?

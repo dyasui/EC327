@@ -22,19 +22,23 @@ output:
 ```{r setup}
 #| echo: false
 library(tidyverse)
+library(ggplot2)
+library(tidyverse)
+library(latex2exp)
+
+knitr::opts_chunk$set(
+    out.width = "70%", # enough room to breath
+    fig.width = 6,     # reasonable size
+    fig.asp = 0.618,   # golden ratio
+    fig.align = "center" # mostly what I want
+)
 ```
 
-::: {.vertical-center}
 
-[Outline]{.hi .big}
-
-:::
-
-{{< include 0600-penaltykicks.qmd >}} 
-
-{{< include 0601-uncertainty.qmd >}}
-
-{{< include 0602-mixing.qmd >}}
+{{< include 0601-mixing.qmd >}}
 
 {{< include 0603-advancedMSNE.qmd >}}
 
+{{< include 0600-penaltykicks.qmd >}} 
+
+{{< include 0604-examples.qmd >}} 
