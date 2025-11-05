@@ -1,4 +1,317 @@
 # More MSNE Examples
+```{r}
+#| echo: false
+library(tidyverse)
+library(ggplot2)
+library(tidyverse)
+library(latex2exp)
+
+knitr::opts_chunk$set(
+    out.width = "70%", # enough room to breath
+    fig.width = 6,     # reasonable size
+    fig.asp = 0.618,   # golden ratio
+    fig.align = "center" # mostly what I want
+)
+```
+
+## Practice your understanding 
+Consider the following game table. What are **Player 1's** expected payoffs, given Player 2's mixed strategy?
+
+| $P_1$, $P_2$   | Up $(q)$ | Down $(1 - q)$ |
+|---------------:+:--------:+:--------------:|
+| Up $(p)$       | 2, -2    | -3, 3          |
+| Down $(1 - p)$ | -5, 5    | 1, -1          |
+
+::: {.incremental}
+  * $U_1(Up) = 2q -3(1-q) = 5q - 3$,
+  * $U_1(Down) = -5q + 1(1-q) = -6q +1$
+:::
+
+---
+
+## Practice your understanding 
+Consider the following game table. What are **Player 2's** expected payoffs, given Player 1's mixed strategy?
+
+| $P_1$, $P_2$   | Up $(q)$ | Down $(1 - q)$ |
+|---------------:+:--------:+:--------------:|
+| Up $(p)$       | 2, -2    | -3, 3          |
+| Down $(1 - p)$ | -5, 5    | 1, -1          |
+
+::: {.incremental}
+* $U_2(Up) = -2p + 5(1-p) = -7p + 5$,
+* $U_2(Down) = 3p - 1(1-p) = 4p -1$
+:::
+
+---
+
+## Practice your understanding
+
+The correct answers to the previous two questions were:
+
+  * $U_1(Up) = 5q - 3$
+  * $U_1(Down) = -6q + 1 $.
+  * $U_2(Up) = -7p + 5$
+  * $U_2(Down) = 4p - 1$.
+
+Based on this, what are $p$ and $q$ in the MSNE of this game?
+
+::: {.incremental}
+  * $p^* = 6/11$
+  * $q^* = 4/11$
+:::
+
+---
+
+## Multiple MSNE in one game 
+
+Consider the following game table:
+
+::::: {.columns}
+:::: {.column}
+| $P_1$, $P_2$ | $X~(q)$ | $Y~(1 - q)$ |
+|-------------:+:-------:+:-----------:|
+| $A~(p)$      | 2, 2    | 3, 2        |
+| $B~(1 - p)$  | 4, 3    | 0, 0        |
+::::
+
+:::: {.column}
+The players' expected payoffs are:
+
+::: {.incremental}
+$$
+\begin{align*}
+U_1(A) & = 2q + 3(1 - q) \\
+       & = 2q + 3 - 3q \\
+       & = 3 - q \\
+U_1(B) & = 4q + 0(1 - q) \\
+       & = 4q \\
+U_2(X) & = 2p + 3(1 - p) \\
+       & = 2p + 3 - 3p \\
+       & = 3 - p \\
+U_2(Y) & = 2p + 0(1 - p) \\
+       & = 2p
+\end{align*}
+$$
+:::
+::::
+:::::
+---
+
+## Multiple MSNE in one game {.smaller}
+
+Based on this, the conditions under which each player will use a mixed strategy are:
+
+$$
+\begin{align*}
+Player~1: && Player~2:&\\
+3 - q &= 4q & 3 - p &= 2p\\
+3 &= 5q & 3 &= 3p\\
+q &= 3/5 & p &= 1
+\end{align*}
+$$
+
+::: {.incremental}
+  * We've never seen anything like $p = 1$ in this context before...
+  * **Player 2 will only mix** if **Player 1 only plays A**
+  * This usually occurs when one strategy **weakly** dominates another.
+:::
+---
+
+## Multiple MSNE in one game
+:::: {.columns}
+::: {.column}
+```{r}
+#| echo: false
+U1_A <- function(q) {
+  2*q + 3*(1-q)
+}
+U1_B <- function(q) {
+  4*q + 0*(1-q)
+}
+# Generate a sequence of values for p from 0 to 1
+p_values <- seq(0, 1, length.out = 100)
+# Compute the expected utilities for each value of p
+utilities1_A <- U1_A(p_values)
+utilities1_B <- U1_B(p_values)
+# Create a data frame for plotting
+data_1 <- data.frame(p = p_values, A = utilities1_A, B = utilities1_B)
+# Plot the expected utilities and indicate the best response threshold
+ggplot(data_1, aes(x = p)) +
+  geom_line(aes(y = A, color = "Exp. Util. of A (3 - q)"), linewidth = 2) +
+  geom_line(aes(y = B, color = "Exp. Util. of B (4q)"), linewidth = 2) +
+  geom_vline(xintercept = 3/5, linetype = "dashed", color = "grey50") +
+  annotate("text", x = 3/5, y = 0, label = "q = 3/5", hjust = -0.1, color = "grey50") +
+  labs(title = "Player 1's Expected Utilities",
+       x = "Probability of X (q)",
+       y = "Expected Utility",
+       color = "Choice") +
+  theme_minimal()
+```
+:::
+::: {.column}
+```{r}
+#| echo: false
+U2_X <- function(p) {
+  2*p + 3*(1-p)
+}
+U2_Y <- function(p) {
+  2*p + 0*(1-p)
+}
+# Generate a sequence of values for p from 0 to 1
+q_values <- seq(0, 1, length.out = 100)
+# Compute the expected utilities for each value of p
+utilities2_X <- U2_X(q_values)
+utilities2_Y <- U2_Y(q_values)
+# Create a data frame for plotting
+data_2 <- data.frame(q = q_values, X = utilities2_X, Y = utilities2_Y)
+# Plot the expected utilities and indicate the best response threshold
+ggplot(data_2, aes(x = q)) +
+  geom_line(aes(y = X, color = "Exp. Util. of X (3 - p)"), linewidth = 2) +
+  geom_line(aes(y = Y, color = "Exp. Util. of Y (2q)"), linewidth = 2) +
+  geom_vline(xintercept = 1, linetype = "dashed", color = "grey50") +
+  labs(title = "Player 2's Expected Utilities",
+       x = "Probability of A (p)",
+       y = "Expected Utility",
+       color = "Choice") +
+  theme_minimal()
+```
+:::
+::::
+
+## Multiple MSNE in one game {.smaller}
+We can still approach this the same way that we have in the past:
+
+::::: {.columns}
+:::: {.column width="30%"}
+| $P_1$, $P_2$ | $X~(q)$ | $Y~(1 - q)$ |
+|-------------:+:-------:+:-----------:|
+| $A~(p)$      | 2, 2    | 3, 2        |
+| $B~(1 - p)$  | 4, 3    | 0, 0        |
+::::
+
+:::: {.column}
+::: {.incremental}
+  * Suppose in MSNE that Player 1 plays a (non-trivial) mixed strategy.
+  * Then Player 2 must also play a mixed strategy, in which q = 3/5.
+    + But Player 2 will only mix if Player 1 plays  p = 1, which is a trivial mixed strategy. 
+    + This is a contradiction, **there is no MSNE where Player 1 plays a non-trivial mixed strategy**
+:::
+::::
+:::::
+---
+
+## Multiple MSNE in one game {.smaller}
+Approach it the other way next:
+
+::::: {.columns}
+:::: {.column width="30%"}
+| $P_1$, $P_2$ | $X~(q)$ | $Y~(1 - q)$ |
+|-------------:+:-------:+:-----------:|
+| $A~(p)$      | 2, 2    | 3, 2        |
+| $B~(1 - p)$  | 4, 3    | 0, 0        |
+::::
+
+:::: {.column}
+Suppose Player 2 plays a non-trivial mixed strategy.
+
+::: {.incremental}
+  * Then Player 1 must play A as a pure strategy.
+  * Player 2 will play A if $3 - q \geq 4q$, i.e. if $3/5 \geq q$.
+  * This lets Player 2 play a non-trivial mixed strategy! There is no contradiction here.
+:::
+::::
+:::::
+---
+
+## Multiple MSNE in one game {.smaller}
+::: {.incremental}
+  * There are a range of MSNEs here: all strategy profiles $(1, 0), (q, 1 - q)$, in which $q \in (0, 3/5]$
+  * There are also two trivial MSNEs, $(1, 0), (0, 1)$ and $(0, 1), (1, 0)$, 
+    which are really just the pure-strategy Nash equilibria (A, Y) and (B, X) expressed in the form of an MSNE.
+  * It will help to understand what's going on with the Best Responses graph:
+:::
+---
+
+## Multiple MSNE in one game
+ 
+```{r}
+#| code-fold: true
+#| warning: false
+
+# Create a data frame for plotting
+data <- data.frame(
+  q = c(0, 3/5, 3/5, 1),
+  BR1 = c(1, 1, 0, 0),
+  p = c(1, 0, 0, 0),
+  BR2 = c(0, 1, 1, 1)
+)
+
+# Plot the best response functions
+ggplot(data) +
+  geom_step(aes(x = q, y = BR1, color = "BR_1"), direction = "hv", linewidth = 2, alpha = 0.9) +
+  geom_step(aes(x = BR2, y = p, color = "BR_2"), direction = "vh", linewidth = 2, alpha = 0.9) +
+  geom_segment(aes(x = 3/5, xend = 1, y = 0, yend = 0, color = "MSNE"), linewidth = 1.5, linetype = "dotted") +
+  geom_point(aes(x=0, y=1, color = "PSNE"), size = 2) +
+  geom_point(aes(x=1, y=0, color = "PSNE"), size = 2) +
+  labs(title = "Best Response Functions for Mixed Strategy Nash Equilibrium",
+       x = "q",
+       y = "p",
+       color = "Best Response") +
+  theme_minimal()
+```
+
+---
+
+## Absence of MSNEs {.smaller}
+
+Let us return to the Prisoner's Dilemma and check for MSNEs:
+
+| Guido, Luca        | $Testify~(q)$ | $Keep~Quiet~(1-q)$ |
+|--------------------+---------------+--------------------|
+| $Testify~(p)$      | $-10,-10$     | $0,-20$            |
+| $Keep~Quiet~(1-p)$ | $-20,0$       | $-1,-1$            |
+
+Guido and Luca's expected payoffs are:
+
+::: {.incremental}
+  * $U_G(Testify) = -10q + 0(1 - q) = -10q$.
+  * $U_G(Keep Quiet) = -20q + (-1)(1 - q) = -1 - 19q$.
+  * $U_L(Testify) = -10p + 0(1 - p) = -10p$.
+  * $U_L(Keep Quiet) = -20p + (-1)(1 - p) = -1 - 19p$.
+:::
+---
+
+## Absence of MSNEs {.smaller}
+Guido will play a mixed strategy if:
+
+$$
+\begin{align*}
+-10q &= -1 - 19q\\
+9q &= -1\\
+q &= -1/9
+\end{align*}
+$$
+
+::: {.incremental}
+  * But **-1/9 is not a valid probability!**
+  * We could also note that if $q\in [0, 1]$:
+    + $-10q$ is always greater than $-1 - 19q$.
+  * In other words, as we saw weeks ago, $Testify$ strictly dominates $Keep~Quiet$...so why would Guido mix between the two of them?
+:::
+---
+
+## Getting Bad Probabilities {.smaller}
+If you've solved for a player's mixed strategy and you find that the probability is 
+**less than 0**, or **more than 1**:
+
+::: {.incremental}
+  * **It means something is wrong.** Probability can only be between 0 and 1 (inclusive).
+  * Double-check your math---it could be an algebra error.
+  * But if you're confident in your math, this means that there is **no way
+  that the player would ever play a mixed strategy**: 
+    + in fact, they have a strictly dominated strategy.
+:::
+---
 
 ## Mixed Strategies in the Deer Hunt
 

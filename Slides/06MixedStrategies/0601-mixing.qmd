@@ -1,5 +1,20 @@
 # Responding to Chance
 
+```{r}
+#| echo: false
+library(tidyverse)
+library(ggplot2)
+library(tidyverse)
+library(latex2exp)
+
+knitr::opts_chunk$set(
+    out.width = "70%", # enough room to breath
+    fig.width = 6,     # reasonable size
+    fig.asp = 0.618,   # golden ratio
+    fig.align = "center" # mostly what I want
+)
+```
+
 ## Thinking about Randomness
 
 > "Rational decision makers are able to give reasons for each action they take; outside Las Vegas players do not spin roulette wheels"
@@ -71,16 +86,18 @@ Any choices with *uncertain* payoffs will be called [lotteries]{.hi}.
 ---
 
 ## Expected Payoffs
-
 How to form a preference for something with an uncertain outcome?
-  $$U(L) = \mathbb{E}[u(o)] = \sum_{o\in L}u(o)p(o)$$
 
+$U(L) = \mathbb{E}[u(o)] = \sum_{o\in L}u(o)p(o)$
+
+::: {.incremental}
 * Average values of a lottery times the probability of how likely each is.
 
 * Lottery $L$ may have two or more potential outcomes $o_1, o_2, ...$
 
 * The utility function $u(o)$ tells how much you like each outcome
   + Could reflect different risk preferences for e.g., money
+:::
 
 ---
 

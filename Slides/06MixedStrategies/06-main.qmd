@@ -41,4 +41,4 @@ knitr::opts_chunk$set(
 
 {{< include 0600-penaltykicks.qmd >}} 
 
-{{< include 0604-examples.qmd >}} 
+<!-- {{< include 0604-examples.qmd >}}  -->
