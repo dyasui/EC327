@@ -27,9 +27,10 @@ grades <- read_csv(export) %>%
          # ac3 = `activity3:piratetreasure`,
          # ac4 = `activity4:electionblotto`,
          ac5 = `activity5:socialmediaadspace`,
-         # ac6 = `activity6:penaltyshootout`,
+         ac6 = `activity6:penaltyshootoutparticipation`,
          # ac7 = `activity7-brinksmanship`,
          # ac8 = `activity8:marketforlemons`,
+         quiz = quizzesunpostedcurrentscore,
          homework = homeworkunpostedcurrentscore,
          activity = classactivitiescurrentscore,
          midterm,
@@ -42,14 +43,14 @@ grades <- read_csv(export) %>%
 library(ggplot2)
 midterm_plot <- grades %>%
   ggplot() +
-  geom_histogram(aes(x = midterm), fill = "darkblue", binwidth = 2.5) +
+  geom_density(aes(x = midterm), fill = "darkblue", binwidth = 2.5) +
   geom_vline(xintercept = mean(grades$midterm, na.rm = TRUE)) +
-  xlim(25, max(grades$midterm) + 1) +
-  scale_x_continuous(breaks = seq(25, 100, by = 5), limits=c(25, 105)) +
-  labs(x = "Midterm Score (out of 100)",
-    title = "EC327 Fall 2024 Midterm Exam Performance"
+  # xlim(25, max(grades$midterm) + 1) +
+  scale_x_continuous(breaks = seq(0, 90, by = 5), limits=c(25, 95)) +
+  labs(x = "Midterm Score (out of 90)",
+    title = "EC327 Fall 2025 Midterm Exam Performance"
   ) 
-ggsave(midterm_plot, file = "EC327F24-mt-score-distribution.png")
+ggsave(midterm_plot, file = "EC327F25-mt-score-distribution.png")
 
 # plot final exam dist
 library(ggplot2)
@@ -59,7 +60,7 @@ finalexam_plot <- grades %>%
   geom_vline(xintercept = mean(grades$finalexam, na.rm = TRUE)) +
   xlim(25, max(grades$finalexam) + 1) +
   scale_x_continuous(breaks = seq(25, 100, by = 5), limits=c(25, 105)) +
-  labs(x = "Final Exam Score (out of 100, including bonus points)",
+  labs(x = "Final Exam Score (out of 90)",
     title = "EC327 Fall 2024 Final Exam Performance"
   ) 
 ggsave(finalexam_plot, file = "EC327F24-finalexam-score-distribution.png")
@@ -67,34 +68,43 @@ ggsave(finalexam_plot, file = "EC327F24-finalexam-score-distribution.png")
 # plot class grade distribution
 grade_plot <- grades %>%
   ggplot() +
-  geom_histogram(aes(x = score), fill = "darkgreen", binwidth = 2.5) +
+  geom_density(aes(x = score), fill = "darkgreen") +
   geom_vline(xintercept = mean(grades$score, na.rm = TRUE)) +
   xlim(25, max(grades$score) + 1) +
   scale_x_continuous(breaks = seq(25, 100, by = 5), limits=c(25, 105)) +
   labs(x = "Percent Grade",
-       title = "EC327 Fall 2024 Course Grades")
-ggsave(grade_plot, file = "EC327F24-final-grade-distribution.png")
+       title = "EC327 Fall 2025 Course Grades")
+ggsave(grade_plot, file = "EC327F25-final-grade-distribution.png")
 
 #### #### ####
 final_grades <- grades %>%
   # simulate final grades
   mutate(
-    homework = ((ifelse(is.na(hw0), 0, hw0) + hw1 + hw2 + ec) / 191) * 100, # homework grade so far
+    midterm = midterm * (100/90),
+    midterm_curved = (midterm/2) + 50,
+    grade_curved = (.1*activity + .2*homework + .1*quiz + .3*midterm_curved + .3*midterm),
+    # homework = ((hw1 + hw2 + hw3) / 120) * 100, # homework grade so far
     finalexam = midterm,
     # finalexam = rnorm(n = nrow(grades),
     #                   mean = mean(midterm, na.rm = TRUE),
     #                   sd = sd(midterm, na.rm = TRUE)),
     # finalexam = ifelse(finalexam < 100, round(finalexam), 100),
-    grade_simulated = .1*activity + .3*homework+.3 * midterm + .3*finalexam
+    grade_simulated = .1*activity + .2*homework + .1*quiz
+      +.3 * midterm + .3*finalexam
+  ) %>%
+  select(
+    activity, homework, quiz, 
+    midterm, midterm_curved, finalexam,
+    grade_curved, grade_simulated
   ) %>%
   print(n = 100)
 
 # plot hypothetical final grades distribution
 final_grade_plot <- final_grades %>% ggplot() +
-  geom_histogram(aes(x = score), fill = "darkgreen", binwidth = 2.5) +
+  geom_histogram(aes(x = grade_curved), fill = "darkgreen", binwidth = 2.5) +
   # geom_density(aes(x = score), fill = "darkgreen") +
   labs(x = "Score (out of 100)",
        title = "Simulated Final Grade Distribution") +
-  xlim(25, max(final_grades$grade_simulated) + 1) +
+  xlim(25, max(final_grades$grade_curved) + 1) +
   scale_x_continuous(breaks = seq(25, 100, by = 5), limits=c(25, 105))
 ggsave(final_grade_plot, file = "EC327F24-final-sim-distribution.png")
