@@ -29,3 +29,5 @@ EC327names.csv
 # Exams
 Exams/Midterm/
 Exams/Final/
+
+**/*.quarto_ipynb

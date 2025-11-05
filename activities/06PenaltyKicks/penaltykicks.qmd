@@ -64,3 +64,5 @@ or observe the competitions of others.
 # Discussion
 
 [Discussion questions](discussion.qmd){.btn .btn-outline-primary .btn role="button"}
+
+[Fall 2025 Results](penaltykicks_results.qmd){.btn .btn-outline-primary .btn role="button"}
