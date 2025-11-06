@@ -1,7 +1,7 @@
 library(tidyverse)
 
 # Detect csv file with default Canvas export name
-# in current working directory
+# in current working directorf
 export <- list.files(pattern = "*_Grades-EC_327.csv") %>%
   sort(decreasing = TRUE) %>% head(1) # select most recent if multiple
 
@@ -70,8 +70,9 @@ grade_plot <- grades %>%
   ggplot() +
   geom_density(aes(x = score), fill = "darkgreen") +
   geom_vline(xintercept = mean(grades$score, na.rm = TRUE)) +
-  xlim(25, max(grades$score) + 1) +
-  scale_x_continuous(breaks = seq(25, 100, by = 5), limits=c(25, 105)) +
+  xlim(50, max(grades$score) + 1) +
+  theme_minimal() +
+  # scale_x_continuous(breaks = seq(25, 100, by = 5), limits=c(25, 105)) +
   labs(x = "Percent Grade",
        title = "EC327 Fall 2025 Course Grades")
 ggsave(grade_plot, file = "EC327F25-final-grade-distribution.png")
@@ -101,10 +102,9 @@ final_grades <- grades %>%
 
 # plot hypothetical final grades distribution
 final_grade_plot <- final_grades %>% ggplot() +
-  geom_histogram(aes(x = grade_curved), fill = "darkgreen", binwidth = 2.5) +
-  # geom_density(aes(x = score), fill = "darkgreen") +
+  geom_density(aes(x = grade_simulated), fill = "purple") +
   labs(x = "Score (out of 100)",
        title = "Simulated Final Grade Distribution") +
   xlim(25, max(final_grades$grade_curved) + 1) +
   scale_x_continuous(breaks = seq(25, 100, by = 5), limits=c(25, 105))
-ggsave(final_grade_plot, file = "EC327F24-final-sim-distribution.png")
+ggsave(final_grade_plot, file = "EC327F25-final-sim-distribution.png")

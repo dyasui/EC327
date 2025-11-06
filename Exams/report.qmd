@@ -1,0 +1,34 @@
+---
+title: "Midterm Performance"
+---
+
+# Average Performance by Question
+
+![](F25-mt-question-breakdown.png)
+
+* The most difficult multiple choice questions were Q6 and Q10.
+* Question 11 was out of 6, but most people scored lower than 4 points.
+* Many people got most of the points on Q12.
+* In Q13 and Q14, many people got most credit on parts a and b 
+  - But parts c and d were more challenging.
+  - A few people were able to earn full credit on these parts, good job!
+
+# Bonus Question Distribution
+
+![](F25-mt-bonus.png)
+
+For everyone who answered the bonus question,
+I matched you with another random exam.
+If your bid was (strictly) less than the other person's,
+then I added your bid to your score.
+The average bid was 0.73
+and about twenty people were able to earn bonus points (on average only 0.26).
+
+# Class Midterm Performance Overall
+
+![](F25-mt-score-distribution.png)
+
+Overall, the average score on the midterm was around a 64 (out of 90)^[before bonus points].
+This works out to about about 70%, or a C minus.
+However, most people did better than the average;
+the median score was 68 and the modal score was 70.
