@@ -393,7 +393,7 @@ data <- tibble(
   p = c(0, 0.7, 0.7, 1),
   NR = c(0, 0, 1, 1),
   q = c(0, 0.6, 0.6, 1),
-  ER = c(0, 0, 1, 1)
+  ER = c(1, 1, 0, 0)
 )
 
 # Plot the best response functions
