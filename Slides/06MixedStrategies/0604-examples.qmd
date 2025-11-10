@@ -1,5 +1,20 @@
 # Mixed-Strategy Examples
 
+```{r}
+#| echo: false
+library(tidyverse)
+library(ggplot2)
+library(tidyverse)
+library(latex2exp)
+
+knitr::opts_chunk$set(
+    out.width = "70%", # enough room to breath
+    fig.width = 6,     # reasonable size
+    fig.asp = 0.618,   # golden ratio
+    fig.align = "center" # mostly what I want
+)
+```
+
 ## MSNE in Prisoners' Dilemma? {.smaller}
 
 Remember the Prisoners' Dilemma?
