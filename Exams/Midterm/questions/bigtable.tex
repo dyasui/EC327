@@ -1,0 +1,124 @@
+\begin{question}[ID=tbl1,type=exam]{20}
+Consider the strategic form game below:
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{*{6}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{4}{c}{$P_2$} \\ \cline{3-6}
+      \multicolumn{1}{c}{} & & \vary{W}{i} & \vary{X}{j} & \vary{Y}{k} & \vary{Z}{l} \\ \cline{2-6}
+      \multirow{5}*{$P_1$} 
+          & \vary{A}{q} & \vary{10}{8}, \vary{1}{2} & \vary{5}{3}, \vary{4}{5}  & \vary{12}{10}, \vary{6}{7}   & \vary{2}{0}, \vary{7}{8} \\ \cline{2-6}
+          & \vary{B}{r} & \vary{2}{0},  \vary{3}{4} & \vary{6}{4}, \vary{4}{5}  & \vary{13}{11}, \vary{5}{6}   & \vary{9}{7}, \vary{12}{11} \\ \cline{2-6}
+          & \vary{C}{s} & \vary{11}{9}, \vary{8}{9} & \vary{3}{1}, \vary{9}{10} & \vary{10}{8},  \vary{10}{11} & \vary{6}{4}, \vary{11}{13} \\ \cline{2-6}
+          & \vary{D}{t} & \vary{10}{8}, \vary{6}{7} & \vary{7}{5}, \vary{9}{10} & \vary{11}{9},  \vary{6}{7}   & \vary{6}{4}, \vary{7}{9} \\ \cline{2-6}
+          & \vary{E}{v} & \vary{5}{3},  \vary{3}{4} & \vary{5}{3}, \vary{4}{5}  & \vary{8}{6},   \vary{5}{6}   & \vary{5}{3}, \vary{14}{16} \\ \cline{2-6}
+  \end{tabular}
+  \end{center}
+\end{table}
+\begin{tasks}
+  \task (\points{10})
+  Use Iterated Deletion of Strictly Dominated Strategies
+  and write out a simplified game table with any remaining cells.
+  \PrintSolutionsTF{
+  \fbox{
+    \parbox{\linewidth}{
+    \begin{itemize}
+      \item Step 1: \vary{E}{v} is strictly dominated by \vary{D}{t}, eliminate \vary{E}{v}.
+      \item Step 2: \vary{W}{i} and \vary{Y}{k} are strictly dominated by \vary{Z}{l}, eliminate \vary{W}{i} and \vary{Y}{k}
+      \item Step 3: \vary{A}{q} and \vary{C}{s} are strictly dominated by \vary{B}{r}, eliminate \vary{A}{q} and \vary{C}{s}
+    \end{itemize}
+    \begin{center}
+      \begin{tabular}{*{4}{c|}}
+        \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\ \cline{3-4}
+        \multicolumn{1}{c}{} & & \vary{X}{j} & \vary{Z}{l} \\ \cline{2-4}
+        \multirow{2}*{$P_1$}
+          & \vary{B}{r} & \vary{6}{4}, \vary{4}{5}  & \underline{\vary{13}{11}}, \underline{\vary{5}{6}} \\ \cline{2-4}
+          & \vary{D}{t} & \underline{\vary{7}{5}}, \underline{\vary{9}{10}} & \vary{11}{9},  \vary{6}{7} \\ \cline{2-4}
+      \end{tabular}
+    \end{center}
+    }}
+  }{
+  \vspace{8cm}
+  }
+  \task (\points{10})
+  Find all Nash equilibria in this strategic form game.
+  Explain why you know they are Nash equilibria.
+  \PrintSolutionsTF{
+  \fbox{
+    \parbox{\linewidth}{
+    The best response to \vary{X}{j} is \vary{D}{t},
+    and the best response to \vary{D}{t} is \vary{X}{j} 
+    so (\vary{X}{j}, \vary{D}{t}) is one Nash equilibrium.
+    The best response to \vary{Z}{l} is \vary{B}{r},
+    and the best response to \vary{B}{r} is \vary{Z}{l} 
+    so (\vary{Z}{l}, \vary{B}{r}) is the other NE.
+    These are they only pure strategy NE because we eliminated all strategies in part (a)
+    that will never be played in any NE.
+    We also found the intersection of either players best responses in the table from (a)
+    which is the definition of a NE.
+    \par\noindent\rule{\linewidth}{0.4pt}
+    Partial credit may be awarded for an answer that is consistent with mistakes made in 
+    eliminating strictly dominated strategies in part $a$.
+    }}
+  }
+\end{tasks}
+\end{question}
+
+\begin{question}[ID=tbl2,type=exam]
+Consider the strategic form game below:
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{*{6}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{4}{c}{$P_2$} \\ \cline{3-6}
+      \multicolumn{1}{c}{} & & \vary{W}{i} & \vary{X}{j} & \vary{Y}{k} & \vary{Z}{l} \\ \cline{2-6}
+      \multirow{5}*{$P_1$} 
+          & \vary{A}{q} & \vary{9}{8}, \vary{5}{7} & \vary{6}{5}, \vary{8}{10} & \vary{10}{9},  \vary{5}{7}   & \vary{6}{4}, \vary{7}{9} \\ \cline{2-6}
+          & \vary{B}{r} & \vary{9}{8}, \vary{0}{2} & \vary{4}{3}, \vary{3}{5}  & \vary{11}{10}, \vary{5}{7}   & \vary{2}{0}, \vary{7}{8} \\ \cline{2-6}
+          & \vary{C}{s} & \vary{10}{9}, \vary{7}{9} & \vary{2}{1}, \vary{8}{10} & \vary{9}{8},  \vary{9}{11} & \vary{6}{4}, \vary{11}{13} \\ \cline{2-6}
+          & \vary{D}{t} & \vary{1}{0},  \vary{2}{4} & \vary{5}{4}, \vary{3}{5}  & \vary{12}{11}, \vary{4}{6}   & \vary{9}{7}, \vary{12}{11} \\ \cline{2-6}
+          & \vary{E}{v} & \vary{10}{3},  \vary{2}{4} & \vary{4}{3}, \vary{3}{5}  & \vary{7}{6},   \vary{4}{6}   & \vary{4}{3}, \vary{14}{4} \\ \cline{2-6}
+  \end{tabular}
+  \end{center}
+\end{table}
+\begin{tasks}
+  \task (\points{4})
+  Does either player have any strategies they would never play if they are rational?
+  State any strictly dominated strategies and explain why they would not be played.
+  \task (\points{4})
+  Use Iterated Deletion of Strictly Dominated Strategies
+  and write out a simplified game table with any remaining cells.
+  \task (\points{4})
+  Find all Nash equilibria in pure strategies.
+  Explain why you know that these strategy profiles are Nash,
+  or if you cannot find any explain why not.
+\end{tasks}
+\begin{solution}
+  \begin{tasks}
+    \task \vary{W}{v} is strictly dominated by \vary{X,Z}{q}
+    because conditional on $\vary{P_1}{P_2}$'s strategy,
+    it always results in a higher payoff.
+    \task 
+    \begin{enumerate}
+      \item Eliminate \vary{W}{v} as a non-rational strategy
+      \item Eliminate \vary{E}{i} because it's now strictly dominated by \vary{A}{j,l}
+      \item Eliminate \vary{B}{k}, S.D. by \vary{D}{l}
+      \item Eliminate \vary{Y}{r}, S.D. by \vary{Z}{t}
+      \item Eliminate \vary{C}{s}, S.D. by \vary{D}{t}
+      \item Stop, no more stritcly dominated strategies
+    \end{enumerate}
+    \begin{center}
+      \begin{tabular}{*{4}{c|}}
+        \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\ \cline{3-4}
+        \multicolumn{1}{c}{} & & \vary{X}{j} & \vary{Z}{l} \\ \cline{2-4}
+        \multirow{2}*{$P_1$}
+          & \vary{A}{q} & \underline{\vary{6}{5}}, \underline{\vary{8}{10}}  & \vary{6}{4}, \vary{7}{9} \\ \cline{2-4}
+          & \vary{D}{t} & \vary{5}{4}, \vary{3}{5} & \underline{\vary{9}{7}},  \underline{\vary{12}{11}}\\ \cline{2-4}
+      \end{tabular}
+    \end{center}
+    \task NE: \vary{$\{A,X\}$, $\{D,Z\}$}{$\{q,j\}$, $\{t,l\}$}
+    These are they only pure strategy NE because we eliminated all strategies in part (a)
+    that will never be played in any NE.
+    We also found the intersection of either players best responses in the table from (b)
+    which is the definition of a NE.
+  \end{tasks}
+\end{solution}
+\end{question}

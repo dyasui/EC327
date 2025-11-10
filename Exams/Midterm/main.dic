@@ -1,0 +1,184 @@
+0: '% load packages'
+1: '% for payoff matrix formatting'
+2: '% use exsheets to create different versions with \vary{}{}'
+3: '% set this to true to print key'
+4: '% document formatting settings'
+5: '% turn off para indenting'
+6: '% title and date for cover page'
+7: '% DOCUMENT BEGINS HERE'
+8: '% SET VERSION NUMBER HERE: '
+9: '% instructions section'
+10: '% space for student to write their name'
+11: '%------------------------------------------------------------------------------%'
+12: '%------------------------------------------------------------------------------%'
+13: '%------------------------------------------------------------------------------%'
+14: '%------------------------------------------------------------------------------%'
+15: \begin{document}
+16: \begin{center}
+17: \begin{itemize}
+18: \begin{itemize}
+19: \begin{center}
+20: \end{center}
+21: \end{itemize}
+22: \end{itemize}
+23: \end{center}
+24: \end{document}
+25: \usepackage{amssymb, amsmath, amsfonts}
+26: \usepackage{geometry}
+27: \usepackage{graphicx}
+28: \usepackage{enumitem}
+29: \usepackage{tikz}
+30: \usepackage{pgfplots}
+31: \usepackage{multirow,array}
+32: \usepackage{exsheets}
+33: \documentclass{article}
+34: \usetikzlibrary
+35: \pgfplotsset
+36: \SetupExSheets
+37: \geometry
+38: \setlength
+39: \parindent
+40: \title
+41: \textbf
+42: \author
+43: \date
+44: \maketitle
+45: \variant
+46: \Large
+47: \textbf
+48: \vary
+49: \item
+50: \textit
+51: \item
+52: \item
+53: \underline
+54: \item
+55: \item
+56: \item
+57: \vspace
+58: \makebox
+59: \textwidth
+60: \enspace
+61: \hrulefill
+62: \vspace
+63: \fbox
+64: \fbox
+65: \parbox
+66: \centering
+67: \newpage
+68: \section
+69: \input
+70: \newpage
+71: \section
+72: \input
+73: \newpage
+74: \input
+75: \newpage
+76: \input
+77: \vspace
+78: \fill
+79: \section
+80: \textbf
+81: \vspace
+82: \makebox
+83: \textbf
+84: \enspace
+85: \hrulefill
+86: " \n   "
+87: '€33€
+
+
+  €0€
+
+  €25€
+
+  €26€
+
+  €27€
+
+  €28€
+
+  €29€
+
+  €34€'
+88: '€30€
+
+  €35€'
+89: '€31€ €1€
+
+  €2€
+
+  €32€
+
+  €36€'
+90: '€4€
+
+  €37€'
+91: '€5€
+
+
+  €6€
+
+  €40€'
+92: '€7€
+
+  €15€
+
+
+  €44€
+
+
+  €8€
+
+  €45€'
+93: "€16€\n  €46€"
+94: "€20€\n\n€9€\n€17€\n  €49€"
+95: '€21€
+
+
+  €53€'
+96: "€18€\n  €54€"
+97: '€22€
+
+
+  €57€'
+98: '€10€
+
+  €58€'
+99: €60€€61€
+100: "€19€\n  €63€"
+101: '€23€
+
+
+  €67€
+
+
+  €11€
+
+
+  €68€'
+102: '€12€
+
+  €70€
+
+
+  €71€'
+103: '€73€
+
+
+  €74€'
+104: '€75€
+
+
+  €76€'
+105: '€13€
+
+
+
+  €77€'
+106: €84€€85€
+107: '€14€
+
+
+
+  €24€'

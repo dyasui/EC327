@@ -1,0 +1,129 @@
+#+TITLE: Midterm Performance
+#+DATE: <2025-11-06>
+
+* Tabulating Results
+:PROPERTIES:
+:header-args:R: :session *R* :colnames yes 
+:END:
+
+#+begin_src R
+## setwd("/Users/dante/Documents/Teaching/EC327/Fall2025/Exams/Midterm/results")
+library(tidyverse)
+library(ggplot2)
+library(MetBrewer)
+sheet <- "EC327F25-midtermgrades.csv"
+scores <- read_csv(sheet) |>
+  slice(2:61) |>
+  select(Q1:Bonus)
+
+averages <- scores |>
+  pivot_longer(everything(), names_to = "Question_Full", values_to = "Score") |>
+  mutate(
+    Score = as.numeric(Score),
+    Question = str_extract(Question_Full, "Q\\d+"),
+    Part = case_when(
+      str_detect(Question_Full, "[a-e]$") ~ str_extract(Question_Full, "[a-e]$"),
+      Question == "Bonus" ~ "Bonus"
+    )
+  ) |>
+  mutate(
+    SortKey_Question = as.integer(str_extract(Question_Full, "\\d+")),
+    SortKey_Part = case_when(
+      str_detect(Question_Full, "[a-e]$") ~ str_extract(Question_Full, "[a-e]$"),
+      Question_Full == "Bonus" ~ "z", # Bonus comes last
+      TRUE ~ "A" # Assign a low value for questions without parts (Q1, Q2, etc.)
+    ) %>% factor(levels = c("A", letters[1:5], "z")) %>% as.integer(),
+    SortKey = SortKey_Question * 100 + SortKey_Part,
+    Question_Full = factor(Question_Full, levels = unique(Question_Full[order(SortKey)])),
+    Question = case_when(
+      str_detect(Question_Full, "Q\\d$|Q10") ~ "Multiple Choice",
+      Question_Full == "Bonus" ~ "Bonus",
+      .default = Question
+    )
+  ) |>
+  select(!starts_with("SortKey")) |> # Remove temporary SortKey columns
+  group_by(Question_Full, Question, Part) |>
+  summarise(Average_Score = mean(Score, na.rm = T))
+#+end_src
+
+#+RESULTS:
+| Question_Full | Question        | Part |    Average_Score |
+|---------------+-----------------+------+------------------|
+| Q1            | Multiple Choice |      | 3.33333333333333 |
+| Q2            | Multiple Choice |      | 3.11111111111111 |
+| Q3            | Multiple Choice |      | 3.33333333333333 |
+| Q4            | Multiple Choice |      | 3.33333333333333 |
+| Q5            | Multiple Choice |      | 3.92592592592593 |
+| Q6            | Multiple Choice |      |  2.2962962962963 |
+| Q7            | Multiple Choice |      |                4 |
+| Q8            | Multiple Choice |      | 3.55555555555556 |
+| Q9            | Multiple Choice |      | 3.48148148148148 |
+| Q10           | Multiple Choice |      | 1.77777777777778 |
+| Q11           | Q11             |      | 3.42592592592593 |
+| Q12a          | Q12             | a    | 3.37037037037037 |
+| Q12b          | Q12             | b    |  3.2037037037037 |
+| Q12c          | Q12             | c    | 3.14814814814815 |
+| Q13a          | Q13             | a    | 3.11111111111111 |
+| Q13b          | Q13             | b    | 3.37037037037037 |
+| Q13c          | Q13             | c    | 2.24074074074074 |
+| Q13d          | Q13             | d    | 1.61111111111111 |
+| Q14a          | Q14             | a    | 2.90740740740741 |
+| Q14b          | Q14             | b    | 2.72222222222222 |
+| Q14c          | Q14             | c    | 1.77777777777778 |
+| Q14d          | Q14             | d    | 1.40740740740741 |
+| Bonus         | Bonus           |      | 0.71188679245283 |
+
+#+begin_src R :exports results :results graphics file :file question-breakdown.png :width 1080 :height 620
+# #+begin_src R :exports results :results output
+ggplot(
+  aes(x = Question_Full, y = Average_Score, fill = Question),
+  data = averages |> filter(Question != "Bonus")
+) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = met.brewer("Hokusai1", 5, direction = -1)) +
+  theme_minimal() +
+  theme(
+    legend.position = "blank",
+    text=element_text(size=20), #change font size of all text
+    axis.text=element_text(size=16), #change font size of axis text
+    axis.title=element_text(size=20), #change font size of axis titles
+    plot.title=element_text(size=20), #change font size of plot title
+    legend.text=element_text(size=20), #change font size of legend text
+    legend.title=element_text(size=20)
+    ) +
+  labs(
+    x = "Question",
+    y = "Average Score",
+    title = "EC327 Fall 2025 Midterm Performance Breakdown",
+    subtitle = "Class average per question",
+    caption = "Average of 54 exams for all questions and parts (not including bonus). All parts were out of 4 points, except for Q11, which was out of 6 points."
+  )
+#+end_src
+
+#+RESULTS:
+[[file:question-breakdown.png]]
+
+#+begin_src R :exports results :results graphics file :file bonus-distribution.png :width 800 :height 600
+scores |>
+  select(Bonus) |>
+  filter(!is.na(Bonus)) |>
+  ggplot(aes(x = Bonus)) +
+  geom_histogram(stat = "count", fill = met.brewer("Hokusai2", 1, direction = 1)) +
+  theme_minimal() +
+  theme(
+    text=element_text(size=20), #change font size of all text
+    axis.text=element_text(size=16), #change font size of axis text
+    axis.title=element_text(size=20), #change font size of axis titles
+    plot.title=element_text(size=20), #change font size of plot title
+    legend.text=element_text(size=20), #change font size of legend text
+    legend.title=element_text(size=20)
+    ) +
+  labs(
+    x = "Bonus Point Bid",
+    y = "Count",
+    title = "Bonus Question Bids",
+  )
+#+end_src
+
+#+RESULTS:
+[[file:bonus-distribution.png]]

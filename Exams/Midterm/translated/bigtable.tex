@@ -1,0 +1,115 @@
+\begin{question}[ID=tbl1,type=exam]{20}
+考虑以下策略式博弈：
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{*{6}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{4}{c}{$P_2$} \\ \cline{3-6}
+      \multicolumn{1}{c}{} & & \vary{W}{i} & \vary{X}{j} & \vary{Y}{k} & \vary{Z}{l} \\ \cline{2-6}
+      \multirow{5}*{$P_1$} 
+          & \vary{A}{q} & \vary{10}{8}, \vary{1}{2} & \vary{5}{3}, \vary{4}{5}  & \vary{12}{10}, \vary{6}{7}   & \vary{2}{0}, \vary{7}{8} \\ \cline{2-6}
+          & \vary{B}{r} & \vary{2}{0},  \vary{3}{4} & \vary{6}{4}, \vary{4}{5}  & \vary{13}{11}, \vary{5}{6}   & \vary{9}{7}, \vary{12}{11} \\ \cline{2-6}
+          & \vary{C}{s} & \vary{11}{9}, \vary{8}{9} & \vary{3}{1}, \vary{9}{10} & \vary{10}{8},  \vary{10}{11} & \vary{6}{4}, \vary{11}{13} \\ \cline{2-6}
+          & \vary{D}{t} & \vary{10}{8}, \vary{6}{7} & \vary{7}{5}, \vary{9}{10} & \vary{11}{9},  \vary{6}{7}   & \vary{6}{4}, \vary{7}{9} \\ \cline{2-6}
+          & \vary{E}{v} & \vary{5}{3},  \vary{3}{4} & \vary{5}{3}, \vary{4}{5}  & \vary{8}{6},   \vary{5}{6}   & \vary{5}{3}, \vary{14}{16} \\ \cline{2-6}
+  \end{tabular}
+  \end{center}
+\end{table}
+\begin{tasks}
+  \task (\points{10})
+  使用严格劣势策略的迭代消除法，并写出一个简化后的博弈表，包含所有剩余的单元格。
+  \PrintSolutionsTF{
+  \fbox{
+    \parbox{\linewidth}{
+    \begin{itemize}
+      \item 步骤1：\vary{E}{v}被\vary{D}{t}严格占优，消除策略\vary{E}{v}。
+      \item 步骤2：\vary{W}{i}和\vary{Y}{k}被\vary{Z}{l}严格占优，消除策略\vary{W}{i}和\vary{Y}{k}
+      \item 步骤3：\vary{A}{q}和\vary{C}{s}被\vary{B}{r}严格占优，消除策略\vary{A}{q}和\vary{C}{s}
+    \end{itemize}
+    \begin{center}
+      \begin{tabular}{*{4}{c|}}
+        \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\ \cline{3-4}
+        \multicolumn{1}{c}{} & & \vary{X}{j} & \vary{Z}{l} \\ \cline{2-4}
+        \multirow{2}*{$P_1$}
+          & \vary{B}{r} & \vary{6}{4}, \vary{4}{5}  & \underline{\vary{13}{11}}, \underline{\vary{5}{6}} \\ \cline{2-4}
+          & \vary{D}{t} & \underline{\vary{7}{5}}, \underline{\vary{9}{10}} & \vary{11}{9},  \vary{6}{7} \\ \cline{2-4}
+      \end{tabular}
+    \end{center}
+    }}
+  }{
+  \vspace{8cm}
+  }
+  \task (\points{10})
+  找出该策略式博弈中所有纳什均衡，并说明为什么它们是纳什均衡。
+  \PrintSolutionsTF{
+  \fbox{
+    \parbox{\linewidth}{
+    对\vary{X}{j}的最佳应对是\vary{D}{t}，
+    对\vary{D}{t}的最佳应对是\vary{X}{j}，
+    因此(\vary{X}{j}, \vary{D}{t})是一个纳什均衡。
+    对\vary{Z}{l}的最佳应对是\vary{B}{r}，
+    对\vary{B}{r}的最佳应对是\vary{Z}{l}，
+    因此(\vary{Z}{l}, \vary{B}{r})是另一个纳什均衡。
+    这些是仅有的纯策略纳什均衡，因为我们在(a)部分中已消除所有在纳什均衡中永远不会被采用的策略。
+    我们还在(a)部分的表格中找到了双方最佳应对的交点，这符合纳什均衡的定义。
+    \par\noindent\rule{\linewidth}{0.4pt}
+    若答案与(a)部分严格劣势策略消除过程的错误一致，可能获得部分分数。
+    }}
+  }
+\end{tasks}
+\end{question}
+
+\begin{question}[ID=tbl2,type=exam]
+考虑以下策略式博弈：
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{*{6}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{4}{c}{$P_2$} \\ \cline{3-6}
+      \multicolumn{1}{c}{} & & \vary{W}{i} & \vary{X}{j} & \vary{Y}{k} & \vary{Z}{l} \\ \cline{2-6}
+      \multirow{5}*{$P_1$} 
+          & \vary{A}{q} & \vary{9}{8}, \vary{5}{7} & \vary{6}{5}, \vary{8}{10} & \vary{10}{9},  \vary{5}{7}   & \vary{6}{4}, \vary{7}{9} \\ \cline{2-6}
+          & \vary{B}{r} & \vary{9}{8}, \vary{0}{2} & \vary{4}{3}, \vary{3}{5}  & \vary{11}{10}, \vary{5}{7}   & \vary{2}{0}, \vary{7}{8} \\ \cline{2-6}
+          & \vary{C}{s} & \vary{10}{9}, \vary{7}{9} & \vary{2}{1}, \vary{8}{10} & \vary{9}{8},  \vary{9}{11} & \vary{6}{4}, \vary{11}{13} \\ \cline{2-6}
+          & \vary{D}{t} & \vary{1}{0},  \vary{2}{4} & \vary{5}{4}, \vary{3}{5}  & \vary{12}{11}, \vary{4}{6}   & \vary{9}{7}, \vary{12}{11} \\ \cline{2-6}
+          & \vary{E}{v} & \vary{10}{3},  \vary{2}{4} & \vary{4}{3}, \vary{3}{5}  & \vary{7}{6},   \vary{4}{6}   & \vary{4}{3}, \vary{14}{4} \\ \cline{2-6}
+  \end{tabular}
+  \end{center}
+\end{table}
+\begin{tasks}
+  \task (\points{4})
+  若玩家是理性的，是否有任何策略他们绝不会选择？
+  陈述所有严格劣势策略，并解释为什么它们不会被采用。
+  \task (\points{4})
+  使用严格劣势策略的迭代消除法，并写出一个简化后的博弈表，包含所有剩余的单元格。
+  \task (\points{4})
+  找出所有纯策略纳什均衡，并说明为什么这些策略组合是纳什均衡；
+  若找不到，则解释原因。
+\end{tasks}
+\begin{solution}
+  \begin{tasks}
+    \task \vary{W}{v}被\vary{X,Z}{q}严格占优，
+    因为在给定$\vary{P_1}{P_2}$策略的条件下，
+    它总是产生更高收益。
+    \task 
+    \begin{enumerate}
+      \item 消除非理性策略\vary{W}{v}
+      \item 消除\vary{E}{i}，因为它现在被\vary{A}{j,l}严格占优
+      \item 消除\vary{B}{k}，被\vary{D}{l}严格占优
+      \item 消除\vary{Y}{r}，被\vary{Z}{t}严格占优
+      \item 消除\vary{C}{s}，被\vary{D}{t}严格占优
+      \item 停止，已无严格劣势策略
+    \end{enumerate}
+    \begin{center}
+      \begin{tabular}{*{4}{c|}}
+        \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\ \cline{3-4}
+        \multicolumn{1}{c}{} & & \vary{X}{j} & \vary{Z}{l} \\ \cline{2-4}
+        \multirow{2}*{$P_1$}
+          & \vary{A}{q} & \underline{\vary{6}{5}}, \underline{\vary{8}{10}}  & \vary{6}{4}, \vary{7}{9} \\ \cline{2-4}
+          & \vary{D}{t} & \vary{5}{4}, \vary{3}{5} & \underline{\vary{9}{7}},  \underline{\vary{12}{11}}\\ \cline{2-4}
+      \end{tabular}
+    \end{center}
+    \task 纳什均衡：\vary{$\{A,X\}$, $\{D,Z\}$}{$\{q,j\}$, $\{t,l\}$}
+    这些是仅有的纯策略纳什均衡，因为我们在(a)部分中已消除所有在纳什均衡中永远不会被采用的策略。
+    我们还在(b)部分的表格中找到了双方最佳应对的交点，这符合纳什均衡的定义。
+  \end{tasks}
+\end{solution}
+\end{question}

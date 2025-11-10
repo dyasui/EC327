@@ -11,11 +11,11 @@ You will have 80 minutes to complete 10 multiple choice and 3-4 short-answer que
   * 3x5 inch handwritten notecard
   * scientific non-programmable graphing calculator (optional)
 
-# [Midterms Topics](midterm-topics.qmd)
+# Midterm
 
-# Practice Exams:
+[Midterms Topics](midterm-topics.qmd)
 
-## Midterm [Download](PracticeExam/Midterm/PracticeMT_F25.pdf){.btn .btn-outline-primary .btn role="button"}
+## Practice Midterm [🗌 Download](PracticeExam/Midterm/PracticeMT_F25.pdf){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <details>
   <summary>Answer Key</summary>
@@ -25,7 +25,20 @@ You will have 80 minutes to complete 10 multiple choice and 3-4 short-answer que
 </details>
 ```
 
-## Final [Download](PracticeExam/Final/main.pdf){.btn .btn-outline-primary .btn role="button"}
+## Fall 2025 Midterm 
+
+| Version 1 | Version 2 |
+|:---------:|:---------:|
+| [📕V1 (blank)](Midterm/EC327F25_mt_v1.pdf){.btn .btn-outline-primary .btn role="button"} | [📗V2 (blank)](Midterm/EC327F25_mt_v2.pdf){.btn .btn-outline-primary .btn role="button"} |
+| [📕V1 Answer Key](Midterm/EC327F25_mt_v1_key.pdf){.btn .btn-outline-primary .btn role="button"} | [📗V2 Answer Key](Midterm/EC327F25_mt_v2_key.pdf){.btn .btn-outline-primary .btn role="button"} |
+
+[📊 Performance Report](report.qmd){.btn .btn-outline-primary .btn role="button"}
+
+---
+
+# Final
+
+## Practice Final [🗌 Download](PracticeExam/Final/main.pdf){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <details>
   <summary>Answer Key</summary>

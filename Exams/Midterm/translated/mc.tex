@@ -1,0 +1,261 @@
+\begin{question}[ID=1,type=exam]{4}
+  理性意味着：
+  \begin{tasks}
+    \task 玩家的偏好是连续且独立的
+    \task 玩家总是战胜对手
+    \task 玩家总是基于完全信息行动
+    \task \correct 玩家的偏好是完备且可传递的
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=2,type=exam]{4}
+  两名玩家轮流从一个装有 100 颗石子的罐子中取石子。
+  每位玩家每回合可以取 1 至 5 颗石子。
+  取走最后一颗石子的玩家\textbf{输掉}游戏。\\
+  先手玩家在第一回合应取多少颗石子？
+  \begin{tasks}
+    \task \vary{1}{\correct 3}
+    \task \vary{2}{4}
+    \task \vary{5}{2}
+    \task \vary{4}{1} 
+    \task \vary{\correct 3}{5}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=3,type=exam]{4}
+  如果一个结果是 \rule{1cm}{0.15mm}，
+  那么它 \rule{1cm}{0.15mm}
+  \begin{tasks}
+    \task \vary
+    {\correct 从不被帕累托占优，是帕累托最优}
+    {不是纳什均衡，不是帕累托最优} 
+    \task \vary
+    {不是纳什均衡，不是帕累托最优} 
+    {\correct 从不被帕累托占优，是帕累托最优}
+    \task \vary
+    {被帕累托占优，是纳什均衡}
+    {对所有玩家都是严格占优，是帕累托最优}
+    \task \vary
+    {对所有玩家都是严格占优，是帕累托最优}
+    {被帕累托占优，是纳什均衡}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=4,type=exam]{4}
+  考虑以下策略式博弈：
+  \begin{table}[h!]
+    \begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabular}{*{5}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{3}{c}{$P_2$} \\\cline{3-5}
+      \multicolumn{1}{c}{} &     & $x$ & $y$ & $z$ \\\cline{2-5}
+      \multirow{3}*{$P_1$}  & $a$ & 2,0 & 6,2 & 4,2 \\\cline{2-5}
+                            & $b$ & 2,5 & 8,9 & 2,2 \\\cline{2-5}
+                            & $c$ & 1,4 & 5,3 & 5,1 \\\cline{2-5}
+    \end{tabular}
+    \end{center}
+  \end{table}
+  在上面的博弈中，哪个策略是严格劣势策略？
+  \begin{tasks}
+    \task \vary{b}{$y$}
+    \task \vary{a}{\correct $z$}
+    \task \vary{c}{$b$}
+    \task \vary{\correct $z$}{$x$}
+    \task \vary{$x$}{$a$}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=5,type=exam]{4} 
+  对以下策略式博弈执行严格劣势策略迭代删除（IDSDS）直至完成。\\
+  \begin{table}[h!]
+    \begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabular}{*{5}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{3}{c}{$P_2$} \\\cline{3-5}
+      \multicolumn{1}{c}{} &     & 宽式 & 窄式 & 细式 \\\cline{2-5}
+      \multirow{3}*{$P_1$}  & 高式  & 5,9 & 6,2 & 6,2 \\\cline{2-5}
+                            & 中式   & 2,5 & 8,8 & 2,2 \\\cline{2-5}
+                            & 矮式 & 6,4 & 2,3 & 5,9 \\\cline{2-5}
+    \end{tabular}
+    \end{center}
+  \end{table}
+  IDSDS 关于该博弈的纳什均衡说明了什么？
+  \begin{tasks}
+    \task \vary{纳什均衡为(高式,宽式)}{纳什均衡为(中式,窄式)}
+    \task \vary{\correct IDSDS 本身无法确定该博弈的纳什均衡}{纳什均衡为(矮式,细式)}
+    \task \vary{纳什均衡为(中式,窄式)}{纳什均衡为(高式,宽式)}
+    \task \vary{纳什均衡为(矮式,细式)}{\correct IDSDS 本身无法确定该博弈的纳什均衡}
+    \task \vary{纳什均衡为(高式,窄式)}{ 纳什均衡为(矮式,宽式)}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=6,type=exam]{4}
+  无论其他玩家如何行动，对某个玩家而言都是最优的选择被称为：
+  \begin{tasks}
+    \task \vary
+    {纳什策略}
+    {严格劣势策略}
+    \task \vary
+    {帕累托最优策略}
+    {置信策略}
+    \task \vary
+    {\correct 严格优势策略}
+    {帕累托最优策略}
+    \task \vary
+    {严格劣势策略}
+    {\correct 严格优势策略}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=7,type=exam]{4}
+  \setlist{nolistsep}
+  严格劣势策略迭代删除（IDSDS）的有用性在于
+  \begin{tasks}
+    \task \vary
+    {它总能找到任何策略式博弈的所有纳什均衡}
+    {它没有用处，因为起始玩家不同会导致不同结果}
+    \task \vary
+    {它消除了不可信威胁}
+    {\correct 它可以删除纳什均衡中永远不会被使用的策略}
+    \task \vary
+    {\correct 它可以删除纳什均衡中永远不会被使用的策略}
+    {它总能找到任何策略式博弈的所有纳什均衡}
+    \task \vary
+    {它没有用处，因为起始玩家不同会导致不同结果}
+    {它消除了不可信威胁}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=8,type=exam]{4}
+  考虑以下策略式博弈：
+  \begin{table}[h!]
+    \begin{center}
+    \begin{tabular}{*{5}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{3}{c}{$P_2$} \\\cline{3-5}
+      \multicolumn{1}{c}{} &         & 左 & 中 & 右 \\\cline{2-5}
+      \multirow{3}*{$P_1$}& 上       & 0,1  & 9,0    & 2,3 \\\cline{2-5}
+                          & 直行 & 5,9  & 7,3    & 1,7 \\\cline{2-5}
+                          & 下     & 7,5  & 10,10  & 3,5 \\\cline{2-5}
+    \end{tabular}
+    \end{center}
+  \end{table}
+  纳什均衡是什么？
+  \begin{tasks}
+    \task \vary{上,左}{上,中}
+    \task \vary{直行,中}{直行,右}
+    \task \vary{下,左}{\correct 下,中}
+    \task \vary{\correct 下,中}{下,右}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=9,type=exam]{4}
+  考虑以下扩展式博弈：
+  \begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[scale=1.5,font=\footnotesize]
+        \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
+        \tikzstyle{hollow node}=[circle,draw,inner sep=1.5]
+        \tikzstyle{level 1}=[level distance=15mm,sibling distance=3.5cm]
+        \tikzstyle{level 2}=[level distance=15mm,sibling distance=1.5cm]
+        \tikzstyle{level 3}=[level distance=15mm,sibling distance=1cm]
+        \node(0)[solid node,label=above:{玩家1}]{}
+            child{node[solid node,label=above left:{玩家2}]{}
+                child{node[hollow node,label=below:{$(1,2)$}]{} edge from parent node[left]{$C$}}
+                child{node[hollow node,label=below:{$(1,-1)$}]{} edge from parent node[left]{$D$}}
+                child{node[hollow node,label=below:{$(0,2)$}]{} edge from parent node[right]{$E$}}
+                edge from parent node[left,xshift=-5]{$A$}
+            }
+            child{node[solid node,label=above right:{玩家2}]{}
+                child{node[hollow node,label=below:{$(2,2)$}]{} edge from parent node[left]{$F$}}
+                child{node[hollow node,label=below:{$(1,3)$}]{} edge from parent node[right]{$G$}}
+                edge from parent node[right,xshift=5]{$B$}
+            };
+    \end{tikzpicture}
+  \end{figure}
+  以下哪项是子博弈精炼纳什均衡？
+  \begin{tasks}
+    \task \vary
+    {(B, CF)}
+    {(A, EF)}
+    \task \vary
+    {(A, EG)}
+    {\correct (B, CG)}
+    \task \vary
+    {\correct (B, CG)}
+    {(B, CF)}
+    \task \vary
+    {(A, EF)}
+    {(B, DG)}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=10,type=exam]{4}
+  我对两场独立比赛进行投注。
+  如果俄勒冈大学男子篮球队击败华盛顿队，我赢取 6 美元，
+  如果华盛顿队获胜，我损失 6 美元。
+  如果俄勒冈大学女子篮球队击败科罗拉多队，我赢取 12 美元，
+  如果科罗拉多队获胜，我损失 12 美元。
+  假设俄勒冈大学男子击败华盛顿的概率为 $\frac{1}{3}$，
+  俄勒冈大学女子击败科罗拉多的概率为 $\frac{1}{2}$。\\
+  我在两场比赛中的预期（美元）收益是多少？\\
+  \begin{tasks}
+    \task \vary{\correct -2\$}{0\$}
+    \task \vary{-4\$}{2\$}
+    \task \vary{2\$}{-4\$}
+    \task \vary{0\$}{\correct -2\$}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=11,type=exam]{4}
+  在\textbf{序贯博弈}中，合适的分析方法是：
+  \begin{tasks}
+    \task \vary
+    {严格劣势策略迭代删除}
+    {混合策略纳什均衡}
+    \task \vary
+    {\correct 逆向归纳（倒推分析）}
+    {最优反应动态}
+    \task \vary
+    {古诺调整过程}
+    {\correct 逆向归纳（倒推分析）}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=12,type=exam]{4}
+  在\textbf{囚徒困境}中，相互合作：
+  \begin{tasks}
+    \task \vary
+    {是优势策略均衡}
+    {\correct 帕累托占优于相互背叛的结果}
+    \task \vary
+    {\correct 帕累托占优于相互背叛的结果}
+    {是稳定的}
+    \task \vary
+    {是稳定的}
+    {是可信威胁}
+    \task \vary
+    {是可信威胁}
+    {是优势策略均衡}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=13,type=exam]{4}
+  当我们通过逆向归纳求解序贯博弈时，以下哪项是我们所假设的？
+  \begin{tasks}
+    \task \vary{\correct 所有玩家相信其他玩家都是理性的}{所有玩家拥有完全信息}
+    \task \vary{所有玩家具有相同偏好}{某些玩家具有先动优势}
+    \task \vary{所有玩家拥有完全信息}{所有玩家具有相同偏好}
+    \task \vary{某些玩家具有先动优势}{\correct 所有玩家相信其他玩家都是理性的}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=14,type=exam]{4}
+  在两名玩家各有 2 种策略的双人博弈中，
+  可能存在 4 个纯策略纳什均衡。
+  \begin{tasks}
+    \task \vary{错误，纯策略纳什必须唯一}{错误，2x2博弈只能使用混合策略}
+    \task \vary{错误，2x2博弈只能使用混合策略}{错误，纯策略纳什必须唯一}
+    \task \vary{\correct 正确，如果所有都是弱纳什均衡}{正确，如果所有都被帕累托占优}
+    \task \vary{正确，如果所有均衡都被帕累托占优}{\correct 正确，如果所有均衡均为弱纳什均衡}
+  \end{tasks}
+\end{question}

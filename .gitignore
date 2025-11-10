@@ -27,7 +27,8 @@ EC327names.csv
 **_Grades-*.csv
 
 # Exams
-Exams/Midterm/
+# Exams/Midterm/
 Exams/Final/
 
 **/*.quarto_ipynb
+Exams/Midterm/results/EC327F25-midtermgrades.csv

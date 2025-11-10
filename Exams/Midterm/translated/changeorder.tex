@@ -1,0 +1,99 @@
+\begin{question}[ID=meangirls,type=exam]{30}
+考虑一个小组项目，其中两个玩家，\textbf{Regina} 和 \textbf{Gretchen}，
+可以付出不同程度的努力：$High$、$Moderate$ 或 $Low$。\\
+双方在项目中获得相同的成绩，
+但共享成绩取决于总努力程度：\\
+\begin{itemize} 
+  \item 若双方均付出$Low$努力，获得$F$等（双方效用估值0）
+  \item 若一方$Low$另一方$High$努力，获得$D$等（效用估值1）
+  \item 若双方均$Moderate$，或一方$High$另一方$Low$努力，获得$B$等（效用估值3）
+  \item 若一方$Moderate$另一方$High$，获得$A$等（效用估值4）
+  \item 若双方均$High$努力，获得$A^+$等（效用估值5）
+\end{itemize}
+\underline{努力成本：}
+$High$努力成本为2.5效用，
+$Moderate$努力成本为1效用，
+$Low$努力成本为0效用 \\
+\textbf{每位玩家的支付等于从成绩中获得的效用减去自身努力成本。}
+\begin{tasks}
+  \task (\points{10})
+  写出扩展式博弈树，当\textbf{Gretchen}先选择努力程度，随后\textbf{Regina}选择努力程度。
+  \PrintSolutionsTF{
+  \fbox{
+    \parbox{\linewidth}{
+    解答
+    \vspace{10cm}
+    }}
+  }{
+  \vspace{10cm}
+  }
+  \task (\points{10})
+  求解当Gretchen先行动时的所有子博弈完美纳什均衡。
+  完整答案需包含\textbf{双方在每种可能决策路径上的完整行动计划}。
+  \PrintSolutionsTF{
+  \fbox{
+    \parbox{\linewidth}{
+    解答
+    \vspace{2cm}
+    }}
+  }
+\newpage
+  \task (\points{10})
+  求解当\textbf{Regina}先选择努力程度，随后\textbf{Gretchen}选择时的所有纳什均衡。
+  将结果与(a)(b)部分对比，并解释差异原因。
+\end{tasks}
+\end{question}
+
+\begin{question}[ID=subgame,type=exam]
+  考虑以下扩展式博弈： \\
+  \begin{adjustbox}{width=\textwidth,center}
+  \vary{
+  \includegraphics{../questions/figures/mixed-tree1.png}
+  }{
+  \includegraphics{../questions/figures/mixed-tree2.png}
+  }
+  \end{adjustbox}
+  \begin{tasks}
+    \task (\points{4})
+    首先关注虚线框内标记为SG($b\ell$)\footnote{分支标记b和l对应的子博弈}的子博弈。\\
+    将该序贯子博弈写成标准型表格。
+    \task (\points{4}) 求解SG($b\ell$)中的所有纳什均衡。
+    \task (\points{4}) 根据上述结果，
+    关于整个游戏的子博弈完美纳什均衡你能得出什么结论？
+    \task (\points{4}) 求解整个游戏的所有子博弈完美纳什均衡。
+    说明推导过程。若不存在纳什均衡，解释原因。
+  \end{tasks}
+  \begin{solution}
+    \begin{tasks}
+      \task 以下任一版本均可：
+      \begin{center}
+        \begin{tabular}{*{4}{c|}}
+          \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_1$} \\ \cline{3-4}
+          \multicolumn{1}{c}{} & & e & f \\ \cline{2-4}
+          \multirow{2}*{$P_3$}
+            & q & \underline{1},3 & \underline{3},\underline{5} \\ \cline{2-4}
+            & r & 0,\underline{2} & 1,1 \\ \cline{2-4}
+        \end{tabular}
+        \begin{tabular}{*{4}{c|}}
+          \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_3$} \\ \cline{3-4}
+          \multicolumn{1}{c}{} & & q & r \\ \cline{2-4}
+          \multirow{2}*{$P_1$}
+            & e & 3,\underline{1} & \underline{2},1 \\ \cline{2-4}
+            & f & \underline{5},\underline{3} & 1,1 \\ \cline{2-4}
+        \end{tabular}
+      \end{center}
+      \task 子博弈$b\ell$中，(q,f) 是唯一的纯策略纳什均衡。
+      \task SPE要求玩家在每个子博弈中理性行动，
+      因此SG(bl)的纳什均衡必是整个博弈SPE的组成部分。
+      \task 逆向归纳：
+      \begin{itemize}
+        \item $P_3$ 在x/y分支选y，在h/i分支选v（优于u），但在j分支选u（优于v）。
+        根据前述，仅当$\ell$时选择q是理性的。
+        \item 基于$P_3$行为，$P_2$在b分支选l、在a分支选j。
+        \item 基于(b)结论，$P_1$在$\ell$时选f，
+        结合逆向归纳结果，其在首节点应选b。
+      \end{itemize}
+      SPE为 \{(b,f),($\ell$,j),(x,q,v,v,u)\}
+    \end{tasks}
+  \end{solution}
+\end{question}

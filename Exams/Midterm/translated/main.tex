@@ -1,0 +1,133 @@
+
+\documentclass{ctexart}
+
+% load packages
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} 
+\usepackage{multirow,array} % for payoff matrix formatting
+\usepackage{adjustbox}
+% use exsheets to create different versions with \vary{}{}
+\usepackage{exsheets}
+\SetupExSheets{
+  headings = block-wp,
+  % solution/print = true % set this to true to print key
+}
+
+% mark mc options as correct with custom \correct command
+\newcommand{\ShowAnswers}{false}
+% \renewcommand{\ShowAnswers}{true} %comment this out if you do not want to show the answers
+\newcommand{\correct}{%
+    \expandafter\ifstrequal\expandafter{\ShowAnswers}{true}{\bfseries}{}%
+}
+
+% document formatting settings
+\geometry{left=1.0in,right=1.0in,top=0.75in,bottom=1.0in}
+\setlength{\parindent}{0pt} % turn off para indenting
+
+% title and date for cover page
+\title{
+    \textbf{Econ 327: 博弈论} \\ 
+    期中考试
+    }
+\author{俄勒冈大学}
+\date{2025年10月29日}
+
+% DOCUMENT BEGINS HERE
+\begin{document}
+
+\maketitle
+
+% SET VERSION NUMBER HERE: 
+\variant{2}
+
+\begin{center}
+  \Large{\textbf{版本 \vary{1}{2}}}
+\end{center}
+
+% instructions section
+\begin{itemize}
+  \item 完成\textit{所有}题目和部分。所有题目都将被评分。
+  \item 在简答和问答题中仔细解释你的答案。
+  
+  答案错误但解释清晰可获得部分分数，
+  无解释的错误答案得零分。
+
+  \item 
+  如果不理解问题要求，
+  请要求澄清说明。
+\end{itemize}
+
+\underline{允许携带材料：}
+
+\begin{itemize}
+  \item 单张5英寸×3英寸笔记卡
+  \item 不可编程计算器
+  \item 铅笔、彩色笔、橡皮、直尺等绘图工具
+\end{itemize}
+
+\vspace{1.0in}
+
+% space for student to write their name
+\makebox[.6\textwidth]{姓名\enspace\hrulefill}
+
+\vspace{0.5in}
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+    请在答题区作答。若空间不足，
+    可转至背面或另附纸张继续答题。}}}
+\end{center}
+
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section*{选择题}
+
+% \includequestions[random=10]{questions/mc}
+\includequestions[IDs={3,5,6,7,8,10,11,12,13,14}]{mc}
+
+%------------------------------------------------------------------------------%
+\newpage
+
+\section*{问答题}
+
+\includequestions{sequential}
+
+\newpage
+
+\includequestions[IDs={tbl2}]{bigtable}
+
+\newpage
+
+\includequestions[IDs={subgame}]{changeorder}
+
+\newpage
+
+\includequestions[IDs={vlccs}]{contstrats}
+
+%------------------------------------------------------------------------------%
+
+
+\vspace*{\fill}
+
+\section*{附加题}
+选择0到2分之间的任意积分作为出价，
+该出价将与随机匹配的另一个学生的出价进行比较。
+出价\textbf{最低}者将获得其出价对应的积分，
+另一学生得零分。平局则双方均不得分。
+
+\vspace{.5cm}
+
+\makebox[4cm]{\textbf{你的出价：}\enspace\hrulefill}
+
+%------------------------------------------------------------------------------%
+
+
+\end{document}
