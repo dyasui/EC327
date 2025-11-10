@@ -291,156 +291,121 @@
   {
     "objectID": "Slides/06MixedStrategies/0604-examples.html",
     "href": "Slides/06MixedStrategies/0604-examples.html",
-    "title": "More MSNE Examples",
+    "title": "Mixed-Strategy Examples",
     "section": "",
-    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\n\nConsider the following game table. What are Player 1’s expected payoffs, given Player 2’s mixed strategy?\n\n\n\n\\(P_1\\), \\(P_2\\)\nUp \\((q)\\)\nDown \\((1 - q)\\)\n\n\n\n\nUp \\((p)\\)\n2, -2\n-3, 3\n\n\nDown \\((1 - p)\\)\n-5, 5\n1, -1\n\n\n\n\n\n\\(U_1(Up) = 2q -3(1-q) = 5q - 3\\),\n\\(U_1(Down) = -5q + 1(1-q) = -6q +1\\)\n\n\n\n\n\n\nConsider the following game table. What are Player 2’s expected payoffs, given Player 1’s mixed strategy?\n\n\n\n\\(P_1\\), \\(P_2\\)\nUp \\((q)\\)\nDown \\((1 - q)\\)\n\n\n\n\nUp \\((p)\\)\n2, -2\n-3, 3\n\n\nDown \\((1 - p)\\)\n-5, 5\n1, -1\n\n\n\n\n\n\\(U_2(Up) = -2p + 5(1-p) = -7p + 5\\),\n\\(U_2(Down) = 3p - 1(1-p) = 4p -1\\)\n\n\n\n\n\n\nThe correct answers to the previous two questions were:\n\n\\(U_1(Up) = 5q - 3\\)\n$U_1(Down) = -6q + 1 $.\n\\(U_2(Up) = -7p + 5\\)\n\\(U_2(Down) = 4p - 1\\).\n\nBased on this, what are \\(p\\) and \\(q\\) in the MSNE of this game?\n\n\n\\(p^* = 6/11\\)\n\\(q^* = 4/11\\)\n\n\n\n\n\n\nConsider the following game table:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\nThe players’ expected payoffs are:\n\n\\[\n\\begin{align*}\nU_1(A) & = 2q + 3(1 - q) \\\\\n       & = 2q + 3 - 3q \\\\\n       & = 3 - q \\\\\nU_1(B) & = 4q + 0(1 - q) \\\\\n       & = 4q \\\\\nU_2(X) & = 2p + 3(1 - p) \\\\\n       & = 2p + 3 - 3p \\\\\n       & = 3 - p \\\\\nU_2(Y) & = 2p + 0(1 - p) \\\\\n       & = 2p\n\\end{align*}\n\\]\n\n\n\n\n\n\n\nBased on this, the conditions under which each player will use a mixed strategy are:\n\\[\n\\begin{align*}\nPlayer~1: && Player~2:&\\\\\n3 - q &= 4q & 3 - p &= 2p\\\\\n3 &= 5q & 3 &= 3p\\\\\nq &= 3/5 & p &= 1\n\\end{align*}\n\\]\n\n\nWe’ve never seen anything like \\(p = 1\\) in this context before…\nPlayer 2 will only mix if Player 1 only plays A\nThis usually occurs when one strategy weakly dominates another.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe can still approach this the same way that we have in the past:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\n\n\nSuppose in MSNE that Player 1 plays a (non-trivial) mixed strategy.\nThen Player 2 must also play a mixed strategy, in which q = 3/5.\n\nBut Player 2 will only mix if Player 1 plays p = 1, which is a trivial mixed strategy.\nThis is a contradiction, there is no MSNE where Player 1 plays a non-trivial mixed strategy\n\n\n\n\n\n\n\n\n\nApproach it the other way next:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\nSuppose Player 2 plays a non-trivial mixed strategy.\n\n\nThen Player 1 must play A as a pure strategy.\nPlayer 2 will play A if \\(3 - q \\geq 4q\\), i.e. if \\(3/5 \\geq q\\).\nThis lets Player 2 play a non-trivial mixed strategy! There is no contradiction here.\n\n\n\n\n\n\n\n\n\n\nThere are a range of MSNEs here: all strategy profiles \\((1, 0), (q, 1 - q)\\), in which \\(q \\in (0, 3/5]\\)\nThere are also two trivial MSNEs, \\((1, 0), (0, 1)\\) and \\((0, 1), (1, 0)\\), which are really just the pure-strategy Nash equilibria (A, Y) and (B, X) expressed in the form of an MSNE.\nIt will help to understand what’s going on with the Best Responses graph:\n\n\n\n\n\n\n\n\nCode\n# Create a data frame for plotting\ndata &lt;- data.frame(\n  q = c(0, 3/5, 3/5, 1),\n  BR1 = c(1, 1, 0, 0),\n  p = c(1, 0, 0, 0),\n  BR2 = c(0, 1, 1, 1)\n)\n\n# Plot the best response functions\nggplot(data) +\n  geom_step(aes(x = q, y = BR1, color = \"BR_1\"), direction = \"hv\", linewidth = 2, alpha = 0.9) +\n  geom_step(aes(x = BR2, y = p, color = \"BR_2\"), direction = \"vh\", linewidth = 2, alpha = 0.9) +\n  geom_segment(aes(x = 3/5, xend = 1, y = 0, yend = 0, color = \"MSNE\"), linewidth = 1.5, linetype = \"dotted\") +\n  geom_point(aes(x=0, y=1, color = \"PSNE\"), size = 2) +\n  geom_point(aes(x=1, y=0, color = \"PSNE\"), size = 2) +\n  labs(title = \"Best Response Functions for Mixed Strategy Nash Equilibrium\",\n       x = \"q\",\n       y = \"p\",\n       color = \"Best Response\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n\nLet us return to the Prisoner’s Dilemma and check for MSNEs:\n\n\n\nGuido, Luca\n\\(Testify~(q)\\)\n\\(Keep~Quiet~(1-q)\\)\n\n\n\n\n\\(Testify~(p)\\)\n\\(-10,-10\\)\n\\(0,-20\\)\n\n\n\\(Keep~Quiet~(1-p)\\)\n\\(-20,0\\)\n\\(-1,-1\\)\n\n\n\nGuido and Luca’s expected payoffs are:\n\n\n\\(U_G(Testify) = -10q + 0(1 - q) = -10q\\).\n\\(U_G(Keep Quiet) = -20q + (-1)(1 - q) = -1 - 19q\\).\n\\(U_L(Testify) = -10p + 0(1 - p) = -10p\\).\n\\(U_L(Keep Quiet) = -20p + (-1)(1 - p) = -1 - 19p\\).\n\n\n\n\n\n\nGuido will play a mixed strategy if:\n\\[\n\\begin{align*}\n-10q &= -1 - 19q\\\\\n9q &= -1\\\\\nq &= -1/9\n\\end{align*}\n\\]\n\n\nBut -1/9 is not a valid probability!\nWe could also note that if \\(q\\in [0, 1]\\):\n\n\\(-10q\\) is always greater than \\(-1 - 19q\\).\n\nIn other words, as we saw weeks ago, \\(Testify\\) strictly dominates \\(Keep~Quiet\\)…so why would Guido mix between the two of them?\n\n\n\n\n\n\nIf you’ve solved for a player’s mixed strategy and you find that the probability is less than 0, or more than 1:\n\n\nIt means something is wrong. Probability can only be between 0 and 1 (inclusive).\nDouble-check your math—it could be an algebra error.\nBut if you’re confident in your math, this means that there is no way that the player would ever play a mixed strategy:\n\nin fact, they have a strictly dominated strategy.\n\n\n\n\n\n\n\nConsider the Deer Hunt:\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n\\(2, 2\\)\n\\(0, 1\\)\n\n\nRabbit\n\\(1, 0\\)\n\\(1, 1\\)\n\n\n\nSuppose that Igg hunts Deer 3/4 of the time, and Rabbit 1/4 of the time.\n\n\nIf Ogg always hunts deer; what is Ogg’s expected payoff?\n\nOgg’s expected payoff from playing Deer will be \\(0.75(2) + 0.25(0) = 1.5\\).\n\n\n\n\n\n\n\nWe can generalize this approach to calculate Ogg’s expected payoffs from any strategy that Igg chooses to play:\n\n\nSuppose Igg plays Deer with prob p, and Rabbit with prob 1 - p.\nOgg’s expected payoff from Deer is:\n\n\\(2(p) + 0(1 - p) = 2p\\),\n\nand from Rabbit:\n\n\\(1(p) + 1(1 - p) = 1\\).\n\nOgg’s expected payoff from Deer gets larger with p:\n\nmore likely Igg is to hunt Deer, more attractive Deer becomes to Ogg.\n\n\n\n\n\n\n\nWe already saw that Ogg’s expected payoffs from Deer and Rabbit are \\(2p\\) and \\(1\\), respectively,\nso Ogg would only play a mixed strategy if \\(p = \\frac{1}{2}\\).\n\n\nLikewise, Igg’s expected payoffs are \\(2q\\) and \\(1\\), and Igg will play a mixed strategy if \\(q = \\frac{1}{2}\\).\nThe MSNE in this game can be written as: \\(\\{(1/2~Deer, 1/2~Rabbit)_{Ogg}, \\ (1/2~Deer, 1/2~Rabbit)_{Igg}\\}\\).\n\n\n\n\n\n\nMake sure that you’re setting up the equations used to solve for a player’s strategy correctly:\n\n\nDescribe when a player is indifferent between their pure strategies:\n\nif you’re trying to figure out when Player 1 is indifferent, you need to use Player 1’s payoffs.\n\nHowever, the probabilities will be based on the other player’s mixed strategy:\n\nin a game with mixed strategies, the randomness a player deals with is created by the other player—not themselves.\n\n\n\n\n\n\n\n\n\n\nPolice, Dealer\nStreets (d)\nPark (1 - d)\n\n\n\n\nStreets (p)\n80, 20\n0,100\n\n\nPark (1 - p)\n10, 90\n60,40\n\n\n\n1\n\n\n\n\nPolice Officer’s expected utility:\n\n\\(U_P(Streets) = 80d + 0(1-d)\\)\n\n\\(= 80d\\)\n\n\\(U_P(Park) = 10d + 60(1-d)\\)\n\n\\(= 60 - 50d\\).\n\n\n\n\n\n\n\nDrug Dealer’s expected utility:\n\n\\(U_D(Streets) = 20p + 90(1-p)\\)\n\n\\(= 90 - 70p\\)\n\n\\(U_D(Park) = 100p + 40(1-p)\\)\n\n\\(= 40 + 60p\\).\n\n\n\n\n\n\n\n\n\n\n\nWhen is the Police Officer indifferent between Park and Streets?\nWhen is the Drug Dealer indifferent between Park and Streets?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nlibrary(tidyverse)\nlibrary(latex2exp)\n\ndata &lt;- tibble(\n  d = c(0, 6/13, 6/13, 1),\n  PR = c(0, 0, 1, 1),\n  p = c(1, 5/13, 5/13, 0),\n  DR = c(0, 0, 1, 1),\n)\n\n# Plot the best response functions\nggplot(data) +\n  geom_hline(yintercept = 5/13, linetype = \"dashed\", color = \"grey50\") +\n  geom_vline(xintercept = 6/13, linetype = \"dashed\", color = \"grey50\") +\n  geom_step(aes(x = d, y = PR, color = \"Police Officer's Best Response\"), direction = \"hv\", linewidth = 2) +\n  geom_step(aes(x = DR, y = p, color = \"Drug Dealer's Best Response\"), direction = \"hv\", linewidth = 2) +\n  geom_point(data = tibble(d = 6/13, p = 5/13), aes(x=d, y=p, color = \"MSNE\"), size = 3) +\n  annotate(\"text\", y = 5/13, x = 0, label = TeX(\"$p^* = 5/13$\"), hjust = -0.1, vjust = 2, color = \"grey50\") +\n  annotate(\"text\", x = 6/13, y = 0, label = TeX(\"$d^* = 6/13$\"), hjust = -0.2, vjust = 1, color = \"grey50\") +\n  labs(title = \"Best Response Functions for Mixed Strategy Nash Equilibrium\",\n       x = \"Drug Dealer's Probability (d)\",\n       y = \"Police Officer's Probability (p)\",\n       color = \"Best Response\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote that the players’ asymmetric preferences result in an interior solution.\nNotice that it isn’t a 50:50, it is more likely that both meet in the Park than it is likely that they both meet in the Streets"
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\n\nRemember the Prisoners’ Dilemma?\n\n\n\nGuido, Luca\n\\(Testify~(q)\\)\n\\(Keep~Quiet~(1-q)\\)\n\n\n\n\n\\(Testify~(p)\\)\n\\(-10,-10\\)\n\\(0,-20\\)\n\n\n\\(Keep~Quiet~(1-p)\\)\n\\(-20,0\\)\n\\(-1,-1\\)\n\n\n\nWhat are Guido’s and Luca’s Expected Payoffs?\n\n\n\\(EU_G(Testify) = -10q + 0(1 - q) = -10q\\).\n\\(EU_G(Keep Quiet) = -20q + (-1)(1 - q) = -1 - 19q\\).\n\\(EU_L(Testify) = -10p + 0(1 - p) = -10p\\).\n\\(EU_L(Keep Quiet) = -20p + (-1)(1 - p) = -1 - 19p\\).\n\n\n\n\n\n\nGuido will play a mixed strategy if:\n\\[\n\\begin{align*}\n-10q &= -1 - 19q\\\\\n9q &= -1\\\\\nq &= -1/9\n\\end{align*}\n\\]\n\n\nWhat’s wrong with this?\n-1/9 is not a valid probability!\nWe could also note that if \\(q\\in [0, 1]\\):\n\n\\(-10q\\) is always greater than \\(-1 - 19q\\).\n\nTestify strictly dominates Keep~Quiet\n\nNever rational to play a strictly dominated strategy\n\n\n\n\n\n\n\nIf you’ve solved for a player’s mixed strategy and you find that the probability is less than 0, or more than 1:\n\n\nIt means something is wrong.\n\nProbability can only be between 0 and 1 (inclusive).\n\nDouble-check your math\n\nDid you make an algebra mistake?\n\nIf your math is correct, this means that there is no way that the player would ever play a mixed strategy:\n\nin fact, they have a strictly dominated strategy.\n\n\n\n\n\n\n\nConsider the Deer Hunt:\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n\\(2, 2\\)\n\\(0, 1\\)\n\n\nRabbit\n\\(1, 0\\)\n\\(1, 1\\)\n\n\n\nSuppose that Igg hunts Deer 3/4 of the time, and Rabbit 1/4 of the time.\n\n\nIf Ogg always hunts deer; what is Ogg’s expected payoff?\n\nOgg’s expected payoff from playing Deer will be \\(0.75(2) + 0.25(0) = 1.5\\).\n\n\n\n\n\n\n\nWe can generalize this approach to calculate Ogg’s expected payoffs from any strategy that Igg chooses to play:\n\n\nSuppose Igg plays Deer with prob p, and Rabbit with prob 1 - p.\nOgg’s expected payoff from Deer is:\n\n\\(2(p) + 0(1 - p) = 2p\\),\n\nand from Rabbit:\n\n\\(1(p) + 1(1 - p) = 1\\).\n\nOgg’s expected payoff from Deer gets larger with p:\n\nmore likely Igg is to hunt Deer, more attractive Deer becomes to Ogg.\n\n\n\n\n\n\n\nWe already saw that Ogg’s expected payoffs from Deer and Rabbit are \\(2p\\) and \\(1\\), respectively,\nso Ogg would only play a mixed strategy if \\(p = \\frac{1}{2}\\).\n\n\nLikewise, Igg’s expected payoffs are \\(2q\\) and \\(1\\), and Igg will play a mixed strategy if \\(q = \\frac{1}{2}\\).\nThe MSNE in this game can be written as: \\(\\{(1/2~Deer, 1/2~Rabbit)_{Ogg}, \\ (1/2~Deer, 1/2~Rabbit)_{Igg}\\}\\).\n\n\n\n\n\n\nConsider the following game table. What are Player 1’s expected payoffs, given Player 2’s mixed strategy?\n\n\n\n\\(P_1\\), \\(P_2\\)\nUp \\((q)\\)\nDown \\((1 - q)\\)\n\n\n\n\nUp \\((p)\\)\n2, -2\n-3, 3\n\n\nDown \\((1 - p)\\)\n-5, 5\n1, -1\n\n\n\n\n\n\\(U_1(Up) = 2q -3(1-q) = 5q - 3\\),\n\\(U_1(Down) = -5q + 1(1-q) = -6q +1\\)\n\n\n\n\n\n\nConsider the following game table. What are Player 2’s expected payoffs, given Player 1’s mixed strategy?\n\n\n\n\\(P_1\\), \\(P_2\\)\nUp \\((q)\\)\nDown \\((1 - q)\\)\n\n\n\n\nUp \\((p)\\)\n2, -2\n-3, 3\n\n\nDown \\((1 - p)\\)\n-5, 5\n1, -1\n\n\n\n\n\n\\(U_2(Up) = -2p + 5(1-p) = -7p + 5\\),\n\\(U_2(Down) = 3p - 1(1-p) = 4p -1\\)\n\n\n\n\n\n\nThe correct answers to the previous two questions were:\n\n\\(U_1(Up) = 5q - 3\\)\n\\(U_1(Down) = -6q + 1\\).\n\\(U_2(Up) = -7p + 5\\)\n\\(U_2(Down) = 4p - 1\\).\n\nBased on this, what are \\(p\\) and \\(q\\) in the MSNE of this game?\n\n\n\\(p^* = 6/11\\)\n\\(q^* = 4/11\\)\n\n\n\n\n\n\nConsider the following game table:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\nThe players’ expected payoffs are:\n\n\\[\n\\begin{align*}\nU_1(A) & = 2q + 3(1 - q) \\\\\n       & = 2q + 3 - 3q \\\\\n       & = 3 - q \\\\\nU_1(B) & = 4q + 0(1 - q) \\\\\n       & = 4q \\\\\nU_2(X) & = 2p + 3(1 - p) \\\\\n       & = 2p + 3 - 3p \\\\\n       & = 3 - p \\\\\nU_2(Y) & = 2p + 0(1 - p) \\\\\n       & = 2p\n\\end{align*}\n\\]\n\n\n\n\n\n\n\nBased on this, the conditions under which each player will use a mixed strategy are:\n\\[\n\\begin{align*}\nPlayer~1: && Player~2:&\\\\\n3 - q &= 4q & 3 - p &= 2p\\\\\n3 &= 5q & 3 &= 3p\\\\\nq &= 3/5 & p &= 1\n\\end{align*}\n\\]\n\n\nWe’ve never seen anything like \\(p = 1\\) in this context before…\nPlayer 2 will only mix if Player 1 only plays A\nThis usually occurs when one strategy weakly dominates another.\n\n\n\n\n\n\nMake sure that you’re setting up the equations used to solve for a player’s strategy correctly:\n\n\nDescribe when a player is indifferent between their pure strategies:\n\nif you’re trying to figure out when Player 1 is indifferent, you need to use Player 1’s payoffs.\n\nHowever, the probabilities will be based on the other player’s mixed strategy:\n\nin a game with mixed strategies, the randomness a player deals with is created by the other player—not themselves.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe can still approach this the same way that we have in the past:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\n\n\nSuppose in MSNE that Player 1 plays a (non-trivial) mixed strategy.\nThen Player 2 must also play a mixed strategy, in which q = 3/5.\n\nBut Player 2 will only mix if Player 1 plays p = 1, which is a trivial mixed strategy.\nThis is a contradiction, there is no MSNE where Player 1 plays a non-trivial mixed strategy\n\n\n\n\n\n\n\n\n\nApproach it the other way next:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\nSuppose Player 2 plays a non-trivial mixed strategy.\n\n\nThen Player 1 must play A as a pure strategy.\nPlayer 2 will play A if \\(3 - q \\geq 4q\\), i.e. if \\(3/5 \\geq q\\).\nThis lets Player 2 play a non-trivial mixed strategy! There is no contradiction here.\n\n\n\n\n\n\n\n\n\n\nThere are a range of MSNEs here: all strategy profiles \\((1, 0), (q, 1 - q)\\), in which \\(q \\in (0, 3/5]\\)\nThere are also two trivial MSNEs, \\((1, 0), (0, 1)\\) and \\((0, 1), (1, 0)\\), which are really just the pure-strategy Nash equilibria (A, Y) and (B, X) expressed in the form of an MSNE.\nIt will help to understand what’s going on with the Best Responses graph:\n\n\n\n\n\n\n\n\nCode\n# Create a data frame for plotting\ndata &lt;- data.frame(\n  q = c(0, 3/5, 3/5, 1),\n  BR1 = c(1, 1, 0, 0),\n  p = c(1, 0, 0, 0),\n  BR2 = c(0, 1, 1, 1)\n)\n\n# Plot the best response functions\nggplot(data) +\n  geom_step(aes(x = q, y = BR1, color = \"BR_1\"), direction = \"hv\", linewidth = 2, alpha = 0.9) +\n  geom_step(aes(x = BR2, y = p, color = \"BR_2\"), direction = \"vh\", linewidth = 2, alpha = 0.9) +\n  geom_segment(aes(x = 3/5, xend = 1, y = 0, yend = 0, color = \"MSNE\"), linewidth = 1.5, linetype = \"dotted\") +\n  geom_point(aes(x=0, y=1, color = \"PSNE\"), size = 2) +\n  geom_point(aes(x=1, y=0, color = \"PSNE\"), size = 2) +\n  labs(title = \"Best Response Functions for Mixed Strategy Nash Equilibrium\",\n       x = \"q\",\n       y = \"p\",\n       color = \"Best Response\") +\n  theme_minimal()"
   },
   {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#practice-your-understanding",
-    "href": "Slides/06MixedStrategies/0604-examples.html#practice-your-understanding",
-    "title": "More MSNE Examples",
+    "objectID": "Slides/06MixedStrategies/0604-examples.html#msne-in-prisoners-dilemma",
+    "href": "Slides/06MixedStrategies/0604-examples.html#msne-in-prisoners-dilemma",
+    "title": "Mixed-Strategy Examples",
     "section": "",
-    "text": "Consider the following game table. What are Player 1’s expected payoffs, given Player 2’s mixed strategy?\n\n\n\n\\(P_1\\), \\(P_2\\)\nUp \\((q)\\)\nDown \\((1 - q)\\)\n\n\n\n\nUp \\((p)\\)\n2, -2\n-3, 3\n\n\nDown \\((1 - p)\\)\n-5, 5\n1, -1\n\n\n\n\n\n\\(U_1(Up) = 2q -3(1-q) = 5q - 3\\),\n\\(U_1(Down) = -5q + 1(1-q) = -6q +1\\)"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#practice-your-understanding-1",
-    "href": "Slides/06MixedStrategies/0604-examples.html#practice-your-understanding-1",
-    "title": "More MSNE Examples",
-    "section": "",
-    "text": "Consider the following game table. What are Player 2’s expected payoffs, given Player 1’s mixed strategy?\n\n\n\n\\(P_1\\), \\(P_2\\)\nUp \\((q)\\)\nDown \\((1 - q)\\)\n\n\n\n\nUp \\((p)\\)\n2, -2\n-3, 3\n\n\nDown \\((1 - p)\\)\n-5, 5\n1, -1\n\n\n\n\n\n\\(U_2(Up) = -2p + 5(1-p) = -7p + 5\\),\n\\(U_2(Down) = 3p - 1(1-p) = 4p -1\\)"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#practice-your-understanding-2",
-    "href": "Slides/06MixedStrategies/0604-examples.html#practice-your-understanding-2",
-    "title": "More MSNE Examples",
-    "section": "",
-    "text": "The correct answers to the previous two questions were:\n\n\\(U_1(Up) = 5q - 3\\)\n$U_1(Down) = -6q + 1 $.\n\\(U_2(Up) = -7p + 5\\)\n\\(U_2(Down) = 4p - 1\\).\n\nBased on this, what are \\(p\\) and \\(q\\) in the MSNE of this game?\n\n\n\\(p^* = 6/11\\)\n\\(q^* = 4/11\\)"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game",
-    "href": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game",
-    "title": "More MSNE Examples",
-    "section": "",
-    "text": "Consider the following game table:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\nThe players’ expected payoffs are:\n\n\\[\n\\begin{align*}\nU_1(A) & = 2q + 3(1 - q) \\\\\n       & = 2q + 3 - 3q \\\\\n       & = 3 - q \\\\\nU_1(B) & = 4q + 0(1 - q) \\\\\n       & = 4q \\\\\nU_2(X) & = 2p + 3(1 - p) \\\\\n       & = 2p + 3 - 3p \\\\\n       & = 3 - p \\\\\nU_2(Y) & = 2p + 0(1 - p) \\\\\n       & = 2p\n\\end{align*}\n\\]"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-1",
-    "href": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-1",
-    "title": "More MSNE Examples",
-    "section": "",
-    "text": "Based on this, the conditions under which each player will use a mixed strategy are:\n\\[\n\\begin{align*}\nPlayer~1: && Player~2:&\\\\\n3 - q &= 4q & 3 - p &= 2p\\\\\n3 &= 5q & 3 &= 3p\\\\\nq &= 3/5 & p &= 1\n\\end{align*}\n\\]\n\n\nWe’ve never seen anything like \\(p = 1\\) in this context before…\nPlayer 2 will only mix if Player 1 only plays A\nThis usually occurs when one strategy weakly dominates another."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-3",
-    "href": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-3",
-    "title": "More MSNE Examples",
-    "section": "",
-    "text": "We can still approach this the same way that we have in the past:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\n\n\nSuppose in MSNE that Player 1 plays a (non-trivial) mixed strategy.\nThen Player 2 must also play a mixed strategy, in which q = 3/5.\n\nBut Player 2 will only mix if Player 1 plays p = 1, which is a trivial mixed strategy.\nThis is a contradiction, there is no MSNE where Player 1 plays a non-trivial mixed strategy"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-4",
-    "href": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-4",
-    "title": "More MSNE Examples",
-    "section": "",
-    "text": "Approach it the other way next:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\nSuppose Player 2 plays a non-trivial mixed strategy.\n\n\nThen Player 1 must play A as a pure strategy.\nPlayer 2 will play A if \\(3 - q \\geq 4q\\), i.e. if \\(3/5 \\geq q\\).\nThis lets Player 2 play a non-trivial mixed strategy! There is no contradiction here."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-5",
-    "href": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-5",
-    "title": "More MSNE Examples",
-    "section": "",
-    "text": "There are a range of MSNEs here: all strategy profiles \\((1, 0), (q, 1 - q)\\), in which \\(q \\in (0, 3/5]\\)\nThere are also two trivial MSNEs, \\((1, 0), (0, 1)\\) and \\((0, 1), (1, 0)\\), which are really just the pure-strategy Nash equilibria (A, Y) and (B, X) expressed in the form of an MSNE.\nIt will help to understand what’s going on with the Best Responses graph:"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-6",
-    "href": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-6",
-    "title": "More MSNE Examples",
-    "section": "",
-    "text": "Code\n# Create a data frame for plotting\ndata &lt;- data.frame(\n  q = c(0, 3/5, 3/5, 1),\n  BR1 = c(1, 1, 0, 0),\n  p = c(1, 0, 0, 0),\n  BR2 = c(0, 1, 1, 1)\n)\n\n# Plot the best response functions\nggplot(data) +\n  geom_step(aes(x = q, y = BR1, color = \"BR_1\"), direction = \"hv\", linewidth = 2, alpha = 0.9) +\n  geom_step(aes(x = BR2, y = p, color = \"BR_2\"), direction = \"vh\", linewidth = 2, alpha = 0.9) +\n  geom_segment(aes(x = 3/5, xend = 1, y = 0, yend = 0, color = \"MSNE\"), linewidth = 1.5, linetype = \"dotted\") +\n  geom_point(aes(x=0, y=1, color = \"PSNE\"), size = 2) +\n  geom_point(aes(x=1, y=0, color = \"PSNE\"), size = 2) +\n  labs(title = \"Best Response Functions for Mixed Strategy Nash Equilibrium\",\n       x = \"q\",\n       y = \"p\",\n       color = \"Best Response\") +\n  theme_minimal()"
+    "text": "Remember the Prisoners’ Dilemma?\n\n\n\nGuido, Luca\n\\(Testify~(q)\\)\n\\(Keep~Quiet~(1-q)\\)\n\n\n\n\n\\(Testify~(p)\\)\n\\(-10,-10\\)\n\\(0,-20\\)\n\n\n\\(Keep~Quiet~(1-p)\\)\n\\(-20,0\\)\n\\(-1,-1\\)\n\n\n\nWhat are Guido’s and Luca’s Expected Payoffs?\n\n\n\\(EU_G(Testify) = -10q + 0(1 - q) = -10q\\).\n\\(EU_G(Keep Quiet) = -20q + (-1)(1 - q) = -1 - 19q\\).\n\\(EU_L(Testify) = -10p + 0(1 - p) = -10p\\).\n\\(EU_L(Keep Quiet) = -20p + (-1)(1 - p) = -1 - 19p\\)."
   },
   {
     "objectID": "Slides/06MixedStrategies/0604-examples.html#absence-of-msnes",
     "href": "Slides/06MixedStrategies/0604-examples.html#absence-of-msnes",
-    "title": "More MSNE Examples",
+    "title": "Mixed-Strategy Examples",
     "section": "",
-    "text": "Let us return to the Prisoner’s Dilemma and check for MSNEs:\n\n\n\nGuido, Luca\n\\(Testify~(q)\\)\n\\(Keep~Quiet~(1-q)\\)\n\n\n\n\n\\(Testify~(p)\\)\n\\(-10,-10\\)\n\\(0,-20\\)\n\n\n\\(Keep~Quiet~(1-p)\\)\n\\(-20,0\\)\n\\(-1,-1\\)\n\n\n\nGuido and Luca’s expected payoffs are:\n\n\n\\(U_G(Testify) = -10q + 0(1 - q) = -10q\\).\n\\(U_G(Keep Quiet) = -20q + (-1)(1 - q) = -1 - 19q\\).\n\\(U_L(Testify) = -10p + 0(1 - p) = -10p\\).\n\\(U_L(Keep Quiet) = -20p + (-1)(1 - p) = -1 - 19p\\)."
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#absence-of-msnes-1",
-    "href": "Slides/06MixedStrategies/0604-examples.html#absence-of-msnes-1",
-    "title": "More MSNE Examples",
-    "section": "",
-    "text": "Guido will play a mixed strategy if:\n\\[\n\\begin{align*}\n-10q &= -1 - 19q\\\\\n9q &= -1\\\\\nq &= -1/9\n\\end{align*}\n\\]\n\n\nBut -1/9 is not a valid probability!\nWe could also note that if \\(q\\in [0, 1]\\):\n\n\\(-10q\\) is always greater than \\(-1 - 19q\\).\n\nIn other words, as we saw weeks ago, \\(Testify\\) strictly dominates \\(Keep~Quiet\\)…so why would Guido mix between the two of them?"
+    "text": "Guido will play a mixed strategy if:\n\\[\n\\begin{align*}\n-10q &= -1 - 19q\\\\\n9q &= -1\\\\\nq &= -1/9\n\\end{align*}\n\\]\n\n\nWhat’s wrong with this?\n-1/9 is not a valid probability!\nWe could also note that if \\(q\\in [0, 1]\\):\n\n\\(-10q\\) is always greater than \\(-1 - 19q\\).\n\nTestify strictly dominates Keep~Quiet\n\nNever rational to play a strictly dominated strategy"
   },
   {
     "objectID": "Slides/06MixedStrategies/0604-examples.html#getting-bad-probabilities",
     "href": "Slides/06MixedStrategies/0604-examples.html#getting-bad-probabilities",
-    "title": "More MSNE Examples",
+    "title": "Mixed-Strategy Examples",
     "section": "",
-    "text": "If you’ve solved for a player’s mixed strategy and you find that the probability is less than 0, or more than 1:\n\n\nIt means something is wrong. Probability can only be between 0 and 1 (inclusive).\nDouble-check your math—it could be an algebra error.\nBut if you’re confident in your math, this means that there is no way that the player would ever play a mixed strategy:\n\nin fact, they have a strictly dominated strategy."
+    "text": "If you’ve solved for a player’s mixed strategy and you find that the probability is less than 0, or more than 1:\n\n\nIt means something is wrong.\n\nProbability can only be between 0 and 1 (inclusive).\n\nDouble-check your math\n\nDid you make an algebra mistake?\n\nIf your math is correct, this means that there is no way that the player would ever play a mixed strategy:\n\nin fact, they have a strictly dominated strategy."
   },
   {
     "objectID": "Slides/06MixedStrategies/0604-examples.html#mixed-strategies-in-the-deer-hunt",
     "href": "Slides/06MixedStrategies/0604-examples.html#mixed-strategies-in-the-deer-hunt",
-    "title": "More MSNE Examples",
+    "title": "Mixed-Strategy Examples",
     "section": "",
     "text": "Consider the Deer Hunt:\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n\\(2, 2\\)\n\\(0, 1\\)\n\n\nRabbit\n\\(1, 0\\)\n\\(1, 1\\)\n\n\n\nSuppose that Igg hunts Deer 3/4 of the time, and Rabbit 1/4 of the time.\n\n\nIf Ogg always hunts deer; what is Ogg’s expected payoff?\n\nOgg’s expected payoff from playing Deer will be \\(0.75(2) + 0.25(0) = 1.5\\)."
   },
   {
     "objectID": "Slides/06MixedStrategies/0604-examples.html#mixed-strategies-in-the-deer-hunt-generalizing",
     "href": "Slides/06MixedStrategies/0604-examples.html#mixed-strategies-in-the-deer-hunt-generalizing",
-    "title": "More MSNE Examples",
+    "title": "Mixed-Strategy Examples",
     "section": "",
     "text": "We can generalize this approach to calculate Ogg’s expected payoffs from any strategy that Igg chooses to play:\n\n\nSuppose Igg plays Deer with prob p, and Rabbit with prob 1 - p.\nOgg’s expected payoff from Deer is:\n\n\\(2(p) + 0(1 - p) = 2p\\),\n\nand from Rabbit:\n\n\\(1(p) + 1(1 - p) = 1\\).\n\nOgg’s expected payoff from Deer gets larger with p:\n\nmore likely Igg is to hunt Deer, more attractive Deer becomes to Ogg."
   },
   {
     "objectID": "Slides/06MixedStrategies/0604-examples.html#msne-in-the-deer-hunt",
     "href": "Slides/06MixedStrategies/0604-examples.html#msne-in-the-deer-hunt",
-    "title": "More MSNE Examples",
+    "title": "Mixed-Strategy Examples",
     "section": "",
     "text": "We already saw that Ogg’s expected payoffs from Deer and Rabbit are \\(2p\\) and \\(1\\), respectively,\nso Ogg would only play a mixed strategy if \\(p = \\frac{1}{2}\\).\n\n\nLikewise, Igg’s expected payoffs are \\(2q\\) and \\(1\\), and Igg will play a mixed strategy if \\(q = \\frac{1}{2}\\).\nThe MSNE in this game can be written as: \\(\\{(1/2~Deer, 1/2~Rabbit)_{Ogg}, \\ (1/2~Deer, 1/2~Rabbit)_{Igg}\\}\\)."
   },
   {
+    "objectID": "Slides/06MixedStrategies/0604-examples.html#practice-your-understanding",
+    "href": "Slides/06MixedStrategies/0604-examples.html#practice-your-understanding",
+    "title": "Mixed-Strategy Examples",
+    "section": "",
+    "text": "Consider the following game table. What are Player 1’s expected payoffs, given Player 2’s mixed strategy?\n\n\n\n\\(P_1\\), \\(P_2\\)\nUp \\((q)\\)\nDown \\((1 - q)\\)\n\n\n\n\nUp \\((p)\\)\n2, -2\n-3, 3\n\n\nDown \\((1 - p)\\)\n-5, 5\n1, -1\n\n\n\n\n\n\\(U_1(Up) = 2q -3(1-q) = 5q - 3\\),\n\\(U_1(Down) = -5q + 1(1-q) = -6q +1\\)"
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/0604-examples.html#practice-your-understanding-1",
+    "href": "Slides/06MixedStrategies/0604-examples.html#practice-your-understanding-1",
+    "title": "Mixed-Strategy Examples",
+    "section": "",
+    "text": "Consider the following game table. What are Player 2’s expected payoffs, given Player 1’s mixed strategy?\n\n\n\n\\(P_1\\), \\(P_2\\)\nUp \\((q)\\)\nDown \\((1 - q)\\)\n\n\n\n\nUp \\((p)\\)\n2, -2\n-3, 3\n\n\nDown \\((1 - p)\\)\n-5, 5\n1, -1\n\n\n\n\n\n\\(U_2(Up) = -2p + 5(1-p) = -7p + 5\\),\n\\(U_2(Down) = 3p - 1(1-p) = 4p -1\\)"
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/0604-examples.html#practice-your-understanding-2",
+    "href": "Slides/06MixedStrategies/0604-examples.html#practice-your-understanding-2",
+    "title": "Mixed-Strategy Examples",
+    "section": "",
+    "text": "The correct answers to the previous two questions were:\n\n\\(U_1(Up) = 5q - 3\\)\n\\(U_1(Down) = -6q + 1\\).\n\\(U_2(Up) = -7p + 5\\)\n\\(U_2(Down) = 4p - 1\\).\n\nBased on this, what are \\(p\\) and \\(q\\) in the MSNE of this game?\n\n\n\\(p^* = 6/11\\)\n\\(q^* = 4/11\\)"
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game",
+    "href": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game",
+    "title": "Mixed-Strategy Examples",
+    "section": "",
+    "text": "Consider the following game table:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\nThe players’ expected payoffs are:\n\n\\[\n\\begin{align*}\nU_1(A) & = 2q + 3(1 - q) \\\\\n       & = 2q + 3 - 3q \\\\\n       & = 3 - q \\\\\nU_1(B) & = 4q + 0(1 - q) \\\\\n       & = 4q \\\\\nU_2(X) & = 2p + 3(1 - p) \\\\\n       & = 2p + 3 - 3p \\\\\n       & = 3 - p \\\\\nU_2(Y) & = 2p + 0(1 - p) \\\\\n       & = 2p\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-1",
+    "href": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-1",
+    "title": "Mixed-Strategy Examples",
+    "section": "",
+    "text": "Based on this, the conditions under which each player will use a mixed strategy are:\n\\[\n\\begin{align*}\nPlayer~1: && Player~2:&\\\\\n3 - q &= 4q & 3 - p &= 2p\\\\\n3 &= 5q & 3 &= 3p\\\\\nq &= 3/5 & p &= 1\n\\end{align*}\n\\]\n\n\nWe’ve never seen anything like \\(p = 1\\) in this context before…\nPlayer 2 will only mix if Player 1 only plays A\nThis usually occurs when one strategy weakly dominates another."
+  },
+  {
     "objectID": "Slides/06MixedStrategies/0604-examples.html#error-checking",
     "href": "Slides/06MixedStrategies/0604-examples.html#error-checking",
-    "title": "More MSNE Examples",
+    "title": "Mixed-Strategy Examples",
     "section": "",
     "text": "Make sure that you’re setting up the equations used to solve for a player’s strategy correctly:\n\n\nDescribe when a player is indifferent between their pure strategies:\n\nif you’re trying to figure out when Player 1 is indifferent, you need to use Player 1’s payoffs.\n\nHowever, the probabilities will be based on the other player’s mixed strategy:\n\nin a game with mixed strategies, the randomness a player deals with is created by the other player—not themselves."
   },
   {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#another-example-police-patrol-and-drug-trade",
-    "href": "Slides/06MixedStrategies/0604-examples.html#another-example-police-patrol-and-drug-trade",
-    "title": "More MSNE Examples",
+    "objectID": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-3",
+    "href": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-3",
+    "title": "Mixed-Strategy Examples",
     "section": "",
-    "text": "Police, Dealer\nStreets (d)\nPark (1 - d)\n\n\n\n\nStreets (p)\n80, 20\n0,100\n\n\nPark (1 - p)\n10, 90\n60,40\n\n\n\n1\n\n\n\n\nPolice Officer’s expected utility:\n\n\\(U_P(Streets) = 80d + 0(1-d)\\)\n\n\\(= 80d\\)\n\n\\(U_P(Park) = 10d + 60(1-d)\\)\n\n\\(= 60 - 50d\\).\n\n\n\n\n\n\n\nDrug Dealer’s expected utility:\n\n\\(U_D(Streets) = 20p + 90(1-p)\\)\n\n\\(= 90 - 70p\\)\n\n\\(U_D(Park) = 100p + 40(1-p)\\)\n\n\\(= 40 + 60p\\)."
+    "text": "We can still approach this the same way that we have in the past:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\n\n\nSuppose in MSNE that Player 1 plays a (non-trivial) mixed strategy.\nThen Player 2 must also play a mixed strategy, in which q = 3/5.\n\nBut Player 2 will only mix if Player 1 plays p = 1, which is a trivial mixed strategy.\nThis is a contradiction, there is no MSNE where Player 1 plays a non-trivial mixed strategy"
   },
   {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#msne-in-patrol-and-trade-game",
-    "href": "Slides/06MixedStrategies/0604-examples.html#msne-in-patrol-and-trade-game",
-    "title": "More MSNE Examples",
+    "objectID": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-4",
+    "href": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-4",
+    "title": "Mixed-Strategy Examples",
     "section": "",
-    "text": "When is the Police Officer indifferent between Park and Streets?\nWhen is the Drug Dealer indifferent between Park and Streets?"
+    "text": "Approach it the other way next:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\nSuppose Player 2 plays a non-trivial mixed strategy.\n\n\nThen Player 1 must play A as a pure strategy.\nPlayer 2 will play A if \\(3 - q \\geq 4q\\), i.e. if \\(3/5 \\geq q\\).\nThis lets Player 2 play a non-trivial mixed strategy! There is no contradiction here."
   },
   {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#graph-best-response-functions",
-    "href": "Slides/06MixedStrategies/0604-examples.html#graph-best-response-functions",
-    "title": "More MSNE Examples",
+    "objectID": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-5",
+    "href": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-5",
+    "title": "Mixed-Strategy Examples",
     "section": "",
-    "text": "Code\nlibrary(tidyverse)\nlibrary(latex2exp)\n\ndata &lt;- tibble(\n  d = c(0, 6/13, 6/13, 1),\n  PR = c(0, 0, 1, 1),\n  p = c(1, 5/13, 5/13, 0),\n  DR = c(0, 0, 1, 1),\n)\n\n# Plot the best response functions\nggplot(data) +\n  geom_hline(yintercept = 5/13, linetype = \"dashed\", color = \"grey50\") +\n  geom_vline(xintercept = 6/13, linetype = \"dashed\", color = \"grey50\") +\n  geom_step(aes(x = d, y = PR, color = \"Police Officer's Best Response\"), direction = \"hv\", linewidth = 2) +\n  geom_step(aes(x = DR, y = p, color = \"Drug Dealer's Best Response\"), direction = \"hv\", linewidth = 2) +\n  geom_point(data = tibble(d = 6/13, p = 5/13), aes(x=d, y=p, color = \"MSNE\"), size = 3) +\n  annotate(\"text\", y = 5/13, x = 0, label = TeX(\"$p^* = 5/13$\"), hjust = -0.1, vjust = 2, color = \"grey50\") +\n  annotate(\"text\", x = 6/13, y = 0, label = TeX(\"$d^* = 6/13$\"), hjust = -0.2, vjust = 1, color = \"grey50\") +\n  labs(title = \"Best Response Functions for Mixed Strategy Nash Equilibrium\",\n       x = \"Drug Dealer's Probability (d)\",\n       y = \"Police Officer's Probability (p)\",\n       color = \"Best Response\") +\n  theme_minimal()"
+    "text": "There are a range of MSNEs here: all strategy profiles \\((1, 0), (q, 1 - q)\\), in which \\(q \\in (0, 3/5]\\)\nThere are also two trivial MSNEs, \\((1, 0), (0, 1)\\) and \\((0, 1), (1, 0)\\), which are really just the pure-strategy Nash equilibria (A, Y) and (B, X) expressed in the form of an MSNE.\nIt will help to understand what’s going on with the Best Responses graph:"
   },
   {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#msne-in-patrol-and-trade-game-1",
-    "href": "Slides/06MixedStrategies/0604-examples.html#msne-in-patrol-and-trade-game-1",
-    "title": "More MSNE Examples",
+    "objectID": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-6",
+    "href": "Slides/06MixedStrategies/0604-examples.html#multiple-msne-in-one-game-6",
+    "title": "Mixed-Strategy Examples",
     "section": "",
-    "text": "Note that the players’ asymmetric preferences result in an interior solution.\nNotice that it isn’t a 50:50, it is more likely that both meet in the Park than it is likely that they both meet in the Streets"
-  },
-  {
-    "objectID": "Slides/06MixedStrategies/0604-examples.html#footnotes",
-    "href": "Slides/06MixedStrategies/0604-examples.html#footnotes",
-    "title": "More MSNE Examples",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nHarrington, pg. 226↩︎"
+    "text": "Code\n# Create a data frame for plotting\ndata &lt;- data.frame(\n  q = c(0, 3/5, 3/5, 1),\n  BR1 = c(1, 1, 0, 0),\n  p = c(1, 0, 0, 0),\n  BR2 = c(0, 1, 1, 1)\n)\n\n# Plot the best response functions\nggplot(data) +\n  geom_step(aes(x = q, y = BR1, color = \"BR_1\"), direction = \"hv\", linewidth = 2, alpha = 0.9) +\n  geom_step(aes(x = BR2, y = p, color = \"BR_2\"), direction = \"vh\", linewidth = 2, alpha = 0.9) +\n  geom_segment(aes(x = 3/5, xend = 1, y = 0, yend = 0, color = \"MSNE\"), linewidth = 1.5, linetype = \"dotted\") +\n  geom_point(aes(x=0, y=1, color = \"PSNE\"), size = 2) +\n  geom_point(aes(x=1, y=0, color = \"PSNE\"), size = 2) +\n  labs(title = \"Best Response Functions for Mixed Strategy Nash Equilibrium\",\n       x = \"q\",\n       y = \"p\",\n       color = \"Best Response\") +\n  theme_minimal()"
   },
   {
     "objectID": "Slides/06MixedStrategies/0601-uncertainty.html",
@@ -6659,6 +6624,125 @@
     "text": "Solving for 3-strategy MSNE\nStep 4: Check Cases for possible Nash Equilibria:\nCase 4: Player 2 mixes between Left, Center, and Right\nThen we know that \\(EU_2(\\text{Center}) = EU_2(\\text{Right}) = EU_2(Left)\\)\n\\[ \\Rightarrow t = m = b\\]\n\\[ \\Rightarrow \\ell = 3c = r\\]\nAnd because probabilities must sum to one:\n\\[\n\\begin{align}\n3c + c + 3c & = 1 \\\\\n\\Rightarrow 7c & = 1 \\\\\nc & = 1/7\n\\end{align}\n\\]\n\\(\\{ \\sigma_1 = (t = 1/3, m = 1/3, b = 1/3),\\) \\(\\sigma_2 = (\\ell = 3/7, c = 1/7, r = 3/7) \\}\\) is an MSNE"
   },
   {
+    "objectID": "Slides/06MixedStrategies/06-main.html#msne-in-prisoners-dilemma",
+    "href": "Slides/06MixedStrategies/06-main.html#msne-in-prisoners-dilemma",
+    "title": "Introduction to Game Theory",
+    "section": "MSNE in Prisoners’ Dilemma?",
+    "text": "MSNE in Prisoners’ Dilemma?\nRemember the Prisoners’ Dilemma?\n\n\n\nGuido, Luca\n\\(Testify~(q)\\)\n\\(Keep~Quiet~(1-q)\\)\n\n\n\n\n\\(Testify~(p)\\)\n\\(-10,-10\\)\n\\(0,-20\\)\n\n\n\\(Keep~Quiet~(1-p)\\)\n\\(-20,0\\)\n\\(-1,-1\\)\n\n\n\nWhat are Guido’s and Luca’s Expected Payoffs?\n\n\\(EU_G(Testify) = -10q + 0(1 - q) = -10q\\).\n\\(EU_G(Keep Quiet) = -20q + (-1)(1 - q) = -1 - 19q\\).\n\\(EU_L(Testify) = -10p + 0(1 - p) = -10p\\).\n\\(EU_L(Keep Quiet) = -20p + (-1)(1 - p) = -1 - 19p\\)."
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#absence-of-msnes",
+    "href": "Slides/06MixedStrategies/06-main.html#absence-of-msnes",
+    "title": "Introduction to Game Theory",
+    "section": "Absence of MSNEs",
+    "text": "Absence of MSNEs\nGuido will play a mixed strategy if:\n\\[\n\\begin{align*}\n-10q &= -1 - 19q\\\\\n9q &= -1\\\\\nq &= -1/9\n\\end{align*}\n\\]\n\nWhat’s wrong with this?\n-1/9 is not a valid probability!\nWe could also note that if \\(q\\in [0, 1]\\):\n\n\\(-10q\\) is always greater than \\(-1 - 19q\\).\n\nTestify strictly dominates Keep~Quiet\n\nNever rational to play a strictly dominated strategy"
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#getting-bad-probabilities",
+    "href": "Slides/06MixedStrategies/06-main.html#getting-bad-probabilities",
+    "title": "Introduction to Game Theory",
+    "section": "Getting Bad Probabilities",
+    "text": "Getting Bad Probabilities\nIf you’ve solved for a player’s mixed strategy and you find that the probability is less than 0, or more than 1:\n\nIt means something is wrong.\n\nProbability can only be between 0 and 1 (inclusive).\n\nDouble-check your math\n\nDid you make an algebra mistake?\n\nIf your math is correct, this means that there is no way that the player would ever play a mixed strategy:\n\nin fact, they have a strictly dominated strategy."
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#mixed-strategies-in-the-deer-hunt",
+    "href": "Slides/06MixedStrategies/06-main.html#mixed-strategies-in-the-deer-hunt",
+    "title": "Introduction to Game Theory",
+    "section": "Mixed Strategies in the Deer Hunt",
+    "text": "Mixed Strategies in the Deer Hunt\nConsider the Deer Hunt:\n\n\n\nIgg, Ogg\nDeer\nRabbit\n\n\n\n\nDeer\n\\(2, 2\\)\n\\(0, 1\\)\n\n\nRabbit\n\\(1, 0\\)\n\\(1, 1\\)\n\n\n\nSuppose that Igg hunts Deer 3/4 of the time, and Rabbit 1/4 of the time.\n\nIf Ogg always hunts deer; what is Ogg’s expected payoff?\n\nOgg’s expected payoff from playing Deer will be \\(0.75(2) + 0.25(0) = 1.5\\)."
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#mixed-strategies-in-the-deer-hunt-generalizing",
+    "href": "Slides/06MixedStrategies/06-main.html#mixed-strategies-in-the-deer-hunt-generalizing",
+    "title": "Introduction to Game Theory",
+    "section": "Mixed Strategies in the Deer Hunt: Generalizing",
+    "text": "Mixed Strategies in the Deer Hunt: Generalizing\nWe can generalize this approach to calculate Ogg’s expected payoffs from any strategy that Igg chooses to play:\n\nSuppose Igg plays Deer with prob p, and Rabbit with prob 1 - p.\nOgg’s expected payoff from Deer is:\n\n\\(2(p) + 0(1 - p) = 2p\\),\n\nand from Rabbit:\n\n\\(1(p) + 1(1 - p) = 1\\).\n\nOgg’s expected payoff from Deer gets larger with p:\n\nmore likely Igg is to hunt Deer, more attractive Deer becomes to Ogg."
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#msne-in-the-deer-hunt",
+    "href": "Slides/06MixedStrategies/06-main.html#msne-in-the-deer-hunt",
+    "title": "Introduction to Game Theory",
+    "section": "MSNE in the Deer Hunt",
+    "text": "MSNE in the Deer Hunt\nWe already saw that Ogg’s expected payoffs from Deer and Rabbit are \\(2p\\) and \\(1\\), respectively,\nso Ogg would only play a mixed strategy if \\(p = \\frac{1}{2}\\).\n\nLikewise, Igg’s expected payoffs are \\(2q\\) and \\(1\\), and Igg will play a mixed strategy if \\(q = \\frac{1}{2}\\).\nThe MSNE in this game can be written as: \\(\\{(1/2~Deer, 1/2~Rabbit)_{Ogg}, \\ (1/2~Deer, 1/2~Rabbit)_{Igg}\\}\\)."
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#practice-your-understanding",
+    "href": "Slides/06MixedStrategies/06-main.html#practice-your-understanding",
+    "title": "Introduction to Game Theory",
+    "section": "Practice your understanding",
+    "text": "Practice your understanding\nConsider the following game table. What are Player 1’s expected payoffs, given Player 2’s mixed strategy?\n\n\n\n\\(P_1\\), \\(P_2\\)\nUp \\((q)\\)\nDown \\((1 - q)\\)\n\n\n\n\nUp \\((p)\\)\n2, -2\n-3, 3\n\n\nDown \\((1 - p)\\)\n-5, 5\n1, -1\n\n\n\n\n\\(U_1(Up) = 2q -3(1-q) = 5q - 3\\),\n\\(U_1(Down) = -5q + 1(1-q) = -6q +1\\)"
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#practice-your-understanding-1",
+    "href": "Slides/06MixedStrategies/06-main.html#practice-your-understanding-1",
+    "title": "Introduction to Game Theory",
+    "section": "Practice your understanding",
+    "text": "Practice your understanding\nConsider the following game table. What are Player 2’s expected payoffs, given Player 1’s mixed strategy?\n\n\n\n\\(P_1\\), \\(P_2\\)\nUp \\((q)\\)\nDown \\((1 - q)\\)\n\n\n\n\nUp \\((p)\\)\n2, -2\n-3, 3\n\n\nDown \\((1 - p)\\)\n-5, 5\n1, -1\n\n\n\n\n\\(U_2(Up) = -2p + 5(1-p) = -7p + 5\\),\n\\(U_2(Down) = 3p - 1(1-p) = 4p -1\\)"
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#practice-your-understanding-2",
+    "href": "Slides/06MixedStrategies/06-main.html#practice-your-understanding-2",
+    "title": "Introduction to Game Theory",
+    "section": "Practice your understanding",
+    "text": "Practice your understanding\nThe correct answers to the previous two questions were:\n\n\\(U_1(Up) = 5q - 3\\)\n\\(U_1(Down) = -6q + 1\\).\n\\(U_2(Up) = -7p + 5\\)\n\\(U_2(Down) = 4p - 1\\).\n\nBased on this, what are \\(p\\) and \\(q\\) in the MSNE of this game?\n\n\\(p^* = 6/11\\)\n\\(q^* = 4/11\\)"
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game",
+    "href": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game",
+    "title": "Introduction to Game Theory",
+    "section": "Multiple MSNE in one game",
+    "text": "Multiple MSNE in one game\nConsider the following game table:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\nThe players’ expected payoffs are:\n\\[\n\\begin{align*}\nU_1(A) & = 2q + 3(1 - q) \\\\\n       & = 2q + 3 - 3q \\\\\n       & = 3 - q \\\\\nU_1(B) & = 4q + 0(1 - q) \\\\\n       & = 4q \\\\\nU_2(X) & = 2p + 3(1 - p) \\\\\n       & = 2p + 3 - 3p \\\\\n       & = 3 - p \\\\\nU_2(Y) & = 2p + 0(1 - p) \\\\\n       & = 2p\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game-1",
+    "href": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game-1",
+    "title": "Introduction to Game Theory",
+    "section": "Multiple MSNE in one game",
+    "text": "Multiple MSNE in one game\nBased on this, the conditions under which each player will use a mixed strategy are:\n\\[\n\\begin{align*}\nPlayer~1: && Player~2:&\\\\\n3 - q &= 4q & 3 - p &= 2p\\\\\n3 &= 5q & 3 &= 3p\\\\\nq &= 3/5 & p &= 1\n\\end{align*}\n\\]\n\nWe’ve never seen anything like \\(p = 1\\) in this context before…\nPlayer 2 will only mix if Player 1 only plays A\nThis usually occurs when one strategy weakly dominates another."
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#error-checking",
+    "href": "Slides/06MixedStrategies/06-main.html#error-checking",
+    "title": "Introduction to Game Theory",
+    "section": "Error-Checking",
+    "text": "Error-Checking\nMake sure that you’re setting up the equations used to solve for a player’s strategy correctly:\n\nDescribe when a player is indifferent between their pure strategies:\n\nif you’re trying to figure out when Player 1 is indifferent, you need to use Player 1’s payoffs.\n\nHowever, the probabilities will be based on the other player’s mixed strategy:\n\nin a game with mixed strategies, the randomness a player deals with is created by the other player—not themselves."
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game-2",
+    "href": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game-2",
+    "title": "Introduction to Game Theory",
+    "section": "Multiple MSNE in one game",
+    "text": "Multiple MSNE in one game"
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game-3",
+    "href": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game-3",
+    "title": "Introduction to Game Theory",
+    "section": "Multiple MSNE in one game",
+    "text": "Multiple MSNE in one game\nWe can still approach this the same way that we have in the past:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\n\nSuppose in MSNE that Player 1 plays a (non-trivial) mixed strategy.\nThen Player 2 must also play a mixed strategy, in which q = 3/5.\n\nBut Player 2 will only mix if Player 1 plays p = 1, which is a trivial mixed strategy.\nThis is a contradiction, there is no MSNE where Player 1 plays a non-trivial mixed strategy"
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game-4",
+    "href": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game-4",
+    "title": "Introduction to Game Theory",
+    "section": "Multiple MSNE in one game",
+    "text": "Multiple MSNE in one game\nApproach it the other way next:\n\n\n\n\n\n\\(P_1\\), \\(P_2\\)\n\\(X~(q)\\)\n\\(Y~(1 - q)\\)\n\n\n\n\n\\(A~(p)\\)\n2, 2\n3, 2\n\n\n\\(B~(1 - p)\\)\n4, 3\n0, 0\n\n\n\n\nSuppose Player 2 plays a non-trivial mixed strategy.\n\nThen Player 1 must play A as a pure strategy.\nPlayer 2 will play A if \\(3 - q \\geq 4q\\), i.e. if \\(3/5 \\geq q\\).\nThis lets Player 2 play a non-trivial mixed strategy! There is no contradiction here."
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game-5",
+    "href": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game-5",
+    "title": "Introduction to Game Theory",
+    "section": "Multiple MSNE in one game",
+    "text": "Multiple MSNE in one game\n\nThere are a range of MSNEs here: all strategy profiles \\((1, 0), (q, 1 - q)\\), in which \\(q \\in (0, 3/5]\\)\nThere are also two trivial MSNEs, \\((1, 0), (0, 1)\\) and \\((0, 1), (1, 0)\\), which are really just the pure-strategy Nash equilibria (A, Y) and (B, X) expressed in the form of an MSNE.\nIt will help to understand what’s going on with the Best Responses graph:"
+  },
+  {
+    "objectID": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game-6",
+    "href": "Slides/06MixedStrategies/06-main.html#multiple-msne-in-one-game-6",
+    "title": "Introduction to Game Theory",
+    "section": "Multiple MSNE in one game",
+    "text": "Multiple MSNE in one game"
+  },
+  {
     "objectID": "Slides/06MixedStrategies/06-main.html#mixed-strategies-in-penalty-kicks",
     "href": "Slides/06MixedStrategies/06-main.html#mixed-strategies-in-penalty-kicks",
     "title": "Introduction to Game Theory",
@@ -6922,7 +7006,7 @@
     "href": "Slides/06MixedStrategies/0601-mixing.html#graph-everts-best-response-rule-to-q",
     "title": "Responding to Chance",
     "section": "Graph Evert’s Best Response Rule to q",
-    "text": "Graph Evert’s Best Response Rule to q\nEvert chooses a \\(p\\) in response to Navratilova’s \\(q\\):\n\n\nCode\ndata &lt;- tibble(\n  p = c(0, 0.7, 0.7, 1),\n  NR = c(0, 0, 1, 1),\n  q = c(0, 0.6, 0.6, 1),\n  ER = c(0, 0, 1, 1)\n)\n\n# Plot the best response functions\nggplot(data) +\n  geom_vline(xintercept = 0.6, linetype = \"dashed\", color = \"grey50\") +\n  # geom_vline(xintercept = 0.7, linetype = \"dashed\", color = \"grey50\") +\n  # geom_step(aes(x = p, y = NR, color = \"purple\"), direction = \"hv\", linewidth = 2) +\n  geom_step(aes(x = q, y = ER), color = \"orange\", direction = \"hv\", linewidth = 2) +\n  # geom_point(data = tibble(d = 6/13, p = 5/13), aes(x=d, y=p, color = \"MSNE\"), size = 3) +\n  annotate(\"text\", x = 0.6, y = 0, label = TeX(\"$q^* = 0.6$\"), hjust = -0.1, vjust = 2, color = \"grey50\") +\n  # annotate(\"text\", x = 0.7, y = 0, label = TeX(\"$p^* = 0.7$\"), hjust = -0.2, vjust = 1, color = \"grey50\") +\n  labs(# title = \"Best Response Functions for Mixed Strategy Nash Equilibrium\",\n       y = \"Evert's DL Probability (p)\",\n       x = \"Navratilova's DL Probability (q)\",\n       color = \"Best Response\") +\n  theme_minimal()"
+    "text": "Graph Evert’s Best Response Rule to q\nEvert chooses a \\(p\\) in response to Navratilova’s \\(q\\):\n\n\nCode\ndata &lt;- tibble(\n  p = c(0, 0.7, 0.7, 1),\n  NR = c(0, 0, 1, 1),\n  q = c(0, 0.6, 0.6, 1),\n  ER = c(1, 1, 0, 0)\n)\n\n# Plot the best response functions\nggplot(data) +\n  geom_vline(xintercept = 0.6, linetype = \"dashed\", color = \"grey50\") +\n  # geom_vline(xintercept = 0.7, linetype = \"dashed\", color = \"grey50\") +\n  # geom_step(aes(x = p, y = NR, color = \"purple\"), direction = \"hv\", linewidth = 2) +\n  geom_step(aes(x = q, y = ER), color = \"orange\", direction = \"hv\", linewidth = 2) +\n  # geom_point(data = tibble(d = 6/13, p = 5/13), aes(x=d, y=p, color = \"MSNE\"), size = 3) +\n  annotate(\"text\", x = 0.6, y = 0, label = TeX(\"$q^* = 0.6$\"), hjust = -0.1, vjust = 2, color = \"grey50\") +\n  # annotate(\"text\", x = 0.7, y = 0, label = TeX(\"$p^* = 0.7$\"), hjust = -0.2, vjust = 1, color = \"grey50\") +\n  labs(# title = \"Best Response Functions for Mixed Strategy Nash Equilibrium\",\n       y = \"Evert's DL Probability (p)\",\n       x = \"Navratilova's DL Probability (q)\",\n       color = \"Best Response\") +\n  theme_minimal()"
   },
   {
     "objectID": "Slides/06MixedStrategies/0601-mixing.html#graph-intersection-of-best-response-rules",

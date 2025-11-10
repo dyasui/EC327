@@ -589,8 +589,8 @@ window.Quarto = {
 
 
 
-<section id="more-msne-examples" class="level1">
-<h1>More MSNE Examples</h1>
+<section id="mixed-strategy-examples" class="level1">
+<h1>Mixed-Strategy Examples</h1>
 <div class="cell">
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
@@ -605,6 +605,157 @@ window.Quarto = {
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
 </div>
+<section id="msne-in-prisoners-dilemma" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="msne-in-prisoners-dilemma">MSNE in Prisoners’ Dilemma?</h2>
+<p>Remember the Prisoners’ Dilemma?</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Guido, Luca</th>
+<th><span class="math inline">\(Testify~(q)\)</span></th>
+<th><span class="math inline">\(Keep~Quiet~(1-q)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(Testify~(p)\)</span></td>
+<td><span class="math inline">\(-10,-10\)</span></td>
+<td><span class="math inline">\(0,-20\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(Keep~Quiet~(1-p)\)</span></td>
+<td><span class="math inline">\(-20,0\)</span></td>
+<td><span class="math inline">\(-1,-1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>What are Guido’s and Luca’s <span class="hi">Expected Payoffs</span>?</p>
+<div class="incremental">
+<ul class="incremental">
+<li><span class="math inline">\(EU_G(Testify) = -10q + 0(1 - q) = -10q\)</span>.</li>
+<li><span class="math inline">\(EU_G(Keep Quiet) = -20q + (-1)(1 - q) = -1 - 19q\)</span>.</li>
+<li><span class="math inline">\(EU_L(Testify) = -10p + 0(1 - p) = -10p\)</span>.</li>
+<li><span class="math inline">\(EU_L(Keep Quiet) = -20p + (-1)(1 - p) = -1 - 19p\)</span>.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="absence-of-msnes" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="absence-of-msnes">Absence of MSNEs</h2>
+<p>Guido will play a mixed strategy if:</p>
+<p><span class="math display">\[
+\begin{align*}
+-10q &amp;= -1 - 19q\\
+9q &amp;= -1\\
+q &amp;= -1/9
+\end{align*}
+\]</span></p>
+<div class="incremental">
+<ul class="incremental">
+<li>What’s wrong with this?</li>
+<li>-1/9 is <strong>not a valid probability!</strong></li>
+<li>We could also note that if <span class="math inline">\(q\in [0, 1]\)</span>:
+<ul class="incremental">
+<li><span class="math inline">\(-10q\)</span> is always greater than <span class="math inline">\(-1 - 19q\)</span>.</li>
+</ul></li>
+<li><strong>Testify</strong> strictly dominates <strong>Keep~Quiet</strong>
+<ul class="incremental">
+<li><em>Never</em> rational to play a strictly dominated strategy</li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="getting-bad-probabilities" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="getting-bad-probabilities">Getting Bad Probabilities</h2>
+<p>If you’ve solved for a player’s mixed strategy and you find that the probability is <strong>less than 0</strong>, or <strong>more than 1</strong>:</p>
+<div class="incremental">
+<ul class="incremental">
+<li><strong>It means something is wrong.</strong>
+<ul class="incremental">
+<li>Probability can only be between 0 and 1 (inclusive).</li>
+</ul></li>
+<li>Double-check your math
+<ul class="incremental">
+<li>Did you make an algebra mistake?</li>
+</ul></li>
+<li>If your math is correct, this means that there is <strong>no way that the player would ever play a mixed strategy</strong>:
+<ul class="incremental">
+<li>in fact, they have a strictly dominated strategy.</li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="mixed-strategies-in-the-deer-hunt" class="level2">
+<h2 class="anchored" data-anchor-id="mixed-strategies-in-the-deer-hunt">Mixed Strategies in the Deer Hunt</h2>
+<p>Consider the Deer Hunt:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Igg, Ogg</th>
+<th>Deer</th>
+<th>Rabbit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Deer</td>
+<td><span class="math inline">\(2, 2\)</span></td>
+<td><span class="math inline">\(0, 1\)</span></td>
+</tr>
+<tr class="even">
+<td>Rabbit</td>
+<td><span class="math inline">\(1, 0\)</span></td>
+<td><span class="math inline">\(1, 1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Suppose that Igg hunts Deer 3/4 of the time, and Rabbit 1/4 of the time.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>If Ogg <em>always hunts deer</em>; what is Ogg’s <em>expected payoff</em>?
+<ul class="incremental">
+<li>Ogg’s expected payoff from playing Deer will be <span class="math inline">\(0.75(2) + 0.25(0) = 1.5\)</span>.</li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="mixed-strategies-in-the-deer-hunt-generalizing" class="level2">
+<h2 class="anchored" data-anchor-id="mixed-strategies-in-the-deer-hunt-generalizing">Mixed Strategies in the Deer Hunt: Generalizing</h2>
+<p>We can generalize this approach to calculate Ogg’s expected payoffs from any strategy that Igg chooses to play:</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Suppose Igg plays Deer with prob p, and Rabbit with prob 1 - p.</li>
+<li>Ogg’s expected payoff from Deer is:
+<ul class="incremental">
+<li><span class="math inline">\(2(p) + 0(1 - p) = 2p\)</span>,</li>
+</ul></li>
+<li>and from Rabbit:
+<ul class="incremental">
+<li><span class="math inline">\(1(p) + 1(1 - p) = 1\)</span>.</li>
+</ul></li>
+<li>Ogg’s expected payoff from Deer gets larger with p:
+<ul class="incremental">
+<li>more likely Igg is to hunt Deer, more attractive Deer becomes to Ogg.</li>
+</ul></li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="msne-in-the-deer-hunt" class="level2">
+<h2 class="anchored" data-anchor-id="msne-in-the-deer-hunt">MSNE in the Deer Hunt</h2>
+<p>We already saw that Ogg’s expected payoffs from Deer and Rabbit are <span class="math inline">\(2p\)</span> and <span class="math inline">\(1\)</span>, respectively,</p>
+<p>so Ogg would only play a mixed strategy if <span class="math inline">\(p = \frac{1}{2}\)</span>.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Likewise, Igg’s expected payoffs are <span class="math inline">\(2q\)</span> and <span class="math inline">\(1\)</span>, and Igg will play a mixed strategy if <span class="math inline">\(q = \frac{1}{2}\)</span>.</li>
+<li>The MSNE in this game can be written as: <span class="math inline">\(\{(1/2~Deer, 1/2~Rabbit)_{Ogg}, \ (1/2~Deer, 1/2~Rabbit)_{Igg}\}\)</span>.</li>
+</ul>
+</div>
+<hr>
+</section>
 <section id="practice-your-understanding" class="level2">
 <h2 class="anchored" data-anchor-id="practice-your-understanding">Practice your understanding</h2>
 <p>Consider the following game table. What are <strong>Player 1’s</strong> expected payoffs, given Player 2’s mixed strategy?</p>
@@ -674,7 +825,7 @@ window.Quarto = {
 <p>The correct answers to the previous two questions were:</p>
 <ul>
 <li><span class="math inline">\(U_1(Up) = 5q - 3\)</span></li>
-<li>$U_1(Down) = -6q + 1 $.</li>
+<li><span class="math inline">\(U_1(Down) = -6q + 1\)</span>.</li>
 <li><span class="math inline">\(U_2(Up) = -7p + 5\)</span></li>
 <li><span class="math inline">\(U_2(Down) = 4p - 1\)</span>.</li>
 </ul>
@@ -751,6 +902,23 @@ q &amp;= 3/5 &amp; p &amp;= 1
 <li>We’ve never seen anything like <span class="math inline">\(p = 1\)</span> in this context before…</li>
 <li><strong>Player 2 will only mix</strong> if <strong>Player 1 only plays A</strong></li>
 <li>This usually occurs when one strategy <strong>weakly</strong> dominates another.</li>
+</ul>
+</div>
+<hr>
+</section>
+<section id="error-checking" class="level2">
+<h2 class="anchored" data-anchor-id="error-checking">Error-Checking</h2>
+<p>Make sure that you’re setting up the equations used to solve for a player’s strategy correctly:</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Describe when a player is <em>indifferent</em> between their pure strategies:
+<ul class="incremental">
+<li>if you’re trying to figure out when <strong>Player 1</strong> is indifferent, you need to use <strong>Player 1’s</strong> payoffs.</li>
+</ul></li>
+<li>However, the probabilities will be based on the <strong>other</strong> player’s mixed strategy:
+<ul class="incremental">
+<li>in a game with mixed strategies, the randomness a player deals with is created by the <strong>other</strong> player—not themselves.</li>
+</ul></li>
 </ul>
 </div>
 <hr>
@@ -907,320 +1075,12 @@ q &amp;= 3/5 &amp; p &amp;= 1
 </div>
 </div>
 <hr>
-</section>
-<section id="absence-of-msnes" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="absence-of-msnes">Absence of MSNEs</h2>
-<p>Let us return to the Prisoner’s Dilemma and check for MSNEs:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Guido, Luca</th>
-<th><span class="math inline">\(Testify~(q)\)</span></th>
-<th><span class="math inline">\(Keep~Quiet~(1-q)\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(Testify~(p)\)</span></td>
-<td><span class="math inline">\(-10,-10\)</span></td>
-<td><span class="math inline">\(0,-20\)</span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(Keep~Quiet~(1-p)\)</span></td>
-<td><span class="math inline">\(-20,0\)</span></td>
-<td><span class="math inline">\(-1,-1\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Guido and Luca’s expected payoffs are:</p>
-<div class="incremental">
-<ul class="incremental">
-<li><span class="math inline">\(U_G(Testify) = -10q + 0(1 - q) = -10q\)</span>.</li>
-<li><span class="math inline">\(U_G(Keep Quiet) = -20q + (-1)(1 - q) = -1 - 19q\)</span>.</li>
-<li><span class="math inline">\(U_L(Testify) = -10p + 0(1 - p) = -10p\)</span>.</li>
-<li><span class="math inline">\(U_L(Keep Quiet) = -20p + (-1)(1 - p) = -1 - 19p\)</span>.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="absence-of-msnes-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="absence-of-msnes-1">Absence of MSNEs</h2>
-<p>Guido will play a mixed strategy if:</p>
-<p><span class="math display">\[
-\begin{align*}
--10q &amp;= -1 - 19q\\
-9q &amp;= -1\\
-q &amp;= -1/9
-\end{align*}
-\]</span></p>
-<div class="incremental">
-<ul class="incremental">
-<li>But <strong>-1/9 is not a valid probability!</strong></li>
-<li>We could also note that if <span class="math inline">\(q\in [0, 1]\)</span>:
-<ul class="incremental">
-<li><span class="math inline">\(-10q\)</span> is always greater than <span class="math inline">\(-1 - 19q\)</span>.</li>
-</ul></li>
-<li>In other words, as we saw weeks ago, <span class="math inline">\(Testify\)</span> strictly dominates <span class="math inline">\(Keep~Quiet\)</span>…so why would Guido mix between the two of them?</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="getting-bad-probabilities" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="getting-bad-probabilities">Getting Bad Probabilities</h2>
-<p>If you’ve solved for a player’s mixed strategy and you find that the probability is <strong>less than 0</strong>, or <strong>more than 1</strong>:</p>
-<div class="incremental">
-<ul class="incremental">
-<li><strong>It means something is wrong.</strong> Probability can only be between 0 and 1 (inclusive).</li>
-<li>Double-check your math—it could be an algebra error.</li>
-<li>But if you’re confident in your math, this means that there is <strong>no way that the player would ever play a mixed strategy</strong>:
-<ul class="incremental">
-<li>in fact, they have a strictly dominated strategy.</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="mixed-strategies-in-the-deer-hunt" class="level2">
-<h2 class="anchored" data-anchor-id="mixed-strategies-in-the-deer-hunt">Mixed Strategies in the Deer Hunt</h2>
-<p>Consider the Deer Hunt:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Igg, Ogg</th>
-<th>Deer</th>
-<th>Rabbit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Deer</td>
-<td><span class="math inline">\(2, 2\)</span></td>
-<td><span class="math inline">\(0, 1\)</span></td>
-</tr>
-<tr class="even">
-<td>Rabbit</td>
-<td><span class="math inline">\(1, 0\)</span></td>
-<td><span class="math inline">\(1, 1\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>Suppose that Igg hunts Deer 3/4 of the time, and Rabbit 1/4 of the time.</p>
-<div class="incremental">
-<ul class="incremental">
-<li>If Ogg <em>always hunts deer</em>; what is Ogg’s <em>expected payoff</em>?
-<ul class="incremental">
-<li>Ogg’s expected payoff from playing Deer will be <span class="math inline">\(0.75(2) + 0.25(0) = 1.5\)</span>.</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="mixed-strategies-in-the-deer-hunt-generalizing" class="level2">
-<h2 class="anchored" data-anchor-id="mixed-strategies-in-the-deer-hunt-generalizing">Mixed Strategies in the Deer Hunt: Generalizing</h2>
-<p>We can generalize this approach to calculate Ogg’s expected payoffs from any strategy that Igg chooses to play:</p>
-<div class="incremental">
-<ul class="incremental">
-<li>Suppose Igg plays Deer with prob p, and Rabbit with prob 1 - p.</li>
-<li>Ogg’s expected payoff from Deer is:
-<ul class="incremental">
-<li><span class="math inline">\(2(p) + 0(1 - p) = 2p\)</span>,</li>
-</ul></li>
-<li>and from Rabbit:
-<ul class="incremental">
-<li><span class="math inline">\(1(p) + 1(1 - p) = 1\)</span>.</li>
-</ul></li>
-<li>Ogg’s expected payoff from Deer gets larger with p:
-<ul class="incremental">
-<li>more likely Igg is to hunt Deer, more attractive Deer becomes to Ogg.</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="msne-in-the-deer-hunt" class="level2">
-<h2 class="anchored" data-anchor-id="msne-in-the-deer-hunt">MSNE in the Deer Hunt</h2>
-<p>We already saw that Ogg’s expected payoffs from Deer and Rabbit are <span class="math inline">\(2p\)</span> and <span class="math inline">\(1\)</span>, respectively,</p>
-<p>so Ogg would only play a mixed strategy if <span class="math inline">\(p = \frac{1}{2}\)</span>.</p>
-<div class="incremental">
-<ul class="incremental">
-<li>Likewise, Igg’s expected payoffs are <span class="math inline">\(2q\)</span> and <span class="math inline">\(1\)</span>, and Igg will play a mixed strategy if <span class="math inline">\(q = \frac{1}{2}\)</span>.</li>
-<li>The MSNE in this game can be written as: <span class="math inline">\(\{(1/2~Deer, 1/2~Rabbit)_{Ogg}, \ (1/2~Deer, 1/2~Rabbit)_{Igg}\}\)</span>.</li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="error-checking" class="level2">
-<h2 class="anchored" data-anchor-id="error-checking">Error-Checking</h2>
-<p>Make sure that you’re setting up the equations used to solve for a player’s strategy correctly:</p>
-<div class="incremental">
-<ul class="incremental">
-<li>Describe when a player is <em>indifferent</em> between their pure strategies:
-<ul class="incremental">
-<li>if you’re trying to figure out when <strong>Player 1</strong> is indifferent, you need to use <strong>Player 1’s</strong> payoffs.</li>
-</ul></li>
-<li>However, the probabilities will be based on the <strong>other</strong> player’s mixed strategy:
-<ul class="incremental">
-<li>in a game with mixed strategies, the randomness a player deals with is created by the <strong>other</strong> player—not themselves.</li>
-</ul></li>
-</ul>
-</div>
-<hr>
-</section>
-<section id="another-example-police-patrol-and-drug-trade" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="another-example-police-patrol-and-drug-trade">Another Example: Police Patrol and Drug Trade</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Police, Dealer</th>
-<th>Streets (d)</th>
-<th>Park (1 - d)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Streets (p)</td>
-<td>80, 20</td>
-<td>0,100</td>
-</tr>
-<tr class="even">
-<td>Park (1 - p)</td>
-<td>10, 90</td>
-<td>60,40</td>
-</tr>
-</tbody>
-</table>
-<p><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<div class="columns">
-<div class="column">
-<div class="incremental">
-<ul class="incremental">
-<li>Police Officer’s expected utility:
-<ul class="incremental">
-<li><span class="math inline">\(U_P(Streets) = 80d + 0(1-d)\)</span>
-<ul class="incremental">
-<li><span class="math inline">\(= 80d\)</span></li>
-</ul></li>
-<li><span class="math inline">\(U_P(Park) = 10d + 60(1-d)\)</span>
-<ul class="incremental">
-<li><span class="math inline">\(= 60 - 50d\)</span>.</li>
-</ul></li>
-</ul></li>
-</ul>
-</div>
-</div><div class="column">
-<div class="incremental">
-<ul class="incremental">
-<li>Drug Dealer’s expected utility:
-<ul class="incremental">
-<li><span class="math inline">\(U_D(Streets) = 20p + 90(1-p)\)</span>
-<ul class="incremental">
-<li><span class="math inline">\(= 90 - 70p\)</span></li>
-</ul></li>
-<li><span class="math inline">\(U_D(Park) = 100p + 40(1-p)\)</span>
-<ul class="incremental">
-<li><span class="math inline">\(= 40 + 60p\)</span>.</li>
-</ul></li>
-</ul></li>
-</ul>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="msne-in-patrol-and-trade-game" class="level2">
-<h2 class="anchored" data-anchor-id="msne-in-patrol-and-trade-game">MSNE in Patrol and Trade game:</h2>
-<ul>
-<li><p>When is the Police Officer indifferent between Park and Streets?</p></li>
-<li><p>When is the Drug Dealer indifferent between Park and Streets?</p>
-<ul>
-<li><h2 id="what-is-the-mixed-strategies-nash-equilibrium" class="anchored">What is the <span class="hi">Mixed Strategies Nash equilibrium?</span></h2></li>
-</ul></li>
-</ul>
-</section>
-<section id="graph-police-officers-expected-utilities" class="level2">
-<h2 class="anchored" data-anchor-id="graph-police-officers-expected-utilities">Graph Police Officer’s expected utilities</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="0604-examples_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="graph-drug-dealers-expected-utilities" class="level2">
-<h2 class="anchored" data-anchor-id="graph-drug-dealers-expected-utilities">Graph Drug Dealer’s expected utilities</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="0604-examples_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="graph-best-response-functions" class="level2">
-<h2 class="anchored" data-anchor-id="graph-best-response-functions">Graph Best Response functions</h2>
-<div class="cell" data-layout-align="center">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(latex2exp)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">d =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">6</span><span class="sc">/</span><span class="dv">13</span>, <span class="dv">6</span><span class="sc">/</span><span class="dv">13</span>, <span class="dv">1</span>),</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">PR =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>),</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">p =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span><span class="sc">/</span><span class="dv">13</span>, <span class="dv">5</span><span class="sc">/</span><span class="dv">13</span>, <span class="dv">0</span>),</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">DR =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>),</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the best response functions</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data) <span class="sc">+</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">13</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">6</span><span class="sc">/</span><span class="dv">13</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="fu">aes</span>(<span class="at">x =</span> d, <span class="at">y =</span> PR, <span class="at">color =</span> <span class="st">"Police Officer's Best Response"</span>), <span class="at">direction =</span> <span class="st">"hv"</span>, <span class="at">linewidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_step</span>(<span class="fu">aes</span>(<span class="at">x =</span> DR, <span class="at">y =</span> p, <span class="at">color =</span> <span class="st">"Drug Dealer's Best Response"</span>), <span class="at">direction =</span> <span class="st">"hv"</span>, <span class="at">linewidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> <span class="fu">tibble</span>(<span class="at">d =</span> <span class="dv">6</span><span class="sc">/</span><span class="dv">13</span>, <span class="at">p =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">13</span>), <span class="fu">aes</span>(<span class="at">x=</span>d, <span class="at">y=</span>p, <span class="at">color =</span> <span class="st">"MSNE"</span>), <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">y =</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">13</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="fu">TeX</span>(<span class="st">"$p^* = 5/13$"</span>), <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">6</span><span class="sc">/</span><span class="dv">13</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="fu">TeX</span>(<span class="st">"$d^* = 6/13$"</span>), <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Best Response Functions for Mixed Strategy Nash Equilibrium"</span>,</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Drug Dealer's Probability (d)"</span>,</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Police Officer's Probability (p)"</span>,</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Best Response"</span>) <span class="sc">+</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="0604-examples_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
-</section>
-<section id="msne-in-patrol-and-trade-game-1" class="level2">
-<h2 class="anchored" data-anchor-id="msne-in-patrol-and-trade-game-1">MSNE in Patrol and Trade game:</h2>
-<ul>
-<li><p>Note that the players’ asymmetric preferences result in an interior solution.</p></li>
-<li><p>Notice that it isn’t a 50:50, it is more likely that both meet in the Park than it is likely that they both meet in the Streets</p></li>
-</ul>
 
 
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Harrington, pg. 226<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
