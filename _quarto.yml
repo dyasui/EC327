@@ -87,12 +87,10 @@ website:
             href: Slides/#repeated-games
   page-footer:
     left: |
-      {{< fa regular copyright >}} [Dante Yasui](https://danteyasui.org), 2025<br>
-      All content licensed under {{< fa brands creative-commons >}}
+      {{< fa regular copyright >}} [Dante Yasui](https://danteyasui.org), 2025 {{< fa brands creative-commons >}}
       {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-sa >}} {{< fa brands creative-commons-nc >}} [(CC BY-NC-SA 4.0)](http://creativecommons.org/licenses/by-nc-sa/4.0/)<br>
     right: |
-      Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)<br>
-      [{{< fa brands github >}} Source](https://github.com/dyasui/dyasui.github.io)
+      Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)
 
   # announcement: 
   #   icon: clipboard2-check-fill
