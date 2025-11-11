@@ -1,0 +1,169 @@
+\documentclass[addpoints]{exam}
+
+\printanswers
+\CorrectChoiceEmphasis{\color{red}\bfseries}
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\usepackage{multirow,array} % for payoff matrix formatting
+\usepackage[colorlinks,pdfusetitle,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{bbding} % dingbats fonts
+
+\usepackage{adjustbox}
+
+\definecolor{crimson}{RGB}{ 170, 4, 36 }
+\definecolor{darkblue}{RGB}{ 4, 47, 170 }
+\definecolor{brown}{RGB}{ 111, 71, 2 }
+\definecolor{periwinkle}{RGB}{ 90, 177, 204 }
+\definecolor{ducksgreen}{HTML}{007030}
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+\pagestyle{headandfoot}
+\lhead{EC327 Game Theory}
+\chead{Homework 5}
+\rhead{Fall 2025}
+\runningheadrule
+
+\title{
+    \textbf{Econ 327: Game Theory} \\ 
+    Homework $\#8$
+    }
+\author{University of Oregon}
+\date{Due: Dec. 5$^{th}$}
+
+% exam-type question formatting
+\renewcommand{\thequestion}{\textbf{Q\arabic{question}}}
+\bracketedpoints
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+  \gradetable[h][questions]
+\end{center}
+
+\vspace{0.5in}
+
+\begin{center}
+  \textbf{For homework assignments:}
+\end{center}
+
+\begin{itemize}
+
+%  \item DO NOT write your name:
+%  this assignment will be graded anonymously. 
+%  If you want to, you can include your student ID instead.
+
+  \item Complete \textit{all} questions and parts.
+
+  % I will select one question at random to be graded
+  % according to the rubric on Canvas.
+
+  \item You will be graded on not only the content of your work
+    but on how clearly you present your ideas.
+    Make sure that your handwriting is legible.
+    Please use extra pages if you run out of space 
+    but make sure that all parts of a question 
+    are in the correct order when you submit.
+
+  \item You may choose to work with others,
+  but everyone must submit to Canvas individually.
+
+  Please include the names of everyone who you worked with 
+  below your own name.
+ 
+\end{itemize}
+
+\vspace{1.0in}
+
+\makebox[.6\textwidth]{Name\enspace\hrulefill}
+
+
+\vspace{0.5in}
+
+\begin{center}
+  \fbox{\fbox{\parbox{5.5in}{\centering
+  \textbf{Note:}
+  All Questions are adapted from problems in  
+  Dixit, Skeath and Reiley, \textit{Games of Strategy}, Fourth Edition. 
+  }}}
+\end{center}
+
+\newpage
+
+\begin{questions}
+  \question
+  Recall the example from the midterm, 
+  where South Korea and Japan compete in the market for production of VLCCs. 
+  Assume now that the cost of building ships is \$30 (million) in each country, 
+  and the demand for ships is $P = 180 - Q$,
+  where $Q = q_{\text{Korea}} + q_{\text{Japan}}$.
+  \begin{parts}
+    \part [4]
+    Solve for all Nash equilibria in this continuous strategy game.
+    \part [4] 
+    Now find the collusive outcome.
+    What total quantity should be set by the two countries 
+    in order to maximize their joint profit?
+    \part [4]
+    Suppose the two countries produce equal quantities of VLCCs, so
+    that they earn equal shares of this collusive profit.
+    How much profit would each country earn? 
+    Compare this profit with the amount they would earn in the Nash equilibrium.
+    \part [4] 
+    Now suppose the two countries are in a repeated relationship.
+    Once per year, they choose production quantities,
+    and each can observe the amount its rival produced in the previous year. 
+    They wish to cooperate to sustain the collusive profit levels found in part (c). 
+    In any one year, one of them can defect from the agreement.
+    If one of them holds the quantity at the agreed level, 
+    what is the best defecting quantity for the other? 
+    What are the resulting profits?
+    \part[4]
+    Write down a matrix that represents this game as a prisoners’ dilemma.
+    \part[4] 
+    For what interest rates will collusion be sustainable 
+    when the two countries use grim (defect forever) strategies?
+  \end{parts}
+
+  \newpage 
+
+  \question
+  Glassworks and Clearsmooth compete in the local market for windshield repairs.
+  The market size (total available profits) is \$10 million per year.
+  Each firm can choose whether to advertise on local television. 
+  If a firm chooses to advertise in a given year, 
+  it costs that firm \$3 million.
+  If one firm advertises and the other doesn’t, 
+  then the former captures the whole market.
+  If both firms advertise, they split the market 50:50.
+  If both firms choose not to advertise, they also split the market 50:50.
+
+  \begin{parts}
+    \part[4]
+    Suppose the two windshield-repair firms know they will compete for just one year.
+    Write down the payoff matrix for this game.
+    Find the Nash equilibrium strategies.
+    \part[4]
+    Suppose the firms play this game for five years in a row, 
+    and they know that at the end of five years,
+    both firms plan to go out of business.
+    What is the subgame-perfect equilibrium for this five-period game? 
+    Explain. 
+    \part[4]
+    What would be a tit-for-tat strategy in the game described in part (b)?
+    \part[4]
+    Suppose the firms play this game repeatedly forever, 
+    and suppose that future profits are discounted
+    with an interest rate of 20\% per year.
+    Can you find a subgame-perfect equilibrium that involves higher annual payoffs than the equilibrium in part (b)?
+    If so, explain what strategies are involved.
+    If not, explain why not.
+  \end{parts}
+  
+\end{questions}
+\end{document}
