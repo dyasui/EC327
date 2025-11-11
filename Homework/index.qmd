@@ -51,7 +51,7 @@ title: "Homework Assignments"
 ```
 
 # Assignment 5 [Download](05_Mixed/HW5_clean.pdf){.btn .btn-outline-primary .btn role="button"} 
-**Due:** Friday, November 7th
+**Due:** Monday, November 10th
 [**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1940611){target="_blank"}
 ```{=html}
 <details>
@@ -61,4 +61,39 @@ title: "Homework Assignments"
   </div>
 </details>
 ```
-# Other Assignments: coming soon
+
+# Assignment 6 [Download](06_Uncertainty/HW6_clean.pdf){.btn .btn-outline-primary .btn role="button"} 
+**Due:** Wednesday, November 19th
+[**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1943344){target="_blank"}
+```{=html}
+<details>
+  <summary>Expand</summary>
+  <div class="embed-container">
+    <iframe src="06_Uncertainty/HW6_clean.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+  </div>
+</details>
+```
+
+# Assignment 7 [Download](07_Evidence/HW7_clean.pdf){.btn .btn-outline-primary .btn role="button"} 
+**Due:** Wednesday, November 26th
+[**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1943346){target="_blank"}
+```{=html}
+<details>
+  <summary>Expand</summary>
+  <div class="embed-container">
+    <iframe src="07_Evidence/HW7_clean.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+  </div>
+</details>
+```
+
+# Assignment 8 [Download](08_Repeated/HW8_clean.pdf){.btn .btn-outline-primary .btn role="button"} 
+**Due:** Friday, December 5th
+[**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1943347){target="_blank"}
+```{=html}
+<details>
+  <summary>Expand</summary>
+  <div class="embed-container">
+    <iframe src="08_Repeated/HW8_clean.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+  </div>
+</details>
+```
