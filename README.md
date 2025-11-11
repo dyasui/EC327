@@ -2,7 +2,7 @@
     EC327 - Intro to Game Theory
 </h1>
 <h2 align="center">
-    Taught by <a href="danteyasui.org" target="_blank" rel="noreferrer">Dante Yasui</a> at the University of Oregon
+    Taught by <a href="https://danteyasui.org" target="_blank" rel="noreferrer">Dante Yasui</a> at the University of Oregon
 </h2>
 
 Welcome to this course material repository for the Introduction to Game Theory class!
@@ -24,6 +24,8 @@ Explore the materials to discover how game theory can enhance your understanding
 
 ## 📆 **Fall 2025** Schedule
 
+| Fall 2025 | Info |
+|---|---|
 | **Class Time** | Monday and Wednesday 8:30-9:50 am |
 | **Classroom** | McKenzie 240C |
 | **Office Hours** | Monday 10am, Wednesday 1pm |

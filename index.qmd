@@ -5,7 +5,7 @@ filters:
   - shinylive
 ---
 
-This elective game theory class EC327 is taught by [Dante Yasui](danteyasui.org)
+This elective game theory class EC327 is taught by [Dante Yasui](https://danteyasui.org)
 at the [University of Oregon](https://socialsciences.uoregon.edu/economics).
 
 | Details: | Fall 2025 |
