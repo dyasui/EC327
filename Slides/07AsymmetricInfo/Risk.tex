@@ -1,21 +1,17 @@
 \begin{frame}{Imperfect Info: Dealing with Risk}
-  Some of you have already started asking 
-  about whether different \alert{preferences for risk} might change the solutions 
-  to some of the games we have looked at. 
+  We've already seen how to deal with strategic uncertainty in \textit{mixed strategies}
   \begin{itemize}
-    \item So far, I have abstracted away from these questions 
-    by saying that we should take the payoffs given 
-    as the agents' \textit{true subjective utilities}.
-    \item But we can also use the tools of \textbf{utility functions}
-    we introduced in the beginning of the class 
-    to more explicitly model risk preferences.
+    \item \alert{Expected Utility} tells us how people value stochastic outcomes
+    \item $EU(L) = \sum_{o\in L} u(o) \times p(o)$
+    \item how much utility you earn from each potential outcome
+    \item multiplied by how likely each outcome is
   \end{itemize}
 \end{frame}
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 \begin{frame}{Playing with Chance}
-  To review, suppose that Nature plays probabilistically with 50:50 odds:
+  Suppose that Nature plays probabilistically with 50:50 odds:
   \begin{center}
     \begin{tikzpicture}[scale=1.5,font=\footnotesize, edge from parent/.style={draw, very thick}]
       \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
@@ -251,4 +247,13 @@
       \item I am \alert{risk neutral} 
     \end{itemize}
   \end{itemize} 
+\end{frame}
+
+\begin{frame}{Certainty Equivalent Calculation}
+  What is Zoidberg's certainty equivalent of Let it Ride?
+  \begin{itemize}
+    \item $EU_Z(L) = 0.5\sqrt{16} + 0.5\sqrt{0} = 2$
+    \item What payment of $x$ would make Zoidberg indifferent?
+    \item $u_Z(x) = EU_Z(L)$
+  \end{itemize}
 \end{frame}
