@@ -55,9 +55,9 @@ title: "Homework Assignments"
 [**Submit to Canvas**](https://canvas.uoregon.edu/courses/274671/assignments/1940611){target="_blank"}
 ```{=html}
 <details>
-  <summary>Expand</summary>
+  <summary>Answer Key</summary>
   <div class="embed-container">
-    <iframe src="05_Mixed/HW5_clean.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
+    <iframe src="05_Mixed/HW5_key.pdf" style="border: 0.5px" height="1000" width="800"></iframe>
   </div>
 </details>
 ```
