@@ -36,10 +36,10 @@ If at least 66% of the class fills out a survey, I will add 1 extra credit point
 |     4    |      5,6    | [Combining Forms](Slides/#combining-simultaneous-and-sequential), [Continuous Strategies](Slides/#simultaneous-games) | [HW4](Homework/#assignment-4), [Q4](https://canvas.uoregon.edu/courses/274671/quizzes/417209) |
 |     5    |      1-6    | Review & **Midterm**                                             |         |
 |     6    |      7      | [Mixed Strategies](Slides/#mixed-strategies)                     | [HW5](Homework/#assignment-5), [Q5](https://canvas.uoregon.edu/courses/274671/quizzes/418005) |
-|     7    |      7,8      | [Mixed Strategies](Slides/#mixed-strategies), [Uncertainty and Information](Slides/#asymmetric-info)           | Q6  |
-|     8    |      8      | [Uncertainty and Information](Slides/#asymmetric-info)                       | [HW6](https://canvas.uoregon.edu/courses/274671/assignments/1943344), Q7 |
-|     9    |      TBD      |                        | [HW7](https://canvas.uoregon.edu/courses/274671/assignments/1943346) |
-|    10    |      10     | [Repeated Games](Slides/#repeated-games)                         | [HW8](https://canvas.uoregon.edu/courses/274671/assignments/1943347), Q8 |
+|     7    |      7,8      | [Mixed Strategies](Slides/#mixed-strategies), [Uncertainty and Information](Slides/#asymmetric-info)           | [HW6](https://canvas.uoregon.edu/courses/274671/assignments/1943344), [Q6](https://canvas.uoregon.edu/courses/274671/quizzes/418766)  |
+|     8    |      8      | [Uncertainty and Information](Slides/#asymmetric-info)                       |  |
+|     9    |      9      | [Strategic Moves](Slides/08StrategicMoves/main.pdf) | [HW7](https://canvas.uoregon.edu/courses/274671/assignments/1943346), [Q7](https://canvas.uoregon.edu/courses/274671/quizzes/418776) |
+|    10    |      10     | [Repeated Games](Slides/#repeated-games)                         | [HW8](https://canvas.uoregon.edu/courses/274671/assignments/1943347), [Q8](https://canvas.uoregon.edu/courses/274671/quizzes/418777) |
 | *Finals* |  Cumulative | **Exam**: Monday, Dec. 8 - 10:15am                               |    |
 
 ## Homework
