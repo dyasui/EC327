@@ -1,0 +1,106 @@
+---
+title: "Stage 4: Fuel Tankers Test Blockade"
+filters:
+  - shinylive
+---
+
+# The Doomsday Clock is at 3
+
+Premier Kruschev,
+please decide whether you want to [Escalate]{.h} the conflict
+by sending fuel tankers through the US blockade ahead of your missile carriers
+to test whether the US will actually board them.
+
+* If you [Escalate]{.h}, the chance of Nuclear War is 1/2.
+Roll the Die below to see whether your escalation leads to annhililation.
+If the die lands on a 4, a 5 or a 6, proceed to Nuclear War.
+Otherwise proceed to Stage 5.
+
+* If you [Stand Down]{.h},
+you will be humiliated and will take the payoff according to what's written
+on your role card.
+
+Choose wisely!
+
+[Escalate (move to Stage 5)](stage5.qmd){.btn .btn-outline-primary .btn role="button"}
+[Escalate (Nuclear War)](NuclearWar.qmd){.btn .btn-outline-primary .btn role="button"}
+[Stand Down](KennedyWin.qmd){.btn .btn-outline-primary .btn role="button"}
+
+```{shinylive-r}
+#| standalone: true
+#| code-fold: false
+#| label: randomizer
+#| viewerHeight: 250
+
+library(shiny)
+library(shinyjs)
+
+# Define UI with custom styles and shinyjs
+ui <- fluidPage(
+  useShinyjs(),  # Include shinyjs for dynamic UI updates
+  titlePanel("Roll a Six-Sided Die"),
+  
+  tags$head(
+    tags$style(HTML("
+      #roll_button {
+        background-color: #3498db;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+        padding: 15px 30px;
+        transition: background-color 0.3s;
+      }
+      #roll_button:hover {
+        background-color: #2980b9;
+      }
+      #die_result {
+        font-size: 100px;
+        color: #2c3e50;
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        margin-top: 20px;
+        border: 2px solid #34495e;
+        border-radius: 10px;
+        width: 120px;
+        height: 120px;
+        display: inline-block;
+        line-height: 120px;
+      }
+    "))
+  ),
+  
+  sidebarLayout(
+    sidebarPanel(
+      actionButton("roll_button", "Roll the Die")
+    ),
+    mainPanel(
+      div(id = "die_result", "🎲")  # Placeholder for die result
+    )
+  )
+)
+
+# Define server logic
+server <- function(input, output, session) {
+  # Observe button clicks
+  observeEvent(input$roll_button, {
+    # Show placeholder
+    runjs("$('#die_result').html('⏳');")
+    
+    # Delay for animation
+    invalidateLater(10000, session)
+    
+    # Update with final die roll
+    observe({
+      die_roll <- sample(1:6, size = 1)  # Generate random number between 1 and 6
+      runjs(sprintf("$('#die_result').html('%d');", die_roll))
+    })
+  })
+}
+
+# Run the application
+shinyApp(ui = ui, server = server)
+```
+
+[![](figures/Soviet_freighter_Kasimov_at_sea-1962-12-02.jpg)](https://www.history.navy.mil/browse-by-topic/wars-conflicts-and-operations/cuban-missile.html)

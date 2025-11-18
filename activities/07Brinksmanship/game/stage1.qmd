@@ -1,0 +1,27 @@
+---
+title: "Stage 1: Kennedy's Speech"
+filters:
+  - shinylive
+---
+
+# The Doomsday Clock is at 6
+
+President Kennedy,
+please decide whether you want to [Escalate]{.h} or [Stand Down]{.h}.
+
+* If you [Escalate]{.h}, there is no risk of nuclear war at this stage,
+but you can deliver a speech to Premier Kruschev calling for the USSR to send their missiles back.
+Kruschev will then get to decide to escalate or stand down in the next stage.
+
+* If you [Stand Down]{.h},
+you will take the humiliating payoff of 2
+but the game ends here without escalating further.
+
+Choose wisely!
+
+[Escalate (move to Stage 2)](stage2.qmd){.btn .btn-outline-primary .btn role="button"}
+[Escalate (Nuclear War)](NuclearWar.qmd){.btn .btn-outline-primary .btn role="button"}
+[Stand Down](KruschevWin.qmd){.btn .btn-outline-primary .btn role="button"}
+
+[![](figures/President_Kennedy_signs_Cuba_quarantine_proclamation_23_October_1962.png)](https://en.wikipedia.org/wiki/File:President_Kennedy_signs_Cuba_quarantine_proclamation,_23_October_1962.jpg)
+
