@@ -63,35 +63,58 @@
     "text": "Other Topics\n🚀 Brinksmanship\n🚗 Market for Lemons"
   },
   {
-    "objectID": "activities/07Brinksmanship/brinksmanship.html",
-    "href": "activities/07Brinksmanship/brinksmanship.html",
-    "title": "Brinksmanship Game",
+    "objectID": "activities/07Brinksmanship/game/stage7.html",
+    "href": "activities/07Brinksmanship/game/stage7.html",
+    "title": "Stage 7: US Considers Invasion of Cuba",
     "section": "",
-    "text": "Objective:\nThis activity is based on the game developed by Phil Haun and Michael O’Hara to explore decision-making under risk and the dynamics of brinkmanship. The game helps illustrate concepts such as escalation, risk tolerance, and backward induction in strategic situations. It also provides an opportunity to analyze how uncertainty and risk preferences influence negotiation outcomes.\nReference:\nHaun, P., & O’Hara, M. (2022). The Brinkmanship Game: Bargaining Under the Mutual Risk of Escalation. Journal of Political Science Education, 18(3), 379-389. DOI: 10.1080/15512169.2022.2036615",
-    "crumbs": [
-      "Syllabus",
-      "Strategic Moves",
-      "**Activity**: Brinksmanship"
-    ]
+    "text": "The Doomsday Clock is at 0\nPresdent Kennedy, please decide whether you want to Escalate the conflict by launching a full-scale invasion of Cuba to remove all missiles by force.\n\nIf you Escalate, Kruschev will be given one final chance to respond by either launching a pre-emptive nuclear strike or backing down.\nIf you Stand Down, you will be humiliated and will take the payoff according to what’s written on your role card.\n\nChoose wisely!\nBoth Escalate (Nuclear War) Kennedy Stands Down Kruschev Stands Down"
   },
   {
-    "objectID": "activities/07Brinksmanship/brinksmanship.html#game-rules",
-    "href": "activities/07Brinksmanship/brinksmanship.html#game-rules",
-    "title": "Brinksmanship Game",
-    "section": "Game Rules:",
-    "text": "Game Rules:\nSetup:\nFind a classmate who you haven’t already interacted with in class.\nThe game begins with a pot of 10 coins to be divided between the two of you.\nHave your notebook or device ready to record the results.\nRounds: The game progresses in rounds where one player decides between splitting the pot or rolling a die. Each round increases the risk of escalation, resulting in both players losing everything.\n\nRound 1: Player 1 chooses between:\n\nSplitting the pot (1 coin for themselves and 9 coins for Player 2).\nRolling the die. If the die roll is 1, escalation occurs, and both players receive 0 coins. If the roll is greater than 1, the game proceeds to Round 2.\n\nRound 2: Player 2 chooses between:\n\nSplitting the pot (8 coins for Player 1 and 2 coins for themselves).\nRolling the die. If the roll is 1 or 2, escalation occurs. If the roll is greater than 2, the game proceeds to Round 3.\n\nSubsequent Rounds: Similar logic follows, with the split amounts changing each round:\n\nRound 3: (3, 7)\nRound 4: (6, 4)\nRound 5: (5, 5)\nRound 6: (4, 6)\n\n\nThe risk of escalation increases in each round. By Round 6, rolling the die becomes extremely risky, with only a 1-in-6 chance of avoiding escalation.\nEnd Conditions:\nThe game ends if:\n\nPlayers choose to split the pot in any round.\nEscalation occurs after a low die roll.\nThe sixth round is completed with no escalation.",
-    "crumbs": [
-      "Syllabus",
-      "Strategic Moves",
-      "**Activity**: Brinksmanship"
-    ]
+    "objectID": "activities/07Brinksmanship/game/stage5.html",
+    "href": "activities/07Brinksmanship/game/stage5.html",
+    "title": "Stage 5: US Navy Intercepts Fuel Tankers",
+    "section": "",
+    "text": "The Doomsday Clock is at 2\nPresdent Kennedy, please decide whether you want to Escalate the conflict by sending US servicemen to board all foreign vessels which cross the blockade.\n\nIf you Escalate, the chance of Nuclear War is 2/3. Roll the Die below to see whether your escalation leads to annhililation. If the die lands on a 3, a 4, a 5, or a 6, proceed to Nuclear War. Otherwise proceed to Stage 6.\nIf you Stand Down, you will be humiliated and will take the payoff according to what’s written on your role card.\n\nChoose wisely!\nEscalate (move to Stage 6) Escalate (Nuclear War) Stand Down\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| code-fold: false\n#| label: randomizer\n#| viewerHeight: 250\n\nlibrary(shiny)\nlibrary(shinyjs)\n\n# Define UI with custom styles and shinyjs\nui &lt;- fluidPage(\n  useShinyjs(),  # Include shinyjs for dynamic UI updates\n  titlePanel(\"Roll a Six-Sided Die\"),\n  \n  tags$head(\n    tags$style(HTML(\"\n      #roll_button {\n        background-color: #3498db;\n        color: white;\n        font-size: 20px;\n        font-weight: bold;\n        border-radius: 10px;\n        border: none;\n        padding: 15px 30px;\n        transition: background-color 0.3s;\n      }\n      #roll_button:hover {\n        background-color: #2980b9;\n      }\n      #die_result {\n        font-size: 100px;\n        color: #2c3e50;\n        font-family: 'Arial', sans-serif;\n        text-align: center;\n        margin-top: 20px;\n        border: 2px solid #34495e;\n        border-radius: 10px;\n        width: 120px;\n        height: 120px;\n        display: inline-block;\n        line-height: 120px;\n      }\n    \"))\n  ),\n  \n  sidebarLayout(\n    sidebarPanel(\n      actionButton(\"roll_button\", \"Roll the Die\")\n    ),\n    mainPanel(\n      div(id = \"die_result\", \"🎲\")  # Placeholder for die result\n    )\n  )\n)\n\n# Define server logic\nserver &lt;- function(input, output, session) {\n  # Observe button clicks\n  observeEvent(input$roll_button, {\n    # Show placeholder\n    runjs(\"$('#die_result').html('⏳');\")\n    \n    # Delay for animation\n    invalidateLater(10000, session)\n    \n    # Update with final die roll\n    observe({\n      die_roll &lt;- sample(1:6, size = 1)  # Generate random number between 1 and 6\n      runjs(sprintf(\"$('#die_result').html('%d');\", die_roll))\n    })\n  })\n}\n\n# Run the application\nshinyApp(ui = ui, server = server)"
+  },
+  {
+    "objectID": "activities/07Brinksmanship/game/stage3.html",
+    "href": "activities/07Brinksmanship/game/stage3.html",
+    "title": "Stage 3: US Naval Blockade Enforcement",
+    "section": "",
+    "text": "The Doomsday Clock is at 4\nPresdent Kennedy, please decide whether you want to Escalate the conflict by sending US Navy ships to enforce the blockade around Cuba.\n\nIf you Escalate, the chance of Nuclear War is 1/3. Roll the Die below to see whether your escalation leads to annhililation. If the die lands on a 5 or a 6, proceed to Nuclear War. Otherwise proceed to Stage 4.\nIf you Stand Down, you will be humiliated and will take the payoff according to what’s written on your role card.\n\nChoose wisely!\nEscalate (move to Stage 4) Escalate (Nuclear War) Stand Down\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| code-fold: false\n#| label: randomizer\n#| viewerHeight: 250\n\nlibrary(shiny)\nlibrary(shinyjs)\n\n# Define UI with custom styles and shinyjs\nui &lt;- fluidPage(\n  useShinyjs(),  # Include shinyjs for dynamic UI updates\n  titlePanel(\"Roll a Six-Sided Die\"),\n  \n  tags$head(\n    tags$style(HTML(\"\n      #roll_button {\n        background-color: #3498db;\n        color: white;\n        font-size: 20px;\n        font-weight: bold;\n        border-radius: 10px;\n        border: none;\n        padding: 15px 30px;\n        transition: background-color 0.3s;\n      }\n      #roll_button:hover {\n        background-color: #2980b9;\n      }\n      #die_result {\n        font-size: 100px;\n        color: #2c3e50;\n        font-family: 'Arial', sans-serif;\n        text-align: center;\n        margin-top: 20px;\n        border: 2px solid #34495e;\n        border-radius: 10px;\n        width: 120px;\n        height: 120px;\n        display: inline-block;\n        line-height: 120px;\n      }\n    \"))\n  ),\n  \n  sidebarLayout(\n    sidebarPanel(\n      actionButton(\"roll_button\", \"Roll the Die\")\n    ),\n    mainPanel(\n      div(id = \"die_result\", \"🎲\")  # Placeholder for die result\n    )\n  )\n)\n\n# Define server logic\nserver &lt;- function(input, output, session) {\n  # Observe button clicks\n  observeEvent(input$roll_button, {\n    # Show placeholder\n    runjs(\"$('#die_result').html('⏳');\")\n    \n    # Delay for animation\n    invalidateLater(10000, session)\n    \n    # Update with final die roll\n    observe({\n      die_roll &lt;- sample(1:6, size = 1)  # Generate random number between 1 and 6\n      runjs(sprintf(\"$('#die_result').html('%d');\", die_roll))\n    })\n  })\n}\n\n# Run the application\nshinyApp(ui = ui, server = server)"
+  },
+  {
+    "objectID": "activities/07Brinksmanship/game/stage1.html",
+    "href": "activities/07Brinksmanship/game/stage1.html",
+    "title": "Stage 1: Kennedy’s Speech",
+    "section": "",
+    "text": "The Doomsday Clock is at 6\nPresident Kennedy, please decide whether you want to Escalate or Stand Down.\n\nIf you Escalate, there is no risk of nuclear war at this stage, but you can deliver a speech to Premier Kruschev calling for the USSR to send their missiles back. Kruschev will then get to decide to escalate or stand down in the next stage.\nIf you Stand Down, you will take the humiliating payoff of 2 but the game ends here without escalating further.\n\nChoose wisely!\nEscalate (move to Stage 2) Escalate (Nuclear War) Stand Down"
+  },
+  {
+    "objectID": "activities/07Brinksmanship/game/KruschevWin.html",
+    "href": "activities/07Brinksmanship/game/KruschevWin.html",
+    "title": "Soviet Missiles in Cuba",
+    "section": "",
+    "text": "The US has stood their military down, allowing the USSR to place nuclear missiles in Cuba. Kruschev scores a diplomatic victory and nuclear war is averted!\n\nPresident Kennedy Player: Add a payoff of 2 to your total payoff.\nPremier Kruschev Player: Add a payoff of 10 to your total payoff.\n\nRecord your strategies and payoffs.\n\nKruschev player may optionally reveal their hidden type.\nDiscuss each of your strategies in the game. Make sure you get your classmate’s actual name.\nIf necessary, revise your plan of action.\nThen find a new opponent and play the game again.\n\nBack to Rules"
   },
   {
     "objectID": "activities/07Brinksmanship/brinksmanship.html#play-the-game",
     "href": "activities/07Brinksmanship/brinksmanship.html#play-the-game",
     "title": "Brinksmanship Game",
     "section": "Play the Game:",
-    "text": "Play the Game:\nPlaying the Game\n\nRoles:\n\nDecide roles for Player 1 and Player 2 within your pair.\nUse the die rolling simulator below for all die rolls during the game.\nKeep track of who earned how many coins and reflect on you and your opponent’s strategies and thinking.\nAfter playing this game against your first opponent, find another classmate to play against a second time.\n\n\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| code-fold: false\n#| label: randomizer\n#| viewerHeight: 250\n\nlibrary(shiny)\nlibrary(shinyjs)\n\n# Define UI with custom styles and shinyjs\nui &lt;- fluidPage(\n  useShinyjs(),  # Include shinyjs for dynamic UI updates\n  titlePanel(\"Roll a Six-Sided Die\"),\n  \n  tags$head(\n    tags$style(HTML(\"\n      #roll_button {\n        background-color: #3498db;\n        color: white;\n        font-size: 20px;\n        font-weight: bold;\n        border-radius: 10px;\n        border: none;\n        padding: 15px 30px;\n        transition: background-color 0.3s;\n      }\n      #roll_button:hover {\n        background-color: #2980b9;\n      }\n      #die_result {\n        font-size: 100px;\n        color: #2c3e50;\n        font-family: 'Arial', sans-serif;\n        text-align: center;\n        margin-top: 20px;\n        border: 2px solid #34495e;\n        border-radius: 10px;\n        width: 120px;\n        height: 120px;\n        display: inline-block;\n        line-height: 120px;\n      }\n    \"))\n  ),\n  \n  sidebarLayout(\n    sidebarPanel(\n      actionButton(\"roll_button\", \"Roll the Die\")\n    ),\n    mainPanel(\n      div(id = \"die_result\", \"🎲\")  # Placeholder for die result\n    )\n  )\n)\n\n# Define server logic\nserver &lt;- function(input, output, session) {\n  # Observe button clicks\n  observeEvent(input$roll_button, {\n    # Show placeholder\n    runjs(\"$('#die_result').html('⏳');\")\n    \n    # Delay for animation\n    invalidateLater(10000, session)\n    \n    # Update with final die roll\n    observe({\n      die_roll &lt;- sample(1:6, size = 1)  # Generate random number between 1 and 6\n      runjs(sprintf(\"$('#die_result').html('%d');\", die_roll))\n    })\n  })\n}\n\n# Run the application\nshinyApp(ui = ui, server = server)",
+    "text": "Play the Game:\nMake sure everyone understands the rules. Then take some time to plan out your strategy. Record all actions and any dice roll outcomes for each game you play.\nOnce you are ready, click on the button below to play stage 1:\nBegin Stage 1",
+    "crumbs": [
+      "Syllabus",
+      "Strategic Moves",
+      "**Activity**: Brinksmanship"
+    ]
+  },
+  {
+    "objectID": "activities/07Brinksmanship/brinksmanship.html#footnotes",
+    "href": "activities/07Brinksmanship/brinksmanship.html#footnotes",
+    "title": "Brinksmanship Game",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nunless you are a Madman↩︎",
     "crumbs": [
       "Syllabus",
       "Strategic Moves",
@@ -7454,6 +7477,41 @@
     "text": "Mixed-Strategy Nash Equilibrium\nIf the kickers and goalies were playing mixed strategies consistent with a Nash equilibrium of the strategic form game above, we would predict to see the kickers kicking with their dominant foot about 42% of the time and goalies blocking to the kicker’s non-dominant side about 39% of the time."
   },
   {
+    "objectID": "activities/07Brinksmanship/game/KennedyWin.html",
+    "href": "activities/07Brinksmanship/game/KennedyWin.html",
+    "title": "Soviet Missiles Turned Away",
+    "section": "",
+    "text": "The USSR has decided to recall all missiles from Cuba. Kennedy scores a diplomatic victory and nuclear war is averted!\n\nPresident Kennedy Player: Add a payoff of 10 to your total payoff.\nPremier Kruschev Player:\n\nAdd a payoff of 5 to your total payoff if you are a Dove.\nAdd a payoff of 0 to your total payoff if you are a Madman.\n\n\nRecord your strategies and payoffs.\n\nKruschev player may optionally reveal their hidden type.\nDiscuss each of your strategies in the game. Make sure you get your classmate’s actual name.\nIf necessary, revise your plan of action.\nThen find a new opponent and play the game again.\n\nBack to Rules"
+  },
+  {
+    "objectID": "activities/07Brinksmanship/game/NuclearWar.html",
+    "href": "activities/07Brinksmanship/game/NuclearWar.html",
+    "title": "Cold War Turns Hot",
+    "section": "",
+    "text": "The Cuban Missile Crisis has escalated into full-fledged thermonuclear war.\n\nAll Dove types earn zero payoffs.\nAny Madmen types earn a payoff of 3.\n\nRecord your strategies and payoffs.\n\nKruschev player may optionally reveal their hidden type.\nDiscuss each of your strategies in the game. Make sure you get your classmate’s actual name.\nIf necessary, revise your plan of action.\nThen find a new opponent and play the game again.\n\nBack to Rules"
+  },
+  {
+    "objectID": "activities/07Brinksmanship/game/stage2.html",
+    "href": "activities/07Brinksmanship/game/stage2.html",
+    "title": "Stage 2: Soviet Tankers move towards Cuba",
+    "section": "",
+    "text": "The Doomsday Clock is at 5\nPremier Kruschev, please decide whether you want to Escalate the conflict by defying Kennedy’s wishes and sending your R-12 missiles by boat to Cuba despite the US’s threat of a blockade.\n\nIf you Escalate, the chance of Nuclear War is 1/6. Roll the Die below to see whether your escalation leads to annhililation. If the die lands on a 6, then proceed to Nuclear War. Otherwise proceed to Stage 3.\nIf you Stand Down, you will be humiliated and will take the payoff according to what’s written on your role card.\n\nChoose wisely!\nEscalate (move to Stage 3) Escalate (Nuclear War) Stand Down\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| code-fold: false\n#| label: randomizer\n#| viewerHeight: 250\n\nlibrary(shiny)\nlibrary(shinyjs)\n\n# Define UI with custom styles and shinyjs\nui &lt;- fluidPage(\n  useShinyjs(),  # Include shinyjs for dynamic UI updates\n  titlePanel(\"Roll a Six-Sided Die\"),\n  \n  tags$head(\n    tags$style(HTML(\"\n      #roll_button {\n        background-color: #3498db;\n        color: white;\n        font-size: 20px;\n        font-weight: bold;\n        border-radius: 10px;\n        border: none;\n        padding: 15px 30px;\n        transition: background-color 0.3s;\n      }\n      #roll_button:hover {\n        background-color: #2980b9;\n      }\n      #die_result {\n        font-size: 100px;\n        color: #2c3e50;\n        font-family: 'Arial', sans-serif;\n        text-align: center;\n        margin-top: 20px;\n        border: 2px solid #34495e;\n        border-radius: 10px;\n        width: 120px;\n        height: 120px;\n        display: inline-block;\n        line-height: 120px;\n      }\n    \"))\n  ),\n  \n  sidebarLayout(\n    sidebarPanel(\n      actionButton(\"roll_button\", \"Roll the Die\")\n    ),\n    mainPanel(\n      div(id = \"die_result\", \"🎲\")  # Placeholder for die result\n    )\n  )\n)\n\n# Define server logic\nserver &lt;- function(input, output, session) {\n  # Observe button clicks\n  observeEvent(input$roll_button, {\n    # Show placeholder\n    runjs(\"$('#die_result').html('⏳');\")\n    \n    # Delay for animation\n    invalidateLater(10000, session)\n    \n    # Update with final die roll\n    observe({\n      die_roll &lt;- sample(1:6, size = 1)  # Generate random number between 1 and 6\n      runjs(sprintf(\"$('#die_result').html('%d');\", die_roll))\n    })\n  })\n}\n\n# Run the application\nshinyApp(ui = ui, server = server)"
+  },
+  {
+    "objectID": "activities/07Brinksmanship/game/stage4.html",
+    "href": "activities/07Brinksmanship/game/stage4.html",
+    "title": "Stage 4: Fuel Tankers Test Blockade",
+    "section": "",
+    "text": "The Doomsday Clock is at 3\nPremier Kruschev, please decide whether you want to Escalate the conflict by sending fuel tankers through the US blockade ahead of your missile carriers to test whether the US will actually board them.\n\nIf you Escalate, the chance of Nuclear War is 1/2. Roll the Die below to see whether your escalation leads to annhililation. If the die lands on a 4, a 5 or a 6, proceed to Nuclear War. Otherwise proceed to Stage 5.\nIf you Stand Down, you will be humiliated and will take the payoff according to what’s written on your role card.\n\nChoose wisely!\nEscalate (move to Stage 5) Escalate (Nuclear War) Stand Down\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| code-fold: false\n#| label: randomizer\n#| viewerHeight: 250\n\nlibrary(shiny)\nlibrary(shinyjs)\n\n# Define UI with custom styles and shinyjs\nui &lt;- fluidPage(\n  useShinyjs(),  # Include shinyjs for dynamic UI updates\n  titlePanel(\"Roll a Six-Sided Die\"),\n  \n  tags$head(\n    tags$style(HTML(\"\n      #roll_button {\n        background-color: #3498db;\n        color: white;\n        font-size: 20px;\n        font-weight: bold;\n        border-radius: 10px;\n        border: none;\n        padding: 15px 30px;\n        transition: background-color 0.3s;\n      }\n      #roll_button:hover {\n        background-color: #2980b9;\n      }\n      #die_result {\n        font-size: 100px;\n        color: #2c3e50;\n        font-family: 'Arial', sans-serif;\n        text-align: center;\n        margin-top: 20px;\n        border: 2px solid #34495e;\n        border-radius: 10px;\n        width: 120px;\n        height: 120px;\n        display: inline-block;\n        line-height: 120px;\n      }\n    \"))\n  ),\n  \n  sidebarLayout(\n    sidebarPanel(\n      actionButton(\"roll_button\", \"Roll the Die\")\n    ),\n    mainPanel(\n      div(id = \"die_result\", \"🎲\")  # Placeholder for die result\n    )\n  )\n)\n\n# Define server logic\nserver &lt;- function(input, output, session) {\n  # Observe button clicks\n  observeEvent(input$roll_button, {\n    # Show placeholder\n    runjs(\"$('#die_result').html('⏳');\")\n    \n    # Delay for animation\n    invalidateLater(10000, session)\n    \n    # Update with final die roll\n    observe({\n      die_roll &lt;- sample(1:6, size = 1)  # Generate random number between 1 and 6\n      runjs(sprintf(\"$('#die_result').html('%d');\", die_roll))\n    })\n  })\n}\n\n# Run the application\nshinyApp(ui = ui, server = server)"
+  },
+  {
+    "objectID": "activities/07Brinksmanship/game/stage6.html",
+    "href": "activities/07Brinksmanship/game/stage6.html",
+    "title": "Stage 6: Soviet Nuclear Submarines Involved",
+    "section": "",
+    "text": "The Doomsday Clock is at 1\n\nPremier Kruschev, please decide whether you want to Escalate the conflict by sending nuclear submarines to protect the passing of your missile carrier vessels through the US blockade.\n\nIf you Escalate, the chance of Nuclear War is 5/6. Roll the Die below to see whether your escalation leads to annhililation. If the die lands on a 2, a 3, a 4, a 5, or a 6, proceed to Nuclear War. Otherwise proceed to Stage 7.\nIf you Stand Down, you will be humiliated and will take the payoff according to what’s written on your role card.\n\nChoose wisely!\nEscalate (move to Stage 7) Stand Down\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| code-fold: false\n#| label: randomizer\n#| viewerHeight: 250\n\nlibrary(shiny)\nlibrary(shinyjs)\n\n# Define UI with custom styles and shinyjs\nui &lt;- fluidPage(\n  useShinyjs(),  # Include shinyjs for dynamic UI updates\n  titlePanel(\"Roll a Six-Sided Die\"),\n  \n  tags$head(\n    tags$style(HTML(\"\n      #roll_button {\n        background-color: #3498db;\n        color: white;\n        font-size: 20px;\n        font-weight: bold;\n        border-radius: 10px;\n        border: none;\n        padding: 15px 30px;\n        transition: background-color 0.3s;\n      }\n      #roll_button:hover {\n        background-color: #2980b9;\n      }\n      #die_result {\n        font-size: 100px;\n        color: #2c3e50;\n        font-family: 'Arial', sans-serif;\n        text-align: center;\n        margin-top: 20px;\n        border: 2px solid #34495e;\n        border-radius: 10px;\n        width: 120px;\n        height: 120px;\n        display: inline-block;\n        line-height: 120px;\n      }\n    \"))\n  ),\n  \n  sidebarLayout(\n    sidebarPanel(\n      actionButton(\"roll_button\", \"Roll the Die\")\n    ),\n    mainPanel(\n      div(id = \"die_result\", \"🎲\")  # Placeholder for die result\n    )\n  )\n)\n\n# Define server logic\nserver &lt;- function(input, output, session) {\n  # Observe button clicks\n  observeEvent(input$roll_button, {\n    # Show placeholder\n    runjs(\"$('#die_result').html('⏳');\")\n    \n    # Delay for animation\n    invalidateLater(10000, session)\n    \n    # Update with final die roll\n    observe({\n      die_roll &lt;- sample(1:6, size = 1)  # Generate random number between 1 and 6\n      runjs(sprintf(\"$('#die_result').html('%d');\", die_roll))\n    })\n  })\n}\n\n# Run the application\nshinyApp(ui = ui, server = server)"
+  },
+  {
     "objectID": "activities/LemonsMarket/activitysheet.html",
     "href": "activities/LemonsMarket/activitysheet.html",
     "title": "Market for Lemons",
@@ -7527,7 +7585,7 @@
     "href": "index.html#tentative-schedule",
     "title": "EC327 Intro to Game Theory",
     "section": "Tentative Schedule",
-    "text": "Tentative Schedule\n\n\n\nWeek\nChapters\nTopic\nAssignments\n\n\n\n\n1\n1, 2\nIntro & General Principles\nHomework 1, Quiz 1\n\n\n2\n3\nSequential Move Games\nHW2, Q2\n\n\n3\n4\nSimultaneous Move Games\nHW3, Q3\n\n\n4\n5,6\nCombining Forms, Continuous Strategies\nHW4, Q4\n\n\n5\n1-6\nReview & Midterm\n\n\n\n6\n7\nMixed Strategies\nHW5, Q5\n\n\n7\n7,8\nMixed Strategies, Uncertainty and Information\nHW6, Q6\n\n\n8\n8\nUncertainty and Information\n\n\n\n9\n9\nStrategic Moves\nHW7, Q7\n\n\n10\n10\nRepeated Games\nHW8, Q8\n\n\nFinals\nCumulative\nExam: Monday, Dec. 8 - 10:15am"
+    "text": "Tentative Schedule\n\n\n\nWeek\nChapters\nTopic\nAssignments\n\n\n\n\n1\n1, 2\nIntro & General Principles\nHomework 1, Quiz 1\n\n\n2\n3\nSequential Move Games\nHW2, Q2\n\n\n3\n4\nSimultaneous Move Games\nHW3, Q3\n\n\n4\n5,6\nCombining Forms, Continuous Strategies\nHW4, Q4\n\n\n5\n1-6\nReview & Midterm\n\n\n\n6\n7\nMixed Strategies\nHW5, Q5\n\n\n7\n7,8\nMixed Strategies, Uncertainty and Information\nHW6, Q6\n\n\n8\n8\nUncertainty and Information, No Class Wednesday\n\n\n\n9\n9\nStrategic Moves\nHW7, Q7\n\n\n10\n10\nRepeated Games\nHW8, Q8\n\n\nFinals\nCumulative\nExam: Monday, Dec. 8 - 10:15am"
   },
   {
     "objectID": "index.html#homework",

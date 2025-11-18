@@ -1,0 +1,20 @@
+---
+title: "Soviet Missiles Turned Away"
+---
+
+The USSR has decided to recall all missiles from Cuba.
+Kennedy scores a diplomatic victory and nuclear war is averted!
+
+* President Kennedy Player: Add a payoff of 10 to your total payoff.
+* Premier Kruschev Player: 
+  + Add a payoff of 5 to your total payoff if you are a Dove.
+  + Add a payoff of 0 to your total payoff if you are a Madman.
+
+Record your strategies and payoffs.
+  * Kruschev player may optionally reveal their hidden type.
+  * Discuss each of your strategies in the game. 
+  Make sure you get your classmate's actual name.
+  * If necessary, revise your plan of action.
+  * Then find a new opponent and play the game again.
+
+[Back to Rules](../brinksmanship.qmd){.btn .btn-outline-primary .btn role="button"}
