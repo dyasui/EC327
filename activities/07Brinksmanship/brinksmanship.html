@@ -76,6 +76,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -542,81 +571,282 @@ ul.task-list li input[type="checkbox"] {
 <h1>The Setting: Cuban Missile Crisis</h1>
 <p><img src="figures/newyorktimes.png" class="img-fluid"></p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/XbKCyQn5oTc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</section>
-<section id="the-game-rules" class="level1">
-<h1>The Game: Rules</h1>
-<p>You will be assigned a role of either US President John F Kennedy, or USSR Premier Nikita Kruschev and matched with another classmate who will be your counterpart.</p>
-<p>Your goal will be to attempt to make your rival back down by threatening escalation of tensions, without ending up in a nuclear war<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<p><u><strong>Setup:</strong></u> Find a partner. Decide who will play the role of Kennedy and who will play Kruschev. Each of you will receive one role card accordingly. Leave your role card flag side facing up. Observe your hidden type on the opposite side but do not reveal it to your opponent.</p>
+<p>This activity is a simplified, interactive model of brinksmanship. The classroom game captures the trade-off between credible threats and the risk of mutual destruction, and the role of asymmetric information about an opponent’s willingness to risk war.</p>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<p>By the end of this activity you should be able to:</p>
 <ul>
-<li><p>You will play several rounds over which you will alternate the decision to either <span class="h">Escalate</span> the conflict or <span class="h">Back Down</span>.</p></li>
-<li><p>If one player Backs Down, the game ends in an embarassment for the player who backed down, and their opponent will get their favorite outcome.</p></li>
-<li><p>Each time someone chooses to <span class="h">Escalate</span>, you will roll a die to see whether the conflict led to Nuclear War.</p>
-<ul>
-<li><p>If the roll on the die is greater than the number on the countdown clock, then the game ends in the Nuclear War outcome. Record your payoffs according to your role card.</p></li>
-<li><p>If the roll on the die is less than or equal to the number on the countdown clock, then the game continues to the next round. The next player will get the same decision to <span class="h">Escalate</span> or <span class="h">Back Down</span>, but this time the countdown will have progressed and further escalation will become riskier.</p></li>
-</ul></li>
+<li>Model a brinkmanship interaction in extensive form.</li>
+<li>Explain how asymmetric information about an opponent’s type affects incentives to escalate.</li>
+<li>Compute expected payoffs and compare strategic choices given a prior belief.</li>
+<li>Identify equilibrium concepts that help explain observed behavior (Bayesian Nash / Perfect Bayesian equilibrium, subgame perfection).</li>
+<li>Relate the simplified model to real-world brinkmanship and discuss what the model captures and omits.</li>
 </ul>
-<p><strong><u>Payoffs:</u></strong></p>
-<ul>
-<li><p><strong>Kennedy</strong>’s payoffs:</p>
-<ul>
-<li>If Kruschev Backs Down, Kennedy earns a payoff of 10 for the game.</li>
-<li>If Kennedy backs down, he earns a payoff of 2.</li>
-<li>If escalation leads to Nuclear War, Kennedy earns 0.</li>
-</ul></li>
-<li><p><strong>Kruschev</strong>’s payoffs depend on his hidden type:</p>
-<ul>
-<li>If Kruschev is a <strong>Dove</strong>,
-<ul>
-<li>he gets 10 from making Kennedy back down,</li>
-<li>he gets 5 if he backs down,</li>
-<li>and 0 if the game ends in Nuclear War.</li>
-</ul></li>
-<li>If Kruschev is a <strong>Madman</strong>,
-<ul>
-<li>he gets 10 from making Kennedy back down,</li>
-<li>he gets <strong>0</strong> if he backs down,</li>
-<li>and <strong>3</strong> if the game ends in Nuclear War.</li>
-</ul></li>
-</ul></li>
-</ul>
-<section id="play-the-game" class="level2">
-<h2 class="anchored" data-anchor-id="play-the-game">Play the Game:</h2>
-<p>Make sure everyone understands the rules. Then take some time to plan out your strategy. Record all actions and any dice roll outcomes for each game you play.</p>
-<p>Once you are ready, click on the button below to play stage 1:</p>
-<p><a href="../../activities/07Brinksmanship/game/stage1.html" class="btn btn-outline-primary" role="button">Begin Stage 1</a></p>
 <hr>
 </section>
 </section>
+<section id="game-parameters" class="level1">
+<h1>Game Parameters</h1>
+<ul>
+<li>Roles: One player is <strong>Kennedy</strong>, the other is <strong>Khrushchev</strong>.</li>
+<li>Hidden type: Only Khrushchev has a hidden type:
+<ul>
+<li>With probability <span class="math inline">\(p\)</span> (chosen by the instructor) Khrushchev is a <strong>Madman</strong>.</li>
+<li>With probability <span class="math inline">\(1-p\)</span> Khrushchev is a <strong>Dove</strong>.</li>
+<li>Khrushchev privately observes this type; Kennedy does not.</li>
+</ul></li>
+<li>Move order: <strong>Kennedy moves first</strong> in each match; players then alternate turns (Kennedy, Khrushchev, Kennedy, …).</li>
+<li>Escalation risk mechanism:
+<ul>
+<li>Use a standard six-sided die (d6) with faces 1–6.</li>
+<li>Maintain a countdown value C which starts at 6.</li>
+<li>When the current player chooses <code>Escalate</code>:
+<ul>
+<li>Roll the d6 once.</li>
+<li>If the die outcome is strictly greater than C (roll &gt; C), Nuclear War occurs immediately and the game ends.</li>
+<li>If roll ≤ C, no war occurs.</li>
+</ul></li>
+<li>Consequence: Because C starts at 6, the first <code>Escalate</code> has zero chance of producing Nuclear War (no roll &gt; 6). Each subsequent unsuccessful escalation increases the probability of war on the next escalation by exactly 1/6 (when C=5 the only war roll is 6 → 1/6; when C=4 war on 5 or 6 → 2/6, etc.).</li>
+<li>Note: A die roll is only performed on an <code>Escalate</code>. Choosing <code>Back Down</code> ends the match immediately with the specified payoffs; there is no die roll when a player backs down.</li>
+</ul></li>
+<li>Termination and maximum stages:
+<ul>
+<li>The game ends if either player chooses <code>Back Down</code> or if an <code>Escalate</code> produces Nuclear War.</li>
+<li>If play reaches C = 0 (after six unsuccessful escalations), treat the next Escalate as guaranteed to cause Nuclear War (equivalently probability 1).</li>
+</ul></li>
+</ul>
+<hr>
+<section id="payoffs-terminal-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="payoffs-terminal-outcomes">Payoffs (terminal outcomes)</h2>
+<ul>
+<li>Kennedy:
+<ul>
+<li>If Khrushchev Backs Down: Kennedy payoff = 10.</li>
+<li>If Kennedy Backs Down: Kennedy payoff = 8.</li>
+<li>If Nuclear War occurs: Kennedy payoff = 0.</li>
+</ul></li>
+<li>Khrushchev (depends on hidden type):
+<ul>
+<li>If Khrushchev is a Dove:
+<ul>
+<li>If Kennedy Backs Down: Khrushchev payoff = 10.</li>
+<li>If Khrushchev Backs Down: Khrushchev payoff = 5.</li>
+<li>If Nuclear War occurs: Khrushchev payoff = 0.</li>
+</ul></li>
+<li>If Khrushchev is a Madman:
+<ul>
+<li>If Kennedy Backs Down: Khrushchev payoff = 10.</li>
+<li>If Khrushchev Backs Down: Khrushchev payoff = 0.</li>
+<li>If Nuclear War occurs: Khrushchev payoff = 3.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Notes: - The Madman prefers war (3) to backing down (0), making some threats potentially more credible. The Dove prefers to avoid war and prefers backing down to war. - Kennedy’s payoffs are fixed and known to both players.</p>
+<hr>
+</section>
+<section id="setup-and-procedure" class="level2">
+<h2 class="anchored" data-anchor-id="setup-and-procedure">Setup and Procedure</h2>
+<ol type="1">
+<li>Pair up with a classmate. Assign roles: one of you is <code>Kennedy</code>, the other is <code>Khrushchev</code>.</li>
+<li>Give Khrushchev a two-sided card: the visible side shows the role; the hidden side shows the type. Khrushchev privately inspects their type (Madman or Dove).</li>
+<li>Set C := 6 (countdown starts at 6). Kennedy moves first.</li>
+<li>On a player’s turn, they choose either:
+<ul>
+<li><code>Escalate</code> — roll the d6 and apply the Escalation risk mechanism above; or</li>
+<li><code>Back Down</code> — the game ends immediately and payoffs are assigned accordingly.</li>
+</ul></li>
+<li>Record every action, die roll, remaining countdown C, and the resulting outcome (continue / war / end).</li>
+<li>Play multiple short matches (recommended: at least 2–5 matches): switch role and find a new classmate after you have played the each role against the same person.</li>
+<li>Keep track of your total score across all matches you play. The total score determines the winner of the activity.</li>
+</ol>
+<hr>
+</section>
+<section id="quick-rules-one-page-summary" class="level2">
+<h2 class="anchored" data-anchor-id="quick-rules-one-page-summary">Quick rules (one-page summary)</h2>
+<ul>
+<li>Kennedy moves first; players alternate.</li>
+<li>Countdown C starts at 6. First Escalate has zero chance of war.</li>
+<li>Each unsuccessful Escalate reduces C by 1 ⇒ war probability on next Escalate increases by 1/6.</li>
+<li>Roll only when Escalate chosen.</li>
+<li>Back Down ends game immediately.</li>
+<li>Payoffs: see Payoffs section.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="example-playthrough-worked-example" class="level1">
+<h1>Example playthrough (worked example)</h1>
+<ul>
+<li>Start: C = 6.</li>
+<li>Stage 1 (Kennedy’s turn): Kennedy chooses <code>Escalate</code>.
+<ul>
+<li>Roll d6 = 3. Since 3 ≤ 6, no war occurs. Update C := 5.</li>
+<li>Play continues; next decision by Khrushchev.</li>
+</ul></li>
+<li>Stage 2 (Khrushchev’s turn): Khrushchev chooses <code>Escalate</code>.
+<ul>
+<li>Roll d6 = 6. Since 6 &gt; 5, Nuclear War occurs immediately.</li>
+<li>Terminal payoffs: Kennedy = 0; Khrushchev = 0 if Dove, 3 if Madman.</li>
+</ul></li>
+<li>Remarks: The first Escalate had zero chance of war, but it increased the risk for the next escalation.</li>
+</ul>
+<hr>
+<section id="record-sheet-one-line-per-stage-write-this-down" class="level3">
+<h3 class="anchored" data-anchor-id="record-sheet-one-line-per-stage-write-this-down">Record sheet (one line per stage — write this down)</h3>
+<p>For each match keep a table (or a line per stage) with these fields:</p>
+<ul>
+<li>Match ID: Can just be your actual names</li>
+<li>Khrushchev type (private to Khrushchev; reveal after match):</li>
+<li>Stage number:</li>
+<li>Player on turn (Kennedy / Khrushchev):</li>
+<li>Action chosen (Escalate / Back Down):</li>
+<li>If Escalate: die roll result (1–6):</li>
+<li>Outcome of action (war / no war / back down):</li>
+<li>Terminal? (Yes / No). If yes, final payoffs for both players:</li>
+<li>Kennedy’s stated belief p(Madman) at time of decision (optional but encouraged).</li>
+</ul>
+<p>Example table:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Match</th>
+<th>Khrushchev type</th>
+<th>Stage 2</th>
+<th>Player</th>
+<th>Action</th>
+<th>Die Roll</th>
+<th>Outcome</th>
+<th>payoffs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dante, Jose</td>
+<td>type = Dove</td>
+<td>1</td>
+<td>Kennedy</td>
+<td>Escalate</td>
+<td>NA</td>
+<td>Nuclear War</td>
+<td>Ke=0, Kh=0</td>
+</tr>
+<tr class="even">
+<td>Dante, Jose</td>
+<td>type = Dove</td>
+<td>2</td>
+<td>Khrushchev</td>
+<td>Escalate</td>
+<td>6</td>
+<td>Nuclear War</td>
+<td>Ke=0, Kh=0</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="discussion-assignment-how-to-get-participation-credit" class="level2">
+<h2 class="anchored" data-anchor-id="discussion-assignment-how-to-get-participation-credit">Discussion Assignment (how to get participation credit)</h2>
+<p>Submit the following to Canvas:</p>
+<ol type="1">
+<li>A record of at least 3 full matches (the record sheet above).</li>
+<li>A drawn extensive-form game for at least the first three decision nodes (show decision nodes, branches, possible die-roll outcomes as chance nodes, and information sets for Kennedy over Khrushchev’s type).</li>
+<li>A short written analysis answering:
+<ul>
+<li>In the first match, what was your Bayesian prior for the probability of a Madman type? How did you update your belief as you played more matches?</li>
+<li>For Khrushchev, explain how the Dove’s incentives differ from the Madman’s. At what points (if any) would a Dove prefer to escalate? Would a Madman prefer to back down?</li>
+<li>Did you or your classmates try any form of communication strategies? Were they cheap talk or did they actually update your prior beliefs?</li>
+<li>Did you observe pooling or separating behavior in play? How did recorded behavior depend on Khrushchev’s actual type?</li>
+<li>Give an example of another real-world setting besides the Cuban Missile crisis in which Brinkmanship is relevant.</li>
+</ul></li>
+</ol>
+<p>Hints:</p>
+<ul>
+<li>Let q be the probability of escalation leading to nuclear war at any stage. Compute the expected payoffs of Kruschev’s strategy to <code>Escalate</code> or <code>Back Down</code></li>
+<li>Draw the last three stages of the extensive-form tree:
+<ul>
+<li>If Khrushchev ends up in Stage 7 with the final decision to Defy leading to Nuclear War with 100% probability, what will he choose?</li>
+<li>Represent Kennedy’s uncertainty over Khrushchev’s type with an information set.</li>
+</ul></li>
+<li>To compute survival probabilities over several unsuccessful escalations, multiply the probabilities of rolling ≤ C at each attempted escalation path.</li>
+<li>On Kennedy’s first move, because C starts at 6, an immediate war is impossible; but his choice affects the future C and thus future war probabilities.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="play-the-game" class="level1">
+<h1>Play the Game</h1>
+<p>Make sure everyone understands the rules and records their play. Then use the “Begin Stage 1” link below to start the interactive stage (if available in your session):</p>
+<p><a href="../../activities/07Brinksmanship/game/stage1.html" class="btn btn-outline-primary" role="button">Begin Stage 1</a></p>
+<hr>
+</section>
 <section id="discussion" class="level1">
 <h1>Discussion</h1>
+<section id="guided-modeling-steps-recommended-in-class" class="level2">
+<h2 class="anchored" data-anchor-id="guided-modeling-steps-recommended-in-class">Guided modeling steps (recommended in-class)</h2>
+<ol type="1">
+<li>Write out a generalized expected utility equation for either player when choosing to Escalate.</li>
+<li>Draw out an extensive form tree for the last few stages of the game. Use pruning to simplify the tree by eliminating any dominated strategies.</li>
+<li>Compute expected payoffs symbolically for Kennedy’s first decision as a function of the prior p and of the future strategies of Khrushchev. Solve for a threshold p* such that Kennedy is indifferent between Escalate and Back Down (this is a useful analytic exercise).</li>
+<li>Discuss equilibrium candidates:</li>
+</ol>
 <ul>
-<li><p>How would you model this game in extensive form?</p></li>
-<li><p>What theoretical tools from the class are relevant here?</p></li>
-<li><p>What other settings can you think of which involve brinksmanship?</p></li>
+<li>Are there pooling equilibria where both types of Khrushchev behave the same?</li>
+<li>Are there separating equilibria where behavior reveals type? Which are credible once you apply sequential rationality / Bayesian updating?</li>
 </ul>
-<p>Submit your recordings from each game and a brief response to the discussion points to Canvas.</p>
+<hr>
+</section>
+</section>
+<section id="instructor-facilitation-notes" class="level1">
+<h1>Instructor facilitation notes</h1>
+<p>Suggested class timing (50–60 min):</p>
+<ul>
+<li>5 min: Introduce objectives and rules (use the “Quick rules” slide).</li>
+<li>5 min: Walk through the worked example and answer clarifying questions.</li>
+<li>25 min: Students play 3–4 short matches in pairs; instructors circulate to collect 1–2 interesting match records.</li>
+<li>15 min: Group debrief and modeling: ask a volunteer to draw the partial extensive form and lead computation of Kennedy’s first-move incentives.</li>
+<li>Optional: 5–10 min extra to discuss historical connections and extensions.</li>
+</ul>
+<p>Teaching tips:</p>
+<ul>
+<li>Emphasize recording beliefs and actions — this generates data for class discussion.</li>
+<li>Make sure students understand that the first escalate has zero chance of war (C = 6), as this often confuses players.</li>
+<li>If time permits, re-run matches with the prior changed (e.g., p = 0.5) or with a smaller starting C to show parameter sensitivity.</li>
+<li>Encourage students to state their beliefs verbally before choosing — this helps surface signaling dynamics.</li>
+</ul>
+<hr>
+</section>
+<section id="variations-and-extensions" class="level1">
+<h1>Variations and extensions</h1>
+<ul>
+<li>Change the prior p(Madman) and re-run matches to see how play changes.</li>
+<li>Give both players hidden types (both could be Doves or Madmen).</li>
+<li>Let a player pay a small cost to make a threat partially credible (costly signal).</li>
+<li>Replace the d6 with a continuous risk-increase function and compute exact thresholds analytically.</li>
+</ul>
 <hr>
 <p><u><em>References:</em></u></p>
 <ul>
 <li><p>Dixit, Skeath, &amp; Reiley (2014). <em>Games of Strategy (4th Edition).</em> W.W. Norton &amp; Company. Chapter 14, 582-606.</p></li>
 <li><p>Haun, P., &amp; O’Hara, M. (2022). <em>The Brinkmanship Game: Bargaining Under the Mutual Risk of Escalation.</em> Journal of Political Science Education, 18(3), 379-389. DOI: <a href="https://doi.org/10.1080/15512169.2022.2036615">10.1080/15512169.2022.2036615</a></p></li>
 <li><p>Harrington (2015). <em>Games, Strategy, and Decision-Making (2nd Edition).</em> Worth Publishers. 425-429.</p></li>
-<li><p><em>Cuban Missile Crisis</em>. Naval History and Heritage Command. <a href="https://www.history.navy.mil/browse-by-topic/wars-conflicts-and-operations/cuban-missile.html" class="uri">https://www.history.navy.mil/browse-by-topic/wars-conflicts-and-operations/cuban-missile.html</a></p></li>
-<li><p><em>The Cuban Missile Crisis at 60: Nuclear Crisis Lasted 59 Days, Not Just 13.</em> (2022) National Security Archive, George Washington University. <a href="https://nsarchive.gwu.edu/briefing-book-special-exhibit/cuba-cuban-missile-crisis-russia-programs/2022-10-04/cuban-missile" class="uri">https://nsarchive.gwu.edu/briefing-book-special-exhibit/cuba-cuban-missile-crisis-russia-programs/2022-10-04/cuban-missile</a></p></li>
+<li><p>Naval History and Heritage Command. <em>Cuban Missile Crisis</em>. <a href="https://www.history.navy.mil/browse-by-topic/wars-conflicts-and-operations/cuban-missile.html" class="uri">https://www.history.navy.mil/browse-by-topic/wars-conflicts-and-operations/cuban-missile.html</a></p></li>
+<li><p>National Security Archive, George Washington University. <em>The Cuban Missile Crisis at 60: Nuclear Crisis Lasted 59 Days, Not Just 13.</em> (2022). <a href="https://nsarchive.gwu.edu/briefing-book-special-exhibit/cuba-cuban-missile-crisis-russia-programs/2022-10-04/cuban-missile" class="uri">https://nsarchive.gwu.edu/briefing-book-special-exhibit/cuba-cuban-missile-crisis-russia-programs/2022-10-04/cuban-missile</a></p></li>
 </ul>
 
 
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>unless you are a Madman<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
