@@ -2,11 +2,11 @@
 title: "Soviet Missiles in Cuba"
 ---
 
-The US has stood their military down, 
+The US has stood their military down,
 allowing the USSR to place nuclear missiles in Cuba.
 Khrushchev scores a diplomatic victory and nuclear war is averted!
 
-* President Kennedy Player: Add a payoff of 2 to your total payoff.
+* President Kennedy Player: Add a payoff of 8 to your total payoff.
 
 * Premier Khrushchev player: Add a payoff of 10 to your total payoff.
 
@@ -14,10 +14,10 @@ Record your strategies and payoffs.
 
   * Khrushchev player may optionally reveal their hidden type.
 
-  * Discuss each of your strategies in the game. 
+  * Discuss each of your strategies in the game.
   Make sure you get your classmate's actual name.
 
-  * If necessary, revise your plan of action.
+  * If necessary, update your priors and/or revise your plan of action.
 
   * Then find a new opponent and play the game again.
 
