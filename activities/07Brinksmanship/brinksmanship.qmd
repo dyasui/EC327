@@ -12,8 +12,8 @@ filters:
 
 # The Game: Rules
 
-You will be assigned a role 
-of either US President John F Kennedy, or USSR Premier Nikita Kruschev 
+You will be assigned a role
+of either US President John F Kennedy, or USSR Premier Nikita Khrushchev
 and matched with another classmate who will be your counterpart.
 
 Your goal will be to attempt to make your rival back down
@@ -21,11 +21,10 @@ by threatening escalation of tensions,
 without ending up in a nuclear war^[unless you are a Madman].
 
 <u>**Setup:**</u>
-Find a partner. 
-Decide who will play the role of Kennedy and who will play Kruschev.
+Find a partner.
+Decide who will play the role of Kennedy and who will play Khrushchev.
 Each of you will receive one role card accordingly.
-Leave your role card flag side facing up.
-Observe your hidden type on the opposite side but do not reveal it to your opponent.
+Keep the role side of your card visible; the opposite side shows your hidden type. Do not reveal the hidden-type card to your opponent during play.
 
 - You will play several rounds over which you will alternate the decision
 to either [Escalate]{.h} the conflict or [Back Down]{.h}.
@@ -49,18 +48,18 @@ Record your payoffs according to your role card.
 
 - **Kennedy**'s payoffs:
 
-  + If Kruschev Backs Down, Kennedy earns a payoff of 10 for the game.
+  + If Khrushchev Backs Down, Kennedy earns a payoff of 10 for the game.
   + If Kennedy backs down, he earns a payoff of 2.
   + If escalation leads to Nuclear War, Kennedy earns 0.
 
-- **Kruschev**'s payoffs depend on his hidden type:
+- **Khrushchev**'s payoffs depend on his hidden type:
 
-  + If Kruschev is a **Dove**, 
+  + If Khrushchev is a **Dove**,
     * he gets 10 from making Kennedy back down,
     * he gets 5 if he backs down,
     * and 0 if the game ends in Nuclear War.
 
-  + If Kruschev is a **Madman**, 
+  + If Khrushchev is a **Madman**,
     * he gets 10 from making Kennedy back down,
     * he gets **0** if he backs down,
     * and **3** if the game ends in Nuclear War.

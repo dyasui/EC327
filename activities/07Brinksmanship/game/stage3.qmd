@@ -6,16 +6,16 @@ filters:
 
 # The Doomsday Clock is at 4
 
-Presdent Kennedy,
+President Kennedy,
 please decide whether you want to [Escalate]{.h} the conflict
 by sending US Navy ships to enforce the blockade around Cuba.
 
 * If you [Escalate]{.h}, the chance of Nuclear War is 1/3.
-Roll the Die below to see whether your escalation leads to annhililation.
+Roll the Die below to see whether your escalation leads to annihilation.
 If the die lands on a 5 or a 6, proceed to Nuclear War.
 Otherwise proceed to Stage 4.
 
-* If you [Stand Down]{.h},
+* If you [Back Down]{.h},
 you will be humiliated and will take the payoff according to what's written
 on your role card.
 
@@ -23,7 +23,7 @@ Choose wisely!
 
 [Escalate (move to Stage 4)](stage4.qmd){.btn .btn-outline-primary .btn role="button"}
 [Escalate (Nuclear War)](NuclearWar.qmd){.btn .btn-outline-primary .btn role="button"}
-[Stand Down](KruschevWin.qmd){.btn .btn-outline-primary .btn role="button"}
+[Back Down](KruschevWin.qmd){.btn .btn-outline-primary .btn role="button"}
 
 ```{shinylive-r}
 #| standalone: true

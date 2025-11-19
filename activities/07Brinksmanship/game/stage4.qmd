@@ -6,17 +6,17 @@ filters:
 
 # The Doomsday Clock is at 3
 
-Premier Kruschev,
+Premier Khrushchev,
 please decide whether you want to [Escalate]{.h} the conflict
 by sending fuel tankers through the US blockade ahead of your missile carriers
 to test whether the US will actually board them.
 
 * If you [Escalate]{.h}, the chance of Nuclear War is 1/2.
-Roll the Die below to see whether your escalation leads to annhililation.
+Roll the Die below to see whether your escalation leads to annihilation.
 If the die lands on a 4, a 5 or a 6, proceed to Nuclear War.
 Otherwise proceed to Stage 5.
 
-* If you [Stand Down]{.h},
+* If you [Back Down]{.h},
 you will be humiliated and will take the payoff according to what's written
 on your role card.
 
@@ -24,7 +24,7 @@ Choose wisely!
 
 [Escalate (move to Stage 5)](stage5.qmd){.btn .btn-outline-primary .btn role="button"}
 [Escalate (Nuclear War)](NuclearWar.qmd){.btn .btn-outline-primary .btn role="button"}
-[Stand Down](KennedyWin.qmd){.btn .btn-outline-primary .btn role="button"}
+[Back Down](KennedyWin.qmd){.btn .btn-outline-primary .btn role="button"}
 
 ```{shinylive-r}
 #| standalone: true

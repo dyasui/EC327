@@ -6,21 +6,22 @@ filters:
 
 # The Doomsday Clock is at 0
 
-Presdent Kennedy,
+President Kennedy,
 please decide whether you want to [Escalate]{.h} the conflict
 by launching a full-scale invasion of Cuba to remove all missiles by force.
 
-* If you [Escalate]{.h}, Kruschev will be given one final chance to respond
-by either launching a pre-emptive nuclear strike or backing down.
+- If you [Escalate]{.h}, Premier Khrushchev will be given one final chance to respond
+  by either launching a pre-emptive nuclear strike or [Back Down]{.h}.
+  If both sides choose to escalate (pre-emptive strike vs. invasion), the game ends in Nuclear War.
 
-* If you [Stand Down]{.h},
-you will be humiliated and will take the payoff according to what's written
-on your role card.
+- If you [Back Down]{.h},
+  you will be humiliated and will take the payoff according to what's written
+  on your role card.
 
 Choose wisely!
 
 [Both Escalate (Nuclear War)](NuclearWar.qmd){.btn .btn-outline-primary .btn role="button"}
-[Kennedy Stands Down](KruschevWin.qmd){.btn .btn-outline-primary .btn role="button"}
-[Kruschev Stands Down](KennedyWin.qmd){.btn .btn-outline-primary .btn role="button"}
+[Kennedy Backs Down](KruschevWin.qmd){.btn .btn-outline-primary .btn role="button"}
+[Khrushchev Backs Down](KennedyWin.qmd){.btn .btn-outline-primary .btn role="button"}
 
 [![](figures/graphic_from_Military_History_Quarterly_US_invasion-1962.jpg)](https://nsarchive2.gwu.edu/nsa/cuba_mis_cri/photos.htm)
