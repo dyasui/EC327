@@ -6,7 +6,7 @@ filters:
 
 # The Doomsday Clock is at 1
 
-President Kennedy,
+Premier Khrushchev,
 please decide whether you want to [Escalate]{.h} the conflict
 by sending nuclear submarines to protect the passing of your
 missile carrier vessels through the US blockade.

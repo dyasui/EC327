@@ -1,6 +1,6 @@
 \documentclass[addpoints ]{exam}
 
-% \printanswers
+\printanswers
 \usepackage{amssymb, amsmath, amsfonts}
 \usepackage{geometry}
 \usepackage{graphicx}
@@ -235,6 +235,29 @@ unprofitable one.
   when the union uses the pure threat to strike unless
   the company concedes to the union’s demands?
 
+  \begin{solution}
+    \begin{align*}
+      \text{If unprofitable:} &
+      \begin{cases}
+        EU_C(\texttt{Defy}) = -10 \\
+        EU_C(\texttt{Concede}) = -40 \\
+      \end{cases}
+      \text{, always Defy} \\
+      \text{If profitable:} &
+      \begin{cases}
+        EU_C(\texttt{Defy}) = -100 \\
+        EU_C(\texttt{Concede}) = 50 \\
+      \end{cases}
+      \text{, always Concede} \\
+    \end{align*}
+  If p is too high for threat to be worth it for Union,
+  the SPNE is \{\texttt{No Threat}, (\texttt{Defy} if unprofitable, \texttt{Defy} if profitable)\}.
+
+  If p is low enough for threat to be worth it,
+  the SPNE is \{\texttt{Threat}, (\texttt{Concede} if unprofitable, \texttt{Defy} if profitable)\}.
+  \end{solution}
+
+
   \part[4] Suppose that the union sets up a situation in which there is some
   risk, with probability $q < 1$, that it will strike after the company defies
   its threat.
@@ -242,14 +265,64 @@ unprofitable one.
   membership in line.
   Draw an extensive form game tree.
 
+  \begin{solution}
+    \begin{center}
+      \include{figures/brinksmanship_tree}
+    \end{center}
+  \end{solution}
+
   \part[4] Solve for a condition on $q$
   such that a profitable firm will concede to the union's demands.
+  
+  \begin{solution}
+    \begin{align*}
+      \text{If unprofitable:} &
+      \begin{cases}
+        EU_C(\texttt{Defy}) = -10 \\
+        EU_C(\texttt{Concede}) = -40 \\
+      \end{cases} \\
+      & \text{\textbf{always Defy} because} -40 < -10q + 10(1-q) \\
+      \text{If profitable:} &
+      \begin{cases}
+        EU_C(\texttt{Defy}) = -100q + 100(1-q) \\
+        EU_C(\texttt{Concede}) = 50 \\
+      \end{cases} \\
+      & \text{Concede if } -100q + 100(1-q) < 50 \\
+      & \Rightarrow 100 - 200q < 50 \\
+      & \Rightarrow q > \frac{50}{200} = 1/4 
+    \end{align*}
+  \end{solution}
 
   \part[4]
   Solve for a condition in terms of $p$ and $q$
   such that the union is willing to threaten a strike
   when they believe that the profitable firm will concede
   and the unprofitable firm will defy.
+
+  \begin{solution}
+    \begin{align*}
+      EC_U(\texttt{Threat} | \texttt{Defy}_{\text{unprof}}, \texttt{Concede}_{\text{prof}}) & = p[-100q + 0(1-q)] + (1-p)[50] \\
+      EU_U(\texttt{No Threat}) & = 0
+    \end{align*}
+    Acceptable for a Union to threaten when $EU_C \geq EU_U(\texttt{No Threat})$. \\
+    This can be written as any of the following (they are all equivalent):
+    \begin{align*}
+      -100pq + 50(1-p) & \geq 0 \\
+      -100pq + 50 - 50p & \geq 0 \\
+      50 - 50p & \geq 100pq \\
+      \frac{50-50p}{100p}  &\geq q \\
+      \frac{1-p}{2p} & \geq q \\
+      50 & \geq p(100q + 50) \\
+      \frac{1}{2q +1} & \geq p
+    \end{align*}
+
+    The figure below shows a plot of the ranges of $p$ and $q$ for the conditions above.
+    The area in blue is all combinations of $p,q$ such that the threat is an acceptable risk to the Union.
+    The area in red represents a high enough threat of strike, $q$, such that the profitable firm will concede.
+    \begin{center}
+      \includegraphics{figures/brinksmanship_regions.pdf}
+    \end{center}
+  \end{solution}
 
 \end{parts}
 

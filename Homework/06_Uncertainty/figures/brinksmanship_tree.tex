@@ -1,0 +1,62 @@
+\begin{tikzpicture}[edge from parent/.style={draw, very thick}]
+    \tikzstyle{solid node}=[circle,draw,inner sep=1.5,fill=black]
+    \tikzstyle{hollow node}=[circle,draw,inner sep=.25]
+    \tikzstyle{level 1}=[level distance=15mm,sibling distance=7cm]
+    \tikzstyle{level 2}=[level distance=15mm,sibling distance=3cm]
+    \tikzstyle{level 3}=[level distance=15mm,sibling distance=2.5cm]
+    \tikzstyle{pruned edge from parent}=[draw, very thick, blue, dashed, -]
+    
+    \node(0)[solid node,label=above:{Nature}]{}
+        child{node(1)[solid node]{}
+            child{node(3)[solid node,label=below:{
+                \begin{tabular}{c}
+                     {\color{red} 0}  \\
+                     {\color{blue} 10} 
+                \end{tabular}
+            }]{} edge from parent node[left]{\color{red}No threat}}
+            child{node(4)[solid node,label=right:{\color{blue}Company}]{}
+                child{node[hollow node,label=below:{
+                    \begin{tabular}{c}
+                         {\color{red} 50}  \\
+                         {\color{blue} -40} 
+                    \end{tabular}
+                }]{} edge from parent node[left]{\color{blue}Concede}}
+                child{node[hollow node,label=below:{
+                    \begin{tabular}{c}
+                         {\color{red} -100q + 0(1-q)}  \\
+                         {\color{blue} -10q + 10(1-q)} 
+                    \end{tabular}
+                }]{} edge from parent node[right]{\color{blue}Defy}}
+            edge from parent node[right]{\color{red}Threat}}
+            edge from parent node[left,xshift=0,yshift=5]{Unprofitable (p)}
+        }
+        child{node(2)[solid node]{}
+            child{node(5)[solid node,label=below:{
+              \begin{tabular}{c}
+                {\color{red} 0}  \\
+                {\color{blue} 100} 
+              \end{tabular}
+            }]{}
+            edge from parent node[left]{\color{red}No Threat}}
+            child{node(6)[solid node,label=right:{\color{blue}Company}]{}
+                child{node[hollow node,label=below:{
+                    \begin{tabular}{c}
+                         {\color{red} 50}  \\
+                         {\color{blue} 50} 
+                    \end{tabular}
+                }]{} edge from parent node[left]{\color{blue}Concede}}
+                child{node[hollow node,label=below:{
+                    \begin{tabular}{c}
+                         {\color{red} -100q + 0(1-q)}  \\
+                         {\color{blue} -100q + 100(1-q)} 
+                    \end{tabular}
+                }]{} edge from parent node[right]{\color{blue}Defy}}
+            edge from parent node[right]{\color{red}Threat}}
+            edge from parent node[right]{Profitable (1-p)}
+        }
+        ;
+% information set
+\draw[dashed,rounded corners=7]($(1)+(-.2,.25)$)rectangle($(2)+(.2,-.25)$);
+% specify movers
+\node at ($.5*(1)+.5*(2)$) {\color{red} Union};
+\end{tikzpicture}
