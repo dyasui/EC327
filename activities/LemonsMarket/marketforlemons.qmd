@@ -1,0 +1,26 @@
+---
+name: "Market for Lemons"
+---
+
+You will work through a simplified version of a well-known model
+of adverse selection called the 'Market for Lemons'.
+
+# Model Setup
+
+We will start with a two-player game:
+
+  * The used-car **Salesman** has a car of some hidden quality to sell.
+    + With probability $q$, the car is a *Lemon*, aka it is of *low* quality
+    + and with probability $1-q$, the car is of *high* quality
+    + The salesman can observe the quality of their car,
+      (through mechanical inspections, service history, etc)
+      but the buyer cannot see this information.
+  * The **buyer** would like to buy a car at a price within their budget
+    + Their value of owning a *high* quality car
+      is higher than their value of owning a *lemon*:
+    + $u_b(H)>u_b(L)>0$ 
+    + Suppose that when buying a car, 
+    they subtract the dollar price they have to pay
+    from their subjective benefit of the car
+    (after its true value is observed)
+      - $u_b(\text{H or L quality}) - \text{Price}$
