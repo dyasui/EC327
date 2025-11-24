@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Market for Lemons – EC327 Game Theory</title>
+<title>marketforlemons – EC327 Game Theory</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -76,6 +76,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -290,7 +319,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Slides/#asymmetric-information">Uncertainty and Information</a></li><li class="breadcrumb-item"><a href="../../activities/LemonsMarket/activitysheet.html"><strong>Activity</strong>: Market for Lemons</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -448,13 +477,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Uncertainty and Information</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../Slides/#asymmetric-information" class="sidebar-item-text sidebar-link">
@@ -463,7 +492,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../activities/LemonsMarket/activitysheet.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../activities/LemonsMarket/activitysheet.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><strong>Activity</strong>: Market for Lemons</span></a>
   </div>
 </li>
@@ -516,59 +545,32 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Slides/#asymmetric-information">Uncertainty and Information</a></li><li class="breadcrumb-item"><a href="../../activities/LemonsMarket/activitysheet.html"><strong>Activity</strong>: Market for Lemons</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Market for Lemons</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<p><strong><u>Objective:</u></strong> This activity simulates a used car market where buyers and sellers interact under conditions of asymmetric information. The goal is to demonstrate how private information, adverse selection, and outside options influence market outcomes.</p>
-<section id="game-rules" class="level2">
-<h2 class="anchored" data-anchor-id="game-rules">Game Rules:</h2>
-<section id="planet-money-game-instructions" class="level3">
-<h3 class="anchored" data-anchor-id="planet-money-game-instructions">Planet Money Game Instructions</h3>
-<p>Read the rulebook here: <a href="https://cdn.shopify.com/s/files/1/0345/9180/1483/files/Planet_Money_Game_Instructions_v2.pdf?v=1761334791" class="uri">https://cdn.shopify.com/s/files/1/0345/9180/1483/files/Planet_Money_Game_Instructions_v2.pdf?v=1761334791</a></p>
-<p>Record your game:</p>
+<p>You will work through a simplified version of a well-known model of adverse selection called the ‘Market for Lemons’.</p>
+<section id="model-setup" class="level1">
+<h1>Model Setup</h1>
+<p>We will start with a two-player game:</p>
 <ul>
-<li>Use your phone’s voice memos app to record the game</li>
-<li>Place in the center of the table and speak up so that your voice gets picked up</li>
-<li>“Don’t think to yourself – say whatever you’re thinking out loud! If you don’t say it we won’t know it.”</li>
-</ul>
-<p>Submit to the website here: <a href="https://www.explodingkittens.com/pages/everything-else-you-ll-need" class="uri">https://www.explodingkittens.com/pages/everything-else-you-ll-need</a> to potentially be featured on NPR’s Planet Money podcast.</p>
-<section id="end-of-round" class="level4">
-<h4 class="anchored" data-anchor-id="end-of-round">End of Round:</h4>
-<p>All participants record their earnings:</p>
+<li>The used-car <strong>Salesman</strong> has a car of some hidden quality to sell.
 <ul>
-<li><p>Buyers: Remaining budget + resale value of purchased car (if any).</p></li>
-<li><p>Sellers: Sale profit or scrap value (if unsold).</p></li>
-</ul>
-<p>The roles rotate so that each participant experiences being both a buyer and a seller.</p>
-</section>
-</section>
-</section>
-<section id="discussion-questions" class="level2">
-<h2 class="anchored" data-anchor-id="discussion-questions">Discussion Questions</h2>
-<p>Write these up based on our discussion in class</p>
+<li>With probability <span class="math inline">\(q\)</span>, the car is a <em>Lemon</em>, aka it is of <em>low</em> quality</li>
+<li>and with probability <span class="math inline">\(1-q\)</span>, the car is of <em>high</em> quality</li>
+<li>The salesman can observe the quality of their car, (through mechanical inspections, service history, etc) but the buyer cannot see this information.</li>
+</ul></li>
+<li>The <strong>buyer</strong> would like to buy a car at a price within their budget
 <ul>
-<li><p>What game theoretic concepts apply to this game?</p></li>
-<li><p>Compare this activity to the Market for Lemons model we discussed in class. How well does this game do at teaching the concepts of asymmetric information, adverse selection, and market unraveling?</p></li>
-<li><p>What are some other examples of markets in the real world which you think could potentially be affected by adverse selection in the same way as the market for lemons? What is special about those markets that you think would make them susceptible?</p></li>
+<li>Their value of owning a <em>high</em> quality car is higher than their value of owning a <em>lemon</em>:</li>
+<li><span class="math inline">\(u_b(H)&gt;u_b(L)&gt;0\)</span></li>
+<li>Suppose that when buying a car, they subtract the dollar price they have to pay from their subjective benefit of the car (after its true value is observed)
+<ul>
+<li><span class="math inline">\(u_b(\text{H or L quality}) - \text{Price}\)</span></li>
+</ul></li>
+</ul></li>
 </ul>
 
 
@@ -996,7 +998,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/activities/LemonsMarket/activitysheet.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/activities/LemonsMarket/activitysheet.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/dyasui/EC327/edit/main/activities/LemonsMarket/marketforlemons.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/dyasui/EC327/blob/main/activities/LemonsMarket/marketforlemons.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/dyasui/EC327/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a></p>
 </div>
