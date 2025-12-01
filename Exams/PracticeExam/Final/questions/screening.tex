@@ -1,22 +1,44 @@
 \begin{question}[type=exam]{8}
-
-  You are the Dean of the Faculty at St. Anford University. You hire Assistant Professors for a probationary period of 7 years, after which they come up for tenure and are either promoted and gain a job for life or turned down, in which case they must find another job elsewhere.
+  \textbf{Screening:}
+You are the Dean of the Faculty at St. Anford University. You hire Assistant Professors for a probationary period of 7 years, after which they come up for tenure and are either promoted and gain a job for life or turned down, in which case they must find another job elsewhere.
 Your Assistant Professors come in two types, Good and Brilliant. Any types worse than Good have already been weeded out in the hiring process, but you cannot directly distinguish between Good and Brilliant types. Each individual Assistant Professor knows whether he or she is Brilliant or merely Good. You would like to tenure only the Brilliant types.
 The payoff from a tenured career at St. Anford is \$6 million; think of this as the expected discounted present value of salaries, consulting fees, and book royalties, plus the monetary equivalent of the pride and joy that the faculty member and his or her family would get from being tenured at St. Anford. Anyone denied tenure at St. Anford will get a fac- ulty position at Boondocks College, and the present value of that career is \$1 million.
 Your faculty can do research and publish the findings. But each publication requires effort and time and causes strain on the family; all these are costly to the faculty member. The monetary equivalent of this cost is \$25,000 per publication for a Brilliant Assistant Professor and \$50,000 per publication for a Good one. You can set a minimum number, $N$, of publications that an Assistant Professor must produce in order to achieve tenure.
-
-  \begin{enumerate}[label=\Alph*)]
-    
-    \item (\points{4})
-    What is the minimum number $N$ you could require so that only \textit{brilliant} professors apply and \textit{good} professors don't apply?
-
-    \vspace{4cm}
-
-    \item (\points{4}) 
-    What is the maximum number $N$ that you could require so that \textit{brilliant} professors still want to apply?
-    
-    \vspace{4cm}
-
-  \end{enumerate}
-
+\begin{tasks}
+    \task (\points{4})
+    What is the minimum number $N$ you could require so that only 
+    \textit{brilliant} professors apply 
+    and \textit{good} professors don't apply? \\
+    \PrintSolutionsTF{
+    \fbox{
+      \parbox{\linewidth}{
+      Payoffs in thousands:
+        \begin{align*}
+          U_{\text{Good}}(\text{Apply to St. Anford}) & = 6000 - 50N \\
+          U_{\text{Good}}(\text{Boondocks}) & = 1000 \\
+          6000 - 50N & < 1000 \\
+          & \Rightarrow N > 100
+        \end{align*}
+        Good APs will choose Boondocks over St. Anford as long as $N>100$
+      }
+    }
+    }{\vspace{4cm}}
+    \task (\points{4}) 
+    What is the maximum number $N$ that you could require so that 
+    \textit{brilliant} professors still want to apply? \\
+    \PrintSolutionsTF{
+    \fbox{
+      \parbox{\linewidth}{
+      Payoffs in thousands:
+        \begin{align*}
+          U_{\text{Brilliant}}(\text{Apply to St. Anford}) & = 6000 - 25N \\
+          U_{\text{Brilliant}}(\text{Boondocks}) & = 1000 \\
+          6000 - 25 N & > 1000 \\
+          & \Rightarrow N < 200
+        \end{align*}
+        Brilliant APs will choose St. Anford over Boondocks as long as $N<200$
+      }
+    }
+    }{\vspace{4cm}}
+  \end{tasks}
 \end{question}

@@ -1,5 +1,6 @@
 \documentclass{article}
 
+% load packages
 \usepackage{amssymb, amsmath, amsfonts}
 \usepackage{geometry}
 \usepackage{graphicx}
@@ -9,58 +10,56 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18} 
 \usepackage{multirow,array} % for payoff matrix formatting
-
+\usepackage{adjustbox}
 % use exsheets to create different versions with \vary{}{}
-\usepackage[load-headings]{exsheets}
+\usepackage{exsheets}
 \SetupExSheets{
-  headings = block-wp
+  headings = block-wp,
+  % solution/print = true % set this to true to print key
 }
 
-\definecolor{darkgray}{RGB}{169, 169, 169}
-\definecolor{dimgray}{RGB}{105, 105, 105}
+% mark mc options as correct with custom \correct command
+\newcommand{\ShowAnswers}{false}
+\PrintSolutionsTF{
+\renewcommand{\ShowAnswers}{true} %comment this out if you do not want to show the answers
+}{}
+\newcommand{\correct}{%
+    \expandafter\ifstrequal\expandafter{\ShowAnswers}{true}{\bfseries}{}%
+}
 
+% document formatting settings
 \geometry{left=1.0in,right=1.0in,top=0.75in,bottom=1.0in}
-% \pagestyle{headandfoot}
-% \lhead{EC327 Game Theory}
-% \chead{Final Exam}
-% \rhead{Winter 2024}
-% \runningheadrule
+\setlength{\parindent}{0pt} % turn off para indenting
 
+% title and date for cover page
 \title{
     \textbf{Econ 327: Game Theory} \\ 
     Practice Final Exam
     }
 \author{University of Oregon}
-\date{March 20, 2024}
+\date{December 8th, 2025}
 
+% DOCUMENT BEGINS HERE
 \begin{document}
 
 \maketitle
 
 % SET VERSION NUMBER HERE: 
 \variant{1}
-\begin{center}
-  \Large{\textbf{Version \vary{1}{2}}}
-\end{center}
 
-\begin{center}
-\begin{tabular}{|l|*{\numberofquestions}{c|}c|}\hline
-  Question &
-    \ForEachQuestion{\QuestionNumber{#1}\iflastquestion{}{&}} &
-    Total \\ \hline
-  Points  &
-    \ForEachQuestion{\GetQuestionProperty{points}{#1}\iflastquestion{}{&}} &
-    \pointssum* \\ \hline
-    Score & 
-      \ForEachQuestion{\iflastquestion{}{&}} & \\ \hline 
-\end{tabular}
-\end{center}
+% \begin{center}
+%   \Large{\textbf{Version \vary{1}{2}}}
+% \end{center}
 
+\PrintSolutionsTF{
+  \begin{center}
+   \textbf{\large ANSWER KEY}
+  \end{center}
+}{
+% instructions section
 \begin{itemize}
-  
   \item Complete \textit{all} questions and parts. 
   All questions will be graded.
-
   \item Carefully explain all your answers on short and long answer questions.
 
   An incorrect answer with clear explanation will earn partial credit,
@@ -69,22 +68,19 @@
   \item 
   If you do not understand what a question is asking for, 
   ask for clarification. 
-
 \end{itemize}
 
 \underline{Allowed Materials:}
 
 \begin{itemize}
- 
   \item A single 5" by 3" note card
-
   \item A non-programmable calculator
-
-  \item Pencils, color pens, eraser, ruler/straight-edge etc.
+  \item Pencils, color pens, eraser, etc.
 \end{itemize}
 
 \vspace{1.0in}
 
+% space for student to write their name
 \makebox[.6\textwidth]{Name\enspace\hrulefill}
 
 \vspace{0.5in}
@@ -95,26 +91,35 @@
     question sheets. If you run out of room for an answer,
     continue on the back of the page or another sheet of paper.}}}
 \end{center}
-
 \newpage
-
+}
 
 %------------------------------------------------------------------------------%
 
-\section*{Short Answer}
-\input{questions/screening}
+\section*{Multiple Choice}
 
-\newpage
+% \includequestions{questions/mc}
+% \includequestions[IDs={3,5,6,7,8,10,11,12,13,14}]{questions/mc}
+
+%------------------------------------------------------------------------------%
 
 \section*{Long Answer}
-\input{questions/idMSNE}
 
-\input{questions/taiwansit}
+\includequestions{questions/idMSNE}
+
 \newpage
 
-\input{questions/repeatPD}
+\includequestions{questions/screening}
+
+\newpage
+
+\includequestions{questions/bayesian}
+
+\newpage
+
+\includequestions{questions/repeatPD}
+
 
 %------------------------------------------------------------------------------%
-
 
 \end{document}

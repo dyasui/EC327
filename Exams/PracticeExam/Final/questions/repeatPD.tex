@@ -1,7 +1,6 @@
 \begin{question}[type=exam]{16}
-  
+  \textbf{Repeated Games:}
   Consider the strategic form game below: 
-
   \begin{table}[!h]
     \centering
     \begin{tabular}{*{4}{c|}}
@@ -11,30 +10,54 @@
                          & Defect    & 10 , 0 & 3 , 3 \\ \cline{2-4} 
     \end{tabular} 
   \end{table} 
-
-  \begin{enumerate}[label=\Alph*)]
-
-    \item (\points{4})
-    What will happen when this game is a \textit{one-shot} game and neither player can make any strategic moves?
-    \vspace{2cm}
-
-    \item (\points{2})
-    Will this outcome be \textit{Pareto optimal}?
-    \vspace{2cm}
-
-    \item (\points{4})
-    What could you change about the structure of this game to ensure that a socially optimal outcome will be reached in equilibrium? 
-    \vspace{3cm}
-
-    \item (\points{6})
+  \begin{tasks}
+    \task (\points{4})
+    What will happen when this game is a \textit{one-shot} game 
+    and neither player can make any strategic moves? \\
+    \PrintSolutionsTF{ \fbox{ \parbox{\linewidth}{
+      Prisoner's Dilemma where (Defect, Defect) is the only NE
+      } } }{\vspace{2cm}}
+    \task (\points{2})
+    Will this outcome be \textit{Pareto optimal}? \\
+    \PrintSolutionsTF{ \fbox{ \parbox{\linewidth}{
+      No, the Nash outcome of (3,3) is Pareto dominated by the 
+      (Coop, Coop) outcome of (8,8)
+      \textbf{not Pareto optimal}
+      } } }{\vspace{2cm}}
+    \task (\points{4})
+    What could you change about the structure of this game 
+    to ensure that a socially optimal outcome will be reached in equilibrium? \\
+    \PrintSolutionsTF{ \fbox{ \parbox{\linewidth}{
+      Examples:
+    \begin{itemize}
+      \item reputation
+      \item strategic moves: committing to Cooperation, etc.
+      \item repeated play with indefinite or infinite horizon 
+      w/ common knowledge of history, etc.
+    \end{itemize}
+      } } }{\vspace{3cm}}
+    \task (\points{6})
     Suppose that both players have a \textit{discount factor} of $\delta=3/4$.
     Can a strategy profile of both players using \textit{grim trigger} strategies 
-    be sustained in the game where the strategic form game above is repeated infinitely?
-
-    Show all calculations and explain your answer.
-
-    \vspace{5cm}
-    
-  \end{enumerate}
+    be sustained in the game 
+    where the strategic form game above is repeated infinitely? \\
+    Show all calculations and explain your answer. \\
+    \PrintSolutionsTF{ \fbox{ \parbox{\linewidth}{
+    \begin{align*}
+      PV(\text{Coop}) & = 8 + 8\delta + 8\delta^2 + ... \rightarrow = 8 + \frac{8\delta}{1-\delta} \\
+      PV(\text{Defect}) & = 10 + 3\delta + 3\delta^2 + ... \rightarrow = 10 + \frac{3\delta}{1-\delta} \\
+    \end{align*}
+    Either player will continue to Cooperate forever 
+    as long as the payoff from doing so if greater than the payoff of 
+    \textit{Defecting once}:
+    \begin{align*}
+      8 + \frac{8\delta}{1-\delta} & \geq 10 + \frac{3\delta}{1-\delta} \\
+      \Rightarrow \delta^* \geq \frac{2}{7}\\
+    \end{align*}
+    So as long as both players' discount factor is higher than 2/7
+    ($3/4 > 2/7$ so this is high enough),
+    they are patient enough to sustain Cooperation.
+      } } }{}
+  \end{tasks}
 
 \end{question}

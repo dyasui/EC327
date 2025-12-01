@@ -1,0 +1,347 @@
+\begin{question}[ID=1,type=exam]{4}
+  For the strategic form game below:
+  \begin{table}[!h]
+    \begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabular}{*{4}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\\cline{3-4}
+      \multicolumn{1}{c}{} &      & Left & Right \\\cline{2-4}
+      \multirow{2}*{$P_1$} & Up   & 3,3  & 9,4   \\\cline{2-4}
+                           & Down & 5,2  & 6,1   \\\cline{2-4}
+    \end{tabular}
+    \end{center}
+  \end{table} \\
+  let $p$ be the \textbf{probability Player 1 chooses Up}
+  and let $q$ be the probability \textbf{Player 2 chooses Left}.
+  Choose the correct Expected Utility expression for Player 1's strategy Up.
+  \begin{tasks}
+    \task \vary{$3p + 9(1-p)$}{$3q + 4(1-q)$} 
+    \task \vary{\correct $3q + 9(1-q)$}{$3p + 9(1-p)$}
+    \PrintSolutionsTF{Correct}{}
+    \task \vary{$3q + 4(1-q)$}{$3p + 5(1-q)$}
+    \task \vary{$3p + 5(1-q)$}{\correct $3q + 9(1-q)$}
+    \PrintSolutionsTF{}{Correct}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=2,type=exam]{4}
+  For the strategic form game below:
+  \begin{table}[!h]
+    \begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabular}{*{4}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\\cline{3-4}
+      \multicolumn{1}{c}{} &      & Close & Far \\\cline{2-4}
+      \multirow{2}*{$P_1$} & High & 9,5   & 5,1 \\\cline{2-4}
+                           & Low  & 6,2   & 6,8 \\\cline{2-4}
+    \end{tabular}
+    \end{center}
+  \end{table} \\
+  let $p$ be the \textbf{probability Player 1 chooses High}
+  and let $q$ be the probability \textbf{Player 2 chooses Close}.
+  Choose the correct Expected Utility expression for \textbf{Player 2's strategy Close}.
+  \begin{tasks}
+    \task \vary{\correct $5p + 2(1-p)$}{$1p + 8(1-p)$} \PrintSolutionsTF{Correct}{}
+    \task \vary{$1p + 8(1-p)$}{$5q + 1(1-q)$}
+    \task \vary{$5q + 1(1-q)$}{$2p + 8(1-q)$}
+    \task \vary{$2p + 8(1-q)$}{\correct $5p + 2(1-p)$} \PrintSolutionsTF{}{Correct}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=3,type=exam]{4}
+  For the strategic form game below:
+  \begin{table}[!h]
+    \begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabular}{*{4}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\\cline{3-4}
+      \multicolumn{1}{c}{} &      & Push & Pull  \\\cline{2-4}
+      \multirow{2}*{$P_1$} & Give & 6, 9 & 12, 8 \\\cline{2-4}
+                           & Take & 9, 4 & 7 ,10 \\\cline{2-4}
+    \end{tabular}
+    \end{center}
+  \end{table} \\
+  Which of the following mixed strategy profiles is a Nash equilibrium?
+  \begin{tasks}
+    \task \vary{
+      \correct $\sigma_1$ = (6/7 Give, 1/7 Take), $\sigma_2$ = (5/8 Push, 3/8 Pull)
+    }{
+      $\sigma_1$ = (2/5 Give, 3/5 Take), $\sigma_2$ = (1/2 Push, 1/2 Pull)
+    }
+    \task \vary{
+      $\sigma_1$ = (1/2 Give, 1/2 Take), $\sigma_2$ = (1/2 Push, 1/2 Pull)
+    }{
+      \correct $\sigma_1$ = (6/7 Give, 1/7 Take), $\sigma_2$ = (5/8 Push, 3/8 Pull)
+    }
+    \task \vary{
+      $\sigma_1$ = (1/3 Give, 2/3 Take), $\sigma_2$ = (5/6 Push, 1/6 Pull)
+    }{
+      $\sigma_1$ = (1/2 Give, 1/2 Take), $\sigma_2$ = (1/2 Push, 1/2 Pull)
+    }
+    \task \vary{
+      $\sigma_1$ = (2/5 Give, 3/5 Take), $\sigma_2$ = (1/2 Push, 1/2 Pull)
+    }{
+      $\sigma_1$ = (1/3 Give, 2/3 Take), $\sigma_2$ = (5/6 Push, 1/6 Pull)
+    }
+  \end{tasks}
+\end{question}
+
+  \begin{question}[ID=4,type=exam]{4}
+  Consider the strategic form game below:
+  \begin{table}[h!]
+    \begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabular}{*{4}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\\cline{3-4}
+      \multicolumn{1}{c}{} &    & X   & Y  \\\cline{2-4}
+      \multirow{3}*{$P_1$}  & A & 2,3 & 6,1 \\\cline{2-4}
+                            & B & 4,2 & 1,3 \\\cline{2-4}
+                            & C & 3,1 & 2,4 \\\cline{2-4}
+    \end{tabular}
+    \end{center}
+  \end{table}
+  Suppose Player 1 plays A with probability $\alpha$,
+  B with probability $\beta$,
+  and C with probability $\gamma$.
+  When will Player 1 be indifferent between playing X and playing Y?
+  \begin{tasks}
+    \task \vary{$2\alpha+4\beta+3\gamma=6\alpha+1\beta+2\gamma$}{$3\alpha+1\alpha=2\beta+3\beta=1\gamma+4\gamma$}
+    \task \vary{$3\alpha+1\alpha=2\beta+3\beta=1\gamma+4\gamma$}{\correct $3\alpha+2\beta+1\gamma=1\alpha+3\beta+4\gamma$}
+    \PrintSolutionsTF{}{Correct}
+    \task \vary{\correct $3\alpha+2\beta+1\gamma=1\alpha+3\beta+4\gamma$}{$\alpha=\beta=\gamma$}
+    \PrintSolutionsTF{Correct}{}
+    \task \vary{$\alpha=\beta=\gamma$}{$2\alpha+4\beta+3\gamma=6\alpha+1\beta+2\gamma$}
+  \end{tasks}
+\end{question}
+
+  \begin{question}[ID=5,type=exam]{4} 
+  A player using a \textbf{mixed strategy} means that:
+  \begin{tasks}
+    \task \vary
+    {some parts of their strategy are played simultaneously and other parts are played sequentially}
+    {\correct they are internally uncertain about which action they will choose because they are acting randomly} % correct
+    \task \vary
+    {they are confused about what action their opponent is taking}
+    {some parts of their strategy are played simultaneously and other parts are played sequentially}
+    \task \vary
+    {\correct they are internally uncertain about which action they will choose because they are acting randomly} % correct
+    {they will regret not having chosen their a pure strategy instead}
+    \task \vary
+    {they will regret not having chosen their a pure strategy instead}
+    {they are confused about what action their opponent is taking}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=6,type=exam]{4}
+  A game featuring \textbf{asymmetric information}:
+  \begin{tasks}
+    \task \vary
+    {\correct has some players who have access to private information which is not directly observable to others} % correct
+    {is repeated multiple times by the same players}
+    \task \vary
+    {means that one player has a strategy with no equivalent strategy avaibable to any other player}
+    {has Nature acting as a player even though she doesn't have any preference over outcomes}
+    \task \vary
+    {has Nature acting as a player even though she doesn't have any preferences}
+    {means that one player has a strategy with no equivalent strategy avaibable to any other player}
+    \task \vary
+    {is repeated multiple times by the same players}
+    {\correct has some players who have access to private information which is not directly observable to others} % correct
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=7,type=exam]{4}
+  \setlist{nolistsep}
+  By \textbf{\vary{screening}{signaling}}:
+  \begin{tasks}
+    \task \vary
+    {\correct a player attempts to learn about some private information held by others by designing an incentive mechanism} % correct
+    {only players with the `bad' condition sort into a market}
+    \task \vary
+    {a player can reveal their own private information through their actions}
+    {\correct a player can reveal their own private information through their actions} % correct
+    \task \vary
+    {only players with the `bad' condition sort into a market}
+    {a player can reveal the private information held by others by designing an incentive mechanism}
+    \task \vary
+    {only mixed strategies will be played in equilibrium}
+    {only mixed strategies will be played in equilibrium}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=8,type=exam]{4}
+  Consider the strategic form game below:
+  \begin{table}[h!]
+    \begin{center}
+    \begin{tabular}{*{5}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{3}{c}{$P_2$} \\\cline{3-5}
+      \multicolumn{1}{c}{} &         & Left & Middle & Right \\\cline{2-5}
+      \multirow{3}*{$P_1$}& Up       & 0,1  & 9,0    & 2,3 \\\cline{2-5}
+                          & Straight & 5,9  & 7,3    & 1,7 \\\cline{2-5}
+                          & Down     & 7,5  & 10,10  & 3,5 \\\cline{2-5}
+    \end{tabular}
+    \end{center}
+  \end{table} \\
+  How many Nash equilibria exist in this simultaneous game,
+  including both \textbf{pure} and \textbf{mixed} strategies?
+  \begin{tasks}
+    \task \correct One equilibrium
+    \task Two equilibria
+    \task Three equilibria
+    \task An infinite number of equilibria
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=9,type=exam]{4}
+  An \textbf{information set}:
+  \begin{tasks}
+    \task \vary
+    {is used by game theorists to signal how they want their games to be played}
+    {holds all pieces of information which are publically observable to all players}
+    \task \vary
+    {tells a player what action to take}
+    {is used by game theorists to signal how they want their games to be played}
+    \task \vary
+    {\correct contains all decision nodes which a player cannot tell the difference between when they reach that part of the game} % correct
+    {tells a player what action to take}
+    \task \vary
+    {holds all pieces of information which are publically observable to all players}
+    {\correct contains all decision nodes which a player cannot tell the difference between when they reach that part of the game} % correct
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=10,type=exam]{4}
+  Consider the following lottery: \\
+  \begin{itemize}
+    \item with probability \vary{1/4}{1/2} you will receive \$1,600.
+    \item with probability \vary{3/4}{1/2} you only receive \$16.
+  \end{itemize}
+  Suppose someone has a risk-averse utility function of $u(\$x) = \sqrt{\$x}$.
+  For what certain amount of dollars, $x$, will this person be indifferent
+  between taking the certain payment with probability of 1
+  and taking the lottery defined above?
+  \begin{tasks}
+    \task \vary{\correct \$169}{\$169}
+    \task \vary{\$412}{\correct \$412}
+    \task \vary{\$484}{\$484}
+    \task \vary{\$808}{\$808}
+  \end{tasks}
+\end{question}
+
+
+\begin{question}[ID=11,type=exam]{4}
+  Identify the class concept that most closely describes the situation below: \\
+  Conspicuous consumption describes the phenomenon of buying flashy luxury goods with visible branding
+  such as Louis Vuitton, Gucci, Prada, etc.
+  in order to display the buyer's level of wealth to be able to afford such goods.
+  \begin{tasks}
+    \task \vary
+    {Brinksmanship}{Risk sharing}
+    \task \vary
+    {Mixed Strategy Nash Equilibrium}{\correct Signaling}
+    \task \vary
+    {Risk sharing}{Brinksmanship}
+    \task \vary
+    {\correct Signaling}{Mixed Strategy Nash Equilibrium}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=12,type=exam]{4}
+  In the \textbf{Prisoner’s Dilemma}, mutual cooperation:
+  \begin{tasks}
+    \task \vary
+    {is a dominant strategy equilibrium}
+    {\correct Pareto dominates the outcome of mutual defection}
+    \task \vary
+    {\correct Pareto dominates the outcome of mutual defection}
+    {is stable}
+    \task \vary
+    {is stable}
+    {is a credible threat}
+    \task \vary
+    {is a credible threat}
+    {is a dominant strategy equilibrium}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=13,type=exam]{4}
+  The Folk Theorem states that:
+  \begin{tasks}
+    \task \vary{\correct Any individually rational and feasible outcome can be reached in a repeated game for some sufficiently high enough discount factor.}{The Prisoners' Dilemma is the only game with a unique Nash equilibrium.}
+    \task \vary{All Pareto optimal outcomes can always be reached in a Nash equilibrium.}{\correct Any individually rational and feasible outcome can be reached in a repeated game for some sufficiently high enough discount factor.}
+    \task \vary{No matter how hard you try, some folks will just never cooperate}{All Pareto optimal outcomes can always be reached in a Nash equilibrium.}
+    \task \vary{The Prisoners' Dilemma is the only game with a unique Nash equilibrium.}{No matter how hard you try, some folks will just never cooperate}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=14,type=exam]{4}
+  Consider the Prisoners' Dilemma game with payoffs as shown in the strategic form table below: \\
+  \begin{table}[!h]
+    \begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabular}{*{4}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\\cline{3-4}
+      \multicolumn{1}{c}{} &           & Cooperate         & Cheat \\\cline{2-4}
+      \multirow{2}*{$P_1$} & Cooperate & \vary{5, 5}{6, 6} & \vary{-7,9}{-6,10}\\\cline{2-4}
+                           &     Cheat & \vary{9,-7}{10,-6} & \vary{0, 0}{0, 0}\\\cline{2-4}
+    \end{tabular}
+    \end{center}
+  \end{table} \\
+  Suppose Player 2 is utilizing a 
+    \textbf{Tit-for-Tat} strategy in which they will start off cooperating,
+    and after that they will play whatever strategy their oponent used in the previous round. \\
+    Which of the following represents Player 1's present value
+    of cheating in the first period and then going cooperating in all following periods?
+  \begin{tasks}
+    \task \vary
+    {$9 + 0\delta + 0\delta^2 + 0\delta^3 + ... = 9$}
+    {$10 + 0\delta + 0\delta^2 + 0\delta^3 + ... = 10$}
+    \task \vary
+    {$5 + 5\delta + 5\delta^2 + 5\delta^3 + ... = \frac{5}{1-\delta}$}
+    {$6 + 6\delta + 6\delta^2 + 6\delta^3 + ... = \frac{6}{1-\delta}$}
+    \task \vary
+    {$9 + 5\delta + 5\delta^2 + 5\delta^3 + ... = 9 + 5\frac{\delta}{1-\delta}$}
+    {$10 + 6\delta + 6\delta^2 + 6\delta^3 + ... = 10 + 6\frac{\delta}{1-\delta}$}
+    \task \vary
+    {\correct $9 - 7\delta + 5\delta^2 + 5\delta^3 + ... = 9 - 7\delta + 5\frac{\delta^2}{1-\delta}$}
+    {\correct $10 - 6\delta + 6\delta^2 + 6\delta^3 + ... = 10 - 6\delta + 6\frac{\delta^2}{1-\delta}$}
+    \PrintSolutionsTF{Correct}{}
+  \end{tasks}
+\end{question}
+
+\begin{question}[ID=15,type=exam]{4}
+  Consider the Prisoners' Dilemma game with payoffs as shown in the strategic form table below: \\
+  \begin{table}[!h]
+    \begin{center}
+    \setlength{\extrarowheight}{2pt}
+    \begin{tabular}{*{4}{c|}}
+      \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\\cline{3-4}
+      \multicolumn{1}{c}{} &           & Cooperate         & Cheat \\\cline{2-4}
+      \multirow{2}*{$P_1$} & Cooperate & \vary{8, 8}{9, 9} & \vary{2,10}{5,15}\\\cline{2-4}
+                           &     Cheat & \vary{10,2}{15,5} & \vary{4, 4}{7, 7}\\\cline{2-4}
+    \end{tabular}
+    \end{center}
+  \end{table} \\
+  Suppose Player 2 is utilizing a 
+    \textbf{Grim Trigger} strategy in which they will start off cooperating,
+    and continue to cooperate unless their opponent has ever played Cheat,
+    in which case they will play Cheat in all periods following. \\
+    Which of the following represents Player 1's present value
+    of cheating in the first period (and in all following periods)?
+    $\delta$ is the per-period discount rate.
+  \begin{tasks}
+    \task \vary
+    {\correct $10 + 4\delta + 4\delta^2 + 4\delta^3 + ... = 10 + 4\frac{\delta}{1-\delta}$}
+    {\correct $15 + 7\delta + 7\delta^2 + 7\delta^3 + ... = 15 + 7\frac{\delta}{1-\delta}$}
+    \PrintSolutionsTF{Correct}{}
+    \task \vary
+    {$8 + 8\delta + 8\delta^2 + 8\delta^3 + ... = \frac{8}{1-\delta}$}
+    {$9 + 9\delta + 9\delta^2 + 9\delta^3 + ... = \frac{9}{1-\delta}$}
+    \task \vary
+    {$10 + 8\delta + 8\delta^2 + 8\delta^3 + ... = 10 + 8\frac{\delta}{1-\delta}$}
+    {$15 + 9\delta + 9\delta^2 + 9\delta^3 + ... = 15 + 9\frac{\delta}{1-\delta}$}
+    \task \vary
+    {$10 + 2\delta + 8\delta^2 + 8\delta^3 + ... = 10 + 2\delta + 8\frac{\delta^2}{1-\delta}$}
+    {$15 + 5\delta + 9\delta^2 + 9\delta^3 + ... = 15 + 5\delta + 9\frac{\delta^2}{1-\delta}$}
+  \end{tasks}
+\end{question}

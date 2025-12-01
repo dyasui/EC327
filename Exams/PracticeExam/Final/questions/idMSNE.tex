@@ -1,7 +1,6 @@
-\begin{question}[type=exam]{16}
-
-Consider the strategic form game below: 
-
+\begin{question}[type=exam]{12}
+  \textbf{Mixed Strategies:}
+Consider the strategic form game below: \\
 \begin{table}[!h]
   \begin{center}
     \begin{tabular}{*{6}{c|}}
@@ -13,31 +12,101 @@ Consider the strategic form game below:
       & \textbf{Ground}    & 0 , 2 & 0 , 2 & 1 , 0 & 3, -1\\ \cline{2-6} 
     \end{tabular}
   \end{center}
-\end{table}
-
-\begin{enumerate}[label=\Alph*)]
-  \item (\points{4})
-  Find any \textbf{pure strategy} Nash equilibria
-  \vspace{3cm}
-
-  \item (\points{6})
+\end{table} \\
+\begin{tasks}
+  \task (\points{4})
+  Find any \textbf{pure strategy} Nash equilibria \\
+    \PrintSolutionsTF{
+    \fbox{
+      \parbox{\linewidth}{
+        \vspace{-4mm}
+        \begin{minipage}{.5\linewidth}
+          \begin{align*}
+            BR_1(Hall)     & = Mezzanine \\ 
+            BR_1(Office)   & = Roof \\ 
+            BR_1(Library)  & = Ground \\
+            BR_1(Bathroom) & = Roof \\
+          \end{align*} 
+        \end{minipage}
+        \begin{minipage}{.5\linewidth}
+          \begin{align*}
+            BR_2(Roof)      & = \{Hall, Library\} \\ 
+            BR_2(Mezzanine) & = \{Office, Library\} \\ 
+            BR_2(Ground)    & = \{Hall, Office\} \\
+          \end{align*} 
+        \end{minipage}
+        No intersection of best responses, so \textbf{No PSNE}
+      }
+    }
+    }{\vspace{1.5cm}}
+  \task (\points{4})
   Consider the following mixed strategy profile: 
   \begin{itemize}
     \item Player 1 plays 1/3 \textbf{Roof}, 0 \textbf{Mezzanine}, and 2/3 \textbf{Ground}
     \item Player 2 plays 0 \textbf{Hall}, 1/2 \textbf{Office}, 1/2 \textbf{Library}, and 0 \textbf{Bathroom}
   \end{itemize}
-  Check whether this is a \textbf{mixed strategy Nash equilibrium} and explain why or why not. 
-  \vspace{5cm}
-
-  \item (\points{6})
+  Check whether this is a \textbf{mixed strategy Nash equilibrium} 
+  and explain why or why not. \\
+  \PrintSolutionsTF{
+  \fbox{
+    \parbox{\linewidth}{
+       What is $P_1$'s best response to $(1/2 Office, ~ 1/2 Library)$? 
+       \begin{align*}
+         EU_1(Roof) & = 0 (0) +  1/2 (1) + 1/2 (0) + 0 (5) = \underline{1/2} \\
+         EU_1(Mezz) & = 0 (1) +  1/2 (0) + 1/2 (0) + 0 (4) = 0 \\
+         EU_1(Grnd) & = 0 (0) +  1/2 (0) + 1/2 (1) + 0 (3) = \underline{1/2} \\
+       \end{align*} \vspace{-1cm} \\
+       So the best response to $(1/2 Office, ~ 1/2 Library)$ 
+       is any strategy which mixes between Roof and Ground with positive probability
+       (and never Mezzanine). \\
+       What is $P_2$'s best response to $(1/3 Roof, ~ 2/3 Ground)$? 
+       \begin{align*}
+         EU_1(Hall) & = 1/3 (2) +  0 (1) + 2/3 (2) = \underline{2} \\
+         EU_1(Offc) & = 1/3 (1) +  0 (2) + 2/3 (2) = 5/3 \\
+         EU_1(Libr) & = 1/3 (2) +  0 (2) + 2/3 (0) = 2/3 \\
+         EU_1(Bath) & = 1/3 (0) +  0 (0) + 2/3 (1) = 1/2 \\
+       \end{align*} \vspace{-1cm} \\
+       So the best response to $(1/3 Roof, ~ 2/3 Ground)$ 
+       is to play $Hall$ with probability of one. \\
+       \textbf{\textit{Not} a Nash equilibrium.}
+       Player 2 would prefer to play ($Hall$) over ($1/2 Office, ~ 1/2 Library$). \\
+    }
+  }
+  \newpage
+  } {\vspace{4cm}}
+  \task (\points{4})
   Now consider the strategy profile:
   \begin{itemize}
-    \item Player 1 plays 1/4 \textbf{Roof}, 1/2 \textbf{Mezzanine}, and 1/4 \textbf{Ground}
+    \item Player 1 plays 2/5 \textbf{Roof}, 2/5 \textbf{Mezzanine}, and 1/5 \textbf{Ground}
     \item Player 2 plays 1/3 \textbf{Hall}, 1/3 \textbf{Office}, 1/3 \textbf{Library}, and 0 \textbf{Bathroom}
   \end{itemize}
-  Check whether this is a \textbf{mixed strategy Nash equilibrium} and explain why or why not.
-  \vspace{5cm}
-
-\end{enumerate}
-
+  Check whether this is a \textbf{mixed strategy Nash equilibrium} 
+  and explain why or why not. \\
+  \PrintSolutionsTF{
+  \fbox{
+    \parbox{\linewidth}{
+       What is $P_1$'s best response to $(1/3 Hall, ~ 1/3 Office, ~ 1/3 Library)$? 
+       \begin{align*}
+         EU_1(Roof) & = 1/3 (0) +  1/3 (1) + 1/3 (0) + 0 (5) = \underline{1/3} \\
+         EU_1(Mezz) & = 1/3 (1) +  1/3 (0) + 1/3 (0) + 0 (4) = \underline{1/3} \\
+         EU_1(Grnd) & = 1/3 (0) +  1/3 (0) + 1/3 (1) + 0 (3) = \underline{1/3} \\
+       \end{align*} \vspace{-1cm} \\
+       So the best response is any strategy
+       which mixes between Roof, Mezz., and Ground with positive probability \\
+       What is $P_2$'s best response to $(2/5 Roof, ~ 2/5 Mezzanine, ~ 2/3 Ground)$? 
+       \begin{align*}
+         EU_1(Hall) & = 2/5 (2) +  2/5 (1) + 1/5 (2) = \underline{8/5} \\
+         EU_1(Offc) & = 2/5 (1) +  2/5 (2) + 1/5 (2) = \underline{8/5} \\
+         EU_1(Libr) & = 2/5 (2) +  2/5 (2) + 1/5 (0) = \underline{8/5} \\
+         EU_1(Bath) & = 2/5 (0) +  2/5 (0) + 1/5 (1) = 1/5 \\
+       \end{align*} \vspace{-1cm} \\
+       So the best response is any strategy
+       which mixes between Hall, Office, and Library with positive probability
+       (and never Bathroom). \\
+       \textbf{This \textit{is} a Nash equilibrium.}
+       Both players are best responding to the other's strategy.
+    }
+  }
+  }{\vspace{4cm}}
+\end{tasks}
 \end{question}
