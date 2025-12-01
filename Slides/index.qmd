@@ -66,9 +66,9 @@ title: "Lecture Slides"
 ```
 
 ### Repeated Games
-[Expand Slides](09RepeatedGames/main.pdf){.btn .btn-outline-primary .btn role="button"}
+[Expand Slides](09RepeatedGames/09-main.pdf){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <div>
-  <iframe class="slide deck" src="09RepeatedGames/main.pdf" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+  <iframe class="slide deck" src="09RepeatedGames/09-main.pdf" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 </div>
 ```

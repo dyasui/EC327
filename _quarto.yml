@@ -95,6 +95,6 @@ website:
   announcement: 
     icon: clipboard2-check-fill
     dismissable: true
-    content: "No class on Wednesday, Nov 26th. Enjoy your Thanksgiving!"
+    content: "Final exam: Monday, Dec 8th 10:15am-12:15pm"
     type: warning
     position: below-navbar
