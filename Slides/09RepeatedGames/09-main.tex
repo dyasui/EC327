@@ -77,7 +77,7 @@
 \title{Repeated Games}
 \author{Dante Yasui }
 \institute{EC327 Game Theory}
-\date{Winter 2024}
+\date{Fall 2025}
 \titlegraphic{\includegraphics[scale=.4]{UOSignature-356.png}}
 
 
@@ -103,26 +103,48 @@
 
 \begin{frame}{}
   \begin{itemize}
-    \item So far, we have only seen games as either \textbf{one-shot} simultaneous or \textbf{finitely sequential}
-    \item However, these representations can only do so much to represent the many complicated social interactions in which \textbf{repeated interactions} between the same players matter
-    \item Specifically, in the Strategic Moves section, we discussed how \alert{reputation} could play a role, but only allowed it to show up in the single-shot game through changing the payoffs 
+    \item So far, games either \textbf{one-shot} simultaneous or \textbf{finitely sequential}
+    \item However, how to represent situations in which \textbf{repeated interactions} matter?
+    \begin{itemize}
+      \item how do \alert{reputation}, \alert{shared history}, etc matter for strategy?
+      \item power of \alert{institutions} to coordinate cooperation
+    \end{itemize}
   \end{itemize} 
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}
+  What do we mean by \textit{cooperative} behavior?
   \begin{itemize}
-    \item In games with \textbf{finite} numbers of player actions, 
-    we can always use \alert{backwards induction} to find equilibria
-    \item But often players \textit{do not know} when certain social interactions will end, 
-    and so it won't be reasonable to assume that they can backwards induct
-  \end{itemize} 
+    \item \textit{altruism}
+    \begin{itemize}
+      \item cooperation that ignores self-interest
+    \end{itemize}
+    \item \textbf{\alert{cooperation}}
+    \begin{itemize}
+      \item cooperation achieved through self-interest
+      \item rational self-interest may still lead to pro-social behavior
+      \item more robust policy design to assume everyone is self-interested
+      (but will respond to incentives)
+      than to try to rely on pure altruism
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}
+  \frametitle{Repeated Games Framework}
+  A \alert{repeated game} is one with potentially infinte subgames
   \begin{itemize}
-    \item When games are repeated over time, we will use \textit{discount rates} to represent how patient players are
-    \item We can combine this with probability that a game will end at each stage in what we will call an \alert{effective rate of return}
-  \end{itemize} 
+    \item payoffs are realised in each stage
+    \item each \textit{stage} subgame is identical and itself is a \textit{regular} subgame
+    \item \alert{perfect recall} - common knowledge of shared history
+    \begin{itemize}
+      \item strategies may be contingent on observed history
+    \end{itemize}
+    \item stage subgame is either repeated \textit{infinitely} or \textit{probabalistically}
+  \end{itemize}
+  \begin{itemize}
+    \item infinite strategies are complicated, so we need \alert{present value} calculations
+  \end{itemize}
 \end{frame}
 
 \section*{Trench Warfare as Repeated Prisonners' Dilemma}
