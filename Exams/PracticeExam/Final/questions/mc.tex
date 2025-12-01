@@ -15,12 +15,12 @@
   and let $q$ be the probability \textbf{Player 2 chooses Left}.
   Choose the correct Expected Utility expression for Player 1's strategy Up.
   \begin{tasks}
+    \task \vary{$3p + 5(1-q)$}{\correct $3q + 9(1-q)$}
+    \task \vary{$3q + 4(1-q)$}{$3p + 5(1-q)$}
     \task \vary{$3p + 9(1-p)$}{$3q + 4(1-q)$} 
+    \PrintSolutionsTF{}{Correct}
     \task \vary{\correct $3q + 9(1-q)$}{$3p + 9(1-p)$}
     \PrintSolutionsTF{Correct}{}
-    \task \vary{$3q + 4(1-q)$}{$3p + 5(1-q)$}
-    \task \vary{$3p + 5(1-q)$}{\correct $3q + 9(1-q)$}
-    \PrintSolutionsTF{}{Correct}
   \end{tasks}
 \end{question}
 
@@ -41,15 +41,15 @@
   and let $q$ be the probability \textbf{Player 2 chooses Close}.
   Choose the correct Expected Utility expression for \textbf{Player 2's strategy Close}.
   \begin{tasks}
-    \task \vary{\correct $5p + 2(1-p)$}{$1p + 8(1-p)$} \PrintSolutionsTF{Correct}{}
-    \task \vary{$1p + 8(1-p)$}{$5q + 1(1-q)$}
     \task \vary{$5q + 1(1-q)$}{$2p + 8(1-q)$}
     \task \vary{$2p + 8(1-q)$}{\correct $5p + 2(1-p)$} \PrintSolutionsTF{}{Correct}
+    \task \vary{\correct $5p + 2(1-p)$}{$1p + 8(1-p)$} \PrintSolutionsTF{Correct}{}
+    \task \vary{$1p + 8(1-p)$}{$5q + 1(1-q)$}
   \end{tasks}
 \end{question}
 
 \begin{question}[ID=3,type=exam]{4}
-  For the strategic form game below:
+  For the strategic form game below: \\
   \begin{table}[!h]
     \begin{center}
     \setlength{\extrarowheight}{2pt}
@@ -64,14 +64,14 @@
   Which of the following mixed strategy profiles is a Nash equilibrium?
   \begin{tasks}
     \task \vary{
-      \correct $\sigma_1$ = (6/7 Give, 1/7 Take), $\sigma_2$ = (5/8 Push, 3/8 Pull)
-    }{
-      $\sigma_1$ = (2/5 Give, 3/5 Take), $\sigma_2$ = (1/2 Push, 1/2 Pull)
-    }
-    \task \vary{
       $\sigma_1$ = (1/2 Give, 1/2 Take), $\sigma_2$ = (1/2 Push, 1/2 Pull)
     }{
       \correct $\sigma_1$ = (6/7 Give, 1/7 Take), $\sigma_2$ = (5/8 Push, 3/8 Pull)
+    }
+    \task \vary{
+      $\sigma_1$ = (2/5 Give, 3/5 Take), $\sigma_2$ = (1/2 Push, 1/2 Pull)
+    }{
+      $\sigma_1$ = (1/3 Give, 2/3 Take), $\sigma_2$ = (5/6 Push, 1/6 Pull)
     }
     \task \vary{
       $\sigma_1$ = (1/3 Give, 2/3 Take), $\sigma_2$ = (5/6 Push, 1/6 Pull)
@@ -79,15 +79,15 @@
       $\sigma_1$ = (1/2 Give, 1/2 Take), $\sigma_2$ = (1/2 Push, 1/2 Pull)
     }
     \task \vary{
-      $\sigma_1$ = (2/5 Give, 3/5 Take), $\sigma_2$ = (1/2 Push, 1/2 Pull)
+      \correct $\sigma_1$ = (6/7 Give, 1/7 Take), $\sigma_2$ = (5/8 Push, 3/8 Pull)
     }{
-      $\sigma_1$ = (1/3 Give, 2/3 Take), $\sigma_2$ = (5/6 Push, 1/6 Pull)
+      $\sigma_1$ = (2/5 Give, 3/5 Take), $\sigma_2$ = (1/2 Push, 1/2 Pull)
     }
   \end{tasks}
 \end{question}
 
   \begin{question}[ID=4,type=exam]{4}
-  Consider the strategic form game below:
+  Consider the strategic form game below: \\
   \begin{table}[h!]
     \begin{center}
     \setlength{\extrarowheight}{2pt}
@@ -99,7 +99,7 @@
                             & C & 3,1 & 2,4 \\\cline{2-4}
     \end{tabular}
     \end{center}
-  \end{table}
+  \end{table} \\
   Suppose Player 1 plays A with probability $\alpha$,
   B with probability $\beta$,
   and C with probability $\gamma$.
@@ -124,11 +124,11 @@
     {they are confused about what action their opponent is taking}
     {some parts of their strategy are played simultaneously and other parts are played sequentially}
     \task \vary
-    {\correct they are internally uncertain about which action they will choose because they are acting randomly} % correct
-    {they will regret not having chosen their a pure strategy instead}
-    \task \vary
     {they will regret not having chosen their a pure strategy instead}
     {they are confused about what action their opponent is taking}
+    \task \vary
+    {\correct they are internally uncertain about which action they will choose because they are acting randomly} % correct
+    {they will regret not having chosen their a pure strategy instead}
   \end{tasks}
 \end{question}
 
@@ -213,18 +213,18 @@
 \begin{question}[ID=10,type=exam]{4}
   Consider the following lottery: \\
   \begin{itemize}
-    \item with probability \vary{1/4}{1/2} you will receive \$1,600.
-    \item with probability \vary{3/4}{1/2} you only receive \$16.
+    \item with probability 1/3 you will receive \$900.
+    \item with probability 2/3 you only receive \$36.
   \end{itemize}
   Suppose someone has a risk-averse utility function of $u(\$x) = \sqrt{\$x}$.
   For what certain amount of dollars, $x$, will this person be indifferent
   between taking the certain payment with probability of 1
   and taking the lottery defined above?
   \begin{tasks}
-    \task \vary{\correct \$169}{\$169}
-    \task \vary{\$412}{\correct \$412}
-    \task \vary{\$484}{\$484}
-    \task \vary{\$808}{\$808}
+    \task \correct \$144
+    \task \$324
+    \task \$468
+    \task \$484
   \end{tasks}
 \end{question}
 
@@ -281,9 +281,9 @@
     \setlength{\extrarowheight}{2pt}
     \begin{tabular}{*{4}{c|}}
       \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\\cline{3-4}
-      \multicolumn{1}{c}{} &           & Cooperate         & Cheat \\\cline{2-4}
-      \multirow{2}*{$P_1$} & Cooperate & \vary{5, 5}{6, 6} & \vary{-7,9}{-6,10}\\\cline{2-4}
-                           &     Cheat & \vary{9,-7}{10,-6} & \vary{0, 0}{0, 0}\\\cline{2-4}
+      \multicolumn{1}{c}{} &           & Cooperate & Cheat \\\cline{2-4}
+      \multirow{2}*{$P_1$} & Cooperate & 16, 16    &  8, 36 \\\cline{2-4}
+                           &     Cheat & 36, 8     & 12, 12 \\\cline{2-4}
     \end{tabular}
     \end{center}
   \end{table} \\
@@ -293,19 +293,15 @@
     Which of the following represents Player 1's present value
     of cheating in the first period and then going cooperating in all following periods?
   \begin{tasks}
-    \task \vary
-    {$9 + 0\delta + 0\delta^2 + 0\delta^3 + ... = 9$}
-    {$10 + 0\delta + 0\delta^2 + 0\delta^3 + ... = 10$}
-    \task \vary
-    {$5 + 5\delta + 5\delta^2 + 5\delta^3 + ... = \frac{5}{1-\delta}$}
-    {$6 + 6\delta + 6\delta^2 + 6\delta^3 + ... = \frac{6}{1-\delta}$}
-    \task \vary
-    {$9 + 5\delta + 5\delta^2 + 5\delta^3 + ... = 9 + 5\frac{\delta}{1-\delta}$}
-    {$10 + 6\delta + 6\delta^2 + 6\delta^3 + ... = 10 + 6\frac{\delta}{1-\delta}$}
-    \task \vary
-    {\correct $9 - 7\delta + 5\delta^2 + 5\delta^3 + ... = 9 - 7\delta + 5\frac{\delta^2}{1-\delta}$}
-    {\correct $10 - 6\delta + 6\delta^2 + 6\delta^3 + ... = 10 - 6\delta + 6\frac{\delta^2}{1-\delta}$}
+    \task 
+    $36 + 0\delta + 0\delta^2 + 0\delta^3 + ... = 36$
+    \task 
+    \correct $36 + 8\delta + 16\delta^2 + 16\delta^3 + ... = 36 + 8\delta + 16\frac{\delta^2}{1-\delta}$
     \PrintSolutionsTF{Correct}{}
+    \task 
+    $16 + 16\delta + 16\delta^2 + 16\delta^3 + ... = \frac{16}{1-\delta}$
+    \task 
+    $36 + 12\delta + 12\delta^2 + 12\delta^3 + ... = 36 + \frac{12 \delta}{1-\delta}$
   \end{tasks}
 \end{question}
 
@@ -316,9 +312,9 @@
     \setlength{\extrarowheight}{2pt}
     \begin{tabular}{*{4}{c|}}
       \multicolumn{2}{c}{} & \multicolumn{2}{c}{$P_2$} \\\cline{3-4}
-      \multicolumn{1}{c}{} &           & Cooperate         & Cheat \\\cline{2-4}
-      \multirow{2}*{$P_1$} & Cooperate & \vary{8, 8}{9, 9} & \vary{2,10}{5,15}\\\cline{2-4}
-                           &     Cheat & \vary{10,2}{15,5} & \vary{4, 4}{7, 7}\\\cline{2-4}
+      \multicolumn{1}{c}{} &           & Cooperate & Cheat \\\cline{2-4}
+      \multirow{2}*{$P_1$} & Cooperate & 3, 3 & 1, 4 \\\cline{2-4}
+                           &     Cheat & 4, 1 & 2, 2 \\\cline{2-4}
     \end{tabular}
     \end{center}
   \end{table} \\
@@ -330,18 +326,14 @@
     of cheating in the first period (and in all following periods)?
     $\delta$ is the per-period discount rate.
   \begin{tasks}
-    \task \vary
-    {\correct $10 + 4\delta + 4\delta^2 + 4\delta^3 + ... = 10 + 4\frac{\delta}{1-\delta}$}
-    {\correct $15 + 7\delta + 7\delta^2 + 7\delta^3 + ... = 15 + 7\frac{\delta}{1-\delta}$}
+    \task 
+    \correct $4 + 2\delta + 2\delta^2 + 2\delta^3 + ... = 4 + 2\frac{\delta}{1-\delta}$
     \PrintSolutionsTF{Correct}{}
-    \task \vary
-    {$8 + 8\delta + 8\delta^2 + 8\delta^3 + ... = \frac{8}{1-\delta}$}
-    {$9 + 9\delta + 9\delta^2 + 9\delta^3 + ... = \frac{9}{1-\delta}$}
-    \task \vary
-    {$10 + 8\delta + 8\delta^2 + 8\delta^3 + ... = 10 + 8\frac{\delta}{1-\delta}$}
-    {$15 + 9\delta + 9\delta^2 + 9\delta^3 + ... = 15 + 9\frac{\delta}{1-\delta}$}
-    \task \vary
-    {$10 + 2\delta + 8\delta^2 + 8\delta^3 + ... = 10 + 2\delta + 8\frac{\delta^2}{1-\delta}$}
-    {$15 + 5\delta + 9\delta^2 + 9\delta^3 + ... = 15 + 5\delta + 9\frac{\delta^2}{1-\delta}$}
+    \task 
+    $3 + 3\delta + 3\delta^2 + 3\delta^3 + ... = \frac{3}{1-\delta}$
+    \task
+    $4 + 3\delta + 3\delta^2 + 3\delta^3 + ... = 4 + 3\frac{\delta}{1-\delta}$
+    \task
+    $4 + 1\delta + 2\delta^2 + 2\delta^3 + ... = 4 + 1\delta + 2\frac{\delta^2}{1-\delta}$
   \end{tasks}
 \end{question}

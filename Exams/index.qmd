@@ -38,7 +38,7 @@ You will have 80 minutes to complete 10 multiple choice and 3-4 short-answer que
 
 # Final
 
-## Practice Final [🗌 Download](PracticeExam/Final/main.pdf){.btn .btn-outline-primary .btn role="button"}
+## Practice Final [🗌 Download](PracticeExam/Final/PracticeFinal_clean.pdf){.btn .btn-outline-primary .btn role="button"}
 ```{=html}
 <details>
   <summary>Answer Key</summary>
