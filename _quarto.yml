@@ -92,9 +92,16 @@ website:
     right: |
       Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)
 
+  # announcement: 
+  #   icon: clipboard2-check-fill
+  #   dismissable: true
+  #   content: "Final exam: Monday, Dec 8th 10:15am-12:15pm"
+  #   type: warning
+  #   position: below-navbar
+
   announcement: 
     icon: clipboard2-check-fill
     dismissable: true
-    content: "Final exam: Monday, Dec 8th 10:15am-12:15pm"
+    content: "Updated practice final exam posted"
     type: warning
     position: below-navbar
