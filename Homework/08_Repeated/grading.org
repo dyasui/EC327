@@ -1,0 +1,28 @@
+#+TITLE: HW8 grading notes
+
+* Q1: 24 points
+** 1d: defecting best response quantity?
+1d: -1 your best response quantity is slightly off.
+** 1e: Prisoners' Dilemma table
+1e: Your Defect, Defect payoffs should be the same as the payoffs from the Nash in part (a).
+** 1f: what value of delta?
+1f: -3 This answer is incomplete. What needs to be greater than 0.53? The interest rate? The discount factor? Where is your explanation?
+*** _-2 incorrect setup_
+1f: -2 This setup is not quite right. If you are solving in terms of r, it should look like 3.1 + 2.1 (1/r) ≤ 2.8 + 2.8 (1/r)
+1f: -2 I'm not sure where you are getting the fraction with beta from? This needs more explanation.
+1f: -2 This setup is not correct.
+*** _-1 small algebra mistakes_
+1f: -1 It looks like you accidentally multiplied the 2812.5 term by delta. Everything else looks correct.
+1f: -1 The inequality should be flipped.
+1f: -1 incorrect range for delta, but consistent with payoffs in 1e.
+* Q2: 16 points
+** 2c: what is tit-for-tat?
+2c: -2 this is not tit-for-tat
+** 2d: Solve for cooperative SPNE
+*** _-3 incomplete_
+2d: -3 this answer is incomplete. How are you checking to see whether the discount rate is close enough to 1?
+*** _-2 incorrect setup_
+2d -2 This is unclear. What do you mean by using both grim trigger and tit-for-tat? Which are you using to solve the present values?
+2d: -2 This setup is incorrect. There should be a delta less than one where cooperation is sustainable with these payoffs.
+*** _-1 minor errors_
+2d: -1 you should state which strategy is being used to sustain cooperation here. You described tit-for-tat above, but these payoffs make sense for grim trigger.

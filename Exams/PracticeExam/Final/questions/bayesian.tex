@@ -154,6 +154,28 @@ Assume the board shares the college's payoffs.
       1 & \geq 2 - 2q \\
       q & \geq 1/2
     \end{align*}
+    \textbf{SPNE$_1$}:
+    \begin{itemize}
+      \item Student chooses $honest$
+      \item Faculty $expels$s
+      \item Board $expel$s more than 50\% of the cases refered to them
+    \end{itemize}
+    If the faculty chooses to $refer$, 
+    there is still a possibility the threat of expulsion
+    will incentivize the student to stay $honest$.
+    Suppose the $q<1/2$ so the faculty always $refer$s:
+    \begin{align*}
+      EU_s(honest) & > EU_s(cheat) \\
+      \Rightarrow 2 & > 0q + 3(1-q) \\
+      2 & > 3 - 3q \\
+      q & > 1/3 \\
+    \end{align*}
+    \textbf{SPNE$_2$}:
+    \begin{itemize}
+      \item Student chooses $honest$
+      \item Faculty $refer$s
+      \item Board $expel$s $\frac{1}{3} < q < \frac{1}{2}$ percent of the cases.
+    \end{itemize}
   }}}{\vspace{4cm}}
   \task (\points{4}) 
   Relative to the pure threat of explusion alone, who gains and who loses
@@ -299,8 +321,7 @@ Assume the board shares the college's payoffs.
       \textbf{No separating equilibrium in pure strategies}
     }}}{\vspace{4cm}}
     \task (\points{4})
-    Suppose that now $p=2/3$ so that Managers are indifferent 
-    between hiring a random employee as a \texttt{Executive} or as a \texttt{Janitor}. \\
+    Suppose that now $p=1/2$. \\
     Define mixed strategies for both players and use them to solve for a
     \textit{semi-separating} equilibrium. \\
     \PrintSolutionsTF{ \fbox{\parbox{\linewidth}{
@@ -323,21 +344,23 @@ Assume the board shares the college's payoffs.
       Now let $r$ be the probability that a Type B Employee goes to College.
       \begin{align*}
         EU_{\text{Manager}}(\texttt{Executive}|\text{College}) & 
-        = 10\left(\frac{1\times 2/3}{2/3 + 1/3(r)}\right) + 0 \left(\frac{r\times 1/3}{2/3 + 1/3(r)}\right) 
-        = 10 \frac{2}{2+r} \\
+        = 10\left(\frac{1\times 1/2}{1/2 + 1/2(r)}\right) 
+        + 0 \left(\frac{r\times 1/2}{1/2 + 1/2(r)}\right) 
+        = 10 \frac{1}{1+r} \\
         EU_{\text{Manager}}(\texttt{Janitor}|\text{College}) & 
-        = 5\left(\frac{1\times 2/3}{2/3 + 1/3(r)}\right) + 10 \left(\frac{r\times 1/3}{2/3 + 1/3(r)}\right) 
-        = 5 \frac{2}{2+r} + 10 \frac{r}{2+r} \\
+        = 5\left(\frac{1\times 1/2}{1/2 + 1/2(r)}\right) 
+        + 10 \left(\frac{r\times 1/2}{1/2 + 1/2(r)}\right) 
+        = 5 \frac{1}{1+r} + 10 \frac{r}{1+r} \\
       \end{align*}
       So a Manager will be willing to mix their hiring 
       between executives and janitors when:
-      $$20 = 10 + 10r \Rightarrow r = 1/2$$
+      $$10 = 5 + 10r \Rightarrow r = 1/2$$
       \textbf{\textit{Semi-separating} SPBNE:}
       \begin{itemize}
         \item Manager's mixed strategy: hire \texttt{Executive} with probability 3/5, \texttt{Janitor} with 2/5 probability,
         \begin{itemize}
           \item beliefs: prob(A$|$College) 
-          = $\frac{(1)(2/3)}{(1)(2/3)+(1/2)(1/3)} = \frac{2}{5/2} = 4/5$
+          = $\frac{(1)(1/2)}{(1)(1/2)+(1/2)(1/2)} = \frac{1}{3/2} = 2/3$
         \end{itemize}
         \item Employee's strategy: 
         \begin{itemize}
@@ -350,18 +373,19 @@ Assume the board shares the college's payoffs.
     }}}{\vspace{12cm}}
     \task (\points{4})
     What is the \textit{signalling} value of an employee choosing \texttt{College}?
-    Use Bayes rule to compare the ex-ante probability $p=2/3$ of a Type A
+    Use Bayes rule to compare the ex-ante probability $p=1/2$ of a Type A
     to the updated belief of a Manager as to the Employee being Type A 
     conditional on observing college
     in the semi-separating equilibrium in part (c).
     \PrintSolutionsTF{ \fbox{\parbox{\linewidth}{
       In the semi-separating equilibrium above, the \texttt{College} strategy has signaling value. \\
-      The signal of college gives the Manager a better idea of the Employee's true type than their naive estimate of $p=2/3$.
+      The signal of college gives the Manager a better idea of the Employee's true type 
+      than their naive estimate of $p=1/2$.
       $$
       prob(\text{A} | \texttt{College}) = 
         \frac{prob(\texttt{College}|\text{A})\times prob(\text{A})}{prob(\texttt{College})} =
         \frac{1\times p}{1p + r(1-p)} =
-        4/5 > p = 2/3
+        2/3 > p = 1/2
     $$
     This is because all Type A's choose college in equilibrium,
     but only a fraction, $r=1/2$, of Type B's choose college.

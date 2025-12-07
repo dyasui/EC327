@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1764905594.00834 "/Users/dante/sync/documents/Teaching/EC327/2025Fall/Exams/PracticeExam/Final/main.tex" "main.pdf" "main" 1764905595.72213 0
-  "/Users/dante/sync/documents/Teaching/EC327/2025Fall/Exams/PracticeExam/Final/main.tex" 1764905592.12327 2975 a6c3347df9fa0d7938643570734b8598 ""
+["pdflatex"] 1765145705.4912 "/Users/dante/sync/documents/Teaching/EC327/2025Fall/Exams/PracticeExam/Final/main.tex" "main.pdf" "main" 1765145707.19625 0
+  "/Users/dante/sync/documents/Teaching/EC327/2025Fall/Exams/PracticeExam/Final/main.tex" 1765145703.55597 2975 a6c3347df9fa0d7938643570734b8598 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -216,12 +216,12 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1742322412 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "main.aux" 1764905595.64572 3592 6612581f036e4ce8f3af81492d8e71cb "pdflatex"
-  "main.tex" 1764905592.12327 2975 a6c3347df9fa0d7938643570734b8598 ""
-  "questions/bayesian.tex" 1764631025.56236 16342 04b2a954ad33579dafb8a009d3be22e6 ""
+  "main.aux" 1765145707.12087 3592 6612581f036e4ce8f3af81492d8e71cb "pdflatex"
+  "main.tex" 1765145703.55597 2975 a6c3347df9fa0d7938643570734b8598 ""
+  "questions/bayesian.tex" 1765145641.41196 17011 4af5004bed73fdbf6a37164d569b2a75 ""
   "questions/idMSNE.tex" 1764631102.77606 4854 d3b7a027523d8e5ed0fed8ebe6d01579 ""
-  "questions/mc.tex" 1764905457.55322 14492 40ab6cea603c86f8696edda20a4b76af ""
-  "questions/repeatPD.tex" 1764630823.06118 2703 2d814d8d29a3743d9763e42a13bcee4f ""
+  "questions/mc.tex" 1765145368.08393 14501 f81f66746bfff96587a401a7b97dbaf4 ""
+  "questions/repeatPD.tex" 1765145488.36007 2703 bb52c1691b67579c06c2c2c60f8a2d41 ""
   "questions/screening.tex" 1764630151.82141 2832 f48548b1c6d32df22d4052638d2c48b9 ""
   (generated)
   "main.aux"
